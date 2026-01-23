@@ -1,0 +1,178 @@
+---
+import Base from '../../layouts/Base.astro';
+import blogsData from '../../../data/blogs.json';
+import postsData from '../../../data/cache/posts.json';
+
+export function getStaticPaths() {
+  return blogsData.blogs.map((blog) => ({
+    params: { slug: blog.id },
+    props: { blog },
+  }));
+}
+
+interface Blog {
+  id: string;
+  name: string;
+  url: string;
+  categories: string[];
+  description: string;
+}
+
+const { blog } = Astro.props as { blog: Blog };
+const blogs = blogsData.blogs;
+
+const posts = postsData.posts
+  .filter((p) => p.blogId === blog.id)
+  .map((post) => ({ ...post, blogName: blog.name }));
+
+// Group posts by month
+type PostsByMonth = { [key: string]: typeof posts };
+const postsByMonth: PostsByMonth = {};
+
+posts.forEach((post) => {
+  const date = new Date(post.date);
+  const monthKey = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+  if (!postsByMonth[monthKey]) {
+    postsByMonth[monthKey] = [];
+  }
+  postsByMonth[monthKey].push(post);
+});
+
+const sortedMonths = Object.keys(postsByMonth).sort((a, b) => {
+  return new Date(b).getTime() - new Date(a).getTime();
+});
+
+function formatShortDate(dateStr: string) {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
+function getInitials(name: string) {
+  return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+}
+
+const primaryCategory = blog.categories[0] || 'tech';
+---
+
+<Base title={`${blog.name} — The Small Web`} description={blog.description}>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">The Small Web</a>
+      <nav class="header-nav">
+        <a href="/">Home</a>
+        <a href="/archive">Archive</a>
+        <a href="/blogs">Blogs</a>
+        <a href="/about">About</a>
+        <button class="theme-toggle" id="theme-toggle">Dark mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main style="max-width: 700px; margin: 0 auto; padding: 3rem 2rem;">
+    <!-- Blog Header -->
+    <div class="blog-card" style="padding: 2rem; margin-bottom: 2.5rem;">
+      <div style="display: flex; align-items: flex-start; gap: 1.25rem;">
+        <div style="
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.25rem;
+          font-weight: 600;
+          background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 70%, #000));
+          color: white;
+          flex-shrink: 0;
+        ">
+          {getInitials(blog.name)}
+        </div>
+        <div style="flex: 1;">
+          <h1 style="font-family: var(--serif); font-size: 1.8rem; font-weight: 600; margin-bottom: 0.5rem;">
+            {blog.name}
+          </h1>
+          <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+            {blog.description}
+          </p>
+          <div style="display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;">
+            <a
+              href={blog.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-btn"
+              style="padding: 0.65rem 1.25rem; font-size: 0.85rem;"
+            >
+              Visit blog
+            </a>
+            <div class="blog-categories" style="margin: 0;">
+              {blog.categories.map((cat) => (
+                <span class={`blog-cat ${cat}`}>{cat.charAt(0).toUpperCase() + cat.slice(1)}</span>
+              ))}
+            </div>
+            <span style="font-size: 0.85rem; color: var(--text-faint);">
+              {posts.length} {posts.length === 1 ? 'article' : 'articles'}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Posts -->
+    {posts.length > 0 ? (
+      <div>
+        {sortedMonths.map((month) => (
+          <section class="archive-month">
+            <h2 class="month-header">{month}</h2>
+            <div class="archive-list">
+              {postsByMonth[month].map((post) => (
+                <a
+                  href={post.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="archive-item"
+                >
+                  <span class="archive-date">{formatShortDate(post.date)}</span>
+                  <div class="archive-content">
+                    <h3 class="archive-title">{post.title}</h3>
+                    {post.excerpt && (
+                      <p class="archive-meta" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                        {post.excerpt}
+                      </p>
+                    )}
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    ) : (
+      <div style="text-align: center; padding: 3rem; color: var(--text-muted);">
+        <p style="font-size: 1.1rem;">No articles from this blog yet.</p>
+      </div>
+    )}
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-text">A curated feed of indie blogs · <a href="/rss.xml" style="color: var(--accent);">RSS</a> · <a href="/status" style="color: var(--accent);">Status</a></p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+
+    function updateButtonText() {
+      if (toggle) {
+        toggle.textContent = document.documentElement.classList.contains('dark') ? 'Light mode' : 'Dark mode';
+      }
+    }
+
+    toggle?.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.theme = isDark ? 'dark' : 'light';
+      updateButtonText();
+    });
+
+    updateButtonText();
+  </script>
+</Base>

@@ -1,0 +1,746 @@
+{
+  "lastUpdated": "2026-01-23T08:54:12.656Z",
+  "feeds": [
+    {
+      "blogId": "fromjason",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:58.159Z",
+      "latencyMs": 576,
+      "error": null
+    },
+    {
+      "blogId": "susam",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:58.992Z",
+      "latencyMs": 1374,
+      "error": null
+    },
+    {
+      "blogId": "seangoedecke",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:01.142Z",
+      "latencyMs": 3521,
+      "error": null
+    },
+    {
+      "blogId": "ploum",
+      "status": "error",
+      "postCount": 0,
+      "lastFetched": "2026-01-23T08:53:58.626Z",
+      "latencyMs": 1003,
+      "error": ""
+    },
+    {
+      "blogId": "simonwillison",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.440Z",
+      "latencyMs": 1815,
+      "error": null
+    },
+    {
+      "blogId": "entropicthoughts",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:01.136Z",
+      "latencyMs": 3510,
+      "error": null
+    },
+    {
+      "blogId": "ntietz",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:03.142Z",
+      "latencyMs": 5515,
+      "error": null
+    },
+    {
+      "blogId": "stephango",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:58.028Z",
+      "latencyMs": 399,
+      "error": null
+    },
+    {
+      "blogId": "emilburzo",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:58.426Z",
+      "latencyMs": 795,
+      "error": null
+    },
+    {
+      "blogId": "alanwsmith",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.685Z",
+      "latencyMs": 3052,
+      "error": null
+    },
+    {
+      "blogId": "kudmitry",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:01.534Z",
+      "latencyMs": 3900,
+      "error": null
+    },
+    {
+      "blogId": "seanheelan",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.844Z",
+      "latencyMs": 2208,
+      "error": null
+    },
+    {
+      "blogId": "gamesbymason",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.461Z",
+      "latencyMs": 1824,
+      "error": null
+    },
+    {
+      "blogId": "teendifferent",
+      "status": "ok",
+      "postCount": 5,
+      "lastFetched": "2026-01-23T08:53:57.938Z",
+      "latencyMs": 301,
+      "error": null
+    },
+    {
+      "blogId": "overreacted",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:57.867Z",
+      "latencyMs": 229,
+      "error": null
+    },
+    {
+      "blogId": "wealthofcommonsense",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.446Z",
+      "latencyMs": 1807,
+      "error": null
+    },
+    {
+      "blogId": "abnormalreturns",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:01.171Z",
+      "latencyMs": 3530,
+      "error": null
+    },
+    {
+      "blogId": "mrkaran",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.954Z",
+      "latencyMs": 3311,
+      "error": null
+    },
+    {
+      "blogId": "pieterlevels",
+      "status": "ok",
+      "postCount": 1,
+      "lastFetched": "2026-01-23T08:54:01.121Z",
+      "latencyMs": 3478,
+      "error": null
+    },
+    {
+      "blogId": "pluralistic",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:01.370Z",
+      "latencyMs": 3726,
+      "error": null
+    },
+    {
+      "blogId": "sivers",
+      "status": "error",
+      "postCount": 0,
+      "lastFetched": "2026-01-23T08:54:12.647Z",
+      "latencyMs": 15003,
+      "error": "Request timed out after 15000ms"
+    },
+    {
+      "blogId": "maggieappleton",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:01.130Z",
+      "latencyMs": 3484,
+      "error": null
+    },
+    {
+      "blogId": "marginalian",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.340Z",
+      "latencyMs": 2693,
+      "error": null
+    },
+    {
+      "blogId": "paulgraham",
+      "status": "ok",
+      "postCount": 7,
+      "lastFetched": "2026-01-23T08:54:03.945Z",
+      "latencyMs": 6298,
+      "error": null
+    },
+    {
+      "blogId": "aldaily",
+      "status": "ok",
+      "postCount": 0,
+      "lastFetched": "2026-01-23T08:53:59.871Z",
+      "latencyMs": 2223,
+      "error": null
+    },
+    {
+      "blogId": "sentiers",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:58.527Z",
+      "latencyMs": 877,
+      "error": null
+    },
+    {
+      "blogId": "benedictevans",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.980Z",
+      "latencyMs": 3329,
+      "error": null
+    },
+    {
+      "blogId": "nesslabs",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:01.260Z",
+      "latencyMs": 3609,
+      "error": null
+    },
+    {
+      "blogId": "slackwire",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:06.682Z",
+      "latencyMs": 9030,
+      "error": null
+    },
+    {
+      "blogId": "marginalrevolution",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.355Z",
+      "latencyMs": 2702,
+      "error": null
+    },
+    {
+      "blogId": "interconnects",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.051Z",
+      "latencyMs": 1398,
+      "error": null
+    },
+    {
+      "blogId": "thezvi",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.923Z",
+      "latencyMs": 2269,
+      "error": null
+    },
+    {
+      "blogId": "markcarrigan",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.485Z",
+      "latencyMs": 1830,
+      "error": null
+    },
+    {
+      "blogId": "lucumr",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.514Z",
+      "latencyMs": 2858,
+      "error": null
+    },
+    {
+      "blogId": "kottke",
+      "status": "error",
+      "postCount": 0,
+      "lastFetched": "2026-01-23T08:53:58.627Z",
+      "latencyMs": 971,
+      "error": ""
+    },
+    {
+      "blogId": "shreevatsa",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.853Z",
+      "latencyMs": 2196,
+      "error": null
+    },
+    {
+      "blogId": "hollisrobbins",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.971Z",
+      "latencyMs": 2313,
+      "error": null
+    },
+    {
+      "blogId": "freddiedeboer",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.335Z",
+      "latencyMs": 1677,
+      "error": null
+    },
+    {
+      "blogId": "lukeburgis",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.375Z",
+      "latencyMs": 1716,
+      "error": null
+    },
+    {
+      "blogId": "commonreader",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.732Z",
+      "latencyMs": 2071,
+      "error": null
+    },
+    {
+      "blogId": "programmablemutter",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.772Z",
+      "latencyMs": 2111,
+      "error": null
+    },
+    {
+      "blogId": "venkateshrao",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.749Z",
+      "latencyMs": 2087,
+      "error": null
+    },
+    {
+      "blogId": "millersbookreview",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.418Z",
+      "latencyMs": 1755,
+      "error": null
+    },
+    {
+      "blogId": "onepercentrule",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.314Z",
+      "latencyMs": 1650,
+      "error": null
+    },
+    {
+      "blogId": "strangeloopcanon",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:01.214Z",
+      "latencyMs": 3549,
+      "error": null
+    },
+    {
+      "blogId": "maxread",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.548Z",
+      "latencyMs": 1882,
+      "error": null
+    },
+    {
+      "blogId": "collabfund",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.350Z",
+      "latencyMs": 2683,
+      "error": null
+    },
+    {
+      "blogId": "summerlightning",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.154Z",
+      "latencyMs": 1485,
+      "error": null
+    },
+    {
+      "blogId": "ghostsofelectricity",
+      "status": "ok",
+      "postCount": 6,
+      "lastFetched": "2026-01-23T08:53:59.121Z",
+      "latencyMs": 1451,
+      "error": null
+    },
+    {
+      "blogId": "hyperdimensional",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.290Z",
+      "latencyMs": 2619,
+      "error": null
+    },
+    {
+      "blogId": "kneelingbus",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.133Z",
+      "latencyMs": 1461,
+      "error": null
+    },
+    {
+      "blogId": "thecuttingfloor",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.084Z",
+      "latencyMs": 1412,
+      "error": null
+    },
+    {
+      "blogId": "astralcodexten",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.946Z",
+      "latencyMs": 2273,
+      "error": null
+    },
+    {
+      "blogId": "paulkrugman",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.591Z",
+      "latencyMs": 1916,
+      "error": null
+    },
+    {
+      "blogId": "plainenglish",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.450Z",
+      "latencyMs": 2774,
+      "error": null
+    },
+    {
+      "blogId": "noahpinion",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.637Z",
+      "latencyMs": 2961,
+      "error": null
+    },
+    {
+      "blogId": "understandingai",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.821Z",
+      "latencyMs": 2145,
+      "error": null
+    },
+    {
+      "blogId": "arpitrage",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.180Z",
+      "latencyMs": 1503,
+      "error": null
+    },
+    {
+      "blogId": "highcapacity",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.262Z",
+      "latencyMs": 1582,
+      "error": null
+    },
+    {
+      "blogId": "kyla",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.596Z",
+      "latencyMs": 2915,
+      "error": null
+    },
+    {
+      "blogId": "grumpyeconomist",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.797Z",
+      "latencyMs": 2114,
+      "error": null
+    },
+    {
+      "blogId": "oneusefulthing",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.299Z",
+      "latencyMs": 1617,
+      "error": null
+    },
+    {
+      "blogId": "defaultblog",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.302Z",
+      "latencyMs": 2619,
+      "error": null
+    },
+    {
+      "blogId": "onmyom",
+      "status": "ok",
+      "postCount": 3,
+      "lastFetched": "2026-01-23T08:53:59.005Z",
+      "latencyMs": 1321,
+      "error": null
+    },
+    {
+      "blogId": "ofdollarsanddata",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.756Z",
+      "latencyMs": 3071,
+      "error": null
+    },
+    {
+      "blogId": "larryswedroe",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.315Z",
+      "latencyMs": 2629,
+      "error": null
+    },
+    {
+      "blogId": "klementoninvesting",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.831Z",
+      "latencyMs": 2144,
+      "error": null
+    },
+    {
+      "blogId": "flowingdata",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.472Z",
+      "latencyMs": 1784,
+      "error": null
+    },
+    {
+      "blogId": "downtownjoshbrown",
+      "status": "ok",
+      "postCount": 3,
+      "lastFetched": "2026-01-23T08:53:59.011Z",
+      "latencyMs": 1323,
+      "error": null
+    },
+    {
+      "blogId": "anildash",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.700Z",
+      "latencyMs": 3011,
+      "error": null
+    },
+    {
+      "blogId": "spyglass",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:01.193Z",
+      "latencyMs": 3503,
+      "error": null
+    },
+    {
+      "blogId": "betterletter",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.005Z",
+      "latencyMs": 2314,
+      "error": null
+    },
+    {
+      "blogId": "honestbroker",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.024Z",
+      "latencyMs": 2332,
+      "error": null
+    },
+    {
+      "blogId": "overthefield",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.116Z",
+      "latencyMs": 2424,
+      "error": null
+    },
+    {
+      "blogId": "pilgrimsinthemachine",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.652Z",
+      "latencyMs": 1959,
+      "error": null
+    },
+    {
+      "blogId": "convivialsociety",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.044Z",
+      "latencyMs": 2350,
+      "error": null
+    },
+    {
+      "blogId": "wisdomofcrowds",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.102Z",
+      "latencyMs": 2407,
+      "error": null
+    },
+    {
+      "blogId": "bloodinthemachine",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.483Z",
+      "latencyMs": 2786,
+      "error": null
+    },
+    {
+      "blogId": "techmeme",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:01.055Z",
+      "latencyMs": 3358,
+      "error": null
+    },
+    {
+      "blogId": "smallpotatoes",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.131Z",
+      "latencyMs": 2434,
+      "error": null
+    },
+    {
+      "blogId": "stockviz",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.087Z",
+      "latencyMs": 2389,
+      "error": null
+    },
+    {
+      "blogId": "ageofinvention",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.691Z",
+      "latencyMs": 1992,
+      "error": null
+    },
+    {
+      "blogId": "openquestions",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.159Z",
+      "latencyMs": 2459,
+      "error": null
+    },
+    {
+      "blogId": "optimallyirrational",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:01.120Z",
+      "latencyMs": 3419,
+      "error": null
+    },
+    {
+      "blogId": "conspicuouscognition",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.237Z",
+      "latencyMs": 2535,
+      "error": null
+    },
+    {
+      "blogId": "speakandregret",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.702Z",
+      "latencyMs": 1999,
+      "error": null
+    },
+    {
+      "blogId": "wollenblog",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:53:59.626Z",
+      "latencyMs": 1922,
+      "error": null
+    },
+    {
+      "blogId": "koenfucius",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.196Z",
+      "latencyMs": 2491,
+      "error": null
+    },
+    {
+      "blogId": "experimentalhistory",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.276Z",
+      "latencyMs": 2570,
+      "error": null
+    },
+    {
+      "blogId": "intrinsicperspective",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.678Z",
+      "latencyMs": 2972,
+      "error": null
+    },
+    {
+      "blogId": "everythingisbullshit",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.506Z",
+      "latencyMs": 2799,
+      "error": null
+    },
+    {
+      "blogId": "benthamsbulldog",
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-01-23T08:54:00.177Z",
+      "latencyMs": 2469,
+      "error": null
+    }
+  ],
+  "summary": {
+    "total": 92,
+    "healthy": 89,
+    "errors": 3
+  }
+}

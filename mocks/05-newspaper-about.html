@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Indie Blogs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FFFFFF;
+      --bg-soft: #FAF8F5;
+      --text: #1F1B16;
+      --text-muted: #5C564D;
+      --text-faint: #9A9389;
+      --border: #E8E2D9;
+      --border-dark: #1F1B16;
+      --accent: #D95D39;
+      --tech: #3D8B6E;
+      --tech-soft: #EEF6F2;
+      --life: #C9763C;
+      --life-soft: #FDF5EE;
+      --culture: #7A5BA8;
+      --culture-soft: #F5F1FA;
+      --design: #B85A5A;
+      --design-soft: #FCF0F0;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'Nunito Sans', system-ui, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg: #141210;
+      --bg-soft: #1E1B18;
+      --text: #F5F2ED;
+      --text-muted: #ADA69C;
+      --text-faint: #5C564D;
+      --border: #2E2A24;
+      --border-dark: #F5F2ED;
+      --accent: #F07A58;
+      --tech-soft: #162420;
+      --life-soft: #241E18;
+      --culture-soft: #1E1824;
+      --design-soft: #241818;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 17px;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.4s ease, color 0.4s ease;
+      font-weight: 400;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* Header */
+    header {
+      padding: 2rem 2rem 1.5rem;
+      border-bottom: 3px solid var(--border-dark);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .header-nav a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .header-nav a:hover,
+    .header-nav a.active {
+      color: var(--text);
+    }
+
+    .theme-toggle {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--text-faint);
+      color: var(--text);
+    }
+
+    /* Main */
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .page-title {
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+    }
+
+    .page-subtitle {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* Content */
+    .content {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+
+    .content p {
+      margin-bottom: 1.5rem;
+    }
+
+    .content p:first-of-type::first-letter {
+      font-family: var(--serif);
+      font-size: 4rem;
+      font-weight: 600;
+      float: left;
+      line-height: 0.8;
+      padding-right: 0.75rem;
+      padding-top: 0.15rem;
+      color: var(--accent);
+    }
+
+    .content a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity 0.2s ease;
+    }
+
+    .content a:hover {
+      opacity: 0.7;
+    }
+
+    .content h2 {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 3rem 0 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    /* Principles */
+    .principles {
+      margin: 2.5rem 0;
+      padding: 2rem;
+      background: var(--bg-soft);
+      border-radius: 16px;
+    }
+
+    .principles h3 {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    .principles ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .principles li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .principles li::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      margin-top: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    /* Stats */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 3rem 0;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    /* Blogs Grid */
+    .blogs-section {
+      margin-top: 3rem;
+    }
+
+    .blogs-section h2 {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--text);
+    }
+
+    .blogs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .blog-card {
+      display: block;
+      padding: 1.25rem;
+      background: var(--bg-soft);
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    [data-theme="dark"] .blog-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .blog-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+      transition: color 0.2s ease;
+    }
+
+    .blog-card:hover .blog-name {
+      color: var(--accent);
+    }
+
+    .blog-url {
+      font-size: 0.85rem;
+      color: var(--text-faint);
+    }
+
+    .blog-categories {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .blog-cat {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.25rem 0.5rem;
+      border-radius: 100px;
+    }
+
+    .blog-cat.tech { background: var(--tech-soft); color: var(--tech); }
+    .blog-cat.life { background: var(--life-soft); color: var(--life); }
+    .blog-cat.culture { background: var(--culture-soft); color: var(--culture); }
+    .blog-cat.design { background: var(--design-soft); color: var(--design); }
+
+    /* Contact */
+    .contact {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: var(--bg-soft);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .contact h3 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: white;
+      background: var(--accent);
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(217, 93, 57, 0.3);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding: 2rem;
+      border-top: 3px solid var(--border-dark);
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .header-nav {
+        gap: 1.5rem;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .blogs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .content p:first-of-type::first-letter {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="05-newspaper-v3.html" class="logo">Indie Blogs</a>
+      <nav class="header-nav">
+        <a href="05-newspaper-v3.html">Home</a>
+        <a href="05-newspaper-archive.html">Archive</a>
+        <a href="05-newspaper-about.html" class="active">About</a>
+        <button class="theme-toggle" onclick="toggleTheme()">Dark mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1 class="page-title">About</h1>
+      <p class="page-subtitle">A cozy corner of the web celebrating independent voices</p>
+    </div>
+
+    <div class="content">
+      <p>As LLMs continue to devour most of the internet, there's a worry about what this means for good content. Yet despite all the noise about AI slop, there remains a phenomenal hidden substrate of wonderful independent blogs—people publishing amazing perspectives that don't get the attention they deserve.</p>
+
+      <p>Most attention has been colonized by YouTube, TikTok, and the bigger publications. But I personally love reading these individual blogs, writers who craft something meaningful without chasing algorithms or engagement metrics.</p>
+
+      <p>Indie Blogs is a hand-curated aggregator. Every blog here has been personally read and selected. No algorithms, no AI recommendations—just a human picking things worth reading.</p>
+
+      <div class="principles">
+        <h3>How this works</h3>
+        <ul>
+          <li>Every blog is hand-picked after reading at least two posts</li>
+          <li>RSS feeds are fetched twice daily automatically</li>
+          <li>No tracking, no ads, no algorithmic sorting</li>
+          <li>Posts are shown chronologically, newest first</li>
+          <li>Open source and free forever</li>
+        </ul>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">15</div>
+          <div class="stat-label">blogs curated</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">135</div>
+          <div class="stat-label">posts indexed</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">0</div>
+          <div class="stat-label">ads, ever</div>
+        </div>
+      </div>
+
+      <h2>What makes a good indie blog?</h2>
+
+      <p>It's not about follower counts or posting frequency. A good indie blog has a distinct voice, offers genuine perspective, and cares about craft. The writer thinks for themselves rather than chasing trends.</p>
+
+      <p>The best blogs feel like a conversation with a thoughtful friend—someone who's spent time thinking deeply about something and wants to share what they've learned.</p>
+    </div>
+
+    <section class="blogs-section">
+      <h2>The blogs</h2>
+      <div class="blogs-grid">
+        <a href="#" class="blog-card">
+          <div class="blog-name">Simon Willison</div>
+          <div class="blog-url">simonwillison.net</div>
+          <div class="blog-categories">
+            <span class="blog-cat tech">Tech</span>
+          </div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-name">Dan Abramov</div>
+          <div class="blog-url">overreacted.io</div>
+          <div class="blog-categories">
+            <span class="blog-cat tech">Tech</span>
+          </div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-name">Susam Pal</div>
+          <div class="blog-url">susam.net</div>
+          <div class="blog-categories">
+            <span class="blog-cat tech">Tech</span>
+          </div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-name">Ploum</div>
+          <div class="blog-url">ploum.net</div>
+          <div class="blog-categories">
+            <span class="blog-cat tech">Tech</span>
+            <span class="blog-cat culture">Culture</span>
+          </div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-name">Steph Ango</div>
+          <div class="blog-url">stephango.com</div>
+          <div class="blog-categories">
+            <span class="blog-cat design">Design</span>
+            <span class="blog-cat tech">Tech</span>
+          </div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-name">Nicole Tietz</div>
+          <div class="blog-url">ntietz.com</div>
+          <div class="blog-categories">
+            <span class="blog-cat tech">Tech</span>
+            <span class="blog-cat life">Life</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="contact">
+      <h3>Suggest a blog</h3>
+      <p>Know an indie blog that belongs here? I'd love to hear about it.</p>
+      <a href="mailto:hello@example.com" class="contact-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        Get in touch
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p class="footer-text">Made with care for readers who care</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.querySelector('.theme-toggle');
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.removeAttribute('data-theme');
+        btn.textContent = 'Dark mode';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        btn.textContent = 'Light mode';
+      }
+    }
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.querySelector('.theme-toggle').textContent = 'Light mode';
+    }
+  </script>
+</body>
+</html>

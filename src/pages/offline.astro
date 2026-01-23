@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Offline — The Small Web">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">The Small Web</a>
+    </div>
+  </header>
+
+  <main style="max-width: 600px; margin: 0 auto; padding: 6rem 2rem; text-align: center;">
+    <div style="font-size: 4rem; margin-bottom: 1.5rem;">
+      📡
+    </div>
+    <h1 style="font-family: var(--serif); font-size: 2.5rem; font-weight: 600; margin-bottom: 1rem;">
+      You're offline
+    </h1>
+    <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem;">
+      It looks like you've lost your internet connection. The page you're looking for isn't available offline yet.
+    </p>
+    <p style="font-size: 0.95rem; color: var(--text-faint);">
+      Previously visited pages may still be available. Try going back or check your connection.
+    </p>
+    <div style="margin-top: 2.5rem;">
+      <a href="/" class="contact-btn">
+        Try again
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-text">The Small Web</p>
+  </footer>
+</Base>

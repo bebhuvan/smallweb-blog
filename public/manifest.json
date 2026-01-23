@@ -1,0 +1,44 @@
+{
+  "name": "The Small Web",
+  "short_name": "Small Web",
+  "description": "A curated collection of the best indie blogs. Hand-picked writing from independent voices.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#D95D39",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["news", "magazines", "books"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Archive",
+      "url": "/archive",
+      "description": "Browse all posts"
+    },
+    {
+      "name": "Blogs",
+      "url": "/blogs",
+      "description": "View curated blogs"
+    }
+  ]
+}

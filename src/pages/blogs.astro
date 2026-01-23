@@ -1,0 +1,568 @@
+---
+import Base from '../layouts/Base.astro';
+import blogsData from '../../data/blogs.json';
+import postsData from '../../data/cache/posts.json';
+
+const blogs = blogsData.blogs;
+const posts = postsData.posts;
+
+// Count posts per blog
+const postCounts = new Map<string, number>();
+posts.forEach(post => {
+  postCounts.set(post.blogId, (postCounts.get(post.blogId) || 0) + 1);
+});
+
+// Enrich blogs with post counts and sort by name
+const enrichedBlogs = blogs.map(blog => ({
+  ...blog,
+  postCount: postCounts.get(blog.id) || 0,
+})).sort((a, b) => a.name.localeCompare(b.name));
+
+// Group by primary category
+const blogsByCategory = new Map<string, typeof enrichedBlogs>();
+enrichedBlogs.forEach(blog => {
+  const cat = blog.categories[0];
+  if (!blogsByCategory.has(cat)) {
+    blogsByCategory.set(cat, []);
+  }
+  blogsByCategory.get(cat)!.push(blog);
+});
+
+// All categories in order
+const categoryOrder = ['tech', 'design', 'life', 'culture', 'economics', 'finance', 'history', 'psychology', 'philosophy'];
+const categoryNames: Record<string, string> = {
+  tech: 'Tech',
+  design: 'Design',
+  life: 'Life',
+  culture: 'Culture',
+  finance: 'Finance',
+  economics: 'Economics',
+  history: 'History',
+  psychology: 'Psychology',
+  philosophy: 'Philosophy',
+};
+
+function getInitials(name: string) {
+  return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+}
+
+// Generate OPML content
+function generateOPML() {
+  const outlines = blogs.map(blog =>
+    `      <outline type="rss" text="${blog.name}" title="${blog.name}" xmlUrl="${blog.feed}" htmlUrl="${blog.url}"/>`
+  ).join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>The Small Web - Blogroll</title>
+    <dateCreated>${new Date().toISOString()}</dateCreated>
+  </head>
+  <body>
+    <outline text="The Small Web" title="The Small Web">
+${outlines}
+    </outline>
+  </body>
+</opml>`;
+}
+
+const opmlContent = generateOPML();
+---
+
+<Base title="Blogroll — The Small Web" description="All the indie blogs we curate and index. A hand-picked collection of independent writers.">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">The Small Web</a>
+      <nav class="header-nav">
+        <a href="/">Home</a>
+        <a href="/discover">Discover</a>
+        <a href="/archive">Archive</a>
+        <a href="/blogs" class="active">Blogs</a>
+        <a href="/about">About</a>
+        <button class="theme-toggle" id="theme-toggle">Dark mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="blogs-main">
+    <div class="page-header">
+      <h1 class="page-title">Blogroll</h1>
+      <p class="page-subtitle">All {blogs.length} indie blogs we curate</p>
+    </div>
+
+    <div class="blogs-toolbar">
+      <div class="toolbar-stats">
+        <span class="toolbar-stat"><strong>{blogs.length}</strong> blogs</span>
+        <span class="toolbar-divider">·</span>
+        <span class="toolbar-stat"><strong>{posts.length}</strong> posts</span>
+        <span class="toolbar-divider">·</span>
+        <span class="toolbar-stat"><strong>{blogsByCategory.size}</strong> categories</span>
+      </div>
+      <div class="toolbar-actions">
+        <button class="export-btn" id="exportOPML" title="Export as OPML for RSS readers">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7,10 12,15 17,10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Export OPML
+        </button>
+        <a href="/rss.xml" class="rss-btn" title="Subscribe via RSS">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 11a9 9 0 0 1 9 9"/>
+            <path d="M4 4a16 16 0 0 1 16 16"/>
+            <circle cx="5" cy="19" r="1"/>
+          </svg>
+          RSS
+        </a>
+      </div>
+    </div>
+
+    <nav class="category-tabs">
+      <button class="category-tab active" data-category="all">All</button>
+      {categoryOrder.map(cat => {
+        const count = blogsByCategory.get(cat)?.length || 0;
+        if (count === 0) return null;
+        return (
+          <button class="category-tab" data-category={cat}>
+            <span class={`tab-dot ${cat}`}></span>
+            {categoryNames[cat]}
+            <span class="tab-count">{count}</span>
+          </button>
+        );
+      })}
+    </nav>
+
+    <div class="blogs-grid" id="blogsGrid">
+      {enrichedBlogs.map(blog => (
+        <a
+          href={blog.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="blog-card"
+          data-category={blog.categories[0]}
+          data-categories={blog.categories.join(',')}
+        >
+          <div class="blog-card-inner">
+            <div class="blog-avatar" style={`--cat-color: var(--${blog.categories[0]})`}>
+              {getInitials(blog.name)}
+            </div>
+            <div class="blog-content">
+              <h3 class="blog-name">{blog.name}</h3>
+              <span class="blog-url">{new URL(blog.url).hostname}</span>
+              <p class="blog-description">{blog.description}</p>
+              <div class="blog-footer">
+                <div class="blog-categories">
+                  {blog.categories.map((c: string) => (
+                    <span class={`blog-cat ${c}`}>{c}</span>
+                  ))}
+                </div>
+                <span class="blog-posts">{blog.postCount} posts</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="empty-state" id="emptyState" style="display: none;">
+      <p>No blogs found in this category</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-stat"><span class="footer-stat-value">{blogs.length}</span> blogs</span>
+      <span class="footer-divider"></span>
+      <span class="footer-stat">Updated daily</span>
+      <span class="footer-divider"></span>
+      <span class="footer-stat">No ads, ever</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="/discover">Discover</a>
+      <a href="/archive">Archive</a>
+      <a href="/about">About</a>
+      <a href="/rss.xml" class="rss-link">RSS</a>
+    </nav>
+  </footer>
+
+  <script define:vars={{ opmlContent }}>
+    // Theme toggle
+    const toggle = document.getElementById('theme-toggle');
+    function updateButtonText() {
+      if (toggle) {
+        toggle.textContent = document.documentElement.classList.contains('dark') ? 'Light mode' : 'Dark mode';
+      }
+    }
+    toggle?.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+      updateButtonText();
+    });
+    updateButtonText();
+
+    // OPML Export
+    document.getElementById('exportOPML')?.addEventListener('click', () => {
+      const blob = new Blob([opmlContent], { type: 'text/xml' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'the-small-web-blogroll.opml';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    // Category filtering
+    const tabs = document.querySelectorAll('.category-tab');
+    const grid = document.getElementById('blogsGrid');
+    const cards = grid?.querySelectorAll('.blog-card');
+    const emptyState = document.getElementById('emptyState');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Update active tab
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const category = tab.dataset.category;
+        let visibleCount = 0;
+
+        cards?.forEach(card => {
+          const cardCategories = card.dataset.categories?.split(',') || [];
+          const show = category === 'all' || cardCategories.includes(category);
+
+          if (show) {
+            card.style.display = 'block';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Show empty state if no blogs
+        if (emptyState) {
+          emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+      });
+    });
+  </script>
+</Base>
+
+<style>
+  .blogs-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--space-7) var(--space-6);
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: var(--space-6);
+  }
+
+  /* Toolbar */
+  .blogs-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4) 0;
+    margin-bottom: var(--space-5);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  .toolbar-stats {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+
+  .toolbar-stat strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .toolbar-divider {
+    color: var(--border);
+  }
+
+  .toolbar-actions {
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  .export-btn,
+  .rss-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    font-family: var(--sans);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-muted);
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .export-btn:hover,
+  .rss-btn:hover {
+    color: var(--text);
+    border-color: var(--text-faint);
+  }
+
+  .export-btn svg,
+  .rss-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .rss-btn {
+    color: var(--accent);
+  }
+
+  .rss-btn:hover {
+    color: var(--accent);
+    background: var(--bg);
+  }
+
+  /* Category Tabs */
+  .category-tabs {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    font-family: var(--sans);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-muted);
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+  }
+
+  .category-tab:hover {
+    color: var(--text);
+    border-color: var(--text-faint);
+  }
+
+  .category-tab.active {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+  }
+
+  .tab-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .tab-dot.tech { background: var(--tech); }
+  .tab-dot.design { background: var(--design); }
+  .tab-dot.life { background: var(--life); }
+  .tab-dot.culture { background: var(--culture); }
+  .tab-dot.finance { background: var(--finance); }
+  .tab-dot.economics { background: var(--economics); }
+  .tab-dot.history { background: var(--history); }
+  .tab-dot.psychology { background: var(--psychology); }
+  .tab-dot.philosophy { background: var(--philosophy); }
+
+  .category-tab.active .tab-dot {
+    background: var(--bg);
+  }
+
+  .tab-count {
+    font-size: 0.7rem;
+    opacity: 0.7;
+  }
+
+  /* Blog Grid */
+  .blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .blog-card {
+    background: var(--bg-soft);
+    border-radius: 12px;
+    padding: var(--space-5);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: var(--border);
+  }
+
+  .dark .blog-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .blog-card-inner {
+    display: flex;
+    gap: var(--space-4);
+  }
+
+  .blog-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: var(--cat-color);
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .blog-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .blog-name {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.15rem;
+    transition: color 0.2s ease;
+  }
+
+  .blog-card:hover .blog-name {
+    color: var(--accent);
+  }
+
+  .blog-url {
+    font-size: var(--text-sm);
+    color: var(--text-faint);
+  }
+
+  .blog-description {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: var(--space-3);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .blog-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--space-3);
+    gap: var(--space-3);
+  }
+
+  .blog-categories {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  .blog-cat {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 100px;
+  }
+
+  .blog-cat.tech { background: var(--tech-soft); color: var(--tech); }
+  .blog-cat.design { background: var(--design-soft); color: var(--design); }
+  .blog-cat.life { background: var(--life-soft); color: var(--life); }
+  .blog-cat.culture { background: var(--culture-soft); color: var(--culture); }
+  .blog-cat.finance { background: var(--finance-soft); color: var(--finance); }
+  .blog-cat.economics { background: var(--economics-soft); color: var(--economics); }
+  .blog-cat.history { background: var(--history-soft); color: var(--history); }
+  .blog-cat.psychology { background: var(--psychology-soft); color: var(--psychology); }
+  .blog-cat.philosophy { background: var(--philosophy-soft); color: var(--philosophy); }
+
+  .blog-posts {
+    font-size: var(--text-xs);
+    color: var(--text-faint);
+    white-space: nowrap;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: var(--space-8);
+    color: var(--text-faint);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .blogs-main {
+      padding: var(--space-5) var(--space-4);
+    }
+
+    .blogs-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .blogs-toolbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .toolbar-actions {
+      width: 100%;
+    }
+
+    .export-btn,
+    .rss-btn {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .blog-card-inner {
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .blog-avatar {
+      width: 40px;
+      height: 40px;
+      font-size: 0.75rem;
+    }
+
+    .blog-footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

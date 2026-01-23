@@ -1,0 +1,293 @@
+---
+import Base from '../layouts/Base.astro';
+import blogsData from '../../data/blogs.json';
+import postsData from '../../data/cache/posts.json';
+
+const blogs = blogsData.blogs;
+const posts = postsData.posts;
+
+const blogMap = new Map(blogs.map((b) => [b.id, b]));
+
+const enrichedPosts = posts.map((post) => {
+  const blog = blogMap.get(post.blogId);
+  const category = blog?.categories?.[0];
+  return {
+    ...post,
+    blogName: blog?.name || '',
+    blogUrl: blog?.url || '',
+    category: category || 'tech',
+  };
+});
+
+function formatDate(dateStr: string) {
+  const date = new Date(dateStr);
+  const now = new Date();
+  const diffTime = now.getTime() - date.getTime();
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  const diffHours = Math.floor(diffTime / (1000 * 60 * 60));
+
+  if (diffHours < 1) return 'Just now';
+  if (diffHours < 24) return `${diffHours}h ago`;
+  if (diffDays === 1) return 'Yesterday';
+  if (diffDays < 7) return `${diffDays} days ago`;
+
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+---
+
+<Base title="Feed — The Small Web">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">The Small Web</a>
+      <nav class="header-nav">
+        <a href="/">Home</a>
+        <a href="/feed" class="active">Feed</a>
+        <a href="/archive">Archive</a>
+        <a href="/blogs">Blogs</a>
+        <a href="/about">About</a>
+        <a href="https://buymeacoffee.com/bebhuvan" target="_blank" rel="noopener" class="nav-support">Support</a>
+        <button class="theme-toggle" id="theme-toggle">Dark mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="feed-main">
+    <div class="feed-header">
+      <h1 class="feed-title">The Feed</h1>
+      <p class="feed-subtitle">All posts, as they come in</p>
+    </div>
+
+    <div class="feed-container">
+      {enrichedPosts.map((post, index) => (
+        <article class="feed-item" style={`animation-delay: ${Math.min(index * 0.03, 0.3)}s`}>
+          <div class="feed-item-header">
+            <span class={`feed-category ${post.category}`}>
+              <span class="feed-cat-dot"></span>
+              {post.category}
+            </span>
+            <span class="feed-time">{formatDate(post.date)}</span>
+          </div>
+
+          <a href={post.link} target="_blank" rel="noopener noreferrer" class="feed-item-content">
+            <h2 class="feed-item-title">{post.title}</h2>
+            {post.excerpt && (
+              <p class="feed-item-excerpt">{post.excerpt}</p>
+            )}
+          </a>
+
+          <div class="feed-item-footer">
+            <span class="feed-author">{post.blogName}</span>
+            <span class="feed-dot">·</span>
+            <span class="feed-source">{new URL(post.blogUrl).hostname}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="feed-end">
+      <p>You've reached the end</p>
+      <a href="/">Back to home</a>
+    </div>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+
+    function updateButtonText() {
+      if (toggle) {
+        toggle.textContent = document.documentElement.classList.contains('dark') ? 'Light mode' : 'Dark mode';
+      }
+    }
+
+    toggle?.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.theme = isDark ? 'dark' : 'light';
+      updateButtonText();
+    });
+
+    updateButtonText();
+  </script>
+</Base>
+
+<style>
+  .feed-main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .feed-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .feed-title {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .feed-subtitle {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+  }
+
+  .feed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .feed-item {
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--border);
+    opacity: 0;
+    animation: feedFadeIn 0.4s ease forwards;
+  }
+
+  @keyframes feedFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .feed-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.85rem;
+  }
+
+  .feed-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  .feed-cat-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  .feed-category.tech { color: var(--tech); }
+  .feed-category.tech .feed-cat-dot { background: var(--tech); }
+  .feed-category.life { color: var(--life); }
+  .feed-category.life .feed-cat-dot { background: var(--life); }
+  .feed-category.culture { color: var(--culture); }
+  .feed-category.culture .feed-cat-dot { background: var(--culture); }
+  .feed-category.design { color: var(--design); }
+  .feed-category.design .feed-cat-dot { background: var(--design); }
+  .feed-category.finance { color: var(--finance); }
+  .feed-category.finance .feed-cat-dot { background: var(--finance); }
+  .feed-category.economics { color: var(--economics); }
+  .feed-category.economics .feed-cat-dot { background: var(--economics); }
+
+  .feed-time {
+    font-size: 0.8rem;
+    color: var(--text-faint);
+  }
+
+  .feed-item-content {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 1rem;
+  }
+
+  .feed-item-title {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 0.6rem;
+    transition: color 0.2s ease;
+    letter-spacing: -0.01em;
+  }
+
+  .feed-item-content:hover .feed-item-title {
+    color: var(--accent);
+  }
+
+  .feed-item-excerpt {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .feed-item-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .feed-author {
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .feed-dot {
+    color: var(--text-faint);
+  }
+
+  .feed-source {
+    color: var(--text-faint);
+  }
+
+  .feed-end {
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--text-faint);
+    font-size: 0.9rem;
+  }
+
+  .feed-end a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-top: 0.5rem;
+    display: inline-block;
+  }
+
+  .feed-end a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .feed-main {
+      padding: 2rem 1rem;
+    }
+
+    .feed-title {
+      font-size: 1.8rem;
+    }
+
+    .feed-item-title {
+      font-size: 1.2rem;
+    }
+
+    .feed-item-excerpt {
+      font-size: 0.95rem;
+    }
+  }
+</style>

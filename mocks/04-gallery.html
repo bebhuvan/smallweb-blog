@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indie Blogs — The Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FFFFFF;
+      --bg-alt: #FAFAFA;
+      --text: #1C1C1C;
+      --text-muted: #7A7A7A;
+      --text-faint: #BEBEBE;
+      --border: #E8E8E8;
+      --accent: #B8860B;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Karla', system-ui, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --bg-alt: #1A1A1A;
+      --text: #F0F0F0;
+      --text-muted: #888888;
+      --text-faint: #444444;
+      --border: #2A2A2A;
+      --accent: #D4A832;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.4s ease;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 3rem;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    nav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    nav a {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--text);
+    }
+
+    .theme-toggle {
+      width: 32px;
+      height: 32px;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--text);
+    }
+
+    .theme-toggle svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--text-muted);
+      transition: fill 0.3s ease;
+    }
+
+    .theme-toggle:hover svg {
+      fill: var(--text);
+    }
+
+    [data-theme="dark"] .sun { display: block; }
+    [data-theme="dark"] .moon { display: none; }
+    .sun { display: none; }
+    .moon { display: block; }
+
+    /* Main Gallery */
+    main {
+      padding-top: 100px;
+    }
+
+    .gallery-intro {
+      text-align: center;
+      padding: 6rem 2rem 5rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .gallery-intro h1 {
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery-intro p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* Exhibition Grid */
+    .exhibition {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 3rem 6rem;
+    }
+
+    .exhibition-row {
+      display: flex;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .exhibition-row:nth-child(even) {
+      justify-content: flex-end;
+    }
+
+    /* Artwork Cards */
+    .artwork {
+      position: relative;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      opacity: 0;
+      transform: translateY(40px);
+      animation: reveal 0.7s ease forwards;
+    }
+
+    .artwork:nth-of-type(1) { animation-delay: 0.1s; }
+    .artwork:nth-of-type(2) { animation-delay: 0.2s; }
+    .artwork:nth-of-type(3) { animation-delay: 0.3s; }
+    .artwork:nth-of-type(4) { animation-delay: 0.4s; }
+    .artwork:nth-of-type(5) { animation-delay: 0.5s; }
+    .artwork:nth-of-type(6) { animation-delay: 0.6s; }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .artwork:hover {
+      box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+      transform: translateY(-4px);
+    }
+
+    [data-theme="dark"] .artwork:hover {
+      box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    }
+
+    /* Artwork Sizes */
+    .artwork.large {
+      width: 55%;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .artwork.medium {
+      width: 40%;
+      min-height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .artwork.small {
+      width: 35%;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    /* Artwork Content */
+    .artwork-number {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: var(--text-faint);
+    }
+
+    .artwork-category {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .artwork-title {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .artwork.large .artwork-title {
+      font-size: 2.5rem;
+    }
+
+    .artwork:hover .artwork-title {
+      color: var(--accent);
+    }
+
+    .artwork-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .artwork-author {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .artwork-author strong {
+      font-weight: 500;
+      color: var(--text);
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .artwork-date {
+      font-size: 0.8rem;
+      color: var(--text-faint);
+    }
+
+    /* View indicator */
+    .artwork-view {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.3s ease;
+    }
+
+    .artwork:hover .artwork-view {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .artwork-view svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: var(--text);
+      stroke-width: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .footer-text strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 1000px) {
+      .exhibition-row {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .artwork.large,
+      .artwork.medium,
+      .artwork.small {
+        width: 100%;
+        min-height: auto;
+        padding: 1.5rem;
+      }
+
+      .artwork-title {
+        font-size: 1.5rem !important;
+      }
+
+      .gallery-intro h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        padding: 1rem 1.5rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .exhibition {
+        padding: 0 1.5rem 4rem;
+      }
+
+      .gallery-intro {
+        padding: 4rem 1.5rem 3rem;
+      }
+
+      .gallery-intro h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">Indie Blogs</div>
+      <nav>
+        <a href="#" class="active">All</a>
+        <a href="#">Tech</a>
+        <a href="#">Design</a>
+        <a href="#">Life</a>
+        <a href="#">Culture</a>
+      </nav>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg class="moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery-intro">
+      <h1>An Exhibition of Independent Thought</h1>
+      <p>Carefully curated perspectives from writers across the web, presented for your contemplation.</p>
+    </section>
+
+    <section class="exhibition">
+      <div class="exhibition-row">
+        <a href="#" class="artwork large">
+          <span class="artwork-number">001</span>
+          <span class="artwork-category">Tech</span>
+          <h2 class="artwork-title">Claude's new constitution</h2>
+          <div class="artwork-meta">
+            <div class="artwork-author">
+              <strong>Simon Willison</strong>
+              simonwillison.net
+            </div>
+            <span class="artwork-date">Today</span>
+          </div>
+          <div class="artwork-view">
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+        <a href="#" class="artwork medium">
+          <span class="artwork-number">002</span>
+          <span class="artwork-category">Life</span>
+          <h2 class="artwork-title">I'm addicted to being useful</h2>
+          <div class="artwork-meta">
+            <div class="artwork-author">
+              <strong>Sean Goedecke</strong>
+              seangoedecke.com
+            </div>
+            <span class="artwork-date">Yesterday</span>
+          </div>
+          <div class="artwork-view">
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="exhibition-row">
+        <a href="#" class="artwork small">
+          <span class="artwork-number">003</span>
+          <span class="artwork-category">Tech</span>
+          <h2 class="artwork-title">Attention Media ≠ Social Media</h2>
+          <div class="artwork-meta">
+            <div class="artwork-author">
+              <strong>Susam Pal</strong>
+              susam.net
+            </div>
+            <span class="artwork-date">2 days ago</span>
+          </div>
+          <div class="artwork-view">
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+        <a href="#" class="artwork medium">
+          <span class="artwork-number">004</span>
+          <span class="artwork-category">Life</span>
+          <h2 class="artwork-title">3D printing my laptop ergonomic setup</h2>
+          <div class="artwork-meta">
+            <div class="artwork-author">
+              <strong>Nicole Tietz</strong>
+              ntietz.com
+            </div>
+            <span class="artwork-date">3 days ago</span>
+          </div>
+          <div class="artwork-view">
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="exhibition-row">
+        <a href="#" class="artwork medium">
+          <span class="artwork-number">005</span>
+          <span class="artwork-category">Culture</span>
+          <h2 class="artwork-title">Dead Internet Theory</h2>
+          <div class="artwork-meta">
+            <div class="artwork-author">
+              <strong>Dmitry Kudryavtsev</strong>
+              kudmitry.com
+            </div>
+            <span class="artwork-date">4 days ago</span>
+          </div>
+          <div class="artwork-view">
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+        <a href="#" class="artwork small">
+          <span class="artwork-number">006</span>
+          <span class="artwork-category">Tech</span>
+          <h2 class="artwork-title">A Social Filesystem</h2>
+          <div class="artwork-meta">
+            <div class="artwork-author">
+              <strong>Dan Abramov</strong>
+              overreacted.io
+            </div>
+            <span class="artwork-date">4 days ago</span>
+          </div>
+          <div class="artwork-view">
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-text">The collection features <strong>15 independent voices</strong> — updated twice daily</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.removeAttribute('data-theme');
+      } else {
+        html.setAttribute('data-theme', 'dark');
+      }
+    }
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+</body>
+</html>

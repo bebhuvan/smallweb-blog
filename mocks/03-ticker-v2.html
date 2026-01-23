@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indie Blogs — The Index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FFFCF8;
+      --bg-alt: #FFF8F0;
+      --text: #2C2416;
+      --text-muted: #7A7060;
+      --text-faint: #B8AFA0;
+      --border: #E8E0D4;
+      --accent: #E07850;
+      --tech: #5B8A72;
+      --life: #D4956A;
+      --culture: #9B7BB8;
+      --design: #C4785C;
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg: #1C1A17;
+      --bg-alt: #242018;
+      --text: #F5F0E8;
+      --text-muted: #A09888;
+      --text-faint: #605850;
+      --border: #3A3428;
+      --accent: #F0906A;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 17px;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* Header */
+    header {
+      padding: 2.5rem 2rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-top: 0.25rem;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .update-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .update-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--tech);
+      border-radius: 50%;
+      animation: softPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes softPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.9); }
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--text);
+      color: var(--text);
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 0.6rem 1.2rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      color: var(--text);
+      background: var(--bg-alt);
+    }
+
+    nav a.active {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    /* Main Content */
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Table Header */
+    .table-header {
+      display: grid;
+      grid-template-columns: 100px 90px 1fr 140px;
+      gap: 1.5rem;
+      padding: 0.75rem 0;
+      border-bottom: 2px solid var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .table-header span {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+    }
+
+    /* Posts */
+    .posts {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post {
+      display: grid;
+      grid-template-columns: 100px 90px 1fr 140px;
+      gap: 1.5rem;
+      align-items: baseline;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    .post:nth-child(1) { animation-delay: 0.05s; }
+    .post:nth-child(2) { animation-delay: 0.1s; }
+    .post:nth-child(3) { animation-delay: 0.15s; }
+    .post:nth-child(4) { animation-delay: 0.2s; }
+    .post:nth-child(5) { animation-delay: 0.25s; }
+    .post:nth-child(6) { animation-delay: 0.3s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .post:hover {
+      background: var(--bg-alt);
+      margin: 0 -1.5rem;
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px;
+    }
+
+    .post-date {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .post-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .post-category::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .post-category.tech { color: var(--tech); }
+    .post-category.tech::before { background: var(--tech); }
+    .post-category.life { color: var(--life); }
+    .post-category.life::before { background: var(--life); }
+    .post-category.culture { color: var(--culture); }
+    .post-category.culture::before { background: var(--culture); }
+    .post-category.design { color: var(--design); }
+    .post-category.design::before { background: var(--design); }
+
+    .post-content {
+      min-width: 0;
+    }
+
+    .post-title {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      line-height: 1.3;
+      margin-bottom: 0.25rem;
+      transition: color 0.2s ease;
+    }
+
+    .post:hover .post-title {
+      color: var(--accent);
+    }
+
+    .post-excerpt {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .post-author {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .post-author strong {
+      display: block;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      padding: 3rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-faint);
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      .table-header {
+        display: none;
+      }
+
+      .post {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .post:hover {
+        margin: 0 -1rem;
+        padding: 1rem;
+      }
+
+      .post-date {
+        order: -1;
+        font-size: 0.8rem;
+      }
+
+      .post-author {
+        text-align: left;
+        margin-top: 0.5rem;
+      }
+
+      .post-author strong {
+        display: inline;
+      }
+
+      .post-author strong::after {
+        content: ' · ';
+      }
+
+      .stats {
+        gap: 2rem;
+      }
+
+      .stat-value {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .header-top {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .header-right {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div>
+        <h1 class="logo">Indie Blogs</h1>
+        <p class="tagline">Fresh thoughts from independent writers</p>
+      </div>
+      <div class="header-right">
+        <div class="update-badge">
+          <span class="update-dot"></span>
+          Updated just now
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">Dark mode</button>
+      </div>
+    </div>
+    <nav>
+      <a href="#" class="active">All posts</a>
+      <a href="#">Tech</a>
+      <a href="#">Design</a>
+      <a href="#">Life</a>
+      <a href="#">Culture</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="table-header">
+      <span>Date</span>
+      <span>Category</span>
+      <span>Post</span>
+      <span>Author</span>
+    </div>
+
+    <div class="posts">
+      <a href="#" class="post">
+        <span class="post-date">Today</span>
+        <span class="post-category tech">Tech</span>
+        <div class="post-content">
+          <h2 class="post-title">Claude's new constitution</h2>
+          <p class="post-excerpt">Late last year Richard Weiss found something interesting while poking around with the just-released Claude Opus 4.5...</p>
+        </div>
+        <div class="post-author">
+          <strong>Simon Willison</strong>
+          simonwillison.net
+        </div>
+      </a>
+
+      <a href="#" class="post">
+        <span class="post-date">Yesterday</span>
+        <span class="post-category life">Life</span>
+        <div class="post-content">
+          <h2 class="post-title">I'm addicted to being useful</h2>
+          <p class="post-excerpt">A reflection on the compulsion to always be productive and what it means for our sense of self-worth.</p>
+        </div>
+        <div class="post-author">
+          <strong>Sean Goedecke</strong>
+          seangoedecke.com
+        </div>
+      </a>
+
+      <a href="#" class="post">
+        <span class="post-date">2 days ago</span>
+        <span class="post-category tech">Tech</span>
+        <div class="post-content">
+          <h2 class="post-title">Attention Media ≠ Social Media</h2>
+          <p class="post-excerpt">When web-based social media started flourishing nearly two decades ago, they were genuinely social media.</p>
+        </div>
+        <div class="post-author">
+          <strong>Susam Pal</strong>
+          susam.net
+        </div>
+      </a>
+
+      <a href="#" class="post">
+        <span class="post-date">3 days ago</span>
+        <span class="post-category life">Life</span>
+        <div class="post-content">
+          <h2 class="post-title">3D printing my laptop ergonomic setup</h2>
+          <p class="post-excerpt">Apparently, one of my hobbies is making updates to my ergonomic setup, then blogging about it from an Amtrak train.</p>
+        </div>
+        <div class="post-author">
+          <strong>Nicole Tietz</strong>
+          ntietz.com
+        </div>
+      </a>
+
+      <a href="#" class="post">
+        <span class="post-date">4 days ago</span>
+        <span class="post-category culture">Culture</span>
+        <div class="post-content">
+          <h2 class="post-title">Dead Internet Theory</h2>
+          <p class="post-excerpt">As we become more entertained but less connected, what exactly are we scrolling through anymore?</p>
+        </div>
+        <div class="post-author">
+          <strong>Dmitry Kudryavtsev</strong>
+          kudmitry.com
+        </div>
+      </a>
+
+      <a href="#" class="post">
+        <span class="post-date">4 days ago</span>
+        <span class="post-category tech">Tech</span>
+        <div class="post-content">
+          <h2 class="post-title">A Social Filesystem</h2>
+          <p class="post-excerpt">Formats over apps. What if your social graph lived in your filesystem?</p>
+        </div>
+        <div class="post-author">
+          <strong>Dan Abramov</strong>
+          overreacted.io
+        </div>
+      </a>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value">15</div>
+        <div class="stat-label">blogs curated</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">127</div>
+        <div class="stat-label">posts this month</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">2×</div>
+        <div class="stat-label">daily updates</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    A cozy corner of the web for readers who care
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.querySelector('.theme-toggle');
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.removeAttribute('data-theme');
+        btn.textContent = 'Dark mode';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        btn.textContent = 'Light mode';
+      }
+    }
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.querySelector('.theme-toggle').textContent = 'Light mode';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,955 @@
+{
+  "blogs": [
+    {
+      "id": "fromjason",
+      "name": "From Jason",
+      "url": "https://www.fromjason.xyz",
+      "feed": "https://www.fromjason.xyz/p/notebook/feed/feed.xml",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "description": "Critical perspectives on the web, AI, and digital culture."
+    },
+    {
+      "id": "susam",
+      "name": "Susam Pal",
+      "url": "https://susam.net",
+      "feed": "https://susam.net/feed.xml",
+      "categories": [
+        "tech"
+      ],
+      "description": "Essays on programming, mathematics, and technical writing."
+    },
+    {
+      "id": "seangoedecke",
+      "name": "Sean Goedecke",
+      "url": "https://www.seangoedecke.com",
+      "feed": "https://www.seangoedecke.com/rss.xml",
+      "categories": [
+        "tech",
+        "life"
+      ],
+      "description": "Software engineering and personal reflections."
+    },
+    {
+      "id": "ploum",
+      "name": "Ploum",
+      "url": "https://ploum.net",
+      "feed": "https://ploum.net/atom_en.xml",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "description": "Technology, digital freedom, and open source advocacy."
+    },
+    {
+      "id": "simonwillison",
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net",
+      "feed": "https://simonwillison.net/atom/everything/",
+      "categories": [
+        "tech"
+      ],
+      "description": "AI, LLMs, Python, and data tools from the creator of Datasette."
+    },
+    {
+      "id": "entropicthoughts",
+      "name": "Entropic Thoughts",
+      "url": "https://entropicthoughts.com",
+      "feed": "https://entropicthoughts.com/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Software engineering, systems thinking, and technical analysis."
+    },
+    {
+      "id": "ntietz",
+      "name": "Nicole Tietz",
+      "url": "https://www.ntietz.com",
+      "feed": "https://www.ntietz.com/atom.xml",
+      "categories": [
+        "tech",
+        "life"
+      ],
+      "description": "Software engineering, maker projects, and work-life balance."
+    },
+    {
+      "id": "stephango",
+      "name": "Steph Ango",
+      "url": "https://stephango.com",
+      "feed": "https://stephango.com/feed.xml",
+      "categories": [
+        "design",
+        "tech"
+      ],
+      "description": "CEO of Obsidian. Design, tools for thought, and digital craft."
+    },
+    {
+      "id": "emilburzo",
+      "name": "Emil Burzo",
+      "url": "https://blog.emilburzo.com",
+      "feed": "https://blog.emilburzo.com/index.xml",
+      "categories": [
+        "tech"
+      ],
+      "description": "Technical deep-dives and engineering explorations."
+    },
+    {
+      "id": "alanwsmith",
+      "name": "Alan W. Smith",
+      "url": "https://www.alanwsmith.com",
+      "feed": "https://www.alanwsmith.com/feeds/posts.xml",
+      "categories": [
+        "tech",
+        "design"
+      ],
+      "description": "Creative coding, building tools, and digital experiments."
+    },
+    {
+      "id": "kudmitry",
+      "name": "Dmitry Kudryavtsev",
+      "url": "https://kudmitry.com",
+      "feed": "https://kudmitry.com/articles/feed.xml",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "description": "Software development, internet culture, and productivity."
+    },
+    {
+      "id": "seanheelan",
+      "name": "Sean Heelan",
+      "url": "https://sean.heelan.io",
+      "feed": "https://sean.heelan.io/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Security research, vulnerability analysis, and AI in security."
+    },
+    {
+      "id": "gamesbymason",
+      "name": "Games by Mason",
+      "url": "https://gamesbymason.com",
+      "feed": "https://gamesbymason.com/feed.xml",
+      "categories": [
+        "tech",
+        "design"
+      ],
+      "description": "Game development, tech commentary, and creative projects."
+    },
+    {
+      "id": "teendifferent",
+      "name": "Teen Different",
+      "url": "https://teendifferent.substack.com",
+      "feed": "https://teendifferent.substack.com/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Deep technical analysis of AI systems and LLM safety."
+    },
+    {
+      "id": "overreacted",
+      "name": "Overreacted",
+      "url": "https://overreacted.io",
+      "feed": "https://overreacted.io/rss.xml",
+      "categories": [
+        "tech"
+      ],
+      "description": "Dan Abramov on React, JavaScript, and programming craft."
+    },
+    {
+      "id": "wealthofcommonsense",
+      "name": "A Wealth of Common Sense",
+      "url": "https://awealthofcommonsense.com",
+      "feed": "https://awealthofcommonsense.com/feed",
+      "categories": [
+        "finance"
+      ],
+      "description": "Ben Carlson on investing, markets, and financial decision-making."
+    },
+    {
+      "id": "abnormalreturns",
+      "name": "Abnormal Returns",
+      "url": "https://abnormalreturns.com",
+      "feed": "https://abnormalreturns.com/feed",
+      "categories": [
+        "finance"
+      ],
+      "description": "Tadas Viskanta curating the best in investing and finance writing."
+    },
+    {
+      "id": "mrkaran",
+      "name": "Karan Sharma",
+      "url": "https://mrkaran.dev",
+      "feed": "https://mrkaran.dev/posts/atom.xml",
+      "categories": [
+        "tech"
+      ],
+      "description": "Infrastructure, DevOps, and backend engineering insights."
+    },
+    {
+      "id": "pieterlevels",
+      "name": "Pieter Levels",
+      "url": "https://pieterma.es",
+      "feed": "https://pieterma.es/rss.xml",
+      "categories": [
+        "tech",
+        "life"
+      ],
+      "description": "Indie hacking, bootstrapping startups, and building in public."
+    },
+    {
+      "id": "pluralistic",
+      "name": "Pluralistic",
+      "url": "https://pluralistic.net",
+      "feed": "https://pluralistic.net/feed/",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "description": "Cory Doctorow on digital rights, enshittification, and tech criticism."
+    },
+    {
+      "id": "sivers",
+      "name": "Derek Sivers",
+      "url": "https://sive.rs",
+      "feed": "https://sivers.org/feed",
+      "categories": [
+        "life"
+      ],
+      "description": "Unconventional thinking on life, business, and creativity."
+    },
+    {
+      "id": "maggieappleton",
+      "name": "Maggie Appleton",
+      "url": "https://maggieappleton.com",
+      "feed": "https://maggieappleton.com/rss.xml",
+      "categories": [
+        "design",
+        "tech"
+      ],
+      "description": "Digital gardens, visual explanations, and anthropology of technology."
+    },
+    {
+      "id": "marginalian",
+      "name": "The Marginalian",
+      "url": "https://www.themarginalian.org",
+      "feed": "https://www.themarginalian.org/feed/",
+      "categories": [
+        "life",
+        "culture"
+      ],
+      "description": "Maria Popova exploring literature, philosophy, art, and the search for meaning."
+    },
+    {
+      "id": "paulgraham",
+      "name": "Paul Graham",
+      "url": "https://paulgraham.com",
+      "feed": "https://filipesilva.github.io/paulgraham-rss/feed.rss",
+      "categories": [
+        "tech",
+        "life"
+      ],
+      "description": "Essays on startups, programming, and independent thinking."
+    },
+    {
+      "id": "aldaily",
+      "name": "Arts & Letters Daily",
+      "url": "https://www.aldaily.com",
+      "feed": "https://www.aldaily.com/feed/",
+      "categories": [
+        "culture"
+      ],
+      "description": "Curated essays on ideas, philosophy, literature, and the arts."
+    },
+    {
+      "id": "sentiers",
+      "name": "Sentiers",
+      "url": "https://sentiers.media",
+      "feed": "https://sentiers.media/rss/",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "description": "Signals of change and better futures in technology, society, and culture."
+    },
+    {
+      "id": "benedictevans",
+      "name": "Benedict Evans",
+      "url": "https://www.ben-evans.com",
+      "feed": "https://www.ben-evans.com/benedictevans?format=rss",
+      "categories": [
+        "tech"
+      ],
+      "description": "Analysis of technology, AI, mobile, and the tech industry."
+    },
+    {
+      "id": "nesslabs",
+      "name": "Ness Labs",
+      "url": "https://nesslabs.com",
+      "feed": "https://nesslabs.com/feed",
+      "categories": [
+        "life"
+      ],
+      "description": "Mindful productivity, neuroscience, and meaningful living by Anne-Laure Le Cunff."
+    },
+    {
+      "id": "slackwire",
+      "name": "The Slack Wire",
+      "url": "https://jwmason.org",
+      "feed": "https://jwmason.org/the-slack-wire/feed/",
+      "categories": [
+        "economics"
+      ],
+      "description": "J.W. Mason on economics, policy, and political economy."
+    },
+    {
+      "id": "marginalrevolution",
+      "name": "Marginal Revolution",
+      "url": "https://marginalrevolution.com",
+      "feed": "https://marginalrevolution.com/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "Tyler Cowen and Alex Tabarrok on economics, culture, and ideas."
+    },
+    {
+      "id": "interconnects",
+      "name": "Interconnects",
+      "url": "https://www.interconnects.ai",
+      "feed": "https://www.interconnects.ai/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Nathan Lambert on AI research from inside frontier labs, minus the hype."
+    },
+    {
+      "id": "thezvi",
+      "name": "Don't Worry About the Vase",
+      "url": "https://thezvi.substack.com",
+      "feed": "https://thezvi.substack.com/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Zvi Mowshowitz on AI, rationality, policy, and weekly AI updates."
+    },
+    {
+      "id": "markcarrigan",
+      "name": "Mark Carrigan",
+      "url": "https://markcarrigan.net",
+      "feed": "https://markcarrigan.net/feed/",
+      "categories": [
+        "culture"
+      ],
+      "description": "Social theory, digital society, and academic life."
+    },
+    {
+      "id": "lucumr",
+      "name": "Armin Ronacher",
+      "url": "https://lucumr.pocoo.org",
+      "feed": "https://lucumr.pocoo.org/feed.xml",
+      "categories": [
+        "tech"
+      ],
+      "description": "Creator of Flask and Rye on programming, Rust, and software craft."
+    },
+    {
+      "id": "kottke",
+      "name": "Kottke.org",
+      "url": "https://kottke.org",
+      "feed": "https://feeds.kottke.org/main",
+      "categories": [
+        "culture"
+      ],
+      "description": "Jason Kottke's weblog, home of fine hypertext products since 1998."
+    },
+    {
+      "id": "shreevatsa",
+      "name": "Shreevatsa",
+      "url": "https://shreevatsa.net",
+      "feed": "https://shreevatsa.net/index.xml",
+      "categories": [
+        "culture",
+        "tech"
+      ],
+      "description": "Essays on Sanskrit literature, algorithms, and eclectic curiosities."
+    },
+    {
+      "id": "hollisrobbins",
+      "name": "Anecdotal Value",
+      "url": "https://hollisrobbinsanecdotal.substack.com",
+      "feed": "https://hollisrobbinsanecdotal.substack.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Observations informed by having paid attention for a long time."
+    },
+    {
+      "id": "freddiedeboer",
+      "name": "Freddie deBoer",
+      "url": "https://freddiedeboer.substack.com",
+      "feed": "https://freddiedeboer.substack.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Media criticism, politics, and social commentary."
+    },
+    {
+      "id": "lukeburgis",
+      "name": "Luke Burgis Newsletter",
+      "url": "https://read.lukeburgis.com",
+      "feed": "https://read.lukeburgis.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Pursuing the mysterium tremendum et fascinans and writing at the intersection of philosophy, culture, art, technology, and religious wisdom."
+    },
+    {
+      "id": "commonreader",
+      "name": "The Common Reader",
+      "url": "https://www.commonreader.co.uk",
+      "feed": "https://www.commonreader.co.uk/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Nerdy literature newsletter. Helping you make the most of your reading."
+    },
+    {
+      "id": "programmablemutter",
+      "name": "Programmable Mutter",
+      "url": "https://www.programmablemutter.com",
+      "feed": "https://www.programmablemutter.com/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Technology and politics in an interdependent world"
+    },
+    {
+      "id": "venkateshrao",
+      "name": "Contraptions",
+      "url": "https://contraptions.venkateshrao.com",
+      "feed": "https://contraptions.venkateshrao.com/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Janky, wobbly models of everything from philosophy to technology and everything in-between."
+    },
+    {
+      "id": "millersbookreview",
+      "name": "Miller's Book Review",
+      "url": "https://www.millersbookreview.com",
+      "feed": "https://www.millersbookreview.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Celebrating All Things Literary"
+    },
+    {
+      "id": "onepercentrule",
+      "name": "The One Percent Rule",
+      "url": "https://onepercentrule.substack.com",
+      "feed": "https://onepercentrule.substack.com/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Professor of AI, Behavioral Economics & Data Science. Writing on AI, China, Critical Thinking, intelligence."
+    },
+    {
+      "id": "strangeloopcanon",
+      "name": "Strange Loop Canon",
+      "url": "https://www.strangeloopcanon.com",
+      "feed": "https://www.strangeloopcanon.com/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Essays on complex systems, AI agents, and the 'agentic economy'."
+    },
+    {
+      "id": "maxread",
+      "name": "Read Max",
+      "url": "https://maxread.substack.com",
+      "feed": "https://maxread.substack.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Explaining the weird new future and recommending weird old books"
+    },
+    {
+      "id": "collabfund",
+      "name": "Collaborative Fund",
+      "url": "http://collabfund.com/blog",
+      "feed": "http://feeds.feedburner.com/collabfund",
+      "categories": [
+        "finance"
+      ],
+      "description": "Collaborative Fund is a leading source of capital for entrepreneurs pushing the world forward."
+    },
+    {
+      "id": "summerlightning",
+      "name": "Summer Lightning",
+      "url": "https://summerlightning.substack.com",
+      "feed": "https://summerlightning.substack.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Essays on temporal shifts in culture and technology."
+    },
+    {
+      "id": "ghostsofelectricity",
+      "name": "Ghosts of Electricity",
+      "url": "https://aleximas.substack.com",
+      "feed": "https://aleximas.substack.com/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "Essays on the economics of AI and technological change."
+    },
+    {
+      "id": "hyperdimensional",
+      "name": "Hyperdimensional",
+      "url": "https://www.hyperdimensional.co",
+      "feed": "https://www.hyperdimensional.co/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "A newsletter about emerging technology and the future of governance."
+    },
+    {
+      "id": "kneelingbus",
+      "name": "Kneeling Bus",
+      "url": "https://kneelingbus.substack.com",
+      "feed": "https://kneelingbus.substack.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Notes from the collision of meatspace and the internet."
+    },
+    {
+      "id": "thecuttingfloor",
+      "name": "The Cutting Floor",
+      "url": "https://thecuttingfloor.substack.com",
+      "feed": "https://thecuttingfloor.substack.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Notes, fragments, and signals from a world entering maintenance."
+    },
+    {
+      "id": "astralcodexten",
+      "name": "Astral Codex Ten",
+      "url": "https://www.astralcodexten.com",
+      "feed": "https://www.astralcodexten.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Rationality, psychiatry, and deep analysis of everything."
+    },
+    {
+      "id": "paulkrugman",
+      "name": "Paul Krugman",
+      "url": "https://paulkrugman.substack.com",
+      "feed": "https://paulkrugman.substack.com/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "Notes on economics and more."
+    },
+    {
+      "id": "plainenglish",
+      "name": "Plain English",
+      "url": "https://www.derekthompson.org",
+      "feed": "https://www.derekthompson.org/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "A newsletter about abundance and building a better world."
+    },
+    {
+      "id": "noahpinion",
+      "name": "Noahpinion",
+      "url": "https://www.noahpinion.blog",
+      "feed": "https://www.noahpinion.blog/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "Economics and other interesting stuff."
+    },
+    {
+      "id": "understandingai",
+      "name": "Understanding AI",
+      "url": "https://www.understandingai.org",
+      "feed": "https://www.understandingai.org/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Exploring how AI works and how it's changing our world."
+    },
+    {
+      "id": "arpitrage",
+      "name": "Arpitrage",
+      "url": "https://arpitrage.substack.com",
+      "feed": "https://arpitrage.substack.com/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "Finance, Real Estate, and Urban Economics."
+    },
+    {
+      "id": "highcapacity",
+      "name": "High Capacity",
+      "url": "https://www.high-capacity.com",
+      "feed": "https://www.high-capacity.com/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "China's tech and industrial policy: manufacturing, global supply chains, and economic competition."
+    },
+    {
+      "id": "kyla",
+      "name": "Kyla's Newsletter",
+      "url": "https://kyla.substack.com",
+      "feed": "https://kyla.substack.com/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "Human-centric economic analysis to help all of us understand the world better."
+    },
+    {
+      "id": "grumpyeconomist",
+      "name": "The Grumpy Economist",
+      "url": "https://www.grumpy-economist.com",
+      "feed": "https://www.grumpy-economist.com/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "News, views, and commentary from a free market point of view."
+    },
+    {
+      "id": "oneusefulthing",
+      "name": "One Useful Thing",
+      "url": "https://www.oneusefulthing.org",
+      "feed": "https://www.oneusefulthing.org/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Trying to understand the implications of AI for work, education, and life."
+    },
+    {
+      "id": "defaultblog",
+      "name": "default.blog",
+      "url": "https://default.blog",
+      "feed": "https://default.blog/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "An emotional scrapbook of the Internet. Rabbit holes, mood swings, and subcultures."
+    },
+    {
+      "id": "onmyom",
+      "name": "On my Om",
+      "url": "https://om.co",
+      "feed": "https://om.co/feed/",
+      "categories": [
+        "tech"
+      ],
+      "description": "Technology & Change: Field Notes From The Present Future"
+    },
+    {
+      "id": "ofdollarsanddata",
+      "name": "Of Dollars And Data",
+      "url": "https://ofdollarsanddata.com",
+      "feed": "https://ofdollarsanddata.com/feed",
+      "categories": [
+        "finance"
+      ],
+      "description": "Act Smarter. Live Richer. Nick Maggiulli on personal finance and investing."
+    },
+    {
+      "id": "larryswedroe",
+      "name": "Larry’s Substack",
+      "url": "https://larryswedroe.substack.com",
+      "feed": "https://larryswedroe.substack.com/feed",
+      "categories": [
+        "finance"
+      ],
+      "description": "Larry Swedroe on investing, markets, and economic evidence."
+    },
+    {
+      "id": "klementoninvesting",
+      "name": "Klement on Investing",
+      "url": "https://klementoninvesting.substack.com",
+      "feed": "https://klementoninvesting.substack.com/feed",
+      "categories": [
+        "finance"
+      ],
+      "description": "Thoughts on financial markets by Joachim Klement."
+    },
+    {
+      "id": "flowingdata",
+      "name": "FlowingData",
+      "url": "https://flowingdata.com",
+      "feed": "https://flowingdata.com/feed",
+      "categories": [
+        "tech",
+        "design"
+      ],
+      "description": "Nathan Yau exploring how statisticians, designers, and data scientists use data to understand the world."
+    },
+    {
+      "id": "downtownjoshbrown",
+      "name": "Downtown Josh Brown",
+      "url": "https://www.downtownjoshbrown.com",
+      "feed": "https://joshuabrown.substack.com/feed",
+      "categories": [
+        "finance"
+      ],
+      "description": "Josh Brown on markets, investing, and the financial industry."
+    },
+    {
+      "id": "anildash",
+      "name": "Anil Dash",
+      "url": "https://www.anildash.com",
+      "feed": "https://www.anildash.com/feed.xml",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "description": "Anil Dash on technology, culture, and the social impact of the web."
+    },
+    {
+      "id": "spyglass",
+      "name": "Spyglass",
+      "url": "https://spyglass.org",
+      "feed": "https://spyglass.org/feed",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "description": "Independent commentary on technology, media, and digital life."
+    },
+    {
+      "id": "betterletter",
+      "name": "Better Letter",
+      "url": "https://betterletter.substack.com",
+      "feed": "https://betterletter.substack.com/feed",
+      "categories": [
+        "finance",
+        "culture"
+      ],
+      "description": "Investment insights, behavioral finance, and cultural observations."
+    },
+    {
+      "id": "honestbroker",
+      "name": "The Honest Broker",
+      "url": "https://www.honest-broker.com",
+      "feed": "https://www.honest-broker.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Ted Gioia on music, literature, and the business of culture."
+    },
+    {
+      "id": "overthefield",
+      "name": "Over the Field",
+      "url": "https://overthefield.substack.com",
+      "feed": "https://overthefield.substack.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Hadden Turner on agrarian philosophy, rural life, and the wisdom of the land."
+    },
+    {
+      "id": "pilgrimsinthemachine",
+      "name": "Pilgrims in the Machine",
+      "url": "https://pilgrimsinthemachine.substack.com",
+      "feed": "https://pilgrimsinthemachine.substack.com/feed",
+      "categories": [
+        "culture",
+        "tech"
+      ],
+      "description": "Exploring the intersection of technology, faith, and human flourishing."
+    },
+    {
+      "id": "convivialsociety",
+      "name": "The Convivial Society",
+      "url": "https://theconvivialsociety.substack.com",
+      "feed": "https://theconvivialsociety.substack.com/feed",
+      "categories": [
+        "culture",
+        "tech"
+      ],
+      "description": "L.M. Sacasas on technology, culture, and moral formation."
+    },
+    {
+      "id": "wisdomofcrowds",
+      "name": "Wisdom of Crowds",
+      "url": "https://wisdomofcrowds.live",
+      "feed": "https://wisdomofcrowds.live/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Shadi Hamid and Damir Marusic on politics, philosophy, and first principles."
+    },
+    {
+      "id": "bloodinthemachine",
+      "name": "Blood in the Machine",
+      "url": "https://www.bloodinthemachine.com",
+      "feed": "https://www.bloodinthemachine.com/feed",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "description": "Brian Merchant on big tech, labor, and the history of automation."
+    },
+    {
+      "id": "techmeme",
+      "name": "Techmeme",
+      "url": "https://www.techmeme.com",
+      "feed": "https://www.techmeme.com/feed.xml",
+      "categories": [
+        "tech"
+      ],
+      "description": "Essential tech news curation and industry tracking."
+    },
+    {
+      "id": "smallpotatoes",
+      "name": "Small Potatoes",
+      "url": "https://smallpotatoes.paulbloom.net",
+      "feed": "https://smallpotatoes.paulbloom.net/feed",
+      "categories": [
+        "psychology",
+        "philosophy"
+      ],
+      "description": "Paul Bloom on psychology, philosophy, and the complexities of human nature."
+    },
+    {
+      "id": "stockviz",
+      "name": "Stockviz",
+      "url": "https://stockviz.substack.com",
+      "feed": "https://stockviz.substack.com/feed",
+      "categories": [
+        "finance"
+      ],
+      "description": "Quantitative analysis, market data, and investment research."
+    },
+    {
+      "id": "ageofinvention",
+      "name": "Age of Invention",
+      "url": "https://www.ageofinvention.xyz",
+      "feed": "https://www.ageofinvention.xyz/feed",
+      "categories": [
+        "history",
+        "economics"
+      ],
+      "description": "Anton Howes on the history of innovation and the origins of the industrial revolution."
+    },
+    {
+      "id": "openquestions",
+      "name": "Open Questions",
+      "url": "https://openquestionsblog.substack.com",
+      "feed": "https://openquestionsblog.substack.com/feed",
+      "categories": [
+        "philosophy"
+      ],
+      "description": "Exploring deep questions in philosophy, ethics, and society."
+    },
+    {
+      "id": "optimallyirrational",
+      "name": "Optimally Irrational",
+      "url": "https://www.optimallyirrational.com",
+      "feed": "https://www.optimallyirrational.com/feed",
+      "categories": [
+        "economics",
+        "psychology"
+      ],
+      "description": "Lionel Page on behavioral economics, game theory, and human psychology."
+    },
+    {
+      "id": "conspicuouscognition",
+      "name": "Conspicuous Cognition",
+      "url": "https://www.conspicuouscognition.com",
+      "feed": "https://www.conspicuouscognition.com/feed",
+      "categories": [
+        "philosophy",
+        "psychology"
+      ],
+      "description": "Dan Williams on philosophy, psychology, and the forces shaping our beliefs."
+    },
+    {
+      "id": "speakandregret",
+      "name": "Speak and Regret",
+      "url": "https://www.speakandregret.michaelinzlicht.com",
+      "feed": "https://www.speakandregret.michaelinzlicht.com/feed",
+      "categories": [
+        "psychology",
+        "life"
+      ],
+      "description": "Michael Inzlicht on social psychology, science reform, and academic life."
+    },
+    {
+      "id": "wollenblog",
+      "name": "Wollenblog",
+      "url": "https://wollenblog.substack.com",
+      "feed": "https://wollenblog.substack.com/feed",
+      "categories": [
+        "philosophy",
+        "culture"
+      ],
+      "description": "Amos Wollen on analytic philosophy, digital culture, and the art of going awol."
+    },
+    {
+      "id": "koenfucius",
+      "name": "Koenfucius",
+      "url": "https://koenfucius.substack.com",
+      "feed": "https://koenfucius.substack.com/feed",
+      "categories": [
+        "psychology"
+      ],
+      "description": "Essays on behavioral economics, psychology, and the philosophy of everyday life."
+    },
+    {
+      "id": "experimentalhistory",
+      "name": "Experimental History",
+      "url": "https://www.experimental-history.com",
+      "feed": "https://www.experimental-history.com/feed",
+      "categories": [
+        "psychology",
+        "culture"
+      ],
+      "description": "Adam Mastroianni on science reform, human behavior, and the history of the present."
+    },
+    {
+      "id": "intrinsicperspective",
+      "name": "The Intrinsic Perspective",
+      "url": "https://www.theintrinsicperspective.com",
+      "feed": "https://www.theintrinsicperspective.com/feed",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "description": "Erik Hoel on consciousness, AI, and the intersection of science and humanities."
+    },
+    {
+      "id": "everythingisbullshit",
+      "name": "Everything is Bullshit",
+      "url": "https://www.everythingisbullshit.blog",
+      "feed": "https://www.everythingisbullshit.blog/feed",
+      "categories": [
+        "psychology",
+        "culture"
+      ],
+      "description": "David Pinsof on the hidden motives behind our beliefs and the 'bullshit' of social life."
+    },
+    {
+      "id": "benthamsbulldog",
+      "name": "Bentham's Bulldog",
+      "url": "https://benthams.substack.com",
+      "feed": "https://benthams.substack.com/feed",
+      "categories": [
+        "philosophy"
+      ],
+      "description": "A blog about utilitarianism, ethics, and effective altruism."
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+---
+interface Props {
+  title: string;
+  link: string;
+  date: string;
+  excerpt?: string;
+  blogName: string;
+  blogSlug: string;
+  category?: string;
+  index?: number;
+  featured?: boolean;
+}
+
+const { title, link, date, excerpt, blogName, blogSlug, category, index = 0, featured = false } = Astro.props;
+
+const formatDate = (dateString: string) => {
+  const d = new Date(dateString);
+  const now = new Date();
+  const diffDays = Math.floor((now.getTime() - d.getTime()) / (1000 * 60 * 60 * 24));
+
+  if (diffDays === 0) return 'Today';
+  if (diffDays === 1) return 'Yesterday';
+  if (diffDays < 7) return `${diffDays} days ago`;
+
+  return d.toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+  });
+};
+
+const getInitials = (name: string) => {
+  return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+};
+
+const getCategoryClass = (cat: string | undefined) => {
+  if (!cat) return '';
+  const lower = cat.toLowerCase();
+  if (['tech', 'design', 'life', 'culture'].includes(lower)) {
+    return `badge-${lower}`;
+  }
+  return 'badge-tech';
+};
+
+const animationDelay = Math.min(index * 60, 500);
+---
+
+<article
+  class="fade-up"
+  style={`animation-delay: ${animationDelay}ms`}
+>
+  <a
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+    class:list={[
+      "card block p-5",
+      featured && "p-6"
+    ]}
+  >
+    <div class="flex gap-4">
+      <!-- Avatar -->
+      <div class="avatar" title={blogName}>
+        {getInitials(blogName)}
+      </div>
+
+      <!-- Content -->
+      <div class="flex-1 min-w-0">
+        <!-- Meta row -->
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-sm font-medium text-(--color-ink) truncate">
+            {blogName}
+          </span>
+          <span class="text-(--color-ink-faint)">·</span>
+          <time datetime={date} class="text-sm text-(--color-ink-faint) shrink-0">
+            {formatDate(date)}
+          </time>
+        </div>
+
+        <!-- Title -->
+        <h2 class:list={[
+          "font-serif leading-snug text-(--color-ink)",
+          featured ? "text-xl md:text-2xl" : "text-lg"
+        ]}>
+          {title}
+        </h2>
+
+        <!-- Excerpt -->
+        {excerpt && (
+          <p class:list={[
+            "mt-2 text-(--color-ink-muted) leading-relaxed line-clamp-2",
+            featured ? "text-base" : "text-sm"
+          ]}>
+            {excerpt}
+          </p>
+        )}
+
+        <!-- Category badge -->
+        {category && (
+          <div class="mt-3">
+            <span class:list={["badge", getCategoryClass(category)]}>
+              {category}
+            </span>
+          </div>
+        )}
+      </div>
+    </div>
+  </a>
+</article>

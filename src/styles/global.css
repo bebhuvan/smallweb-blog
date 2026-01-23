@@ -1,0 +1,1667 @@
+@import "tailwindcss";
+
+:root {
+  /* Background */
+  --bg: #FFFFFF;
+  --bg-soft: #F8F8F8;
+
+  /* Text */
+  --text: #2C2825;
+  --text-muted: #635D56;
+  --text-faint: #A09A93;
+
+  /* Borders */
+  --border: #E5E0D8;
+  --border-dark: #2C2825;
+
+  /* Accent */
+  --accent: #C45A35;
+
+  /* Category colors */
+  --tech: #4A8F7A;
+  --tech-soft: #F0F6F4;
+  --life: #B87A4A;
+  --life-soft: #FBF6F1;
+  --culture: #7D6A9A;
+  --culture-soft: #F6F3F9;
+  --design: #A86565;
+  --design-soft: #FAF2F2;
+  --finance: #9A8345;
+  --finance-soft: #F9F6EE;
+  --economics: #4A8A9A;
+  --economics-soft: #F0F6F8;
+  --history: #8B735B;
+  --history-soft: #F8F5F2;
+  --psychology: #A6658E;
+  --psychology-soft: #F9F1F6;
+  --philosophy: #5E6A96;
+  --philosophy-soft: #F1F3F9;
+
+  /* Typography */
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Nunito Sans', system-ui, sans-serif;
+
+  /* Type Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.75rem;
+
+  /* Line Heights */
+  --leading-tight: 1.2;
+  --leading-snug: 1.4;
+  --leading-normal: 1.6;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+}
+
+.dark {
+  --bg: #181614;
+  --bg-soft: #211E1B;
+  --text: #F2EFE9;
+  --text-muted: #B5AFA6;
+  --text-faint: #6A6560;
+  --border: #332E28;
+  --border-dark: #F2EFE9;
+  --accent: #D97A58;
+  --tech-soft: #1A2825;
+  --life-soft: #282220;
+  --culture-soft: #242028;
+  --design-soft: #282020;
+  --finance-soft: #282520;
+  --economics-soft: #1E2628;
+  --history-soft: #282420;
+  --psychology-soft: #282025;
+  --philosophy-soft: #202228;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Masthead */
+.masthead {
+  text-align: center;
+  padding: var(--space-6) var(--space-6) var(--space-5);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.masthead-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
+}
+
+.newspaper-title {
+  font-family: var(--serif);
+  font-size: 3.6rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  font-optical-sizing: auto;
+}
+
+.newspaper-subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--text-faint);
+  color: var(--text);
+}
+
+/* Navigation */
+.category-nav {
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 2rem;
+  background: var(--bg-soft);
+}
+
+.category-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  list-style: none;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.category-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.category-nav a:hover {
+  color: var(--text);
+  background: var(--bg);
+}
+
+.category-nav a.active {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.cat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.cat-dot.tech { background: var(--tech); }
+.cat-dot.life { background: var(--life); }
+.cat-dot.culture { background: var(--culture); }
+.cat-dot.design { background: var(--design); }
+.cat-dot.finance { background: var(--finance); }
+.cat-dot.economics { background: var(--economics); }
+.cat-dot.history { background: var(--history); }
+.cat-dot.psychology { background: var(--psychology); }
+.cat-dot.philosophy { background: var(--philosophy); }
+
+/* Main Content */
+.main-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+}
+
+/* Headlines Section */
+.headlines {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2.5rem;
+  padding-bottom: var(--space-7);
+  margin-bottom: var(--space-8);
+  align-items: stretch;
+  position: relative;
+}
+
+.headlines::after,
+.headlines::before {
+  display: none;
+}
+
+.lead-story {
+  opacity: 0;
+  animation: fadeIn 0.5s ease 0.1s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.lead-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.lead-badge.tech { background: var(--tech-soft); color: var(--tech); }
+.lead-badge.life { background: var(--life-soft); color: var(--life); }
+.lead-badge.culture { background: var(--culture-soft); color: var(--culture); }
+.lead-badge.design { background: var(--design-soft); color: var(--design); }
+.lead-badge.finance { background: var(--finance-soft); color: var(--finance); }
+.lead-badge.economics { background: var(--economics-soft); color: var(--economics); }
+.lead-badge.history { background: var(--history-soft); color: var(--history); }
+.lead-badge.psychology { background: var(--psychology-soft); color: var(--psychology); }
+.lead-badge.philosophy { background: var(--philosophy-soft); color: var(--philosophy); }
+
+.lead-title {
+  font-family: var(--serif);
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.85rem;
+  font-optical-sizing: auto;
+}
+
+.lead-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.lead-title a:hover {
+  color: var(--accent);
+}
+
+.lead-byline {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--text-faint);
+  margin-bottom: 1rem;
+}
+
+.lead-byline strong {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.lead-excerpt {
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.lead-excerpt::first-letter {
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  font-weight: 500;
+  float: left;
+  line-height: 0.85;
+  padding-right: 0.5rem;
+  padding-top: 0.05rem;
+  color: var(--text);
+}
+
+/* Lead Column */
+.lead-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.lead-column .secondary-posts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.lead-column .secondary-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.lead-column .secondary-item {
+  flex: 1;
+}
+
+/* Secondary Posts */
+.secondary-posts {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.secondary-header {
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+}
+
+.secondary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.secondary-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.secondary-item:last-child {
+  border-bottom: none;
+}
+
+.secondary-item:hover {
+  transform: none;
+}
+
+.secondary-item:hover .secondary-title {
+  color: var(--accent);
+}
+
+.secondary-category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.secondary-category::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.secondary-category.tech { color: var(--tech); }
+.secondary-category.tech::before { background: var(--tech); }
+.secondary-category.life { color: var(--life); }
+.secondary-category.life::before { background: var(--life); }
+.secondary-category.culture { color: var(--culture); }
+.secondary-category.culture::before { background: var(--culture); }
+.secondary-category.design { color: var(--design); }
+.secondary-category.design::before { background: var(--design); }
+.secondary-category.finance { color: var(--finance); }
+.secondary-category.finance::before { background: var(--finance); }
+.secondary-category.economics { color: var(--economics); }
+.secondary-category.economics::before { background: var(--economics); }
+.secondary-category.history { color: var(--history); }
+.secondary-category.history::before { background: var(--history); }
+.secondary-category.psychology { color: var(--psychology); }
+.secondary-category.psychology::before { background: var(--psychology); }
+.secondary-category.philosophy { color: var(--philosophy); }
+.secondary-category.philosophy::before { background: var(--philosophy); }
+
+.secondary-title {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.45;
+  transition: color 0.2s ease;
+}
+
+/* Sidebar */
+.sidebar {
+  padding-left: var(--space-7);
+  opacity: 0;
+  animation: fadeIn 0.5s ease 0.2s forwards;
+}
+
+.sidebar-header {
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--text-muted);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.sidebar-item:last-child {
+  border-bottom: none;
+}
+
+.sidebar-item:hover {
+  transform: none;
+}
+
+.sidebar-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  margin-bottom: 0.4rem;
+}
+
+.sidebar-category::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.sidebar-category.tech { color: var(--tech); }
+.sidebar-category.tech::before { background: var(--tech); }
+.sidebar-category.life { color: var(--life); }
+.sidebar-category.life::before { background: var(--life); }
+.sidebar-category.culture { color: var(--culture); }
+.sidebar-category.culture::before { background: var(--culture); }
+.sidebar-category.design { color: var(--design); }
+.sidebar-category.design::before { background: var(--design); }
+.sidebar-category.finance { color: var(--finance); }
+.sidebar-category.finance::before { background: var(--finance); }
+.sidebar-category.economics { color: var(--economics); }
+.sidebar-category.economics::before { background: var(--economics); }
+.sidebar-category.history { color: var(--history); }
+.sidebar-category.history::before { background: var(--history); }
+.sidebar-category.psychology { color: var(--psychology); }
+.sidebar-category.psychology::before { background: var(--psychology); }
+.sidebar-category.philosophy { color: var(--philosophy); }
+.sidebar-category.philosophy::before { background: var(--philosophy); }
+
+.sidebar-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.45;
+  margin-bottom: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.sidebar-item:hover .sidebar-title {
+  color: var(--accent);
+}
+
+.sidebar-meta {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-faint);
+}
+
+/* Columns Section */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.column {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.column:nth-child(1) { animation-delay: 0.3s; }
+.column:nth-child(2) { animation-delay: 0.4s; }
+.column:nth-child(3) { animation-delay: 0.5s; }
+
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--serif);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-5);
+}
+
+.column-header .col-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.column-header .col-dot.tech { background: var(--tech); }
+.column-header .col-dot.culture { background: var(--culture); }
+.column-header .col-dot.life { background: var(--life); }
+.column-header .col-dot.design { background: var(--design); }
+.column-header .col-dot.finance { background: var(--finance); }
+.column-header .col-dot.economics { background: var(--economics); }
+.column-header .col-dot.history { background: var(--history); }
+.column-header .col-dot.psychology { background: var(--psychology); }
+.column-header .col-dot.philosophy { background: var(--philosophy); }
+
+.column-article {
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.column-article:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.column-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: var(--leading-snug);
+  margin-bottom: var(--space-2);
+  transition: color 0.2s ease;
+  letter-spacing: -0.01em;
+}
+
+.column-article:hover .column-title {
+  color: var(--accent);
+}
+
+.column-byline {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--text-faint);
+  margin-bottom: var(--space-2);
+}
+
+.column-excerpt {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Pull Quote */
+.pullquote {
+  background: var(--tech-soft);
+  padding: 1.75rem;
+  border-radius: 16px;
+  margin-bottom: 1.75rem;
+}
+
+.pullquote-text {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 0.85rem;
+}
+
+.pullquote-source {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 2.5rem;
+  padding: 2rem 2rem;
+  border-top: 1px solid var(--border-dark);
+  text-align: center;
+}
+
+.footer-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-faint);
+  font-size: 0.85rem;
+}
+
+.footer-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.footer-stat-value {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.footer-stat-label {
+  font-weight: 400;
+}
+
+.footer-divider {
+  color: var(--text-faint);
+  margin: 0 0.25rem;
+}
+
+.footer-divider::before {
+  content: '·';
+}
+
+.footer-nav {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-nav a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--text);
+}
+
+.footer-nav .rss-link {
+  color: var(--accent);
+}
+
+.footer-nav .rss-link:hover {
+  opacity: 0.8;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Header (for internal pages) */
+.site-header {
+  padding: 2rem 2rem 1.5rem;
+  border-bottom: 3px solid var(--border-dark);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+  color: var(--text);
+}
+
+.header-nav .nav-support {
+  color: var(--life);
+}
+
+.header-nav .nav-support:hover {
+  color: var(--accent);
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* About Page Content */
+.content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+}
+
+.content p:first-of-type::first-letter {
+  font-family: var(--serif);
+  font-size: 4rem;
+  font-weight: 600;
+  float: left;
+  line-height: 0.8;
+  padding-right: 0.75rem;
+  padding-top: 0.15rem;
+  color: var(--accent);
+}
+
+.content a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.content a:hover {
+  opacity: 0.7;
+}
+
+.content h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 3rem 0 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+/* Principles Box */
+.principles {
+  margin: 2.5rem 0;
+  padding: 2rem;
+  background: var(--bg-soft);
+  border-radius: 16px;
+}
+
+.principles h3 {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+
+.principles ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.principles li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.principles li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Blogs Grid */
+.blogs-section h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--text);
+}
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.blog-card {
+  display: block;
+  padding: 1.25rem;
+  background: var(--bg-soft);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.dark .blog-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.blog-name {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.blog-card:hover .blog-name {
+  color: var(--accent);
+}
+
+.blog-url {
+  font-size: 0.85rem;
+  color: var(--text-faint);
+}
+
+.blog-categories {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.blog-cat {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 100px;
+}
+
+.blog-cat.tech { background: var(--tech-soft); color: var(--tech); }
+.blog-cat.life { background: var(--life-soft); color: var(--life); }
+.blog-cat.culture { background: var(--culture-soft); color: var(--culture); }
+.blog-cat.design { background: var(--design-soft); color: var(--design); }
+.blog-cat.finance { background: var(--finance-soft); color: var(--finance); }
+.blog-cat.economics { background: var(--economics-soft); color: var(--economics); }
+.blog-cat.history { background: var(--history-soft); color: var(--history); }
+.blog-cat.psychology { background: var(--psychology-soft); color: var(--psychology); }
+.blog-cat.philosophy { background: var(--philosophy-soft); color: var(--philosophy); }
+
+/* Contact Box */
+.contact {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--bg-soft);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.contact h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.contact p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  background: var(--accent);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 93, 57, 0.3);
+}
+
+.support {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.support p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.coffee-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #000;
+  background: #FFDD00;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.coffee-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 221, 0, 0.4);
+}
+
+.coffee-btn svg {
+  flex-shrink: 0;
+}
+
+/* Archive Page */
+.search-container {
+  margin-bottom: 3rem;
+}
+
+.search-box {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1.5rem 1rem 3.5rem;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--bg-soft);
+  border: 2px solid var(--border);
+  border-radius: 100px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: var(--text-faint);
+}
+
+.search-input:focus {
+  border-color: var(--accent);
+  background: var(--bg);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: var(--text-faint);
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--text-faint);
+  color: var(--text);
+}
+
+.filter-btn.active {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+/* Archive List */
+.archive-month {
+  margin-bottom: 2.5rem;
+}
+
+.month-header {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--text);
+}
+
+.archive-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.archive-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.archive-item:last-child {
+  border-bottom: none;
+}
+
+.archive-item:hover {
+  background: var(--bg-soft);
+  margin: 0 -1rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.archive-date {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-faint);
+}
+
+.archive-content {
+  min-width: 0;
+}
+
+.archive-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.archive-item:hover .archive-title {
+  color: var(--accent);
+}
+
+.archive-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.archive-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.archive-category.tech {
+  background: var(--tech-soft);
+  color: var(--tech);
+}
+
+.archive-category.life {
+  background: var(--life-soft);
+  color: var(--life);
+}
+
+.archive-category.culture {
+  background: var(--culture-soft);
+  color: var(--culture);
+}
+
+.archive-category.design {
+  background: var(--design-soft);
+  color: var(--design);
+}
+
+.archive-category.finance {
+  background: var(--finance-soft);
+  color: var(--finance);
+}
+
+.archive-category.economics {
+  background: var(--economics-soft);
+  color: var(--economics);
+}
+
+.archive-category.history {
+  background: var(--history-soft);
+  color: var(--history);
+}
+
+.archive-category.psychology {
+  background: var(--psychology-soft);
+  color: var(--psychology);
+}
+
+.archive-category.philosophy {
+  background: var(--philosophy-soft);
+  color: var(--philosophy);
+}
+
+.load-more {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.load-more-btn {
+  padding: 0.85rem 2rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  background: none;
+  border: 2px solid var(--text);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.load-more-btn:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+/* Magazine Sections */
+.magazine-section {
+  margin-bottom: var(--space-8);
+  padding-bottom: 0;
+  position: relative;
+}
+
+.magazine-section::after,
+.magazine-section::before {
+  display: none;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header .column-header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.section-link {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.section-link:hover {
+  color: var(--accent);
+}
+
+/* Category Rows */
+.category-row {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.category-column {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.category-column:nth-child(1) { animation-delay: 0.1s; }
+.category-column:nth-child(2) { animation-delay: 0.2s; }
+.category-column:nth-child(3) { animation-delay: 0.3s; }
+
+/* Archives Grid */
+.archives-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.archive-card {
+  display: block;
+  padding: 1.35rem;
+  background: var(--bg-soft);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.archive-card:nth-child(1) { animation-delay: 0.1s; }
+.archive-card:nth-child(2) { animation-delay: 0.15s; }
+.archive-card:nth-child(3) { animation-delay: 0.2s; }
+.archive-card:nth-child(4) { animation-delay: 0.25s; }
+
+.archive-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.dark .archive-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.archive-card-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  margin-bottom: 0.6rem;
+}
+
+.archive-card-category::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.archive-card-category.tech { color: var(--tech); }
+.archive-card-category.tech::before { background: var(--tech); }
+.archive-card-category.life { color: var(--life); }
+.archive-card-category.life::before { background: var(--life); }
+.archive-card-category.culture { color: var(--culture); }
+.archive-card-category.culture::before { background: var(--culture); }
+.archive-card-category.design { color: var(--design); }
+.archive-card-category.design::before { background: var(--design); }
+.archive-card-category.finance { color: var(--finance); }
+.archive-card-category.finance::before { background: var(--finance); }
+.archive-card-category.economics { color: var(--economics); }
+.archive-card-category.economics::before { background: var(--economics); }
+.archive-card-category.history { color: var(--history); }
+.archive-card-category.history::before { background: var(--history); }
+.archive-card-category.psychology { color: var(--psychology); }
+.archive-card-category.psychology::before { background: var(--psychology); }
+.archive-card-category.philosophy { color: var(--philosophy); }
+.archive-card-category.philosophy::before { background: var(--philosophy); }
+
+.archive-card-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.archive-card:hover .archive-card-title {
+  color: var(--accent);
+}
+
+.archive-card-meta {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Minimal scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faint);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .archives-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .headlines {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    padding-left: 0;
+    padding-top: var(--space-6);
+    margin-top: var(--space-6);
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .column {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .column:last-child {
+    border-bottom: none;
+  }
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .category-column {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .category-column:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .archives-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .newspaper-title {
+    font-size: 2.5rem;
+  }
+
+  .masthead-top {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .category-nav ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .lead-title {
+    font-size: 1.8rem;
+  }
+
+  .lead-excerpt::first-letter {
+    font-size: 2.4rem;
+  }
+
+  .footer-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.5rem;
+  }
+
+  .footer-divider {
+    display: none;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .feed-main {
+    padding: 2rem 1rem;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .blogs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content p:first-of-type::first-letter {
+    font-size: 3rem;
+  }
+
+  .archive-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .archive-category {
+    justify-self: start;
+  }
+
+  .filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .theme-toggle {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .secondary-posts {
+    padding: 1rem;
+  }
+
+  .sidebar-item {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  .newspaper-title {
+    font-size: 2rem;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .lead-title {
+    font-size: 1.5rem;
+  }
+
+  .masthead {
+    padding: 1.5rem 1rem;
+  }
+
+  .category-nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .category-nav ul {
+    gap: 0.5rem;
+  }
+
+  .category-nav li a {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .header-nav {
+    gap: 0.5rem 1rem;
+  }
+
+  .site-header {
+    padding: 1rem;
+  }
+
+  .contact,
+  .support {
+    padding: 1.5rem 1rem;
+  }
+}

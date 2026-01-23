@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indie Blogs — The Reading Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FFFFFF;
+      --bg-soft: #FAFAFA;
+      --text: #1A1A1A;
+      --text-muted: #666666;
+      --text-faint: #999999;
+      --border: #EBEBEB;
+      --accent: #FF6B35;
+      --accent-soft: #FFF0EB;
+      --tech: #2D7FF9;
+      --tech-soft: #EBF3FF;
+      --life: #00A676;
+      --life-soft: #E6F7F1;
+      --culture: #9B5DE5;
+      --culture-soft: #F3EBFC;
+      --design: #F15BB5;
+      --design-soft: #FDEBF5;
+      --serif: 'Newsreader', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --bg-soft: #1A1A1A;
+      --text: #F0F0F0;
+      --text-muted: #A0A0A0;
+      --text-faint: #666666;
+      --border: #2A2A2A;
+      --accent: #FF8C5A;
+      --accent-soft: #2A1A14;
+      --tech-soft: #1A2433;
+      --life-soft: #142A22;
+      --culture-soft: #1F1A2A;
+      --design-soft: #2A1A22;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 17px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* Header */
+    header {
+      padding: 2.5rem 2rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-mark {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--accent) 0%, #FF8F6B 100%);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .logo-text h1 {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-text p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+    }
+
+    .theme-toggle {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--text-faint);
+      color: var(--text);
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      gap: 0.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    nav a:hover {
+      color: var(--text);
+      background: var(--bg-soft);
+    }
+
+    nav a.active {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    nav a .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      opacity: 0.8;
+    }
+
+    nav a .dot.tech { background: var(--tech); }
+    nav a .dot.life { background: var(--life); }
+    nav a .dot.culture { background: var(--culture); }
+    nav a .dot.design { background: var(--design); }
+
+    /* Main Content */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+    }
+
+    /* Issue Banner */
+    .issue-banner {
+      background: linear-gradient(135deg, var(--accent-soft) 0%, #FFF8F5 100%);
+      border-radius: 20px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    [data-theme="dark"] .issue-banner {
+      background: linear-gradient(135deg, var(--accent-soft) 0%, #1A1614 100%);
+    }
+
+    .issue-number {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .issue-title {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    .issue-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    /* Articles */
+    .articles {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    article {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 1.5rem;
+      padding: 1.75rem;
+      border-radius: 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    article:nth-child(1) { animation-delay: 0.05s; }
+    article:nth-child(2) { animation-delay: 0.1s; }
+    article:nth-child(3) { animation-delay: 0.15s; }
+    article:nth-child(4) { animation-delay: 0.2s; }
+    article:nth-child(5) { animation-delay: 0.25s; }
+    article:nth-child(6) { animation-delay: 0.3s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    article:hover {
+      background: var(--bg-soft);
+    }
+
+    .article-number {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    article.tech .article-number { background: var(--tech-soft); color: var(--tech); }
+    article.life .article-number { background: var(--life-soft); color: var(--life); }
+    article.culture .article-number { background: var(--culture-soft); color: var(--culture); }
+    article.design .article-number { background: var(--design-soft); color: var(--design); }
+
+    article:hover .article-number {
+      transform: scale(1.05);
+    }
+
+    .article-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-category {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    article.tech .article-category { color: var(--tech); }
+    article.life .article-category { color: var(--life); }
+    article.culture .article-category { color: var(--culture); }
+    article.design .article-category { color: var(--design); }
+
+    .article-date {
+      font-size: 0.8rem;
+      color: var(--text-faint);
+    }
+
+    .article-title {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.4rem;
+      transition: color 0.2s ease;
+    }
+
+    article:hover .article-title {
+      color: var(--accent);
+    }
+
+    .article-author {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Featured */
+    .featured {
+      background: var(--bg-soft);
+      margin-bottom: 1rem;
+    }
+
+    .featured .article-number {
+      width: 64px;
+      height: 64px;
+      font-size: 0.7rem;
+      font-style: normal;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: var(--accent) !important;
+      color: white !important;
+    }
+
+    .featured .article-title {
+      font-size: 1.7rem;
+    }
+
+    /* Footer */
+    footer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .footer-card {
+      background: var(--bg-soft);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .footer-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .footer-count {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      html {
+        font-size: 16px;
+      }
+
+      header {
+        padding: 1.5rem;
+      }
+
+      .masthead {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav {
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        margin: 0 -1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      main {
+        padding: 2rem 1.5rem;
+      }
+
+      .issue-banner {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .issue-title {
+        font-size: 1.8rem;
+      }
+
+      article {
+        grid-template-columns: 48px 1fr;
+        gap: 1rem;
+        padding: 1.25rem;
+      }
+
+      .article-number {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+      }
+
+      .article-title {
+        font-size: 1.2rem;
+      }
+
+      .featured .article-title {
+        font-size: 1.4rem;
+      }
+
+      .featured .article-number {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="masthead">
+      <div class="logo-area">
+        <div class="logo-mark">ib</div>
+        <div class="logo-text">
+          <h1>Indie Blogs</h1>
+          <p>Fresh thoughts from independent writers</p>
+        </div>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <span class="theme-label">Dark</span>
+      </button>
+    </div>
+    <nav>
+      <a href="#" class="active">All</a>
+      <a href="#"><span class="dot tech"></span>Tech</a>
+      <a href="#"><span class="dot design"></span>Design</a>
+      <a href="#"><span class="dot life"></span>Life</a>
+      <a href="#"><span class="dot culture"></span>Culture</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="issue-banner">
+      <p class="issue-number">Issue 47 · January 2026</p>
+      <h2 class="issue-title">This Week in <em>Independent</em> Thought</h2>
+    </div>
+
+    <div class="articles">
+      <a href="#" class="featured tech">
+        <div class="article-number">New</div>
+        <div class="article-content">
+          <div class="article-meta">
+            <span class="article-category">Tech</span>
+            <span class="article-date">Today</span>
+          </div>
+          <h3 class="article-title">Claude's new constitution</h3>
+          <p class="article-author">Simon Willison</p>
+        </div>
+      </a>
+
+      <article class="life">
+        <div class="article-number">01</div>
+        <div class="article-content">
+          <div class="article-meta">
+            <span class="article-category">Life</span>
+            <span class="article-date">Yesterday</span>
+          </div>
+          <h3 class="article-title">I'm addicted to being useful</h3>
+          <p class="article-author">Sean Goedecke</p>
+        </div>
+      </article>
+
+      <article class="tech">
+        <div class="article-number">02</div>
+        <div class="article-content">
+          <div class="article-meta">
+            <span class="article-category">Tech</span>
+            <span class="article-date">2 days ago</span>
+          </div>
+          <h3 class="article-title">Attention Media ≠ Social Media</h3>
+          <p class="article-author">Susam Pal</p>
+        </div>
+      </article>
+
+      <article class="life">
+        <div class="article-number">03</div>
+        <div class="article-content">
+          <div class="article-meta">
+            <span class="article-category">Life</span>
+            <span class="article-date">3 days ago</span>
+          </div>
+          <h3 class="article-title">3D printing my laptop ergonomic setup</h3>
+          <p class="article-author">Nicole Tietz</p>
+        </div>
+      </article>
+
+      <article class="culture">
+        <div class="article-number">04</div>
+        <div class="article-content">
+          <div class="article-meta">
+            <span class="article-category">Culture</span>
+            <span class="article-date">4 days ago</span>
+          </div>
+          <h3 class="article-title">Dead Internet Theory</h3>
+          <p class="article-author">Dmitry Kudryavtsev</p>
+        </div>
+      </article>
+
+      <article class="tech">
+        <div class="article-number">05</div>
+        <div class="article-content">
+          <div class="article-meta">
+            <span class="article-category">Tech</span>
+            <span class="article-date">4 days ago</span>
+          </div>
+          <h3 class="article-title">A Social Filesystem</h3>
+          <p class="article-author">Dan Abramov</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-card">
+      <p class="footer-text">
+        Curating <span class="footer-count">15 indie blogs</span> you'll actually want to read
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.querySelector('.theme-label');
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.removeAttribute('data-theme');
+        btn.textContent = 'Dark';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        btn.textContent = 'Light';
+      }
+    }
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.querySelector('.theme-label').textContent = 'Light';
+    }
+  </script>
+</body>
+</html>

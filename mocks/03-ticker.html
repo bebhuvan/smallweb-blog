@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indie Blogs — The Ticker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A0A0A;
+      --bg-alt: #111111;
+      --text: #F0F0F0;
+      --text-muted: #888888;
+      --text-faint: #444444;
+      --accent: #00FF88;
+      --accent-dim: #00CC6A;
+      --tech: #00D4FF;
+      --life: #FF8844;
+      --culture: #DD88FF;
+      --design: #FFDD44;
+      --mono: 'IBM Plex Mono', 'Courier New', monospace;
+    }
+
+    [data-theme="light"] {
+      --bg: #F8F8F8;
+      --bg-alt: #FFFFFF;
+      --text: #1A1A1A;
+      --text-muted: #666666;
+      --text-faint: #CCCCCC;
+      --accent: #00AA55;
+      --accent-dim: #008844;
+      --tech: #0088CC;
+      --life: #CC5500;
+      --culture: #9944CC;
+      --design: #AA8800;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 15px;
+    }
+
+    body {
+      font-family: var(--mono);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    /* Header */
+    header {
+      padding: 2rem;
+      border-bottom: 1px solid var(--text-faint);
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--accent);
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--text-faint);
+      padding: 0.5rem 1rem;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--text);
+      color: var(--text);
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      gap: 0.25rem;
+    }
+
+    nav a {
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    nav a.active {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* Ticker Banner */
+    .ticker-banner {
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--text-faint);
+      overflow: hidden;
+      padding: 0.75rem 0;
+    }
+
+    .ticker-content {
+      display: flex;
+      animation: scroll 30s linear infinite;
+      white-space: nowrap;
+    }
+
+    .ticker-content:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 0 2rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .ticker-item span {
+      color: var(--accent);
+    }
+
+    /* Main Board */
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .board-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--text-faint);
+    }
+
+    .board-title {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+    }
+
+    .board-time {
+      font-size: 0.8rem;
+      color: var(--text-faint);
+    }
+
+    /* Post Rows */
+    .posts {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post {
+      display: grid;
+      grid-template-columns: 100px 80px 1fr 160px 100px;
+      gap: 2rem;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--text-faint);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+      opacity: 0;
+      transform: translateX(-20px);
+      animation: slideIn 0.4s ease forwards;
+    }
+
+    .post:nth-child(1) { animation-delay: 0.1s; }
+    .post:nth-child(2) { animation-delay: 0.2s; }
+    .post:nth-child(3) { animation-delay: 0.3s; }
+    .post:nth-child(4) { animation-delay: 0.4s; }
+    .post:nth-child(5) { animation-delay: 0.5s; }
+    .post:nth-child(6) { animation-delay: 0.6s; }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .post:hover {
+      background: var(--bg-alt);
+      margin: 0 -2rem;
+      padding: 1.5rem 2rem;
+    }
+
+    .post-time {
+      font-size: 1rem;
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .post-category {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.3rem 0.6rem;
+      border-radius: 2px;
+    }
+
+    .post-category.tech { color: var(--tech); border: 1px solid var(--tech); }
+    .post-category.life { color: var(--life); border: 1px solid var(--life); }
+    .post-category.culture { color: var(--culture); border: 1px solid var(--culture); }
+    .post-category.design { color: var(--design); border: 1px solid var(--design); }
+
+    .post-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 1.3;
+      transition: color 0.2s ease;
+    }
+
+    .post:hover .post-title {
+      color: var(--accent);
+    }
+
+    .post-author {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .post-status {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      text-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
+
+    .post-status::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    /* Stats Bar */
+    .stats {
+      display: flex;
+      gap: 3rem;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid var(--text-faint);
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem;
+      border-top: 1px solid var(--text-faint);
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 0.75rem;
+      color: var(--text-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Responsive */
+    @media (max-width: 1000px) {
+      .post {
+        grid-template-columns: 80px 70px 1fr 100px;
+      }
+
+      .post-status {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 1.5rem;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .header-right {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      nav {
+        overflow-x: auto;
+      }
+
+      .post {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1.25rem 0;
+      }
+
+      .post:hover {
+        margin: 0;
+        padding: 1.25rem 0;
+      }
+
+      .post-time {
+        order: 1;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      .post-category {
+        order: 0;
+        width: fit-content;
+      }
+
+      .post-title {
+        order: 2;
+      }
+
+      .post-author {
+        order: 3;
+        text-align: left;
+      }
+
+      .stats {
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-text">Indie_Blogs</span>
+        <span class="status">
+          <span class="status-dot"></span>
+          Live
+        </span>
+      </div>
+      <div class="header-right">
+        <nav>
+          <a href="#" class="active">All</a>
+          <a href="#">Tech</a>
+          <a href="#">Design</a>
+          <a href="#">Life</a>
+          <a href="#">Culture</a>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTheme()">Light</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="ticker-banner">
+    <div class="ticker-content">
+      <div class="ticker-item">New post from <span>Simon Willison</span> — Claude's new constitution</div>
+      <div class="ticker-item">Trending: <span>Dead Internet Theory</span></div>
+      <div class="ticker-item"><span>15</span> blogs tracked</div>
+      <div class="ticker-item">Last update: <span>2 min ago</span></div>
+      <div class="ticker-item">New post from <span>Simon Willison</span> — Claude's new constitution</div>
+      <div class="ticker-item">Trending: <span>Dead Internet Theory</span></div>
+      <div class="ticker-item"><span>15</span> blogs tracked</div>
+      <div class="ticker-item">Last update: <span>2 min ago</span></div>
+    </div>
+  </div>
+
+  <main>
+    <div class="board-header">
+      <span class="board-title">Latest Posts — All Categories</span>
+      <span class="board-time">Updated 14:32 UTC</span>
+    </div>
+
+    <div class="posts">
+      <a href="#" class="post">
+        <span class="post-time">TODAY</span>
+        <span class="post-category tech">Tech</span>
+        <span class="post-title">Claude's new constitution</span>
+        <span class="post-author">Simon Willison</span>
+        <span class="post-status">New</span>
+      </a>
+
+      <a href="#" class="post">
+        <span class="post-time">1D AGO</span>
+        <span class="post-category life">Life</span>
+        <span class="post-title">I'm addicted to being useful</span>
+        <span class="post-author">Sean Goedecke</span>
+        <span class="post-status">New</span>
+      </a>
+
+      <a href="#" class="post">
+        <span class="post-time">2D AGO</span>
+        <span class="post-category tech">Tech</span>
+        <span class="post-title">Attention Media ≠ Social Media</span>
+        <span class="post-author">Susam Pal</span>
+        <span class="post-status">Read</span>
+      </a>
+
+      <a href="#" class="post">
+        <span class="post-time">3D AGO</span>
+        <span class="post-category life">Life</span>
+        <span class="post-title">3D printing my laptop ergonomic setup</span>
+        <span class="post-author">Nicole Tietz</span>
+        <span class="post-status">Read</span>
+      </a>
+
+      <a href="#" class="post">
+        <span class="post-time">4D AGO</span>
+        <span class="post-category culture">Culture</span>
+        <span class="post-title">Dead Internet Theory</span>
+        <span class="post-author">Dmitry Kudryavtsev</span>
+        <span class="post-status">Hot</span>
+      </a>
+
+      <a href="#" class="post">
+        <span class="post-time">4D AGO</span>
+        <span class="post-category tech">Tech</span>
+        <span class="post-title">A Social Filesystem</span>
+        <span class="post-author">Dan Abramov</span>
+        <span class="post-status">Read</span>
+      </a>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-value">15</span>
+        <span class="stat-label">Blogs</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">127</span>
+        <span class="stat-label">Posts This Month</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">2x</span>
+        <span class="stat-label">Daily Updates</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="footer-text">Real-time aggregation of independent voices on the web</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.querySelector('.theme-toggle');
+      if (html.getAttribute('data-theme') === 'light') {
+        html.removeAttribute('data-theme');
+        btn.textContent = 'Light';
+      } else {
+        html.setAttribute('data-theme', 'light');
+        btn.textContent = 'Dark';
+      }
+    }
+  </script>
+</body>
+</html>

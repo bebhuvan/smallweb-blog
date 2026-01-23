@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indie Blogs — The Chronicle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FFFFFF;
+      --bg-soft: #FAF8F5;
+      --text: #1F1B16;
+      --text-muted: #5C564D;
+      --text-faint: #9A9389;
+      --border: #E8E2D9;
+      --border-dark: #1F1B16;
+      --accent: #D95D39;
+      --tech: #3D8B6E;
+      --tech-soft: #EEF6F2;
+      --life: #C9763C;
+      --life-soft: #FDF5EE;
+      --culture: #7A5BA8;
+      --culture-soft: #F5F1FA;
+      --design: #B85A5A;
+      --design-soft: #FCF0F0;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'Nunito Sans', system-ui, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg: #141210;
+      --bg-soft: #1E1B18;
+      --text: #F5F2ED;
+      --text-muted: #ADA69C;
+      --text-faint: #5C564D;
+      --border: #2E2A24;
+      --border-dark: #F5F2ED;
+      --accent: #F07A58;
+      --tech-soft: #162420;
+      --life-soft: #241E18;
+      --culture-soft: #1E1824;
+      --design-soft: #241818;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 17px;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.4s ease, color 0.4s ease;
+      font-weight: 400;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: white;
+    }
+
+    /* Masthead */
+    .masthead {
+      text-align: center;
+      padding: 2.5rem 2rem 2rem;
+      border-bottom: 3px solid var(--border-dark);
+    }
+
+    .masthead-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto 1.25rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .theme-toggle {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--text-faint);
+      color: var(--text);
+    }
+
+    .newspaper-title {
+      font-family: var(--serif);
+      font-size: 4.5rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 0.6rem;
+      font-optical-sizing: auto;
+    }
+
+    .newspaper-subtitle {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: var(--text-muted);
+    }
+
+    /* Navigation */
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 0.85rem 2rem;
+      background: var(--bg-soft);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      list-style: none;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    nav a.active {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    nav .cat-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    nav .cat-dot.tech { background: var(--tech); }
+    nav .cat-dot.life { background: var(--life); }
+    nav .cat-dot.culture { background: var(--culture); }
+    nav .cat-dot.design { background: var(--design); }
+
+    /* Main Content */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem;
+    }
+
+    /* Headlines Section */
+    .headlines {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+
+    .lead-story {
+      opacity: 0;
+      animation: fadeIn 0.5s ease 0.1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .lead-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: white;
+      background: var(--tech);
+      padding: 0.45rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.25rem;
+    }
+
+    .lead-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .lead-title {
+      font-family: var(--serif);
+      font-size: 3.2rem;
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.1rem;
+      font-optical-sizing: auto;
+    }
+
+    .lead-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .lead-title a:hover {
+      color: var(--accent);
+    }
+
+    .lead-byline {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 1.35rem;
+    }
+
+    .lead-byline strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .lead-excerpt {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .lead-excerpt::first-letter {
+      font-family: var(--serif);
+      font-size: 4.8rem;
+      font-weight: 600;
+      float: left;
+      line-height: 0.8;
+      padding-right: 1rem;
+      padding-top: 0.2rem;
+      color: var(--accent);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      padding-left: 3rem;
+      border-left: 1px solid var(--border);
+      opacity: 0;
+      animation: fadeIn 0.5s ease 0.2s forwards;
+    }
+
+    .sidebar-header {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      padding-bottom: 0.85rem;
+      border-bottom: 2px solid var(--text);
+      margin-bottom: 1.1rem;
+    }
+
+    .sidebar-item {
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      display: block;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .sidebar-item:last-child {
+      border-bottom: none;
+    }
+
+    .sidebar-item:hover {
+      transform: translateX(6px);
+    }
+
+    .sidebar-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.45rem;
+    }
+
+    .sidebar-category::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .sidebar-category.tech { color: var(--tech); }
+    .sidebar-category.tech::before { background: var(--tech); }
+    .sidebar-category.life { color: var(--life); }
+    .sidebar-category.life::before { background: var(--life); }
+
+    .sidebar-title {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+      transition: color 0.2s ease;
+    }
+
+    .sidebar-item:hover .sidebar-title {
+      color: var(--accent);
+    }
+
+    .sidebar-meta {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-faint);
+    }
+
+    /* Columns Section */
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+
+    .column {
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    .column:nth-child(1) { animation-delay: 0.3s; }
+    .column:nth-child(2) { animation-delay: 0.4s; }
+    .column:nth-child(3) { animation-delay: 0.5s; }
+
+    .column-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding-bottom: 0.85rem;
+      border-bottom: 2px solid var(--text);
+      margin-bottom: 1.35rem;
+    }
+
+    .column-header .col-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .column-header .col-dot.culture { background: var(--culture); }
+    .column-header .col-dot.tech { background: var(--tech); }
+
+    .column-article {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+
+    .column-article:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .column-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 0.55rem;
+      transition: color 0.2s ease;
+      letter-spacing: -0.01em;
+    }
+
+    .column-article:hover .column-title {
+      color: var(--accent);
+    }
+
+    .column-byline {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 0.55rem;
+    }
+
+    .column-excerpt {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    /* Pull Quote */
+    .pullquote {
+      background: var(--tech-soft);
+      padding: 1.75rem;
+      border-radius: 16px;
+      margin-bottom: 1.75rem;
+    }
+
+    .pullquote-text {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 0.85rem;
+    }
+
+    .pullquote-source {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 3rem;
+      padding: 2.5rem 2rem;
+      border-top: 3px solid var(--border-dark);
+      text-align: center;
+    }
+
+    .footer-inner {
+      display: inline-flex;
+      align-items: center;
+      gap: 2rem;
+      background: var(--bg-soft);
+      padding: 1.25rem 2.5rem;
+      border-radius: 100px;
+    }
+
+    .footer-stat {
+      text-align: center;
+    }
+
+    .footer-stat-value {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .footer-stat-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .footer-divider {
+      width: 1px;
+      height: 35px;
+      background: var(--border);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .headlines {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        padding-left: 0;
+        border-left: none;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .column {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .column:last-child {
+        border-bottom: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .newspaper-title {
+        font-size: 3rem;
+      }
+
+      .masthead-top {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .lead-title {
+        font-size: 2.3rem;
+      }
+
+      .lead-excerpt::first-letter {
+        font-size: 3.8rem;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.75rem 2rem;
+        border-radius: 20px;
+      }
+
+      .footer-divider {
+        width: 50px;
+        height: 1px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-top">
+      <span>Wednesday, January 22, 2026</span>
+      <button class="theme-toggle" onclick="toggleTheme()">Dark mode</button>
+      <span>Vol. 47 · No. 22</span>
+    </div>
+    <h1 class="newspaper-title">Indie Blogs</h1>
+    <p class="newspaper-subtitle">Fresh thoughts from independent writers who care about their craft</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" class="active">All</a></li>
+      <li><a href="#"><span class="cat-dot tech"></span>Tech</a></li>
+      <li><a href="#"><span class="cat-dot design"></span>Design</a></li>
+      <li><a href="#"><span class="cat-dot life"></span>Life</a></li>
+      <li><a href="#"><span class="cat-dot culture"></span>Culture</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="headlines">
+      <article class="lead-story">
+        <span class="lead-badge">Tech · Today</span>
+        <h2 class="lead-title">
+          <a href="#">Claude's New Constitution Reveals AI's Evolving Self-Governance</a>
+        </h2>
+        <p class="lead-byline">By <strong>Simon Willison</strong> · simonwillison.net</p>
+        <p class="lead-excerpt">Late last year Richard Weiss found something interesting while poking around with the just-released Claude Opus 4.5: he was able to talk the model into regurgitating a document that appears to outline the constitutional principles guiding Claude's behavior. The implications for AI transparency and self-governance are profound.</p>
+      </article>
+
+      <aside class="sidebar">
+        <h3 class="sidebar-header">Latest</h3>
+
+        <a href="#" class="sidebar-item">
+          <span class="sidebar-category life">Life</span>
+          <h4 class="sidebar-title">I'm addicted to being useful</h4>
+          <p class="sidebar-meta">Sean Goedecke · Yesterday</p>
+        </a>
+
+        <a href="#" class="sidebar-item">
+          <span class="sidebar-category tech">Tech</span>
+          <h4 class="sidebar-title">Attention Media ≠ Social Media</h4>
+          <p class="sidebar-meta">Susam Pal · 2 days ago</p>
+        </a>
+
+        <a href="#" class="sidebar-item">
+          <span class="sidebar-category life">Life</span>
+          <h4 class="sidebar-title">3D printing my laptop ergonomic setup</h4>
+          <p class="sidebar-meta">Nicole Tietz · 3 days ago</p>
+        </a>
+      </aside>
+    </section>
+
+    <section class="columns">
+      <div class="column">
+        <h3 class="column-header"><span class="col-dot culture"></span>Culture</h3>
+        <a href="#" class="column-article">
+          <h4 class="column-title">Dead Internet Theory</h4>
+          <p class="column-byline">Dmitry Kudryavtsev · 4 days ago</p>
+          <p class="column-excerpt">As we become more entertained but less connected, the question arises: what exactly are we scrolling through?</p>
+        </a>
+      </div>
+
+      <div class="column">
+        <div class="pullquote">
+          <p class="pullquote-text">"Formats over apps. The file is the API."</p>
+          <p class="pullquote-source">— Dan Abramov</p>
+        </div>
+        <h3 class="column-header"><span class="col-dot tech"></span>Tech</h3>
+        <a href="#" class="column-article">
+          <h4 class="column-title">A Social Filesystem</h4>
+          <p class="column-byline">Dan Abramov · 4 days ago</p>
+          <p class="column-excerpt">What if your social graph lived in your filesystem? A radical proposal for decentralized social networking.</p>
+        </a>
+      </div>
+
+      <div class="column">
+        <h3 class="column-header">From the Archives</h3>
+        <a href="#" class="column-article">
+          <h4 class="column-title">How We Lost Communication to Entertainment</h4>
+          <p class="column-byline">Ploum · Last month</p>
+          <p class="column-excerpt">All our communication channels morphed into content distribution networks.</p>
+        </a>
+        <a href="#" class="column-article">
+          <h4 class="column-title">Writing First, Tooling Second</h4>
+          <p class="column-byline">Susam Pal · 12 days ago</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-stat">
+        <div class="footer-stat-value">15</div>
+        <div class="footer-stat-label">blogs curated</div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-stat">
+        <div class="footer-stat-value">2x</div>
+        <div class="footer-stat-label">daily updates</div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-stat">
+        <div class="footer-stat-value">0</div>
+        <div class="footer-stat-label">ads, ever</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.querySelector('.theme-toggle');
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.removeAttribute('data-theme');
+        btn.textContent = 'Dark mode';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        btn.textContent = 'Light mode';
+      }
+    }
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.querySelector('.theme-toggle').textContent = 'Light mode';
+    }
+  </script>
+</body>
+</html>
