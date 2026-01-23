@@ -7,6 +7,10 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://smallweb.blog',
   integrations: [sitemap()],
+  build: {
+    // Inline all CSS to eliminate render-blocking stylesheets
+    inlineStylesheets: 'always'
+  },
   vite: {
     plugins: [tailwindcss()]
   }
