@@ -86,10 +86,6 @@ Categories: `tech`, `design`, `life`, `culture`, `economics`, `finance`, `histor
 
 Pushes to `main` automatically deploy to Cloudflare Workers via GitHub Actions.
 
-Required secrets:
-- `CLOUDFLARE_API_TOKEN`
-- `CLOUDFLARE_ACCOUNT_ID`
-
 ## RSS Proxy
 
 The Worker includes an RSS proxy at `/api/fetch-rss?url=<feed-url>` to bypass rate limiting from services like Substack.
