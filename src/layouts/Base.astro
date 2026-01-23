@@ -66,6 +66,21 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://smallweb
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="The Small Web RSS" href="/rss.xml" />
 
+    <!-- Critical CSS for fast FCP -->
+    <style is:inline>
+      :root{--bg:#fff;--text:#1a1715;--accent:#D95D39}
+      .dark{--bg:#181614;--text:#e8e4df}
+      *,*::before,*::after{box-sizing:border-box;margin:0}
+      html{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text)}
+      body{min-height:100vh}
+      .site-header{padding:1rem 2rem;border-bottom:1px solid rgba(0,0,0,0.08)}
+      .dark .site-header{border-color:rgba(255,255,255,0.08)}
+      .header-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+      .logo{font-size:1.1rem;font-weight:600;color:var(--text);text-decoration:none}
+      .masthead{text-align:center;padding:2rem 1rem;border-bottom:2px solid var(--text)}
+      .newspaper-title{font-size:clamp(2rem,6vw,3.5rem);font-weight:400;letter-spacing:-0.02em}
+    </style>
+
     <!-- Theme: prevent flash -->
     <script is:inline>
       if (localStorage.theme === 'dark' || (!localStorage.theme && matchMedia('(prefers-color-scheme: dark)').matches)) {
