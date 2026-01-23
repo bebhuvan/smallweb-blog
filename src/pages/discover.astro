@@ -444,7 +444,18 @@ const categoryColors: Record<string, string> = {
   .discover-card:not(:last-child) .discover-title,
   .discover-card:not(:last-child) .discover-excerpt,
   .discover-card:not(:last-child) .discover-meta {
+    opacity: 0 !important;
     visibility: hidden;
+    pointer-events: none;
+  }
+
+  /* Ensure card backgrounds are fully opaque */
+  .discover-card:not(:last-child) {
+    background: var(--bg) !important;
+  }
+
+  .dark .discover-card:not(:last-child) {
+    background: var(--bg-soft) !important;
   }
 
   .discover-card::before {
