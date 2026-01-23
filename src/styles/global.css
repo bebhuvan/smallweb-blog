@@ -8,7 +8,7 @@
   /* Text */
   --text: #2C2825;
   --text-muted: #635D56;
-  --text-faint: #A09A93;
+  --text-faint: #6F6963; /* Improved contrast: 4.5:1 on white */
 
   /* Borders */
   --border: #E5E0D8;
@@ -71,7 +71,7 @@
   --bg-soft: #211E1B;
   --text: #F2EFE9;
   --text-muted: #B5AFA6;
-  --text-faint: #6A6560;
+  --text-faint: #9A9590; /* Improved contrast: 4.5:1 on dark bg */
   --border: #332E28;
   --border-dark: #F2EFE9;
   --accent: #D97A58;
