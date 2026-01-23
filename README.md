@@ -1,43 +1,103 @@
-# Astro Starter Kit: Minimal
+# The Small Web
 
-```sh
-npm create astro@latest -- --template minimal
+A curated feed of indie blogs. Hand-picked writing from independent voices who care about their craft.
+
+**[smallweb.blog](https://smallweb.blog)**
+
+---
+
+## What is this?
+
+The Small Web is a collection of indie blogs and publications I've come across over time. Instead of doomscrolling on Twitter, you could doomscroll here and actually find interesting links—rabbit holes worth going down.
+
+The only filter is whether I've actually read something from each writer. These are some really smart people, and I think more people should read them.
+
+## Features
+
+- **Curated blogs** — Hand-picked writing from independent voices
+- **No algorithms** — Posts appear chronologically, newest first
+- **No ads, no tracking** — Just content
+- **RSS feeds** — Subscribe via your favorite reader
+- **OPML export** — Take the full blogroll with you
+- **Dark mode** — Easy on the eyes
+- **Discover mode** — Card-stack interface to find new reads
+
+## Tech Stack
+
+| Component | Technology |
+|-----------|------------|
+| Framework | [Astro](https://astro.build) |
+| Styling | [Tailwind CSS](https://tailwindcss.com) |
+| Hosting | [Cloudflare Workers](https://workers.cloudflare.com) |
+| Feed Refresh | GitHub Actions (twice daily) |
+
+## Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Fetch latest RSS feeds
+node scripts/fetch-feeds.js
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Project Structure
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
+```
+├── data/
+│   ├── blogs.json           # Curated blog list
+│   └── cache/
+│       └── posts.json       # Aggregated posts (auto-generated)
+├── scripts/
+│   └── fetch-feeds.js       # RSS fetcher
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── pages/               # Astro pages
+│   ├── layouts/             # Page layouts
+│   └── styles/              # CSS
+├── worker/
+│   └── index.js             # Cloudflare Worker (RSS proxy)
+└── wrangler.toml            # Cloudflare config
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Adding a Blog
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Edit `data/blogs.json`:
 
-Any static assets, like images, can be placed in the `public/` directory.
+```json
+{
+  "id": "unique-slug",
+  "name": "Blog Name",
+  "url": "https://example.com",
+  "feed": "https://example.com/rss.xml",
+  "categories": ["tech"],
+  "description": "Short description"
+}
+```
 
-## 🧞 Commands
+Categories: `tech`, `design`, `life`, `culture`, `economics`, `finance`, `history`, `psychology`, `philosophy`
 
-All commands are run from the root of the project, from a terminal:
+## Deployment
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Pushes to `main` automatically deploy to Cloudflare Workers via GitHub Actions.
 
-## 👀 Want to learn more?
+Required secrets:
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## RSS Proxy
+
+The Worker includes an RSS proxy at `/api/fetch-rss?url=<feed-url>` to bypass rate limiting from services like Substack.
+
+## License
+
+MIT
+
+---
+
+Built with [Claude](https://claude.ai)
