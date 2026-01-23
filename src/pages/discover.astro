@@ -431,11 +431,20 @@ const categoryColors: Record<string, string> = {
     transform-origin: center center;
     user-select: none;
     will-change: transform, opacity;
+    overflow: hidden;
     /* Transition set via JS for precise control */
   }
 
   .dark .discover-card {
     background: var(--bg-soft);
+  }
+
+  /* Hide content of cards not on top - they show as solid color cards */
+  .discover-card:not(:last-child) .discover-badge,
+  .discover-card:not(:last-child) .discover-title,
+  .discover-card:not(:last-child) .discover-excerpt,
+  .discover-card:not(:last-child) .discover-meta {
+    visibility: hidden;
   }
 
   .discover-card::before {
