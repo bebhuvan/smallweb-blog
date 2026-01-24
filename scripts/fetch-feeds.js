@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Cloudflare Worker proxy URL for Substack feeds (bypasses rate limiting)
-const PROXY_URL = process.env.PROXY_URL || 'https://smallweb.blog/api/fetch-rss';
+const PROXY_URL = process.env.PROXY_URL || 'https://papertrails.rabbitholes.garden/api/fetch-rss';
 
 const parser = new Parser({
   timeout: 30000,
