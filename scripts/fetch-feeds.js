@@ -21,21 +21,44 @@ function isSubstackFeed(url) {
   return url.includes('substack.com');
 }
 
-// Fetch RSS content through the Cloudflare proxy
-async function fetchViaProxy(feedUrl) {
-  const proxyUrl = `${PROXY_URL}?url=${encodeURIComponent(feedUrl)}`;
-  const response = await fetch(proxyUrl, { timeout: 30000 });
-
-  if (!response.ok) {
-    const errorData = await response.json().catch(() => ({}));
-    throw new Error(`Proxy returned ${response.status}: ${errorData.error || response.statusText}`);
-  }
-
-  return await response.text();
-}
-
 // Sleep utility for rate limiting
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+// Fetch RSS content through the Cloudflare proxy with retry logic
+async function fetchViaProxy(feedUrl, retries = 3) {
+  const proxyUrl = `${PROXY_URL}?url=${encodeURIComponent(feedUrl)}`;
+
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const response = await fetch(proxyUrl, {
+        signal: AbortSignal.timeout(30000)
+      });
+
+      if (response.ok) {
+        return await response.text();
+      }
+
+      // If rate limited (403), wait and retry
+      if (response.status === 403 && attempt < retries) {
+        const backoffMs = attempt * 5000; // 5s, 10s, 15s
+        console.log(`    → Rate limited, waiting ${backoffMs/1000}s before retry ${attempt + 1}/${retries}...`);
+        await sleep(backoffMs);
+        continue;
+      }
+
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(`Proxy returned ${response.status}: ${errorData.error || response.statusText}`);
+    } catch (error) {
+      if (attempt === retries) throw error;
+      if (error.name === 'TimeoutError' || error.message.includes('timeout')) {
+        console.log(`    → Timeout, retrying ${attempt + 1}/${retries}...`);
+        await sleep(2000);
+      } else {
+        throw error;
+      }
+    }
+  }
+}
 
 // Fetch page and extract first meaningful paragraph
 async function fetchPageExcerpt(url, maxLength = 300) {
@@ -253,9 +276,9 @@ async function main() {
     const result = await fetchFeed(blog, true);
     substackResults.push(result);
 
-    // Add delay between Substack feeds (2 seconds) to be nice to the proxy
+    // Add delay between Substack feeds (4 seconds) to avoid rate limiting
     if (i < substackBlogs.length - 1) {
-      await sleep(2000);
+      await sleep(4000);
     }
   }
 
