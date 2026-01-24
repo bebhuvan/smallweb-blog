@@ -276,9 +276,10 @@ async function main() {
     const result = await fetchFeed(blog, true);
     substackResults.push(result);
 
-    // Add delay between Substack feeds (4 seconds) to avoid rate limiting
+    // Add delay between Substack feeds (30 seconds) to avoid rate limiting
     if (i < substackBlogs.length - 1) {
-      await sleep(4000);
+      console.log('    → Waiting 30s before next Substack feed...');
+      await sleep(30000);
     }
   }
 
