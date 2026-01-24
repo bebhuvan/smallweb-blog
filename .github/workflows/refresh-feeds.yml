@@ -6,19 +6,16 @@ on:
     - cron: '0 3 * * *'
     # Evening: 12 PM UTC (5:30 PM IST)
     - cron: '0 12 * * *'
-  workflow_dispatch:
+  workflow_dispatch: # Manual trigger from GitHub Actions page
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     name: Fetch Feeds
-    env:
-      WORKER_URL: ${{ secrets.WORKER_URL }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,12 +27,12 @@ jobs:
         run: npm ci
 
       - name: Fetch RSS feeds
-        run: node scripts/fetch-feeds.js
+        run: npm run fetch-feeds
 
-      - name: Commit updated posts
+      - name: Commit and push if changed
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/cache/posts.json data/cache/status.json
-          git diff --staged --quiet || git commit -m "chore: refresh RSS feeds [skip ci]"
+          git diff --staged --quiet || git commit -m "chore: refresh RSS feeds"
           git push
