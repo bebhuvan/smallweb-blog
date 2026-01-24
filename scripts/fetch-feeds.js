@@ -6,12 +6,36 @@ import { dirname, join } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// Cloudflare Worker proxy URL for Substack feeds (bypasses rate limiting)
+const PROXY_URL = process.env.PROXY_URL || 'https://smallweb.blog/api/fetch-rss';
+
 const parser = new Parser({
-  timeout: 15000,
+  timeout: 30000,
   headers: {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
   },
 });
+
+// Check if a feed URL is from Substack
+function isSubstackFeed(url) {
+  return url.includes('substack.com');
+}
+
+// Fetch RSS content through the Cloudflare proxy
+async function fetchViaProxy(feedUrl) {
+  const proxyUrl = `${PROXY_URL}?url=${encodeURIComponent(feedUrl)}`;
+  const response = await fetch(proxyUrl, { timeout: 30000 });
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(`Proxy returned ${response.status}: ${errorData.error || response.statusText}`);
+  }
+
+  return await response.text();
+}
+
+// Sleep utility for rate limiting
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 // Fetch page and extract first meaningful paragraph
 async function fetchPageExcerpt(url, maxLength = 300) {
@@ -55,22 +79,17 @@ const CACHE_PATH = join(__dirname, '../data/cache/posts.json');
 const STATUS_PATH = join(__dirname, '../data/cache/status.json');
 const MAX_POSTS_PER_BLOG = 10;
 
-// NOTE: Substack Rate Limiting
-// --------------------------
-// Substack aggressively rate limits RSS feed requests. If adding Substack blogs,
-// use a Cloudflare Pages Function as a proxy. See paper trails project for reference:
-//   /home/bhuvanesh.r/AA/A main projects/paper trails/functions/api/fetch-rss.js
-//   /home/bhuvanesh.r/AA/A main projects/paper trails/src/scripts/fetch-feeds-with-proxy.js
+// Substack Rate Limiting Workaround
+// ---------------------------------
+// Substack blocks RSS requests from GitHub Actions IPs (returns 403).
+// Solution: Route Substack feeds through our Cloudflare Worker at /api/fetch-rss
+// which proxies the requests through Cloudflare's network.
 //
-// Key strategies used:
+// Strategies used:
 // 1. Cloudflare proxy with browser User-Agent (avoids bot detection)
-// 2. Sequential fetching (not parallel) for Substack feeds
-// 3. 30 second delay between Substack feeds, 5s for normal feeds
-// 4. Domain rate limiting: 1 min minimum between same-domain requests
-// 5. Retry with exponential backoff (10s, 20s delays on failure)
-//
-// To implement: Deploy a CF Pages Function that proxies RSS requests,
-// then set WORKER_URL env var to route Substack feeds through it.
+// 2. Sequential fetching for Substack feeds with 2s delays
+// 3. Parallel fetching for non-Substack feeds (faster)
+// 4. Set PROXY_URL env var to override the proxy endpoint if needed
 
 function decodeHtmlEntities(text) {
   if (!text) return '';
@@ -120,12 +139,23 @@ function generatePostId(blogId, title, link) {
   return Math.abs(hash).toString(36);
 }
 
-async function fetchFeed(blog) {
-  console.log(`Fetching: ${blog.name} (${blog.feed})`);
+async function fetchFeed(blog, useProxy = false) {
+  const isSubstack = isSubstackFeed(blog.feed);
+  const shouldUseProxy = useProxy || isSubstack;
+
+  console.log(`Fetching: ${blog.name} (${blog.feed})${shouldUseProxy ? ' [via proxy]' : ''}`);
   const startTime = Date.now();
 
   try {
-    const feed = await parser.parseURL(blog.feed);
+    let feed;
+    if (shouldUseProxy) {
+      // Fetch via Cloudflare proxy for Substack feeds
+      const rssContent = await fetchViaProxy(blog.feed);
+      feed = await parser.parseString(rssContent);
+    } else {
+      // Direct fetch for non-Substack feeds
+      feed = await parser.parseURL(blog.feed);
+    }
     const postsRaw = await Promise.all(
       feed.items.slice(0, MAX_POSTS_PER_BLOG).map(async (item) => {
         let link = item.link || blog.url;
@@ -205,9 +235,31 @@ async function main() {
   const blogsData = JSON.parse(readFileSync(BLOGS_PATH, 'utf-8'));
   const blogs = blogsData.blogs;
 
-  console.log(`Found ${blogs.length} blogs to fetch\n`);
+  // Separate Substack feeds from others
+  const substackBlogs = blogs.filter(b => isSubstackFeed(b.feed));
+  const otherBlogs = blogs.filter(b => !isSubstackFeed(b.feed));
 
-  const results = await Promise.all(blogs.map(fetchFeed));
+  console.log(`Found ${blogs.length} blogs to fetch (${substackBlogs.length} Substack, ${otherBlogs.length} others)\n`);
+
+  // Fetch non-Substack feeds in parallel (they don't rate limit)
+  console.log('--- Fetching non-Substack feeds in parallel ---\n');
+  const otherResults = await Promise.all(otherBlogs.map(blog => fetchFeed(blog, false)));
+
+  // Fetch Substack feeds sequentially with delays (to avoid rate limiting)
+  console.log('\n--- Fetching Substack feeds sequentially via proxy ---\n');
+  const substackResults = [];
+  for (let i = 0; i < substackBlogs.length; i++) {
+    const blog = substackBlogs[i];
+    const result = await fetchFeed(blog, true);
+    substackResults.push(result);
+
+    // Add delay between Substack feeds (2 seconds) to be nice to the proxy
+    if (i < substackBlogs.length - 1) {
+      await sleep(2000);
+    }
+  }
+
+  const results = [...otherResults, ...substackResults];
 
   const allPosts = results
     .flatMap(r => r.posts)
