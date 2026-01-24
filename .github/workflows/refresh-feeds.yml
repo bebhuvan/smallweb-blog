@@ -8,6 +8,9 @@ on:
     - cron: '0 12 * * *'
   workflow_dispatch: # Manual trigger from GitHub Actions page
 
+permissions:
+  contents: write
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
