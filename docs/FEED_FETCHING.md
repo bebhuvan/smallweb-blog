@@ -10,22 +10,51 @@ The blog aggregates posts from 90+ indie blogs via RSS feeds. Fetching runs auto
 
 Substack aggressively rate-limits RSS requests from datacenter IPs (like GitHub Actions). Direct fetches result in 403 errors.
 
-### Solution: Cloudflare Proxy
+### Solution: Cloudflare Pages Proxy
 
-Substack feeds are routed through a Cloudflare proxy at `/api/fetch-rss`. This works because:
-1. Cloudflare's outbound IPs are different from GitHub Actions IPs
+Substack feeds are routed through a **Cloudflare Pages** proxy. This works because:
+1. Cloudflare Pages has different outbound IPs than Workers
 2. The proxy uses browser-like headers to appear as a normal user
 3. Requests are spaced 30 seconds apart to avoid rate limiting
+
+**Important:** Cloudflare Workers IPs are blocked by Substack, but Pages IPs are not. This is why we use a separate Cloudflare Pages project for the proxy.
 
 ## Architecture
 
 ```
 GitHub Actions (fetch-feeds.js)
     │
-    ├── Non-Substack feeds → Direct fetch
+    ├── Non-Substack feeds → Direct fetch (parallel)
     │
-    └── Substack feeds → Cloudflare Proxy → Substack
-                         (/api/fetch-rss)
+    └── Substack feeds → Cloudflare Pages Proxy → Substack
+                         (rss-proxy project)
+                         30s delay between each
+```
+
+## RSS Proxy Setup
+
+The proxy is a separate Cloudflare Pages project: https://github.com/bebhuvan/rss-proxy
+
+### Why a Separate Project?
+
+- **Cloudflare Workers** (used by smallweb.blog): IPs are blocked by Substack
+- **Cloudflare Pages**: IPs are NOT blocked by Substack
+
+### Deploying the Proxy
+
+1. Go to [Cloudflare Dashboard → Pages](https://dash.cloudflare.com/?to=/:account/pages)
+2. Create a project → Connect to `bebhuvan/rss-proxy`
+3. Build settings:
+   - Build command: *(leave empty)*
+   - Build output directory: `public`
+4. Deploy
+5. Note the URL (e.g., `https://rss-proxy.pages.dev`)
+
+### Updating smallweb.blog to Use the Proxy
+
+In `scripts/fetch-feeds.js`, update:
+```javascript
+const PROXY_URL = process.env.PROXY_URL || 'https://YOUR-PROXY.pages.dev/api/fetch-rss';
 ```
 
 ## Files
@@ -72,55 +101,82 @@ Same process, but these are fetched directly in parallel (faster).
 ## Troubleshooting
 
 ### Substack feeds returning 403
-- Increase delay between feeds (currently 30s)
-- Check if Cloudflare Worker is deployed correctly
-- Substack may have blocked the Cloudflare IP range
 
-### Timeouts
+1. **Check proxy is using Cloudflare Pages** (not Workers)
+   - Workers IPs are blocked by Substack
+   - Pages IPs work fine
+
+2. **Increase delay** between feeds if still failing
+   - Currently 30s, can increase to 60s in `scripts/fetch-feeds.js`
+
+3. **Test proxy directly:**
+   ```bash
+   curl "https://YOUR-PROXY.pages.dev/api/fetch-rss?url=https://thezvi.substack.com/feed"
+   ```
+
+### Timeouts / Connection Resets
 - Some sites are slow; 30s timeout is set
 - Connection resets are transient; will succeed on next run
+- These are not proxy issues, just flaky servers
 
-### Checking feed health
+### Checking Feed Health
 ```bash
 # View summary
 cat data/cache/status.json | jq '.summary'
 
 # View failed feeds
 cat data/cache/status.json | jq '.feeds[] | select(.status == "error")'
+
+# Count by error type
+cat data/cache/status.json | jq '[.feeds[] | select(.status == "error") | .error] | group_by(.) | map({error: .[0], count: length})'
 ```
 
 ## GitHub Actions Workflow
 
 The `refresh-feeds.yml` workflow:
-1. Runs at 3 AM and 12 PM UTC daily
-2. Fetches all feeds (non-Substack in parallel, Substack sequentially)
-3. Commits updated cache to repo
-4. Triggers deploy workflow
+1. Runs at 3 AM and 12 PM UTC daily (configurable)
+2. Fetches non-Substack feeds in parallel (fast)
+3. Fetches Substack feeds sequentially with 30s delays (via proxy)
+4. Commits updated cache to repo
+5. Triggers deploy workflow
 
-## Cloudflare Worker Proxy
-
-The Worker at `worker/index.js`:
-- Serves static site from `/dist`
-- Handles `/api/fetch-rss?url=<encoded-feed-url>`
-- Adds browser-like headers to RSS requests
-- Returns XML content with CORS headers
-
-### Proxy Request Flow
-```
-GET /api/fetch-rss?url=https://example.substack.com/feed
-    ↓
-Worker fetches with browser User-Agent
-    ↓
-Returns RSS XML with CORS headers
+### Permissions Required
+```yaml
+permissions:
+  contents: write  # Push cache updates
+  actions: write   # Trigger deploy workflow
 ```
 
-## Alternative: Using Paper Trails Proxy
+## Project Structure
 
-If the smallweb.blog Worker proxy has issues, you can use paper trails' proxy:
+```
+smallweb.blog/
+├── scripts/fetch-feeds.js      # Feed fetcher (runs in GitHub Actions)
+├── worker/index.js             # Cloudflare Worker (serves site)
+├── data/blogs.json             # Feed list
+├── data/cache/posts.json       # Cached posts
+└── data/cache/status.json      # Feed health status
 
-In `scripts/fetch-feeds.js`, change:
+rss-proxy/ (separate repo)
+├── functions/api/fetch-rss.js  # Cloudflare Pages Function (proxy)
+└── public/index.html           # Placeholder
+```
+
+## Why Workers vs Pages Matters
+
+| Platform | Substack Access | Use Case |
+|----------|----------------|----------|
+| Cloudflare Workers | ❌ Blocked | Serving the site |
+| Cloudflare Pages | ✅ Works | RSS proxy |
+
+Substack blocks datacenter IPs aggressively. Cloudflare Workers and Pages use different IP pools. Pages IPs happen to not be blocked (as of Jan 2025).
+
+## Fallback: Paper Trails Proxy
+
+If your proxy has issues, you can temporarily use paper trails' proxy:
+
 ```javascript
-const PROXY_URL = process.env.PROXY_URL || 'https://papertrails.rabbitholes.garden/api/fetch-rss';
+const PROXY_URL = 'https://papertrails.rabbitholes.garden/api/fetch-rss';
 ```
 
-Paper trails uses Cloudflare Pages (vs Workers) which may have different outbound IPs that Substack doesn't block.
+This is another Cloudflare Pages project that works reliably.
