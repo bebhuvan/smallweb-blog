@@ -1,5 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ThemeToggle from '../../components/ThemeToggle.astro';
 import blogsData from '../../../data/blogs.json';
 import postsData from '../../../data/cache/posts.json';
 
@@ -14,6 +17,7 @@ export function getStaticPaths() {
     { slug: 'history', name: 'History', description: 'Lessons and narratives from the past' },
     { slug: 'psychology', name: 'Psychology', description: 'Understanding the mind and behavior' },
     { slug: 'philosophy', name: 'Philosophy', description: 'Wisdom, ethics, and first principles' },
+    { slug: 'science', name: 'Science', description: 'Physics, cosmology, and the nature of reality' },
   ];
   return categories.map((cat) => ({
     params: { slug: cat.slug },
@@ -66,99 +70,95 @@ function formatShortDate(dateStr: string) {
 ---
 
 <Base title={`${category.name} — The Small Web`} description={category.description}>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">The Small Web</a>
-      <nav class="header-nav">
-        <a href="/">Home</a>
-        <a href="/archive">Archive</a>
-        <a href="/blogs">Blogs</a>
-        <a href="/about">About</a>
-        <a href="https://buymeacoffee.com/bebhuvan" target="_blank" rel="noopener" class="nav-support">Support</a>
-        <button class="theme-toggle" id="theme-toggle">Dark mode</button>
-      </nav>
-    </div>
-  </header>
+  <ThemeToggle />
 
-  <nav class="category-nav">
-    <ul>
-      <li><a href="/archive">All</a></li>
-      <li><a href="/category/tech" class={slug === 'tech' ? 'active' : ''}><span class="cat-dot tech"></span>Tech</a></li>
-      <li><a href="/category/design" class={slug === 'design' ? 'active' : ''}><span class="cat-dot design"></span>Design</a></li>
-      <li><a href="/category/life" class={slug === 'life' ? 'active' : ''}><span class="cat-dot life"></span>Life</a></li>
-      <li><a href="/category/culture" class={slug === 'culture' ? 'active' : ''}><span class="cat-dot culture"></span>Culture</a></li>
-      <li><a href="/category/economics" class={slug === 'economics' ? 'active' : ''}><span class="cat-dot economics"></span>Economics</a></li>
-      <li><a href="/category/finance" class={slug === 'finance' ? 'active' : ''}><span class="cat-dot finance"></span>Finance</a></li>
-      <li><a href="/category/history" class={slug === 'history' ? 'active' : ''}><span class="cat-dot history"></span>History</a></li>
-      <li><a href="/category/psychology" class={slug === 'psychology' ? 'active' : ''}><span class="cat-dot psychology"></span>Psychology</a></li>
-      <li><a href="/category/philosophy" class={slug === 'philosophy' ? 'active' : ''}><span class="cat-dot philosophy"></span>Philosophy</a></li>
-    </ul>
-  </nav>
+  <div class="page">
+    <Header currentPath={`/category/${slug}`} currentCategory={slug as string} />
 
-  <main style="max-width: 900px; margin: 0 auto; padding: 3rem 2rem;">
-    <div class="page-header">
-      <h1 class="page-title" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
-        <span class={`col-dot ${slug}`} style="width: 16px; height: 16px;"></span>
-        {category.name}
-      </h1>
-      <p class="page-subtitle">{category.description}</p>
-      <p style="font-size: 0.9rem; color: var(--text-faint); margin-top: 0.5rem;">
-        {posts.length} {posts.length === 1 ? 'article' : 'articles'}
-      </p>
-    </div>
-
-    {posts.length > 0 ? (
-      <div id="archive-content">
-        {sortedMonths.map((month) => (
-          <section class="archive-month">
-            <h2 class="month-header">{month}</h2>
-            <div class="archive-list">
-              {postsByMonth[month].map((post) => (
-                <a
-                  href={post.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="archive-item"
-                >
-                  <span class="archive-date">{formatShortDate(post.date)}</span>
-                  <div class="archive-content">
-                    <h3 class="archive-title">{post.title}</h3>
-                    <p class="archive-meta">{post.blogName}</p>
-                  </div>
-                  <span class={`archive-category ${slug}`}>{category.name}</span>
-                </a>
-              ))}
-            </div>
-          </section>
-        ))}
+    <main class="category-main">
+      <div class="category-header">
+        <div class="category-dot" style={`background: var(--${slug})`}></div>
+        <h2 class="category-name">{category.name}</h2>
+        <p class="category-desc">{category.description}</p>
+        <p class="category-count">{posts.length} {posts.length === 1 ? 'article' : 'articles'}</p>
       </div>
-    ) : (
-      <div style="text-align: center; padding: 3rem; color: var(--text-muted);">
-        <p style="font-size: 1.1rem;">No articles in this category yet.</p>
-      </div>
-    )}
-  </main>
 
-  <footer class="site-footer">
-    <p class="footer-text">A curated feed of indie blogs · <a href="/rss.xml" style="color: var(--accent);">RSS</a> · <a href="https://github.com/bebhuvan/smallweb-blog" target="_blank" rel="noopener" style="color: var(--accent);">GitHub</a></p>
-  </footer>
+      {posts.length > 0 ? (
+        <div>
+          {sortedMonths.map((month) => (
+            <section class="archive-month">
+              <h2 class="month-header">{month}</h2>
+              <div class="archive-list">
+                {postsByMonth[month].map((post) => (
+                  <a
+                    href={post.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="asym-item"
+                  >
+                    <h4 class="asym-item-title">{post.title}</h4>
+                    <p class="asym-item-meta">{post.blogName} · {formatShortDate(post.date)}</p>
+                  </a>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      ) : (
+        <p class="empty-msg">No articles in this category yet.</p>
+      )}
+    </main>
 
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-
-    function updateButtonText() {
-      if (toggle) {
-        toggle.textContent = document.documentElement.classList.contains('dark') ? 'Light mode' : 'Dark mode';
-      }
-    }
-
-    toggle?.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      const isDark = document.documentElement.classList.contains('dark');
-      localStorage.theme = isDark ? 'dark' : 'light';
-      updateButtonText();
-    });
-
-    updateButtonText();
-  </script>
+    <Footer />
+  </div>
 </Base>
+
+<style>
+  .category-main {
+    padding: 2rem 0;
+  }
+
+  .category-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .category-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+  }
+
+  .category-name {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.35rem;
+  }
+
+  .category-desc {
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+  }
+
+  .category-count {
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    margin-top: 0.25rem;
+  }
+
+  .empty-msg {
+    text-align: center;
+    padding: 3rem;
+    color: var(--ink-muted);
+    font-size: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .category-name { font-size: 1.6rem; }
+    .category-desc { font-size: 0.85rem; }
+    .category-header { margin-bottom: 1.75rem; }
+    .category-main { padding: 1.25rem 0; }
+  }
+</style>

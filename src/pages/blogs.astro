@@ -1,5 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
 import blogsData from '../../data/blogs.json';
 import postsData from '../../data/cache/posts.json';
 
@@ -28,18 +31,11 @@ enrichedBlogs.forEach(blog => {
   blogsByCategory.get(cat)!.push(blog);
 });
 
-// All categories in order
-const categoryOrder = ['tech', 'design', 'life', 'culture', 'economics', 'finance', 'history', 'psychology', 'philosophy'];
+const categoryOrder = ['tech', 'design', 'life', 'culture', 'economics', 'finance', 'history', 'psychology', 'philosophy', 'science'];
 const categoryNames: Record<string, string> = {
-  tech: 'Tech',
-  design: 'Design',
-  life: 'Life',
-  culture: 'Culture',
-  finance: 'Finance',
-  economics: 'Economics',
-  history: 'History',
-  psychology: 'Psychology',
-  philosophy: 'Philosophy',
+  tech: 'Tech', design: 'Design', life: 'Life', culture: 'Culture',
+  finance: 'Finance', economics: 'Economics', history: 'History',
+  psychology: 'Psychology', philosophy: 'Philosophy', science: 'Science',
 };
 
 function getInitials(name: string) {
@@ -69,139 +65,88 @@ ${outlines}
 const opmlContent = generateOPML();
 ---
 
-<Base title="Blogroll — The Small Web" description="All the indie blogs we curate and index. A hand-picked collection of independent writers.">
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">The Small Web</a>
-      <nav class="header-nav">
-        <a href="/">Home</a>
-        <a href="/discover">Discover</a>
-        <a href="/archive">Archive</a>
-        <a href="/blogs" class="active">Blogs</a>
-        <a href="/about">About</a>
-        <button class="theme-toggle" id="theme-toggle">Dark mode</button>
-      </nav>
-    </div>
-  </header>
+<Base title="Blogroll — The Small Web" description="All the indie blogs we curate and index.">
+  <ThemeToggle />
 
-  <main class="blogs-main">
-    <div class="page-header">
-      <h1 class="page-title">Blogroll</h1>
-      <p class="page-subtitle">All {blogs.length} indie blogs we curate</p>
-    </div>
+  <div class="page">
+    <Header currentPath="/blogs" />
 
-    <div class="blogs-toolbar">
-      <div class="toolbar-stats">
-        <span class="toolbar-stat"><strong>{blogs.length}</strong> blogs</span>
-        <span class="toolbar-divider">·</span>
-        <span class="toolbar-stat"><strong>{posts.length}</strong> posts</span>
-        <span class="toolbar-divider">·</span>
-        <span class="toolbar-stat"><strong>{blogsByCategory.size}</strong> categories</span>
+    <main class="blogs-main">
+      <div class="page-header">
+        <h1 class="page-title">Blogroll</h1>
+        <p class="page-subtitle">All {blogs.length} indie blogs we curate</p>
       </div>
-      <div class="toolbar-actions">
-        <button class="export-btn" id="exportOPML" title="Export as OPML for RSS readers">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-            <polyline points="7,10 12,15 17,10"/>
-            <line x1="12" y1="15" x2="12" y2="3"/>
-          </svg>
-          Export OPML
-        </button>
-        <a href="/rss.xml" class="rss-btn" title="Subscribe via RSS">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 11a9 9 0 0 1 9 9"/>
-            <path d="M4 4a16 16 0 0 1 16 16"/>
-            <circle cx="5" cy="19" r="1"/>
-          </svg>
-          RSS
-        </a>
-      </div>
-    </div>
 
-    <nav class="category-tabs">
-      <button class="category-tab active" data-category="all">All</button>
-      {categoryOrder.map(cat => {
-        const count = blogsByCategory.get(cat)?.length || 0;
-        if (count === 0) return null;
-        return (
-          <button class="category-tab" data-category={cat}>
-            <span class={`tab-dot ${cat}`}></span>
-            {categoryNames[cat]}
-            <span class="tab-count">{count}</span>
+      <div class="blogs-toolbar">
+        <div class="toolbar-stats">
+          <strong>{blogs.length}</strong> blogs ·
+          <strong>{posts.length}</strong> posts ·
+          <strong>{blogsByCategory.size}</strong> categories
+        </div>
+        <div class="toolbar-actions">
+          <button class="toolbar-btn" id="exportOPML" title="Export as OPML for RSS readers">
+            Export OPML
           </button>
-        );
-      })}
-    </nav>
+          <a href="/rss.xml" class="toolbar-btn rss-link">RSS</a>
+        </div>
+      </div>
 
-    <div class="blogs-grid" id="blogsGrid">
-      {enrichedBlogs.map(blog => (
-        <a
-          href={blog.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="blog-card"
-          data-category={blog.categories[0]}
-          data-categories={blog.categories.join(',')}
-        >
-          <div class="blog-card-inner">
-            <div class="blog-avatar" style={`--cat-color: var(--${blog.categories[0]})`}>
-              {getInitials(blog.name)}
-            </div>
-            <div class="blog-content">
-              <h3 class="blog-name">{blog.name}</h3>
-              <span class="blog-url">{new URL(blog.url).hostname}</span>
-              <p class="blog-description">{blog.description}</p>
-              <div class="blog-footer">
-                <div class="blog-categories">
-                  {blog.categories.map((c: string) => (
-                    <span class={`blog-cat ${c}`}>{c}</span>
-                  ))}
+      <nav class="category-tabs">
+        <button class="stamp active" data-category="all">All</button>
+        {categoryOrder.map(cat => {
+          const count = blogsByCategory.get(cat)?.length || 0;
+          if (count === 0) return null;
+          return (
+            <button class="stamp" data-category={cat}>
+              <span class="stamp-dot" style={`background:var(--${cat})`}></span>
+              {categoryNames[cat]}
+              <span class="tab-count">{count}</span>
+            </button>
+          );
+        })}
+      </nav>
+
+      <div class="blogs-grid" id="blogsGrid">
+        {enrichedBlogs.map(blog => (
+          <a
+            href={blog.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="blog-card"
+            data-category={blog.categories[0]}
+            data-categories={blog.categories.join(',')}
+          >
+            <div class="blog-card-inner">
+              <div class="blog-avatar" style={`background: var(--${blog.categories[0]})`}>
+                {getInitials(blog.name)}
+              </div>
+              <div class="blog-content">
+                <h3 class="blog-name">{blog.name}</h3>
+                <span class="blog-url">{new URL(blog.url).hostname}</span>
+                {blog.description && <p class="blog-description">{blog.description}</p>}
+                <div class="blog-footer">
+                  <div class="blog-categories">
+                    {blog.categories.map((c: string) => (
+                      <span class="blog-cat" style={`border-color:var(--${c}); color:var(--${c})`}>{c}</span>
+                    ))}
+                  </div>
+                  <span class="blog-posts">{blog.postCount} posts</span>
                 </div>
-                <span class="blog-posts">{blog.postCount} posts</span>
               </div>
             </div>
-          </div>
-        </a>
-      ))}
-    </div>
+          </a>
+        ))}
+      </div>
 
-    <div class="empty-state" id="emptyState" style="display: none;">
-      <p>No blogs found in this category</p>
-    </div>
-  </main>
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <p>No blogs found in this category</p>
+      </div>
+    </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <span class="footer-stat"><span class="footer-stat-value">{blogs.length}</span> blogs</span>
-      <span class="footer-divider"></span>
-      <span class="footer-stat">Updated daily</span>
-      <span class="footer-divider"></span>
-      <span class="footer-stat">No ads, ever</span>
-    </div>
-    <nav class="footer-nav">
-      <a href="/discover">Discover</a>
-      <a href="/archive">Archive</a>
-      <a href="/about">About</a>
-      <a href="/rss.xml" class="rss-link">RSS</a>
-      <a href="https://github.com/bebhuvan/smallweb-blog" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-  </footer>
+    <Footer />
+  </div>
 
   <script define:vars={{ opmlContent }}>
-    // Theme toggle
-    const toggle = document.getElementById('theme-toggle');
-    function updateButtonText() {
-      if (toggle) {
-        toggle.textContent = document.documentElement.classList.contains('dark') ? 'Light mode' : 'Dark mode';
-      }
-    }
-    toggle?.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-      updateButtonText();
-    });
-    updateButtonText();
-
     // OPML Export
     document.getElementById('exportOPML')?.addEventListener('click', () => {
       const blob = new Blob([opmlContent], { type: 'text/xml' });
@@ -216,14 +161,13 @@ const opmlContent = generateOPML();
     });
 
     // Category filtering
-    const tabs = document.querySelectorAll('.category-tab');
+    const tabs = document.querySelectorAll('.category-tabs .stamp');
     const grid = document.getElementById('blogsGrid');
     const cards = grid?.querySelectorAll('.blog-card');
     const emptyState = document.getElementById('emptyState');
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        // Update active tab
         tabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
 
@@ -233,7 +177,6 @@ const opmlContent = generateOPML();
         cards?.forEach(card => {
           const cardCategories = card.dataset.categories?.split(',') || [];
           const show = category === 'all' || cardCategories.includes(category);
-
           if (show) {
             card.style.display = 'block';
             visibleCount++;
@@ -242,7 +185,6 @@ const opmlContent = generateOPML();
           }
         });
 
-        // Show empty state if no blogs
         if (emptyState) {
           emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
         }
@@ -253,149 +195,72 @@ const opmlContent = generateOPML();
 
 <style>
   .blogs-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: var(--space-7) var(--space-6);
+    padding: 2rem 0;
   }
 
-  .page-header {
-    text-align: center;
-    margin-bottom: var(--space-6);
-  }
-
-  /* Toolbar */
   .blogs-toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--space-4) 0;
-    margin-bottom: var(--space-5);
-    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--rule);
     flex-wrap: wrap;
-    gap: var(--space-4);
+    gap: 1rem;
   }
 
   .toolbar-stats {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    font-size: var(--text-sm);
-    color: var(--text-muted);
+    font-size: 0.8rem;
+    color: var(--ink-muted);
   }
 
-  .toolbar-stat strong {
-    color: var(--text);
+  .toolbar-stats strong {
+    color: var(--ink);
     font-weight: 600;
-  }
-
-  .toolbar-divider {
-    color: var(--border);
   }
 
   .toolbar-actions {
     display: flex;
-    gap: var(--space-3);
+    gap: 0.5rem;
   }
 
-  .export-btn,
-  .rss-btn {
+  .toolbar-btn {
     display: inline-flex;
     align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-4);
+    gap: 0.4rem;
+    padding: 0.3rem 0.65rem;
     font-family: var(--sans);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    color: var(--text-muted);
-    background: var(--bg-soft);
-    border: 1px solid var(--border);
-    border-radius: 100px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    background: none;
+    border: 1.5px solid var(--rule);
     cursor: pointer;
     text-decoration: none;
     transition: all 0.2s ease;
   }
 
-  .export-btn:hover,
-  .rss-btn:hover {
-    color: var(--text);
-    border-color: var(--text-faint);
+  .toolbar-btn:hover {
+    border-color: var(--ink);
+    color: var(--ink);
   }
 
-  .export-btn svg,
-  .rss-btn svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .rss-btn {
+  .toolbar-btn.rss-link {
     color: var(--accent);
+    border-color: var(--accent);
   }
 
-  .rss-btn:hover {
-    color: var(--accent);
-    background: var(--bg);
-  }
-
-  /* Category Tabs */
   .category-tabs {
     display: flex;
-    gap: var(--space-2);
-    margin-bottom: var(--space-6);
-    overflow-x: auto;
-    padding-bottom: var(--space-2);
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .category-tab {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-4);
-    font-family: var(--sans);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    color: var(--text-muted);
-    background: none;
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.2s ease;
-  }
-
-  .category-tab:hover {
-    color: var(--text);
-    border-color: var(--text-faint);
-  }
-
-  .category-tab.active {
-    background: var(--text);
-    color: var(--bg);
-    border-color: var(--text);
-  }
-
-  .tab-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-  }
-
-  .tab-dot.tech { background: var(--tech); }
-  .tab-dot.design { background: var(--design); }
-  .tab-dot.life { background: var(--life); }
-  .tab-dot.culture { background: var(--culture); }
-  .tab-dot.finance { background: var(--finance); }
-  .tab-dot.economics { background: var(--economics); }
-  .tab-dot.history { background: var(--history); }
-  .tab-dot.psychology { background: var(--psychology); }
-  .tab-dot.philosophy { background: var(--philosophy); }
-
-  .category-tab.active .tab-dot {
-    background: var(--bg);
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
   }
 
   .tab-count {
-    font-size: 0.7rem;
+    font-size: 0.55rem;
     opacity: 0.7;
   }
 
@@ -403,44 +268,37 @@ const opmlContent = generateOPML();
   .blogs-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
+    gap: 1rem;
   }
 
   .blog-card {
-    background: var(--bg-soft);
-    border-radius: 12px;
-    padding: var(--space-5);
+    display: block;
+    padding: 1.25rem;
+    border: 1.5px solid var(--rule);
     text-decoration: none;
     color: inherit;
-    transition: all 0.2s ease;
-    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    border-radius: 2px;
   }
 
   .blog-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    border-color: var(--border);
-  }
-
-  .dark .blog-card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent);
   }
 
   .blog-card-inner {
     display: flex;
-    gap: var(--space-4);
+    gap: 1rem;
   }
 
   .blog-avatar {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    background: var(--cat-color);
     color: white;
     flex-shrink: 0;
   }
@@ -452,10 +310,10 @@ const opmlContent = generateOPML();
 
   .blog-name {
     font-family: var(--serif);
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 0.15rem;
-    transition: color 0.2s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+    transition: color 0.3s ease;
   }
 
   .blog-card:hover .blog-name {
@@ -463,15 +321,15 @@ const opmlContent = generateOPML();
   }
 
   .blog-url {
-    font-size: var(--text-sm);
-    color: var(--text-faint);
+    font-size: 0.75rem;
+    color: var(--ink-faint);
   }
 
   .blog-description {
-    font-size: var(--text-sm);
-    color: var(--text-muted);
+    font-size: 0.8rem;
+    color: var(--ink-muted);
     line-height: 1.5;
-    margin-top: var(--space-3);
+    margin-top: 0.5rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -482,53 +340,38 @@ const opmlContent = generateOPML();
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: var(--space-3);
-    gap: var(--space-3);
+    margin-top: 0.6rem;
+    gap: 0.5rem;
   }
 
   .blog-categories {
     display: flex;
-    gap: var(--space-2);
+    gap: 0.35rem;
     flex-wrap: wrap;
   }
 
   .blog-cat {
-    font-size: 0.65rem;
-    font-weight: 600;
+    font-size: 0.55rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
-    padding: 0.2rem 0.5rem;
-    border-radius: 100px;
+    letter-spacing: 0.08em;
+    padding: 0.15rem 0.4rem;
+    border: 1.5px solid;
   }
 
-  .blog-cat.tech { background: var(--tech-soft); color: var(--tech); }
-  .blog-cat.design { background: var(--design-soft); color: var(--design); }
-  .blog-cat.life { background: var(--life-soft); color: var(--life); }
-  .blog-cat.culture { background: var(--culture-soft); color: var(--culture); }
-  .blog-cat.finance { background: var(--finance-soft); color: var(--finance); }
-  .blog-cat.economics { background: var(--economics-soft); color: var(--economics); }
-  .blog-cat.history { background: var(--history-soft); color: var(--history); }
-  .blog-cat.psychology { background: var(--psychology-soft); color: var(--psychology); }
-  .blog-cat.philosophy { background: var(--philosophy-soft); color: var(--philosophy); }
-
   .blog-posts {
-    font-size: var(--text-xs);
-    color: var(--text-faint);
+    font-size: 0.68rem;
+    color: var(--ink-faint);
     white-space: nowrap;
   }
 
   .empty-state {
     text-align: center;
-    padding: var(--space-8);
-    color: var(--text-faint);
+    padding: 3rem;
+    color: var(--ink-faint);
   }
 
-  /* Responsive */
   @media (max-width: 768px) {
-    .blogs-main {
-      padding: var(--space-5) var(--space-4);
-    }
-
     .blogs-grid {
       grid-template-columns: 1fr;
     }
@@ -538,32 +381,41 @@ const opmlContent = generateOPML();
       align-items: flex-start;
     }
 
-    .toolbar-actions {
-      width: 100%;
-    }
-
-    .export-btn,
-    .rss-btn {
-      flex: 1;
-      justify-content: center;
+    .category-tabs {
+      gap: 0.3rem;
+      margin-bottom: 1.5rem;
     }
   }
 
   @media (max-width: 480px) {
+    .blogs-main {
+      padding: 1.25rem 0;
+    }
+
+    .blog-card {
+      padding: 1rem;
+    }
+
     .blog-card-inner {
-      flex-direction: column;
-      gap: var(--space-3);
+      gap: 0.75rem;
     }
 
     .blog-avatar {
-      width: 40px;
-      height: 40px;
-      font-size: 0.75rem;
+      width: 34px;
+      height: 34px;
+      font-size: 0.65rem;
     }
+
+    .blog-name { font-size: 0.9rem; }
+    .blog-description { font-size: 0.75rem; margin-top: 0.35rem; }
 
     .blog-footer {
       flex-direction: column;
       align-items: flex-start;
+      gap: 0.3rem;
     }
+
+    .toolbar-actions { width: 100%; }
+    .toolbar-btn { flex: 1; justify-content: center; }
   }
 </style>

@@ -1,5 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
 import blogsData from '../../data/blogs.json';
 import postsData from '../../data/cache/posts.json';
 
@@ -19,91 +22,56 @@ const enrichedPosts = posts.map((post) => {
   };
 });
 
-// Hero section - ensure category diversity
-// Get one post from each category for the sidebar (latest from each)
-const categories = ['tech', 'culture', 'life', 'design', 'finance', 'economics', 'history', 'psychology', 'philosophy'];
+// Track used IDs
 const usedIds = new Set<string>();
 
-// Lead post: most recent overall
+// Lead post: most recent
 const leadPost = enrichedPosts[0];
 if (leadPost) usedIds.add(leadPost.id);
 
-// Latest sidebar: pick one recent post from each category (up to 4)
-const latestPosts: typeof enrichedPosts = [];
-for (const cat of categories) {
-  if (latestPosts.length >= 4) break;
-  const post = enrichedPosts.find(p => p.category === cat && !usedIds.has(p.id));
-  if (post) {
-    latestPosts.push(post);
-    usedIds.add(post.id);
-  }
-}
-// Fill remaining slots with any posts
-for (const post of enrichedPosts) {
-  if (latestPosts.length >= 4) break;
-  if (!usedIds.has(post.id)) {
-    latestPosts.push(post);
-    usedIds.add(post.id);
-  }
-}
+// Also New: next 4 most recent posts after the lead
+const alsoNew = enrichedPosts.filter(p => !usedIds.has(p.id)).slice(0, 4);
+alsoNew.forEach(p => usedIds.add(p.id));
 
-// Secondary posts: next 3 posts, preferring variety
-const secondaryPosts: typeof enrichedPosts = [];
-for (const post of enrichedPosts) {
-  if (secondaryPosts.length >= 3) break;
-  if (!usedIds.has(post.id)) {
-    secondaryPosts.push(post);
-    usedIds.add(post.id);
-  }
-}
+// Tech section: 1 featured + 2 list
+const techPosts = enrichedPosts.filter(p => p.category === 'tech' && !usedIds.has(p.id)).slice(0, 3);
+techPosts.forEach(p => usedIds.add(p.id));
 
-// Track shown post IDs to avoid duplication
-const shownIds = new Set([leadPost?.id, ...latestPosts.map(p => p.id), ...secondaryPosts.map(p => p.id)]);
+// Life section (tight): 3 items
+const lifePosts = enrichedPosts.filter(p => p.category === 'life' && !usedIds.has(p.id)).slice(0, 3);
+lifePosts.forEach(p => usedIds.add(p.id));
 
-// Main category sections (4 posts each)
-const techPosts = enrichedPosts
-  .filter(p => p.category === 'tech' && !shownIds.has(p.id))
-  .slice(0, 4);
-techPosts.forEach(p => shownIds.add(p.id));
+// Culture section (color band): 1 featured + 1 list
+const culturePosts = enrichedPosts.filter(p => p.category === 'culture' && !usedIds.has(p.id)).slice(0, 2);
+culturePosts.forEach(p => usedIds.add(p.id));
 
-const culturePosts = enrichedPosts
-  .filter(p => p.category === 'culture' && !shownIds.has(p.id))
-  .slice(0, 4);
-culturePosts.forEach(p => shownIds.add(p.id));
+// Design section (tight in color band): 2 items
+const designPosts = enrichedPosts.filter(p => p.category === 'design' && !usedIds.has(p.id)).slice(0, 2);
+designPosts.forEach(p => usedIds.add(p.id));
 
-const lifePosts = enrichedPosts
-  .filter(p => p.category === 'life' && !shownIds.has(p.id))
-  .slice(0, 4);
-lifePosts.forEach(p => shownIds.add(p.id));
+// Bottom grid: economics, finance, history (2 each)
+const economicsPosts = enrichedPosts.filter(p => p.category === 'economics' && !usedIds.has(p.id)).slice(0, 2);
+economicsPosts.forEach(p => usedIds.add(p.id));
 
-// Secondary category sections (3 posts each)
-const designPosts = enrichedPosts
-  .filter(p => p.category === 'design' && !shownIds.has(p.id))
-  .slice(0, 3);
-designPosts.forEach(p => shownIds.add(p.id));
+const financePosts = enrichedPosts.filter(p => p.category === 'finance' && !usedIds.has(p.id)).slice(0, 2);
+financePosts.forEach(p => usedIds.add(p.id));
 
-const financePosts = enrichedPosts
-  .filter(p => p.category === 'finance' && !shownIds.has(p.id))
-  .slice(0, 3);
-financePosts.forEach(p => shownIds.add(p.id));
+const historyPosts = enrichedPosts.filter(p => p.category === 'history' && !usedIds.has(p.id)).slice(0, 2);
+historyPosts.forEach(p => usedIds.add(p.id));
 
-const economicsPosts = enrichedPosts
-  .filter(p => p.category === 'economics' && !shownIds.has(p.id))
-  .slice(0, 3);
-economicsPosts.forEach(p => shownIds.add(p.id));
+// Featured excerpt: pick the post with the longest excerpt from prose-heavy categories
+const proseCategories = ['philosophy', 'culture', 'life', 'psychology', 'history'];
+const excerptCandidates = enrichedPosts
+  .filter(p => proseCategories.includes(p.category) && p.excerpt && p.excerpt.length > 80 && !usedIds.has(p.id))
+  .sort((a, b) => (b.excerpt?.length || 0) - (a.excerpt?.length || 0));
+const featuredExcerpt = excerptCandidates[0] || null;
+if (featuredExcerpt) usedIds.add(featuredExcerpt.id);
 
-// Archives (older posts not shown elsewhere)
-const archivePosts = enrichedPosts
-  .filter(p => !shownIds.has(p.id))
-  .slice(0, 4);
-
-// Format date helpers
 function formatDate(dateStr: string) {
   const date = new Date(dateStr);
   const now = new Date();
   const diffTime = now.getTime() - date.getTime();
   const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
   if (diffDays === 0) return 'Today';
   if (diffDays === 1) return 'Yesterday';
   if (diffDays < 7) return `${diffDays} days ago`;
@@ -111,260 +79,177 @@ function formatDate(dateStr: string) {
   return 'Last month';
 }
 
-function formatFullDate() {
-  const options: Intl.DateTimeFormatOptions = {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  };
-  return new Date().toLocaleDateString('en-US', options);
-}
-
-function getVolumeNumber() {
-  const startYear = 2024;
-  const now = new Date();
-  const vol = now.getFullYear() - startYear + 1;
-  const dayOfYear = Math.floor((now.getTime() - new Date(now.getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
-  return `Vol. ${vol} · No. ${dayOfYear}`;
+function getCatColor(cat: string) {
+  return `var(--${cat})`;
 }
 ---
 
 <Base title="The Small Web — Curated Indie Blogs">
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">The Small Web</a>
-      <nav class="header-nav">
-        <a href="/" class="active">Home</a>
-        <a href="/discover">Discover</a>
-        <a href="/archive">Archive</a>
-        <a href="/blogs">Blogs</a>
-        <a href="/about">About</a>
-        <a href="https://buymeacoffee.com/bebhuvan" target="_blank" rel="noopener" class="nav-support">Support</a>
-        <button class="theme-toggle" id="theme-toggle">Dark mode</button>
-      </nav>
-    </div>
-  </header>
+  <ThemeToggle />
 
-  <header class="masthead">
-    <div class="masthead-top">
-      <span>{formatFullDate()}</span>
-      <span>{getVolumeNumber()}</span>
-    </div>
-    <h1 class="newspaper-title">The Small Web</h1>
-    <p class="newspaper-subtitle">A curated feed of indie blogs</p>
-  </header>
+  <div class="page">
+    <Header currentPath="/" />
 
-  <nav class="category-nav">
-    <ul>
-      <li><a href="/" class="active">All</a></li>
-      <li><a href="/category/tech"><span class="cat-dot tech"></span>Tech</a></li>
-      <li><a href="/category/design"><span class="cat-dot design"></span>Design</a></li>
-      <li><a href="/category/life"><span class="cat-dot life"></span>Life</a></li>
-      <li><a href="/category/culture"><span class="cat-dot culture"></span>Culture</a></li>
-      <li><a href="/category/economics"><span class="cat-dot economics"></span>Economics</a></li>
-      <li><a href="/category/finance"><span class="cat-dot finance"></span>Finance</a></li>
-      <li><a href="/category/history"><span class="cat-dot history"></span>History</a></li>
-      <li><a href="/category/psychology"><span class="cat-dot psychology"></span>Psychology</a></li>
-      <li><a href="/category/philosophy"><span class="cat-dot philosophy"></span>Philosophy</a></li>
-    </ul>
-  </nav>
+    <!-- Lead -->
+    <section class="lead">
+      {leadPost && (
+        <a href={leadPost.link} target="_blank" rel="noopener noreferrer" class="lead-main">
+          <span class={`lead-stamp ${leadPost.category}`}>{leadPost.category} · {formatDate(leadPost.date)}</span>
+          <h2 class="lead-title">{leadPost.title}</h2>
+          <p class="lead-byline">By <strong>{leadPost.blogName}</strong> · {new URL(leadPost.blogUrl).hostname}</p>
+          {leadPost.excerpt && <p class="lead-excerpt">{leadPost.excerpt}</p>}
+        </a>
+      )}
+      <div class="lead-side">
+        <div class="lead-side-label">Also New</div>
+        {alsoNew.map((post) => (
+          <a href={post.link} target="_blank" rel="noopener noreferrer" class="pick">
+            <div class="pick-cat" style={`color:${getCatColor(post.category)}`}>
+              <span class="pick-cat-dot" style={`background:${getCatColor(post.category)}`}></span>
+              {post.category}
+            </div>
+            <h4 class="pick-title">{post.title}</h4>
+            <p class="pick-meta">{post.blogName} · {formatDate(post.date)}</p>
+          </a>
+        ))}
+      </div>
+    </section>
 
-  <main class="main-content">
-    <section class="headlines">
-      <div class="lead-column">
-        {leadPost && (
-          <article class="lead-story">
-            <span class={`lead-badge ${leadPost.category}`}>{leadPost.category} · Today</span>
-            <h2 class="lead-title">
-              <a href={leadPost.link} target="_blank" rel="noopener noreferrer">{leadPost.title}</a>
-            </h2>
-            <p class="lead-byline">By <strong>{leadPost.blogName}</strong> · {new URL(leadPost.blogUrl).hostname}</p>
-            <p class="lead-excerpt">{leadPost.excerpt}</p>
-          </article>
+    <!-- Cut -->
+    <div class="cut">✂</div>
+
+    <!-- Tech + Life Asymmetric -->
+    <section class="asym">
+      <div class="asym-main">
+        <div class="asym-head">
+          <span class="asym-head-dot" style="background:var(--tech)"></span>
+          <span class="asym-head-text">Tech</span>
+          <a href="/category/tech" class="asym-head-link">View all →</a>
+        </div>
+        {techPosts[0] && (
+          <a href={techPosts[0].link} target="_blank" rel="noopener noreferrer" class="asym-featured">
+            <h4 class="asym-featured-title">{techPosts[0].title}</h4>
+            <p class="asym-featured-meta">{techPosts[0].blogName} · {formatDate(techPosts[0].date)}</p>
+            {techPosts[0].excerpt && <p class="asym-featured-excerpt">{techPosts[0].excerpt}</p>}
+          </a>
         )}
-
-        <div class="secondary-posts">
-          <h3 class="secondary-header">Also Reading</h3>
-          <div class="secondary-list">
-            {secondaryPosts.map((post) => (
-              <a href={post.link} target="_blank" rel="noopener noreferrer" class="secondary-item">
-                <span class={`secondary-category ${post.category}`}>{post.category}</span>
-                <span class="secondary-title">{post.title}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <aside class="sidebar">
-        <h3 class="sidebar-header">Latest</h3>
-        {latestPosts.map((post, i) => (
-          <a href={post.link} target="_blank" rel="noopener noreferrer" class="sidebar-item">
-            <span class={`sidebar-category ${post.category}`}>{post.category}</span>
-            <h4 class="sidebar-title">{post.title}</h4>
-            <p class="sidebar-meta">{post.blogName} · {formatDate(post.date)}</p>
+        {techPosts.slice(1).map((post) => (
+          <a href={post.link} target="_blank" rel="noopener noreferrer" class="asym-item">
+            <h4 class="asym-item-title">{post.title}</h4>
+            <p class="asym-item-meta">{post.blogName} · {formatDate(post.date)}</p>
           </a>
         ))}
-      </aside>
-    </section>
-
-    <!-- Main Categories Row: Tech, Culture, Life -->
-    <section class="magazine-section">
-      <div class="category-row grid-3">
-        <div class="category-column">
-          <div class="section-header">
-            <h3 class="column-header"><span class="col-dot tech"></span>Tech</h3>
-            <a href="/category/tech" class="section-link">View all →</a>
-          </div>
-          {techPosts.length > 0 ? techPosts.map((post) => (
-            <a href={post.link} target="_blank" rel="noopener noreferrer" class="column-article">
-              <h4 class="column-title">{post.title}</h4>
-              <p class="column-byline">{post.blogName} · {formatDate(post.date)}</p>
-            </a>
-          )) : (
-            <p class="column-excerpt">No tech posts yet.</p>
-          )}
-        </div>
-
-        <div class="category-column">
-          <div class="section-header">
-            <h3 class="column-header"><span class="col-dot culture"></span>Culture</h3>
-            <a href="/category/culture" class="section-link">View all →</a>
-          </div>
-          {culturePosts.length > 0 ? culturePosts.map((post) => (
-            <a href={post.link} target="_blank" rel="noopener noreferrer" class="column-article">
-              <h4 class="column-title">{post.title}</h4>
-              <p class="column-byline">{post.blogName} · {formatDate(post.date)}</p>
-            </a>
-          )) : (
-            <p class="column-excerpt">No culture posts yet.</p>
-          )}
-        </div>
-
-        <div class="category-column">
-          <div class="section-header">
-            <h3 class="column-header"><span class="col-dot life"></span>Life</h3>
-            <a href="/category/life" class="section-link">View all →</a>
-          </div>
-          {lifePosts.length > 0 ? lifePosts.map((post) => (
-            <a href={post.link} target="_blank" rel="noopener noreferrer" class="column-article">
-              <h4 class="column-title">{post.title}</h4>
-              <p class="column-byline">{post.blogName} · {formatDate(post.date)}</p>
-            </a>
-          )) : (
-            <p class="column-excerpt">No life posts yet.</p>
-          )}
-        </div>
       </div>
-    </section>
-
-    <!-- Secondary Categories Row: Economics, Design, Finance -->
-    <section class="magazine-section">
-      <div class="category-row grid-3">
-        <div class="category-column">
-          <div class="section-header">
-            <h3 class="column-header"><span class="col-dot economics"></span>Economics</h3>
-            <a href="/category/economics" class="section-link">View all →</a>
-          </div>
-          {economicsPosts.length > 0 ? economicsPosts.map((post) => (
-            <a href={post.link} target="_blank" rel="noopener noreferrer" class="column-article">
-              <h4 class="column-title">{post.title}</h4>
-              <p class="column-byline">{post.blogName} · {formatDate(post.date)}</p>
-              {post.excerpt && <p class="column-excerpt">{post.excerpt}</p>}
-            </a>
-          )) : (
-            <p class="column-excerpt">No economics posts yet.</p>
-          )}
+      <div class="tight-col">
+        <div class="tight-head">
+          <span class="asym-head-dot" style="background:var(--life)"></span>
+          Life
         </div>
-
-        <div class="category-column">
-          <div class="section-header">
-            <h3 class="column-header"><span class="col-dot design"></span>Design</h3>
-            <a href="/category/design" class="section-link">View all →</a>
-          </div>
-          {designPosts.length > 0 ? designPosts.map((post) => (
-            <a href={post.link} target="_blank" rel="noopener noreferrer" class="column-article">
-              <h4 class="column-title">{post.title}</h4>
-              <p class="column-byline">{post.blogName} · {formatDate(post.date)}</p>
-              {post.excerpt && <p class="column-excerpt">{post.excerpt}</p>}
-            </a>
-          )) : (
-            <p class="column-excerpt">No design posts yet.</p>
-          )}
-        </div>
-
-        <div class="category-column">
-          <div class="section-header">
-            <h3 class="column-header"><span class="col-dot finance"></span>Finance</h3>
-            <a href="/category/finance" class="section-link">View all →</a>
-          </div>
-          {financePosts.length > 0 ? financePosts.map((post) => (
-            <a href={post.link} target="_blank" rel="noopener noreferrer" class="column-article">
-              <h4 class="column-title">{post.title}</h4>
-              <p class="column-byline">{post.blogName} · {formatDate(post.date)}</p>
-              {post.excerpt && <p class="column-excerpt">{post.excerpt}</p>}
-            </a>
-          )) : (
-            <p class="column-excerpt">No finance posts yet.</p>
-          )}
-        </div>
-      </div>
-    </section>
-
-    <!-- Archives Section -->
-    <section class="magazine-section archives-section">
-      <div class="section-header">
-        <h3 class="column-header">From the Archives</h3>
-        <a href="/archive" class="section-link">View all →</a>
-      </div>
-      <div class="archives-grid">
-        {archivePosts.map((post) => (
-          <a href={post.link} target="_blank" rel="noopener noreferrer" class="archive-card">
-            <span class={`archive-card-category ${post.category}`}>{post.category}</span>
-            <h4 class="archive-card-title">{post.title}</h4>
-            <p class="archive-card-meta">{post.blogName} · {formatDate(post.date)}</p>
+        {lifePosts.map((post) => (
+          <a href={post.link} target="_blank" rel="noopener noreferrer" class="tight-item">
+            <h4 class="tight-item-title">{post.title}</h4>
+            <p class="tight-item-meta">{post.blogName} · {formatDate(post.date)}</p>
           </a>
         ))}
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <span class="footer-stat"><span class="footer-stat-value">{blogs.length}</span> blogs</span>
-      <span class="footer-divider"></span>
-      <span class="footer-stat">Updated twice daily</span>
-      <span class="footer-divider"></span>
-      <span class="footer-stat">No ads, ever</span>
+    <!-- Featured Excerpt -->
+    {featuredExcerpt && (
+      <a href={featuredExcerpt.link} target="_blank" rel="noopener noreferrer" class="pasted-quote">
+        <div class="pasted-quote-bg"></div>
+        <div class="pasted-quote-inner">
+          <div class="pasted-quote-label">From the blogs</div>
+          <p class="pasted-quote-text">{featuredExcerpt.excerpt!.slice(0, 280)}{featuredExcerpt.excerpt!.length > 280 ? '...' : ''}</p>
+          <div class="pasted-quote-src">{featuredExcerpt.blogName} · {featuredExcerpt.title}</div>
+        </div>
+      </a>
+    )}
+
+    <!-- Cut -->
+    <div class="cut">✕</div>
+
+    <!-- Culture Color Band -->
+    <div class="color-band">
+      <section class="asym" style="padding-top:0; padding-bottom:0;">
+        <div class="asym-main">
+          <div class="asym-head">
+            <span class="asym-head-dot" style="background:var(--culture)"></span>
+            <span class="asym-head-text">Culture</span>
+            <a href="/category/culture" class="asym-head-link">View all →</a>
+          </div>
+          {culturePosts[0] && (
+            <a href={culturePosts[0].link} target="_blank" rel="noopener noreferrer" class="asym-featured">
+              <h4 class="asym-featured-title">{culturePosts[0].title}</h4>
+              <p class="asym-featured-meta">{culturePosts[0].blogName} · {formatDate(culturePosts[0].date)}</p>
+              {culturePosts[0].excerpt && <p class="asym-featured-excerpt">{culturePosts[0].excerpt}</p>}
+            </a>
+          )}
+          {culturePosts.slice(1).map((post) => (
+            <a href={post.link} target="_blank" rel="noopener noreferrer" class="asym-item">
+              <h4 class="asym-item-title">{post.title}</h4>
+              <p class="asym-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+            </a>
+          ))}
+        </div>
+        <div class="tight-col">
+          <div class="tight-head">
+            <span class="asym-head-dot" style="background:var(--design)"></span>
+            Design
+          </div>
+          {designPosts.map((post) => (
+            <a href={post.link} target="_blank" rel="noopener noreferrer" class="tight-item">
+              <h4 class="tight-item-title">{post.title}</h4>
+              <p class="tight-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+            </a>
+          ))}
+        </div>
+      </section>
     </div>
-    <nav class="footer-nav">
-      <a href="/discover">Discover</a>
-      <a href="/archive">Archive</a>
-      <a href="/blogs">Blogs</a>
-      <a href="/about">About</a>
-      <a href="/rss.xml" class="rss-link">RSS</a>
-      <a href="https://github.com/bebhuvan/smallweb-blog" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-  </footer>
 
-  <script>
-    const toggle = document.getElementById('theme-toggle');
+    <!-- Cut -->
+    <div class="cut">✂</div>
 
-    function updateButtonText() {
-      if (toggle) {
-        toggle.textContent = document.documentElement.classList.contains('dark') ? 'Light mode' : 'Dark mode';
-      }
-    }
+    <!-- Bottom 3-Column Grid -->
+    <section class="bottom-grid">
+      <div>
+        <div class="bottom-col-head">
+          <span class="asym-head-dot" style="background:var(--economics)"></span>
+          Economics
+        </div>
+        {economicsPosts.map((post) => (
+          <a href={post.link} target="_blank" rel="noopener noreferrer" class="bottom-item">
+            <h4 class="bottom-item-title">{post.title}</h4>
+            <p class="bottom-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+          </a>
+        ))}
+      </div>
+      <div>
+        <div class="bottom-col-head">
+          <span class="asym-head-dot" style="background:var(--finance)"></span>
+          Finance
+        </div>
+        {financePosts.map((post) => (
+          <a href={post.link} target="_blank" rel="noopener noreferrer" class="bottom-item">
+            <h4 class="bottom-item-title">{post.title}</h4>
+            <p class="bottom-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+          </a>
+        ))}
+      </div>
+      <div>
+        <div class="bottom-col-head">
+          <span class="asym-head-dot" style="background:var(--history)"></span>
+          History
+        </div>
+        {historyPosts.map((post) => (
+          <a href={post.link} target="_blank" rel="noopener noreferrer" class="bottom-item">
+            <h4 class="bottom-item-title">{post.title}</h4>
+            <p class="bottom-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+          </a>
+        ))}
+      </div>
+    </section>
 
-    toggle?.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      const isDark = document.documentElement.classList.contains('dark');
-      localStorage.theme = isDark ? 'dark' : 'light';
-      updateButtonText();
-    });
-
-    // Initial state
-    updateButtonText();
-  </script>
+    <Footer />
+  </div>
 </Base>

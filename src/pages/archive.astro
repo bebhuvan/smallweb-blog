@@ -1,5 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
 import blogsData from '../../data/blogs.json';
 import postsData from '../../data/cache/posts.json';
 
@@ -31,7 +34,6 @@ enrichedPosts.forEach((post) => {
   postsByMonth[monthKey].push(post);
 });
 
-// Sort months (newest first)
 const sortedMonths = Object.keys(postsByMonth).sort((a, b) => {
   return new Date(b).getTime() - new Date(a).getTime();
 });
@@ -43,106 +45,66 @@ function formatShortDate(dateStr: string) {
 ---
 
 <Base title="Archive — The Small Web">
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">The Small Web</a>
-      <nav class="header-nav">
-        <a href="/">Home</a>
-        <a href="/feed">Feed</a>
-        <a href="/archive" class="active">Archive</a>
-        <a href="/blogs">Blogs</a>
-        <a href="/about">About</a>
-        <a href="https://buymeacoffee.com/bebhuvan" target="_blank" rel="noopener" class="nav-support">Support</a>
-        <button class="theme-toggle" id="theme-toggle">Dark mode</button>
-      </nav>
-    </div>
-  </header>
+  <ThemeToggle />
 
-  <nav class="category-nav">
-    <ul>
-      <li><a href="/archive" class="active">All</a></li>
-      <li><a href="/category/tech"><span class="cat-dot tech"></span>Tech</a></li>
-      <li><a href="/category/design"><span class="cat-dot design"></span>Design</a></li>
-      <li><a href="/category/life"><span class="cat-dot life"></span>Life</a></li>
-      <li><a href="/category/culture"><span class="cat-dot culture"></span>Culture</a></li>
-      <li><a href="/category/finance"><span class="cat-dot finance"></span>Finance</a></li>
-    </ul>
-  </nav>
+  <div class="page">
+    <Header currentPath="/archive" />
 
-  <main style="max-width: 900px; margin: 0 auto; padding: 3rem 2rem;">
-    <div class="page-header">
-      <h1 class="page-title">Archive</h1>
-      <p class="page-subtitle">Every post from every blog, searchable</p>
-    </div>
-
-    <div class="search-container">
-      <div class="search-box">
-        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-        </svg>
-        <input type="text" class="search-input" id="search-input" placeholder="Search posts, authors, topics...">
+    <main class="archive-main">
+      <div class="page-header">
+        <h1 class="page-title">Archive</h1>
+        <p class="page-subtitle">Every post from every blog, searchable</p>
       </div>
-    </div>
 
-    <div id="archive-content">
-      {sortedMonths.map((month) => (
-        <section class="archive-month" data-month={month}>
-          <h2 class="month-header">{month}</h2>
-          <div class="archive-list">
-            {postsByMonth[month].map((post) => (
-              <a
-                href={post.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="archive-item"
-                data-title={post.title.toLowerCase()}
-                data-author={post.blogName.toLowerCase()}
-                data-category={post.category}
-              >
-                <span class="archive-date">{formatShortDate(post.date)}</span>
-                <div class="archive-content">
-                  <h3 class="archive-title">{post.title}</h3>
-                  <p class="archive-meta">{post.blogName}</p>
-                </div>
-                <span class={`archive-category ${post.category}`}>{post.category.charAt(0).toUpperCase() + post.category.slice(1)}</span>
-              </a>
-            ))}
-          </div>
-        </section>
-      ))}
-    </div>
+      <div class="search-container">
+        <div class="search-box">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" class="search-input" id="search-input" placeholder="Search posts, authors, topics...">
+        </div>
+      </div>
 
-    <div id="no-results" style="display: none; text-align: center; padding: 3rem; color: var(--text-muted);">
-      <p style="font-size: 1.1rem;">No posts found matching your search.</p>
-    </div>
-  </main>
+      <div id="archive-content">
+        {sortedMonths.map((month) => (
+          <section class="archive-month" data-month={month}>
+            <h2 class="month-header">{month}</h2>
+            <div class="archive-list">
+              {postsByMonth[month].map((post) => (
+                <a
+                  href={post.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="archive-item"
+                  data-title={post.title.toLowerCase()}
+                  data-author={post.blogName.toLowerCase()}
+                  data-category={post.category}
+                >
+                  <span class="archive-date">{formatShortDate(post.date)}</span>
+                  <div class="archive-content">
+                    <h3 class="archive-title">{post.title}</h3>
+                    <p class="archive-meta">{post.blogName}</p>
+                  </div>
+                  <span class={`archive-category ${post.category}`}>{post.category}</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
 
-  <footer class="site-footer">
-    <p class="footer-text">A curated feed of indie blogs · <a href="/rss.xml" style="color: var(--accent);">RSS</a> · <a href="https://github.com/bebhuvan/smallweb-blog" target="_blank" rel="noopener" style="color: var(--accent);">GitHub</a></p>
-  </footer>
+      <div id="no-results" style="display: none; text-align: center; padding: 3rem; color: var(--ink-muted);">
+        <p>No posts found matching your search.</p>
+      </div>
+    </main>
+
+    <Footer />
+  </div>
 
   <script>
-    const toggle = document.getElementById('theme-toggle');
     const searchInput = document.getElementById('search-input') as HTMLInputElement;
-    const archiveContent = document.getElementById('archive-content');
     const noResults = document.getElementById('no-results');
 
-    function updateButtonText() {
-      if (toggle) {
-        toggle.textContent = document.documentElement.classList.contains('dark') ? 'Light mode' : 'Dark mode';
-      }
-    }
-
-    toggle?.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      const isDark = document.documentElement.classList.contains('dark');
-      localStorage.theme = isDark ? 'dark' : 'light';
-      updateButtonText();
-    });
-
-    updateButtonText();
-
-    // Search functionality
     searchInput?.addEventListener('input', (e) => {
       const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
       const items = document.querySelectorAll('.archive-item');
@@ -153,41 +115,37 @@ function formatShortDate(dateStr: string) {
         const title = item.getAttribute('data-title') || '';
         const author = item.getAttribute('data-author') || '';
         const category = item.getAttribute('data-category') || '';
-
-        const matches = !query ||
-          title.includes(query) ||
-          author.includes(query) ||
-          category.includes(query);
-
+        const matches = !query || title.includes(query) || author.includes(query) || category.includes(query);
         (item as HTMLElement).style.display = matches ? '' : 'none';
         if (matches) totalVisible++;
       });
 
-      // Hide empty months
       months.forEach((month) => {
-        const visibleItems = month.querySelectorAll('.archive-item[style=""], .archive-item:not([style])');
-        let hasVisible = false;
-        visibleItems.forEach((item) => {
-          if ((item as HTMLElement).style.display !== 'none') {
-            hasVisible = true;
-          }
-        });
-
         const monthItems = month.querySelectorAll('.archive-item');
         let monthHasVisible = false;
         monthItems.forEach((item) => {
-          if ((item as HTMLElement).style.display !== 'none') {
-            monthHasVisible = true;
-          }
+          if ((item as HTMLElement).style.display !== 'none') monthHasVisible = true;
         });
-
         (month as HTMLElement).style.display = monthHasVisible ? '' : 'none';
       });
 
-      // Show/hide no results message
       if (noResults) {
         noResults.style.display = totalVisible === 0 && query ? 'block' : 'none';
       }
     });
   </script>
 </Base>
+
+<style>
+  .archive-main {
+    padding: 2rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 600px) {
+    .archive-main {
+      padding: 1.25rem 0;
+    }
+  }
+</style>

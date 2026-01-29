@@ -54,13 +54,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://smallweb
 
     <!-- Fonts: Load with display=swap for fast LCP -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400;1,6..12,300&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400;1,6..12,300&display=swap" rel="stylesheet" />
     </noscript>
 
     <!-- RSS Feed -->
@@ -68,17 +68,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://smallweb
 
     <!-- Critical CSS for fast FCP -->
     <style is:inline>
-      :root{--bg:#fff;--text:#1a1715;--accent:#D95D39}
-      .dark{--bg:#181614;--text:#e8e4df}
+      :root{--bg:#FAF7F2;--ink:#2C2825;--accent:#C45A35}
+      .dark{--bg:#1A1816;--ink:#E0DCD5}
       *,*::before,*::after{box-sizing:border-box;margin:0}
-      html{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text)}
-      body{min-height:100vh}
-      .site-header{padding:1rem 2rem;border-bottom:1px solid rgba(0,0,0,0.08)}
-      .dark .site-header{border-color:rgba(255,255,255,0.08)}
-      .header-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
-      .logo{font-size:1.1rem;font-weight:600;color:var(--text);text-decoration:none}
-      .masthead{text-align:center;padding:2rem 1rem;border-bottom:2px solid var(--text)}
-      .newspaper-title{font-size:clamp(2rem,6vw,3.5rem);font-weight:400;letter-spacing:-0.02em}
+      html{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);font-size:17px}
+      body{min-height:100vh;overflow-x:hidden}
+      .page{max-width:1000px;margin:0 auto;padding:0 2.5rem}
+      .masthead{padding:3.5rem 0 1.25rem}
+      .masthead-title{font-size:clamp(3.2rem,7vw,5rem);font-weight:900;line-height:0.92;letter-spacing:-0.04em}
     </style>
 
     <!-- Theme: prevent flash -->

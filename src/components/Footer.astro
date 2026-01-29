@@ -1,18 +1,16 @@
 ---
 import blogsData from '../../data/blogs.json';
 
-const blogs = blogsData.blogs;
+const blogCount = blogsData.blogs.length;
 ---
 
-<footer class="mt-12 px-6 pb-12">
-  <div class="max-w-2xl mx-auto">
-    <div class="card p-6 text-center">
-      <p class="text-(--color-ink-muted) text-sm">
-        Curating <span class="font-medium text-(--color-ink)">{blogs.length} indie blogs</span> you'll actually want to read.
-      </p>
-      <p class="mt-2 text-(--color-ink-faint) text-xs">
-        Updated twice daily with fresh posts
-      </p>
-    </div>
+<footer class="footer">
+  <div class="footer-info"><strong>{blogCount}</strong> blogs · updated daily · no ads, ever</div>
+  <div class="footer-links">
+    <a href="/discover">Discover</a>
+    <a href="/archive">Archive</a>
+    <a href="/blogs">Blogroll</a>
+    <a href="/about">About</a>
+    <a href="/rss.xml" style="color:var(--accent)">RSS</a>
   </div>
 </footer>
