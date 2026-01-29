@@ -940,6 +940,133 @@
         "philosophy"
       ],
       "description": "A blog about utilitarianism, ethics, and effective altruism."
+    },
+    {
+      "id": "curtjaimungal",
+      "name": "Curt Jaimungal",
+      "url": "https://curtjaimungal.substack.com",
+      "feed": "https://curtjaimungal.substack.com/feed",
+      "categories": [
+        "science"
+      ],
+      "description": "Theories of Everything — deep dives into theoretical physics, quantum mechanics, cosmology, and philosophy of science."
+    },
+    {
+      "id": "nicholasgruen",
+      "name": "Nicholas Gruen",
+      "url": "https://nicholasgruen.substack.com",
+      "feed": "https://nicholasgruen.substack.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Weekend readings on political rhetoric, free speech, and public discourse."
+    },
+    {
+      "id": "henrikkarlsson",
+      "name": "Henrik Karlsson",
+      "url": "https://www.henrikkarlsson.xyz",
+      "feed": "https://www.henrikkarlsson.xyz/feed",
+      "categories": [
+        "life",
+        "culture"
+      ],
+      "description": "Escaping Flatland — essays on creativity, agency, relationships, and the writing life from a Baltic island."
+    },
+    {
+      "id": "aiascendant",
+      "name": "AI Ascendant",
+      "url": "https://aiascendant.com",
+      "feed": "https://aiascendant.com/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Gradient Ascendant — AI analysis through technical, cultural, and philosophical lenses."
+    },
+    {
+      "id": "danq",
+      "name": "Dan Q",
+      "url": "https://danq.me",
+      "feed": "https://danq.me/feed",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "description": "Programming, digital privacy, indie web advocacy, and internet culture."
+    },
+    {
+      "id": "mertbulan",
+      "name": "Mert Bulan",
+      "url": "https://mertbulan.com",
+      "feed": "https://mertbulan.com/feed.xml",
+      "categories": [
+        "life",
+        "tech"
+      ],
+      "description": "Personal reflections on tech culture, wellness, and life in Germany."
+    },
+    {
+      "id": "tautvilas",
+      "name": "Tautvilas Mečinskas",
+      "url": "https://tautvilas.medium.com",
+      "feed": "https://tautvilas.medium.com/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Decentralization, web architecture, AI critique, and internet protocol design."
+    },
+    {
+      "id": "atmoio",
+      "name": "Mo",
+      "url": "https://atmoio.substack.com",
+      "feed": "https://atmoio.substack.com/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Critical analysis of AI-assisted coding, vibecoding limitations, and software engineering craft."
+    },
+    {
+      "id": "pertinentobservations",
+      "name": "Pertinent Observations",
+      "url": "https://noenthuda.substack.com",
+      "feed": "https://noenthuda.substack.com/feed",
+      "categories": [
+        "life"
+      ],
+      "description": "Karthik S on startups, meditation, job hunting, and personal reflections.",
+      "proxy": true
+    },
+    {
+      "id": "nevermetascience",
+      "name": "Never Met a Science",
+      "url": "https://kevinmunger.substack.com",
+      "feed": "https://kevinmunger.substack.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Kevin Munger on the internet, media theory, and institutional reform in the age of AI.",
+      "proxy": true
+    },
+    {
+      "id": "personalcanon",
+      "name": "Personal Canon",
+      "url": "https://www.personalcanon.com",
+      "feed": "https://www.personalcanon.com/feed",
+      "categories": [
+        "culture"
+      ],
+      "description": "Celine Nguyen on literature, art, and cultural criticism."
+    },
+    {
+      "id": "cosmographia",
+      "name": "Cosmographia",
+      "url": "https://cosmographia.substack.com",
+      "feed": "https://cosmographia.substack.com/feed",
+      "categories": [
+        "history",
+        "science"
+      ],
+      "description": "M. E. Rothwell on earth history, human evolution, and how geography shaped civilization.",
+      "proxy": true
     }
   ]
 }
