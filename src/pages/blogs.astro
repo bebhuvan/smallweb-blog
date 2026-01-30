@@ -38,11 +38,13 @@ const categoryNames: Record<string, string> = {
   psychology: 'Psychology', philosophy: 'Philosophy', science: 'Science',
 };
 
+// Find blog with most posts for featured
+const featuredBlog = [...enrichedBlogs].sort((a, b) => b.postCount - a.postCount)[0];
+
 function getInitials(name: string) {
   return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
 }
 
-// Generate OPML content
 function generateOPML() {
   const outlines = blogs.map(blog =>
     `      <outline type="rss" text="${blog.name}" title="${blog.name}" xmlUrl="${blog.feed}" htmlUrl="${blog.url}"/>`
@@ -72,9 +74,10 @@ const opmlContent = generateOPML();
     <Header currentPath="/blogs" />
 
     <main class="blogs-main">
-      <div class="page-header">
-        <h1 class="page-title">Blogroll</h1>
-        <p class="page-subtitle">All {blogs.length} indie blogs we curate</p>
+      <div class="editorial-header">
+        <h1 class="editorial-title">Blogroll</h1>
+        <p class="editorial-sub">All {blogs.length} indie blogs we curate</p>
+        <hr class="editorial-rule">
       </div>
 
       <div class="blogs-toolbar">
@@ -91,63 +94,85 @@ const opmlContent = generateOPML();
         </div>
       </div>
 
-      <nav class="category-tabs">
-        <button class="stamp active" data-category="all">All</button>
-        {categoryOrder.map(cat => {
-          const count = blogsByCategory.get(cat)?.length || 0;
-          if (count === 0) return null;
-          return (
-            <button class="stamp" data-category={cat}>
-              <span class="stamp-dot" style={`background:var(--${cat})`}></span>
-              {categoryNames[cat]}
-              <span class="tab-count">{count}</span>
-            </button>
-          );
-        })}
-      </nav>
-
-      <div class="blogs-grid" id="blogsGrid">
-        {enrichedBlogs.map(blog => (
-          <a
-            href={blog.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="blog-card"
-            data-category={blog.categories[0]}
-            data-categories={blog.categories.join(',')}
-          >
-            <div class="blog-card-inner">
-              <div class="blog-avatar" style={`background: var(--${blog.categories[0]})`}>
-                {getInitials(blog.name)}
-              </div>
-              <div class="blog-content">
-                <h3 class="blog-name">{blog.name}</h3>
-                <span class="blog-url">{new URL(blog.url).hostname}</span>
-                {blog.description && <p class="blog-description">{blog.description}</p>}
-                <div class="blog-footer">
-                  <div class="blog-categories">
-                    {blog.categories.map((c: string) => (
-                      <span class="blog-cat" style={`border-color:var(--${c}); color:var(--${c})`}>{c}</span>
-                    ))}
-                  </div>
-                  <span class="blog-posts">{blog.postCount} posts</span>
+      {featuredBlog && (
+        <a
+          href={featuredBlog.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="blog-featured"
+        >
+          <div class="blog-featured-inner">
+            <div class="blog-avatar" style={`background: var(--${featuredBlog.categories[0]})`}>
+              {getInitials(featuredBlog.name)}
+            </div>
+            <div class="blog-content">
+              <h3 class="blog-name">{featuredBlog.name}</h3>
+              <span class="blog-url">{new URL(featuredBlog.url).hostname}</span>
+              {featuredBlog.description && <p class="blog-description">{featuredBlog.description}</p>}
+              <div class="blog-footer">
+                <div class="blog-categories">
+                  {featuredBlog.categories.map((c: string) => (
+                    <span class="blog-cat" style={`border-color:var(--${c}); color:var(--${c})`}>{c}</span>
+                  ))}
                 </div>
+                <span class="blog-posts">{featuredBlog.postCount} posts</span>
               </div>
             </div>
-          </a>
-        ))}
-      </div>
+          </div>
+        </a>
+      )}
 
-      <div class="empty-state" id="emptyState" style="display: none;">
-        <p>No blogs found in this category</p>
-      </div>
+      {categoryOrder.map((cat, idx) => {
+        const catBlogs = blogsByCategory.get(cat);
+        if (!catBlogs || catBlogs.length === 0) return null;
+        return (
+          <>
+            {idx > 0 && <div class="cut">✂</div>}
+            <section class="blogroll-section">
+              <div class="section-head">
+                <span class="section-head-dot" style={`background: var(--${cat})`}></span>
+                <span class="section-head-text">{categoryNames[cat]}</span>
+                <span class="section-head-count">{catBlogs.length} blogs</span>
+              </div>
+              <div class="blogs-grid">
+                {catBlogs.map(blog => (
+                  <a
+                    href={blog.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="blog-card"
+                  >
+                    <div class="blog-card-inner">
+                      <div class="blog-avatar" style={`background: var(--${blog.categories[0]})`}>
+                        {getInitials(blog.name)}
+                      </div>
+                      <div class="blog-content">
+                        <h3 class="blog-name">{blog.name}</h3>
+                        <span class="blog-url">{new URL(blog.url).hostname}</span>
+                        {blog.description && <p class="blog-description">{blog.description}</p>}
+                        <div class="blog-footer">
+                          <div class="blog-categories">
+                            {blog.categories.map((c: string) => (
+                              <span class="blog-cat" style={`border-color:var(--${c}); color:var(--${c})`}>{c}</span>
+                            ))}
+                          </div>
+                          <span class="blog-posts">{blog.postCount} posts</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </section>
+          </>
+        );
+      })}
     </main>
 
     <Footer />
   </div>
 
   <script define:vars={{ opmlContent }}>
-    // OPML Export
     document.getElementById('exportOPML')?.addEventListener('click', () => {
       const blob = new Blob([opmlContent], { type: 'text/xml' });
       const url = URL.createObjectURL(blob);
@@ -159,50 +184,19 @@ const opmlContent = generateOPML();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
     });
-
-    // Category filtering
-    const tabs = document.querySelectorAll('.category-tabs .stamp');
-    const grid = document.getElementById('blogsGrid');
-    const cards = grid?.querySelectorAll('.blog-card');
-    const emptyState = document.getElementById('emptyState');
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        const category = tab.dataset.category;
-        let visibleCount = 0;
-
-        cards?.forEach(card => {
-          const cardCategories = card.dataset.categories?.split(',') || [];
-          const show = category === 'all' || cardCategories.includes(category);
-          if (show) {
-            card.style.display = 'block';
-            visibleCount++;
-          } else {
-            card.style.display = 'none';
-          }
-        });
-
-        if (emptyState) {
-          emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
-        }
-      });
-    });
   </script>
 </Base>
 
 <style>
   .blogs-main {
-    padding: 2rem 0;
+    padding: 0 0 2rem;
   }
 
   .blogs-toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     margin-bottom: 1.5rem;
     border-bottom: 1px solid var(--rule);
     flex-wrap: wrap;
@@ -252,19 +246,10 @@ const opmlContent = generateOPML();
     border-color: var(--accent);
   }
 
-  .category-tabs {
-    display: flex;
-    gap: 0.4rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+  .blogroll-section {
+    margin-bottom: 1.5rem;
   }
 
-  .tab-count {
-    font-size: 0.55rem;
-    opacity: 0.7;
-  }
-
-  /* Blog Grid */
   .blogs-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -278,7 +263,6 @@ const opmlContent = generateOPML();
     text-decoration: none;
     color: inherit;
     transition: border-color 0.3s ease;
-    border-radius: 2px;
   }
 
   .blog-card:hover {
@@ -316,7 +300,8 @@ const opmlContent = generateOPML();
     transition: color 0.3s ease;
   }
 
-  .blog-card:hover .blog-name {
+  .blog-card:hover .blog-name,
+  .blog-featured:hover .blog-name {
     color: var(--accent);
   }
 
@@ -365,12 +350,6 @@ const opmlContent = generateOPML();
     white-space: nowrap;
   }
 
-  .empty-state {
-    text-align: center;
-    padding: 3rem;
-    color: var(--ink-faint);
-  }
-
   @media (max-width: 768px) {
     .blogs-grid {
       grid-template-columns: 1fr;
@@ -380,16 +359,11 @@ const opmlContent = generateOPML();
       flex-direction: column;
       align-items: flex-start;
     }
-
-    .category-tabs {
-      gap: 0.3rem;
-      margin-bottom: 1.5rem;
-    }
   }
 
   @media (max-width: 480px) {
     .blogs-main {
-      padding: 1.25rem 0;
+      padding: 0 0 1.25rem;
     }
 
     .blog-card {

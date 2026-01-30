@@ -1,8 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
 import blogsData from '../../data/blogs.json';
 
-// Try to load status data, fallback to empty if not available
 let statusData = { lastUpdated: null, feeds: [], summary: { total: 0, healthy: 0, errors: 0 } };
 try {
   statusData = await import('../../data/cache/status.json');
@@ -13,7 +15,6 @@ try {
 const blogs = blogsData.blogs;
 const blogMap = new Map(blogs.map(b => [b.id, b]));
 
-// Enrich feed status with blog info
 const enrichedFeeds = statusData.feeds.map((feed: any) => {
   const blog = blogMap.get(feed.blogId);
   return {
@@ -23,7 +24,6 @@ const enrichedFeeds = statusData.feeds.map((feed: any) => {
     feedUrl: blog?.feed || '',
   };
 }).sort((a: any, b: any) => {
-  // Sort errors first, then by name
   if (a.status !== b.status) return a.status === 'error' ? -1 : 1;
   return a.name.localeCompare(b.name);
 });
@@ -48,128 +48,72 @@ function getLatencyColor(ms: number) {
 ---
 
 <Base title="Feed Status — The Small Web" description="Monitor the health of all RSS feeds we're tracking.">
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">The Small Web</a>
-      <nav class="header-nav">
-        <a href="/">Home</a>
-        <a href="/feed">Feed</a>
-        <a href="/archive">Archive</a>
-        <a href="/blogs">Blogs</a>
-        <a href="/about">About</a>
-        <a href="https://buymeacoffee.com/bebhuvan" target="_blank" rel="noopener" class="nav-support">Support</a>
-        <button class="theme-toggle" id="theme-toggle">Dark mode</button>
-      </nav>
-    </div>
-  </header>
+  <ThemeToggle />
 
-  <main style="max-width: 900px; margin: 0 auto; padding: 3rem 2rem;">
-    <div class="page-header">
-      <h1 class="page-title">Feed Status</h1>
-      <p class="page-subtitle">Monitoring {statusData.summary.total} RSS feeds</p>
-    </div>
+  <div class="page">
+    <Header currentPath="/status" />
 
-    <!-- Summary Cards -->
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem;">
-      <div class="blog-card" style="text-align: center; padding: 1.5rem;">
-        <div style="font-family: var(--serif); font-size: 2.5rem; font-weight: 600; color: var(--tech);">
-          {statusData.summary.healthy}
-        </div>
-        <div style="font-size: 0.9rem; color: var(--text-muted);">Healthy</div>
+    <main class="status-main">
+      <div class="editorial-header">
+        <h1 class="editorial-title">Feed Status</h1>
+        <p class="editorial-sub">Monitoring {statusData.summary.total} RSS feeds</p>
+        <hr class="editorial-rule">
       </div>
-      <div class="blog-card" style="text-align: center; padding: 1.5rem;">
-        <div style="font-family: var(--serif); font-size: 2.5rem; font-weight: 600; color: var(--accent);">
-          {statusData.summary.errors}
-        </div>
-        <div style="font-size: 0.9rem; color: var(--text-muted);">Errors</div>
-      </div>
-      <div class="blog-card" style="text-align: center; padding: 1.5rem;">
-        <div style="font-family: var(--serif); font-size: 1rem; font-weight: 500; color: var(--text-muted);">
-          {formatDate(statusData.lastUpdated)}
-        </div>
-        <div style="font-size: 0.9rem; color: var(--text-muted);">Last Updated</div>
-      </div>
-    </div>
 
-    <!-- Feed List -->
-    <section>
-      <h2 class="month-header">All Feeds</h2>
-      <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-        {enrichedFeeds.map((feed: any) => (
-          <div
-            class="blog-card"
-            style={`padding: 1rem 1.25rem; display: grid; grid-template-columns: auto 1fr auto auto; gap: 1rem; align-items: center;`}
-          >
-            <!-- Status indicator -->
-            <div style={`width: 10px; height: 10px; border-radius: 50%; background: ${feed.status === 'ok' ? 'var(--tech)' : 'var(--accent)'};`}></div>
+      <div class="status-strip">
+        <div class="status-strip-item">
+          <div class="status-strip-value" style="color: var(--tech);">{statusData.summary.healthy}</div>
+          <div class="status-strip-label">Healthy</div>
+        </div>
+        <div class="status-strip-item">
+          <div class="status-strip-value" style="color: var(--accent);">{statusData.summary.errors}</div>
+          <div class="status-strip-label">Errors</div>
+        </div>
+        <div class="status-strip-item">
+          <div class="status-strip-value" style="font-size: 1rem; color: var(--ink-muted);">{formatDate(statusData.lastUpdated)}</div>
+          <div class="status-strip-label">Last Updated</div>
+        </div>
+      </div>
 
-            <!-- Blog info -->
-            <div style="min-width: 0;">
-              <div style="font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                {feed.name}
+      <section>
+        <div class="section-head">
+          <span class="section-head-text">All Feeds</span>
+          <span class="section-head-count">{enrichedFeeds.length} feeds</span>
+        </div>
+        <div class="status-feed-list">
+          {enrichedFeeds.map((feed: any) => (
+            <div class="status-feed-row">
+              <div class="status-dot" style={`background: ${feed.status === 'ok' ? 'var(--tech)' : 'var(--accent)'};`}></div>
+              <div style="min-width: 0;">
+                <div class="status-feed-name">{feed.name}</div>
+                {feed.status === 'error' && feed.error && (
+                  <div class="status-feed-error">{feed.error}</div>
+                )}
               </div>
-              {feed.status === 'error' && feed.error && (
-                <div style="font-size: 0.8rem; color: var(--accent); margin-top: 0.25rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                  {feed.error}
-                </div>
-              )}
+              <div class="status-feed-posts">{feed.postCount} posts</div>
+              <div class="status-feed-latency" style={`color: ${getLatencyColor(feed.latencyMs)};`}>{feed.latencyMs}ms</div>
             </div>
+          ))}
+        </div>
+      </section>
 
-            <!-- Post count -->
-            <div style="font-size: 0.85rem; color: var(--text-muted); white-space: nowrap;">
-              {feed.postCount} posts
-            </div>
-
-            <!-- Latency -->
-            <div style={`font-size: 0.85rem; color: ${getLatencyColor(feed.latencyMs)}; white-space: nowrap;`}>
-              {feed.latencyMs}ms
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <div style="margin-top: 3rem; padding: 1.5rem; background: var(--bg-soft); border-radius: 12px; text-align: center;">
-      <p style="font-size: 0.9rem; color: var(--text-muted);">
+      <div class="status-note">
         Feeds are refreshed automatically twice daily via GitHub Actions.
-      </p>
-    </div>
-  </main>
+      </div>
+    </main>
 
-  <footer class="site-footer">
-    <p class="footer-text">A curated feed of indie blogs · <a href="/rss.xml" style="color: var(--accent);">RSS</a></p>
-  </footer>
-
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-
-    function updateButtonText() {
-      if (toggle) {
-        toggle.textContent = document.documentElement.classList.contains('dark') ? 'Light mode' : 'Dark mode';
-      }
-    }
-
-    toggle?.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      const isDark = document.documentElement.classList.contains('dark');
-      localStorage.theme = isDark ? 'dark' : 'light';
-      updateButtonText();
-    });
-
-    updateButtonText();
-  </script>
+    <Footer />
+  </div>
 </Base>
 
 <style>
-  @media (max-width: 600px) {
-    .blog-card[style*="grid-template-columns"] {
-      grid-template-columns: auto 1fr !important;
-      gap: 0.75rem !important;
-    }
+  .status-main {
+    padding: 0 0 2rem;
+  }
 
-    .blog-card > div:nth-child(3),
-    .blog-card > div:nth-child(4) {
-      display: none;
+  @media (max-width: 600px) {
+    .status-main {
+      padding: 0 0 1.5rem;
     }
   }
 </style>

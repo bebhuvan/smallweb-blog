@@ -46,11 +46,17 @@ const posts = postsData.posts
     };
   });
 
-// Group posts by month
+const featuredPost = posts[0];
+const remainingPosts = posts.slice(1);
+
+// Find a post with a long excerpt for the quote block
+const quotePost = posts.find((p) => p.excerpt && p.excerpt.length > 120);
+
+// Group remaining posts by month
 type PostsByMonth = { [key: string]: typeof posts };
 const postsByMonth: PostsByMonth = {};
 
-posts.forEach((post) => {
+remainingPosts.forEach((post) => {
   const date = new Date(post.date);
   const monthKey = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
   if (!postsByMonth[monthKey]) {
@@ -76,28 +82,54 @@ function formatShortDate(dateStr: string) {
     <Header currentPath={`/category/${slug}`} currentCategory={slug as string} />
 
     <main class="category-main">
-      <div class="category-header">
-        <div class="category-dot" style={`background: var(--${slug})`}></div>
-        <h2 class="category-name">{category.name}</h2>
-        <p class="category-desc">{category.description}</p>
-        <p class="category-count">{posts.length} {posts.length === 1 ? 'article' : 'articles'}</p>
+      <div class="category-hero" style={`background: var(--${slug}-wash)`}>
+        <div class="category-hero-count">{posts.length} {posts.length === 1 ? 'article' : 'articles'}</div>
+        <h1 class="category-hero-title">{category.name}</h1>
+        <p class="category-hero-desc">{category.description}</p>
       </div>
 
       {posts.length > 0 ? (
         <div>
+          {featuredPost && (
+            <a href={featuredPost.link} target="_blank" rel="noopener noreferrer" class="asym-featured" style="margin-top: 1.5rem;">
+              <h2 class="asym-featured-title">{featuredPost.title}</h2>
+              <p class="asym-featured-meta">{featuredPost.blogName} · {formatShortDate(featuredPost.date)}</p>
+              {featuredPost.excerpt && (
+                <p class="asym-featured-excerpt">{featuredPost.excerpt}</p>
+              )}
+            </a>
+          )}
+
+          {quotePost && quotePost !== featuredPost && (
+            <a href={quotePost.link} target="_blank" rel="noopener noreferrer" class="pasted-quote">
+              <div class="pasted-quote-inner">
+                <div class="pasted-quote-label">From this category</div>
+                <p class="pasted-quote-text">{quotePost.excerpt}</p>
+                <p class="pasted-quote-src">— {quotePost.blogName}</p>
+              </div>
+            </a>
+          )}
+
+          <div class="cut">✂</div>
+
           {sortedMonths.map((month) => (
             <section class="archive-month">
-              <h2 class="month-header">{month}</h2>
+              <h2 class="month-header month-header-accented" style={`border-left-color: var(--${slug})`}>
+                {month}
+              </h2>
               <div class="archive-list">
                 {postsByMonth[month].map((post) => (
                   <a
                     href={post.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="asym-item"
+                    class="archive-item"
                   >
-                    <h4 class="asym-item-title">{post.title}</h4>
-                    <p class="asym-item-meta">{post.blogName} · {formatShortDate(post.date)}</p>
+                    <span class="archive-date">{formatShortDate(post.date)}</span>
+                    <div class="archive-content">
+                      <h4 class="archive-title">{post.title}</h4>
+                      <p class="archive-meta">{post.blogName}</p>
+                    </div>
                   </a>
                 ))}
               </div>
@@ -115,37 +147,7 @@ function formatShortDate(dateStr: string) {
 
 <style>
   .category-main {
-    padding: 2rem 0;
-  }
-
-  .category-header {
-    margin-bottom: 2.5rem;
-  }
-
-  .category-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin-bottom: 0.75rem;
-  }
-
-  .category-name {
-    font-family: var(--serif);
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.35rem;
-  }
-
-  .category-desc {
-    font-size: 0.95rem;
-    color: var(--ink-muted);
-  }
-
-  .category-count {
-    font-size: 0.8rem;
-    color: var(--ink-faint);
-    margin-top: 0.25rem;
+    padding: 0 0 2rem;
   }
 
   .empty-msg {
@@ -156,9 +158,6 @@ function formatShortDate(dateStr: string) {
   }
 
   @media (max-width: 600px) {
-    .category-name { font-size: 1.6rem; }
-    .category-desc { font-size: 0.85rem; }
-    .category-header { margin-bottom: 1.75rem; }
-    .category-main { padding: 1.25rem 0; }
+    .category-main { padding: 0 0 1.25rem; }
   }
 </style>

@@ -11,6 +11,10 @@ const posts = postsData.posts;
 
 const blogMap = new Map(blogs.map((b) => [b.id, b]));
 
+// Compute unique categories count
+const categorySet = new Set<string>();
+blogs.forEach(b => b.categories.forEach((c: string) => categorySet.add(c)));
+
 const enrichedPosts = posts.map((post) => {
   const blog = blogMap.get(post.blogId);
   const category = blog?.categories?.[0];
@@ -20,6 +24,18 @@ const enrichedPosts = posts.map((post) => {
     category: category || 'tech',
   };
 });
+
+// Determine today/yesterday for freshness
+const now = new Date();
+const todayStr = now.toISOString().slice(0, 10);
+const yesterday = new Date(now);
+yesterday.setDate(yesterday.getDate() - 1);
+const yesterdayStr = yesterday.toISOString().slice(0, 10);
+
+function isFresh(dateStr: string) {
+  const d = dateStr.slice(0, 10);
+  return d === todayStr || d === yesterdayStr;
+}
 
 // Group posts by month
 type PostsByMonth = { [key: string]: typeof enrichedPosts };
@@ -42,6 +58,11 @@ function formatShortDate(dateStr: string) {
   const date = new Date(dateStr);
   return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
+
+function splitMonthYear(monthStr: string) {
+  const parts = monthStr.split(' ');
+  return { month: parts[0], year: parts[1] };
+}
 ---
 
 <Base title="Archive — The Small Web">
@@ -51,12 +72,19 @@ function formatShortDate(dateStr: string) {
     <Header currentPath="/archive" />
 
     <main class="archive-main">
-      <div class="page-header">
-        <h1 class="page-title">Archive</h1>
-        <p class="page-subtitle">Every post from every blog, searchable</p>
+      <div class="editorial-header">
+        <h1 class="editorial-title">Archive</h1>
+        <p class="editorial-sub">Every post from every blog, searchable</p>
+        <hr class="editorial-rule">
       </div>
 
-      <div class="search-container">
+      <div class="editorial-stats">
+        <span><strong>{enrichedPosts.length}</strong> posts</span>
+        <span><strong>{blogs.length}</strong> blogs</span>
+        <span><strong>{categorySet.size}</strong> categories</span>
+      </div>
+
+      <div class="search-container" style="margin-top: 1rem;">
         <div class="search-box">
           <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -66,31 +94,36 @@ function formatShortDate(dateStr: string) {
       </div>
 
       <div id="archive-content">
-        {sortedMonths.map((month) => (
-          <section class="archive-month" data-month={month}>
-            <h2 class="month-header">{month}</h2>
-            <div class="archive-list">
-              {postsByMonth[month].map((post) => (
-                <a
-                  href={post.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="archive-item"
-                  data-title={post.title.toLowerCase()}
-                  data-author={post.blogName.toLowerCase()}
-                  data-category={post.category}
-                >
-                  <span class="archive-date">{formatShortDate(post.date)}</span>
-                  <div class="archive-content">
-                    <h3 class="archive-title">{post.title}</h3>
-                    <p class="archive-meta">{post.blogName}</p>
-                  </div>
-                  <span class={`archive-category ${post.category}`}>{post.category}</span>
-                </a>
-              ))}
-            </div>
-          </section>
-        ))}
+        {sortedMonths.map((month) => {
+          const { month: m, year: y } = splitMonthYear(month);
+          return (
+            <section class="archive-month" data-month={month}>
+              <h2 class="month-header-editorial">
+                {m} <span class="month-header-year">{y}</span>
+              </h2>
+              <div class="archive-list">
+                {postsByMonth[month].map((post) => (
+                  <a
+                    href={post.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class:list={["archive-item", isFresh(post.date) ? "is-fresh" : ""]}
+                    data-title={post.title.toLowerCase()}
+                    data-author={post.blogName.toLowerCase()}
+                    data-category={post.category}
+                  >
+                    <span class="archive-date">{formatShortDate(post.date)}</span>
+                    <div class="archive-content">
+                      <h3 class="archive-title">{post.title}</h3>
+                      <p class="archive-meta">{post.blogName}</p>
+                    </div>
+                    <span class={`archive-category ${post.category}`}>{post.category}</span>
+                  </a>
+                ))}
+              </div>
+            </section>
+          );
+        })}
       </div>
 
       <div id="no-results" style="display: none; text-align: center; padding: 3rem; color: var(--ink-muted);">
@@ -138,14 +171,14 @@ function formatShortDate(dateStr: string) {
 
 <style>
   .archive-main {
-    padding: 2rem 0;
+    padding: 0 0 2rem;
     max-width: 900px;
     margin: 0 auto;
   }
 
   @media (max-width: 600px) {
     .archive-main {
-      padding: 1.25rem 0;
+      padding: 0 0 1.25rem;
     }
   }
 </style>

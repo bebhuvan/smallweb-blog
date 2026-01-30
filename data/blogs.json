@@ -1054,7 +1054,8 @@
       "categories": [
         "culture"
       ],
-      "description": "Celine Nguyen on literature, art, and cultural criticism."
+      "description": "Celine Nguyen on literature, art, and cultural criticism.",
+      "proxy": true
     },
     {
       "id": "cosmographia",
@@ -1067,6 +1068,61 @@
       ],
       "description": "M. E. Rothwell on earth history, human evolution, and how geography shaped civilization.",
       "proxy": true
+    },
+    {
+      "id": "nadig",
+      "name": "Nadig.com",
+      "url": "https://www.nadig.com",
+      "feed": "https://www.nadig.com/feed",
+      "categories": [
+        "finance",
+        "life"
+      ],
+      "description": "Dave Nadig on ETFs, investing ethics, and personal essays on music, meditation, and culture.",
+      "proxy": true
+    },
+    {
+      "id": "thechoiceengine",
+      "name": "The Choice Engine",
+      "url": "https://thechoiceengine.substack.com",
+      "feed": "https://thechoiceengine.substack.com/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "Adam Butler on trade policy, political economy, and the structural forces shaping American life.",
+      "proxy": true
+    },
+    {
+      "id": "braddelong",
+      "name": "Grasping Reality",
+      "url": "https://braddelong.substack.com",
+      "feed": "https://braddelong.substack.com/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "Brad DeLong on economic history, political economy, and the long arc of growth and policy.",
+      "proxy": true
+    },
+    {
+      "id": "branko",
+      "name": "Global Inequality and More",
+      "url": "https://branko2f7.substack.com",
+      "feed": "https://branko2f7.substack.com/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "Branko Milanovic on global inequality, economic systems, and geopolitical economy.",
+      "proxy": true
+    },
+    {
+      "id": "oliverhartwich",
+      "name": "Oliver Marc Hartwich",
+      "url": "http://olivermhartwich.blogspot.com",
+      "feed": "http://feeds.feedburner.com/OliverMarcHartwich?format=xml",
+      "categories": [
+        "economics"
+      ],
+      "description": "Oliver Hartwich on New Zealand economic policy, housing, inflation, and public governance."
     }
   ]
 }
