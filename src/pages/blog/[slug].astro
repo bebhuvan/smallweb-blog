@@ -54,7 +54,15 @@ function getInitials(name: string) {
 const primaryCategory = blog.categories[0] || 'tech';
 ---
 
-<Base title={`${blog.name} — The Small Web`} description={blog.description}>
+<Base title={`${blog.name} — The Small Web`} description={blog.description} ogType="profile" jsonLd={{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smallweb.blog" },
+    { "@type": "ListItem", "position": 2, "name": "Blogroll", "item": "https://smallweb.blog/blogs" },
+    { "@type": "ListItem", "position": 3, "name": blog.name }
+  ]
+}}>
   <header class="site-header">
     <div class="header-inner">
       <a href="/" class="logo">The Small Web</a>

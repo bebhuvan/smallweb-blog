@@ -75,7 +75,15 @@ function formatShortDate(dateStr: string) {
 }
 ---
 
-<Base title={`${category.name} — The Small Web`} description={category.description}>
+<Base title={`${category.name} — The Small Web`} description={category.description} jsonLd={{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smallweb.blog" },
+    { "@type": "ListItem", "position": 2, "name": "Categories", "item": "https://smallweb.blog/blogs" },
+    { "@type": "ListItem", "position": 3, "name": category.name }
+  ]
+}}>
   <ThemeToggle />
 
   <div class="page">

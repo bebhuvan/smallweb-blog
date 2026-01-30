@@ -94,7 +94,13 @@ function getCatColor(cat: string) {
 }
 ---
 
-<Base title="The Small Web — Curated Indie Blogs">
+<Base title="The Small Web — Curated Indie Blogs" jsonLd={{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "The Small Web",
+  "url": "https://smallweb.blog",
+  "description": "A curated collection of the best indie blogs. Hand-picked writing from independent voices who care about their craft."
+}}>
   <ThemeToggle />
 
   <div class="page">
@@ -369,6 +375,9 @@ function getCatColor(cat: string) {
                 {post.category}
               </span>
               <h4 class="archives-strip-title">{post.title}</h4>
+              {post.excerpt && (
+                <p class="archives-strip-excerpt">{post.excerpt}</p>
+              )}
               <p class="archives-strip-meta">{post.blogName}</p>
             </a>
           ))}

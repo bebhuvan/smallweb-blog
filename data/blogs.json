@@ -1123,6 +1123,62 @@
         "economics"
       ],
       "description": "Oliver Hartwich on New Zealand economic policy, housing, inflation, and public governance."
+    },
+    {
+      "id": "economicforces",
+      "name": "Economic Forces",
+      "url": "https://www.economicforces.xyz",
+      "feed": "https://www.economicforces.xyz/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "Brian Albrecht and Josh Hendrickson on price theory, markets, and applied economics.",
+      "proxy": true
+    },
+    {
+      "id": "thebasecamp",
+      "name": "The Base Camp",
+      "url": "https://thebasecamp.substack.com",
+      "feed": "https://thebasecamp.substack.com/feed",
+      "categories": [
+        "philosophy"
+      ],
+      "description": "Adam Robbert on natural philosophy, contemplative practice, and the metaphysics of the good.",
+      "proxy": true
+    },
+    {
+      "id": "worksonmymachine",
+      "name": "Works on My Machine",
+      "url": "https://worksonmymachine.ai",
+      "feed": "https://worksonmymachine.ai/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Scott Werner on software development and programming paradigms in a post-LLM world.",
+      "proxy": true
+    },
+    {
+      "id": "davidoks",
+      "name": "David Oks",
+      "url": "https://davidoks.blog",
+      "feed": "https://davidoks.blog/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "David Oks on economic measurement, development statistics, and global affairs.",
+      "proxy": true
+    },
+    {
+      "id": "robhenderson",
+      "name": "Rob Henderson",
+      "url": "https://www.robkhenderson.com",
+      "feed": "https://www.robkhenderson.com/feed",
+      "categories": [
+        "psychology",
+        "culture"
+      ],
+      "description": "Rob Henderson on luxury beliefs, evolutionary psychology, social class, and gender.",
+      "proxy": true
     }
   ]
 }

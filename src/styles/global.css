@@ -692,41 +692,51 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── Archives Strip ─── */
 .archives-strip {
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  padding: 2rem 0;
-  margin: 0.5rem 0;
+  border-top: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  padding: 2.25rem 0 2.5rem;
+  margin: 1rem 0;
 }
 
 .archives-strip-label {
   text-align: center;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent);
   margin-bottom: 1.5rem;
 }
 
 .archives-strip-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1px;
-  background: var(--rule);
+  gap: 0;
 }
 
 .archives-strip-card {
-  background: var(--paper);
-  padding: 1rem 1.1rem;
+  padding: 0 1.1rem;
   text-decoration: none;
   color: inherit;
-  border-top: 2px solid var(--card-accent, var(--ink));
-  transition: background 0.2s ease;
+  border-left: 1px solid var(--rule);
+  transition: transform 0.2s ease;
+}
+
+.archives-strip-card:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.archives-strip-card:last-child {
+  padding-right: 0;
 }
 
 .archives-strip-card:hover {
-  background: var(--bg-soft);
+  transform: translateY(-1px);
+}
+
+.archives-strip-card:hover .archives-strip-title {
+  color: var(--accent);
 }
 
 .archives-strip-cat {
@@ -738,7 +748,7 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--card-accent);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .archives-strip-cat-dot {
@@ -750,12 +760,24 @@ a { color: inherit; text-decoration: none; }
 
 .archives-strip-title {
   font-family: 'Fraunces', serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.35;
   margin: 0;
+  transition: color 0.2s ease;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.archives-strip-excerpt {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  margin-top: 0.35rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -769,12 +791,34 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 900px) {
   .archives-strip-grid {
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 1.25rem;
+  }
+  .archives-strip-card:nth-child(4),
+  .archives-strip-card:nth-child(5) {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.25rem;
+  }
+  .archives-strip-card:nth-child(4) {
+    border-left: none;
   }
 }
 
 @media (max-width: 600px) {
+  .archives-strip {
+    padding: 1.75rem 0 2rem;
+  }
   .archives-strip-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+  .archives-strip-card {
+    padding: 1rem 0;
+    border-left: none;
+    border-top: 1px solid var(--rule);
+  }
+  .archives-strip-card:first-child {
+    border-top: none;
+    padding-top: 0;
   }
 }
 

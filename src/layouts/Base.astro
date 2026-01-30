@@ -1,17 +1,39 @@
 ---
+import '../styles/fonts.css';
 import '../styles/global.css';
 
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
+  ogType?: string;
+  jsonLd?: Record<string, unknown>;
 }
 
 const {
   title,
-  description = "A curated collection of the best indie blogs. Hand-picked writing from independent voices who care about their craft. No algorithms, no ads—just great reads."
+  description = "A curated collection of the best indie blogs. Hand-picked writing from independent voices who care about their craft. No algorithms, no ads—just great reads.",
+  ogImage = "/og-image.png",
+  ogType = "website",
+  jsonLd,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://smallweb.blog');
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://smallweb.blog';
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+const ogImageURL = new URL(ogImage, siteUrl).toString();
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "The Small Web",
+  "url": siteUrl,
+  "description": "A curated collection of the best indie blogs. Hand-picked writing from independent voices who care about their craft.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": `${siteUrl}/archive?q={search_term_string}`,
+    "query-input": "required name=search_term_string"
+  }
+};
 ---
 
 <!doctype html>
@@ -37,31 +59,28 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://smallweb
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph / Social -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="The Small Web" />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:alt" content="The Small Web — Curated Indie Blogs" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+    <meta name="twitter:site" content="@bebhuvan" />
+    <meta name="twitter:creator" content="@bebhuvan" />
 
-    <!-- Performance: Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Fonts: Load with display=swap for fast LCP -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400;1,6..12,300&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400;1,6..12,300&display=swap" rel="stylesheet" />
-    </noscript>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="The Small Web RSS" href="/rss.xml" />

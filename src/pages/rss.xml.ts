@@ -10,9 +10,10 @@ export const GET: APIRoute = async () => {
   const siteUrl = 'https://smallweb.blog';
   const now = new Date().toUTCString();
 
-  const items = posts.slice(0, 50).map((post) => {
+  const items = posts.slice(0, 100).map((post) => {
     const blog = blogMap.get(post.blogId);
     const pubDate = new Date(post.date).toUTCString();
+    const categories = blog?.categories?.map((cat: string) => `      <category>${cat}</category>`).join('\n') || '';
 
     return `
     <item>
@@ -23,6 +24,7 @@ export const GET: APIRoute = async () => {
       <author>${blog?.name || 'Unknown'}</author>
       <source url="${blog?.feed || ''}">${blog?.name || 'Unknown'}</source>
       ${post.excerpt ? `<description><![CDATA[${post.excerpt}]]></description>` : ''}
+${categories}
     </item>`;
   }).join('');
 
