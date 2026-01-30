@@ -33,32 +33,6 @@ if (leadPost) usedIds.add(leadPost.id);
 const alsoNew = enrichedPosts.filter(p => !usedIds.has(p.id)).slice(0, 4);
 alsoNew.forEach(p => usedIds.add(p.id));
 
-// Tech section: 1 featured + 2 list
-const techPosts = enrichedPosts.filter(p => p.category === 'tech' && !usedIds.has(p.id)).slice(0, 3);
-techPosts.forEach(p => usedIds.add(p.id));
-
-// Life section (tight): 3 items
-const lifePosts = enrichedPosts.filter(p => p.category === 'life' && !usedIds.has(p.id)).slice(0, 3);
-lifePosts.forEach(p => usedIds.add(p.id));
-
-// Culture section (color band): 1 featured + 1 list
-const culturePosts = enrichedPosts.filter(p => p.category === 'culture' && !usedIds.has(p.id)).slice(0, 2);
-culturePosts.forEach(p => usedIds.add(p.id));
-
-// Design section (tight in color band): 2 items
-const designPosts = enrichedPosts.filter(p => p.category === 'design' && !usedIds.has(p.id)).slice(0, 2);
-designPosts.forEach(p => usedIds.add(p.id));
-
-// Bottom grid: economics, finance, history (2 each)
-const economicsPosts = enrichedPosts.filter(p => p.category === 'economics' && !usedIds.has(p.id)).slice(0, 2);
-economicsPosts.forEach(p => usedIds.add(p.id));
-
-const financePosts = enrichedPosts.filter(p => p.category === 'finance' && !usedIds.has(p.id)).slice(0, 2);
-financePosts.forEach(p => usedIds.add(p.id));
-
-const historyPosts = enrichedPosts.filter(p => p.category === 'history' && !usedIds.has(p.id)).slice(0, 2);
-historyPosts.forEach(p => usedIds.add(p.id));
-
 // Featured excerpt: pick the post with the longest excerpt from prose-heavy categories
 const proseCategories = ['philosophy', 'culture', 'life', 'psychology', 'history'];
 const excerptCandidates = enrichedPosts
@@ -66,6 +40,15 @@ const excerptCandidates = enrichedPosts
   .sort((a, b) => (b.excerpt?.length || 0) - (a.excerpt?.length || 0));
 const featuredExcerpt = excerptCandidates[0] || null;
 if (featuredExcerpt) usedIds.add(featuredExcerpt.id);
+
+// All categories: 1 featured + 4 list items each
+const allCategories = ['tech', 'culture', 'life', 'design', 'economics', 'finance', 'history', 'philosophy', 'psychology', 'science'];
+const categoryPosts = new Map<string, typeof enrichedPosts>();
+for (const cat of allCategories) {
+  const catPosts = enrichedPosts.filter(p => p.category === cat && !usedIds.has(p.id)).slice(0, 5);
+  catPosts.forEach(p => usedIds.add(p.id));
+  categoryPosts.set(cat, catPosts);
+}
 
 function formatDate(dateStr: string) {
   const date = new Date(dateStr);
@@ -118,137 +101,288 @@ function getCatColor(cat: string) {
     <!-- Cut -->
     <div class="cut">✂</div>
 
-    <!-- Tech + Life Asymmetric -->
-    <section class="asym">
-      <div class="asym-main">
-        <div class="asym-head">
-          <span class="asym-head-dot" style="background:var(--tech)"></span>
-          <span class="asym-head-text">Tech</span>
-          <a href="/category/tech" class="asym-head-link">View all →</a>
-        </div>
-        {techPosts[0] && (
-          <a href={techPosts[0].link} target="_blank" rel="noopener noreferrer" class="asym-featured">
-            <h4 class="asym-featured-title">{techPosts[0].title}</h4>
-            <p class="asym-featured-meta">{techPosts[0].blogName} · {formatDate(techPosts[0].date)}</p>
-            {techPosts[0].excerpt && <p class="asym-featured-excerpt">{techPosts[0].excerpt}</p>}
-          </a>
-        )}
-        {techPosts.slice(1).map((post) => (
-          <a href={post.link} target="_blank" rel="noopener noreferrer" class="asym-item">
-            <h4 class="asym-item-title">{post.title}</h4>
-            <p class="asym-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-          </a>
-        ))}
-      </div>
-      <div class="tight-col">
-        <div class="tight-head">
-          <span class="asym-head-dot" style="background:var(--life)"></span>
-          Life
-        </div>
-        {lifePosts.map((post) => (
-          <a href={post.link} target="_blank" rel="noopener noreferrer" class="tight-item">
-            <h4 class="tight-item-title">{post.title}</h4>
-            <p class="tight-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-          </a>
-        ))}
-      </div>
-    </section>
+    {/* ── Row 1: Tech + Culture — standard ink-on-paper 2-col ── */}
+    {(() => {
+      const lp = categoryPosts.get('tech') || [];
+      const rp = categoryPosts.get('culture') || [];
+      return (
+        <section class="category-pair">
+          <div class="category-col">
+            <div class="category-col-head">
+              <span class="category-col-dot" style="background:var(--tech)"></span>
+              <span class="category-col-name">Tech</span>
+              <a href="/category/tech" class="category-col-link">All tech →</a>
+            </div>
+            {lp[0] && (
+              <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
+                <h4 class="category-col-featured-title">{lp[0].title}</h4>
+                <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
+                {lp[0].excerpt && <p class="category-col-featured-excerpt">{lp[0].excerpt}</p>}
+              </a>
+            )}
+            {lp.slice(1).map((post) => (
+              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
+                <h4 class="category-col-item-title">{post.title}</h4>
+                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
+              </a>
+            ))}
+          </div>
+          <div class="category-col">
+            <div class="category-col-head">
+              <span class="category-col-dot" style="background:var(--culture)"></span>
+              <span class="category-col-name">Culture</span>
+              <a href="/category/culture" class="category-col-link">All culture →</a>
+            </div>
+            {rp[0] && (
+              <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
+                <h4 class="category-col-featured-title">{rp[0].title}</h4>
+                <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
+                {rp[0].excerpt && <p class="category-col-featured-excerpt">{rp[0].excerpt}</p>}
+              </a>
+            )}
+            {rp.slice(1).map((post) => (
+              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
+                <h4 class="category-col-item-title">{post.title}</h4>
+                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
+              </a>
+            ))}
+          </div>
+        </section>
+      );
+    })()}
 
-    <!-- Featured Excerpt -->
+    {/* ── Featured Excerpt ── */}
     {featuredExcerpt && (
-      <a href={featuredExcerpt.link} target="_blank" rel="noopener noreferrer" class="pasted-quote">
-        <div class="pasted-quote-bg"></div>
-        <div class="pasted-quote-inner">
-          <div class="pasted-quote-label">From the blogs</div>
-          <p class="pasted-quote-text">{featuredExcerpt.excerpt!.slice(0, 280)}{featuredExcerpt.excerpt!.length > 280 ? '...' : ''}</p>
-          <div class="pasted-quote-src">{featuredExcerpt.blogName} · {featuredExcerpt.title}</div>
-        </div>
-      </a>
+      <>
+        <div class="cut">✕</div>
+        <a href={featuredExcerpt.link} target="_blank" rel="noopener noreferrer" class="pasted-quote">
+          <div class="pasted-quote-bg"></div>
+          <div class="pasted-quote-inner">
+            <div class="pasted-quote-label">From the blogs</div>
+            <p class="pasted-quote-text">{featuredExcerpt.excerpt!.slice(0, 280)}{featuredExcerpt.excerpt!.length > 280 ? '...' : ''}</p>
+            <div class="pasted-quote-src">{featuredExcerpt.blogName} · {featuredExcerpt.title}</div>
+          </div>
+        </a>
+      </>
     )}
 
-    <!-- Cut -->
-    <div class="cut">✕</div>
-
-    <!-- Culture Color Band -->
-    <div class="color-band">
-      <section class="asym" style="padding-top:0; padding-bottom:0;">
-        <div class="asym-main">
-          <div class="asym-head">
-            <span class="asym-head-dot" style="background:var(--culture)"></span>
-            <span class="asym-head-text">Culture</span>
-            <a href="/category/culture" class="asym-head-link">View all →</a>
-          </div>
-          {culturePosts[0] && (
-            <a href={culturePosts[0].link} target="_blank" rel="noopener noreferrer" class="asym-featured">
-              <h4 class="asym-featured-title">{culturePosts[0].title}</h4>
-              <p class="asym-featured-meta">{culturePosts[0].blogName} · {formatDate(culturePosts[0].date)}</p>
-              {culturePosts[0].excerpt && <p class="asym-featured-excerpt">{culturePosts[0].excerpt}</p>}
-            </a>
-          )}
-          {culturePosts.slice(1).map((post) => (
-            <a href={post.link} target="_blank" rel="noopener noreferrer" class="asym-item">
-              <h4 class="asym-item-title">{post.title}</h4>
-              <p class="asym-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-            </a>
-          ))}
-        </div>
-        <div class="tight-col">
-          <div class="tight-head">
-            <span class="asym-head-dot" style="background:var(--design)"></span>
-            Design
-          </div>
-          {designPosts.map((post) => (
-            <a href={post.link} target="_blank" rel="noopener noreferrer" class="tight-item">
-              <h4 class="tight-item-title">{post.title}</h4>
-              <p class="tight-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-            </a>
-          ))}
-        </div>
-      </section>
-    </div>
-
-    <!-- Cut -->
     <div class="cut">✂</div>
 
-    <!-- Bottom 3-Column Grid -->
-    <section class="bottom-grid">
-      <div>
-        <div class="bottom-col-head">
-          <span class="asym-head-dot" style="background:var(--economics)"></span>
-          Economics
-        </div>
-        {economicsPosts.map((post) => (
-          <a href={post.link} target="_blank" rel="noopener noreferrer" class="bottom-item">
-            <h4 class="bottom-item-title">{post.title}</h4>
-            <p class="bottom-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-          </a>
-        ))}
-      </div>
-      <div>
-        <div class="bottom-col-head">
-          <span class="asym-head-dot" style="background:var(--finance)"></span>
-          Finance
-        </div>
-        {financePosts.map((post) => (
-          <a href={post.link} target="_blank" rel="noopener noreferrer" class="bottom-item">
-            <h4 class="bottom-item-title">{post.title}</h4>
-            <p class="bottom-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-          </a>
-        ))}
-      </div>
-      <div>
-        <div class="bottom-col-head">
-          <span class="asym-head-dot" style="background:var(--history)"></span>
-          History
-        </div>
-        {historyPosts.map((post) => (
-          <a href={post.link} target="_blank" rel="noopener noreferrer" class="bottom-item">
-            <h4 class="bottom-item-title">{post.title}</h4>
-            <p class="bottom-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-          </a>
-        ))}
-      </div>
-    </section>
+    {/* ── Row 2: Life + Design — wash band ── */}
+    {(() => {
+      const lp = categoryPosts.get('life') || [];
+      const rp = categoryPosts.get('design') || [];
+      return (
+        <section class="category-pair category-pair--wash" style="--pair-wash-l: var(--life-wash); --pair-wash-r: var(--design-wash)">
+          <div class="category-col">
+            <div class="category-col-head">
+              <span class="category-col-dot" style="background:var(--life)"></span>
+              <span class="category-col-name">Life</span>
+              <a href="/category/life" class="category-col-link">All life →</a>
+            </div>
+            {lp[0] && (
+              <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
+                <h4 class="category-col-featured-title">{lp[0].title}</h4>
+                <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
+                {lp[0].excerpt && <p class="category-col-featured-excerpt">{lp[0].excerpt}</p>}
+              </a>
+            )}
+            {lp.slice(1).map((post) => (
+              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
+                <h4 class="category-col-item-title">{post.title}</h4>
+                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
+              </a>
+            ))}
+          </div>
+          <div class="category-col">
+            <div class="category-col-head">
+              <span class="category-col-dot" style="background:var(--design)"></span>
+              <span class="category-col-name">Design</span>
+              <a href="/category/design" class="category-col-link">All design →</a>
+            </div>
+            {rp[0] && (
+              <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
+                <h4 class="category-col-featured-title">{rp[0].title}</h4>
+                <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
+                {rp[0].excerpt && <p class="category-col-featured-excerpt">{rp[0].excerpt}</p>}
+              </a>
+            )}
+            {rp.slice(1).map((post) => (
+              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
+                <h4 class="category-col-item-title">{post.title}</h4>
+                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
+              </a>
+            ))}
+          </div>
+        </section>
+      );
+    })()}
+
+    <div class="cut">✕</div>
+
+    {/* ── Row 3: Economics + Finance — plain ── */}
+    {(() => {
+      const lp = categoryPosts.get('economics') || [];
+      const rp = categoryPosts.get('finance') || [];
+      return (
+        <section class="category-pair">
+          <div class="category-col">
+            <div class="category-col-head">
+              <span class="category-col-dot" style="background:var(--economics)"></span>
+              <span class="category-col-name">Economics</span>
+              <a href="/category/economics" class="category-col-link">All economics →</a>
+            </div>
+            {lp[0] && (
+              <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
+                <h4 class="category-col-featured-title">{lp[0].title}</h4>
+                <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
+                {lp[0].excerpt && <p class="category-col-featured-excerpt">{lp[0].excerpt}</p>}
+              </a>
+            )}
+            {lp.slice(1).map((post) => (
+              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
+                <h4 class="category-col-item-title">{post.title}</h4>
+                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
+              </a>
+            ))}
+          </div>
+          <div class="category-col">
+            <div class="category-col-head">
+              <span class="category-col-dot" style="background:var(--finance)"></span>
+              <span class="category-col-name">Finance</span>
+              <a href="/category/finance" class="category-col-link">All finance →</a>
+            </div>
+            {rp[0] && (
+              <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
+                <h4 class="category-col-featured-title">{rp[0].title}</h4>
+                <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
+                {rp[0].excerpt && <p class="category-col-featured-excerpt">{rp[0].excerpt}</p>}
+              </a>
+            )}
+            {rp.slice(1).map((post) => (
+              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
+                <h4 class="category-col-item-title">{post.title}</h4>
+                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
+              </a>
+            ))}
+          </div>
+        </section>
+      );
+    })()}
+
+    <div class="cut">✂</div>
+
+    {/* ── Row 4: History + Philosophy — wash band ── */}
+    {(() => {
+      const lp = categoryPosts.get('history') || [];
+      const rp = categoryPosts.get('philosophy') || [];
+      return (
+        <section class="category-pair category-pair--wash" style="--pair-wash-l: var(--history-wash); --pair-wash-r: var(--philosophy-wash)">
+          <div class="category-col">
+            <div class="category-col-head">
+              <span class="category-col-dot" style="background:var(--history)"></span>
+              <span class="category-col-name">History</span>
+              <a href="/category/history" class="category-col-link">All history →</a>
+            </div>
+            {lp[0] && (
+              <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
+                <h4 class="category-col-featured-title">{lp[0].title}</h4>
+                <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
+                {lp[0].excerpt && <p class="category-col-featured-excerpt">{lp[0].excerpt}</p>}
+              </a>
+            )}
+            {lp.slice(1).map((post) => (
+              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
+                <h4 class="category-col-item-title">{post.title}</h4>
+                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
+              </a>
+            ))}
+          </div>
+          <div class="category-col">
+            <div class="category-col-head">
+              <span class="category-col-dot" style="background:var(--philosophy)"></span>
+              <span class="category-col-name">Philosophy</span>
+              <a href="/category/philosophy" class="category-col-link">All philosophy →</a>
+            </div>
+            {rp[0] && (
+              <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
+                <h4 class="category-col-featured-title">{rp[0].title}</h4>
+                <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
+                {rp[0].excerpt && <p class="category-col-featured-excerpt">{rp[0].excerpt}</p>}
+              </a>
+            )}
+            {rp.slice(1).map((post) => (
+              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
+                <h4 class="category-col-item-title">{post.title}</h4>
+                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
+              </a>
+            ))}
+          </div>
+        </section>
+      );
+    })()}
+
+    <div class="cut">✕</div>
+
+    {/* ── Row 5: Psychology + Science — plain ── */}
+    {(() => {
+      const lp = categoryPosts.get('psychology') || [];
+      const rp = categoryPosts.get('science') || [];
+      return (
+        <section class="category-pair">
+          <div class="category-col">
+            <div class="category-col-head">
+              <span class="category-col-dot" style="background:var(--psychology)"></span>
+              <span class="category-col-name">Psychology</span>
+              <a href="/category/psychology" class="category-col-link">All psychology →</a>
+            </div>
+            {lp[0] && (
+              <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
+                <h4 class="category-col-featured-title">{lp[0].title}</h4>
+                <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
+                {lp[0].excerpt && <p class="category-col-featured-excerpt">{lp[0].excerpt}</p>}
+              </a>
+            )}
+            {lp.slice(1).map((post) => (
+              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
+                <h4 class="category-col-item-title">{post.title}</h4>
+                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
+              </a>
+            ))}
+          </div>
+          <div class="category-col">
+            <div class="category-col-head">
+              <span class="category-col-dot" style="background:var(--science)"></span>
+              <span class="category-col-name">Science</span>
+              <a href="/category/science" class="category-col-link">All science →</a>
+            </div>
+            {rp[0] && (
+              <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
+                <h4 class="category-col-featured-title">{rp[0].title}</h4>
+                <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
+                {rp[0].excerpt && <p class="category-col-featured-excerpt">{rp[0].excerpt}</p>}
+              </a>
+            )}
+            {rp.slice(1).map((post) => (
+              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
+                <h4 class="category-col-item-title">{post.title}</h4>
+                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
+                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
+              </a>
+            ))}
+          </div>
+        </section>
+      );
+    })()}
 
     <Footer />
   </div>
