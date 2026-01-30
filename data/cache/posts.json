@@ -1,6 +1,94 @@
 {
-  "lastUpdated": "2026-01-30T05:20:14.346Z",
+  "lastUpdated": "2026-01-30T13:16:09.714Z",
   "posts": [
+    {
+      "id": "p4fgc",
+      "blogId": "markcarrigan",
+      "title": "Dynamic context management is the achilles heel of Claude Cowork",
+      "link": "https://markcarrigan.net/2026/01/30/dynamic-context-management-is-the-achilles-heel-of-claude-cowork/",
+      "date": "2026-01-30T12:53:26.000Z",
+      "excerpt": "This is the system Anthropic have developed for overcoming the limits of context windows. Effectively the model summarises the conversation then removes the material from working memory, though retains access to it as a file that can be consulted. It’s an elegant solution in many ways, analogous to..."
+    },
+    {
+      "id": "3bh3qm",
+      "blogId": "thezvi",
+      "title": "On The Adolescence of Technology",
+      "link": "https://thezvi.substack.com/p/on-the-adolescence-of-technology",
+      "date": "2026-01-30T12:41:15.000Z",
+      "excerpt": "Anthropic CEO Dario Amodei is back with another extended essay, The Adolescence of Technology."
+    },
+    {
+      "id": "psm8d7",
+      "blogId": "paulkrugman",
+      "title": "The Lowdown on Debasement",
+      "link": "https://paulkrugman.substack.com/p/the-lowdown-on-debasement",
+      "date": "2026-01-30T11:31:16.000Z",
+      "excerpt": "How seriously has investors’ confidence in America been shaken?"
+    },
+    {
+      "id": "xc19it",
+      "blogId": "openquestions",
+      "title": "Time Bandits",
+      "link": "https://openquestionsblog.substack.com/p/time-bandits",
+      "date": "2026-01-30T11:02:04.000Z",
+      "excerpt": "Don’t let them rob you of posterity"
+    },
+    {
+      "id": "x7f6ks",
+      "blogId": "marginalrevolution",
+      "title": "The Effects of Ransomware Attacks on Hospitals and Patients",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/01/the-effects-of-ransomware-attacks-on-hospitals-and-patients.html?utm_source=rss&utm_medium=rss&utm_campaign=the-effects-of-ransomware-attacks-on-hospitals-and-patients",
+      "date": "2026-01-30T10:48:24.000Z",
+      "excerpt": "As cybercriminals increasingly target health care, hospitals face the growing threat of ransomware attacks. Ransomware is a type of malicious software that prevents users from accessing electronic systems and demands a ransom to restore access. We create and link a database of hospital ransomware at..."
+    },
+    {
+      "id": "u4syt3",
+      "blogId": "flowingdata",
+      "title": "Cumulative measles rising with South Carolina outbreak",
+      "link": "https://flowingdata.com/2026/01/30/cumulative-measles-rising-with-south-carolina-outbreak/",
+      "date": "2026-01-30T10:11:07.000Z",
+      "excerpt": "In 2000, measles in the United States was declared eliminated by the World… Tags: CNN, measles, South Carolina, vaccination"
+    },
+    {
+      "id": "qr539h",
+      "blogId": "danq",
+      "title": "[Note] Airborne RSS",
+      "link": "https://danq.me/2026/01/30/airborne-rss/",
+      "date": "2026-01-30T09:48:04.000Z",
+      "excerpt": "RSS readers rock. Having a single place you connect for a low-bandwidth bundle of everything you might want to read means it doesn’t matter how slow the WiFi is on your aeroplane, you can get all the text content in one tap. (I’m using Capy Reader to connect to FreshRSS, by the way.) Time to […]"
+    },
+    {
+      "id": "wnax6c",
+      "blogId": "koenfucius",
+      "title": "The Fairness Cascade",
+      "link": "https://koenfucius.substack.com/p/the-fairness-cascade",
+      "date": "2026-01-30T08:11:00.000Z",
+      "excerpt": "When people reject profitable opportunities, it’s easy to blame irrationality. But that may be too hasty a conclusion – the opposite may be the case."
+    },
+    {
+      "id": "dz23s6",
+      "blogId": "klementoninvesting",
+      "title": "You got to pay people to work in the suburbs",
+      "link": "https://klementoninvesting.substack.com/p/you-got-to-pay-people-to-work-in",
+      "date": "2026-01-30T07:01:11.000Z",
+      "excerpt": "As a dedicated ‘city slicker’, I would not want to live in the suburbs."
+    },
+    {
+      "id": "u97g05",
+      "blogId": "danq",
+      "title": "[Article] How an RM Nimbus Taught Me a Hacker Mentality",
+      "link": "https://danq.me/2026/01/30/rm-nimbus/",
+      "date": "2026-01-30T06:05:24.000Z",
+      "excerpt": "Thirty to thirty-five years ago, as a young and curious hacker, I broke out of the restrictions on my secondary school's computer lab and briefly achieved rockstar popularity amongst peers who, through my tools, could now play videogames instead of doing their coursework. But their interest in the r..."
+    },
+    {
+      "id": "y9j5zj",
+      "blogId": "marginalrevolution",
+      "title": "Are the French lazy?",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/01/are-the-french-lazy.html?utm_source=rss&utm_medium=rss&utm_campaign=are-the-french-lazy",
+      "date": "2026-01-30T05:24:42.000Z",
+      "excerpt": "Olivier Blanchard writes: The French are not lazy. They just enjoy leisure more than most (no irony here) And this is perfectly fine: As productivity increases, it is perfectly reasonable to take it partly as more leisure (fewer hours per week, earlier retirement age), and only partly in income. He..."
+    },
     {
       "id": "p0u6a2",
       "blogId": "simonwillison",
@@ -80,6 +168,14 @@
       "link": "https://www.understandingai.org/p/the-feds-are-probing-waymos-behavior",
       "date": "2026-01-29T20:48:29.000Z",
       "excerpt": "It's not clear if Waymo was at fault for striking a child at 6 mph."
+    },
+    {
+      "id": "jbyvqj",
+      "blogId": "economicforces",
+      "title": "Is Dave Ramsey right?",
+      "link": "https://www.economicforces.xyz/p/is-dave-ramsey-right",
+      "date": "2026-01-29T20:12:50.000Z",
+      "excerpt": "We all use heuristics"
     },
     {
       "id": "evypz8",
@@ -208,6 +304,14 @@
       "link": "https://kottke.org/26/01/0048271-ai-skeptics-need-to-updat",
       "date": "2026-01-29T16:40:30.000Z",
       "excerpt": "“AI skeptics need to update their priors: Plenty of cause for concern, plenty of room to hit these companies for unethical behavior, resource demands, etc, but we are so, so far past the era of ‘stochastic parrots’”."
+    },
+    {
+      "id": "z0gv0j",
+      "blogId": "robhenderson",
+      "title": "Men Have Grown Twice As Much As Women Over Past Century",
+      "link": "https://www.robkhenderson.com/p/men-have-grown-twice-as-much-as-women",
+      "date": "2026-01-29T16:26:44.000Z",
+      "excerpt": "Rob Henderson's Office Hours #24"
     },
     {
       "id": "28e4hi",
@@ -490,6 +594,14 @@
       "excerpt": "Decoding Tim Cook's seemingly stunningly stupid strategy..."
     },
     {
+      "id": "ohnaej",
+      "blogId": "alanwsmith",
+      "title": "My Best AI Experience So Far",
+      "link": "https://www.alanwsmith.com/en/38/tm/zv/ew/",
+      "date": "2026-01-28T19:08:20.000Z",
+      "excerpt": "I've had mixed experiences with AI when it comes to programming. It generally isn't worth it. I can usually figure things out by looking at documentation. A place where I don't have waste energy vetting everything I find. Of course, docs don't always have what you need. For example, I was trying to..."
+    },
+    {
       "id": "2aymig",
       "blogId": "flowingdata",
       "title": "IsoCity, an open source city building game",
@@ -568,6 +680,14 @@
       "link": "https://abnormalreturns.com/2026/01/28/personal-finance-links-hedging-an-uncertain-future/",
       "date": "2026-01-28T15:07:13.000Z",
       "excerpt": "Wednesdays are all about personal finance here at Abnormal Returns. You can check out last week’s links including a look at automating..."
+    },
+    {
+      "id": "at06zv",
+      "blogId": "worksonmymachine",
+      "title": "The Different Shapes of \"Think Before You Build\" Prompting",
+      "link": "https://worksonmymachine.ai/p/the-different-shapes-of-think-before",
+      "date": "2026-01-28T14:42:45.000Z",
+      "excerpt": "Or: The Beaver Who Learned To Measure Twice"
     },
     {
       "id": "lmkbkq",
@@ -762,6 +882,14 @@
       "excerpt": "Why household balance sheets are in such a good place. The post Why This Economic Cycle is Different appeared first on A Wealth of Common Sense. ..."
     },
     {
+      "id": "jt1mkk",
+      "blogId": "alanwsmith",
+      "title": "Magic: The Gathering Deck Image Generator",
+      "link": "https://www.alanwsmith.com/mtg-images/",
+      "date": "2026-01-27T19:01:42.000Z",
+      "excerpt": "We've Moved This tool is now hosted here: mtg.al9000.com/image-tags I've got ideas for other tools so it felt like combining them on their own site made sense. -a"
+    },
+    {
       "id": "alv5w8",
       "blogId": "danq",
       "title": "[Repost] The internet’s hidden creative renaissance (and how to find it)",
@@ -874,14 +1002,6 @@
       "excerpt": "Hubris and cruelty have consequences"
     },
     {
-      "id": "7gdvvf",
-      "blogId": "marginalrevolution",
-      "title": "Understanding Latin America’s Fertility Decline",
-      "link": "https://marginalrevolution.com/marginalrevolution/2026/01/understanding-latin-americas-fertility-decline.html?utm_source=rss&utm_medium=rss&utm_campaign=understanding-latin-americas-fertility-decline",
-      "date": "2026-01-27T16:02:52.000Z",
-      "excerpt": "This paper examines the sharp decline in fertility across Latin America using both period and cohort measures. Combining Vital Statistics, Census microdata, and UN population data, we decompose changes in fertility by age, education, and joint age–education groups. We show that the decline in period..."
-    },
-    {
       "id": "ff9q75",
       "blogId": "braddelong",
       "title": "CROSSPOST: ADRIAN MONCK: The End of China’s Central Military Commission",
@@ -906,6 +1026,14 @@
       "excerpt": "This is the second part of my three part series on the Claude Constitution."
     },
     {
+      "id": "xsxjwx",
+      "blogId": "robhenderson",
+      "title": "Male Gaze, Moral Progress, Goal Setting",
+      "link": "https://www.robkhenderson.com/p/male-gaze-moral-progress-goal-setting",
+      "date": "2026-01-27T14:44:14.000Z",
+      "excerpt": "Links and recommendations"
+    },
+    {
       "id": "t7h38h",
       "blogId": "abnormalreturns",
       "title": "Research links: choosing your discomfort",
@@ -928,14 +1056,6 @@
       "link": "https://wisdomofcrowds.live/p/what-the-new-right-actually-believes",
       "date": "2026-01-27T13:48:09.000Z",
       "excerpt": "Laura Field on MAGA’s thinkers, factions, and internal tensions"
-    },
-    {
-      "id": "virez3",
-      "blogId": "marginalrevolution",
-      "title": "Who is good at soccer?",
-      "link": "https://marginalrevolution.com/marginalrevolution/2026/01/who-is-good-at-soccer.html?utm_source=rss&utm_medium=rss&utm_campaign=who-is-good-at-soccer",
-      "date": "2026-01-27T12:54:25.000Z",
-      "excerpt": "This study explores the psychological profiles of elite soccer players, revealing that success on the field goes beyond physical ability. By analyzing a sample of 328 participants, including 204 elite soccer players from the top teams in Brazil and Sweden, we found that elite players have exceptiona..."
     },
     {
       "id": "xilsa1",
@@ -984,6 +1104,14 @@
       "link": "https://om.co/2026/01/26/does-evidence-even-matter/",
       "date": "2026-01-27T04:00:00.000Z",
       "excerpt": "I was taught never to discuss money, politics, or religion in public. Those childhood lessons are why I avoid political commentary, though I don’t lack beliefs or convictions. With the growing rancor in our social, political, and economic arenas, I turn away from the news and toward longer, more con..."
+    },
+    {
+      "id": "cmmw18",
+      "blogId": "davidoks",
+      "title": "GDP numbers in poor countries are usually fake",
+      "link": "https://davidoks.blog/p/gdp-numbers-in-poor-countries-are",
+      "date": "2026-01-27T00:55:02.000Z",
+      "excerpt": "We need to be much more skeptical of official-seeming economic statistics"
     },
     {
       "id": "3vx2t3",
@@ -1088,14 +1216,6 @@
       "link": "https://abnormalreturns.com/2026/01/26/monday-links-spending-to-stay-in-place/",
       "date": "2026-01-26T19:39:33.000Z",
       "excerpt": "This content, which contains security-related opinions and/or information, is provided for informational purposes only and should not be relied upon in any manner as professional advice, or an endorsement of any practices, products or services. There can be no guarantees or assurances that the views..."
-    },
-    {
-      "id": "jeix6o",
-      "blogId": "danq",
-      "title": "[Repost] Why does SSH send 100 packets per keystroke?",
-      "link": "https://danq.me/2026/01/26/why-does-ssh-send-100-packets-per-keystroke/",
-      "date": "2026-01-26T19:30:26.000Z",
-      "excerpt": "Nolen Royalty wrote an interesting piece about diagnosing a quirky SSH-related issue, and I found it both interesting and inspiring."
     },
     {
       "id": "y08txx",
@@ -1290,14 +1410,6 @@
       "excerpt": "As I mentioned on Twitter, I just finished reading the second volume of Aragon’s Histoire de l’URSS (published by Edition 10/18 in 1962)."
     },
     {
-      "id": "fuv6ns",
-      "blogId": "markcarrigan",
-      "title": "Why do I need to go to school if I have ChatGPT?",
-      "link": "https://markcarrigan.net/2026/01/26/why-do-i-need-to-go-to-school-if-i-have-chatgpt/",
-      "date": "2026-01-26T10:09:20.000Z",
-      "excerpt": "My nephew actually asked me this question last night and I couldn’t think of a concise and suitable response on the spot. “Lets go into the other room and have a seminar about it” probably wouldn’t have been the right response. It did make me wonder how many other kids are now explicitly asking this..."
-    },
-    {
       "id": "t68zxv",
       "blogId": "braddelong",
       "title": "WEEK 1: Days 1 & 2: 1. Introduction: Five Questions About Economic Growth :: History of Economic Growth",
@@ -1338,6 +1450,14 @@
       "excerpt": "The only way to truly opt out of big-company organizational politics is to avoid working at big companies altogether. That’s a valid choice! But it also means you’re passing up the kind of leverage that you can only get at large tech companies: the opportunity to make changes that affect millions or..."
     },
     {
+      "id": "pl5mic",
+      "blogId": "ntietz",
+      "title": "Making niche solutions is the point",
+      "link": "https://ntietz.com/blog/making-niche-solutions-is-the-point/?utm_source=atom&utm_medium=feed",
+      "date": "2026-01-26T00:00:00.000Z",
+      "excerpt": "I got a 3D printer recently, and got to work using it. When I shared one of the first things I made in a private Discord, someone commented that \"This is the most niche thing I've ever seen someone design/print.\" That, my friend, is the point: that we can make exactly what we need. And that's true f..."
+    },
+    {
       "id": "8w959h",
       "blogId": "simonwillison",
       "title": "the browser is the sandbox",
@@ -1368,6 +1488,14 @@
       "link": "https://branko2f7.substack.com/p/should-comparative-economics-still",
       "date": "2026-01-25T17:34:30.000Z",
       "excerpt": "How to teach economics of income distribution"
+    },
+    {
+      "id": "1vywa8",
+      "blogId": "robhenderson",
+      "title": "The Real Reason White Women Attract So Much Hate",
+      "link": "https://www.robkhenderson.com/p/the-real-reason-white-women-attract",
+      "date": "2026-01-25T15:55:26.000Z",
+      "excerpt": ""
     },
     {
       "id": "cpnpm3",
@@ -1416,14 +1544,6 @@
       "link": "https://curtjaimungal.substack.com/p/what-is-entropic-gravity",
       "date": "2026-01-25T14:04:19.000Z",
       "excerpt": "The story (and math) behind Erik Verlinde's finding..."
-    },
-    {
-      "id": "p1928q",
-      "blogId": "danq",
-      "title": "[Note] “I’m glad I’m not the only one”",
-      "link": "https://danq.me/2026/01/25/glad-im-not-the-only-one/",
-      "date": "2026-01-25T13:09:52.000Z",
-      "excerpt": "Still at MegaConLive. I’ve not done this kind of con before (and still wouldn’t, were it not for my tweenager and her various obsessions). Not my jam, and that’s fine. But if there’s one thing for which I can sing it’s praises: everybody we’ve met is super friendly and nice. Sure, you can loudly tel..."
     },
     {
       "id": "7irh0x",
@@ -1482,6 +1602,14 @@
       "excerpt": "The Greatest Trick Capital Ever Played: Convincing America the Trade Deficit Was China's Fault"
     },
     {
+      "id": "5bdi7d",
+      "blogId": "worksonmymachine",
+      "title": "What If We Took Message-Passing Seriously?",
+      "link": "https://worksonmymachine.ai/p/what-if-we-took-message-passing-seriously",
+      "date": "2026-01-24T17:20:46.000Z",
+      "excerpt": "There’s a mass of data that holds a shape you can’t quite name."
+    },
+    {
       "id": "bdnnqx",
       "blogId": "benthamsbulldog",
       "title": "Digital Minds Are Most of What Matters ",
@@ -1538,12 +1666,20 @@
       "excerpt": "The more Trump makes it clear that America is not what it used to be, the more likely capital flight becomes."
     },
     {
+      "id": "txnzdq",
+      "blogId": "alanwsmith",
+      "title": "Deserialize a JSON Object with IDs in Rust with Serde",
+      "link": "https://www.alanwsmith.com/en/38/gg/hf/wa/",
+      "date": "2026-01-24T03:52:24.000Z",
+      "excerpt": "A quick look at parsing JSON data in Rust when things come in using arbitrary keys (e.g. for IDS) --- [dependencies] serde = { version = \"1.0.228\", features = [\"derive\"] } serde_json = \"1.0.149\" --- #![allow(warnings)] use serde::Deserialize; use std::collections::HashMap; #[derive(Debug, Deserializ..."
+    },
+    {
       "id": "3zd8ck",
       "blogId": "seangoedecke",
       "title": "How I estimate work as a staff software engineer",
       "link": "https://seangoedecke.com/how-i-estimate-work/",
       "date": "2026-01-24T00:00:00.000Z",
-      "excerpt": ""
+      "excerpt": "There’s a kind of polite fiction at the heart of the software industry. It goes something like this:"
     },
     {
       "id": "6gglt8",
@@ -1594,20 +1730,20 @@
       "excerpt": "This saxophonist turned the tables on me—but what can I do but listen?"
     },
     {
+      "id": "j2fr3h",
+      "blogId": "davidoks",
+      "title": "Sunday notes #1: DeepSeek, the WASPs, and the last Mossad station chief in Tehran",
+      "link": "https://davidoks.blog/p/friday-notes-1-deepseek-the-wasps",
+      "date": "2026-01-23T19:31:05.000Z",
+      "excerpt": "Brief notes from what I've been reading"
+    },
+    {
       "id": "yxl4ge",
       "blogId": "maxread",
       "title": "The commenters won",
       "link": "https://maxread.substack.com/p/the-commenters-won",
       "date": "2026-01-23T19:03:26.000Z",
       "excerpt": "Which Trump administration official is a former Gawker commenter?"
-    },
-    {
-      "id": "thuw5f",
-      "blogId": "flowingdata",
-      "title": "Awful and better, Venn diagram",
-      "link": "https://flowingdata.com/2026/01/23/awful-and-better-venn-diagram/",
-      "date": "2026-01-23T18:09:58.000Z",
-      "excerpt": "We focus on the bad, because that’s where it can and will get… Tags: Our World in Data, world"
     },
     {
       "id": "5xry5x",
@@ -1706,6 +1842,14 @@
       "excerpt": "On agent orchestration patterns, why design and critical thinking are the new bottlenecks, and whether we should let go of looking at code"
     },
     {
+      "id": "6u9y7s",
+      "blogId": "economicforces",
+      "title": "What is Your Life Worth?",
+      "link": "https://www.economicforces.xyz/p/what-is-your-life-worth",
+      "date": "2026-01-22T22:43:20.000Z",
+      "excerpt": "Price theory as a tool for pricing the priceless"
+    },
+    {
       "id": "2f58fs",
       "blogId": "astralcodexten",
       "title": "Hidden Open Thread 417.5",
@@ -1768,6 +1912,14 @@
       "link": "https://benthams.substack.com/p/you-should-not-treat-your-political",
       "date": "2026-01-22T17:02:20.000Z",
       "excerpt": "How to turn politics into all out war"
+    },
+    {
+      "id": "r9j37h",
+      "blogId": "robhenderson",
+      "title": "Relative Happiness Depends on How Much Sex Other People Are Having",
+      "link": "https://www.robkhenderson.com/p/relative-happiness-depends-on-how",
+      "date": "2026-01-22T16:05:27.000Z",
+      "excerpt": "Rob Henderson's Office Hours #23"
     },
     {
       "id": "6yoq3l",
@@ -1954,6 +2106,14 @@
       "excerpt": "Andy Masley is one of the coolest people on the internet—very exciting to chat with him."
     },
     {
+      "id": "v30ord",
+      "blogId": "davidoks",
+      "title": "A lot of population numbers are fake",
+      "link": "https://davidoks.blog/p/a-lot-of-population-numbers-are-fake",
+      "date": "2026-01-21T17:25:26.000Z",
+      "excerpt": "Do we have any idea how many people there are in the world?"
+    },
+    {
       "id": "pfjzz7",
       "blogId": "interconnects",
       "title": "Get Good at Agents",
@@ -2034,14 +2194,6 @@
       "excerpt": "Over the past six months, I’ve been drowning in evaluation hell."
     },
     {
-      "id": "kvguoc",
-      "blogId": "paulkrugman",
-      "title": "MAGA Delusions of Economic Leverage",
-      "link": "https://paulkrugman.substack.com/p/maga-delusions-of-economic-leverage",
-      "date": "2026-01-21T11:31:17.000Z",
-      "excerpt": "Europe can easily stand up to Trump’s bullying"
-    },
-    {
       "id": "x4j56v",
       "blogId": "openquestions",
       "title": "It’s a Girl! (Thank God)",
@@ -2088,6 +2240,14 @@
       "link": "https://www.understandingai.org/p/how-shifting-risk-to-users-makes",
       "date": "2026-01-20T19:36:47.000Z",
       "excerpt": "People are discovering that Claude Code isn’t just for code."
+    },
+    {
+      "id": "fv3193",
+      "blogId": "robhenderson",
+      "title": "Doom-Pilled, Women’s Shirts, Gentlemen’s Collective ",
+      "link": "https://www.robkhenderson.com/p/doom-pilled-womens-shirts-gentlemens",
+      "date": "2026-01-20T19:21:49.000Z",
+      "excerpt": "Links and recommendations"
     },
     {
       "id": "9tg92q",
@@ -2202,14 +2362,6 @@
       "excerpt": "Emulating social, multi-agent-like dialogue"
     },
     {
-      "id": "7nftgt",
-      "blogId": "klementoninvesting",
-      "title": "If people talk about a bubble, it’s unlikely to crash soon",
-      "link": "https://klementoninvesting.substack.com/p/if-people-talk-about-a-bubble-its",
-      "date": "2026-01-20T07:01:18.000Z",
-      "excerpt": "We have had our fair share of bubble talk in the AI space over the last six months."
-    },
-    {
       "id": "oarpn2",
       "blogId": "noahpinion",
       "title": "Resistance is necessary, but it's not enough",
@@ -2280,6 +2432,14 @@
       "link": "https://freddiedeboer.substack.com/p/oversocialization-the-shackles-of",
       "date": "2026-01-19T18:38:50.000Z",
       "excerpt": "Uncle Ted was right about this one"
+    },
+    {
+      "id": "gvwly6",
+      "blogId": "davidoks",
+      "title": "Why poor countries stopped catching up",
+      "link": "https://davidoks.blog/p/why-poor-countries-stopped-catching-690",
+      "date": "2026-01-19T18:19:53.000Z",
+      "excerpt": "The rise and fall of the Great Convergence"
     },
     {
       "id": "qjgys2",
@@ -2362,6 +2522,14 @@
       "excerpt": "Giving University Exams in the Age of Chatbots What I like most about teaching \"Open Source Strategies\" at École Polytechnique de Louvain is how much I learn from my students, especially during the exam. I dislike exams. I still have nightmares about exams. That’s why I try to subvert this stressful..."
     },
     {
+      "id": "f1mvw8",
+      "blogId": "ntietz",
+      "title": "3D printing my laptop ergonomic setup",
+      "link": "https://ntietz.com/blog/3d-printing-my-laptop-ergonomic-setup/?utm_source=atom&utm_medium=feed",
+      "date": "2026-01-19T00:00:00.000Z",
+      "excerpt": "Apparently, one of my hobbies is making updates to my ergonomic setup, then blogging about it from an Amtrak train. I've gone and done it again. My setup stayed static for some time, but my most recent iteration ended up letting me down and I had to change it again. It gave me a lot of useful inform..."
+    },
+    {
       "id": "hk0zy0",
       "blogId": "seanheelan",
       "title": "On the Coming Industrialisation of Exploit Generation with LLMs",
@@ -2402,6 +2570,14 @@
       "excerpt": "They're good!"
     },
     {
+      "id": "5f2mac",
+      "blogId": "robhenderson",
+      "title": "Women's Activism",
+      "link": "https://www.robkhenderson.com/p/womens-activism",
+      "date": "2026-01-18T13:04:48.000Z",
+      "excerpt": "Speaking with Louise Perry"
+    },
+    {
       "id": "ck89du",
       "blogId": "maxread",
       "title": "A Tom-Clancy-meets-Jeff-VanderMeer Native American sci-fi novel, a great new psychedelic conspiracy thriller TV show, and more",
@@ -2424,6 +2600,14 @@
       "link": "https://www.noahpinion.blog/p/zero-sum-economics-keeps-failing",
       "date": "2026-01-18T09:50:26.000Z",
       "excerpt": "The world is not a lump of \"resources\""
+    },
+    {
+      "id": "pferoa",
+      "blogId": "fromjason",
+      "title": "The Computational Web and the Old AI Switcharoo",
+      "link": "https://fromjason.xyz/p/notebook/the-computational-web-and-the-old-ai-switcharoo/",
+      "date": "2026-01-18T00:00:00.000Z",
+      "excerpt": "The Computational Web and the Old AI Switcharoo For two grand I can buy a laptop with unfathomable levels of computational power. Stock, that laptop comes with silicon made of resistors so impossibly tiny, it operates under different laws of physics. For just a few hundred dollars more, I get a hard..."
     },
     {
       "id": "upc94l",
@@ -2570,14 +2754,6 @@
       "excerpt": "(Related part 1)."
     },
     {
-      "id": "okk5d5",
-      "blogId": "thezvi",
-      "title": "Monthly Roundup #38: January 2026",
-      "link": "https://thezvi.substack.com/p/monthly-roundup-38-january-2026",
-      "date": "2026-01-16T15:07:56.000Z",
-      "excerpt": "Good news, we managed to make some cuts."
-    },
-    {
       "id": "h10b2j",
       "blogId": "astralcodexten",
       "title": "The Dilbert Afterlife",
@@ -2642,12 +2818,28 @@
       "excerpt": "How societies stabilise by distributing frustration when progress runs out"
     },
     {
+      "id": "8f7nxb",
+      "blogId": "fromjason",
+      "title": "Slop is Everywhere For Those With Eyes to See",
+      "link": "https://fromjason.xyz/p/notebook/slop-is-everywhere-for-those-with-eyes-to-see/",
+      "date": "2026-01-16T00:00:00.000Z",
+      "excerpt": "Slop is Everywhere For Those With Eyes to See The size of your plate can influence how much food you eat. The absence of a clock on a casino wall can keep you gambling through the early morning. On social media, our For You Pages give us the illusion of infinite content. How our environments are des..."
+    },
+    {
       "id": "mnlip0",
       "blogId": "curtjaimungal",
       "title": "The Assumption That Made Quantum Mechanics Weird | Jacob Barandes [Show Notes]",
       "link": "https://curtjaimungal.substack.com/p/jacob-barandes-show-notes",
       "date": "2026-01-15T22:30:29.000Z",
       "excerpt": "Harvard’s Jacob Barandes shows Markovianity (not spooky action) creates the quantum‑classical divide."
+    },
+    {
+      "id": "14mp5s",
+      "blogId": "economicforces",
+      "title": "[Re-Post] Costs, Competition, and Prices that Don't Clear the Market",
+      "link": "https://www.economicforces.xyz/p/re-post-costs-competition-and-prices",
+      "date": "2026-01-15T22:00:49.000Z",
+      "excerpt": "We at Economic Forces are big fans of supply and demand."
     },
     {
       "id": "r7i8hq",
@@ -2914,12 +3106,28 @@
       "excerpt": "..."
     },
     {
+      "id": "yzn3d",
+      "blogId": "alanwsmith",
+      "title": "Magic: The Gathering - Angel Deck",
+      "link": "https://www.alanwsmith.com/en/38/dw/mp/oa/",
+      "date": "2026-01-13T20:02:56.000Z",
+      "excerpt": "I played my first round of Magic: The Gathering last weekend with a couple buddies. It was a ton of fun, despite the fact I was struggling to keep upcmd. They also introduced me to Magic: The Gathering Arena where you can play against bots and strangers. It also provides starter decks to try out. Af..."
+    },
+    {
       "id": "6360w7",
       "blogId": "onepercentrule",
       "title": "Shaping AI’s Impact on Billions of Lives",
       "link": "https://onepercentrule.substack.com/p/shaping-ais-impact-on-billions-of",
       "date": "2026-01-13T15:41:43.000Z",
       "excerpt": "Demystifying the Potential Impact of AI"
+    },
+    {
+      "id": "rpev6x",
+      "blogId": "robhenderson",
+      "title": "Evolutionary Psychology, Sex Wars, Revolutionary Negation",
+      "link": "https://www.robkhenderson.com/p/evolutionary-psychology-sex-wars",
+      "date": "2026-01-13T15:40:09.000Z",
+      "excerpt": "Austin events + links and recommendations"
     },
     {
       "id": "rebb56",
@@ -3034,6 +3242,14 @@
       "excerpt": "Introduction Contents Introduction Pitfalls Inverse Laws of Robotics Non-Anthropomorphism Non-Deference Non-Abdication of Responsibility Conclusion Pitfalls Three Laws of Robotics devised by Isaac Asimov, which recur throughout his work. These laws were designed to constrain the behaviour of robots..."
     },
     {
+      "id": "8v4lfg",
+      "blogId": "ntietz",
+      "title": "Bayes theorem and how we talk about medical tests",
+      "link": "https://ntietz.com/blog/bayes-theorem-medical-tests/?utm_source=atom&utm_medium=feed",
+      "date": "2026-01-12T00:00:00.000Z",
+      "excerpt": "We want medical tests to give us a yes or no answer: you have the disease, you're cured. We treat them this way, often. My labs came back saying I'm healthy. I have immunity. I'm sick. Absolutely concrete results. The reality is more complicated, and tests do not give you a yes or no. They give you..."
+    },
+    {
       "id": "4t9dsj",
       "blogId": "anildash",
       "title": "How to know if that job will crush your soul",
@@ -3074,12 +3290,28 @@
       "excerpt": "Regardless of how the Ukraine-Russia war ends, there would be, I believe, inevitably serious geopolitical consequences for Russia."
     },
     {
+      "id": "dykvzy",
+      "blogId": "alanwsmith",
+      "title": "Jimmy Carr on Laughter",
+      "link": "https://www.alanwsmith.com/en/38/7r/1e/ex/",
+      "date": "2026-01-11T16:20:05.000Z",
+      "excerpt": "Laughter is the shortest distance between two people."
+    },
+    {
       "id": "kw4g1z",
       "blogId": "cosmographia",
       "title": "What am I doing here?",
       "link": "https://cosmographia.substack.com/p/what-am-i-doing-here",
       "date": "2026-01-11T15:30:51.000Z",
       "excerpt": "Welcome to Cosmographia — histories of the earth and the stars."
+    },
+    {
+      "id": "9qeb8x",
+      "blogId": "robhenderson",
+      "title": "Mr. Nobody From Nowhere",
+      "link": "https://www.robkhenderson.com/p/mr-nobody-from-nowhere",
+      "date": "2026-01-11T15:01:01.000Z",
+      "excerpt": "What Gatsby misunderstood about social class"
     },
     {
       "id": "jgjyse",
@@ -3114,12 +3346,52 @@
       "excerpt": "On Reading The Chief"
     },
     {
+      "id": "9j1pjz",
+      "blogId": "alanwsmith",
+      "title": "Beautiful Words I Don't Understand",
+      "link": "https://www.alanwsmith.com/en/38/5r/ow/xv/",
+      "date": "2026-01-11T02:57:24.000Z",
+      "excerpt": "Head's Up: JavaScript is either turned off or not working properly in your browser. Some parts of this page may not work properly."
+    },
+    {
+      "id": "clitb4",
+      "blogId": "alanwsmith",
+      "title": "Filtering the Room",
+      "link": "https://www.alanwsmith.com/en/38/0p/ul/wk/",
+      "date": "2026-01-11T01:42:19.000Z",
+      "excerpt": "I can no longer read the room. At least, not on social media. It's not for lack of trying. It's the opposite. I work against the ability. Stacking filters as barricades. I'm not unsympathetic. I just can't handle the onslaught. It breaks me. -a"
+    },
+    {
+      "id": "vva7t2",
+      "blogId": "alanwsmith",
+      "title": "My Internet Phone Book Number",
+      "link": "https://www.alanwsmith.com/en/38/52/dm/4r/",
+      "date": "2026-01-10T19:59:57.000Z",
+      "excerpt": "I'm 303 on The Internet Phone Book if you need to reach me."
+    },
+    {
       "id": "n41rjg",
       "blogId": "venkateshrao",
       "title": "Lost in Bugspace",
       "link": "https://contraptions.venkateshrao.com/p/lost-in-bugspace",
       "date": "2026-01-10T19:52:29.000Z",
       "excerpt": "The temporality of implementation uncertainty in software"
+    },
+    {
+      "id": "abkez5",
+      "blogId": "alanwsmith",
+      "title": "A New (Site) Name",
+      "link": "https://www.alanwsmith.com/en/38/4l/ya/tr/",
+      "date": "2026-01-10T17:42:55.000Z",
+      "excerpt": "I've had alanwsmith.com since 20001. I didn't use it as my primary domain at first. Everyone was wary of having their online identities tied to their IRL ones back then. I don't remember when I switched to using it as my primary site. The first blog entry is from 2005. That was originally on BlogSpo..."
+    },
+    {
+      "id": "ef7xy",
+      "blogId": "alanwsmith",
+      "title": "Definition Of A Rap Flow Sample",
+      "link": "https://www.alanwsmith.com/en/38/4i/hg/vc/",
+      "date": "2026-01-10T17:16:01.000Z",
+      "excerpt": "I'll never not love stumbling on the source of a sample. Here's Definition Of A Rap Flow (ft. Amalie Bruun) from R.A. the Rugged Man. And here's the sample source in Friend & Lover's Reach Out Of The Darkness"
     },
     {
       "id": "jy7ahf",
@@ -3186,6 +3458,22 @@
       "excerpt": "Coding agents cross a meaningful threshold with Opus 4.5."
     },
     {
+      "id": "lf6ddt",
+      "blogId": "thebasecamp",
+      "title": "Practice in Still Life 9: The Shape of Thought to Come",
+      "link": "https://thebasecamp.substack.com/p/practice-in-still-life-9-the-shape",
+      "date": "2026-01-09T16:19:54.000Z",
+      "excerpt": "An essay on immanence, transcendence, practice, and the problem of nihilism"
+    },
+    {
+      "id": "8vd6ep",
+      "blogId": "robhenderson",
+      "title": "You Get the Audience You Deserve",
+      "link": "https://www.robkhenderson.com/p/you-get-the-audience-you-deserve",
+      "date": "2026-01-09T14:53:38.000Z",
+      "excerpt": "Rob Henderson's Office Hours - #22"
+    },
+    {
       "id": "79ris1",
       "blogId": "kyla",
       "title": "San Francisco Fed President Mary Daly and Richmond Fed President Tom Barkin on What's Actually Happening in the Economy",
@@ -3250,6 +3538,14 @@
       "excerpt": "Nearly every bit of the high-tech world, from the most cutting-edge AI systems at the biggest companies, to the casual scraps of code cobbled together by college students, is annotated and described by the same, simple plain text format. Whether you’re trying to give complex instructions to ChatGPT,..."
     },
     {
+      "id": "xe5mbv",
+      "blogId": "economicforces",
+      "title": "Will AI Prove Piketty Right?",
+      "link": "https://www.economicforces.xyz/p/ai-labor-share",
+      "date": "2026-01-08T18:33:42.000Z",
+      "excerpt": "What the basics of growth theory say"
+    },
+    {
       "id": "pvgikl",
       "blogId": "overthefield",
       "title": "Against the Machine Reading Group: Zoom links and information",
@@ -3264,6 +3560,14 @@
       "link": "https://aleximas.substack.com/p/the-cyborg-era-what-ai-means-for",
       "date": "2026-01-08T17:54:35.000Z",
       "excerpt": "Today we have a special guest essay from Séb Krier, AGI Policy Dev Lead at Google Deep Mind."
+    },
+    {
+      "id": "pq7teq",
+      "blogId": "robhenderson",
+      "title": "Momentum",
+      "link": "https://www.robkhenderson.com/p/momentum",
+      "date": "2026-01-08T16:24:12.000Z",
+      "excerpt": "And meeting my newborn niece"
     },
     {
       "id": "unuhj9",
@@ -3304,6 +3608,14 @@
       "link": "https://thecuttingfloor.substack.com/p/on-the-timing-of-courage",
       "date": "2026-01-08T03:37:51.000Z",
       "excerpt": "Why most societies summon heroes too early — or too late"
+    },
+    {
+      "id": "d8zro8",
+      "blogId": "davidoks",
+      "title": "The good luck of Nicolás Maduro",
+      "link": "https://davidoks.blog/p/the-good-luck-of-nicolas-maduro",
+      "date": "2026-01-07T23:08:49.000Z",
+      "excerpt": "Why dictators need better retirement plans"
     },
     {
       "id": "ac8w2z",
@@ -3591,7 +3903,7 @@
       "title": "The Dictator's Handbook and the politics of technical competence",
       "link": "https://seangoedecke.com/the-dictators-handbook/",
       "date": "2026-01-05T00:00:00.000Z",
-      "excerpt": ""
+      "excerpt": "Political science is very much not my field, so I’m reluctant to be convinced by (or comment on) the various concrete arguments in the book. I’m mainly interested in whether the book has anything to say about something I do know a little bit about: operating as an engineer inside a large tech compan..."
     },
     {
       "id": "pad8st",
@@ -3600,6 +3912,14 @@
       "link": "https://ploum.net/2026-01-05-unteaching_github.html",
       "date": "2026-01-05T00:00:00.000Z",
       "excerpt": "How Github monopoly is destroying the open source ecosystem I teach a course called \"Open Source Strategies\" at École Polytechnique de Louvain, part of the University of Louvain. As part of my course, students are required to find an open source project of their choice and make a small contribution..."
+    },
+    {
+      "id": "97sfqs",
+      "blogId": "ntietz",
+      "title": "Reflecting on 2025, preparing for 2026",
+      "link": "https://ntietz.com/blog/reflecting-on-2025-preparing-for-2026/?utm_source=atom&utm_medium=feed",
+      "date": "2026-01-05T00:00:00.000Z",
+      "excerpt": "As I do every year, it's that time to reflect on the year that's been, and talk about some of my hopes and goals for the next year! I'll be honest, this one is harder to write than last year's. It was an emotionally intense year in a lot of ways. Here's to a good 2026! Reflecting on 2025 Where last..."
     },
     {
       "id": "bg91vc",
@@ -3687,7 +4007,7 @@
       "title": "2025 was an excellent year for this blog",
       "link": "https://seangoedecke.com/2025-wrapup/",
       "date": "2026-01-03T00:00:00.000Z",
-      "excerpt": "In 2025, I published 141 posts, 33 of which made it to the front page of Hacker News or similar aggregators. I definitely wrote more in the first half of the year (an average of around 15 posts per month, down to around 8 in the second half), but overall I’m happy with my consistency. Here are some..."
+      "excerpt": ""
     },
     {
       "id": "9agj7z",
@@ -3810,12 +4130,36 @@
       "excerpt": "Reflecting on the importance of gratitude in a world driven by consumerism."
     },
     {
+      "id": "1gkxqr",
+      "blogId": "economicforces",
+      "title": "The Problem of Cooperation Costs",
+      "link": "https://www.economicforces.xyz/p/the-problem-of-cooperation-costs",
+      "date": "2026-01-01T10:55:24.000Z",
+      "excerpt": "Potential cooperation as an explanation for underdevelopment, quantity-based responses to externalities, and punishments carried out by our criminal justice system"
+    },
+    {
       "id": "q6xk9t",
       "blogId": "teendifferent",
       "title": "AI 2025 Retrospective: The Static Graph Ceiling",
       "link": "https://teendifferent.substack.com/p/ai-2025-retrospective-the-static",
       "date": "2025-12-31T22:17:40.000Z",
       "excerpt": "My thoughts on the frontier labs' gatekeeping, the rise of the app layer, and why we need open algorithms, not just open weights."
+    },
+    {
+      "id": "liyamw",
+      "blogId": "thebasecamp",
+      "title": "What I Read This Year",
+      "link": "https://thebasecamp.substack.com/p/what-i-read-this-year",
+      "date": "2025-12-31T22:05:12.000Z",
+      "excerpt": "A list of books and essays in the world of scholarship that changed my thinking and writing in 2025"
+    },
+    {
+      "id": "13a1xx",
+      "blogId": "worksonmymachine",
+      "title": "How I (Accidentally) Started a Newsletter",
+      "link": "https://worksonmymachine.ai/p/how-i-accidentally-started-a-newsletter",
+      "date": "2025-12-31T19:04:52.000Z",
+      "excerpt": "Looking Back on 2025"
     },
     {
       "id": "npogh7",
@@ -3943,7 +4287,7 @@
       "title": "Software engineers should be a little bit cynical",
       "link": "https://seangoedecke.com/a-little-bit-cynical/",
       "date": "2025-12-28T00:00:00.000Z",
-      "excerpt": ""
+      "excerpt": "I have no doubt that [Sean’s] advice is quite effective for navigating the upper levels of an organization dedicated to producing a large, mature software product. But what is lost is any sort of conception of value. Is it too naive to say that engineers are more than “tools in a political game”, th..."
     },
     {
       "id": "qra2h9",
@@ -3968,6 +4312,14 @@
       "link": "/post/more-on-shuffles/",
       "date": "2025-12-27T00:00:00.000Z",
       "excerpt": "Yesterday I read a nice post called “doubly dual shuffles”, which1 pointed out something about the classic algorithm for shuffling an array (i.e. sampling a uniformly random permutation of it). It’s a concise and (his word!) “pearlescent” post and you should read it, but in short, even modulo a simp..."
+    },
+    {
+      "id": "edroje",
+      "blogId": "economicforces",
+      "title": "Best of Economic Forces: 2025 Edition",
+      "link": "https://www.economicforces.xyz/p/best-of-economic-forces-2025-edition",
+      "date": "2025-12-26T13:23:56.000Z",
+      "excerpt": "Thanks for reading!"
     },
     {
       "id": "b55yh9",
@@ -4298,6 +4650,14 @@
       "excerpt": "My new hobby project."
     },
     {
+      "id": "uyg6aj",
+      "blogId": "economicforces",
+      "title": "The invisible hand screws up your regression",
+      "link": "https://www.economicforces.xyz/p/the-invisible-hand-screws-up-your",
+      "date": "2025-12-18T21:26:33.000Z",
+      "excerpt": "Markets, diff-in-diff, and \"The Missing Intercept\" problem"
+    },
+    {
       "id": "qv4ifv",
       "blogId": "summerlightning",
       "title": "Manufactured Present",
@@ -4410,12 +4770,36 @@
       "excerpt": "People often ask me where I get ideas for this Substack. The simple answer is everywhere, even a Christmas tree lot on a cold night in December. When my brother and I were kids, each year we would make the annual trip with our dad to pick out the family Christmas tree. But when we left for college,..."
     },
     {
+      "id": "b0kpth",
+      "blogId": "thebasecamp",
+      "title": "From Teleology to Procedure",
+      "link": "https://thebasecamp.substack.com/p/from-teleology-to-procedure",
+      "date": "2025-12-16T18:45:10.000Z",
+      "excerpt": "On John Rawls’s claim that pluralism requires procedural justice absent metaphysical claims, and my rejoinder that procedure may be a civic form of a substantive conception of the good"
+    },
+    {
+      "id": "aknhma",
+      "blogId": "economicforces",
+      "title": "Instacart's price discrimination isn't price discrimination",
+      "link": "https://www.economicforces.xyz/p/instacarts-price-discrimination-isnt",
+      "date": "2025-12-16T16:28:45.000Z",
+      "excerpt": "On the meaning of price discrimination"
+    },
+    {
       "id": "3p1y1r",
       "blogId": "entropicthoughts",
       "title": "Packaging Perl and Shell for NixOS Deployment",
       "link": "https://entropicthoughts.com/packaging-perl-and-shell-for-nixos-deployment",
       "date": "2025-12-15T23:00:00.000Z",
       "excerpt": "As a complete beginner to Nix and NixOS, I recently had some trouble packaging up a Perl script and a shell script with their dependencies for deployment on a NixOS system. Here’s what I learned."
+    },
+    {
+      "id": "o940az",
+      "blogId": "economicforces",
+      "title": "GDP still wins",
+      "link": "https://www.economicforces.xyz/p/gdp-still-wins",
+      "date": "2025-12-15T20:54:40.000Z",
+      "excerpt": "My latest piece at Vox"
     },
     {
       "id": "lutbhd",
@@ -4634,6 +5018,14 @@
       "excerpt": "The best essays Johanna and I wrote in 2025, and some reflections on what it was like to write them."
     },
     {
+      "id": "f1w7zy",
+      "blogId": "economicforces",
+      "title": "Price Theory and the Price Level",
+      "link": "https://www.economicforces.xyz/p/price-theory-and-the-price-level",
+      "date": "2025-12-11T11:03:02.000Z",
+      "excerpt": "More than you ever wanted to know about the price level, price indices, price the"
+    },
+    {
       "id": "y2hc30",
       "blogId": "branko",
       "title": "How to frame an economic blueprint for the 21st century",
@@ -4712,6 +5104,14 @@
       "link": "https://kevinmunger.substack.com/p/what-is-theory",
       "date": "2025-12-09T14:08:03.000Z",
       "excerpt": "Substack is clearly growing."
+    },
+    {
+      "id": "wmgi45",
+      "blogId": "thebasecamp",
+      "title": "Found to Constructed Orders",
+      "link": "https://thebasecamp.substack.com/p/found-to-constructed-orders",
+      "date": "2025-12-09T03:05:28.000Z",
+      "excerpt": "On How, in Charles Taylor’s Reading, the Practices of Participation in Plato and Augustine Are Transformed in Descartes into the Construction and Examination of an Inner Order of Representations"
     },
     {
       "id": "6en7jz",
@@ -4906,6 +5306,14 @@
       "excerpt": "An experiment in making neural networks rewrite themselves for every single input. Inspired by the human brain."
     },
     {
+      "id": "3i8hw6",
+      "blogId": "davidoks",
+      "title": "On getting robbed",
+      "link": "https://davidoks.blog/p/what-its-like-to-get-robbed-in-san",
+      "date": "2025-12-04T04:38:50.000Z",
+      "excerpt": "(And finding the thief and getting my stuff back)"
+    },
+    {
       "id": "w76kv3",
       "blogId": "ploum",
       "title": "Is Pixelfed sawing off the branch that the Fediverse is sitting on?",
@@ -4936,6 +5344,14 @@
       "link": "https://www.bloodinthemachine.com/p/journalists-win-a-key-battle-over",
       "date": "2025-12-03T22:19:37.000Z",
       "excerpt": "PLUS: Artists fight for an AI transparency law in the belly of the beast, a Spotify mass deletion event, and an interview with a top video games journalist about AI and labor."
+    },
+    {
+      "id": "bnckdh",
+      "blogId": "fromjason",
+      "title": "Hank Green And The Fantastical Tales of God AIs",
+      "link": "https://fromjason.xyz/p/notebook/hank-green-and-the-fantastical-tales-of-god-ais/",
+      "date": "2025-12-03T00:00:00.000Z",
+      "excerpt": "Hank Green And The Fantastical Tales of God AIs AI Doomerism is a Decoy: Yet the supposed AI apocalypse remains science fiction. “A fantastical, adrenalizing ghost story is being used to hijack attention around what is the problem that regulation needs to solve,” Meredith Whittaker, a co-founder of..."
     },
     {
       "id": "4wd9xf",
@@ -5032,6 +5448,14 @@
       "link": "https://mertbulan.com/2025/12/01/what-is-a-city-super-app-and-why-every-city-needs-one/",
       "date": "2025-12-01T10:30:00.000Z",
       "excerpt": "Why I believe every city needs a super app and how it will transform the way we engage with digital devices."
+    },
+    {
+      "id": "5zurek",
+      "blogId": "ntietz",
+      "title": "A new system for organizing my writing and projects",
+      "link": "https://ntietz.com/blog/a-system-for-organizing-my-blog-writing/?utm_source=atom&utm_medium=feed",
+      "date": "2025-12-01T00:00:00.000Z",
+      "excerpt": "Keeping up with regular blog posts is a challenge. To do it, I've churned through a few different organizational systems. Sometimes I have to change them due to actual life circumstances changing; other times, due to the old one just wearing off[1]. Well, my life circumstances have changed again. I'..."
     },
     {
       "id": "rggbg7",
@@ -5242,6 +5666,14 @@
       "excerpt": "Birds of a feather"
     },
     {
+      "id": "rqppzs",
+      "blogId": "ntietz",
+      "title": "Automating updates to a digital vigil",
+      "link": "https://ntietz.com/blog/automating-updates-to-a-digital-vigil/?utm_source=atom&utm_medium=feed",
+      "date": "2025-11-24T00:00:00.000Z",
+      "excerpt": "November 20th each year is Transgender Day of Remembrance (TDoR). It is a day when we memorialize those who've been lost to transphobia, through violence or suicide. And each year, I make the most difficult git commit of the year, updating the list of names in the digital vigil that I made a few yea..."
+    },
+    {
       "id": "i018vm",
       "blogId": "nadig",
       "title": "Things I Wish I'd Known About Meditation",
@@ -5314,20 +5746,28 @@
       "excerpt": "The more I work with large language models through provider-exposed APIs, the more I feel like we have built ourselves into quite an unfortunate API surface area. It might not actually be the right abstraction for what’s happening under the hood. The way I like to think about this problem now is tha..."
     },
     {
+      "id": "d2u7ox",
+      "blogId": "thebasecamp",
+      "title": "Disputations 3: Contemporary Natural Philosophy Needs a New Theory of Forms",
+      "link": "https://thebasecamp.substack.com/p/disputations-3-contemporary-natural",
+      "date": "2025-11-21T23:09:50.000Z",
+      "excerpt": "This is the third in our new disputations series on Substack Live, featuring Matthew David Segall, Jacob Given, and yours truly"
+    },
+    {
+      "id": "jv07qq",
+      "blogId": "davidoks",
+      "title": "The era of declining global poverty is over",
+      "link": "https://davidoks.blog/p/extreme-poverty",
+      "date": "2025-11-21T20:01:00.000Z",
+      "excerpt": "Global economic development is hitting a wall"
+    },
+    {
       "id": "5ydtng",
       "blogId": "hyperdimensional",
       "title": "Artifacts of a Busy Week",
       "link": "https://www.hyperdimensional.co/p/artifacts-of-a-busy-week",
       "date": "2025-11-21T15:15:03.000Z",
       "excerpt": "A debate on superintelligence, an essay on liability, and Congressional testimony"
-    },
-    {
-      "id": "xdzb8w",
-      "blogId": "koenfucius",
-      "title": "(Well) beyond the trade-off",
-      "link": "https://koenfucius.substack.com/p/well-beyond-the-trade-off",
-      "date": "2025-11-21T12:17:08.000Z",
-      "excerpt": "Decision making is often seen as primarily a matter of making trade-offs. Might that be too simplistic a view?"
     },
     {
       "id": "oulh1l",
@@ -5458,6 +5898,14 @@
       "excerpt": "No.379 — Future of Trust ⊗ VibeThinker outperforms DeepSeek-R1 ⊗ Silos for Sunshine ⊗ Fleshy underbellies of fungi"
     },
     {
+      "id": "dywyrv",
+      "blogId": "worksonmymachine",
+      "title": "Solving Amazon's Infinite Shelf Space Problem",
+      "link": "https://worksonmymachine.ai/p/solving-amazons-infinite-shelf-space",
+      "date": "2025-11-15T15:35:10.000Z",
+      "excerpt": "Michelangelo supposedly said the statue already existed in the marble, he simply removed everything that wasn't David."
+    },
+    {
       "id": "c5969o",
       "blogId": "hyperdimensional",
       "title": "The Bitter Lessons",
@@ -5472,6 +5920,14 @@
       "link": "https://www.derekthompson.org/p/are-young-people-screwed-by-the-economy",
       "date": "2025-11-14T11:02:57.000Z",
       "excerpt": "It seems like everyone has suddenly agreed that young Americans have never had it worse. Let's investigate."
+    },
+    {
+      "id": "j9818l",
+      "blogId": "davidoks",
+      "title": "Southern Italy is poor because of malaria",
+      "link": "https://davidoks.blog/p/southern-italy-is-poor-because-of",
+      "date": "2025-11-14T07:47:43.000Z",
+      "excerpt": "A plasmodial theory of divergent development"
     },
     {
       "id": "2vh6eo",
@@ -5586,6 +6042,14 @@
       "excerpt": "No.378 — Reimagining the way the world works ⊗ Refusing generative AI in writing studies ⊗ World’s largest Indigenous-led conservation project ⊗ The Mighty Nein"
     },
     {
+      "id": "e3g9o9",
+      "blogId": "thebasecamp",
+      "title": "On the Good as \"Beyond Being\"",
+      "link": "https://thebasecamp.substack.com/p/on-the-good-as-beyond-being",
+      "date": "2025-11-09T00:32:20.000Z",
+      "excerpt": "A brief exegesis on a much commented upon passage in Plato's Republic"
+    },
+    {
       "id": "16mvkx",
       "blogId": "grumpyeconomist",
       "title": "NBER Asset Pricing Lessons",
@@ -5688,6 +6152,14 @@
       "link": "https://www.programmablemutter.com/p/liberalism-transforms-plurality-from",
       "date": "2025-11-03T13:33:37.000Z",
       "excerpt": "At least it does when it works right ..."
+    },
+    {
+      "id": "nefqqt",
+      "blogId": "worksonmymachine",
+      "title": "Introducing touring_test: A Cucumber Extension For Agentic Usability Testing",
+      "link": "https://worksonmymachine.ai/p/introducing-touring_test-a-cucumber",
+      "date": "2025-11-01T13:12:22.000Z",
+      "excerpt": "It's like BDD, but the user is a hallucination"
     },
     {
       "id": "ltxsk2",
@@ -5898,6 +6370,22 @@
       "excerpt": "It was a warm, almost Summer-like night in New York."
     },
     {
+      "id": "v3y1df",
+      "blogId": "ntietz",
+      "title": "Interview with a new hosting provider founder",
+      "link": "https://ntietz.com/blog/andromeda-industries-interview/?utm_source=atom&utm_medium=feed",
+      "date": "2025-10-20T00:00:00.000Z",
+      "excerpt": "Most of us use infrastructure provided by companies like DigitalOcean and AWS. Some of us choose to work on that infrastructure. And some of us are really built different and choose to build all that infrastructure from scratch. This post is a real treat for me to bring you. I met Diana through a fr..."
+    },
+    {
+      "id": "2sc1xh",
+      "blogId": "stephango",
+      "title": "Use the saw, fear the saw",
+      "link": "https://stephango.com/saw",
+      "date": "2025-10-20T00:00:00.000Z",
+      "excerpt": "When I learned to use a table saw, my teacher impressed upon me that the machine wants to cut fingers. Fear the saw! Powerful tools can do powerful things. If you want to make handmade wooden furniture you must cut wood. Your desire to have limbs and your desire to have furniture are not at odds if..."
+    },
+    {
       "id": "bh1q67",
       "blogId": "oneusefulthing",
       "title": "An Opinionated Guide to Using AI Right Now",
@@ -5960,6 +6448,14 @@
       "link": "https://www.ageofinvention.xyz/p/age-of-invention-joel-mokyrs-nobel",
       "date": "2025-10-13T20:11:37.000Z",
       "excerpt": "A triumph for history and the importance of ideas"
+    },
+    {
+      "id": "f90uxx",
+      "blogId": "worksonmymachine",
+      "title": "The Hackathon Where We Mostly Just Talked",
+      "link": "https://worksonmymachine.ai/p/the-hackathon-where-we-mostly-just",
+      "date": "2025-10-13T17:29:31.000Z",
+      "excerpt": "Architectural Control at Agent Velocity"
     },
     {
       "id": "5w8e9n",
@@ -6048,6 +6544,14 @@
       "link": "https://www.everythingisbullshit.blog/p/utilitarianism-is-bullshit",
       "date": "2025-10-07T13:02:30.000Z",
       "excerpt": "According to google, utilitarianism is “the doctrine that an action is right insofar as it promotes happiness, and that the greatest happiness of the greatest number should be the guiding principle of conduct.”"
+    },
+    {
+      "id": "ptyyc9",
+      "blogId": "thebasecamp",
+      "title": "Toronto Talk",
+      "link": "https://thebasecamp.substack.com/p/toronto-talk",
+      "date": "2025-10-06T13:45:30.000Z",
+      "excerpt": "Full transcript and video below of my talk for the Toronto Society, September 24, 2026."
     },
     {
       "id": "hoatto",
@@ -6194,6 +6698,14 @@
       "excerpt": "The protocol is the API."
     },
     {
+      "id": "ksd0br",
+      "blogId": "worksonmymachine",
+      "title": "How Do You Speak Pidgin To A Probability Distribution?",
+      "link": "https://worksonmymachine.ai/p/how-do-you-speak-pidgin-to-a-probability",
+      "date": "2025-09-25T13:56:04.000Z",
+      "excerpt": "Why We Still Need Frameworks When AI Can Build Everything"
+    },
+    {
       "id": "xm3l0h",
       "blogId": "kyla",
       "title": "Who's Getting Rich Off Your Attention?",
@@ -6242,6 +6754,14 @@
       "excerpt": "The beginning of a new school year is a unique time in every kid’s life. A time full of expectations, and equal amounts of trepidation and excitement. The same could be said for their parents, which is why I was struck by this list of suggestions that a lower school head wrote for a back-to-school n..."
     },
     {
+      "id": "qdt01",
+      "blogId": "davidoks",
+      "title": "Social media is a demonic force in the world",
+      "link": "https://davidoks.blog/p/social-media-demonic",
+      "date": "2025-09-17T03:35:39.000Z",
+      "excerpt": "Thoughts on recent events"
+    },
+    {
       "id": "xkfngd",
       "blogId": "strangeloopcanon",
       "title": "Prediction is hard, especially about the future",
@@ -6282,6 +6802,30 @@
       "excerpt": "no IRBs necessary!"
     },
     {
+      "id": "6vq6x6",
+      "blogId": "ntietz",
+      "title": "Custom for designing, off-the-shelf for shipping",
+      "link": "https://ntietz.com/blog/custom-for-designing-offtheshelf-for-shipping/?utm_source=atom&utm_medium=feed",
+      "date": "2025-09-15T00:00:00.000Z",
+      "excerpt": "As software engineers, we're paid to write really cool type annotations solve problems. Usually we do this by taking a bunch of different pieces and putting them together to solve the problem. Maybe you mix together a database, a queue, a web framework, and some business logic. Or maybe you design a..."
+    },
+    {
+      "id": "r2vuk8",
+      "blogId": "worksonmymachine",
+      "title": "The Only Skill That Matters Now",
+      "link": "https://worksonmymachine.ai/p/the-only-skill-that-matters-now",
+      "date": "2025-09-14T13:23:26.000Z",
+      "excerpt": "There's this restaurant in Tokyo that doesn't have a kitchen."
+    },
+    {
+      "id": "pcobk5",
+      "blogId": "thebasecamp",
+      "title": "Practice in Still Life 8: The Desert Philosopher",
+      "link": "https://thebasecamp.substack.com/p/practice-in-still-life-8-the-desert",
+      "date": "2025-09-12T22:18:52.000Z",
+      "excerpt": "An introduction to Evagrius Ponticus (c. 345–399 AD), and his teachings on afflictive and virtuous thinking, put into the service of contemplation, transformation, and spiritual protection."
+    },
+    {
       "id": "o0dbj7",
       "blogId": "kneelingbus",
       "title": "Foreground Noise",
@@ -6320,6 +6864,30 @@
       "link": "https://jwmason.org/slackwire/at-the-international-economy-a-future-of-open-borders/",
       "date": "2025-09-08T22:09:56.000Z",
       "excerpt": "(I am an occasional contributor to roundtables of economists in the magazine The International Economy. The latest roundtable invited contributors to imagine some unexpected development we might see over the next decade – “an outside-the-box speculation on matters that to-day seem improbable, if not..."
+    },
+    {
+      "id": "k0g5d6",
+      "blogId": "davidoks",
+      "title": "The crisis of central banking is structural",
+      "link": "https://davidoks.blog/p/central-banking-crisis",
+      "date": "2025-09-07T23:48:08.000Z",
+      "excerpt": "Fiscal dominance is our future"
+    },
+    {
+      "id": "1ng85h",
+      "blogId": "worksonmymachine",
+      "title": "The Tmux Menagerie",
+      "link": "https://worksonmymachine.ai/p/the-tmux-menagerie",
+      "date": "2025-09-07T13:15:31.000Z",
+      "excerpt": "On Sessions, Dreams, and the Art of Parallel Agentic Programming"
+    },
+    {
+      "id": "vqtqhu",
+      "blogId": "thebasecamp",
+      "title": "Speaking in Toronto",
+      "link": "https://thebasecamp.substack.com/p/speaking-in-toronto",
+      "date": "2025-09-05T20:22:16.000Z",
+      "excerpt": "I’ll be in Toronto giving a talk on September 24 as part of the Toronto Society's Viaduct speakers series for this fall. Details and tickets below."
     },
     {
       "id": "nbow0a",
@@ -6426,6 +6994,14 @@
       "excerpt": "Discovering Girard in a Maximum-Security World"
     },
     {
+      "id": "wepmu6",
+      "blogId": "worksonmymachine",
+      "title": "The Cause of, and the Solution to, All Your Team's Problems",
+      "link": "https://worksonmymachine.ai/p/the-cause-of-and-the-solution-to",
+      "date": "2025-08-28T15:28:20.000Z",
+      "excerpt": "So there's this developer."
+    },
+    {
       "id": "fw71ic",
       "blogId": "personalcanon",
       "title": "how to expand the market for literature (and literary criticism)",
@@ -6448,14 +7024,6 @@
       "link": "https://aiascendant.com/p/walter-and-other-stories",
       "date": "2025-08-26T15:46:37.000Z",
       "excerpt": "An August grab bag of delights. Well, divertissements."
-    },
-    {
-      "id": "tvmacw",
-      "blogId": "openquestions",
-      "title": "You Don't Need an AI Policy. You Need Two.",
-      "link": "https://openquestionsblog.substack.com/p/you-dont-need-an-ai-policy-you-need",
-      "date": "2025-08-26T13:16:28.000Z",
-      "excerpt": "One policy to preserve the take-home essay, another to explore the frontiers of education"
     },
     {
       "id": "kqg78h",
@@ -6490,6 +7058,14 @@
       "excerpt": "A personal take on how expats and immigrants differ in their goals, lifestyles, and impact on the places they live."
     },
     {
+      "id": "d78gfa",
+      "blogId": "thebasecamp",
+      "title": "Practice in Still Life 7: The Craft of Contemplation",
+      "link": "https://thebasecamp.substack.com/p/practice-in-still-life-7-the-craft",
+      "date": "2025-08-21T22:09:23.000Z",
+      "excerpt": "An investigation into philosophy and contemplative prayer through the works of Dionysius the Areopagite and the anonymous fourteenth-century English author of The Cloud of Unknowing"
+    },
+    {
       "id": "qbywbe",
       "blogId": "kudmitry",
       "title": "Change and Adversity",
@@ -6504,6 +7080,14 @@
       "link": "https://www.everythingisbullshit.blog/p/bullshit-links-august-2025",
       "date": "2025-08-19T13:01:46.000Z",
       "excerpt": "I had a blast talking to Chris Williamson on Modern Wisdom for the second time (you can watch here or listen here)."
+    },
+    {
+      "id": "91h6li",
+      "blogId": "ntietz",
+      "title": "Visualizing distributions with pepperoni pizza (and javascript)",
+      "link": "https://ntietz.com/blog/visualizing-distributions-with-pepperoni-pizza/?utm_source=atom&utm_medium=feed",
+      "date": "2025-08-18T00:00:00.000Z",
+      "excerpt": "There's a pizza shop near me that serves a normal pizza. I mean, they distribute the toppings in a normal way. They're not uniform at all. The toppings are random, but not the way I want. The colloquial understanding of \"random\" is kind of the Platonic ideal of a pizza: slightly chaotic but things a..."
     },
     {
       "id": "gxbzm1",
@@ -6594,6 +7178,14 @@
       "excerpt": "Vibe code is legacy code by Steve Krouse"
     },
     {
+      "id": "vfnwxz",
+      "blogId": "stephango",
+      "title": "If you're remote, ramble",
+      "link": "https://stephango.com/ramblings",
+      "date": "2025-07-31T00:00:00.000Z",
+      "excerpt": "A tip for remote teams of 2-10 people. Create a personal “ramblings” channel for each teammate in your team’s chat app of choice. Ramblings channels let everyone share what’s on their mind without cluttering group channels. Think of them as personal journals or microblogs inside your team’s chat app..."
+    },
+    {
       "id": "jojo3t",
       "blogId": "kneelingbus",
       "title": "Slop as a Way of Life",
@@ -6664,6 +7256,14 @@
       "link": "https://ploum.net/2025-07-23-linux_desktop4.html",
       "date": "2025-07-23T00:00:00.000Z",
       "excerpt": "20 years of Linux on the Desktop (part 4) Previously in \"20 years of Linux on the Deskop\": After contributing to the launch of Ubuntu as the \"perfect Linux desktop\", Ploum realises that Ubuntu is drifting away from both Debian and GNOME. In the meantime, mobile computing threatens to make the deskto..."
+    },
+    {
+      "id": "3lodfx",
+      "blogId": "ntietz",
+      "title": "Covers as a way of learning music and code",
+      "link": "https://ntietz.com/blog/covers-as-a-way-of-learning/?utm_source=atom&utm_medium=feed",
+      "date": "2025-07-21T00:00:00.000Z",
+      "excerpt": "When you're just getting started with music, you have so many skills to learn. You have to be able to play your instrument and express yourself through it. You need to know the style you're playing, and its idioms and conventions. You may want to record your music, and need all the skills that come..."
     },
     {
       "id": "46pz5u",
@@ -6784,6 +7384,14 @@
       "link": "https://www.ben-evans.com/benedictevans/2025/6/9/generative-ais-metrics-question",
       "date": "2025-06-09T13:15:31.000Z",
       "excerpt": "With every platform shift, we want to measure the growth but we’re confused about what to measure. That’s partly a problem of data and definitions, but it’s really a question about what this is going to be."
+    },
+    {
+      "id": "153yxz",
+      "blogId": "fromjason",
+      "title": "The bliss of good enough— an ode to my moka pot",
+      "link": "https://fromjason.xyz/p/notebook/the-bliss-of-good-enough-an-ode-to-my-moka-pot/",
+      "date": "2025-06-05T00:00:00.000Z",
+      "excerpt": "The bliss of good enough— an ode to my moka pot It's early and unpleasant, and I am woefully uncaffinated. I brave my way through my small apartment towards the kitchen. My back and my left hip ache. I am getting older; crankier. The steady march of time is steadily kicking my ass, a situation I am..."
     },
     {
       "id": "8c5f9p",
@@ -7090,6 +7698,14 @@
       "excerpt": "The Coal Conquest, Part II"
     },
     {
+      "id": "izh12t",
+      "blogId": "fromjason",
+      "title": "The future of social media",
+      "link": "https://fromjason.xyz/p/notebook/the-future-of-social-media/",
+      "date": "2025-02-04T00:00:00.000Z",
+      "excerpt": "The future of social media Imagine a world, in the not-so-distant future, where anyone can launch a fully functional social media platform with a few clicks and a credit card. From a menu of options, you choose the primary media type (video, microblog, photos, etc.) and basic functionality. You can..."
+    },
+    {
       "id": "66tzef",
       "blogId": "everythingisbullshit",
       "title": "AI Doomerism Is Bullshit",
@@ -7104,6 +7720,14 @@
       "link": "https://maggieappleton.com/2025-01-deepseek/",
       "date": "2025-01-26T10:00:35.000Z",
       "excerpt": "If you're not distressingly embedded in the torrent of AI news on Twixxer like I reluctantly am, you might not know what DeepSeek is yet. Bless you."
+    },
+    {
+      "id": "okjbwu",
+      "blogId": "fromjason",
+      "title": "OpenAI's “Operator” is Facebook's “like” button",
+      "link": "https://fromjason.xyz/p/notebook/openai-s-operator-is-facebook-s-like-button/",
+      "date": "2025-01-23T00:00:00.000Z",
+      "excerpt": "OpenAI's “Operator” is Facebook's “like” button Remember when Facebook convinced us that our websites needed a \"like\" button in the late aughts? Few, if any, of us at the time knew what Facebook was up to. We all sort of just obliged, and by 2010, tens of millions of websites installed the bit of Ja..."
     },
     {
       "id": "d1pfiz",
@@ -7162,6 +7786,14 @@
       "excerpt": "The Convivial Society: Vol. 5, No. 14"
     },
     {
+      "id": "nkyo8d",
+      "blogId": "fromjason",
+      "title": "The Computational Web",
+      "link": "https://fromjason.xyz/p/notebook/the-computational-web/",
+      "date": "2024-12-11T00:00:00.000Z",
+      "excerpt": "The Computational Web This note is a placeholder for a potentially longer, more in-depth essay I hope to publish in the future. Decentralized social media, like blockchain and crypto, promises to topple old power structures and hand the Internet back to the people. But the Internet runs on a stack o..."
+    },
+    {
       "id": "17ywgy",
       "blogId": "sivers",
       "title": "Why are my best friends Jewish?",
@@ -7192,6 +7824,22 @@
       "link": "https://sive.rs/f3",
       "date": "2024-12-05T00:00:00.000Z",
       "excerpt": "According to statistics, I’m in the final third of my life. (I don’t expect to beat the odds, because I inherited a cancer-creating genetic disorder.) So maybe it’s the final quarter. It helps me let go of what I don’t want badly enough. Can I die happy without it? Yeah. So nevermind. share my life..."
+    },
+    {
+      "id": "zbjtud",
+      "blogId": "stephango",
+      "title": "Self-guaranteeing promises",
+      "link": "https://stephango.com/self-guarantee",
+      "date": "2024-12-03T00:00:00.000Z",
+      "excerpt": "Companies break promises all the time. A self-guaranteeing promise is verifiable and non-reversible. It does not require you to trust anyone. File over app is a self-guaranteeing promise. If files are in your control, in an open format, you can use those files in another app at any time. Not an expo..."
+    },
+    {
+      "id": "4x7o0b",
+      "blogId": "fromjason",
+      "title": "Bluesky may have the juice, but we don't have to drink the Kool-Aid",
+      "link": "https://fromjason.xyz/p/notebook/bluesky-may-have-the-juice-but-we-don-t-have-to-drink-the-kool-aid/",
+      "date": "2024-11-28T00:00:00.000Z",
+      "excerpt": "Bluesky may have the juice, but we don't have to drink the Kool-Aid Any marketing guru with a Substack and a Udemy course will tell you that your brand should have a mission and an enemy; make your customer the hero, and you play the role of sherpa. I know this not only because I'm a marketer (derog..."
     },
     {
       "id": "i9t8mi",
@@ -7234,12 +7882,28 @@
       "excerpt": "There was no shortage of trees"
     },
     {
+      "id": "3wh5qz",
+      "blogId": "fromjason",
+      "title": "Meta's Toaster Problem",
+      "link": "https://fromjason.xyz/p/notebook/meta-s-toaster-problem/",
+      "date": "2024-10-03T00:00:00.000Z",
+      "excerpt": "Meta's Toaster Problem Meta has a toaster problem in that Meta does not sell toasters. Remember the guy who tried to build a toaster by sourcing all its raw materials? His name was Thomas Thwaites, and by his own account, the project was a spectacular failure. It turns out it's very hard to build a..."
+    },
+    {
       "id": "fta4i3",
       "blogId": "arpitrage",
       "title": "Measuring Housing Regulations at Scale",
       "link": "https://arpitrage.substack.com/p/measuring-housing-regulations-at",
       "date": "2024-09-15T15:18:48.000Z",
       "excerpt": "What AI-Generated Data Show about Rent Extraction and Exclusionary Zoning"
+    },
+    {
+      "id": "5f1lzu",
+      "blogId": "fromjason",
+      "title": "Data Piggy",
+      "link": "https://fromjason.xyz/p/notebook/data-piggy/",
+      "date": "2024-09-12T00:00:00.000Z",
+      "excerpt": "Data Piggy Dear Internet, It has come to my attention that people are calling Venture Capitalists \"data piggies,” and I for one am appalled. Sure, the definition of a data piggy is a tech sector Venture Capitalist who stuffs their little piggy faces on people's private information until their little..."
     },
     {
       "id": "z0gkcd",
@@ -7298,6 +7962,14 @@
       "excerpt": "How Property Taxes Could Restore Housing Affordability for Young Families"
     },
     {
+      "id": "22lymm",
+      "blogId": "stephango",
+      "title": "What can we remove?",
+      "link": "https://stephango.com/remove",
+      "date": "2024-06-28T00:00:00.000Z",
+      "excerpt": "Our bias is to always add more. More rules, more process, more code, more features, more stuff. Interdependencies proliferate, and gradually strangle us. Systems want to grow and grow, but without pruning, they collapse. Slowly, then spectacularly. When a piece of trash drifts across the beach, it i..."
+    },
+    {
       "id": "6qhqt3",
       "blogId": "ageofinvention",
       "title": "Age of Invention: The Dutch Salten Age",
@@ -7346,6 +8018,14 @@
       "excerpt": "Why a Popular Anti-Suburban Thesis Doesn't Hold Up"
     },
     {
+      "id": "52y3cp",
+      "blogId": "stephango",
+      "title": "Love is freedom",
+      "link": "https://stephango.com/love",
+      "date": "2024-05-09T00:00:00.000Z",
+      "excerpt": "Love is magic, it defies explanation. To the most rational and logical among us, this may be confusing. Its elusiveness is its significance. Love isn’t an illusion to be broken, but a miracle to bask in. Not everything needs to be understood to be appreciated. You are the audience, and the magician...."
+    },
+    {
       "id": "l8ntri",
       "blogId": "oliverhartwich",
       "title": "Belt and Road for New Zealand (NewstalkZB)",
@@ -7378,6 +8058,14 @@
       "excerpt": "Here’s a riddle. There was a product in the seventeenth century that was universally considered a necessity as important as grain and fuel. Controlling the source of this product was one of the first priorities for many a military campaign, and sometimes even a motivation for starting a war. Improve..."
     },
     {
+      "id": "8gzzat",
+      "blogId": "stephango",
+      "title": "Earth is becoming sentient",
+      "link": "https://stephango.com/earth",
+      "date": "2024-02-26T00:00:00.000Z",
+      "excerpt": "The edge of a sheet of paper slices through the tip of your finger and blood begins to flow from the wound. This injury, as small as it may be, must be repaired. Blood cells rush to the site, clotting, scabbing, healing. You never asked for it, but a few days later your finger is as good as new. It..."
+    },
+    {
       "id": "x7453q",
       "blogId": "oliverhartwich",
       "title": "Does the common law deal with climate policy? (The Platform)",
@@ -7392,6 +8080,14 @@
       "link": "https://arpitrage.substack.com/p/unlock-a-housing-boom-through-depreciation",
       "date": "2024-02-13T13:01:23.000Z",
       "excerpt": "How Financial Frictions are holding back Housing and Taxes can Help"
+    },
+    {
+      "id": "omuu45",
+      "blogId": "stephango",
+      "title": "100% user-supported",
+      "link": "https://stephango.com/vcware",
+      "date": "2024-02-10T00:00:00.000Z",
+      "excerpt": "Why Obsidian is 100% user-supported and not backed by venture capital investors: We want to stay small, we don’t need to hire lots of people We follow strict principles that we do not want to compromise Our users are happy to support us, we don’t need VC money Obsidian will not exist forever, no app..."
     },
     {
       "id": "wn51ic",
@@ -7416,6 +8112,30 @@
       "link": "https://arpitrage.substack.com/p/the-bronze-trade-origins-of-cities",
       "date": "2024-01-23T13:01:34.000Z",
       "excerpt": "Why Metals Explain The Rise of Civilization"
+    },
+    {
+      "id": "mg7fja",
+      "blogId": "stephango",
+      "title": "Choose optimism",
+      "link": "https://stephango.com/optimism",
+      "date": "2023-12-30T00:00:00.000Z",
+      "excerpt": "Around the age of twenty-two I realized that my worldview had been deeply imbued with pessimism and cynicism. It was the culture I grew up in. A hostility to new ideas, to anything that strays from the norm. An assumption that if things can go wrong, they will go wrong — that malice is pervasive. On..."
+    },
+    {
+      "id": "y95b5l",
+      "blogId": "stephango",
+      "title": "Pain is information",
+      "link": "https://stephango.com/pain",
+      "date": "2023-11-09T00:00:00.000Z",
+      "excerpt": "As a child, you touched something hot, and it burned you. That pain gave you a piece of information: be careful touching hot things. When you sign up to run a marathon, you are signing up for pain. But whether or not you keep running is up to you. It’s been said that “pain is inevitable but sufferin..."
+    },
+    {
+      "id": "miolc8",
+      "blogId": "stephango",
+      "title": "Quality software deserves your hard‑earned cash",
+      "link": "https://stephango.com/quality-software",
+      "date": "2023-10-27T00:00:00.000Z",
+      "excerpt": "Quality software from independent makers is like quality food from the farmer’s market. A jar of handmade organic jam is not the same as mass-produced corn syrup-laden jam from the supermarket. Industrial fruit jam is filled with cheap ingredients and shelf stabilizers. Industrial software is filled..."
     },
     {
       "id": "l3gh9a",
