@@ -1028,11 +1028,11 @@ a { color: inherit; text-decoration: none; }
 
 .month-header {
   font-family: var(--serif);
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 400;
   margin-bottom: 0.75rem;
   padding-bottom: 0.6rem;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
 }
 
 .archive-list {
@@ -1042,14 +1042,14 @@ a { color: inherit; text-decoration: none; }
 
 .archive-item {
   display: grid;
-  grid-template-columns: 80px 1fr auto;
-  gap: 1.5rem;
+  grid-template-columns: 70px 1fr auto;
+  gap: 1.25rem;
   align-items: baseline;
-  padding: 0.8rem 0;
+  padding: 0.75rem 0;
   border-bottom: 1px solid var(--rule);
   text-decoration: none;
   color: inherit;
-  transition: padding-left 0.25s ease;
+  transition: transform 0.2s ease;
 }
 
 .archive-item:last-child {
@@ -1057,12 +1057,12 @@ a { color: inherit; text-decoration: none; }
 }
 
 .archive-item:hover {
-  padding-left: 3px;
+  transform: translateX(3px);
 }
 
 .archive-date {
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.78rem;
+  font-weight: 400;
   color: var(--ink-faint);
 }
 
@@ -1071,11 +1071,11 @@ a { color: inherit; text-decoration: none; }
 }
 
 .archive-title {
-  font-family: var(--serif);
-  font-size: 1rem;
-  font-weight: 500;
+  font-family: 'Fraunces', serif;
+  font-size: 0.95rem;
+  font-weight: 400;
   line-height: 1.35;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .archive-item:hover .archive-title {
@@ -1095,21 +1095,26 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.2rem 0.5rem;
-  border: 1.5px solid;
   white-space: nowrap;
 }
 
-.archive-category.tech { border-color: var(--tech); color: var(--tech); }
-.archive-category.life { border-color: var(--life); color: var(--life); }
-.archive-category.culture { border-color: var(--culture); color: var(--culture); }
-.archive-category.design { border-color: var(--design); color: var(--design); }
-.archive-category.finance { border-color: var(--finance); color: var(--finance); }
-.archive-category.economics { border-color: var(--economics); color: var(--economics); }
-.archive-category.history { border-color: var(--history); color: var(--history); }
-.archive-category.psychology { border-color: var(--psychology); color: var(--psychology); }
-.archive-category.philosophy { border-color: var(--philosophy); color: var(--philosophy); }
-.archive-category.science { border-color: var(--science); color: var(--science); }
+.archive-cat-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.archive-category.tech { color: var(--tech); }
+.archive-category.life { color: var(--life); }
+.archive-category.culture { color: var(--culture); }
+.archive-category.design { color: var(--design); }
+.archive-category.finance { color: var(--finance); }
+.archive-category.economics { color: var(--economics); }
+.archive-category.history { color: var(--history); }
+.archive-category.psychology { color: var(--psychology); }
+.archive-category.philosophy { color: var(--philosophy); }
+.archive-category.science { color: var(--science); }
 
 /* ─── Search ─── */
 .search-container {
@@ -1125,14 +1130,14 @@ a { color: inherit; text-decoration: none; }
 .search-input {
   width: 100%;
   padding: 0.8rem 1.2rem 0.8rem 3rem;
-  font-family: var(--sans);
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
   color: var(--ink);
-  background: var(--bg-soft);
-  border: 1.5px solid var(--rule);
+  background: var(--paper);
+  border: 1px solid var(--rule);
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.2s ease;
 }
 
 .search-input::placeholder {
@@ -1423,23 +1428,22 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── Today/Yesterday highlight ─── */
 .archive-item.is-fresh {
-  background: var(--bg-soft);
-  margin: 0 -0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  border-left: 2px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-left: -0.75rem;
 }
 
 /* ─── Month header editorial ─── */
 .month-header-editorial {
   display: flex;
   align-items: baseline;
-  gap: 0.6rem;
-  font-family: var(--serif);
-  font-size: 1.2rem;
-  font-weight: 700;
+  gap: 0.5rem;
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
   margin-bottom: 0.75rem;
   padding-bottom: 0.6rem;
-  border-bottom: 2.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
 }
 
 .month-header-year {

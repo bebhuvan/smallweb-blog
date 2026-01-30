@@ -117,7 +117,10 @@ function splitMonthYear(monthStr: string) {
                       <h3 class="archive-title">{post.title}</h3>
                       <p class="archive-meta">{post.blogName}</p>
                     </div>
-                    <span class={`archive-category ${post.category}`}>{post.category}</span>
+                    <span class={`archive-category ${post.category}`}>
+                      <span class="archive-cat-dot" style={`background: var(--${post.category})`}></span>
+                      {post.category}
+                    </span>
                   </a>
                 ))}
               </div>
