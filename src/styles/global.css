@@ -690,6 +690,94 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.02em;
 }
 
+/* ─── Archives Strip ─── */
+.archives-strip {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 2rem 0;
+  margin: 0.5rem 0;
+}
+
+.archives-strip-label {
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 1.5rem;
+}
+
+.archives-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--rule);
+}
+
+.archives-strip-card {
+  background: var(--paper);
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  border-top: 2px solid var(--card-accent, var(--ink));
+  transition: background 0.2s ease;
+}
+
+.archives-strip-card:hover {
+  background: var(--bg-soft);
+}
+
+.archives-strip-cat {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--card-accent);
+  margin-bottom: 0.5rem;
+}
+
+.archives-strip-cat-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.archives-strip-title {
+  font-family: 'Fraunces', serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.35;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.archives-strip-meta {
+  font-size: 0.7rem;
+  color: var(--ink-faint);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .archives-strip-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .archives-strip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 /* ─── Footer ─── */
 .footer {

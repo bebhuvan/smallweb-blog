@@ -50,6 +50,33 @@ for (const cat of allCategories) {
   categoryPosts.set(cat, catPosts);
 }
 
+// From the Archives: 5 older posts from different categories, rotating daily
+const twoWeeksAgo = new Date();
+twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
+
+const archiveCandidates = enrichedPosts.filter(p =>
+  !usedIds.has(p.id) && new Date(p.date) < twoWeeksAgo
+);
+
+// Pick 1 per category, seeded by day-of-year for daily rotation
+const archivePicks: typeof enrichedPosts = [];
+const archiveCatsUsed = new Set<string>();
+for (const cat of [...allCategories].sort((a, b) => {
+  // Rotate which categories appear first based on day
+  const ai = (allCategories.indexOf(a) + dayOfYear) % allCategories.length;
+  const bi = (allCategories.indexOf(b) + dayOfYear) % allCategories.length;
+  return ai - bi;
+})) {
+  if (archivePicks.length >= 5) break;
+  const candidate = archiveCandidates.find(p => p.category === cat && !archiveCatsUsed.has(cat));
+  if (candidate) {
+    archivePicks.push(candidate);
+    archiveCatsUsed.add(cat);
+    usedIds.add(candidate.id);
+  }
+}
+
 function formatDate(dateStr: string) {
   const date = new Date(dateStr);
   const now = new Date();
@@ -329,6 +356,25 @@ function getCatColor(cat: string) {
         </section>
       );
     })()}
+
+    {/* ── From the Archives ── */}
+    {archivePicks.length > 0 && (
+      <section class="archives-strip">
+        <div class="archives-strip-label">From the Archives</div>
+        <div class="archives-strip-grid">
+          {archivePicks.map((post) => (
+            <a href={post.link} target="_blank" rel="noopener noreferrer" class="archives-strip-card" style={`--card-accent: var(--${post.category})`}>
+              <span class="archives-strip-cat">
+                <span class="archives-strip-cat-dot" style={`background:var(--${post.category})`}></span>
+                {post.category}
+              </span>
+              <h4 class="archives-strip-title">{post.title}</h4>
+              <p class="archives-strip-meta">{post.blogName}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
 
     <div class="cut">✕</div>
 
