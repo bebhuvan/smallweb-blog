@@ -1180,6 +1180,18 @@
       ],
       "description": "Rob Henderson on luxury beliefs, evolutionary psychology, social class, and gender.",
       "proxy": true
+    },
+    {
+      "id": "andymasley",
+      "name": "Andy Masley",
+      "url": "https://andymasley.substack.com",
+      "feed": "https://andymasley.substack.com/feed",
+      "categories": [
+        "tech",
+        "philosophy"
+      ],
+      "description": "Andy Masley on AI systems, data centers, and the philosophical stakes of technology.",
+      "proxy": true
     }
   ]
 }
