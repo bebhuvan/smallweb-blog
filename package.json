@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "fetch-feeds": "node scripts/fetch-feeds.js",
-    "backfill-feeds": "node scripts/backfill-feeds.js"
+    "backfill-feeds": "node scripts/backfill-feeds.js",
+    "generate-pwa-icons": "node scripts/generate-pwa-icons.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",

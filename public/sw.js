@@ -1,4 +1,4 @@
-const CACHE_NAME = 'small-web-v1';
+const CACHE_NAME = 'small-web-v2';
 const OFFLINE_URL = '/offline';
 
 // Assets to cache immediately on install
@@ -7,6 +7,8 @@ const PRECACHE_ASSETS = [
   '/archive',
   '/blogs',
   '/about',
+  '/feed',
+  '/discover',
   '/offline',
 ];
 

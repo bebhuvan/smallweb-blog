@@ -44,6 +44,12 @@ To backfill more history (useful for feeds that cap items):
 npm run backfill-feeds
 ```
 
+Generate PNG icons for PWA and Apple touch:
+
+```bash
+npm run generate-pwa-icons
+```
+
 ## Project structure
 
 ```
