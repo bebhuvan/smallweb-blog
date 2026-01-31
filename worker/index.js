@@ -33,7 +33,15 @@ export default {
     const url = new URL(request.url);
 
     // For all requests, fetch from static assets and add security headers
-    const response = await env.ASSETS.fetch(request);
+    let response = await env.ASSETS.fetch(request);
+
+    // Handle clean URLs by falling back to /index.html
+    if (response.status === 404 && !url.pathname.includes('.')) {
+      const fallbackUrl = new URL(request.url);
+      const basePath = url.pathname.endsWith('/') ? url.pathname : `${url.pathname}/`;
+      fallbackUrl.pathname = `${basePath}index.html`;
+      response = await env.ASSETS.fetch(new Request(fallbackUrl.toString(), request));
+    }
     const contentType = response.headers.get('Content-Type') || '';
 
     // Clone response and add headers
