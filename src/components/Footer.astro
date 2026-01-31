@@ -1,12 +1,29 @@
 ---
 import blogsData from '../../data/blogs.json';
+import postsData from '../../data/cache/posts.json';
 
 const blogCount = blogsData.blogs.length;
+const postCount = postsData.posts?.length || 0;
+const lastUpdatedRaw = postsData.lastUpdated || '';
+
+function formatLastUpdated(value: string) {
+  if (!value) return 'Unknown';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return 'Unknown';
+  const datePart = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  const timePart = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: 'UTC' });
+  return `${datePart}, ${timePart} UTC`;
+}
+
+const lastUpdated = formatLastUpdated(lastUpdatedRaw);
 ---
 
 <footer class="footer">
-  <div class="footer-info"><strong>{blogCount}</strong> blogs · updated daily · no ads, ever</div>
+  <div class="footer-info">
+    <strong>{blogCount}</strong> blogs · <strong>{postCount}</strong> posts · last updated {lastUpdated} · no ads, ever
+  </div>
   <div class="footer-links">
+    <a href="/feed">Feed</a>
     <a href="/discover">Discover</a>
     <a href="/archive">Archive</a>
     <a href="/blogs">Blogroll</a>

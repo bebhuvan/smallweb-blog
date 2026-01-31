@@ -6,11 +6,19 @@ import { dirname, join } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+function parseEnvInt(value, fallback) {
+  const parsed = Number.parseInt(value || '', 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+}
+
 // Cloudflare Pages proxy URL for Substack feeds (bypasses rate limiting)
 const PROXY_URL = process.env.PROXY_URL || 'https://smallweb-rss.pages.dev/api/fetch-rss';
 
+const FEED_TIMEOUT_MS = parseEnvInt(process.env.FEED_TIMEOUT_MS, 30000);
+const DEFAULT_MAX_POSTS_PER_BLOG = parseEnvInt(process.env.MAX_POSTS_PER_BLOG, 25);
+
 const parser = new Parser({
-  timeout: 30000,
+  timeout: FEED_TIMEOUT_MS,
   headers: {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
   },
@@ -25,13 +33,13 @@ function isSubstackFeed(url) {
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 // Fetch RSS content through the Cloudflare proxy with retry logic
-async function fetchViaProxy(feedUrl, retries = 3) {
+async function fetchViaProxy(feedUrl, retries = 3, timeoutMs = FEED_TIMEOUT_MS) {
   const proxyUrl = `${PROXY_URL}?url=${encodeURIComponent(feedUrl)}`;
 
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       const response = await fetch(proxyUrl, {
-        signal: AbortSignal.timeout(30000)
+        signal: AbortSignal.timeout(timeoutMs)
       });
 
       if (response.ok) {
@@ -100,12 +108,6 @@ async function fetchPageExcerpt(url, maxLength = 300) {
 const BLOGS_PATH = join(__dirname, '../data/blogs.json');
 const CACHE_PATH = join(__dirname, '../data/cache/posts.json');
 const STATUS_PATH = join(__dirname, '../data/cache/status.json');
-const MAX_POSTS_PER_BLOG = 10;
-
-function parseEnvInt(value, fallback) {
-  const parsed = Number.parseInt(value || '', 10);
-  return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
-}
 
 const FEED_CONCURRENCY = parseEnvInt(process.env.FEED_CONCURRENCY, 8);
 const EXCERPT_CONCURRENCY = parseEnvInt(process.env.EXCERPT_CONCURRENCY, 4);
@@ -160,6 +162,67 @@ function createExcerpt(content, maxLength = 300) {
   return stripped.substring(0, maxLength).trim() + '...';
 }
 
+function normalizeDate(value) {
+  if (!value) return null;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return null;
+  return date.toISOString();
+}
+
+function inferDateFromText(text) {
+  const value = typeof text === 'string' ? text : '';
+  if (!value) return null;
+  const patterns = [
+    /(\d{4})[/-](\d{1,2})[/-](\d{1,2})/,
+    /(\d{4})(\d{2})(\d{2})/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = value.match(pattern);
+    if (!match) continue;
+    const year = Number.parseInt(match[1], 10);
+    const month = Number.parseInt(match[2], 10);
+    const day = Number.parseInt(match[3], 10);
+    if (!Number.isFinite(year) || !Number.isFinite(month) || !Number.isFinite(day)) continue;
+    const date = new Date(Date.UTC(year, month - 1, day));
+    if (!Number.isNaN(date.getTime())) return date.toISOString();
+  }
+
+  return null;
+}
+
+function offsetDate(dateIso, minutes) {
+  const date = new Date(dateIso);
+  date.setMinutes(date.getMinutes() - minutes);
+  return date.toISOString();
+}
+
+function resolvePostDate(item, feed, blog, index, existingDate) {
+  const existing = normalizeDate(existingDate);
+  if (existing) return existing;
+
+  const primary =
+    item.isoDate ||
+    item.pubDate ||
+    item.published ||
+    item.updated ||
+    item['dc:date'] ||
+    item.date;
+  const normalized = normalizeDate(primary);
+  if (normalized) return normalized;
+
+  const inferred = inferDateFromText(item.link) || inferDateFromText(item.guid);
+  if (inferred) return inferred;
+
+  if (blog.allowMissingDates) {
+    const fallback = normalizeDate(feed.lastBuildDate || feed.pubDate || feed.updated);
+    if (fallback) return offsetDate(fallback, index);
+    return offsetDate(new Date().toISOString(), index);
+  }
+
+  return null;
+}
+
 function generatePostId(blogId, title, link) {
   const str = `${blogId}-${title}-${link}`;
   let hash = 0;
@@ -188,7 +251,28 @@ async function mapWithLimit(items, limit, fn) {
   return results;
 }
 
-async function fetchFeed(blog, useProxy = false) {
+function getMaxPostsForBlog(blog) {
+  const override = Number.parseInt(blog.maxPosts, 10);
+  if (Number.isFinite(override) && override > 0) return override;
+  return DEFAULT_MAX_POSTS_PER_BLOG;
+}
+
+function shouldRetryViaProxy(error) {
+  const status = error?.statusCode || error?.status;
+  if (status && [401, 403, 408, 425, 429, 500, 502, 503, 504].includes(status)) return true;
+  const msg = String(error?.message || '');
+  return /status code 403|status code 401|status code 429|timed out|timeout|ETIMEDOUT|ECONNRESET|EAI_AGAIN|ENOTFOUND/i.test(msg);
+}
+
+async function parseFeed(blog, useProxy) {
+  if (useProxy) {
+    const rssContent = await fetchViaProxy(blog.feed);
+    return parser.parseString(rssContent);
+  }
+  return parser.parseURL(blog.feed);
+}
+
+async function fetchFeed(blog, useProxy = false, existingPostsById = new Map()) {
   const isSubstack = isSubstackFeed(blog.feed);
   const forceProxy = blog.proxy === true;
   const shouldUseProxy = useProxy || isSubstack || forceProxy;
@@ -198,19 +282,23 @@ async function fetchFeed(blog, useProxy = false) {
 
   try {
     let feed;
-    if (shouldUseProxy) {
-      // Fetch via Cloudflare proxy for Substack feeds
-      const rssContent = await fetchViaProxy(blog.feed);
-      feed = await parser.parseString(rssContent);
-    } else {
-      // Direct fetch for non-Substack feeds
-      feed = await parser.parseURL(blog.feed);
+    try {
+      feed = await parseFeed(blog, shouldUseProxy);
+    } catch (error) {
+      if (!shouldUseProxy && shouldRetryViaProxy(error)) {
+        console.log('    → Retrying via proxy after fetch error...');
+        feed = await parseFeed(blog, true);
+      } else {
+        throw error;
+      }
     }
-    const items = feed.items.slice(0, MAX_POSTS_PER_BLOG);
+
+    const maxPosts = getMaxPostsForBlog(blog);
+    const items = feed.items.slice(0, maxPosts);
     const postsRaw = await mapWithLimit(
       items,
       EXCERPT_CONCURRENCY,
-      async (item) => {
+      async (item, index) => {
         let link = item.link || blog.url;
 
         // URL Normalization for Paul Graham
@@ -229,15 +317,17 @@ async function fetchFeed(blog, useProxy = false) {
           excerpt = await fetchPageExcerpt(link);
         }
 
-        // Skip posts without proper dates - they'll pollute the feed with old content
-        const postDate = item.isoDate || item.pubDate;
+        const postId = generatePostId(blog.id, item.title || '', link);
+
+        // Skip posts without proper dates unless explicitly allowed
+        const postDate = resolvePostDate(item, feed, blog, index, existingPostsById.get(postId)?.date);
         if (!postDate) {
           console.log(`    → Skipping "${item.title?.substring(0, 40)}..." (no date)`);
           return null;
         }
 
         return {
-          id: generatePostId(blog.id, item.title || '', link),
+          id: postId,
           blogId: blog.id,
           title: decodeHtmlEntities(item.title || 'Untitled'),
           link: link,
@@ -288,6 +378,16 @@ async function main() {
   const blogsData = JSON.parse(readFileSync(BLOGS_PATH, 'utf-8'));
   const blogs = blogsData.blogs;
 
+  // Load existing cache early for stable date fallbacks
+  let existingPosts = [];
+  try {
+    const existing = JSON.parse(readFileSync(CACHE_PATH, 'utf-8'));
+    existingPosts = existing.posts || [];
+  } catch {
+    // No existing cache, start fresh
+  }
+  const existingPostsById = new Map(existingPosts.map((post) => [post.id, post]));
+
   // Separate Substack feeds from others
   const substackBlogs = blogs.filter(b => isSubstackFeed(b.feed) || b.proxy === true);
   const otherBlogs = blogs.filter(b => !isSubstackFeed(b.feed) && b.proxy !== true);
@@ -296,14 +396,14 @@ async function main() {
 
   // Fetch non-Substack feeds in parallel (they don't rate limit)
   console.log('--- Fetching non-Substack feeds in parallel ---\n');
-  const otherResults = await mapWithLimit(otherBlogs, FEED_CONCURRENCY, (blog) => fetchFeed(blog, false));
+  const otherResults = await mapWithLimit(otherBlogs, FEED_CONCURRENCY, (blog) => fetchFeed(blog, false, existingPostsById));
 
   // Fetch Substack feeds sequentially with delays (to avoid rate limiting)
   console.log('\n--- Fetching Substack feeds sequentially via proxy ---\n');
   const substackResults = [];
   for (let i = 0; i < substackBlogs.length; i++) {
     const blog = substackBlogs[i];
-    const result = await fetchFeed(blog, true);
+    const result = await fetchFeed(blog, true, existingPostsById);
     substackResults.push(result);
 
     // Add delay between Substack feeds (30 seconds) to avoid rate limiting
@@ -315,9 +415,28 @@ async function main() {
 
   const results = [...otherResults, ...substackResults];
 
-  const allPosts = results
+  const freshPosts = results
     .flatMap(r => r.posts)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  const seenIds = new Set();
+  const allPosts = [];
+
+  // Fresh posts take priority (they may have updated excerpts, etc.)
+  for (const post of freshPosts) {
+    if (!seenIds.has(post.id)) {
+      seenIds.add(post.id);
+      allPosts.push(post);
+    }
+  }
+  for (const post of existingPosts) {
+    if (!seenIds.has(post.id)) {
+      seenIds.add(post.id);
+      allPosts.push(post);
+    }
+  }
+
+  allPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   const allStatuses = results.map(r => r.status);
 

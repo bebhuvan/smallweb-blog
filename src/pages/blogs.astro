@@ -96,9 +96,7 @@ const opmlContent = generateOPML();
 
       {featuredBlog && (
         <a
-          href={featuredBlog.url}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={`/blog/${featuredBlog.id}`}
           class="blog-featured"
         >
           <div class="blog-featured-inner">
@@ -137,9 +135,7 @@ const opmlContent = generateOPML();
               <div class="blogs-grid">
                 {catBlogs.map(blog => (
                   <a
-                    href={blog.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={`/blog/${blog.id}`}
                     class="blog-card"
                   >
                     <div class="blog-card-inner">
