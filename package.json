@@ -7,7 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fetch-feeds": "node scripts/fetch-feeds.js"
+    "fetch-feeds": "node scripts/fetch-feeds.js",
+    "backfill-feeds": "node scripts/backfill-feeds.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",

@@ -38,6 +38,12 @@ To refresh feeds locally:
 npm run fetch-feeds
 ```
 
+To backfill more history (useful for feeds that cap items):
+
+```bash
+npm run backfill-feeds
+```
+
 ## Project structure
 
 ```

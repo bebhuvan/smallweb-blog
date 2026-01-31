@@ -5,34 +5,18 @@ import Footer from '../components/Footer.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
 import blogsData from '../../data/blogs.json';
 import postsData from '../../data/cache/posts.json';
+import { createBlogMap, enrichPosts } from '../lib/posts';
+import { formatDate } from '../lib/dates';
 
 const blogs = blogsData.blogs;
 const posts = postsData.posts;
 
-const blogMap = new Map(blogs.map((b) => [b.id, b]));
-
-const enrichedPosts = posts.map((post) => {
-  const blog = blogMap.get(post.blogId);
-  const category = blog?.categories?.[0];
-  return {
-    ...post,
-    blogName: blog?.name || '',
-    blogUrl: blog?.url || '',
-    category: category || 'tech',
-  };
-});
+const blogMap = createBlogMap(blogs);
+const enrichedPosts = enrichPosts(posts, blogMap);
 
 const featuredPost = enrichedPosts[0];
 const remainingPosts = enrichedPosts.slice(1);
 
-function formatDate(dateStr: string) {
-  const date = new Date(dateStr);
-  return date.toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-  });
-}
 ---
 
 <Base title="Feed — The Small Web" description="The latest posts from indie blogs curated by The Small Web. A chronological feed of independent writing.">

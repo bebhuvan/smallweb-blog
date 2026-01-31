@@ -5,6 +5,8 @@ import Footer from '../../components/Footer.astro';
 import ThemeToggle from '../../components/ThemeToggle.astro';
 import blogsData from '../../../data/blogs.json';
 import postsData from '../../../data/cache/posts.json';
+import { createBlogMap, enrichPosts } from '../../lib/posts';
+import { formatDate } from '../../lib/dates';
 
 export function getStaticPaths() {
   const categories = [
@@ -29,22 +31,17 @@ const { slug } = Astro.params;
 const { category } = Astro.props;
 
 const blogs = blogsData.blogs;
-const blogMap = new Map(blogs.map((b) => [b.id, b]));
+const blogMap = createBlogMap(blogs);
 
 const categoryBlogIds = new Set(
   blogs.filter((b) => b.categories.includes(slug as string)).map((b) => b.id)
 );
 
-const posts = postsData.posts
-  .filter((p) => categoryBlogIds.has(p.blogId))
-  .map((post) => {
-    const blog = blogMap.get(post.blogId);
-    return {
-      ...post,
-      blogName: blog?.name || '',
-      category: category.slug,
-    };
-  });
+const posts = enrichPosts(
+  postsData.posts.filter((p) => categoryBlogIds.has(p.blogId)),
+  blogMap,
+  { categoryOverride: category.slug }
+);
 
 const featuredPost = posts[0];
 const remainingPosts = posts.slice(1);
@@ -69,10 +66,6 @@ const sortedMonths = Object.keys(postsByMonth).sort((a, b) => {
   return new Date(b).getTime() - new Date(a).getTime();
 });
 
-function formatShortDate(dateStr: string) {
-  const date = new Date(dateStr);
-  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-}
 ---
 
 <Base title={`${category.name} — The Small Web`} description={category.description} jsonLd={{
@@ -101,7 +94,7 @@ function formatShortDate(dateStr: string) {
           {featuredPost && (
             <a href={featuredPost.link} target="_blank" rel="noopener noreferrer" class="asym-featured" style="margin-top: 1.5rem;">
               <h2 class="asym-featured-title">{featuredPost.title}</h2>
-              <p class="asym-featured-meta">{featuredPost.blogName} · {formatShortDate(featuredPost.date)}</p>
+              <p class="asym-featured-meta">{featuredPost.blogName} · {formatDate(featuredPost.date)}</p>
               {featuredPost.excerpt && (
                 <p class="asym-featured-excerpt">{featuredPost.excerpt}</p>
               )}
@@ -133,7 +126,7 @@ function formatShortDate(dateStr: string) {
                     rel="noopener noreferrer"
                     class="archive-item"
                   >
-                    <span class="archive-date">{formatShortDate(post.date)}</span>
+                    <span class="archive-date">{formatDate(post.date)}</span>
                     <div class="archive-content">
                       <h4 class="archive-title">{post.title}</h4>
                       <p class="archive-meta">{post.blogName}</p>

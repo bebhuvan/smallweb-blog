@@ -1,21 +1,12 @@
 ---
 import blogsData from '../../data/blogs.json';
 import postsData from '../../data/cache/posts.json';
+import { formatDateTimeUtc } from '../lib/dates';
 
 const blogCount = blogsData.blogs.length;
 const postCount = postsData.posts?.length || 0;
 const lastUpdatedRaw = postsData.lastUpdated || '';
-
-function formatLastUpdated(value: string) {
-  if (!value) return 'Unknown';
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return 'Unknown';
-  const datePart = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  const timePart = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: 'UTC' });
-  return `${datePart}, ${timePart} UTC`;
-}
-
-const lastUpdated = formatLastUpdated(lastUpdatedRaw);
+const lastUpdated = formatDateTimeUtc(lastUpdatedRaw) || 'Unknown';
 ---
 
 <footer class="footer">

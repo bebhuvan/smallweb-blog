@@ -5,25 +5,19 @@ import Footer from '../components/Footer.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
 import blogsData from '../../data/blogs.json';
 import postsData from '../../data/cache/posts.json';
+import { createBlogMap, enrichPosts } from '../lib/posts';
+import { formatDate } from '../lib/dates';
 
 const blogs = blogsData.blogs;
 const posts = postsData.posts;
 
-const blogMap = new Map(blogs.map((b) => [b.id, b]));
+const blogMap = createBlogMap(blogs);
 
 // Compute unique categories count
 const categorySet = new Set<string>();
 blogs.forEach(b => b.categories.forEach((c: string) => categorySet.add(c)));
 
-const enrichedPosts = posts.map((post) => {
-  const blog = blogMap.get(post.blogId);
-  const category = blog?.categories?.[0];
-  return {
-    ...post,
-    blogName: blog?.name || '',
-    category: category || 'tech',
-  };
-});
+const enrichedPosts = enrichPosts(posts, blogMap);
 
 // Determine today/yesterday for freshness
 const now = new Date();
@@ -53,11 +47,6 @@ enrichedPosts.forEach((post) => {
 const sortedMonths = Object.keys(postsByMonth).sort((a, b) => {
   return new Date(b).getTime() - new Date(a).getTime();
 });
-
-function formatShortDate(dateStr: string) {
-  const date = new Date(dateStr);
-  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-}
 
 function splitMonthYear(monthStr: string) {
   const parts = monthStr.split(' ');
@@ -112,7 +101,7 @@ function splitMonthYear(monthStr: string) {
                     data-author={post.blogName.toLowerCase()}
                     data-category={post.category}
                   >
-                    <span class="archive-date">{formatShortDate(post.date)}</span>
+                    <span class="archive-date">{formatDate(post.date)}</span>
                     <div class="archive-content">
                       <h3 class="archive-title">{post.title}</h3>
                       <p class="archive-meta">{post.blogName}</p>

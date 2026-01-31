@@ -2,6 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import blogsData from '../../../data/blogs.json';
 import postsData from '../../../data/cache/posts.json';
+import { createBlogMap, enrichPosts } from '../../lib/posts';
+import { formatDate } from '../../lib/dates';
 
 export function getStaticPaths() {
   return blogsData.blogs.map((blog) => ({
@@ -20,10 +22,12 @@ interface Blog {
 
 const { blog } = Astro.props as { blog: Blog };
 const blogs = blogsData.blogs;
+const blogMap = createBlogMap(blogs);
 
-const posts = postsData.posts
-  .filter((p) => p.blogId === blog.id)
-  .map((post) => ({ ...post, blogName: blog.name }));
+const posts = enrichPosts(
+  postsData.posts.filter((p) => p.blogId === blog.id),
+  blogMap
+);
 
 // Group posts by month
 type PostsByMonth = { [key: string]: typeof posts };
@@ -41,11 +45,6 @@ posts.forEach((post) => {
 const sortedMonths = Object.keys(postsByMonth).sort((a, b) => {
   return new Date(b).getTime() - new Date(a).getTime();
 });
-
-function formatShortDate(dateStr: string) {
-  const date = new Date(dateStr);
-  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-}
 
 function getInitials(name: string) {
   return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
@@ -139,7 +138,7 @@ const primaryCategory = blog.categories[0] || 'tech';
                   rel="noopener noreferrer"
                   class="archive-item"
                 >
-                  <span class="archive-date">{formatShortDate(post.date)}</span>
+                  <span class="archive-date">{formatDate(post.date)}</span>
                   <div class="archive-content">
                     <h3 class="archive-title">{post.title}</h3>
                     {post.excerpt && (
