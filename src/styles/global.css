@@ -820,6 +820,9 @@ a { color: inherit; text-decoration: none; }
     border-top: none;
     padding-top: 0;
   }
+  .archives-strip-title {
+    -webkit-line-clamp: 4;
+  }
 }
 
 
