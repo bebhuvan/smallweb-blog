@@ -1192,6 +1192,74 @@
       ],
       "description": "Andy Masley on AI systems, data centers, and the philosophical stakes of technology.",
       "proxy": true
+    },
+    {
+      "id": "helentoner",
+      "name": "Helen Toner",
+      "url": "https://helentoner.substack.com",
+      "feed": "https://helentoner.substack.com/feed",
+      "categories": [
+        "tech",
+        "economics"
+      ],
+      "description": "Helen Toner on AI policy, governance, and the economics of emerging technology.",
+      "proxy": true
+    },
+    {
+      "id": "scattershot",
+      "name": "Scattershot",
+      "url": "https://scattershot.blog",
+      "feed": "https://scattershot.blog/feed.xml",
+      "categories": [
+        "culture",
+        "philosophy"
+      ],
+      "description": "Link roundups and commentary on culture, politics, and philosophy."
+    },
+    {
+      "id": "persuasion",
+      "name": "Persuasion",
+      "url": "https://www.persuasion.community",
+      "feed": "https://www.persuasion.community/feed",
+      "categories": [
+        "culture",
+        "economics"
+      ],
+      "description": "Essays and commentary on liberalism, politics, and public culture.",
+      "proxy": true
+    },
+    {
+      "id": "nadh",
+      "name": "Kailash Nadh",
+      "url": "https://nadh.in",
+      "feed": "https://nadh.in/index.xml",
+      "categories": [
+        "tech"
+      ],
+      "description": "Kailash Nadh on software, AI, and the evolving web."
+    },
+    {
+      "id": "afterbabel",
+      "name": "After Babel",
+      "url": "https://www.afterbabel.com",
+      "feed": "https://www.afterbabel.com/feed",
+      "categories": [
+        "culture",
+        "psychology"
+      ],
+      "description": "Jon Haidt and team on how technology reshapes society and mental health.",
+      "proxy": true
+    },
+    {
+      "id": "importai",
+      "name": "Import AI",
+      "url": "https://importai.substack.com",
+      "feed": "https://importai.substack.com/feed",
+      "categories": [
+        "tech"
+      ],
+      "description": "Jack Clark’s weekly newsletter on AI research and industry.",
+      "proxy": true
     }
   ]
 }
