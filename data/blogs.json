@@ -1291,6 +1291,17 @@
         "finance"
       ],
       "description": "Alternative investment commentary, research, and market insights."
+    },
+    {
+      "id": "matt",
+      "name": "Matt Mullenweg",
+      "url": "https://ma.tt",
+      "feed": "https://ma.tt/feed/",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "description": "Essays on open source, publishing, and the web."
     }
   ]
 }

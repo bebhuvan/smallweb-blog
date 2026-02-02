@@ -45,6 +45,11 @@ const websiteJsonLd = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
 
+    <!-- Font preloads -->
+    <link rel="preload" href="/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/fraunces-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/nunito-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#D95D39" media="(prefers-color-scheme: light)" />
@@ -88,14 +93,14 @@ const websiteJsonLd = {
 
     <!-- Critical CSS for fast FCP -->
     <style is:inline>
-      :root{--bg:#FAF7F2;--ink:#2C2825;--accent:#C45A35}
+      :root{--bg:#FAF7F2;--ink:#2C2825;--accent:#C45A35;--serif:'Fraunces',Georgia,serif;--sans:'Nunito Sans',system-ui,sans-serif}
       .dark{--bg:#1A1816;--ink:#E0DCD5}
       *,*::before,*::after{box-sizing:border-box;margin:0}
-      html{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);font-size:17px}
+      html{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:17px}
       body{min-height:100vh;overflow-x:hidden}
       .page{max-width:1000px;margin:0 auto;padding:0 2.5rem}
       .masthead{padding:3.5rem 0 1.25rem}
-      .masthead-title{font-size:clamp(3.2rem,7vw,5rem);font-weight:900;line-height:0.92;letter-spacing:-0.04em}
+      .masthead-title{font-family:var(--serif);font-size:clamp(3.2rem,7vw,5rem);font-weight:900;line-height:0.92;letter-spacing:-0.04em}
     </style>
 
     <!-- Theme: prevent flash -->
