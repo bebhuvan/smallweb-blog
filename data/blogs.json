@@ -1261,6 +1261,36 @@
       ],
       "description": "Jack Clark’s weekly newsletter on AI research and industry.",
       "proxy": true
+    },
+    {
+      "id": "tessellatum",
+      "name": "Tessellatum",
+      "url": "https://tessellatum.in",
+      "feed": "https://tessellatum.in/?feed=rss2",
+      "categories": [
+        "economics"
+      ],
+      "description": "Piecing together disparate data for economic and market insights."
+    },
+    {
+      "id": "mostlyeconomics",
+      "name": "Mostly Economics",
+      "url": "https://mostlyeconomics.wordpress.com",
+      "feed": "https://mostlyeconomics.wordpress.com/feed/",
+      "categories": [
+        "economics"
+      ],
+      "description": "Research work in economics with a focus on India."
+    },
+    {
+      "id": "rcmalternatives",
+      "name": "RCM Alternatives (Attain Alternatives Blog)",
+      "url": "https://www.rcmalternatives.com/attain-alternatives-blog/",
+      "feed": "https://www.rcmalternatives.com/attain-alternatives-blog/feed/",
+      "categories": [
+        "finance"
+      ],
+      "description": "Alternative investment commentary, research, and market insights."
     }
   ]
 }
