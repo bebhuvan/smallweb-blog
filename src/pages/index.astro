@@ -22,6 +22,10 @@ const leadPick = pickFeaturedPost(enrichedPosts, blogMap, { minExcerptLength: 0 
 const leadPost = leadPick.featured || enrichedPosts[0] || null;
 if (leadPost) usedIds.add(leadPost.id);
 
+// Secondary lead: next most recent post from a different category
+const secondaryLead = enrichedPosts.find(p => !usedIds.has(p.id) && p.category !== leadPost?.category) || null;
+if (secondaryLead) usedIds.add(secondaryLead.id);
+
 // Also New: next 4 most recent posts after the lead
 const alsoNew = enrichedPosts.filter(p => !usedIds.has(p.id)).slice(0, 4);
 alsoNew.forEach(p => usedIds.add(p.id));
@@ -89,14 +93,24 @@ function getCatColor(cat: string) {
 
     <!-- Lead -->
     <section class="lead">
-      {leadPost && (
-        <a href={leadPost.link} target="_blank" rel="noopener noreferrer" class="lead-main">
-          <span class={`lead-stamp ${leadPost.category}`}>{leadPost.category} · {formatDate(leadPost.date)}</span>
-          <h2 class="lead-title">{leadPost.title}</h2>
-          <p class="lead-byline">By <strong>{leadPost.blogName}</strong> · {new URL(leadPost.blogUrl).hostname}</p>
-          {leadPost.excerpt && <p class="lead-excerpt">{leadPost.excerpt}</p>}
-        </a>
-      )}
+      <div class="lead-col">
+        {leadPost && (
+          <a href={leadPost.link} target="_blank" rel="noopener noreferrer" class="lead-main">
+            <span class={`lead-stamp ${leadPost.category}`}>{leadPost.category} · {formatDate(leadPost.date)}</span>
+            <h2 class="lead-title">{leadPost.title}</h2>
+            <p class="lead-byline">By <strong>{leadPost.blogName}</strong> · {new URL(leadPost.blogUrl).hostname}</p>
+            {leadPost.excerpt && <p class="lead-excerpt">{leadPost.excerpt}</p>}
+          </a>
+        )}
+        {secondaryLead && (
+          <a href={secondaryLead.link} target="_blank" rel="noopener noreferrer" class="lead-secondary">
+            <span class={`lead-stamp ${secondaryLead.category}`}>{secondaryLead.category} · {formatDate(secondaryLead.date)}</span>
+            <h3 class="lead-secondary-title">{secondaryLead.title}</h3>
+            <p class="lead-byline">By <strong>{secondaryLead.blogName}</strong> · {new URL(secondaryLead.blogUrl).hostname}</p>
+            {secondaryLead.excerpt && <p class="lead-excerpt">{secondaryLead.excerpt}</p>}
+          </a>
+        )}
+      </div>
       <div class="lead-side">
         <div class="lead-side-label">Also New</div>
         {alsoNew.map((post) => (
