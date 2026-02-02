@@ -16,6 +16,9 @@ const PROXY_URL = process.env.PROXY_URL || 'https://smallweb-rss.pages.dev/api/f
 
 const FEED_TIMEOUT_MS = parseEnvInt(process.env.FEED_TIMEOUT_MS, 30000);
 const DEFAULT_MAX_POSTS_PER_BLOG = parseEnvInt(process.env.MAX_POSTS_PER_BLOG, 25);
+const MAX_FUTURE_DAYS = parseEnvInt(process.env.MAX_FUTURE_DAYS, 2);
+const RECENT_PRIMARY_DAYS = parseEnvInt(process.env.RECENT_PRIMARY_DAYS, 7);
+const INFERRED_DATE_MAX_DIFF_DAYS = parseEnvInt(process.env.INFERRED_DATE_MAX_DIFF_DAYS, 30);
 
 const parser = new Parser({
   timeout: FEED_TIMEOUT_MS,
@@ -149,6 +152,61 @@ function decodeHtmlEntities(text) {
     .replace(/&rsquo;/g, '\u2019');
 }
 
+const TRACKING_PARAMS = new Set([
+  'utm_source',
+  'utm_medium',
+  'utm_campaign',
+  'utm_term',
+  'utm_content',
+  'utm_id',
+  'utm_reader',
+  'utm_source_platform',
+  'utm_marketing_tactic',
+  'utm_pubref',
+  'gclid',
+  'fbclid',
+  'mc_cid',
+  'mc_eid',
+  'ref',
+  'ref_src',
+  'source',
+  'sourceid',
+  '_hsenc',
+  '_hsmi',
+  'mkt_tok',
+]);
+
+function normalizeUrl(rawUrl, baseUrl) {
+  if (!rawUrl) return '';
+  try {
+    const url = baseUrl ? new URL(rawUrl, baseUrl) : new URL(rawUrl);
+    url.hash = '';
+    for (const key of [...url.searchParams.keys()]) {
+      const lower = key.toLowerCase();
+      if (lower.startsWith('utm_') || TRACKING_PARAMS.has(lower)) {
+        url.searchParams.delete(key);
+      }
+    }
+    const query = url.searchParams.toString();
+    url.search = query ? `?${query}` : '';
+    if (url.pathname.length > 1 && url.pathname.endsWith('/')) {
+      url.pathname = url.pathname.slice(0, -1);
+    }
+    return url.toString();
+  } catch {
+    return String(rawUrl).trim();
+  }
+}
+
+function normalizeGuid(rawGuid, baseUrl) {
+  if (!rawGuid) return '';
+  const guid = String(rawGuid).trim();
+  if (guid.startsWith('http://') || guid.startsWith('https://')) {
+    return normalizeUrl(guid, baseUrl);
+  }
+  return guid;
+}
+
 function stripHtml(html) {
   if (!html) return '';
   const withoutTags = html.replace(/<[^>]*>/g, '');
@@ -197,10 +255,25 @@ function offsetDate(dateIso, minutes) {
   return date.toISOString();
 }
 
-function resolvePostDate(item, feed, blog, index, existingDate) {
-  const existing = normalizeDate(existingDate);
-  if (existing) return existing;
+function isFutureDate(dateIso, nowMs) {
+  if (!dateIso) return false;
+  const dateMs = new Date(dateIso).getTime();
+  if (Number.isNaN(dateMs)) return false;
+  return dateMs - nowMs > MAX_FUTURE_DAYS * 24 * 60 * 60 * 1000;
+}
 
+function shouldPreferInferredDate(primaryIso, inferredIso, nowMs) {
+  if (!primaryIso || !inferredIso) return false;
+  const primaryMs = new Date(primaryIso).getTime();
+  const inferredMs = new Date(inferredIso).getTime();
+  if (Number.isNaN(primaryMs) || Number.isNaN(inferredMs)) return false;
+  if (inferredMs >= primaryMs) return false;
+  const diffDays = Math.abs(primaryMs - inferredMs) / (1000 * 60 * 60 * 24);
+  const primaryAgeDays = Math.abs(nowMs - primaryMs) / (1000 * 60 * 60 * 24);
+  return diffDays >= INFERRED_DATE_MAX_DIFF_DAYS && primaryAgeDays <= RECENT_PRIMARY_DAYS;
+}
+
+function resolvePostDate(item, feed, blog, index, existingDate, nowMs) {
   const primary =
     item.isoDate ||
     item.pubDate ||
@@ -208,23 +281,34 @@ function resolvePostDate(item, feed, blog, index, existingDate) {
     item.updated ||
     item['dc:date'] ||
     item.date;
-  const normalized = normalizeDate(primary);
-  if (normalized) return normalized;
-
+  const normalizedPrimary = normalizeDate(primary);
   const inferred = inferDateFromText(item.link) || inferDateFromText(item.guid);
-  if (inferred) return inferred;
+  const normalizedInferred = normalizeDate(inferred);
+  const existing = normalizeDate(existingDate);
+
+  const primaryValid = normalizedPrimary && !isFutureDate(normalizedPrimary, nowMs);
+  const inferredValid = normalizedInferred && !isFutureDate(normalizedInferred, nowMs);
+  const existingValid = existing && !isFutureDate(existing, nowMs);
+
+  if (primaryValid && inferredValid && shouldPreferInferredDate(normalizedPrimary, normalizedInferred, nowMs)) {
+    return normalizedInferred;
+  }
+
+  if (primaryValid) return normalizedPrimary;
+  if (inferredValid) return normalizedInferred;
+  if (existingValid) return existing;
 
   if (blog.allowMissingDates) {
     const fallback = normalizeDate(feed.lastBuildDate || feed.pubDate || feed.updated);
-    if (fallback) return offsetDate(fallback, index);
-    return offsetDate(new Date().toISOString(), index);
+    const fallbackBase = fallback && !isFutureDate(fallback, nowMs) ? fallback : new Date(nowMs).toISOString();
+    return offsetDate(fallbackBase, index);
   }
 
   return null;
 }
 
-function generatePostId(blogId, title, link) {
-  const str = `${blogId}-${title}-${link}`;
+function generatePostId(blogId, key) {
+  const str = `${blogId}-${key}`;
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     const char = str.charCodeAt(i);
@@ -232,6 +316,23 @@ function generatePostId(blogId, title, link) {
     hash = hash & hash;
   }
   return Math.abs(hash).toString(36);
+}
+
+function getPostKey({ link, guid, title, baseUrl }) {
+  const canonicalLink = normalizeUrl(link, baseUrl);
+  if (canonicalLink) return canonicalLink;
+  const normalizedGuid = normalizeGuid(guid, baseUrl);
+  if (normalizedGuid) return normalizedGuid;
+  return (title || '').trim();
+}
+
+function makeLookupKey(blogId, postKey) {
+  return `${blogId}::${postKey}`;
+}
+
+function getLookupKeyForPost(post) {
+  const key = getPostKey({ link: post.link, title: post.title }) || post.id;
+  return makeLookupKey(post.blogId, key);
 }
 
 async function mapWithLimit(items, limit, fn) {
@@ -272,13 +373,14 @@ async function parseFeed(blog, useProxy) {
   return parser.parseURL(blog.feed);
 }
 
-async function fetchFeed(blog, useProxy = false, existingPostsById = new Map()) {
+async function fetchFeed(blog, useProxy = false, existingPostsByKey = new Map()) {
   const isSubstack = isSubstackFeed(blog.feed);
   const forceProxy = blog.proxy === true;
   const shouldUseProxy = useProxy || isSubstack || forceProxy;
 
   console.log(`Fetching: ${blog.name} (${blog.feed})${shouldUseProxy ? ' [via proxy]' : ''}`);
   const startTime = Date.now();
+  const nowMs = Date.now();
 
   try {
     let feed;
@@ -299,7 +401,7 @@ async function fetchFeed(blog, useProxy = false, existingPostsById = new Map()) 
       items,
       EXCERPT_CONCURRENCY,
       async (item, index) => {
-        let link = item.link || blog.url;
+        let link = item.link || item.guid || blog.url;
 
         // URL Normalization for Paul Graham
         if (blog.id === 'paulgraham' && link.includes('turbifycdn.com')) {
@@ -307,6 +409,16 @@ async function fetchFeed(blog, useProxy = false, existingPostsById = new Map()) 
           // Strip query params which are often added by the CDN
           link = link.split('?')[0];
         }
+
+        const canonicalLink = normalizeUrl(link, blog.url);
+        const postKey = getPostKey({
+          link: canonicalLink || link,
+          guid: item.guid,
+          title: item.title || '',
+          baseUrl: blog.url,
+        }) || `${blog.id}-item-${index}`;
+        const lookupKey = makeLookupKey(blog.id, postKey);
+        const existingPost = existingPostsByKey.get(lookupKey);
 
         // Try to get excerpt from RSS first
         let excerpt = createExcerpt(item.contentSnippet || item.content || item.summary || '');
@@ -317,10 +429,16 @@ async function fetchFeed(blog, useProxy = false, existingPostsById = new Map()) 
           excerpt = await fetchPageExcerpt(link);
         }
 
-        const postId = generatePostId(blog.id, item.title || '', link);
+        if (!excerpt && existingPost?.excerpt) {
+          excerpt = existingPost.excerpt;
+        }
+
+        const resolvedLink = canonicalLink || link;
+        const postId = existingPost?.id || generatePostId(blog.id, postKey);
+        const title = decodeHtmlEntities(item.title || existingPost?.title || 'Untitled');
 
         // Skip posts without proper dates unless explicitly allowed
-        const postDate = resolvePostDate(item, feed, blog, index, existingPostsById.get(postId)?.date);
+        const postDate = resolvePostDate(item, feed, blog, index, existingPost?.date, nowMs);
         if (!postDate) {
           console.log(`    → Skipping "${item.title?.substring(0, 40)}..." (no date)`);
           return null;
@@ -329,8 +447,8 @@ async function fetchFeed(blog, useProxy = false, existingPostsById = new Map()) 
         return {
           id: postId,
           blogId: blog.id,
-          title: decodeHtmlEntities(item.title || 'Untitled'),
-          link: link,
+          title,
+          link: resolvedLink,
           date: postDate,
           excerpt,
         };
@@ -386,7 +504,12 @@ async function main() {
   } catch {
     // No existing cache, start fresh
   }
-  const existingPostsById = new Map(existingPosts.map((post) => [post.id, post]));
+  const existingPostsByKey = new Map(
+    existingPosts.map((post) => [
+      makeLookupKey(post.blogId, getPostKey({ link: post.link, title: post.title })),
+      post,
+    ])
+  );
 
   // Separate Substack feeds from others
   const substackBlogs = blogs.filter(b => isSubstackFeed(b.feed) || b.proxy === true);
@@ -396,14 +519,14 @@ async function main() {
 
   // Fetch non-Substack feeds in parallel (they don't rate limit)
   console.log('--- Fetching non-Substack feeds in parallel ---\n');
-  const otherResults = await mapWithLimit(otherBlogs, FEED_CONCURRENCY, (blog) => fetchFeed(blog, false, existingPostsById));
+  const otherResults = await mapWithLimit(otherBlogs, FEED_CONCURRENCY, (blog) => fetchFeed(blog, false, existingPostsByKey));
 
   // Fetch Substack feeds sequentially with delays (to avoid rate limiting)
   console.log('\n--- Fetching Substack feeds sequentially via proxy ---\n');
   const substackResults = [];
   for (let i = 0; i < substackBlogs.length; i++) {
     const blog = substackBlogs[i];
-    const result = await fetchFeed(blog, true, existingPostsById);
+    const result = await fetchFeed(blog, true, existingPostsByKey);
     substackResults.push(result);
 
     // Add delay between Substack feeds (30 seconds) to avoid rate limiting
@@ -419,19 +542,21 @@ async function main() {
     .flatMap(r => r.posts)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-  const seenIds = new Set();
+  const seenLookupKeys = new Set();
   const allPosts = [];
 
   // Fresh posts take priority (they may have updated excerpts, etc.)
   for (const post of freshPosts) {
-    if (!seenIds.has(post.id)) {
-      seenIds.add(post.id);
+    const lookupKey = getLookupKeyForPost(post);
+    if (!seenLookupKeys.has(lookupKey)) {
+      seenLookupKeys.add(lookupKey);
       allPosts.push(post);
     }
   }
   for (const post of existingPosts) {
-    if (!seenIds.has(post.id)) {
-      seenIds.add(post.id);
+    const lookupKey = getLookupKeyForPost(post);
+    if (!seenLookupKeys.has(lookupKey)) {
+      seenLookupKeys.add(lookupKey);
       allPosts.push(post);
     }
   }
