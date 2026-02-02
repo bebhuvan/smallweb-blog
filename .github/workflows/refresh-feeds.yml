@@ -6,6 +6,8 @@ on:
     - cron: '0 3 * * *'
     # Evening: 12 PM UTC (5:30 PM IST)
     - cron: '0 12 * * *'
+    # Night: 9 AM UTC (1 AM PT / 2:30 PM IST)
+    - cron: '0 9 * * *'
   workflow_dispatch: # Manual trigger from GitHub Actions page
 
 permissions:
