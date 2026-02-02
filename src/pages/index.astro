@@ -77,6 +77,12 @@ for (const cat of [...allCategories].sort((a, b) => {
 function getCatColor(cat: string) {
   return `var(--${cat})`;
 }
+
+function truncateText(text: string, max: number) {
+  const trimmed = text.trim();
+  if (trimmed.length <= max) return trimmed;
+  return `${trimmed.slice(0, max).trimEnd()}...`;
+}
 ---
 
 <Base title="The Small Web — Curated Indie Blogs" jsonLd={{
@@ -100,7 +106,7 @@ function getCatColor(cat: string) {
             <span class={`lead-stamp ${leadPost.category}`}>{leadPost.category} · {formatDate(leadPost.date)}</span>
             <h2 class="lead-title">{leadPost.title}</h2>
             <p class="lead-byline">By <strong>{leadPost.blogName}</strong> · {new URL(leadPost.blogUrl).hostname}</p>
-            {leadPost.excerpt && <p class="lead-excerpt">{leadPost.excerpt}</p>}
+            {leadPost.excerpt && <p class="lead-excerpt">{truncateText(leadPost.excerpt, 220)}</p>}
           </a>
         )}
         {secondaryLead && (
@@ -108,7 +114,7 @@ function getCatColor(cat: string) {
             <span class={`lead-stamp ${secondaryLead.category}`}>{secondaryLead.category} · {formatDate(secondaryLead.date)}</span>
             <h3 class="lead-secondary-title">{secondaryLead.title}</h3>
             <p class="lead-byline">By <strong>{secondaryLead.blogName}</strong> · {new URL(secondaryLead.blogUrl).hostname}</p>
-            {secondaryLead.excerpt && <p class="lead-excerpt">{secondaryLead.excerpt}</p>}
+            {secondaryLead.excerpt && <p class="lead-excerpt">{truncateText(secondaryLead.excerpt, 200)}</p>}
           </a>
         )}
       </div>
@@ -146,14 +152,13 @@ function getCatColor(cat: string) {
               <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
                 <h4 class="category-col-featured-title">{lp[0].title}</h4>
                 <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
-                {lp[0].excerpt && <p class="category-col-featured-excerpt">{lp[0].excerpt}</p>}
+                {lp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(lp[0].excerpt, 160)}</p>}
               </a>
             )}
             {lp.slice(1).map((post) => (
               <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
                 <h4 class="category-col-item-title">{post.title}</h4>
                 <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
               </a>
             ))}
           </div>
@@ -167,14 +172,13 @@ function getCatColor(cat: string) {
               <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
                 <h4 class="category-col-featured-title">{rp[0].title}</h4>
                 <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
-                {rp[0].excerpt && <p class="category-col-featured-excerpt">{rp[0].excerpt}</p>}
+                {rp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(rp[0].excerpt, 160)}</p>}
               </a>
             )}
             {rp.slice(1).map((post) => (
               <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
                 <h4 class="category-col-item-title">{post.title}</h4>
                 <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
               </a>
             ))}
           </div>
@@ -215,14 +219,13 @@ function getCatColor(cat: string) {
               <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
                 <h4 class="category-col-featured-title">{lp[0].title}</h4>
                 <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
-                {lp[0].excerpt && <p class="category-col-featured-excerpt">{lp[0].excerpt}</p>}
+                {lp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(lp[0].excerpt, 160)}</p>}
               </a>
             )}
             {lp.slice(1).map((post) => (
               <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
                 <h4 class="category-col-item-title">{post.title}</h4>
                 <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
               </a>
             ))}
           </div>
@@ -236,14 +239,13 @@ function getCatColor(cat: string) {
               <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
                 <h4 class="category-col-featured-title">{rp[0].title}</h4>
                 <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
-                {rp[0].excerpt && <p class="category-col-featured-excerpt">{rp[0].excerpt}</p>}
+                {rp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(rp[0].excerpt, 160)}</p>}
               </a>
             )}
             {rp.slice(1).map((post) => (
               <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
                 <h4 class="category-col-item-title">{post.title}</h4>
                 <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
               </a>
             ))}
           </div>
@@ -269,14 +271,13 @@ function getCatColor(cat: string) {
               <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
                 <h4 class="category-col-featured-title">{lp[0].title}</h4>
                 <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
-                {lp[0].excerpt && <p class="category-col-featured-excerpt">{lp[0].excerpt}</p>}
+                {lp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(lp[0].excerpt, 160)}</p>}
               </a>
             )}
             {lp.slice(1).map((post) => (
               <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
                 <h4 class="category-col-item-title">{post.title}</h4>
                 <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
               </a>
             ))}
           </div>
@@ -290,14 +291,13 @@ function getCatColor(cat: string) {
               <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
                 <h4 class="category-col-featured-title">{rp[0].title}</h4>
                 <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
-                {rp[0].excerpt && <p class="category-col-featured-excerpt">{rp[0].excerpt}</p>}
+                {rp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(rp[0].excerpt, 160)}</p>}
               </a>
             )}
             {rp.slice(1).map((post) => (
               <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
                 <h4 class="category-col-item-title">{post.title}</h4>
                 <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
               </a>
             ))}
           </div>
@@ -323,14 +323,13 @@ function getCatColor(cat: string) {
               <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
                 <h4 class="category-col-featured-title">{lp[0].title}</h4>
                 <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
-                {lp[0].excerpt && <p class="category-col-featured-excerpt">{lp[0].excerpt}</p>}
+                {lp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(lp[0].excerpt, 160)}</p>}
               </a>
             )}
             {lp.slice(1).map((post) => (
               <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
                 <h4 class="category-col-item-title">{post.title}</h4>
                 <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
               </a>
             ))}
           </div>
@@ -344,14 +343,13 @@ function getCatColor(cat: string) {
               <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
                 <h4 class="category-col-featured-title">{rp[0].title}</h4>
                 <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
-                {rp[0].excerpt && <p class="category-col-featured-excerpt">{rp[0].excerpt}</p>}
+                {rp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(rp[0].excerpt, 160)}</p>}
               </a>
             )}
             {rp.slice(1).map((post) => (
               <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
                 <h4 class="category-col-item-title">{post.title}</h4>
                 <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
               </a>
             ))}
           </div>
@@ -372,7 +370,7 @@ function getCatColor(cat: string) {
               </span>
               <h4 class="archives-strip-title">{post.title}</h4>
               {post.excerpt && (
-                <p class="archives-strip-excerpt">{post.excerpt}</p>
+                <p class="archives-strip-excerpt">{truncateText(post.excerpt, 140)}</p>
               )}
               <p class="archives-strip-meta">{post.blogName}</p>
             </a>
@@ -399,14 +397,13 @@ function getCatColor(cat: string) {
               <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
                 <h4 class="category-col-featured-title">{lp[0].title}</h4>
                 <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
-                {lp[0].excerpt && <p class="category-col-featured-excerpt">{lp[0].excerpt}</p>}
+                {lp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(lp[0].excerpt, 160)}</p>}
               </a>
             )}
             {lp.slice(1).map((post) => (
               <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
                 <h4 class="category-col-item-title">{post.title}</h4>
                 <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
               </a>
             ))}
           </div>
@@ -420,14 +417,13 @@ function getCatColor(cat: string) {
               <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
                 <h4 class="category-col-featured-title">{rp[0].title}</h4>
                 <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
-                {rp[0].excerpt && <p class="category-col-featured-excerpt">{rp[0].excerpt}</p>}
+                {rp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(rp[0].excerpt, 160)}</p>}
               </a>
             )}
             {rp.slice(1).map((post) => (
               <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
                 <h4 class="category-col-item-title">{post.title}</h4>
                 <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-                {post.excerpt && <p class="category-col-item-excerpt">{post.excerpt}</p>}
               </a>
             ))}
           </div>
