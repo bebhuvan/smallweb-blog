@@ -258,12 +258,13 @@
       "name": "Arts & Letters Daily",
       "url": "https://www.aldaily.com",
       "feed": "https://www.aldaily.com/feed/",
-      "categories": [
-        "culture"
-      ],
-      "description": "Curated essays on ideas, philosophy, literature, and the arts.",
-      "allowMissingDates": true
-    },
+    "categories": [
+      "culture"
+    ],
+    "description": "Curated essays on ideas, philosophy, literature, and the arts.",
+    "allowMissingDates": true,
+    "ignoreLinkDateInference": true
+  },
     {
       "id": "sentiers",
       "name": "Sentiers",

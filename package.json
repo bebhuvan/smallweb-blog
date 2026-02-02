@@ -9,12 +9,15 @@
     "astro": "astro",
     "fetch-feeds": "node scripts/fetch-feeds.js",
     "backfill-feeds": "node scripts/backfill-feeds.js",
+    "migrate-db": "node scripts/migrate-db.js",
+    "export-cache": "node scripts/export-cache.js",
     "generate-pwa-icons": "node scripts/generate-pwa-icons.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.12",
+    "better-sqlite3": "^9.6.0",
     "rss-parser": "^3.13.0",
     "tailwindcss": "^4.1.18"
   },

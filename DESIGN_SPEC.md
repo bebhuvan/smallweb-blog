@@ -33,17 +33,31 @@ src/
     feed.astro, status.astro  — Leave as-is
 data/
   blogs.json                  — Blog entries: { id, name, url, feed, categories[], description }
-  cache/posts.json            — Posts: { id, blogId, title, link, date, excerpt }
+  smallweb.db                 — SQLite data store (fetch/build time)
+  cache/posts.json            — Posts: { id, blogId, title, link, date, excerpt } (exported)
 ```
 
 ## Data Shape (for reference)
+
+Cache JSON is exported from SQLite, but the Astro data shape is unchanged.
 
 ```typescript
 // Post (from data/cache/posts.json)
 { id: string, blogId: string, title: string, link: string, date: string, excerpt: string }
 
 // Blog (from data/blogs.json)
-{ id: string, name: string, url: string, feed: string, categories: string[], description: string }
+{
+  id: string,
+  name: string,
+  url: string,
+  feed: string,
+  categories: string[],
+  description: string,
+  proxy?: boolean,
+  allowMissingDates?: boolean,
+  ignoreLinkDateInference?: boolean,
+  maxPosts?: number
+}
 
 // Enriched post (computed in frontmatter)
 { ...post, blogName: string, blogUrl: string, category: string }

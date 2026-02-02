@@ -14,10 +14,10 @@ The Small Web aggregates RSS feeds from 100+ independent blogs across tech, desi
 
 ```
 GitHub Actions (twice daily)
-  → fetch RSS/Atom feeds → cache as JSON
+  → fetch RSS/Atom feeds → write to SQLite → export cache JSON
 
 Astro static build
-  → reads cached JSON → generates pages
+  → reads cached JSON (from SQLite) → generates pages
 
 Cloudflare Workers
   → serves the static site
@@ -38,6 +38,18 @@ To refresh feeds locally:
 npm run fetch-feeds
 ```
 
+To migrate existing cache JSON into SQLite (first-time setup):
+
+```bash
+npm run migrate-db
+```
+
+To export cache JSON from SQLite:
+
+```bash
+npm run export-cache
+```
+
 To backfill more history (useful for feeds that cap items):
 
 ```bash
@@ -54,7 +66,8 @@ npm run generate-pwa-icons
 
 ```
 data/blogs.json        ← curated blog list (source of truth)
-data/cache/            ← generated feed data (posts.json, status.json)
+data/smallweb.db       ← SQLite data store (fetch/build time)
+data/cache/            ← exported feed data (posts.json, status.json)
 scripts/               ← feed fetching pipeline
 src/pages/             ← Astro pages
 src/components/        ← Astro components
@@ -81,6 +94,11 @@ Edit `data/blogs.json`:
 
 Add `"proxy": true` for Substack or feeds that need the RSS proxy.
 
+Optional blog fields:
+- `"allowMissingDates": true` — allow fallback dates when feeds omit them
+- `"ignoreLinkDateInference": true` — don't infer dates from outbound links (curation feeds)
+- `"maxPosts": 50` — override per-feed post cap
+
 ## Deployment
 
 Pushes to `main` trigger a build and deploy via GitHub Actions. Feeds refresh on a twice-daily schedule.
@@ -88,3 +106,7 @@ Pushes to `main` trigger a build and deploy via GitHub Actions. Feeds refresh on
 ---
 
 Built by [Bhuvanesh](https://twitter.com/bebhuvan).
+
+## License
+
+MIT. See `LICENSE`.

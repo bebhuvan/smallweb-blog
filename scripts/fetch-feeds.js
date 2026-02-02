@@ -2,6 +2,14 @@ import Parser from 'rss-parser';
 import { readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import {
+  openDb,
+  upsertBlogs,
+  loadPosts,
+  hasFetchLogs,
+  upsertPosts,
+  insertFetchLogs,
+} from './lib/db.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -249,6 +257,35 @@ function inferDateFromText(text) {
   return null;
 }
 
+function normalizeHost(rawUrl) {
+  try {
+    const url = new URL(rawUrl);
+    let host = url.hostname.toLowerCase();
+    if (host.startsWith('www.')) host = host.slice(4);
+    return host;
+  } catch {
+    return '';
+  }
+}
+
+function hostsMatch(a, b) {
+  if (!a || !b) return false;
+  if (a === b) return true;
+  if (a.endsWith(`.${b}`)) return true;
+  if (b.endsWith(`.${a}`)) return true;
+  return false;
+}
+
+function shouldInferDateFromLink(blog, link, guid) {
+  if (blog?.ignoreLinkDateInference) return false;
+  if (blog?.allowLinkDateInference) return true;
+  const candidate = link || guid || '';
+  const blogHost = normalizeHost(blog?.url || blog?.feed || '');
+  const linkHost = normalizeHost(candidate);
+  if (!blogHost || !linkHost) return false;
+  return hostsMatch(blogHost, linkHost);
+}
+
 function offsetDate(dateIso, minutes) {
   const date = new Date(dateIso);
   date.setMinutes(date.getMinutes() - minutes);
@@ -282,9 +319,11 @@ function resolvePostDate(item, feed, blog, index, existingDate, nowMs) {
     item['dc:date'] ||
     item.date;
   const normalizedPrimary = normalizeDate(primary);
-  const inferred = inferDateFromText(item.link) || inferDateFromText(item.guid);
+  const inferred = shouldInferDateFromLink(blog, item.link, item.guid)
+    ? (inferDateFromText(item.link) || inferDateFromText(item.guid))
+    : null;
   const normalizedInferred = normalizeDate(inferred);
-  const existing = normalizeDate(existingDate);
+  const existing = blog?.ignoreLinkDateInference ? null : normalizeDate(existingDate);
 
   const primaryValid = normalizedPrimary && !isFutureDate(normalizedPrimary, nowMs);
   const inferredValid = normalizedInferred && !isFutureDate(normalizedInferred, nowMs);
@@ -496,13 +535,34 @@ async function main() {
   const blogsData = JSON.parse(readFileSync(BLOGS_PATH, 'utf-8'));
   const blogs = blogsData.blogs;
 
-  // Load existing cache early for stable date fallbacks
-  let existingPosts = [];
+  const db = openDb();
+  upsertBlogs(db, blogs);
+
+  // Load existing posts early for stable date fallbacks
+  let existingPosts = loadPosts(db);
+  let existingCacheLastUpdated = '';
   try {
     const existing = JSON.parse(readFileSync(CACHE_PATH, 'utf-8'));
-    existingPosts = existing.posts || [];
+    existingCacheLastUpdated = existing.lastUpdated || '';
+    const seedPosts = existing.posts || [];
+    if (existingPosts.length === 0 && seedPosts.length > 0) {
+      upsertPosts(db, seedPosts, existing.lastUpdated || new Date().toISOString());
+      existingPosts = seedPosts;
+    }
   } catch {
     // No existing cache, start fresh
+  }
+
+  if (!hasFetchLogs(db)) {
+    try {
+      const statusSeed = JSON.parse(readFileSync(STATUS_PATH, 'utf-8'));
+      const seedLogs = statusSeed.feeds || [];
+      if (seedLogs.length > 0) {
+        insertFetchLogs(db, seedLogs);
+      }
+    } catch {
+      // No status cache, skip
+    }
   }
   const existingPostsByKey = new Map(
     existingPosts.map((post) => [
@@ -565,17 +625,28 @@ async function main() {
 
   const allStatuses = results.map(r => r.status);
 
+  const nowIso = new Date().toISOString();
+
+  upsertPosts(db, allPosts, nowIso);
+  insertFetchLogs(db, allStatuses);
+
+  const healthyCount = allStatuses.filter(s => s.status === 'ok').length;
+  const cacheLastUpdated = healthyCount === 0 && existingCacheLastUpdated
+    ? existingCacheLastUpdated
+    : nowIso;
+  const cachePosts = allPosts.length > 0 ? allPosts : existingPosts;
+
   const cache = {
-    lastUpdated: new Date().toISOString(),
-    posts: allPosts,
+    lastUpdated: cacheLastUpdated,
+    posts: cachePosts,
   };
 
   const statusData = {
-    lastUpdated: new Date().toISOString(),
+    lastUpdated: nowIso,
     feeds: allStatuses,
     summary: {
       total: allStatuses.length,
-      healthy: allStatuses.filter(s => s.status === 'ok').length,
+      healthy: healthyCount,
       errors: allStatuses.filter(s => s.status === 'error').length,
     }
   };
@@ -587,6 +658,8 @@ async function main() {
   console.log(`Total posts fetched: ${allPosts.length}`);
   console.log(`Feeds healthy: ${statusData.summary.healthy}/${statusData.summary.total}`);
   console.log(`Cache updated: ${cache.lastUpdated}`);
+
+  db.close();
 }
 
 main().catch(console.error);

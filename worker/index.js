@@ -19,8 +19,8 @@ const cacheHeaders = {
   svg: 'public, max-age=86400',
   png: 'public, max-age=86400',
   ico: 'public, max-age=86400',
-  html: 'public, max-age=0, must-revalidate, s-maxage=0',
-  xml: 'public, max-age=3600',
+  html: 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400',
+  xml: 'public, max-age=0, s-maxage=3600, stale-while-revalidate=21600, stale-if-error=21600',
 };
 
 function getCacheHeader(pathname) {
