@@ -19,7 +19,7 @@ const cacheHeaders = {
   svg: 'public, max-age=86400',
   png: 'public, max-age=86400',
   ico: 'public, max-age=86400',
-  html: 'public, max-age=0, must-revalidate',
+  html: 'public, max-age=0, must-revalidate, s-maxage=0',
   xml: 'public, max-age=3600',
 };
 

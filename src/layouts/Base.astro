@@ -21,6 +21,7 @@ const {
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://smallweb.blog';
 const canonicalURL = new URL(Astro.url.pathname, siteUrl);
 const ogImageURL = new URL(ogImage, siteUrl).toString();
+const swVersion = import.meta.env.PUBLIC_SW_VERSION || new Date().toISOString().slice(0, 10);
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
@@ -115,7 +116,7 @@ const websiteJsonLd = {
     <script is:inline>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
+          navigator.serviceWorker.register(`/sw.js?v=${swVersion}`)
             .then(reg => console.log('SW registered'))
             .catch(err => console.log('SW registration failed:', err));
         });

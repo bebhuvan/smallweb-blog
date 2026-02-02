@@ -5,7 +5,7 @@ import Footer from '../../components/Footer.astro';
 import ThemeToggle from '../../components/ThemeToggle.astro';
 import blogsData from '../../../data/blogs.json';
 import postsData from '../../../data/cache/posts.json';
-import { createBlogMap, enrichPosts } from '../../lib/posts';
+import { createBlogMap, enrichPosts, pickFeaturedPost } from '../../lib/posts';
 import { formatDate } from '../../lib/dates';
 
 export function getStaticPaths() {
@@ -43,8 +43,9 @@ const posts = enrichPosts(
   { categoryOverride: category.slug }
 );
 
-const featuredPost = posts[0];
-const remainingPosts = posts.slice(1);
+const { featured: featuredPost, remaining: remainingPosts } = pickFeaturedPost(posts, blogMap, {
+  minExcerptLength: 80,
+});
 
 // Find a post with a long excerpt for the quote block
 const quotePost = posts.find((p) => p.excerpt && p.excerpt.length > 120);

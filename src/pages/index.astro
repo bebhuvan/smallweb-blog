@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
 import blogsData from '../../data/blogs.json';
 import postsData from '../../data/cache/posts.json';
-import { createBlogMap, enrichPosts } from '../lib/posts';
+import { createBlogMap, enrichPosts, pickFeaturedPost } from '../lib/posts';
 import { formatDate } from '../lib/dates';
 
 const blogs = blogsData.blogs;
@@ -17,8 +17,9 @@ const enrichedPosts = enrichPosts(posts, blogMap);
 // Track used IDs
 const usedIds = new Set<string>();
 
-// Lead post: most recent
-const leadPost = enrichedPosts[0];
+// Lead post: guard against odd dates
+const leadPick = pickFeaturedPost(enrichedPosts, blogMap, { minExcerptLength: 0 });
+const leadPost = leadPick.featured || enrichedPosts[0] || null;
 if (leadPost) usedIds.add(leadPost.id);
 
 // Also New: next 4 most recent posts after the lead

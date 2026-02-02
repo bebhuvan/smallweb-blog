@@ -1,4 +1,5 @@
-const CACHE_NAME = 'small-web-v2';
+const SW_VERSION = new URL(self.location).searchParams.get('v') || 'v3';
+const CACHE_NAME = `small-web-${SW_VERSION}`;
 const OFFLINE_URL = '/offline';
 
 // Assets to cache immediately on install
