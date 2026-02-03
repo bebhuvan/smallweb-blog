@@ -1171,6 +1171,16 @@
       "proxy": true
     },
     {
+      "id": "miketech",
+      "name": "Mike's Tech",
+      "url": "https://mike.tech",
+      "feed": "https://mike.tech/rss.xml",
+      "categories": [
+        "tech"
+      ],
+      "description": "Mike on AI, business, and programming in a transforming software landscape."
+    },
+    {
       "id": "davidoks",
       "name": "David Oks",
       "url": "https://davidoks.blog",
