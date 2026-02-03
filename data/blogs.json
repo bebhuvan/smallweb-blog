@@ -1117,6 +1117,17 @@
       "proxy": true
     },
     {
+      "id": "bignewsletter",
+      "name": "BIG by Matt Stoller",
+      "url": "https://www.thebignewsletter.com",
+      "feed": "https://www.thebignewsletter.com/feed",
+      "categories": [
+        "economics"
+      ],
+      "description": "Matt Stoller on monopoly power, antitrust, and the politics of corporate consolidation.",
+      "proxy": true
+    },
+    {
       "id": "oliverhartwich",
       "name": "Oliver Marc Hartwich",
       "url": "http://olivermhartwich.blogspot.com",
