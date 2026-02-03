@@ -26,8 +26,8 @@ if (leadPost) usedIds.add(leadPost.id);
 const secondaryLead = enrichedPosts.find(p => !usedIds.has(p.id) && p.category !== leadPost?.category) || null;
 if (secondaryLead) usedIds.add(secondaryLead.id);
 
-// Also New: next 4 most recent posts after the lead
-const alsoNew = enrichedPosts.filter(p => !usedIds.has(p.id)).slice(0, 4);
+// Also New: next 5 most recent posts after the lead
+const alsoNew = enrichedPosts.filter(p => !usedIds.has(p.id)).slice(0, 5);
 alsoNew.forEach(p => usedIds.add(p.id));
 
 // Featured excerpt: pick the post with the longest excerpt from prose-heavy categories
@@ -132,6 +132,11 @@ function truncateText(text: string, max: number) {
         ))}
       </div>
     </section>
+
+    <!-- See all link -->
+    <div class="see-all-link">
+      <a href="/feed">See all articles →</a>
+    </div>
 
     <!-- Cut -->
     <div class="cut">✂</div>

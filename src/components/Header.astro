@@ -2,9 +2,10 @@
 interface Props {
   currentPath?: string;
   currentCategory?: string;
+  showCategoryNav?: boolean;
 }
 
-const { currentPath = '/', currentCategory } = Astro.props;
+const { currentPath = '/', currentCategory, showCategoryNav = true } = Astro.props;
 
 const categories = [
   { slug: 'tech', name: 'Tech', color: '--tech' },
@@ -53,17 +54,19 @@ function getIssueString() {
   <hr class="masthead-rule">
 </header>
 
-<nav class="nav">
-  <a href="/" class:list={["stamp", isHome && !currentCategory ? "active" : ""]}>All</a>
-  {categories.map((cat) => {
-    const isActive = currentCategory === cat.slug || currentPath === `/category/${cat.slug}`;
-    return (
-      <a href={`/category/${cat.slug}`} class:list={["stamp", isActive ? "active" : ""]}>
-        <span class="stamp-dot" style={`background:var(${cat.color})`}></span>{cat.name}
-      </a>
-    );
-  })}
-</nav>
+{showCategoryNav && (
+  <nav class="nav">
+    <a href="/" class:list={["stamp", isHome && !currentCategory ? "active" : ""]}>All</a>
+    {categories.map((cat) => {
+      const isActive = currentCategory === cat.slug || currentPath === `/category/${cat.slug}`;
+      return (
+        <a href={`/category/${cat.slug}`} class:list={["stamp", isActive ? "active" : ""]}>
+          <span class="stamp-dot" style={`background:var(${cat.color})`}></span>{cat.name}
+        </a>
+      );
+    })}
+  </nav>
+)}
 
 <style>
   .masthead-title a {

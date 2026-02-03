@@ -17,7 +17,7 @@ blogs.forEach(b => b.categories.forEach((c: string) => categorySet.add(c)));
   <ThemeToggle />
 
   <div class="page">
-    <Header currentPath="/about" />
+    <Header currentPath="/about" showCategoryNav={false} />
 
     <main class="about-main">
       <div class="editorial-header">
