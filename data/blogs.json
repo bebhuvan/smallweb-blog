@@ -1344,6 +1344,58 @@
         "culture"
       ],
       "description": "Essays on open source, publishing, and the web."
+    },
+    {
+      "id": "mrzepczynski",
+      "name": "Disciplined Systematic Global Macro Views",
+      "url": "https://mrzepczynski.blogspot.com",
+      "feed": "https://mrzepczynski.blogspot.com/feeds/posts/default",
+      "categories": [
+        "finance"
+      ],
+      "description": "Global macro investing, market structure, and decision-making in speculative markets."
+    },
+    {
+      "id": "damodaran",
+      "name": "Musings on Markets",
+      "url": "https://aswathdamodaran.blogspot.com",
+      "feed": "https://aswathdamodaran.blogspot.com/feeds/posts/default",
+      "categories": [
+        "finance"
+      ],
+      "description": "Valuation, corporate finance, and market analysis from Aswath Damodaran."
+    },
+    {
+      "id": "byfire",
+      "name": "At Night We Walk in Circles",
+      "url": "https://byfire.substack.com",
+      "feed": "https://byfire.substack.com/feed",
+      "proxy": true,
+      "categories": [
+        "finance"
+      ],
+      "description": "Quantitative finance and risk management — quantitative when possible, qualitative when necessary."
+    },
+    {
+      "id": "ritholtz",
+      "name": "The Big Picture",
+      "url": "https://ritholtz.com",
+      "feed": "https://ritholtz.com/feed",
+      "categories": [
+        "finance"
+      ],
+      "description": "Macro perspective on capital markets, economy, geopolitics, and technology from Barry Ritholtz."
+    },
+    {
+      "id": "investmentecosystem",
+      "name": "Investment Ecosystem Clippings",
+      "url": "https://investmentecosystem.substack.com",
+      "feed": "https://investmentecosystem.substack.com/feed",
+      "proxy": true,
+      "categories": [
+        "finance"
+      ],
+      "description": "Curated snippets and insights from the financial ecosystem by Tom Brakke."
     }
   ]
 }
