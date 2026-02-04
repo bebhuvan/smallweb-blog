@@ -138,6 +138,7 @@ const EXCERPT_CONCURRENCY = parseEnvInt(process.env.EXCERPT_CONCURRENCY, 4);
 
 function decodeHtmlEntities(text) {
   if (!text) return '';
+  if (typeof text !== 'string') text = String(text);
   return text
     // Numeric entities (decimal)
     .replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(dec))
@@ -217,6 +218,7 @@ function normalizeGuid(rawGuid, baseUrl) {
 
 function stripHtml(html) {
   if (!html) return '';
+  if (typeof html !== 'string') html = String(html);
   const withoutTags = html.replace(/<[^>]*>/g, '');
   const decoded = decodeHtmlEntities(withoutTags);
   return decoded.replace(/\s+/g, ' ').trim();
