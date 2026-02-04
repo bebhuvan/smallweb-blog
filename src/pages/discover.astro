@@ -36,13 +36,12 @@ const categoryNames: Record<string, string> = {
   <ThemeToggle />
 
   <div class="page">
-    <Header currentPath="/discover" />
+    <Header currentPath="/discover" showCategoryNav={false} />
 
     <main class="discover-main">
-      <div class="editorial-header" style="text-align: center;">
+      <div class="discover-header">
         <h1 class="editorial-title">Discover</h1>
         <p class="editorial-sub">Swipe through hand-picked reads from indie blogs</p>
-        <hr class="editorial-rule" style="margin-left: auto; margin-right: auto; max-width: 200px;">
       </div>
 
       <div class="filter-ribbon">
@@ -82,25 +81,27 @@ const categoryNames: Record<string, string> = {
         </div>
       </div>
 
-      <div class="discover-hint">
-        <kbd>←</kbd> <kbd>→</kbd> Browse <span class="hint-sep">·</span>
-        <kbd>Enter</kbd> Read
-      </div>
-
-      <div class="discover-actions">
-        <button class="action-btn next" id="nextBtn" title="Next">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 6L6 18M6 6l12 12"/>
-          </svg>
-        </button>
-        <button class="action-btn read" id="readBtn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-            <polyline points="15,3 21,3 21,9"/>
-            <line x1="10" y1="14" x2="21" y2="3"/>
-          </svg>
-          Read Article
-        </button>
+      <div class="discover-controls">
+        <div class="discover-actions">
+          <button class="action-btn next" id="nextBtn" title="Skip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+            Skip
+          </button>
+          <button class="action-btn read" id="readBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15,3 21,3 21,9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            Read Article
+          </button>
+        </div>
+        <div class="discover-hint">
+          <kbd>←</kbd> <kbd>→</kbd> Browse <span class="hint-sep">·</span>
+          <kbd>Enter</kbd> Read
+        </div>
       </div>
     </main>
 
@@ -179,11 +180,30 @@ const categoryNames: Record<string, string> = {
       }
     }
 
+    function showCardContent(card) {
+      card.querySelectorAll('.discover-badge, .discover-title, .discover-excerpt, .discover-meta').forEach(el => {
+        el.style.setProperty('visibility', 'visible', 'important');
+        el.style.setProperty('opacity', '1', 'important');
+      });
+    }
+
+    function hideCardContent(card) {
+      card.querySelectorAll('.discover-badge, .discover-title, .discover-excerpt, .discover-meta').forEach(el => {
+        el.style.removeProperty('visibility');
+        el.style.removeProperty('opacity');
+      });
+    }
+
     function updateStackPositions() {
       const cards = Array.from(stack.querySelectorAll('.discover-card')).reverse();
       cards.forEach((card, i) => {
         if (i < stackPositions.length) {
           setCardPosition(card, stackPositions[i]);
+        }
+        if (i === 0) {
+          showCardContent(card);
+        } else {
+          hideCardContent(card);
         }
       });
     }
@@ -301,6 +321,9 @@ const categoryNames: Record<string, string> = {
         if (card !== topCard && i > 0 && i <= stackPositions.length) {
           setCardPosition(card, stackPositions[i - 1]);
         }
+        if (card !== topCard) {
+          i === 1 ? showCardContent(card) : hideCardContent(card);
+        }
       });
       setTimeout(() => {
         topCard.remove();
@@ -326,33 +349,134 @@ const categoryNames: Record<string, string> = {
       const card = e.target.closest('.discover-card');
       if (card && card === getTopCard()) handleRead();
     });
+    const hintEl = document.querySelector('.discover-hint');
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') handleNext();
       if (e.key === 'Enter') handleRead();
+      if (hintEl && !hintEl.classList.contains('visible')) {
+        hintEl.classList.add('visible');
+      }
     });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchCurrentX = 0;
+    let isSwiping = false;
+
+    stack.addEventListener('touchstart', (e) => {
+      if (isAnimating) return;
+      const topCard = getTopCard();
+      if (!topCard) return;
+      const touch = e.touches[0];
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+      touchCurrentX = touch.clientX;
+      isSwiping = false;
+      topCard.style.transition = 'none';
+    }, { passive: true });
+
+    stack.addEventListener('touchmove', (e) => {
+      if (isAnimating) return;
+      const topCard = getTopCard();
+      if (!topCard) return;
+      const touch = e.touches[0];
+      const dx = touch.clientX - touchStartX;
+      const dy = touch.clientY - touchStartY;
+
+      // If horizontal movement is dominant, treat as swipe
+      if (!isSwiping && Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy)) {
+        isSwiping = true;
+      }
+
+      if (isSwiping) {
+        e.preventDefault();
+        touchCurrentX = touch.clientX;
+        const rotate = (dx / 15);
+        const opacity = Math.max(0, 1 - Math.abs(dx) / 300);
+        topCard.style.transform = `translateX(${dx}px) rotate(${rotate}deg)`;
+        topCard.style.opacity = String(opacity);
+      }
+    }, { passive: false });
+
+    stack.addEventListener('touchend', (e) => {
+      if (isAnimating) return;
+      const topCard = getTopCard();
+      if (!topCard) return;
+      const dx = touchCurrentX - touchStartX;
+
+      if (isSwiping && Math.abs(dx) > 60) {
+        // Swipe threshold met — dismiss the card
+        const direction = dx < 0 ? -1 : 1;
+        isAnimating = true;
+        topCard.style.transition = 'transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease-out';
+        topCard.style.transform = `translateX(${direction * 120}%) rotate(${direction * 15}deg)`;
+        topCard.style.opacity = '0';
+        topCard.style.pointerEvents = 'none';
+
+        const cards = Array.from(stack.querySelectorAll('.discover-card')).reverse();
+        cards.forEach((card, i) => {
+          if (card !== topCard && i > 0 && i <= stackPositions.length) {
+            setCardPosition(card, stackPositions[i - 1]);
+          }
+          if (card !== topCard) {
+            i === 1 ? showCardContent(card) : hideCardContent(card);
+          }
+        });
+
+        setTimeout(() => {
+          topCard.remove();
+          currentIndex++;
+          updateCounter();
+          addCardToStack();
+          const remainingCards = stack.querySelectorAll('.discover-card');
+          if (remainingCards.length === 0) showEndState();
+          isAnimating = false;
+        }, 300);
+      } else if (isSwiping) {
+        // Below threshold — snap back
+        topCard.style.transition = 'transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease';
+        setCardPosition(topCard, stackPositions[0]);
+      }
+
+      isSwiping = false;
+    }, { passive: true });
+
     updateStackPositions();
   </script>
 </Base>
 
-<style>
+<style is:global>
   .discover-main {
     max-width: 100%;
     padding: 0;
   }
 
+  /* ─── Header ─── */
+  .discover-header {
+    text-align: center;
+    padding: 2.5rem 0 1.75rem;
+  }
+
+  /* ─── Filter → Stack spacing ─── */
+  .discover-main .filter-ribbon {
+    padding-bottom: 1.5rem;
+  }
+
+  /* ─── Card Stack ─── */
   .stack-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 2rem;
-    min-height: 480px;
+    padding: 0 2rem;
   }
 
   .stack {
     position: relative;
     width: 100%;
     max-width: 400px;
-    height: 440px;
+    height: 500px;
+    overflow: hidden;
   }
 
   .card-count {
@@ -365,8 +489,8 @@ const categoryNames: Record<string, string> = {
   .discover-card {
     position: absolute;
     width: 100%;
-    height: 100%;
-    background: var(--bg);
+    height: 440px;
+    background: #fff;
     border: 1.5px solid var(--rule);
     padding: 2rem;
     cursor: pointer;
@@ -392,30 +516,11 @@ const categoryNames: Record<string, string> = {
   }
 
   .discover-card:not(:last-child) {
-    background: var(--bg) !important;
+    background: #fff !important;
   }
 
   .dark .discover-card:not(:last-child) {
     background: var(--bg-soft) !important;
-  }
-
-  .discover-card::after {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 48px;
-    height: 14px;
-    background: var(--bg-soft);
-    border: 1px solid var(--rule);
-    border-top: none;
-    opacity: 0.7;
-    z-index: 2;
-  }
-
-  .discover-card:not(:last-child)::after {
-    display: none;
   }
 
   .discover-card::before {
@@ -428,6 +533,7 @@ const categoryNames: Record<string, string> = {
     background: var(--card-color);
   }
 
+  /* ─── Card Content ─── */
   .discover-badge {
     display: inline-flex;
     align-self: flex-start;
@@ -453,8 +559,8 @@ const categoryNames: Record<string, string> = {
 
   .discover-title {
     font-family: var(--serif);
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.02em;
     margin-bottom: 1rem;
@@ -493,47 +599,38 @@ const categoryNames: Record<string, string> = {
     color: var(--ink-faint);
   }
 
-  .discover-hint {
-    text-align: center;
-    padding: 1rem;
-    color: var(--ink-faint);
-    font-size: 0.78rem;
-  }
-
-  .discover-hint kbd {
-    display: inline-block;
-    padding: 0.2rem 0.4rem;
-    background: var(--bg-soft);
-    border: 1.5px solid var(--rule);
-    font-family: inherit;
-    font-size: 0.65rem;
-    margin: 0 0.1rem;
-  }
-
-  .hint-sep {
-    margin: 0 0.5rem;
-    color: var(--rule);
+  /* ─── Controls ─── */
+  .discover-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 2rem 3rem;
+    gap: 0.75rem;
   }
 
   .discover-actions {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding: 0.5rem 2rem 3rem;
+    gap: 0.75rem;
   }
 
   .action-btn {
-    height: 48px;
+    height: 44px;
     border: 1.5px solid var(--rule);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.4rem;
     transition: all 0.2s ease;
     background: var(--bg);
     color: var(--ink-muted);
     font-family: var(--sans);
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 
   .action-btn:hover {
@@ -542,17 +639,12 @@ const categoryNames: Record<string, string> = {
   }
 
   .action-btn.next {
-    width: 48px;
+    padding: 0 1.25rem;
     background: var(--bg-soft);
   }
 
   .action-btn.read {
     padding: 0 1.5rem;
-    font-weight: 600;
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    gap: 0.5rem;
     background: var(--ink);
     border-color: var(--ink);
     color: var(--bg);
@@ -563,10 +655,38 @@ const categoryNames: Record<string, string> = {
   }
 
   .action-btn svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 
+  .discover-hint {
+    text-align: center;
+    color: var(--ink-faint);
+    font-size: 0.72rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .discover-hint.visible {
+    opacity: 1;
+  }
+
+  .discover-hint kbd {
+    display: inline-block;
+    padding: 0.15rem 0.35rem;
+    background: var(--bg-soft);
+    border: 1px solid var(--rule);
+    font-family: inherit;
+    font-size: 0.6rem;
+    margin: 0 0.1rem;
+  }
+
+  .hint-sep {
+    margin: 0 0.4rem;
+    color: var(--rule);
+  }
+
+  /* ─── End State ─── */
   .end-state {
     position: absolute;
     inset: 0;
@@ -602,23 +722,20 @@ const categoryNames: Record<string, string> = {
     text-decoration: underline;
   }
 
+  /* ─── Tablet ─── */
   @media (max-width: 768px) {
     .stack {
       max-width: 340px;
-      height: 400px;
+      height: 460px;
     }
 
-    .stack-container {
-      min-height: 440px;
-      padding: 1rem;
+    .discover-card {
+      height: 400px;
+      padding: 1.5rem;
     }
 
     .discover-title {
       font-size: 1.35rem;
-    }
-
-    .discover-card {
-      padding: 1.5rem;
     }
 
     .discover-excerpt {
@@ -626,23 +743,25 @@ const categoryNames: Record<string, string> = {
       font-size: 0.85rem;
     }
 
-    .discover-actions {
-      padding: 0.5rem 1.5rem 2rem;
-    }
   }
 
+  /* ─── Mobile ─── */
   @media (max-width: 480px) {
+    .discover-header {
+      padding: 1.5rem 0 1.25rem;
+    }
+
     .stack-container {
-      padding: 0.75rem;
-      min-height: 400px;
+      padding: 0 1rem;
     }
 
     .stack {
       max-width: 100%;
-      height: 360px;
+      height: 420px;
     }
 
     .discover-card {
+      height: 360px;
       padding: 1.25rem;
     }
 
@@ -664,20 +783,12 @@ const categoryNames: Record<string, string> = {
       padding-top: 0.75rem;
     }
 
-    .discover-actions {
-      padding: 0.5rem 1rem 2rem;
-      gap: 0.75rem;
+    .discover-controls {
+      padding: 1rem 1rem 2rem;
     }
 
     .action-btn { height: 42px; }
-    .action-btn.next { width: 42px; }
-    .action-btn.read { padding: 0 1.25rem; font-size: 0.7rem; }
-    .action-btn svg { width: 16px; height: 16px; }
-
-    .discover-hint {
-      font-size: 0.7rem;
-      padding: 0.75rem;
-    }
+    .action-btn svg { width: 14px; height: 14px; }
 
     .card-count { font-size: 0.72rem; }
   }
