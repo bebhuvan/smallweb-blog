@@ -2,12 +2,12 @@ name: Refresh RSS Feeds
 
 on:
   schedule:
-    # Morning: 3 AM UTC (8:30 AM IST)
-    - cron: '0 3 * * *'
-    # Evening: 12 PM UTC (5:30 PM IST)
-    - cron: '0 12 * * *'
-    # Night: 9 AM UTC (1 AM PT / 2:30 PM IST)
+    # Morning: 1 AM UTC (6:30 AM IST)
+    - cron: '0 1 * * *'
+    # Afternoon: 9 AM UTC (2:30 PM IST)
     - cron: '0 9 * * *'
+    # Night: 5 PM UTC (10:30 PM IST)
+    - cron: '0 17 * * *'
   workflow_dispatch: # Manual trigger from GitHub Actions page
 
 permissions:
