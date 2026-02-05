@@ -15,7 +15,7 @@ const enrichedPosts = enrichPosts(posts, blogMap);
 
 // Shuffle for discovery
 const shuffled = [...enrichedPosts].sort(() => Math.random() - 0.5);
-const deckPosts = shuffled.slice(0, 20);
+const deckPosts = shuffled.slice(0, 50);
 
 const categoryColors: Record<string, string> = {
   tech: 'var(--tech)', life: 'var(--life)', culture: 'var(--culture)',
@@ -77,7 +77,7 @@ const categoryNames: Record<string, string> = {
         </div>
 
         <div class="card-count">
-          <span id="currentCard">1</span> / <span id="totalCards">{Math.min(deckPosts.length, 20)}</span>
+          <span id="currentCard">1</span> / <span id="totalCards">{Math.min(deckPosts.length, 50)}</span>
         </div>
       </div>
 
