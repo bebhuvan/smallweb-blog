@@ -136,10 +136,27 @@ const EXCERPT_CONCURRENCY = parseEnvInt(process.env.EXCERPT_CONCURRENCY, 4);
 // 4. Set PROXY_URL env var to override the proxy endpoint if needed
 // 5. Use "proxy": true in blogs.json for custom-domain Substack feeds
 
+function coerceToString(value) {
+  if (value === null || value === undefined) return '';
+  if (typeof value === 'string') return value;
+  if (typeof value === 'number' || typeof value === 'boolean' || typeof value === 'bigint') {
+    return String(value);
+  }
+  try {
+    return String(value);
+  } catch (error) {
+    try {
+      return JSON.stringify(value);
+    } catch (innerError) {
+      return '';
+    }
+  }
+}
+
 function decodeHtmlEntities(text) {
-  if (!text) return '';
-  if (typeof text !== 'string') text = String(text);
-  return text
+  const normalized = coerceToString(text);
+  if (!normalized) return '';
+  return normalized
     // Numeric entities (decimal)
     .replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(dec))
     // Numeric entities (hex)
@@ -203,13 +220,13 @@ function normalizeUrl(rawUrl, baseUrl) {
     }
     return url.toString();
   } catch {
-    return String(rawUrl).trim();
+    return coerceToString(rawUrl).trim();
   }
 }
 
 function normalizeGuid(rawGuid, baseUrl) {
   if (!rawGuid) return '';
-  const guid = String(rawGuid).trim();
+  const guid = coerceToString(rawGuid).trim();
   if (guid.startsWith('http://') || guid.startsWith('https://')) {
     return normalizeUrl(guid, baseUrl);
   }
@@ -217,9 +234,9 @@ function normalizeGuid(rawGuid, baseUrl) {
 }
 
 function stripHtml(html) {
-  if (!html) return '';
-  if (typeof html !== 'string') html = String(html);
-  const withoutTags = html.replace(/<[^>]*>/g, '');
+  const normalized = coerceToString(html);
+  if (!normalized) return '';
+  const withoutTags = normalized.replace(/<[^>]*>/g, '');
   const decoded = decodeHtmlEntities(withoutTags);
   return decoded.replace(/\s+/g, ' ').trim();
 }
@@ -232,7 +249,11 @@ function createExcerpt(content, maxLength = 300) {
 
 function normalizeDate(value) {
   if (!value) return null;
-  const date = new Date(value);
+  const dateValue =
+    typeof value === 'string' || typeof value === 'number'
+      ? value
+      : coerceToString(value);
+  const date = new Date(dateValue);
   if (Number.isNaN(date.getTime())) return null;
   return date.toISOString();
 }
@@ -364,7 +385,7 @@ function getPostKey({ link, guid, title, baseUrl }) {
   if (canonicalLink) return canonicalLink;
   const normalizedGuid = normalizeGuid(guid, baseUrl);
   if (normalizedGuid) return normalizedGuid;
-  return (title || '').trim();
+  return coerceToString(title).trim();
 }
 
 function makeLookupKey(blogId, postKey) {
@@ -476,7 +497,8 @@ async function fetchFeed(blog, useProxy = false, existingPostsByKey = new Map())
 
         const resolvedLink = canonicalLink || link;
         const postId = existingPost?.id || generatePostId(blog.id, postKey);
-        const title = decodeHtmlEntities(item.title || existingPost?.title || 'Untitled');
+        const rawTitle = item.title ?? existingPost?.title ?? 'Untitled';
+        const title = decodeHtmlEntities(rawTitle) || 'Untitled';
 
         // Skip posts without proper dates unless explicitly allowed
         const postDate = resolvePostDate(item, feed, blog, index, existingPost?.date, nowMs);
