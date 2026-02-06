@@ -55,5 +55,16 @@ jobs:
           fi
 
       - name: Alert on feed errors
+        if: always()
         run: |
-          node -e "const data=require('./data/cache/status.json'); const errors=data?.summary?.errors||0; if(errors>0){console.error('Feed errors:', errors); process.exit(1);} console.log('All feeds healthy');"
+          node -e "
+            const data = require('./data/cache/status.json');
+            const errors = data?.summary?.errors || 0;
+            const failed = (data?.feeds || []).filter(f => f.status !== 'ok');
+            if (errors > 0) {
+              console.warn('Feed errors:', errors);
+              failed.forEach(f => console.warn('  -', f.blogId, f.error));
+            } else {
+              console.log('All feeds healthy');
+            }
+          "

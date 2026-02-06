@@ -463,7 +463,8 @@ async function fetchFeed(blog, useProxy = false, existingPostsByKey = new Map())
       items,
       EXCERPT_CONCURRENCY,
       async (item, index) => {
-        let link = item.link || item.guid || blog.url;
+        try {
+        let link = coerceToString(item.link || item.guid || blog.url);
 
         // URL Normalization for Paul Graham
         if (blog.id === 'paulgraham' && link.includes('turbifycdn.com')) {
@@ -473,21 +474,22 @@ async function fetchFeed(blog, useProxy = false, existingPostsByKey = new Map())
         }
 
         const canonicalLink = normalizeUrl(link, blog.url);
+        const itemTitle = coerceToString(item.title);
         const postKey = getPostKey({
           link: canonicalLink || link,
-          guid: item.guid,
-          title: item.title || '',
+          guid: coerceToString(item.guid),
+          title: itemTitle || '',
           baseUrl: blog.url,
         }) || `${blog.id}-item-${index}`;
         const lookupKey = makeLookupKey(blog.id, postKey);
         const existingPost = existingPostsByKey.get(lookupKey);
 
         // Try to get excerpt from RSS first
-        let excerpt = createExcerpt(item.contentSnippet || item.content || item.summary || '');
+        let excerpt = createExcerpt(coerceToString(item.contentSnippet || item.content || item.summary || ''));
 
         // If no excerpt from RSS, try fetching the page directly
         if (!excerpt && link) {
-          console.log(`    → Fetching page for excerpt: ${item.title?.substring(0, 40)}...`);
+          console.log(`    → Fetching page for excerpt: ${itemTitle.substring(0, 40)}...`);
           excerpt = await fetchPageExcerpt(link);
         }
 
@@ -497,13 +499,13 @@ async function fetchFeed(blog, useProxy = false, existingPostsByKey = new Map())
 
         const resolvedLink = canonicalLink || link;
         const postId = existingPost?.id || generatePostId(blog.id, postKey);
-        const rawTitle = item.title ?? existingPost?.title ?? 'Untitled';
+        const rawTitle = itemTitle || coerceToString(existingPost?.title) || 'Untitled';
         const title = decodeHtmlEntities(rawTitle) || 'Untitled';
 
         // Skip posts without proper dates unless explicitly allowed
         const postDate = resolvePostDate(item, feed, blog, index, existingPost?.date, nowMs);
         if (!postDate) {
-          console.log(`    → Skipping "${item.title?.substring(0, 40)}..." (no date)`);
+          console.log(`    → Skipping "${itemTitle.substring(0, 40)}..." (no date)`);
           return null;
         }
 
@@ -515,6 +517,10 @@ async function fetchFeed(blog, useProxy = false, existingPostsByKey = new Map())
           date: postDate,
           excerpt,
         };
+        } catch (itemError) {
+          console.log(`    → Skipping item ${index} (${coerceToString(item.title).substring(0, 40) || 'untitled'}): ${itemError.message}`);
+          return null;
+        }
       }
     );
 
