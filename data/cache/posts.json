@@ -1,6 +1,278 @@
 {
-  "lastUpdated": "2026-02-06T18:06:48.704Z",
+  "lastUpdated": "2026-02-07T03:41:02.093Z",
   "posts": [
+    {
+      "id": "2ojsh5",
+      "blogId": "simonwillison",
+      "title": "Quoting Tom Dale",
+      "link": "https://simonwillison.net/2026/Feb/6/tom-dale",
+      "date": "2026-02-06T23:41:31.000Z",
+      "excerpt": "I don't know why this week became the tipping point, but nearly every software engineer I've talked to is experiencing some degree of mental health crisis. [...] Many people assuming I meant job loss anxiety but that's just one presentation. I'm seeing near-manic episodes triggered by watching softw..."
+    },
+    {
+      "id": "ffuls",
+      "blogId": "nicholasgruen",
+      "title": "Sociopathy as a service: Facebook edition ",
+      "link": "https://nicholasgruen.substack.com/p/sociopathy-as-a-service-facebook",
+      "date": "2026-02-06T23:15:12.000Z",
+      "excerpt": "And a range of other really interesting things I encountered."
+    },
+    {
+      "id": "i3pup6",
+      "blogId": "marginalrevolution",
+      "title": "The economics of the NBA trading deadline (from my email)",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/02/the-economics-of-the-nba-trading-deadline-from-my-email.html",
+      "date": "2026-02-06T22:44:29.000Z",
+      "excerpt": "From an anonymous correspondent: Perhaps, as NBA fan, there’s a column to be written about the incentives that drove the NBA trade market: namely the all-out search to avoid/get out of the luxury tax and the looming “tank” battle among the 6 worst teams. These are both direct results of the recent N..."
+    },
+    {
+      "id": "tpze6z",
+      "blogId": "curtjaimungal",
+      "title": "This Cosmologist Discovered Something Strange...",
+      "link": "https://curtjaimungal.substack.com/p/this-cosmologist-discovered-something",
+      "date": "2026-02-06T22:43:35.000Z",
+      "excerpt": "Reality may be a neural network..."
+    },
+    {
+      "id": "6tu9j2",
+      "blogId": "simonwillison",
+      "title": "Running Pydantic's Monty Rust sandboxed Python subset in WebAssembly",
+      "link": "https://simonwillison.net/2026/Feb/6/pydantic-monty",
+      "date": "2026-02-06T22:31:31.000Z",
+      "excerpt": "There's a jargon-filled headline for you! Everyone's building sandboxes for running untrusted code right now, and Pydantic's latest attempt, Monty, provides a custom Python-like language (a subset of Python) in Rust and makes it available as both a Rust library and a Python package. I got it working..."
+    },
+    {
+      "id": "nafhfy",
+      "blogId": "flowingdata",
+      "title": "Why the best skiers don’t always win in the Olympics",
+      "link": "https://flowingdata.com/2026/02/06/why-the-best-skiers-dont-always-win-in-the-olympics",
+      "date": "2026-02-06T22:21:04.000Z",
+      "excerpt": "Olympic gold medalist Ted Ligety is on the New York Times to explain… Tags: New York Times, Olympics, skiing, uncertainty"
+    },
+    {
+      "id": "a5177j",
+      "blogId": "aldaily",
+      "title": "Walking “a fine line between principled opposition and crankdom,” the film critic A.S. Hamrah rails against Rotten Tomatoes, texting at the movies, and digital projection",
+      "link": "https://clereviewofbooks.com/capsules-of-dismay-on-a-s-hamrahs-anti-criticism",
+      "date": "2026-02-06T22:06:47.000Z",
+      "excerpt": "Walking “a fine line between principled opposition and crankdom,” the film critic A.S. Hamrah rails against Rotten Tomatoes, texting at the movies, and digital projection"
+    },
+    {
+      "id": "hx5fcq",
+      "blogId": "aldaily",
+      "title": "It should be as good to remember a past joy as to anticipate a future one, reasoned Derek Parfit. Nonsense, argues Samuel Scheffler",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n02/thomas-nagel/now-and-then",
+      "date": "2026-02-06T22:05:47.000Z",
+      "excerpt": "It should be as good to remember a past joy as to anticipate a future one, reasoned Derek Parfit. Nonsense, argues Samuel Scheffler"
+    },
+    {
+      "id": "dpkf6u",
+      "blogId": "aldaily",
+      "title": "George Scialabba is no fan of political theory: “Imagination, sympathy, solidarity — by whatever name: this is the true engine of political progress”",
+      "link": "https://www.newstatesman.com/ideas/2026/01/can-ideas-change-the-world",
+      "date": "2026-02-06T22:04:47.000Z",
+      "excerpt": "George Scialabba is no fan of political theory: “Imagination, sympathy, solidarity — by whatever name: this is the true engine of political progress”"
+    },
+    {
+      "id": "p7cb4h",
+      "blogId": "aldaily",
+      "title": "Typists, editors, arbiters of art. Literary amanuenses like Theodora Bosanquet, Véra Nabokov, and Valerie Eliot shaped modern literature",
+      "link": "https://publicdomainreview.org/essay/typing-for-love-or-money",
+      "date": "2026-02-06T22:03:47.000Z",
+      "excerpt": "Typists, editors, arbiters of art. Literary amanuenses like Theodora Bosanquet, Véra Nabokov, and Valerie Eliot shaped modern literature"
+    },
+    {
+      "id": "jhnuwq",
+      "blogId": "aldaily",
+      "title": "Oscar Wilde, William Morris, and John Ruskin were exemplars of socialist aesthetics, advancing the view that more leisure would result in better art",
+      "link": "https://thepointmag.com/examined-life/make-nothing-that-isnt-beautiful",
+      "date": "2026-02-06T22:02:47.000Z",
+      "excerpt": "Oscar Wilde, William Morris, and John Ruskin were exemplars of socialist aesthetics, advancing the view that more leisure would result in better art"
+    },
+    {
+      "id": "p52iwb",
+      "blogId": "aldaily",
+      "title": "How did Western psychiatric taxonomies handle such non-Western disorders as “pibloktoq” (a wintertime psychosis) and “kufungisisa” (thinking too much)?",
+      "link": "https://lareviewofbooks.org/article/empire-madness-khameer-kidia-psychiatric-imperialism-capitalism-review",
+      "date": "2026-02-06T22:01:47.000Z",
+      "excerpt": "How did Western psychiatric taxonomies handle such non-Western disorders as “pibloktoq” (a wintertime psychosis) and “kufungisisa” (thinking too much)?"
+    },
+    {
+      "id": "djcwcy",
+      "blogId": "aldaily",
+      "title": "Larry Levis died in 1996, at the age of 49. His posthumously published poetry forms a towering body of work",
+      "link": "https://www.nytimes.com/2026/02/04/books/review/poetry-larry-levis-swirl-vortex.html?unlocked_article_code=1.JlA.CQKf.MkwTD-Ba_aZT&smid=url-share",
+      "date": "2026-02-06T22:00:47.000Z",
+      "excerpt": "Larry Levis died in 1996, at the age of 49. His posthumously published poetry forms a towering body of work"
+    },
+    {
+      "id": "i381lw",
+      "blogId": "aldaily",
+      "title": "How did a stereopticon lecturer and his white-supremacist son end up in novels by Edith Wharton and F. Scott Fitzgerald?",
+      "link": "https://hedgehogreview.com/issues/place-and-revolution/articles/entwinings",
+      "date": "2026-02-06T21:59:47.000Z",
+      "excerpt": "How did a stereopticon lecturer and his white-supremacist son end up in novels by Edith Wharton and F. Scott Fitzgerald?"
+    },
+    {
+      "id": "qs8tfa",
+      "blogId": "aldaily",
+      "title": "Somnambulism, hypnagogia, reverie — the borderlands of sleep are patrolled by poets, novelists, psychologists, and psychoanalysts",
+      "link": "https://thereader.mitpress.mit.edu/daydreamers-and-sleepwalkers-crossing-the-borderlands-of-the-unconscious",
+      "date": "2026-02-06T21:58:47.000Z",
+      "excerpt": "Somnambulism, hypnagogia, reverie — the borderlands of sleep are patrolled by poets, novelists, psychologists, and psychoanalysts"
+    },
+    {
+      "id": "el5uab",
+      "blogId": "aldaily",
+      "title": "When Michelangelo met Titian. The evidence of how they influenced each other is scant, and we so enter the realm of the educated guess",
+      "link": "https://www.wsj.com/arts-culture/books/michelangelo-titian-review-the-renaissances-odd-couple-e343163b?st=D16xMQ&reflink=desktopwebshare_permalink",
+      "date": "2026-02-06T21:57:47.000Z",
+      "excerpt": "When Michelangelo met Titian. The evidence of how they influenced each other is scant, and we so enter the realm of the educated guess"
+    },
+    {
+      "id": "lbqyb5",
+      "blogId": "wealthofcommonsense",
+      "title": "Some Things I’ve Been Wrong About",
+      "link": "https://awealthofcommonsense.com/2026/02/some-things-ive-been-wrong-about",
+      "date": "2026-02-06T21:30:45.000Z",
+      "excerpt": "Some thoughts on bitcoin, gold, DoorDash, AI, the Lions, interest rates and more. The post Some Things I’ve Been Wrong About appeared first on A Wealth of Common Sense. ..."
+    },
+    {
+      "id": "e1bn3f",
+      "blogId": "kottke",
+      "title": " How Edo (Tokyo) transformed from a city on the brink of... ",
+      "link": "https://kottke.org/26/02/0048320-how-edo-tokyo-transformed",
+      "date": "2026-02-06T21:29:16.000Z",
+      "excerpt": "How Edo (Tokyo) transformed from a city on the brink of ecological collapse 400 years ago to “one of the most sustainable and efficient cities in history”. 💬 Join the discussion on kottke.org →"
+    },
+    {
+      "id": "i9uz1l",
+      "blogId": "larryswedroe",
+      "title": "Bitcoin’s 50% Collapse Exposes Two Industry Myths",
+      "link": "https://larryswedroe.substack.com/p/bitcoins-50-collapse-exposes-two",
+      "date": "2026-02-06T20:43:22.000Z",
+      "excerpt": "Bitcoin has plummeted from its October 2025 peak of over $126,000 to as low as $60,000 early in the morning of February 6, 2026."
+    },
+    {
+      "id": "cwp37h",
+      "blogId": "kottke",
+      "title": " “ Printing Films  is a collection of vintage films... ",
+      "link": "https://kottke.org/26/02/0048333-printing-films-is-a-colle",
+      "date": "2026-02-06T20:21:37.000Z",
+      "excerpt": "“Printing Films is a collection of vintage films that showcase the technologies and processes of printing, journalism, and typography.” 💬 Join the discussion on kottke.org →"
+    },
+    {
+      "id": "a8spk9",
+      "blogId": "bloodinthemachine",
+      "title": "How Jeff Bezos and Amazon became instruments of authoritarianism",
+      "link": "https://www.bloodinthemachine.com/p/how-jeff-bezos-and-amazon-became",
+      "date": "2026-02-06T19:22:34.000Z",
+      "excerpt": "And how to stop them"
+    },
+    {
+      "id": "gv3j9j",
+      "blogId": "marginalrevolution",
+      "title": "How much is childlessness the fertility problem?",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/02/how-much-is-childlessness-the-fertility-problem.html",
+      "date": "2026-02-06T19:22:12.000Z",
+      "excerpt": "The average decline in fertility among these recent cohorts relative to the cohorts preceding them by 20 years was 0.25 births. Of this decline, 0.09 births, or 37 percent of the gap, is statistically accounted for by increased childlessness in the later cohort. The remaining 0.16 births, or 63 perc..."
+    },
+    {
+      "id": "8abcay",
+      "blogId": "marginalian",
+      "title": "Dying Mothers, the Birth of Handwashing, and the Bittersweet True Love Story Behind ‘Frankenstein’",
+      "link": "https://www.themarginalian.org/2026/02/06/wollstonecraft-godwin-semmelweis",
+      "date": "2026-02-06T19:22:01.000Z",
+      "excerpt": "This essay is adapted from Traversal. “Death may snatch me from you, before you can weigh my advice,” Mary Wollstonecraft wrote in the philosophical novel she wouldn’t live to finish, addressing a daughter she was yet to have. “Always appear what you are, and you will not pass through existence with..."
+    },
+    {
+      "id": "zg5zdq",
+      "blogId": "kottke",
+      "title": "  Why don’t filmmakers just film on location instead... ",
+      "link": "https://kottke.org/26/02/0048334-why-dont-filmmakers-just-",
+      "date": "2026-02-06T19:15:57.000Z",
+      "excerpt": "Why don’t filmmakers just film on location instead of using visual effects? Lots of reasons, including not disrupting communities, control of weather & sun position, or can’t get permission. 💬 Join the discussion on kottke.org →"
+    },
+    {
+      "id": "9hnpxu",
+      "blogId": "marginalian",
+      "title": "Oliver Sacks on Despair and the Meaning of Life",
+      "link": "https://www.themarginalian.org/2026/02/06/oliver-sacks-letters-meaning-of-life",
+      "date": "2026-02-06T19:01:13.000Z",
+      "excerpt": "\"The meaning of life... clearly has to do with love — what and whom and how one can love.\""
+    },
+    {
+      "id": "3mghfe",
+      "blogId": "marginalian",
+      "title": "The Story Behind Dylan Thomas’s “Do Not Go Gentle Into That Good Night” and the Poet’s Own Stirring Reading of His Masterpiece",
+      "link": "https://www.themarginalian.org/2026/02/06/dylan-thomas-do-not-go-gentle-into-that-good-night",
+      "date": "2026-02-06T19:00:00.000Z",
+      "excerpt": "\"Rage, rage against the dying of the light.\""
+    },
+    {
+      "id": "7czmnl",
+      "blogId": "abnormalreturns",
+      "title": "Friday links: breadth and depth",
+      "link": "https://abnormalreturns.com/2026/02/06/friday-links-breadth-and-depth",
+      "date": "2026-02-06T18:58:08.000Z",
+      "excerpt": "\"Success is a function of breadth and depth. We need enough variety to keep life interesting and stimulating; we need enough depth to make our efforts not just successful, but meaning-full.\""
+    },
+    {
+      "id": "l4nh94",
+      "blogId": "hollisrobbins",
+      "title": "The Rumsfeld Matrix",
+      "link": "https://hollisrobbinsanecdotal.substack.com/p/the-rumsfeld-matrix",
+      "date": "2026-02-06T18:54:50.000Z",
+      "excerpt": "Higher Ed is at war, after all"
+    },
+    {
+      "id": "rkqufb",
+      "blogId": "persuasion",
+      "title": "The Real Reason Science Is Broken ",
+      "link": "https://www.persuasion.community/p/the-real-reason-science-is-broken",
+      "date": "2026-02-06T18:45:17.000Z",
+      "excerpt": "AI productivity tools can’t fix bad incentives."
+    },
+    {
+      "id": "2559be",
+      "blogId": "simonwillison",
+      "title": "An Update on Heroku",
+      "link": "https://simonwillison.net/2026/Feb/6/an-update-on-heroku",
+      "date": "2026-02-06T18:44:21.000Z",
+      "excerpt": "An Update on Heroku An ominous headline to see on the official Heroku blog and yes, it's bad news. Today, Heroku is transitioning to a sustaining engineering model focused on stability, security, reliability, and support. Heroku remains an actively supported, production-ready platform, with an empha..."
+    },
+    {
+      "id": "jwtetm",
+      "blogId": "braddelong",
+      "title": "CROSSPOST: DAN DAVIES: Snobby About Excel",
+      "link": "https://braddelong.substack.com/p/crosspost-dan-davies-snobby-about",
+      "date": "2026-02-06T18:19:55.000Z",
+      "excerpt": "Dan Davies has his finger on something important here. It is not, at root, about \"AI\". It is about work. The spreadsheet first escaped from the finance department and colonised the world. “Serious”..."
+    },
+    {
+      "id": "kxmddb",
+      "blogId": "kottke",
+      "title": " Dan Sinker writes about  the transformative experience of... ",
+      "link": "https://kottke.org/26/02/0048335-dan-sinker-writes-about-t",
+      "date": "2026-02-06T18:10:31.000Z",
+      "excerpt": "Dan Sinker writes about the transformative experience of seeing a work by Jenny Holzer when he was 14. “Truisms was a revelation. Art could be just words. Art could be just at home slapped on a POST NO BILLS wall as it could in a gallery.” 💬 Join the discussion on kottke.org →"
+    },
+    {
+      "id": "bmg80z",
+      "blogId": "marginalian",
+      "title": "Yes to Life, in Spite of Everything: Viktor Frankl’s Lost Lectures on Moving Beyond Optimism and Pessimism to Find the Deepest Source of Meaning",
+      "link": "https://www.themarginalian.org/2026/02/06/yes-to-life-in-spite-of-everything-viktor-frankl",
+      "date": "2026-02-06T18:06:03.000Z",
+      "excerpt": "\"Everything depends on the individual human being, regardless of how small a number of like-minded people there is... on each person... creatively making the meaning of life a reality in his or her own being.\""
+    },
+    {
+      "id": "abgupg",
+      "blogId": "thezvi",
+      "title": "Claude Code #4: From The Before Times",
+      "link": "https://thezvi.substack.com/p/claude-code-4-from-the-before-times",
+      "date": "2026-02-06T17:59:19.000Z",
+      "excerpt": "Claude Opus 4.6 and agent swarms were announced yesterday."
+    },
     {
       "id": "m02k5y",
       "blogId": "defaultblog",
@@ -58,6 +330,14 @@
       "excerpt": "Fridays are all about podcast links here at Abnormal Returns. You can also check out last week’s links including a look at..."
     },
     {
+      "id": "fjxtl2",
+      "blogId": "alanwsmith",
+      "title": "Using JSON Data in a Rust WebAssembly/wasm Module",
+      "link": "https://www.alanwsmith.com/en/39/il/br/fm",
+      "date": "2026-02-06T15:22:12.000Z",
+      "excerpt": "Dear RSS Reader: The original version of this page includes JavaScript. It probably won't run in here. So, any functionality it might have had probably won't work. Check out the original page to see it in action. Beginner Deck I'm working on a toolmtg to make Magic: The Gathering Commander decks. It..."
+    },
+    {
       "id": "ab5c4d",
       "blogId": "kottke",
       "title": "  Tinder Hasn’t Worked, So I’m Putting Myself... ",
@@ -98,68 +378,12 @@
       "excerpt": "More processing power requires more data centers, and for better or worse, they… Tags: data center, National Renewable Energy Laboratory"
     },
     {
-      "id": "p7cb4h",
-      "blogId": "aldaily",
-      "title": "Typists, editors, arbiters of art. Literary amanuenses like Theodora Bosanquet, Véra Nabokov, and Valerie Eliot shaped modern literature",
-      "link": "https://publicdomainreview.org/essay/typing-for-love-or-money",
-      "date": "2026-02-06T12:34:38.000Z",
-      "excerpt": "Typists, editors, arbiters of art. Literary amanuenses like Theodora Bosanquet, Véra Nabokov, and Valerie Eliot shaped modern literature"
-    },
-    {
-      "id": "jhnuwq",
-      "blogId": "aldaily",
-      "title": "Oscar Wilde, William Morris, and John Ruskin were exemplars of socialist aesthetics, advancing the view that more leisure would result in better art",
-      "link": "https://thepointmag.com/examined-life/make-nothing-that-isnt-beautiful",
-      "date": "2026-02-06T12:33:38.000Z",
-      "excerpt": "Oscar Wilde, William Morris, and John Ruskin were exemplars of socialist aesthetics, advancing the view that more leisure would result in better art"
-    },
-    {
-      "id": "p52iwb",
-      "blogId": "aldaily",
-      "title": "How did Western psychiatric taxonomies handle such non-Western disorders as “pibloktoq” (a wintertime psychosis) and “kufungisisa” (thinking too much)?",
-      "link": "https://lareviewofbooks.org/article/empire-madness-khameer-kidia-psychiatric-imperialism-capitalism-review",
-      "date": "2026-02-06T12:32:38.000Z",
-      "excerpt": "How did Western psychiatric taxonomies handle such non-Western disorders as “pibloktoq” (a wintertime psychosis) and “kufungisisa” (thinking too much)?"
-    },
-    {
-      "id": "djcwcy",
-      "blogId": "aldaily",
-      "title": "Larry Levis died in 1996, at the age of 49. His posthumously published poetry forms a towering body of work",
-      "link": "https://www.nytimes.com/2026/02/04/books/review/poetry-larry-levis-swirl-vortex.html?unlocked_article_code=1.JlA.CQKf.MkwTD-Ba_aZT&smid=url-share",
-      "date": "2026-02-06T12:31:38.000Z",
-      "excerpt": "Larry Levis died in 1996, at the age of 49. His posthumously published poetry forms a towering body of work"
-    },
-    {
-      "id": "i381lw",
-      "blogId": "aldaily",
-      "title": "How did a stereopticon lecturer and his white-supremacist son end up in novels by Edith Wharton and F. Scott Fitzgerald?",
-      "link": "https://hedgehogreview.com/issues/place-and-revolution/articles/entwinings",
-      "date": "2026-02-06T12:30:38.000Z",
-      "excerpt": "How did a stereopticon lecturer and his white-supremacist son end up in novels by Edith Wharton and F. Scott Fitzgerald?"
-    },
-    {
       "id": "lm5827",
       "blogId": "onmyom",
       "title": "How AI Goes to Work",
       "link": "https://om.co/2026/02/06/how-ai-goes-to-work",
       "date": "2026-02-06T12:30:00.000Z",
       "excerpt": "Sometimes it takes a single piece in a jigsaw puzzle for the whole picture to come into shape. And that happened earlier this weekend. I was able to crystallize a lot of what I have been thinking about technologies colloquially known as “Artificial Intelligence.” And it happened because of a 40-year..."
-    },
-    {
-      "id": "qs8tfa",
-      "blogId": "aldaily",
-      "title": "Somnambulism, hypnagogia, reverie — the borderlands of sleep are patrolled by poets, novelists, psychologists, and psychoanalysts",
-      "link": "https://thereader.mitpress.mit.edu/daydreamers-and-sleepwalkers-crossing-the-borderlands-of-the-unconscious",
-      "date": "2026-02-06T12:29:38.000Z",
-      "excerpt": "Somnambulism, hypnagogia, reverie — the borderlands of sleep are patrolled by poets, novelists, psychologists, and psychoanalysts"
-    },
-    {
-      "id": "el5uab",
-      "blogId": "aldaily",
-      "title": "When Michelangelo met Titian. The evidence of how they influenced each other is scant, and we so enter the realm of the educated guess",
-      "link": "https://www.wsj.com/arts-culture/books/michelangelo-titian-review-the-renaissances-odd-couple-e343163b?st=D16xMQ&reflink=desktopwebshare_permalink",
-      "date": "2026-02-06T12:28:38.000Z",
-      "excerpt": "When Michelangelo met Titian. The evidence of how they influenced each other is scant, and we so enter the realm of the educated guess"
     },
     {
       "id": "y1r031",
@@ -224,6 +448,14 @@
       "link": "https://danq.me/2026/02/06/phantom-obligation-vs-freshrss",
       "date": "2026-02-06T09:42:11.000Z",
       "excerpt": "Terry Godier's fantastic article last week introduced us to the term 'phantom obligation' and reiterated something I've been saying for years: that 'RSS zero', unlike 'inbox zero', is not an admirable goal. And that reminded me to share with you how I personally make my FreshRSS installation feel mo..."
+    },
+    {
+      "id": "p4j64s",
+      "blogId": "marginalian",
+      "title": "The Reason of Emotion: Bruce Lee’s Unpublished Writings on Willpower, Imagination, and Confidence",
+      "link": "https://www.themarginalian.org/2026/02/06/bruce-lee-notebook",
+      "date": "2026-02-06T09:00:22.000Z",
+      "excerpt": "\"You will never get any more out of life than you expect.\""
     },
     {
       "id": "o0wq8m",
@@ -343,7 +575,15 @@
       "title": "Stories From 25 Years of Computing",
       "link": "https://susam.net/twenty-five-years-of-computing.html",
       "date": "2026-02-06T00:00:00.000Z",
-      "excerpt": "Last year, I completed 20 years in professional software development. I wanted to write a post to mark the occasion back then, but couldn't find the time. This post is my attempt to make up for that omission. In fact, I have been involved in software development for slightly longer than 20 years. Al..."
+      "excerpt": "Last year, I completed 20 years in professional software development. I wanted to write a post to mark the occasion back then, but couldn't find the time. This post is my attempt to make up for that omission. In fact, I have been involved in software development for a little longer than 20 years. Al..."
+    },
+    {
+      "id": "r4mmnl",
+      "blogId": "anildash",
+      "title": "There's no such thing as \"tech\" (Ten years later)",
+      "link": "https://anildash.com/2026/02/06/no-such-thing-as-tech",
+      "date": "2026-02-06T00:00:00.000Z",
+      "excerpt": "Ten years ago I wrote that there is no “technology industry”. It’s more true than ever. There is no “tech”. There’s no such thing as “a FAANG company”. There is almost nothing in common between the very largest tech companies and the next several hundred biggest companies that happen to create tech..."
     },
     {
       "id": "aojv2a",
