@@ -1,6 +1,190 @@
 {
-  "lastUpdated": "2026-02-10T18:27:40.499Z",
+  "lastUpdated": "2026-02-11T04:07:45.055Z",
   "posts": [
+    {
+      "id": "myur0i",
+      "blogId": "freddiedeboer",
+      "title": "Live with Freddie deBoer",
+      "link": "https://freddiedeboer.substack.com/p/live-with-freddie-deboer",
+      "date": "2026-02-11T01:58:37.000Z",
+      "excerpt": "A recording from Freddie deBoer's live video"
+    },
+    {
+      "id": "4yq6sa",
+      "blogId": "alanwsmith",
+      "title": "Generate a Repeatable UUID in Python with UUID v5",
+      "link": "https://www.alanwsmith.com/en/39/vj/18/hi",
+      "date": "2026-02-11T01:58:06.000Z",
+      "excerpt": "The UUID spec provides a way to generate UUIDs that will always be the same for a given input. Useful for things like making RSS feeds where you'll create a file multiple times but what the UUIDs to stay the same without having to store them. Creating on in Python looks like this: import uuid namesp..."
+    },
+    {
+      "id": "6tixp7",
+      "blogId": "matt",
+      "title": "AI Disruption",
+      "link": "https://ma.tt/2026/02/ai-disruption",
+      "date": "2026-02-11T00:36:03.000Z",
+      "excerpt": "Two interesting posts today, first is Nick Hamze, who ponders the case on his delightfully avant-garde site for how WordPress fits in when everything is coded up on a whim, Nobody Rips Out the Plumbing. Separately, I was delighted to see that legendary investor Brad Feld has hooked up Claude Code to..."
+    },
+    {
+      "id": "jjpds6",
+      "blogId": "seangoedecke",
+      "title": "On screwing up",
+      "link": "https://seangoedecke.com/screwing-up",
+      "date": "2026-02-11T00:00:00.000Z",
+      "excerpt": "I bet he forgot about it immediately. I could have just messed up the testing (for instance, by accidentally running some different code than the code I pushed), or he knew I’d probably lied, and didn’t really care. I haven’t forgotten about it. Even a decade later, I’m still ashamed to write it dow..."
+    },
+    {
+      "id": "ly1juc",
+      "blogId": "venkateshrao",
+      "title": "New Ferality",
+      "link": "https://contraptions.venkateshrao.com/p/new-ferality",
+      "date": "2026-02-10T23:52:41.000Z",
+      "excerpt": "Seeking new ways of being wild in new nature"
+    },
+    {
+      "id": "rbw8w8",
+      "blogId": "marginalian",
+      "title": "Virginia Woolf on Self-Knowledge and the Limits of Empathy",
+      "link": "https://www.themarginalian.org/2026/02/10/virginia-woolf-self-knowledge",
+      "date": "2026-02-10T23:31:22.000Z",
+      "excerpt": "\"We do not know our own souls, let alone the souls of others... There is a virgin forest in each.\""
+    },
+    {
+      "id": "mduoka",
+      "blogId": "aldaily",
+      "title": "“Good politics, like good art, does not lecture or declaim. It strains; it argues; it is an unending negotiation with the difficult and intransigent adventure of humanity”",
+      "link": "https://thepointmag.com/criticism/listless-liberalism",
+      "date": "2026-02-10T22:36:44.000Z",
+      "excerpt": "“Good politics, like good art, does not lecture or declaim. It strains; it argues; it is an unending negotiation with the difficult and intransigent adventure of humanity”"
+    },
+    {
+      "id": "91hw9h",
+      "blogId": "aldaily",
+      "title": "We associate confessional poetry with Robert Lowell, Sylvia Plath, and Anne Sexton. But Larry Levis’s confessionalism was different",
+      "link": "https://www.poetryfoundation.org/poetrymagazine/articles/1749603/destroying-time-on-the-lasting-legacy-of-larry-levis",
+      "date": "2026-02-10T22:35:44.000Z",
+      "excerpt": "We associate confessional poetry with Robert Lowell, Sylvia Plath, and Anne Sexton. But Larry Levis’s confessionalism was different"
+    },
+    {
+      "id": "wetze4",
+      "blogId": "aldaily",
+      "title": "At a film screening Salvador Dalí, in a fit of envy, turned on the director: “Joseph Cornell, you are a plagiarist of my unconscious mind!”",
+      "link": "https://www.theparisreview.org/blog/2026/02/10/at-the-movies-with-john-ashbery",
+      "date": "2026-02-10T22:34:44.000Z",
+      "excerpt": "At a film screening Salvador Dalí, in a fit of envy, turned on the director: “Joseph Cornell, you are a plagiarist of my unconscious mind!”"
+    },
+    {
+      "id": "92ndsa",
+      "blogId": "aldaily",
+      "title": "The overworked phrase “rewiring your brain” suggests mechanical precision. The process is slow, messy, and incomplete",
+      "link": "https://aeon.co/essays/what-the-metaphor-of-rewiring-gets-wrong-about-neuroplasticity",
+      "date": "2026-02-10T22:33:44.000Z",
+      "excerpt": "The overworked phrase “rewiring your brain” suggests mechanical precision. The process is slow, messy, and incomplete"
+    },
+    {
+      "id": "ahvb4q",
+      "blogId": "aldaily",
+      "title": "In publications like New Masses and The Anvil, the proletarian literary movement had a message for Ezra Pound: “See you in hell”",
+      "link": "https://jacobin.com/2026/02/new-masses-proletarian-literature-wright-gold",
+      "date": "2026-02-10T22:32:44.000Z",
+      "excerpt": "In publications like New Masses and The Anvil, the proletarian literary movement had a message for Ezra Pound: “See you in hell”"
+    },
+    {
+      "id": "nqhqkj",
+      "blogId": "aldaily",
+      "title": "Peter Matthiessen went to Paris to spy and write the Great American Novel. But he was, in his words, “always in the club drinking martinis”",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n02/christian-lorentzen/i-m-always-in-the-club",
+      "date": "2026-02-10T22:31:44.000Z",
+      "excerpt": "Peter Matthiessen went to Paris to spy and write the Great American Novel. But he was, in his words, “always in the club drinking martinis”"
+    },
+    {
+      "id": "a5177j",
+      "blogId": "aldaily",
+      "title": "Walking “a fine line between principled opposition and crankdom,” the film critic A.S. Hamrah rails against Rotten Tomatoes, texting at the movies, and digital projection",
+      "link": "https://clereviewofbooks.com/capsules-of-dismay-on-a-s-hamrahs-anti-criticism",
+      "date": "2026-02-10T22:30:44.000Z",
+      "excerpt": "Walking “a fine line between principled opposition and crankdom,” the film critic A.S. Hamrah rails against Rotten Tomatoes, texting at the movies, and digital projection"
+    },
+    {
+      "id": "hx5fcq",
+      "blogId": "aldaily",
+      "title": "It should be as good to remember a past joy as to anticipate a future one, reasoned Derek Parfit. Nonsense, argues Samuel Scheffler",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n02/thomas-nagel/now-and-then",
+      "date": "2026-02-10T22:29:44.000Z",
+      "excerpt": "It should be as good to remember a past joy as to anticipate a future one, reasoned Derek Parfit. Nonsense, argues Samuel Scheffler"
+    },
+    {
+      "id": "dpkf6u",
+      "blogId": "aldaily",
+      "title": "George Scialabba is no fan of political theory: “Imagination, sympathy, solidarity — by whatever name: this is the true engine of political progress”",
+      "link": "https://www.newstatesman.com/ideas/2026/01/can-ideas-change-the-world",
+      "date": "2026-02-10T22:28:44.000Z",
+      "excerpt": "George Scialabba is no fan of political theory: “Imagination, sympathy, solidarity — by whatever name: this is the true engine of political progress”"
+    },
+    {
+      "id": "p7cb4h",
+      "blogId": "aldaily",
+      "title": "Typists, editors, arbiters of art. Literary amanuenses like Theodora Bosanquet, Véra Nabokov, and Valerie Eliot shaped modern literature",
+      "link": "https://publicdomainreview.org/essay/typing-for-love-or-money",
+      "date": "2026-02-10T22:27:44.000Z",
+      "excerpt": "Typists, editors, arbiters of art. Literary amanuenses like Theodora Bosanquet, Véra Nabokov, and Valerie Eliot shaped modern literature"
+    },
+    {
+      "id": "uip5ty",
+      "blogId": "marginalian",
+      "title": "The Great Blue Heron, Signs vs. Omens, and Our Search for Meaning",
+      "link": "https://www.themarginalian.org/2026/02/10/great-blue-heron",
+      "date": "2026-02-10T21:25:53.000Z",
+      "excerpt": "One September dawn on the verge of a significant life change, sitting on my poet friend’s dock, I watched a great blue heron rise slow and prehistoric through the morning mist, carrying the sky on her back. In the years since, the heron has become the closest thing I have to what native traditions c..."
+    },
+    {
+      "id": "hbfup4",
+      "blogId": "bignewsletter",
+      "title": "The Beginning of the End for Big Corporate Medicine",
+      "link": "https://www.thebignewsletter.com/p/senators-seek-to-smash-big-medicine",
+      "date": "2026-02-10T21:15:09.000Z",
+      "excerpt": "Senators Elizabeth Warren and Josh Hawley introduced legislation to break up seven out of the Fortune 20, all of which are vertically integrated health care monsters. It's about time."
+    },
+    {
+      "id": "r7vklu",
+      "blogId": "wealthofcommonsense",
+      "title": "Markets Are Now a Beauty Contest on Steroids",
+      "link": "https://awealthofcommonsense.com/2026/02/markets-are-now-a-beauty-contest-on-steroids",
+      "date": "2026-02-10T20:23:33.000Z",
+      "excerpt": "The John Maynard Keynes beauty contest is alive and well in today's market. The post Markets Are Now a Beauty Contest on Steroids appeared first on A Wealth of Common Sense. ..."
+    },
+    {
+      "id": "2hda5l",
+      "blogId": "braddelong",
+      "title": "Pre-Class Assignment for Tuesday: 2026-01-27 :: Econ 196 :: Productivity & Technology",
+      "link": "https://braddelong.substack.com/p/pre-class-assignment-for-tuesday",
+      "date": "2026-02-10T19:38:38.000Z",
+      "excerpt": "From candles to code & the brightness of modern prosperity: Malthus, LEDs, LLMs, & MOAR!…"
+    },
+    {
+      "id": "uee4eb",
+      "blogId": "marginalrevolution",
+      "title": "Recursive self-improvement from AI models",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/02/recursive-self-improvement-from-ai-models.html",
+      "date": "2026-02-10T18:37:52.000Z",
+      "excerpt": "With Claude Opus 4.6 and 5.3 Codex, both stellar achievements, the pace is heating up: OpenAI went from its last Codex release, on December 18, 2025, to what is widely acknowledged to be a much more powerful one in less than two months. This compares to frequent gaps of six months or even a year […]..."
+    },
+    {
+      "id": "u9bdj9",
+      "blogId": "markcarrigan",
+      "title": "Critical Realism and Digital Technologies: Platforms, AI and Human Agency",
+      "link": "https://markcarrigan.net/2026/02/10/critical-realism-and-digital-technologies-platforms-ai-and-human-agency",
+      "date": "2026-02-10T18:32:19.000Z",
+      "excerpt": "What does it mean to be human in an age of generative AI and ubiquitous platforms? This joint book launch brings together two new works that draw on critical realism to interrogate digital technologies and their implications for education, selfhood and society. Jérémie Bouchard presents Humanising L..."
+    },
+    {
+      "id": "rgnvbn",
+      "blogId": "abnormalreturns",
+      "title": "Tuesday links: jobs vs. gyms",
+      "link": "https://abnormalreturns.com/2026/02/10/tuesday-links-jobs-vs-gyms",
+      "date": "2026-02-10T18:04:03.000Z",
+      "excerpt": "This content, which contains security-related opinions and/or information, is provided for informational purposes only and should not be relied upon in any manner as professional advice, or an endorsement of any practices, products or services. There can be no guarantees or assurances that the views..."
+    },
     {
       "id": "6qt9yo",
       "blogId": "simonwillison",
@@ -106,68 +290,12 @@
       "excerpt": "Tuesdays are all about academic (and practitioner) literature at Abnormal Returns. You can check out last week’s edition including a look at..."
     },
     {
-      "id": "92ndsa",
-      "blogId": "aldaily",
-      "title": "The overworked phrase “rewiring your brain” suggests mechanical precision. The process is slow, messy, and incomplete",
-      "link": "https://aeon.co/essays/what-the-metaphor-of-rewiring-gets-wrong-about-neuroplasticity",
-      "date": "2026-02-10T12:50:23.000Z",
-      "excerpt": "The overworked phrase “rewiring your brain” suggests mechanical precision. The process is slow, messy, and incomplete"
-    },
-    {
-      "id": "ahvb4q",
-      "blogId": "aldaily",
-      "title": "In publications like New Masses and The Anvil, the proletarian literary movement had a message for Ezra Pound: “See you in hell”",
-      "link": "https://jacobin.com/2026/02/new-masses-proletarian-literature-wright-gold",
-      "date": "2026-02-10T12:49:23.000Z",
-      "excerpt": "In publications like New Masses and The Anvil, the proletarian literary movement had a message for Ezra Pound: “See you in hell”"
-    },
-    {
-      "id": "nqhqkj",
-      "blogId": "aldaily",
-      "title": "Peter Matthiessen went to Paris to spy and write the Great American Novel. But he was, in his words, “always in the club drinking martinis”",
-      "link": "https://www.lrb.co.uk/the-paper/v48/n02/christian-lorentzen/i-m-always-in-the-club",
-      "date": "2026-02-10T12:48:23.000Z",
-      "excerpt": "Peter Matthiessen went to Paris to spy and write the Great American Novel. But he was, in his words, “always in the club drinking martinis”"
-    },
-    {
-      "id": "a5177j",
-      "blogId": "aldaily",
-      "title": "Walking “a fine line between principled opposition and crankdom,” the film critic A.S. Hamrah rails against Rotten Tomatoes, texting at the movies, and digital projection",
-      "link": "https://clereviewofbooks.com/capsules-of-dismay-on-a-s-hamrahs-anti-criticism",
-      "date": "2026-02-10T12:47:23.000Z",
-      "excerpt": "Walking “a fine line between principled opposition and crankdom,” the film critic A.S. Hamrah rails against Rotten Tomatoes, texting at the movies, and digital projection"
-    },
-    {
-      "id": "hx5fcq",
-      "blogId": "aldaily",
-      "title": "It should be as good to remember a past joy as to anticipate a future one, reasoned Derek Parfit. Nonsense, argues Samuel Scheffler",
-      "link": "https://www.lrb.co.uk/the-paper/v48/n02/thomas-nagel/now-and-then",
-      "date": "2026-02-10T12:46:23.000Z",
-      "excerpt": "It should be as good to remember a past joy as to anticipate a future one, reasoned Derek Parfit. Nonsense, argues Samuel Scheffler"
-    },
-    {
-      "id": "dpkf6u",
-      "blogId": "aldaily",
-      "title": "George Scialabba is no fan of political theory: “Imagination, sympathy, solidarity — by whatever name: this is the true engine of political progress”",
-      "link": "https://www.newstatesman.com/ideas/2026/01/can-ideas-change-the-world",
-      "date": "2026-02-10T12:45:23.000Z",
-      "excerpt": "George Scialabba is no fan of political theory: “Imagination, sympathy, solidarity — by whatever name: this is the true engine of political progress”"
-    },
-    {
       "id": "1ij8km",
       "blogId": "ofdollarsanddata",
       "title": "Why Consensus Fails",
       "link": "https://ofdollarsanddata.com/why-consensus-fails",
       "date": "2026-02-10T12:45:11.000Z",
       "excerpt": "Let's turn the clocks back a little over a year. Going into 2025, the consensus view on markets was: U.S. Exceptionalism: The U.S. is the only equity game in town. Europe and the rest of the world had fallen behind on AI and tech innovation. Lower Rates: Investors expected rate cuts and, by extensio..."
-    },
-    {
-      "id": "p7cb4h",
-      "blogId": "aldaily",
-      "title": "Typists, editors, arbiters of art. Literary amanuenses like Theodora Bosanquet, Véra Nabokov, and Valerie Eliot shaped modern literature",
-      "link": "https://publicdomainreview.org/essay/typing-for-love-or-money",
-      "date": "2026-02-10T12:44:23.000Z",
-      "excerpt": "Typists, editors, arbiters of art. Literary amanuenses like Theodora Bosanquet, Véra Nabokov, and Valerie Eliot shaped modern literature"
     },
     {
       "id": "jhnuwq",
@@ -1664,6 +1792,14 @@
       "link": "https://abnormalreturns.com/2026/02/06/podcast-links-advice-for-living",
       "date": "2026-02-06T15:36:46.000Z",
       "excerpt": "Fridays are all about podcast links here at Abnormal Returns. You can also check out last week’s links including a look at..."
+    },
+    {
+      "id": "m6dfq3",
+      "blogId": "alanwsmith",
+      "title": "Weeknotes (through Feb. 6, 2026)",
+      "link": "https://www.alanwsmith.com/en/39/1p/78/du",
+      "date": "2026-02-06T15:27:40.000Z",
+      "excerpt": "Saturday - Jan. 31, 2026 Working on my Magic Deck Builder. It's giving me a chance to exercise bitty. I'm also learning how to use the BroadcastChannel API to have multiple browser windows update each other. The idea is to have two screens for the deck builder. One with the batch of cards I'm buildi..."
     },
     {
       "id": "fjxtl2",
@@ -5088,6 +5224,14 @@
       "link": "https://simonwillison.net/2026/Jan/30/moltbook",
       "date": "2026-01-30T16:43:23.000Z",
       "excerpt": "The hottest project in AI right now is Clawdbot, renamed to Moltbot, renamed to OpenClaw. It's an open source implementation of the digital personal assistant pattern, built by Peter Steinberger to integrate with the messaging system of your choice. It's two months old, has over 114,000 stars on Git..."
+    },
+    {
+      "id": "rene7a",
+      "blogId": "alanwsmith",
+      "title": "Notes on Commander Deck Building Templates for the New Era",
+      "link": "https://www.alanwsmith.com/en/38/z9/2w/vi",
+      "date": "2026-01-30T16:42:08.000Z",
+      "excerpt": "Magic: The Gathering is my current rabbit hole. Specifically, playing Commander. These are my notes about this video to remind myself when I'm building. The Numbers Number of Lands: 38 Card Advantage: 12 These are cards that start as one card that give you more cards. Note that things like \"Ponder\"..."
     },
     {
       "id": "3vnjjs",
