@@ -1,6 +1,286 @@
 {
-  "lastUpdated": "2026-02-11T10:17:31.081Z",
+  "lastUpdated": "2026-02-11T18:21:27.344Z",
   "posts": [
+    {
+      "id": "kgfjf6",
+      "blogId": "simonwillison",
+      "title": "cysqlite - a new sqlite driver",
+      "link": "https://simonwillison.net/2026/Feb/11/cysqlite",
+      "date": "2026-02-11T17:34:40.000Z",
+      "excerpt": "cysqlite - a new sqlite driver Charles Leifer has been maintaining pysqlite3 - a fork of the Python standard library's sqlite3 module that makes it much easier to run upgraded SQLite versions - since 2018. He's been working on a ground-up Cython rewrite called cysqlite for almost as long, but it's f..."
+    },
+    {
+      "id": "5avmvf",
+      "blogId": "braddelong",
+      "title": "Econ 210a :: Why the Agrarian Age Stayed Poor: Just What Was the Long-Run Trap Anyway?",
+      "link": "https://braddelong.substack.com/p/econ-210a-why-the-agrarian-age-stayed",
+      "date": "2026-02-11T17:27:09.000Z",
+      "excerpt": "What kept the rate of growth of human “technology” at less than 3% per century back before the year 200—and progress not guaranteed, as the Late Bronze Age collapse and the post-Roman-Han Dark Age..."
+    },
+    {
+      "id": "avohbq",
+      "blogId": "marginalrevolution",
+      "title": "Wednesday assorted links",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/02/wednesday-assorted-links-540.html",
+      "date": "2026-02-11T17:11:47.000Z",
+      "excerpt": "1. The rise of the Saudi-UAE split. 2. How Peru came the leading exporter of blueberries. 3. One view on how to respond to AI potentially taking your job. 4. Austin Steady rates books mentioned on MR. 5. 36 hours in Lagos (NYT). 6. Why economists linearize everything. 7. New Malcolm Gladwell book co..."
+    },
+    {
+      "id": "wkrqzr",
+      "blogId": "kottke",
+      "title": " Some Site Goings-On ",
+      "link": "https://kottke.org/26/02/some-site-goings-on",
+      "date": "2026-02-11T17:10:06.000Z",
+      "excerpt": "Hey gang. I took a couple of days off at the beginning of the week to visit some colleges with my daughter. She found a potential contender, one that was just fine, and a school that isn’t going to work for her — we both independently zoned out listening to the presentation about 10 minutes in. 😂 I..."
+    },
+    {
+      "id": "nbp7xw",
+      "blogId": "kottke",
+      "title": "  Everyone’s living a life you know nothing about .... ",
+      "link": "https://kottke.org/26/02/0048342-everyones-living-a-life-y",
+      "date": "2026-02-11T16:32:25.000Z",
+      "excerpt": "Everyone’s living a life you know nothing about. Be kind."
+    },
+    {
+      "id": "esesp0",
+      "blogId": "mostlyeconomics",
+      "title": "The euro as a sign of belonging",
+      "link": "https://mostlyeconomics.wordpress.com/2026/02/11/the-euro-as-a-sign-of-belonging",
+      "date": "2026-02-11T16:28:42.000Z",
+      "excerpt": "Dimitar Radev, Governor of Bulgaria central bank on adoption of Euro: There are moments that are difficult to explain with figures, analyses, or institutional formulas. Moments in which what is heard is not a position, but an experience. Increasingly often, young, highly educated Bulgarians speak ab..."
+    },
+    {
+      "id": "wq0tvv",
+      "blogId": "platformer",
+      "title": "Exclusive: OpenAI disbanded its mission alignment team",
+      "link": "https://www.platformer.news/openai-mission-alignment-team-joshua-achiam",
+      "date": "2026-02-11T16:25:01.000Z",
+      "excerpt": "Joshua Achiam will become the company's chief futurist"
+    },
+    {
+      "id": "7uuvbw",
+      "blogId": "grumpyeconomist",
+      "title": "Misplaced Nostalgia",
+      "link": "https://www.grumpy-economist.com/p/misplaced-nostalgia",
+      "date": "2026-02-11T16:16:25.000Z",
+      "excerpt": "This short article appeared in the Coolidge Review, where it is much more nicely formatted."
+    },
+    {
+      "id": "nh4fpp",
+      "blogId": "spyglass",
+      "title": "Love It If We Made It",
+      "link": "https://spyglass.org/ai-future-work",
+      "date": "2026-02-11T15:56:13.000Z",
+      "excerpt": "AI will disrupt work. We will adapt."
+    },
+    {
+      "id": "36wfju",
+      "blogId": "kottke",
+      "title": " “We will not achieve any of our ultimate goals... ",
+      "link": "https://kottke.org/26/02/0048341-we-will-not-achieve-any",
+      "date": "2026-02-11T15:39:19.000Z",
+      "excerpt": "“We will not achieve any of our ultimate goals without exercising state power, and the most effective way to take state power is through nonviolent but confrontational resistance.”"
+    },
+    {
+      "id": "8uyhud",
+      "blogId": "commonreader",
+      "title": "Doomed to choose... ",
+      "link": "https://www.commonreader.co.uk/p/doomed-to-choose",
+      "date": "2026-02-11T15:37:09.000Z",
+      "excerpt": "Seamus Perry, pluralism, and poetry"
+    },
+    {
+      "id": "41g085",
+      "blogId": "larryswedroe",
+      "title": "Direct Lending vs. High Yield Bonds",
+      "link": "https://larryswedroe.substack.com/p/direct-lending-vs-high-yield-bonds-363",
+      "date": "2026-02-11T15:33:16.000Z",
+      "excerpt": "What the Performance Data Really Shows"
+    },
+    {
+      "id": "hjs881",
+      "blogId": "marginalrevolution",
+      "title": "My New Jersey history podcast with “Exit Interviews”",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/02/my-new-jersey-history-podcast-with-exit-interviews.html",
+      "date": "2026-02-11T15:17:51.000Z",
+      "excerpt": "Exit Interviews is a new podcast run by David Piegaro. I am honored to be one of the first few guests, along with Chris Christie. Think of this session as “Tyler Cowen as regional thinker.” Almost 100% fresh material, not to mention some trolling directed at Central and South Jersey, Philly too. Her..."
+    },
+    {
+      "id": "yb4et4",
+      "blogId": "robhenderson",
+      "title": "Sex Work, Looksmaxers, Mansplaining",
+      "link": "https://www.robkhenderson.com/p/sex-work-looksmaxers-mansplaining",
+      "date": "2026-02-11T15:09:50.000Z",
+      "excerpt": "Links and recommendations"
+    },
+    {
+      "id": "635ufn",
+      "blogId": "kottke",
+      "title": "  A recommendation for a recent episode of the Heavyweight... ",
+      "link": "https://kottke.org/26/02/0048338-a-recommendation-for-a-re",
+      "date": "2026-02-11T15:05:43.000Z",
+      "excerpt": "A recommendation for a recent episode of the Heavyweight podcast on the Trump regime’s occupation of Minneapolis."
+    },
+    {
+      "id": "3dt2z4",
+      "blogId": "abnormalreturns",
+      "title": "Personal finance links: money movements",
+      "link": "https://abnormalreturns.com/2026/02/11/personal-finance-links-money-movements",
+      "date": "2026-02-11T14:30:48.000Z",
+      "excerpt": "Wednesdays are all about personal finance here at Abnormal Returns. You can check out last week’s links including a look at why..."
+    },
+    {
+      "id": "xapi0q",
+      "blogId": "thecuttingfloor",
+      "title": "Marcus",
+      "link": "https://thecuttingfloor.substack.com/p/marcus",
+      "date": "2026-02-11T13:26:30.000Z",
+      "excerpt": "Metabolic Sovereignty, printed."
+    },
+    {
+      "id": "mduoka",
+      "blogId": "aldaily",
+      "title": "“Good politics, like good art, does not lecture or declaim. It strains; it argues; it is an unending negotiation with the difficult and intransigent adventure of humanity”",
+      "link": "https://thepointmag.com/criticism/listless-liberalism",
+      "date": "2026-02-11T12:53:47.000Z",
+      "excerpt": "“Good politics, like good art, does not lecture or declaim. It strains; it argues; it is an unending negotiation with the difficult and intransigent adventure of humanity”"
+    },
+    {
+      "id": "91hw9h",
+      "blogId": "aldaily",
+      "title": "We associate confessional poetry with Robert Lowell, Sylvia Plath, and Anne Sexton. But Larry Levis’s confessionalism was different",
+      "link": "https://www.poetryfoundation.org/poetrymagazine/articles/1749603/destroying-time-on-the-lasting-legacy-of-larry-levis",
+      "date": "2026-02-11T12:52:47.000Z",
+      "excerpt": "We associate confessional poetry with Robert Lowell, Sylvia Plath, and Anne Sexton. But Larry Levis’s confessionalism was different"
+    },
+    {
+      "id": "wetze4",
+      "blogId": "aldaily",
+      "title": "At a film screening Salvador Dalí, in a fit of envy, turned on the director: “Joseph Cornell, you are a plagiarist of my unconscious mind!”",
+      "link": "https://www.theparisreview.org/blog/2026/02/10/at-the-movies-with-john-ashbery",
+      "date": "2026-02-11T12:51:47.000Z",
+      "excerpt": "At a film screening Salvador Dalí, in a fit of envy, turned on the director: “Joseph Cornell, you are a plagiarist of my unconscious mind!”"
+    },
+    {
+      "id": "92ndsa",
+      "blogId": "aldaily",
+      "title": "The overworked phrase “rewiring your brain” suggests mechanical precision. The process is slow, messy, and incomplete",
+      "link": "https://aeon.co/essays/what-the-metaphor-of-rewiring-gets-wrong-about-neuroplasticity",
+      "date": "2026-02-11T12:50:47.000Z",
+      "excerpt": "The overworked phrase “rewiring your brain” suggests mechanical precision. The process is slow, messy, and incomplete"
+    },
+    {
+      "id": "ahvb4q",
+      "blogId": "aldaily",
+      "title": "In publications like New Masses and The Anvil, the proletarian literary movement had a message for Ezra Pound: “See you in hell”",
+      "link": "https://jacobin.com/2026/02/new-masses-proletarian-literature-wright-gold",
+      "date": "2026-02-11T12:49:47.000Z",
+      "excerpt": "In publications like New Masses and The Anvil, the proletarian literary movement had a message for Ezra Pound: “See you in hell”"
+    },
+    {
+      "id": "nqhqkj",
+      "blogId": "aldaily",
+      "title": "Peter Matthiessen went to Paris to spy and write the Great American Novel. But he was, in his words, “always in the club drinking martinis”",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n02/christian-lorentzen/i-m-always-in-the-club",
+      "date": "2026-02-11T12:48:47.000Z",
+      "excerpt": "Peter Matthiessen went to Paris to spy and write the Great American Novel. But he was, in his words, “always in the club drinking martinis”"
+    },
+    {
+      "id": "a5177j",
+      "blogId": "aldaily",
+      "title": "Walking “a fine line between principled opposition and crankdom,” the film critic A.S. Hamrah rails against Rotten Tomatoes, texting at the movies, and digital projection",
+      "link": "https://clereviewofbooks.com/capsules-of-dismay-on-a-s-hamrahs-anti-criticism",
+      "date": "2026-02-11T12:47:47.000Z",
+      "excerpt": "Walking “a fine line between principled opposition and crankdom,” the film critic A.S. Hamrah rails against Rotten Tomatoes, texting at the movies, and digital projection"
+    },
+    {
+      "id": "hx5fcq",
+      "blogId": "aldaily",
+      "title": "It should be as good to remember a past joy as to anticipate a future one, reasoned Derek Parfit. Nonsense, argues Samuel Scheffler",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n02/thomas-nagel/now-and-then",
+      "date": "2026-02-11T12:46:47.000Z",
+      "excerpt": "It should be as good to remember a past joy as to anticipate a future one, reasoned Derek Parfit. Nonsense, argues Samuel Scheffler"
+    },
+    {
+      "id": "dpkf6u",
+      "blogId": "aldaily",
+      "title": "George Scialabba is no fan of political theory: “Imagination, sympathy, solidarity — by whatever name: this is the true engine of political progress”",
+      "link": "https://www.newstatesman.com/ideas/2026/01/can-ideas-change-the-world",
+      "date": "2026-02-11T12:45:47.000Z",
+      "excerpt": "George Scialabba is no fan of political theory: “Imagination, sympathy, solidarity — by whatever name: this is the true engine of political progress”"
+    },
+    {
+      "id": "p7cb4h",
+      "blogId": "aldaily",
+      "title": "Typists, editors, arbiters of art. Literary amanuenses like Theodora Bosanquet, Véra Nabokov, and Valerie Eliot shaped modern literature",
+      "link": "https://publicdomainreview.org/essay/typing-for-love-or-money",
+      "date": "2026-02-11T12:44:47.000Z",
+      "excerpt": "Typists, editors, arbiters of art. Literary amanuenses like Theodora Bosanquet, Véra Nabokov, and Valerie Eliot shaped modern literature"
+    },
+    {
+      "id": "8bve07",
+      "blogId": "wealthofcommonsense",
+      "title": "Animal Spirits: What Would You Do With $3 Million?",
+      "link": "https://awealthofcommonsense.com/2026/02/animal-spirits-what-would-you-do-with-3-million",
+      "date": "2026-02-11T12:15:12.000Z",
+      "excerpt": "On today's show we discuss how the bull market is changing shape, software stocks getting slaughtered, it's finally a stock picker's market, Anthropic changed the AI narrative, ex-Mag 7 is finally working, the case for emerging markets, the crypto bloodbath, the best airline and more. The post Anima..."
+    },
+    {
+      "id": "drl00d",
+      "blogId": "millersbookreview",
+      "title": "Open Thread: What Book Would You Live In?",
+      "link": "https://www.millersbookreview.com/p/open-thread-what-book-would-you-live-in",
+      "date": "2026-02-11T12:02:28.000Z",
+      "excerpt": "Narnia, the Yorkshire Dales, New Mexico, Corfu? What’s Your Destination?"
+    },
+    {
+      "id": "hcvc0x",
+      "blogId": "paulkrugman",
+      "title": "The Banality of MAGA Evil",
+      "link": "https://paulkrugman.substack.com/p/the-banality-of-maga-evil",
+      "date": "2026-02-11T11:31:09.000Z",
+      "excerpt": "Instead of criminal masterminds we got amoral, stupid grifters like Howard Lutnick"
+    },
+    {
+      "id": "kmgtqb",
+      "blogId": "ritholtz",
+      "title": "10 Wednesday AM Reads",
+      "link": "https://ritholtz.com/2026/02/10-wednesday-am-reads-362",
+      "date": "2026-02-11T11:30:07.000Z",
+      "excerpt": "My mid-week morning train WFH reads: • Andreessen Horowitz’s Rising Influence Over Trump-Era AI Policy: The VC giant is shaping how Washington thinks about artificial intelligence — and the stakes couldn’t be higher. (Bloomberg free) • “Everything is gambling now”: How betting is taking over America..."
+    },
+    {
+      "id": "k6u3nf",
+      "blogId": "astralcodexten",
+      "title": "Political Backflow From Europe",
+      "link": "https://www.astralcodexten.com/p/political-backflow-from-europe",
+      "date": "2026-02-11T11:23:56.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "sainri",
+      "blogId": "conspicuouscognition",
+      "title": "Why Have Academics Failed To Study Social Justice Ideology?",
+      "link": "https://www.conspicuouscognition.com/p/why-have-academics-failed-to-study",
+      "date": "2026-02-11T11:01:46.000Z",
+      "excerpt": "This is a guest post by Thomas Prosser (who writes at The Path Not Taken) and Edmund King (who writes at Paroxysms) about their very interesting new book, Beyond Woke and Anti-Woke: Explaining the Rise of Social Justice Ideology."
+    },
+    {
+      "id": "6q74rz",
+      "blogId": "flowingdata",
+      "title": "10k fewer STEM PhDs employed by the federal government",
+      "link": "https://flowingdata.com/2026/02/11/10k-fewer-stem-phds-employed-by-the-federal-government",
+      "date": "2026-02-11T10:54:21.000Z",
+      "excerpt": "Science analyzed employment data from the Office of Personnel Management to calculate the… Tags: government, layoffs, PhD, Science Journal"
+    },
+    {
+      "id": "9xk0dh",
+      "blogId": "pluralistic",
+      "title": "Pluralistic: Europe takes a big step towards a post-dollar world (11 Feb 2026)",
+      "link": "https://pluralistic.net/2026/02/11/post-dollar-world",
+      "date": "2026-02-11T10:09:05.000Z",
+      "excerpt": "Today's links Europe takes a big step towards a post-dollar world: Recapturing $24t worth of transactions from Visa/Mastercard. Hey look at this: Delights to delectate. Object permanence: API for Congress; Steampunk fetish mask; Hillary x AOL login screen; Suffragist Valentines; Musk x Intuit vs the..."
+    },
     {
       "id": "t5d4yo",
       "blogId": "noahpinion",
@@ -66,92 +346,12 @@
       "excerpt": "New York Post Publishes Long Excerpt From “Rage and the Republic” by Jonathan Turley If American democracy is to survive in the twenty-first century, it must, again, break the Saturn cycle. The country—and the world—are facing profound economic and social changes. The causes may be different in the..."
     },
     {
-      "id": "mduoka",
-      "blogId": "aldaily",
-      "title": "“Good politics, like good art, does not lecture or declaim. It strains; it argues; it is an unending negotiation with the difficult and intransigent adventure of humanity”",
-      "link": "https://thepointmag.com/criticism/listless-liberalism",
-      "date": "2026-02-11T04:37:33.000Z",
-      "excerpt": "“Good politics, like good art, does not lecture or declaim. It strains; it argues; it is an unending negotiation with the difficult and intransigent adventure of humanity”"
-    },
-    {
-      "id": "91hw9h",
-      "blogId": "aldaily",
-      "title": "We associate confessional poetry with Robert Lowell, Sylvia Plath, and Anne Sexton. But Larry Levis’s confessionalism was different",
-      "link": "https://www.poetryfoundation.org/poetrymagazine/articles/1749603/destroying-time-on-the-lasting-legacy-of-larry-levis",
-      "date": "2026-02-11T04:36:33.000Z",
-      "excerpt": "We associate confessional poetry with Robert Lowell, Sylvia Plath, and Anne Sexton. But Larry Levis’s confessionalism was different"
-    },
-    {
       "id": "fm227i",
       "blogId": "mostlyeconomics",
       "title": "Why the arts market is not like other markets?",
       "link": "https://mostlyeconomics.wordpress.com/2026/02/11/why-the-arts-market-is-not-like-other-markets",
       "date": "2026-02-11T04:35:59.000Z",
       "excerpt": "Roshan Ghadamian of Institute for Regenerative Systems Architecture in this paper points why there is opactity in arts’ markets: The global art market is one of the oldest and most valuable asset markets, yet it lacks the institutional features typically required for market coherence: standardised a..."
-    },
-    {
-      "id": "wetze4",
-      "blogId": "aldaily",
-      "title": "At a film screening Salvador Dalí, in a fit of envy, turned on the director: “Joseph Cornell, you are a plagiarist of my unconscious mind!”",
-      "link": "https://www.theparisreview.org/blog/2026/02/10/at-the-movies-with-john-ashbery",
-      "date": "2026-02-11T04:35:33.000Z",
-      "excerpt": "At a film screening Salvador Dalí, in a fit of envy, turned on the director: “Joseph Cornell, you are a plagiarist of my unconscious mind!”"
-    },
-    {
-      "id": "92ndsa",
-      "blogId": "aldaily",
-      "title": "The overworked phrase “rewiring your brain” suggests mechanical precision. The process is slow, messy, and incomplete",
-      "link": "https://aeon.co/essays/what-the-metaphor-of-rewiring-gets-wrong-about-neuroplasticity",
-      "date": "2026-02-11T04:34:33.000Z",
-      "excerpt": "The overworked phrase “rewiring your brain” suggests mechanical precision. The process is slow, messy, and incomplete"
-    },
-    {
-      "id": "ahvb4q",
-      "blogId": "aldaily",
-      "title": "In publications like New Masses and The Anvil, the proletarian literary movement had a message for Ezra Pound: “See you in hell”",
-      "link": "https://jacobin.com/2026/02/new-masses-proletarian-literature-wright-gold",
-      "date": "2026-02-11T04:33:33.000Z",
-      "excerpt": "In publications like New Masses and The Anvil, the proletarian literary movement had a message for Ezra Pound: “See you in hell”"
-    },
-    {
-      "id": "nqhqkj",
-      "blogId": "aldaily",
-      "title": "Peter Matthiessen went to Paris to spy and write the Great American Novel. But he was, in his words, “always in the club drinking martinis”",
-      "link": "https://www.lrb.co.uk/the-paper/v48/n02/christian-lorentzen/i-m-always-in-the-club",
-      "date": "2026-02-11T04:32:33.000Z",
-      "excerpt": "Peter Matthiessen went to Paris to spy and write the Great American Novel. But he was, in his words, “always in the club drinking martinis”"
-    },
-    {
-      "id": "a5177j",
-      "blogId": "aldaily",
-      "title": "Walking “a fine line between principled opposition and crankdom,” the film critic A.S. Hamrah rails against Rotten Tomatoes, texting at the movies, and digital projection",
-      "link": "https://clereviewofbooks.com/capsules-of-dismay-on-a-s-hamrahs-anti-criticism",
-      "date": "2026-02-11T04:31:33.000Z",
-      "excerpt": "Walking “a fine line between principled opposition and crankdom,” the film critic A.S. Hamrah rails against Rotten Tomatoes, texting at the movies, and digital projection"
-    },
-    {
-      "id": "hx5fcq",
-      "blogId": "aldaily",
-      "title": "It should be as good to remember a past joy as to anticipate a future one, reasoned Derek Parfit. Nonsense, argues Samuel Scheffler",
-      "link": "https://www.lrb.co.uk/the-paper/v48/n02/thomas-nagel/now-and-then",
-      "date": "2026-02-11T04:30:33.000Z",
-      "excerpt": "It should be as good to remember a past joy as to anticipate a future one, reasoned Derek Parfit. Nonsense, argues Samuel Scheffler"
-    },
-    {
-      "id": "dpkf6u",
-      "blogId": "aldaily",
-      "title": "George Scialabba is no fan of political theory: “Imagination, sympathy, solidarity — by whatever name: this is the true engine of political progress”",
-      "link": "https://www.newstatesman.com/ideas/2026/01/can-ideas-change-the-world",
-      "date": "2026-02-11T04:29:33.000Z",
-      "excerpt": "George Scialabba is no fan of political theory: “Imagination, sympathy, solidarity — by whatever name: this is the true engine of political progress”"
-    },
-    {
-      "id": "p7cb4h",
-      "blogId": "aldaily",
-      "title": "Typists, editors, arbiters of art. Literary amanuenses like Theodora Bosanquet, Véra Nabokov, and Valerie Eliot shaped modern literature",
-      "link": "https://publicdomainreview.org/essay/typing-for-love-or-money",
-      "date": "2026-02-11T04:28:33.000Z",
-      "excerpt": "Typists, editors, arbiters of art. Literary amanuenses like Theodora Bosanquet, Véra Nabokov, and Valerie Eliot shaped modern literature"
     },
     {
       "id": "8q89n9",
@@ -192,6 +392,14 @@
       "link": "https://seangoedecke.com/screwing-up",
       "date": "2026-02-11T00:00:00.000Z",
       "excerpt": "I bet he forgot about it immediately. I could have just messed up the testing (for instance, by accidentally running some different code than the code I pushed), or he knew I’d probably lied, and didn’t really care. I haven’t forgotten about it. Even a decade later, I’m still ashamed to write it dow..."
+    },
+    {
+      "id": "epbl7v",
+      "blogId": "ploum",
+      "title": "Do not apologize for replying late to my email",
+      "link": "https://ploum.net/2026-02-11-do_not_apologize_for_replying_to_my_email.html",
+      "date": "2026-02-11T00:00:00.000Z",
+      "excerpt": "Do not apologize for replying late to my email You don’t need to apologize for taking hours, days, or years to reply to one of my emails. If we are not close collaborators, and if I didn’t explicitly tell you I was waiting for your answer within a specific timeframe, then please stop apologizing for..."
     },
     {
       "id": "ly1juc",
@@ -312,6 +520,14 @@
       "link": "https://danq.me/2026/02/10/rebels-in-the-sky",
       "date": "2026-02-10T17:27:34.000Z",
       "excerpt": "I feel like I'm reading a lot about SSH lately and how it can be used for exotic and unusual tasks. Tarpitting's fun, of course, but really what inspires me is all these dinky projects like ssh tiny.christmas that subvert the usual authentication-then-terminal flow that you expect when you connect t..."
+    },
+    {
+      "id": "7jehch",
+      "blogId": "ritholtz",
+      "title": "Transcript: Bob Moser, Prime Group Founder and CEO ",
+      "link": "https://ritholtz.com/2026/02/transcript-bob-moser",
+      "date": "2026-02-10T17:00:48.000Z",
+      "excerpt": "The transcript from this week’s MiB: Bob Moser, Prime Group Founder and CEO, is below. You can stream and download our full conversation, including any podcast extras, on Apple Podcasts, Spotify, YouTube, and Bloomberg. All of our earlier podcasts on your favorite pod hosts can be found here. ~~~ Th..."
     },
     {
       "id": "r3qb49",
@@ -664,14 +880,6 @@
       "link": "https://thezvi.substack.com/p/claude-opus-46-system-card-part-1",
       "date": "2026-02-09T21:27:29.000Z",
       "excerpt": "Claude Opus 4.6 is here. There is a lot to say."
-    },
-    {
-      "id": "7jehch",
-      "blogId": "ritholtz",
-      "title": "Transcript: Bob Moser, Prime Group Founder and CEO ",
-      "link": "https://ritholtz.com/2026/02/transcript-bob-moser",
-      "date": "2026-02-09T21:00:48.000Z",
-      "excerpt": "The transcript from this week’s MiB: Bob Moser, Prime Group Founder and CEO, is below. You can stream and download our full conversation, including any podcast extras, on Apple Podcasts, Spotify, YouTube, and Bloomberg. All of our earlier podcasts on your favorite pod hosts can be found here. ~~~ Th..."
     },
     {
       "id": "mhv1hq",
