@@ -1396,6 +1396,47 @@
         "finance"
       ],
       "description": "Curated snippets and insights from the financial ecosystem by Tom Brakke."
+    },
+    {
+      "id": "weltinnenpolitik",
+      "name": "Weltinnenpolitik",
+      "url": "https://weltinnenpolitik.substack.com",
+      "feed": "https://weltinnenpolitik.substack.com/feed",
+      "proxy": true,
+      "categories": [
+        "economics"
+      ],
+      "description": "Analysis at the intersection of history and geoeconomics by Nicholas Mulder."
+    },
+    {
+      "id": "danshapiro",
+      "name": "Dan Shapiro",
+      "url": "https://www.danshapiro.com/blog",
+      "feed": "https://www.danshapiro.com/blog/feed/",
+      "categories": [
+        "tech"
+      ],
+      "description": "Glowforge CEO on AI-driven software development, technical deflation, and the economics of automation."
+    },
+    {
+      "id": "surfingcomplexity",
+      "name": "Surfing Complexity",
+      "url": "https://surfingcomplexity.blog",
+      "feed": "https://surfingcomplexity.blog/feed/",
+      "categories": [
+        "tech"
+      ],
+      "description": "Lorin Hochstein on complex systems, resilience engineering, and human adaptability in software."
+    },
+    {
+      "id": "jamesdrandall",
+      "name": "James Randall",
+      "url": "https://www.jamesdrandall.com",
+      "feed": "https://www.jamesdrandall.com/index.xml",
+      "categories": [
+        "tech"
+      ],
+      "description": "Reflections on four decades of programming, AI's impact on craft, and building things from scratch."
     }
   ]
 }
