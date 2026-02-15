@@ -1,6 +1,174 @@
 {
-  "lastUpdated": "2026-02-14T17:52:15.085Z",
+  "lastUpdated": "2026-02-15T04:02:04.751Z",
   "posts": [
+    {
+      "id": "n0ujvn",
+      "blogId": "teendifferent",
+      "title": "Stitching Vision into LLMs: A Comparative Analysis of Embedding Spaces",
+      "link": "https://teendifferent.substack.com/p/stitching-vision-into-llms-a-comparative",
+      "date": "2026-02-15T01:10:20.000Z",
+      "excerpt": "Building a VLM from scratch using model stitching and LoRA — comparing CLIP's language alignment vs. I-JEPA's world modeling."
+    },
+    {
+      "id": "d58m9k",
+      "blogId": "seangoedecke",
+      "title": "Two different tricks for fast LLM inference",
+      "link": "https://seangoedecke.com/fast-llm-inference",
+      "date": "2026-02-15T00:00:00.000Z",
+      "excerpt": "However, Anthropic’s big advantage is that they’re serving their actual model. When you use their fast mode, you get real Opus 4.6, while when you use OpenAI’s fast mode you get GPT-5.3-Codex-Spark, not the real GPT-5.3-Codex. Spark is indeed much faster, but is a notably less capable model: good en..."
+    },
+    {
+      "id": "hb68y",
+      "blogId": "simonwillison",
+      "title": "Quoting Boris Cherny",
+      "link": "https://simonwillison.net/2026/Feb/14/boris",
+      "date": "2026-02-14T23:59:09.000Z",
+      "excerpt": "Someone has to prompt the Claudes, talk to customers, coordinate with other teams, decide what to build next. Engineering is changing and great engineers are more important than ever. — Boris Cherny, Claude Code creator, on why Anthropic are still hiring developers Tags: careers, anthropic, ai, clau..."
+    },
+    {
+      "id": "3uh716",
+      "blogId": "aldaily",
+      "title": "The Mellon Foundation has put huge sums of money toward the idea that arts and letters is not for wisdom, but for advocacy",
+      "link": "https://www.theatlantic.com/magazine/2026/03/mellon-foundation-humanities-research-funding/685733?gift=ih3Agm7ZTQUXUY2wyHjxRNdlfnBwNYM4SBW7lEFSxcs",
+      "date": "2026-02-14T22:35:38.000Z",
+      "excerpt": "The Mellon Foundation has put huge sums of money toward the idea that arts and letters is not for wisdom, but for advocacy"
+    },
+    {
+      "id": "vkyyy5",
+      "blogId": "aldaily",
+      "title": "What happens when a novel’s plot comes uncannily close to major breaking news? The case of Murder Bimbo is instructive",
+      "link": "https://www.nytimes.com/2026/02/11/books/murder-bimbo-charlie-kirk.html?unlocked_article_code=1.LlA.4F4e.-ZTMAYJboSmy&smid=url-share",
+      "date": "2026-02-14T22:34:38.000Z",
+      "excerpt": "What happens when a novel’s plot comes uncannily close to major breaking news? The case of Murder Bimbo is instructive"
+    },
+    {
+      "id": "9yaifm",
+      "blogId": "aldaily",
+      "title": "“Being a literary sex symbol can really take it out of you, making it tougher to maintain your lofty dignity as a quoter of Kafka”",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n03/james-wolcott/what-you-can-get-away-with",
+      "date": "2026-02-14T22:33:38.000Z",
+      "excerpt": "“Being a literary sex symbol can really take it out of you, making it tougher to maintain your lofty dignity as a quoter of Kafka”"
+    },
+    {
+      "id": "6aolq9",
+      "blogId": "aldaily",
+      "title": "“Revolution” initially signaled destruction. Why did the word take on a more optimistic tenor?",
+      "link": "https://literaryreview.co.uk/19609-2",
+      "date": "2026-02-14T22:32:38.000Z",
+      "excerpt": "“Revolution” initially signaled destruction. Why did the word take on a more optimistic tenor?"
+    },
+    {
+      "id": "cheajl",
+      "blogId": "nadig",
+      "title": "Quark's Replicator",
+      "link": "https://www.nadig.com/p/quarks-replicator",
+      "date": "2026-02-14T22:32:12.000Z",
+      "excerpt": "AI;DR & The Reader's Contract"
+    },
+    {
+      "id": "o44zkv",
+      "blogId": "aldaily",
+      "title": "“One of the most consequential misunderstandings in the history of literary criticism turns on a single Greek word”",
+      "link": "https://jonathanbate.substack.com/p/aristotle-and-the-so-called-tragic",
+      "date": "2026-02-14T22:31:38.000Z",
+      "excerpt": "“One of the most consequential misunderstandings in the history of literary criticism turns on a single Greek word”"
+    },
+    {
+      "id": "bie4u7",
+      "blogId": "aldaily",
+      "title": "Can an AI be endowed with a sense of morality? Amanda Askell is fashioning a soul for Claude",
+      "link": "https://www.wsj.com/tech/ai/anthropic-amanda-askell-philosopher-ai-3c031883?st=Qg8PQR&reflink=desktopwebshare_permalink",
+      "date": "2026-02-14T22:30:38.000Z",
+      "excerpt": "Can an AI be endowed with a sense of morality? Amanda Askell is fashioning a soul for Claude"
+    },
+    {
+      "id": "mduoka",
+      "blogId": "aldaily",
+      "title": "“Good politics, like good art, does not lecture or declaim. It strains; it argues; it is an unending negotiation with the difficult and intransigent adventure of humanity”",
+      "link": "https://thepointmag.com/criticism/listless-liberalism",
+      "date": "2026-02-14T22:29:38.000Z",
+      "excerpt": "“Good politics, like good art, does not lecture or declaim. It strains; it argues; it is an unending negotiation with the difficult and intransigent adventure of humanity”"
+    },
+    {
+      "id": "91hw9h",
+      "blogId": "aldaily",
+      "title": "We associate confessional poetry with Robert Lowell, Sylvia Plath, and Anne Sexton. But Larry Levis’s confessionalism was different",
+      "link": "https://www.poetryfoundation.org/poetrymagazine/articles/1749603/destroying-time-on-the-lasting-legacy-of-larry-levis",
+      "date": "2026-02-14T22:28:38.000Z",
+      "excerpt": "We associate confessional poetry with Robert Lowell, Sylvia Plath, and Anne Sexton. But Larry Levis’s confessionalism was different"
+    },
+    {
+      "id": "wetze4",
+      "blogId": "aldaily",
+      "title": "At a film screening Salvador Dalí, in a fit of envy, turned on the director: “Joseph Cornell, you are a plagiarist of my unconscious mind!”",
+      "link": "https://www.theparisreview.org/blog/2026/02/10/at-the-movies-with-john-ashbery",
+      "date": "2026-02-14T22:27:38.000Z",
+      "excerpt": "At a film screening Salvador Dalí, in a fit of envy, turned on the director: “Joseph Cornell, you are a plagiarist of my unconscious mind!”"
+    },
+    {
+      "id": "92ndsa",
+      "blogId": "aldaily",
+      "title": "The overworked phrase “rewiring your brain” suggests mechanical precision. The process is slow, messy, and incomplete",
+      "link": "https://aeon.co/essays/what-the-metaphor-of-rewiring-gets-wrong-about-neuroplasticity",
+      "date": "2026-02-14T22:26:38.000Z",
+      "excerpt": "The overworked phrase “rewiring your brain” suggests mechanical precision. The process is slow, messy, and incomplete"
+    },
+    {
+      "id": "aevjxj",
+      "blogId": "surfingcomplexity",
+      "title": "Lots of AI SRE, no AI incident management",
+      "link": "https://surfingcomplexity.blog/2026/02/14/lots-of-ai-sre-no-ai-incident-management",
+      "date": "2026-02-14T21:58:19.000Z",
+      "excerpt": "With the value of AI coding tools now firmly established in the software industry, the next frontier is AI SRE tools. There are a number of AI SRE vendors. In some cases, vendors are adding AI SRE functionality to extend their existing product lineup, a quick online search reveals one such as PagerD..."
+    },
+    {
+      "id": "d7vcok",
+      "blogId": "commonreader",
+      "title": "Pricks, Devils, and Phlegm. John Aubrey and the Fertile Facts of English Biography.",
+      "link": "https://www.commonreader.co.uk/p/pricks-devils-and-phlegm-john-aubrey",
+      "date": "2026-02-14T21:00:52.000Z",
+      "excerpt": "The four hundredth anniversary of a genius of the commonplace."
+    },
+    {
+      "id": "5sesyx",
+      "blogId": "marginalian",
+      "title": "Love Anyway",
+      "link": "https://www.themarginalian.org/2026/02/14/love-anyway",
+      "date": "2026-02-14T19:10:57.000Z",
+      "excerpt": "You know that the price of life is death, that the price of love is loss, and still you watch the golden afternoon light fall on a face you love, knowing that the light will soon fade, knowing that the loving face too will one day fade to indifference or bone, and you love anyway — because life is t..."
+    },
+    {
+      "id": "qvv09m",
+      "blogId": "marginalian",
+      "title": "Undoing as Remaking: How Abraham Lincoln Drew Poetry and Power from His Suicidal Depression",
+      "link": "https://www.themarginalian.org/2026/02/14/lincoln-melancholy-depression",
+      "date": "2026-02-14T19:09:59.000Z",
+      "excerpt": "Life-affirming inspiration from a man who knew intimately “that intensity of thought, which will some times wear the sweetest idea thread-bare and turn it to the bitterness of death.”"
+    },
+    {
+      "id": "496nh",
+      "blogId": "abnormalreturns",
+      "title": "Saturday links: converging costs",
+      "link": "https://abnormalreturns.com/2026/02/14/saturday-links-converging-costs",
+      "date": "2026-02-14T18:55:52.000Z",
+      "excerpt": "Saturdays we catch up with the non-finance related items that we didn’t get to earlier in the week. You can check out..."
+    },
+    {
+      "id": "tbk2pg",
+      "blogId": "marginalrevolution",
+      "title": "Minimum wage hikes and robots",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/02/minimum-wage-hikes-and-robots.html",
+      "date": "2026-02-14T18:41:43.000Z",
+      "excerpt": "This paper studies how minimum wage policy affects firms’ adoption of automation technologies. Using both state-level measures of robot exposure and novel plant-level data on industrial robot imports linked to U.S. Census microdata from 1992-2021, we show that increases in minimum wages raise the li..."
+    },
+    {
+      "id": "dyh7mx",
+      "blogId": "mrzepczynski",
+      "title": "What driver performance of machine learning ",
+      "link": "https://mrzepczynski.blogspot.com/2026/02/what-driver-performance-of-machine.html",
+      "date": "2026-02-14T18:28:00.000Z",
+      "excerpt": "A recent paper, \"What drives the performnce of mchine learing factor strategies?\" seeks to disentangle two key ingredients in modeling: expanding the dataset and allowing for flexible functional forms. Now, as expected, as you move closer to a realistic setting, you find that the value of both deter..."
+    },
     {
       "id": "cxpghq",
       "blogId": "curtjaimungal",
@@ -82,100 +250,12 @@
       "excerpt": "I was expecting a standard book on the history of the dollar’s rise, and the reasons it should be a dominant currency, as well as why it will fall. I have read many articles on this topic and thought I would get more of the same with King Dollar: The past and future of the world’s dominant currency...."
     },
     {
-      "id": "3uh716",
-      "blogId": "aldaily",
-      "title": "The Mellon Foundation has put huge sums of money toward the idea that arts and letters is not for wisdom, but for advocacy",
-      "link": "https://www.theatlantic.com/magazine/2026/03/mellon-foundation-humanities-research-funding/685733?gift=ih3Agm7ZTQUXUY2wyHjxRNdlfnBwNYM4SBW7lEFSxcs",
-      "date": "2026-02-14T12:19:00.000Z",
-      "excerpt": "The Mellon Foundation has put huge sums of money toward the idea that arts and letters is not for wisdom, but for advocacy"
-    },
-    {
-      "id": "vkyyy5",
-      "blogId": "aldaily",
-      "title": "What happens when a novel’s plot comes uncannily close to major breaking news? The case of Murder Bimbo is instructive",
-      "link": "https://www.nytimes.com/2026/02/11/books/murder-bimbo-charlie-kirk.html?unlocked_article_code=1.LlA.4F4e.-ZTMAYJboSmy&smid=url-share",
-      "date": "2026-02-14T12:18:00.000Z",
-      "excerpt": "What happens when a novel’s plot comes uncannily close to major breaking news? The case of Murder Bimbo is instructive"
-    },
-    {
-      "id": "9yaifm",
-      "blogId": "aldaily",
-      "title": "“Being a literary sex symbol can really take it out of you, making it tougher to maintain your lofty dignity as a quoter of Kafka”",
-      "link": "https://www.lrb.co.uk/the-paper/v48/n03/james-wolcott/what-you-can-get-away-with",
-      "date": "2026-02-14T12:17:00.000Z",
-      "excerpt": "“Being a literary sex symbol can really take it out of you, making it tougher to maintain your lofty dignity as a quoter of Kafka”"
-    },
-    {
-      "id": "6aolq9",
-      "blogId": "aldaily",
-      "title": "“Revolution” initially signaled destruction. Why did the word take on a more optimistic tenor?",
-      "link": "https://literaryreview.co.uk/19609-2",
-      "date": "2026-02-14T12:16:00.000Z",
-      "excerpt": "“Revolution” initially signaled destruction. Why did the word take on a more optimistic tenor?"
-    },
-    {
-      "id": "o44zkv",
-      "blogId": "aldaily",
-      "title": "“One of the most consequential misunderstandings in the history of literary criticism turns on a single Greek word”",
-      "link": "https://jonathanbate.substack.com/p/aristotle-and-the-so-called-tragic",
-      "date": "2026-02-14T12:15:00.000Z",
-      "excerpt": "“One of the most consequential misunderstandings in the history of literary criticism turns on a single Greek word”"
-    },
-    {
-      "id": "bie4u7",
-      "blogId": "aldaily",
-      "title": "Can an AI be endowed with a sense of morality? Amanda Askell is fashioning a soul for Claude",
-      "link": "https://www.wsj.com/tech/ai/anthropic-amanda-askell-philosopher-ai-3c031883?st=Qg8PQR&reflink=desktopwebshare_permalink",
-      "date": "2026-02-14T12:14:00.000Z",
-      "excerpt": "Can an AI be endowed with a sense of morality? Amanda Askell is fashioning a soul for Claude"
-    },
-    {
-      "id": "mduoka",
-      "blogId": "aldaily",
-      "title": "“Good politics, like good art, does not lecture or declaim. It strains; it argues; it is an unending negotiation with the difficult and intransigent adventure of humanity”",
-      "link": "https://thepointmag.com/criticism/listless-liberalism",
-      "date": "2026-02-14T12:13:00.000Z",
-      "excerpt": "“Good politics, like good art, does not lecture or declaim. It strains; it argues; it is an unending negotiation with the difficult and intransigent adventure of humanity”"
-    },
-    {
-      "id": "91hw9h",
-      "blogId": "aldaily",
-      "title": "We associate confessional poetry with Robert Lowell, Sylvia Plath, and Anne Sexton. But Larry Levis’s confessionalism was different",
-      "link": "https://www.poetryfoundation.org/poetrymagazine/articles/1749603/destroying-time-on-the-lasting-legacy-of-larry-levis",
-      "date": "2026-02-14T12:12:00.000Z",
-      "excerpt": "We associate confessional poetry with Robert Lowell, Sylvia Plath, and Anne Sexton. But Larry Levis’s confessionalism was different"
-    },
-    {
-      "id": "wetze4",
-      "blogId": "aldaily",
-      "title": "At a film screening Salvador Dalí, in a fit of envy, turned on the director: “Joseph Cornell, you are a plagiarist of my unconscious mind!”",
-      "link": "https://www.theparisreview.org/blog/2026/02/10/at-the-movies-with-john-ashbery",
-      "date": "2026-02-14T12:11:00.000Z",
-      "excerpt": "At a film screening Salvador Dalí, in a fit of envy, turned on the director: “Joseph Cornell, you are a plagiarist of my unconscious mind!”"
-    },
-    {
-      "id": "92ndsa",
-      "blogId": "aldaily",
-      "title": "The overworked phrase “rewiring your brain” suggests mechanical precision. The process is slow, messy, and incomplete",
-      "link": "https://aeon.co/essays/what-the-metaphor-of-rewiring-gets-wrong-about-neuroplasticity",
-      "date": "2026-02-14T12:10:00.000Z",
-      "excerpt": "The overworked phrase “rewiring your brain” suggests mechanical precision. The process is slow, messy, and incomplete"
-    },
-    {
       "id": "yufozu",
       "blogId": "millersbookreview",
       "title": "The Novel That Kept a British Prime Minister Up All Night",
       "link": "https://www.millersbookreview.com/p/the-novel-that-kept-a-british-prime-minister-up-all-night-wilkie-collins-the-woman-in-white",
       "date": "2026-02-14T12:01:03.000Z",
       "excerpt": "Wilkie Collins’s ‘The Woman in White’ Paved the Way for Modern Suspense Novels—And Then We Mostly Forgot"
-    },
-    {
-      "id": "5sesyx",
-      "blogId": "marginalian",
-      "title": "Love Anyway",
-      "link": "https://www.themarginalian.org/2026/02/14/love-anyway",
-      "date": "2026-02-14T11:56:57.000Z",
-      "excerpt": "You know that the price of life is death, that the price of love is loss, and still you watch the golden afternoon light fall on a face you love, knowing that the light will soon fade, knowing that the loving face too will one day fade to indifference or bone, and you love anyway — because life is t..."
     },
     {
       "id": "1vf5gv",
@@ -18722,20 +18802,20 @@
       "excerpt": "The balance of U.S. and Chinese Produktivkräfte"
     },
     {
-      "id": "rh2ada",
-      "blogId": "seangoedecke",
-      "title": "Should LLMs just treat text content as an image?",
-      "link": "https://seangoedecke.com/text-tokens-as-image-tokens",
-      "date": "2025-10-21T00:00:00.000Z",
-      "excerpt": "According to the DeepSeek paper, you can pull out 10 text tokens from a single image token with near-100% accuracy. In other words, a model’s internal representation of an image is ten times as efficient as its internal representation of text. Does this mean that models shouldn’t consume text at all..."
-    },
-    {
       "id": "fiestf",
       "blogId": "overreacted",
       "title": "How to Fix Any Bug",
       "link": "https://overreacted.io/how-to-fix-any-bug",
       "date": "2025-10-21T00:00:00.000Z",
       "excerpt": "The joys of vibecoding."
+    },
+    {
+      "id": "rh2ada",
+      "blogId": "seangoedecke",
+      "title": "Should LLMs just treat text content as an image?",
+      "link": "https://seangoedecke.com/text-tokens-as-image-tokens",
+      "date": "2025-10-21T00:00:00.000Z",
+      "excerpt": "According to the DeepSeek paper, you can pull out 10 text tokens from a single image token with near-100% accuracy. In other words, a model’s internal representation of an image is ten times as efficient as its internal representation of text. Does this mean that models shouldn’t consume text at all..."
     },
     {
       "id": "c66aqx",
