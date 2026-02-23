@@ -121,6 +121,8 @@ const CACHE_PATH = join(__dirname, '../data/cache/posts.json');
 const STATUS_PATH = join(__dirname, '../data/cache/status.json');
 
 const FEED_CONCURRENCY = parseEnvInt(process.env.FEED_CONCURRENCY, 8);
+const SUBSTACK_BATCH_SIZE = parseEnvInt(process.env.SUBSTACK_BATCH_SIZE, 3);
+const SUBSTACK_BATCH_DELAY_MS = parseEnvInt(process.env.SUBSTACK_BATCH_DELAY_MS, 10000);
 const EXCERPT_CONCURRENCY = parseEnvInt(process.env.EXCERPT_CONCURRENCY, 4);
 
 // Substack Rate Limiting Workaround
@@ -611,18 +613,24 @@ async function main() {
   console.log('--- Fetching non-Substack feeds in parallel ---\n');
   const otherResults = await mapWithLimit(otherBlogs, FEED_CONCURRENCY, (blog) => fetchFeed(blog, false, existingPostsByKey));
 
-  // Fetch Substack feeds sequentially with delays (to avoid rate limiting)
-  console.log('\n--- Fetching Substack feeds sequentially via proxy ---\n');
+  // Fetch Substack feeds in small parallel batches with delays between batches
+  console.log(`\n--- Fetching Substack feeds in batches of ${SUBSTACK_BATCH_SIZE} via proxy ---\n`);
   const substackResults = [];
-  for (let i = 0; i < substackBlogs.length; i++) {
-    const blog = substackBlogs[i];
-    const result = await fetchFeed(blog, true, existingPostsByKey);
-    substackResults.push(result);
+  for (let i = 0; i < substackBlogs.length; i += SUBSTACK_BATCH_SIZE) {
+    const batch = substackBlogs.slice(i, i + SUBSTACK_BATCH_SIZE);
+    const batchNum = Math.floor(i / SUBSTACK_BATCH_SIZE) + 1;
+    const totalBatches = Math.ceil(substackBlogs.length / SUBSTACK_BATCH_SIZE);
+    console.log(`  Batch ${batchNum}/${totalBatches} (${batch.map(b => b.name).join(', ')})`);
 
-    // Add delay between Substack feeds (30 seconds) to avoid rate limiting
-    if (i < substackBlogs.length - 1) {
-      console.log('    → Waiting 30s before next Substack feed...');
-      await sleep(30000);
+    const batchResults = await Promise.all(
+      batch.map(blog => fetchFeed(blog, true, existingPostsByKey))
+    );
+    substackResults.push(...batchResults);
+
+    // Add delay between batches to avoid rate limiting
+    if (i + SUBSTACK_BATCH_SIZE < substackBlogs.length) {
+      console.log(`    → Waiting ${SUBSTACK_BATCH_DELAY_MS / 1000}s before next batch...`);
+      await sleep(SUBSTACK_BATCH_DELAY_MS);
     }
   }
 
