@@ -99,6 +99,21 @@ Optional blog fields:
 - `"ignoreLinkDateInference": true` — don't infer dates from outbound links (curation feeds)
 - `"maxPosts": 50` — override per-feed post cap
 
+## Feed fetching configuration
+
+The feed fetcher supports environment variables for tuning performance:
+
+| Variable | Default | Description |
+|---|---|---|
+| `FEED_CONCURRENCY` | `8` | Max parallel fetches for non-Substack feeds |
+| `SUBSTACK_BATCH_SIZE` | `3` | Number of Substack feeds fetched concurrently per batch |
+| `SUBSTACK_BATCH_DELAY_MS` | `10000` | Delay (ms) between Substack batches to avoid rate limiting |
+| `EXCERPT_CONCURRENCY` | `4` | Max parallel page fetches for excerpt extraction |
+| `FEED_TIMEOUT_MS` | `30000` | Timeout (ms) per feed request |
+| `MAX_POSTS_PER_BLOG` | `25` | Default max posts kept per blog |
+
+Substack feeds (and feeds with `"proxy": true`) are routed through a Cloudflare Pages proxy and fetched in small parallel batches rather than sequentially, to keep CI runs well under the 6-hour GitHub Actions limit.
+
 ## Deployment
 
 Pushes to `main` trigger a build and deploy via GitHub Actions. Feeds refresh on a twice-daily schedule.
