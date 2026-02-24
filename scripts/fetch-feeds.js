@@ -594,137 +594,165 @@ async function main() {
   const blogsData = JSON.parse(readFileSync(BLOGS_PATH, 'utf-8'));
   const blogs = blogsData.blogs;
 
-  const db = openDb();
-  upsertBlogs(db, blogs);
-
-  // Load existing posts early for stable date fallbacks
-  let existingPosts = loadPosts(db);
-  let existingCacheLastUpdated = '';
+  let db;
   try {
-    const existing = JSON.parse(readFileSync(CACHE_PATH, 'utf-8'));
-    existingCacheLastUpdated = existing.lastUpdated || '';
-    const seedPosts = existing.posts || [];
-    if (existingPosts.length === 0 && seedPosts.length > 0) {
-      upsertPosts(db, seedPosts, existing.lastUpdated || new Date().toISOString());
-      existingPosts = seedPosts;
-    }
-  } catch {
-    // No existing cache, start fresh
-  }
+    db = openDb();
+    upsertBlogs(db, blogs);
 
-  if (!hasFetchLogs(db)) {
+    // Load existing posts early for stable date fallbacks
+    let existingPosts = loadPosts(db);
+    let existingCacheLastUpdated = '';
     try {
-      const statusSeed = JSON.parse(readFileSync(STATUS_PATH, 'utf-8'));
-      const seedLogs = statusSeed.feeds || [];
-      if (seedLogs.length > 0) {
-        insertFetchLogs(db, seedLogs);
+      const existing = JSON.parse(readFileSync(CACHE_PATH, 'utf-8'));
+      existingCacheLastUpdated = existing.lastUpdated || '';
+      const seedPosts = existing.posts || [];
+      if (existingPosts.length === 0 && seedPosts.length > 0) {
+        upsertPosts(db, seedPosts, existing.lastUpdated || new Date().toISOString());
+        existingPosts = seedPosts;
       }
     } catch {
-      // No status cache, skip
+      // No existing cache, start fresh
     }
-  }
-  const existingPostsByKey = new Map(
-    existingPosts.map((post) => [
-      makeLookupKey(post.blogId, getPostKey({ link: post.link, title: post.title })),
-      post,
-    ])
-  );
 
-  // Separate Substack feeds from others
-  const substackBlogs = blogs.filter(b => isSubstackFeed(b.feed) || b.proxy === true);
-  const otherBlogs = blogs.filter(b => !isSubstackFeed(b.feed) && b.proxy !== true);
-
-  console.log(`Found ${blogs.length} blogs to fetch (${substackBlogs.length} Substack, ${otherBlogs.length} others)\n`);
-
-  // Fetch non-Substack feeds in parallel (they don't rate limit)
-  console.log('--- Fetching non-Substack feeds in parallel ---\n');
-  const otherResults = await mapWithLimit(otherBlogs, FEED_CONCURRENCY, (blog) => fetchFeed(blog, false, existingPostsByKey));
-
-  // Fetch Substack feeds in small parallel batches with delays between batches
-  console.log(`\n--- Fetching Substack feeds in batches of ${SUBSTACK_BATCH_SIZE} via proxy ---\n`);
-  const substackResults = [];
-  for (let i = 0; i < substackBlogs.length; i += SUBSTACK_BATCH_SIZE) {
-    const batch = substackBlogs.slice(i, i + SUBSTACK_BATCH_SIZE);
-    const batchNum = Math.floor(i / SUBSTACK_BATCH_SIZE) + 1;
-    const totalBatches = Math.ceil(substackBlogs.length / SUBSTACK_BATCH_SIZE);
-    console.log(`  Batch ${batchNum}/${totalBatches} (${batch.map(b => b.name).join(', ')})`);
-
-    const batchResults = await Promise.all(
-      batch.map(blog => fetchFeed(blog, true, existingPostsByKey))
+    if (!hasFetchLogs(db)) {
+      try {
+        const statusSeed = JSON.parse(readFileSync(STATUS_PATH, 'utf-8'));
+        const seedLogs = statusSeed.feeds || [];
+        if (seedLogs.length > 0) {
+          insertFetchLogs(db, seedLogs);
+        }
+      } catch {
+        // No status cache, skip
+      }
+    }
+    const existingPostsByKey = new Map(
+      existingPosts.map((post) => [
+        makeLookupKey(post.blogId, getPostKey({ link: post.link, title: post.title })),
+        post,
+      ])
     );
-    substackResults.push(...batchResults);
 
-    // Add delay between batches to avoid rate limiting
-    if (i + SUBSTACK_BATCH_SIZE < substackBlogs.length) {
-      console.log(`    → Waiting ${SUBSTACK_BATCH_DELAY_MS / 1000}s before next batch...`);
-      await sleep(SUBSTACK_BATCH_DELAY_MS);
+    // Separate Substack feeds from others
+    const substackBlogs = blogs.filter(b => isSubstackFeed(b.feed) || b.proxy === true);
+    const otherBlogs = blogs.filter(b => !isSubstackFeed(b.feed) && b.proxy !== true);
+
+    console.log(`Found ${blogs.length} blogs to fetch (${substackBlogs.length} Substack, ${otherBlogs.length} others)\n`);
+
+    // Fetch non-Substack feeds in parallel (they don't rate limit)
+    console.log('--- Fetching non-Substack feeds in parallel ---\n');
+    const otherResults = await mapWithLimit(otherBlogs, FEED_CONCURRENCY, (blog) => fetchFeed(blog, false, existingPostsByKey));
+
+    // Fetch Substack feeds in small parallel batches with delays between batches
+    console.log(`\n--- Fetching Substack feeds in batches of ${SUBSTACK_BATCH_SIZE} via proxy ---\n`);
+    const substackResults = [];
+    for (let i = 0; i < substackBlogs.length; i += SUBSTACK_BATCH_SIZE) {
+      const batch = substackBlogs.slice(i, i + SUBSTACK_BATCH_SIZE);
+      const batchNum = Math.floor(i / SUBSTACK_BATCH_SIZE) + 1;
+      const totalBatches = Math.ceil(substackBlogs.length / SUBSTACK_BATCH_SIZE);
+      console.log(`  Batch ${batchNum}/${totalBatches} (${batch.map(b => b.name).join(', ')})`);
+
+      const batchResults = await Promise.all(
+        batch.map(blog => fetchFeed(blog, true, existingPostsByKey))
+      );
+      substackResults.push(...batchResults);
+
+      // Add delay between batches to avoid rate limiting
+      if (i + SUBSTACK_BATCH_SIZE < substackBlogs.length) {
+        console.log(`    → Waiting ${SUBSTACK_BATCH_DELAY_MS / 1000}s before next batch...`);
+        await sleep(SUBSTACK_BATCH_DELAY_MS);
+      }
     }
+
+    console.log('\n--- Persisting merged posts and status to SQLite/cache ---');
+    const results = [...otherResults, ...substackResults];
+
+    const freshPosts = results
+      .flatMap(r => r.posts)
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    const seenLookupKeys = new Set();
+    const allPosts = [];
+
+    // Fresh posts take priority (they may have updated excerpts, etc.)
+    for (const post of freshPosts) {
+      const lookupKey = getLookupKeyForPost(post);
+      if (!seenLookupKeys.has(lookupKey)) {
+        seenLookupKeys.add(lookupKey);
+        allPosts.push(post);
+      }
+    }
+    for (const post of existingPosts) {
+      const lookupKey = getLookupKeyForPost(post);
+      if (!seenLookupKeys.has(lookupKey)) {
+        seenLookupKeys.add(lookupKey);
+        allPosts.push(post);
+      }
+    }
+
+    allPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    const allStatuses = results.map(r => r.status);
+
+    const nowIso = new Date().toISOString();
+
+    console.log(`  → Upserting ${allPosts.length} posts`);
+    upsertPosts(db, allPosts, nowIso);
+    console.log(`  → Inserting ${allStatuses.length} fetch log rows`);
+    insertFetchLogs(db, allStatuses);
+
+    const healthyCount = allStatuses.filter(s => s.status === 'ok').length;
+    const cacheLastUpdated = healthyCount === 0 && existingCacheLastUpdated
+      ? existingCacheLastUpdated
+      : nowIso;
+    const cachePosts = allPosts.length > 0 ? allPosts : existingPosts;
+
+    const cache = {
+      lastUpdated: cacheLastUpdated,
+      posts: cachePosts,
+    };
+
+    const statusData = {
+      lastUpdated: nowIso,
+      feeds: allStatuses,
+      summary: {
+        total: allStatuses.length,
+        healthy: healthyCount,
+        errors: allStatuses.filter(s => s.status === 'error').length,
+      }
+    };
+
+    console.log('  → Writing cache files');
+    writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
+    writeFileSync(STATUS_PATH, JSON.stringify(statusData, null, 2));
+
+    console.log(`\n=== Summary ===`);
+    console.log(`Total posts fetched: ${allPosts.length}`);
+    console.log(`Feeds healthy: ${statusData.summary.healthy}/${statusData.summary.total}`);
+    console.log(`Cache updated: ${cache.lastUpdated}`);
+  } finally {
+    if (db) db.close();
   }
-
-  const results = [...otherResults, ...substackResults];
-
-  const freshPosts = results
-    .flatMap(r => r.posts)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-  const seenLookupKeys = new Set();
-  const allPosts = [];
-
-  // Fresh posts take priority (they may have updated excerpts, etc.)
-  for (const post of freshPosts) {
-    const lookupKey = getLookupKeyForPost(post);
-    if (!seenLookupKeys.has(lookupKey)) {
-      seenLookupKeys.add(lookupKey);
-      allPosts.push(post);
-    }
-  }
-  for (const post of existingPosts) {
-    const lookupKey = getLookupKeyForPost(post);
-    if (!seenLookupKeys.has(lookupKey)) {
-      seenLookupKeys.add(lookupKey);
-      allPosts.push(post);
-    }
-  }
-
-  allPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-  const allStatuses = results.map(r => r.status);
-
-  const nowIso = new Date().toISOString();
-
-  upsertPosts(db, allPosts, nowIso);
-  insertFetchLogs(db, allStatuses);
-
-  const healthyCount = allStatuses.filter(s => s.status === 'ok').length;
-  const cacheLastUpdated = healthyCount === 0 && existingCacheLastUpdated
-    ? existingCacheLastUpdated
-    : nowIso;
-  const cachePosts = allPosts.length > 0 ? allPosts : existingPosts;
-
-  const cache = {
-    lastUpdated: cacheLastUpdated,
-    posts: cachePosts,
-  };
-
-  const statusData = {
-    lastUpdated: nowIso,
-    feeds: allStatuses,
-    summary: {
-      total: allStatuses.length,
-      healthy: healthyCount,
-      errors: allStatuses.filter(s => s.status === 'error').length,
-    }
-  };
-
-  writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
-  writeFileSync(STATUS_PATH, JSON.stringify(statusData, null, 2));
-
-  console.log(`\n=== Summary ===`);
-  console.log(`Total posts fetched: ${allPosts.length}`);
-  console.log(`Feeds healthy: ${statusData.summary.healthy}/${statusData.summary.total}`);
-  console.log(`Cache updated: ${cache.lastUpdated}`);
-
-  db.close();
 }
 
-main().catch(console.error);
+async function closeGlobalFetchDispatcher() {
+  try {
+    const { getGlobalDispatcher } = await import('undici');
+    const dispatcher = getGlobalDispatcher?.();
+    if (dispatcher?.close) {
+      await dispatcher.close();
+    }
+  } catch {
+    // Best-effort cleanup; ignore if unavailable.
+  }
+}
+
+main()
+  .then(async () => {
+    await closeGlobalFetchDispatcher();
+    process.exit(0);
+  })
+  .catch(async (error) => {
+    console.error(error);
+    await closeGlobalFetchDispatcher();
+    process.exit(1);
+  });
