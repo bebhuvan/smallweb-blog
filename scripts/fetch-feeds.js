@@ -19,6 +19,19 @@ function parseEnvInt(value, fallback) {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 }
 
+function parseEnvNonNegativeInt(value, fallback) {
+  const parsed = Number.parseInt(value || '', 10);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
+}
+
+function parseEnvBool(value, fallback) {
+  if (value === undefined || value === null || value === '') return fallback;
+  const normalized = String(value).trim().toLowerCase();
+  if (['1', 'true', 'yes', 'on'].includes(normalized)) return true;
+  if (['0', 'false', 'no', 'off'].includes(normalized)) return false;
+  return fallback;
+}
+
 // Cloudflare Pages proxy URL for Substack feeds (bypasses rate limiting)
 const PROXY_URL = process.env.PROXY_URL || 'https://smallweb-rss.pages.dev/api/fetch-rss';
 
@@ -81,9 +94,10 @@ async function fetchViaProxy(feedUrl, retries = 3, timeoutMs = FEED_TIMEOUT_MS) 
 
 // Fetch page and extract first meaningful paragraph
 async function fetchPageExcerpt(url, maxLength = 300) {
+  let timeout;
   try {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 10000);
+    timeout = setTimeout(() => controller.abort(), 10000);
 
     const response = await fetch(url, {
       headers: { 
@@ -91,8 +105,6 @@ async function fetchPageExcerpt(url, maxLength = 300) {
       },
       signal: controller.signal,
     });
-    clearTimeout(timeout);
-
     if (!response.ok) return '';
 
     const html = await response.text();
@@ -113,6 +125,8 @@ async function fetchPageExcerpt(url, maxLength = 300) {
   } catch (error) {
     // Silently fail - we'll just have no excerpt
     return '';
+  } finally {
+    if (timeout) clearTimeout(timeout);
   }
 }
 
@@ -124,6 +138,14 @@ const FEED_CONCURRENCY = parseEnvInt(process.env.FEED_CONCURRENCY, 8);
 const SUBSTACK_BATCH_SIZE = parseEnvInt(process.env.SUBSTACK_BATCH_SIZE, 3);
 const SUBSTACK_BATCH_DELAY_MS = parseEnvInt(process.env.SUBSTACK_BATCH_DELAY_MS, 10000);
 const EXCERPT_CONCURRENCY = parseEnvInt(process.env.EXCERPT_CONCURRENCY, 4);
+const FETCH_PAGE_EXCERPTS = parseEnvBool(
+  process.env.FETCH_PAGE_EXCERPTS,
+  process.env.GITHUB_ACTIONS !== 'true'
+);
+const MAX_PAGE_EXCERPTS_PER_FEED = parseEnvNonNegativeInt(
+  process.env.MAX_PAGE_EXCERPTS_PER_FEED,
+  3
+);
 
 // Substack Rate Limiting Workaround
 // ---------------------------------
@@ -486,17 +508,20 @@ async function fetchFeed(blog, useProxy = false, existingPostsByKey = new Map())
         const lookupKey = makeLookupKey(blog.id, postKey);
         const existingPost = existingPostsByKey.get(lookupKey);
 
+        const existingExcerpt = coerceToString(existingPost?.excerpt).trim();
+
         // Try to get excerpt from RSS first
         let excerpt = createExcerpt(coerceToString(item.contentSnippet || item.content || item.summary || ''));
 
-        // If no excerpt from RSS, try fetching the page directly
-        if (!excerpt && link) {
-          console.log(`    → Fetching page for excerpt: ${itemTitle.substring(0, 40)}...`);
-          excerpt = await fetchPageExcerpt(link);
+        // Prefer cached excerpts for existing posts to avoid re-fetching pages every run
+        if (!excerpt && existingExcerpt) {
+          excerpt = existingExcerpt;
         }
 
-        if (!excerpt && existingPost?.excerpt) {
-          excerpt = existingPost.excerpt;
+        // Only fetch page excerpts for a few new posts per feed (CI-safe default)
+        if (!excerpt && !existingPost && FETCH_PAGE_EXCERPTS && link && index < MAX_PAGE_EXCERPTS_PER_FEED) {
+          console.log(`    → Fetching page for excerpt: ${itemTitle.substring(0, 40)}...`);
+          excerpt = await fetchPageExcerpt(link);
         }
 
         const resolvedLink = canonicalLink || link;
@@ -563,6 +588,8 @@ async function fetchFeed(blog, useProxy = false, existingPostsByKey = new Map())
 
 async function main() {
   console.log('=== The Small Web Feed Fetcher ===\n');
+  console.log(`Config: FEED_CONCURRENCY=${FEED_CONCURRENCY}, EXCERPT_CONCURRENCY=${EXCERPT_CONCURRENCY}, FETCH_PAGE_EXCERPTS=${FETCH_PAGE_EXCERPTS}, MAX_PAGE_EXCERPTS_PER_FEED=${MAX_PAGE_EXCERPTS_PER_FEED}`);
+  console.log(`Config: SUBSTACK_BATCH_SIZE=${SUBSTACK_BATCH_SIZE}, SUBSTACK_BATCH_DELAY_MS=${SUBSTACK_BATCH_DELAY_MS}`);
 
   const blogsData = JSON.parse(readFileSync(BLOGS_PATH, 'utf-8'));
   const blogs = blogsData.blogs;

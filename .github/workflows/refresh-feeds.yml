@@ -37,6 +37,13 @@ jobs:
         run: npm ci
 
       - name: Fetch RSS feeds
+        env:
+          FETCH_PAGE_EXCERPTS: 'false'
+          MAX_PAGE_EXCERPTS_PER_FEED: '0'
+          FEED_CONCURRENCY: '10'
+          EXCERPT_CONCURRENCY: '4'
+          SUBSTACK_BATCH_SIZE: '4'
+          SUBSTACK_BATCH_DELAY_MS: '5000'
         run: npm run fetch-feeds
 
       - name: Commit and push if changed
