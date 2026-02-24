@@ -16,7 +16,7 @@ permissions:
 
 concurrency:
   group: refresh-feeds
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   refresh:
