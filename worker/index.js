@@ -19,13 +19,20 @@ const cacheHeaders = {
   svg: 'public, max-age=86400',
   png: 'public, max-age=86400',
   ico: 'public, max-age=86400',
-  html: 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400',
-  xml: 'public, max-age=0, s-maxage=3600, stale-while-revalidate=21600, stale-if-error=21600',
+  // HTML/XML should reflect feed refreshes immediately after deploys.
+  html: 'no-cache, no-store, must-revalidate',
+  xml: 'no-cache, no-store, must-revalidate',
 };
 
 function getCacheHeader(pathname) {
   const ext = pathname.split('.').pop()?.toLowerCase();
   return cacheHeaders[ext] || 'public, max-age=3600';
+}
+
+function getCacheHeaderForResponse(pathname, contentType) {
+  if (contentType.includes('text/html')) return cacheHeaders.html;
+  if (contentType.includes('xml')) return cacheHeaders.xml;
+  return getCacheHeader(pathname);
 }
 
 export default {
@@ -59,7 +66,7 @@ export default {
       newHeaders.set('Cache-Control', 'no-cache, no-store, must-revalidate');
     } else {
       // Add cache headers based on file type
-      newHeaders.set('Cache-Control', getCacheHeader(url.pathname));
+      newHeaders.set('Cache-Control', getCacheHeaderForResponse(url.pathname, contentType));
     }
 
     return new Response(response.body, {
