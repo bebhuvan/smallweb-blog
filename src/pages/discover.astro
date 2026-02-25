@@ -3,15 +3,11 @@ import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
-import blogsData from '../../data/blogs.json';
-import postsData from '../../data/cache/posts.json';
-import { createBlogMap, enrichPosts } from '../lib/posts';
+import { getBlogMap, getBlogs, getEnrichedPosts } from '../lib/site-data';
 
-const blogs = blogsData.blogs;
-const posts = postsData.posts;
-
-const blogMap = createBlogMap(blogs);
-const enrichedPosts = enrichPosts(posts, blogMap);
+const blogs = getBlogs();
+const blogMap = getBlogMap(blogs);
+const enrichedPosts = getEnrichedPosts({ blogs, blogMap });
 
 // Shuffle for discovery
 const shuffled = [...enrichedPosts].sort(() => Math.random() - 0.5);

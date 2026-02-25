@@ -3,16 +3,11 @@ import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
-import blogsData from '../../data/blogs.json';
+import { getBlogs, getStatusCacheSafe } from '../lib/site-data';
 
-let statusData = { lastUpdated: null, feeds: [], summary: { total: 0, healthy: 0, errors: 0 } };
-try {
-  statusData = await import('../../data/cache/status.json');
-} catch (e) {
-  // Status file doesn't exist yet
-}
+const statusData = await getStatusCacheSafe();
 
-const blogs = blogsData.blogs;
+const blogs = getBlogs();
 const blogMap = new Map(blogs.map(b => [b.id, b]));
 const hasErrors = (statusData.summary?.errors || 0) > 0;
 
@@ -105,7 +100,7 @@ function getLatencyColor(ms: number) {
       </section>
 
       <div class="status-note">
-        Feeds are refreshed automatically twice daily via GitHub Actions.
+        Feeds are refreshed automatically three times daily via GitHub Actions.
       </div>
     </main>
 

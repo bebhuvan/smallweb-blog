@@ -4,25 +4,30 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'data/cache/**'
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - Refresh RSS Feeds
-    types:
-      - completed
 
 jobs:
   deploy:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     name: Deploy
-    env:
-      DEPLOY_REF: ${{ github.event.workflow_run.head_sha || github.sha }}
+    concurrency:
+      group: deploy-smallweb
+      cancel-in-progress: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ env.DEPLOY_REF }}
+          fetch-depth: 0
+
+      - name: Show deployed revision and cache timestamp
+        id: build_meta
+        run: |
+          DEPLOYED_SHA="$(git rev-parse HEAD)"
+          echo "deployed_sha=$DEPLOYED_SHA" >> "$GITHUB_OUTPUT"
+          echo "$DEPLOYED_SHA"
+          node -e "const p = require('./data/cache/posts.json'); console.log('cache.lastUpdated=', p.lastUpdated, 'posts=', p.posts?.length || 0);"
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -36,7 +41,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          PUBLIC_SW_VERSION: ${{ env.DEPLOY_REF }}
+          PUBLIC_SW_VERSION: ${{ steps.build_meta.outputs.deployed_sha }}
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3

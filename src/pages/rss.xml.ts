@@ -1,10 +1,9 @@
 import type { APIRoute } from 'astro';
-import blogsData from '../../data/blogs.json';
-import postsData from '../../data/cache/posts.json';
+import { getBlogs, getPosts } from '../lib/site-data';
 
 export const GET: APIRoute = async () => {
-  const blogs = blogsData.blogs;
-  const posts = postsData.posts;
+  const blogs = getBlogs();
+  const posts = getPosts();
   const blogMap = new Map(blogs.map((b) => [b.id, b]));
 
   const siteUrl = 'https://smallweb.blog';

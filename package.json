@@ -11,6 +11,8 @@
     "backfill-feeds": "node scripts/backfill-feeds.js",
     "migrate-db": "node scripts/migrate-db.js",
     "export-cache": "node scripts/export-cache.js",
+    "verify-pipeline": "node scripts/verify-pipeline.js",
+    "test:fetcher": "node --test scripts/lib/fetch/*.test.js",
     "generate-pwa-icons": "node scripts/generate-pwa-icons.js"
   },
   "dependencies": {

@@ -3,21 +3,17 @@ import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
-import blogsData from '../../data/blogs.json';
-import postsData from '../../data/cache/posts.json';
-import { createBlogMap, enrichPosts } from '../lib/posts';
+import { getBlogMap, getBlogs, getEnrichedPosts } from '../lib/site-data';
 import { formatDate } from '../lib/dates';
 
-const blogs = blogsData.blogs;
-const posts = postsData.posts;
-
-const blogMap = createBlogMap(blogs);
+const blogs = getBlogs();
+const blogMap = getBlogMap(blogs);
 
 // Compute unique categories count
 const categorySet = new Set<string>();
 blogs.forEach(b => b.categories.forEach((c: string) => categorySet.add(c)));
 
-const enrichedPosts = enrichPosts(posts, blogMap);
+const enrichedPosts = getEnrichedPosts({ blogs, blogMap });
 
 // Determine today/yesterday for freshness
 const now = new Date();

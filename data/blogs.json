@@ -113,9 +113,10 @@
       "feed": "https://kudmitry.com/articles/feed.xml",
       "categories": [
         "tech",
-        "culture"
+        "culture",
+        "life"
       ],
-      "description": "Software development, internet culture, and productivity."
+      "description": "Dmitry Kudryavtsev on software, AI skepticism, philosophy, and outdoor adventures."
     },
     {
       "id": "seanheelan",
@@ -1199,17 +1200,6 @@
         "tech"
       ],
       "description": "Casey Newton on Silicon Valley, social media policy, and the intersection of tech and democracy."
-    },
-    {
-      "id": "kudmitry",
-      "name": "Dmitry Kudryavtsev",
-      "url": "https://kudmitry.com",
-      "feed": "https://kudmitry.com/articles/feed.xml",
-      "categories": [
-        "tech",
-        "life"
-      ],
-      "description": "Dmitry Kudryavtsev on software, AI skepticism, philosophy, and outdoor adventures."
     },
     {
       "id": "davidoks",

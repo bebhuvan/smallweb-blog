@@ -10,36 +10,32 @@ import {
   upsertPosts,
   insertFetchLogs,
 } from './lib/db.js';
+import { loadFetchConfig, formatFetchConfig } from './lib/fetch-config.js';
+import { sleep, mapWithLimit } from './lib/fetch/concurrency.js';
+import { fetchPageExcerpt } from './lib/fetch/excerpt.js';
+import { coerceToString, decodeHtmlEntities, createExcerpt } from './lib/fetch/html.js';
+import { normalizeUrl } from './lib/fetch/urls.js';
+import { generatePostId, getPostKey, makeLookupKey, getLookupKeyForPost } from './lib/fetch/dedupe.js';
+import { createDateResolver } from './lib/fetch/dates.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-function parseEnvInt(value, fallback) {
-  const parsed = Number.parseInt(value || '', 10);
-  return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
-}
-
-function parseEnvNonNegativeInt(value, fallback) {
-  const parsed = Number.parseInt(value || '', 10);
-  return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
-}
-
-function parseEnvBool(value, fallback) {
-  if (value === undefined || value === null || value === '') return fallback;
-  const normalized = String(value).trim().toLowerCase();
-  if (['1', 'true', 'yes', 'on'].includes(normalized)) return true;
-  if (['0', 'false', 'no', 'off'].includes(normalized)) return false;
-  return fallback;
-}
-
-// Cloudflare Pages proxy URL for Substack feeds (bypasses rate limiting)
-const PROXY_URL = process.env.PROXY_URL || 'https://smallweb-rss.pages.dev/api/fetch-rss';
-
-const FEED_TIMEOUT_MS = parseEnvInt(process.env.FEED_TIMEOUT_MS, 30000);
-const DEFAULT_MAX_POSTS_PER_BLOG = parseEnvInt(process.env.MAX_POSTS_PER_BLOG, 25);
-const MAX_FUTURE_DAYS = parseEnvInt(process.env.MAX_FUTURE_DAYS, 2);
-const RECENT_PRIMARY_DAYS = parseEnvInt(process.env.RECENT_PRIMARY_DAYS, 7);
-const INFERRED_DATE_MAX_DIFF_DAYS = parseEnvInt(process.env.INFERRED_DATE_MAX_DIFF_DAYS, 30);
+const FETCH_CONFIG = loadFetchConfig(process.env);
+const {
+  PROXY_URL,
+  FEED_TIMEOUT_MS,
+  DEFAULT_MAX_POSTS_PER_BLOG,
+  MAX_FUTURE_DAYS,
+  RECENT_PRIMARY_DAYS,
+  INFERRED_DATE_MAX_DIFF_DAYS,
+  FEED_CONCURRENCY,
+  SUBSTACK_BATCH_SIZE,
+  SUBSTACK_BATCH_DELAY_MS,
+  EXCERPT_CONCURRENCY,
+  FETCH_PAGE_EXCERPTS,
+  MAX_PAGE_EXCERPTS_PER_FEED,
+} = FETCH_CONFIG;
 
 const parser = new Parser({
   timeout: FEED_TIMEOUT_MS,
@@ -48,13 +44,16 @@ const parser = new Parser({
   },
 });
 
+const { resolvePostDate } = createDateResolver({
+  maxFutureDays: MAX_FUTURE_DAYS,
+  recentPrimaryDays: RECENT_PRIMARY_DAYS,
+  inferredDateMaxDiffDays: INFERRED_DATE_MAX_DIFF_DAYS,
+});
+
 // Check if a feed URL is from Substack
 function isSubstackFeed(url) {
   return url.includes('substack.com');
 }
-
-// Sleep utility for rate limiting
-const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 // Fetch RSS content through the Cloudflare proxy with retry logic
 async function fetchViaProxy(feedUrl, retries = 3, timeoutMs = FEED_TIMEOUT_MS) {
@@ -92,60 +91,9 @@ async function fetchViaProxy(feedUrl, retries = 3, timeoutMs = FEED_TIMEOUT_MS) 
   }
 }
 
-// Fetch page and extract first meaningful paragraph
-async function fetchPageExcerpt(url, maxLength = 300) {
-  let timeout;
-  try {
-    const controller = new AbortController();
-    timeout = setTimeout(() => controller.abort(), 10000);
-
-    const response = await fetch(url, {
-      headers: { 
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-      },
-      signal: controller.signal,
-    });
-    if (!response.ok) return '';
-
-    const html = await response.text();
-
-    // Try to find article content - look for common content selectors
-    // Extract text from <p> tags, skip very short ones (likely navigation)
-    const paragraphs = html.match(/<p[^>]*>([^<]+(?:<[^/p][^>]*>[^<]*<\/[^p][^>]*>)*[^<]*)<\/p>/gi) || [];
-
-    for (const p of paragraphs) {
-      const text = stripHtml(p);
-      // Skip short paragraphs, timestamps, bylines, etc.
-      if (text.length > 80 && !text.match(/^\d{4}|^by\s|^posted|^published|^share|^comment/i)) {
-        return text.length > maxLength ? text.substring(0, maxLength).trim() + '...' : text;
-      }
-    }
-
-    return '';
-  } catch (error) {
-    // Silently fail - we'll just have no excerpt
-    return '';
-  } finally {
-    if (timeout) clearTimeout(timeout);
-  }
-}
-
 const BLOGS_PATH = join(__dirname, '../data/blogs.json');
 const CACHE_PATH = join(__dirname, '../data/cache/posts.json');
 const STATUS_PATH = join(__dirname, '../data/cache/status.json');
-
-const FEED_CONCURRENCY = parseEnvInt(process.env.FEED_CONCURRENCY, 8);
-const SUBSTACK_BATCH_SIZE = parseEnvInt(process.env.SUBSTACK_BATCH_SIZE, 3);
-const SUBSTACK_BATCH_DELAY_MS = parseEnvInt(process.env.SUBSTACK_BATCH_DELAY_MS, 10000);
-const EXCERPT_CONCURRENCY = parseEnvInt(process.env.EXCERPT_CONCURRENCY, 4);
-const FETCH_PAGE_EXCERPTS = parseEnvBool(
-  process.env.FETCH_PAGE_EXCERPTS,
-  process.env.GITHUB_ACTIONS !== 'true'
-);
-const MAX_PAGE_EXCERPTS_PER_FEED = parseEnvNonNegativeInt(
-  process.env.MAX_PAGE_EXCERPTS_PER_FEED,
-  3
-);
 
 // Substack Rate Limiting Workaround
 // ---------------------------------
@@ -155,288 +103,10 @@ const MAX_PAGE_EXCERPTS_PER_FEED = parseEnvNonNegativeInt(
 //
 // Strategies used:
 // 1. Cloudflare proxy with browser User-Agent (avoids bot detection)
-// 2. Sequential fetching for Substack feeds with 30s delays
+// 2. Sequential fetching for Substack feeds in small delayed batches
 // 3. Parallel fetching for non-Substack feeds (faster)
 // 4. Set PROXY_URL env var to override the proxy endpoint if needed
 // 5. Use "proxy": true in blogs.json for custom-domain Substack feeds
-
-function coerceToString(value) {
-  if (value === null || value === undefined) return '';
-  if (typeof value === 'string') return value;
-  if (typeof value === 'number' || typeof value === 'boolean' || typeof value === 'bigint') {
-    return String(value);
-  }
-  try {
-    return String(value);
-  } catch (error) {
-    try {
-      return JSON.stringify(value);
-    } catch (innerError) {
-      return '';
-    }
-  }
-}
-
-function decodeHtmlEntities(text) {
-  const normalized = coerceToString(text);
-  if (!normalized) return '';
-  return normalized
-    // Numeric entities (decimal)
-    .replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(dec))
-    // Numeric entities (hex)
-    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
-    // Named entities
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&apos;/g, "'")
-    .replace(/&#39;/g, "'")
-    .replace(/&mdash;/g, '—')
-    .replace(/&ndash;/g, '–')
-    .replace(/&hellip;/g, '…')
-    .replace(/&ldquo;/g, '\u201C')
-    .replace(/&rdquo;/g, '\u201D')
-    .replace(/&lsquo;/g, '\u2018')
-    .replace(/&rsquo;/g, '\u2019');
-}
-
-const TRACKING_PARAMS = new Set([
-  'utm_source',
-  'utm_medium',
-  'utm_campaign',
-  'utm_term',
-  'utm_content',
-  'utm_id',
-  'utm_reader',
-  'utm_source_platform',
-  'utm_marketing_tactic',
-  'utm_pubref',
-  'gclid',
-  'fbclid',
-  'mc_cid',
-  'mc_eid',
-  'ref',
-  'ref_src',
-  'source',
-  'sourceid',
-  '_hsenc',
-  '_hsmi',
-  'mkt_tok',
-]);
-
-function normalizeUrl(rawUrl, baseUrl) {
-  if (!rawUrl) return '';
-  try {
-    const url = baseUrl ? new URL(rawUrl, baseUrl) : new URL(rawUrl);
-    url.hash = '';
-    for (const key of [...url.searchParams.keys()]) {
-      const lower = key.toLowerCase();
-      if (lower.startsWith('utm_') || TRACKING_PARAMS.has(lower)) {
-        url.searchParams.delete(key);
-      }
-    }
-    const query = url.searchParams.toString();
-    url.search = query ? `?${query}` : '';
-    if (url.pathname.length > 1 && url.pathname.endsWith('/')) {
-      url.pathname = url.pathname.slice(0, -1);
-    }
-    return url.toString();
-  } catch {
-    return coerceToString(rawUrl).trim();
-  }
-}
-
-function normalizeGuid(rawGuid, baseUrl) {
-  if (!rawGuid) return '';
-  const guid = coerceToString(rawGuid).trim();
-  if (guid.startsWith('http://') || guid.startsWith('https://')) {
-    return normalizeUrl(guid, baseUrl);
-  }
-  return guid;
-}
-
-function stripHtml(html) {
-  const normalized = coerceToString(html);
-  if (!normalized) return '';
-  const withoutTags = normalized.replace(/<[^>]*>/g, '');
-  const decoded = decodeHtmlEntities(withoutTags);
-  return decoded.replace(/\s+/g, ' ').trim();
-}
-
-function createExcerpt(content, maxLength = 300) {
-  const stripped = stripHtml(content);
-  if (stripped.length <= maxLength) return stripped;
-  return stripped.substring(0, maxLength).trim() + '...';
-}
-
-function normalizeDate(value) {
-  if (!value) return null;
-  const dateValue =
-    typeof value === 'string' || typeof value === 'number'
-      ? value
-      : coerceToString(value);
-  const date = new Date(dateValue);
-  if (Number.isNaN(date.getTime())) return null;
-  return date.toISOString();
-}
-
-function inferDateFromText(text) {
-  const value = typeof text === 'string' ? text : '';
-  if (!value) return null;
-  const patterns = [
-    /(\d{4})[/-](\d{1,2})[/-](\d{1,2})/,
-    /(\d{4})(\d{2})(\d{2})/,
-  ];
-
-  for (const pattern of patterns) {
-    const match = value.match(pattern);
-    if (!match) continue;
-    const year = Number.parseInt(match[1], 10);
-    const month = Number.parseInt(match[2], 10);
-    const day = Number.parseInt(match[3], 10);
-    if (!Number.isFinite(year) || !Number.isFinite(month) || !Number.isFinite(day)) continue;
-    const date = new Date(Date.UTC(year, month - 1, day));
-    if (!Number.isNaN(date.getTime())) return date.toISOString();
-  }
-
-  return null;
-}
-
-function normalizeHost(rawUrl) {
-  try {
-    const url = new URL(rawUrl);
-    let host = url.hostname.toLowerCase();
-    if (host.startsWith('www.')) host = host.slice(4);
-    return host;
-  } catch {
-    return '';
-  }
-}
-
-function hostsMatch(a, b) {
-  if (!a || !b) return false;
-  if (a === b) return true;
-  if (a.endsWith(`.${b}`)) return true;
-  if (b.endsWith(`.${a}`)) return true;
-  return false;
-}
-
-function shouldInferDateFromLink(blog, link, guid) {
-  if (blog?.ignoreLinkDateInference) return false;
-  if (blog?.allowLinkDateInference) return true;
-  const candidate = link || guid || '';
-  const blogHost = normalizeHost(blog?.url || blog?.feed || '');
-  const linkHost = normalizeHost(candidate);
-  if (!blogHost || !linkHost) return false;
-  return hostsMatch(blogHost, linkHost);
-}
-
-function offsetDate(dateIso, minutes) {
-  const date = new Date(dateIso);
-  date.setMinutes(date.getMinutes() - minutes);
-  return date.toISOString();
-}
-
-function isFutureDate(dateIso, nowMs) {
-  if (!dateIso) return false;
-  const dateMs = new Date(dateIso).getTime();
-  if (Number.isNaN(dateMs)) return false;
-  return dateMs - nowMs > MAX_FUTURE_DAYS * 24 * 60 * 60 * 1000;
-}
-
-function shouldPreferInferredDate(primaryIso, inferredIso, nowMs) {
-  if (!primaryIso || !inferredIso) return false;
-  const primaryMs = new Date(primaryIso).getTime();
-  const inferredMs = new Date(inferredIso).getTime();
-  if (Number.isNaN(primaryMs) || Number.isNaN(inferredMs)) return false;
-  if (inferredMs >= primaryMs) return false;
-  const diffDays = Math.abs(primaryMs - inferredMs) / (1000 * 60 * 60 * 24);
-  const primaryAgeDays = Math.abs(nowMs - primaryMs) / (1000 * 60 * 60 * 24);
-  return diffDays >= INFERRED_DATE_MAX_DIFF_DAYS && primaryAgeDays <= RECENT_PRIMARY_DAYS;
-}
-
-function resolvePostDate(item, feed, blog, index, existingDate, nowMs) {
-  const primary =
-    item.isoDate ||
-    item.pubDate ||
-    item.published ||
-    item.updated ||
-    item['dc:date'] ||
-    item.date;
-  const normalizedPrimary = normalizeDate(primary);
-  const inferred = shouldInferDateFromLink(blog, item.link, item.guid)
-    ? (inferDateFromText(item.link) || inferDateFromText(item.guid))
-    : null;
-  const normalizedInferred = normalizeDate(inferred);
-  const existing = blog?.ignoreLinkDateInference ? null : normalizeDate(existingDate);
-
-  const primaryValid = normalizedPrimary && !isFutureDate(normalizedPrimary, nowMs);
-  const inferredValid = normalizedInferred && !isFutureDate(normalizedInferred, nowMs);
-  const existingValid = existing && !isFutureDate(existing, nowMs);
-
-  if (primaryValid && inferredValid && shouldPreferInferredDate(normalizedPrimary, normalizedInferred, nowMs)) {
-    return normalizedInferred;
-  }
-
-  if (primaryValid) return normalizedPrimary;
-  if (inferredValid) return normalizedInferred;
-  if (existingValid) return existing;
-
-  if (blog.allowMissingDates) {
-    const fallback = normalizeDate(feed.lastBuildDate || feed.pubDate || feed.updated);
-    const fallbackBase = fallback && !isFutureDate(fallback, nowMs) ? fallback : new Date(nowMs).toISOString();
-    return offsetDate(fallbackBase, index);
-  }
-
-  return null;
-}
-
-function generatePostId(blogId, key) {
-  const str = `${blogId}-${key}`;
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    const char = str.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
-    hash = hash & hash;
-  }
-  return Math.abs(hash).toString(36);
-}
-
-function getPostKey({ link, guid, title, baseUrl }) {
-  const canonicalLink = normalizeUrl(link, baseUrl);
-  if (canonicalLink) return canonicalLink;
-  const normalizedGuid = normalizeGuid(guid, baseUrl);
-  if (normalizedGuid) return normalizedGuid;
-  return coerceToString(title).trim();
-}
-
-function makeLookupKey(blogId, postKey) {
-  return `${blogId}::${postKey}`;
-}
-
-function getLookupKeyForPost(post) {
-  const key = getPostKey({ link: post.link, title: post.title }) || post.id;
-  return makeLookupKey(post.blogId, key);
-}
-
-async function mapWithLimit(items, limit, fn) {
-  const results = new Array(items.length);
-  let nextIndex = 0;
-  const workerCount = Math.max(1, Math.min(limit, items.length));
-
-  const workers = Array.from({ length: workerCount }, async () => {
-    while (true) {
-      const index = nextIndex++;
-      if (index >= items.length) return;
-      results[index] = await fn(items[index], index);
-    }
-  });
-
-  await Promise.all(workers);
-  return results;
-}
 
 function getMaxPostsForBlog(blog) {
   const override = Number.parseInt(blog.maxPosts, 10);
@@ -588,8 +258,12 @@ async function fetchFeed(blog, useProxy = false, existingPostsByKey = new Map())
 
 async function main() {
   console.log('=== The Small Web Feed Fetcher ===\n');
-  console.log(`Config: FEED_CONCURRENCY=${FEED_CONCURRENCY}, EXCERPT_CONCURRENCY=${EXCERPT_CONCURRENCY}, FETCH_PAGE_EXCERPTS=${FETCH_PAGE_EXCERPTS}, MAX_PAGE_EXCERPTS_PER_FEED=${MAX_PAGE_EXCERPTS_PER_FEED}`);
-  console.log(`Config: SUBSTACK_BATCH_SIZE=${SUBSTACK_BATCH_SIZE}, SUBSTACK_BATCH_DELAY_MS=${SUBSTACK_BATCH_DELAY_MS}`);
+  console.log(`Config: ${formatFetchConfig(FETCH_CONFIG)}`);
+  if (FETCH_CONFIG.warnings.length > 0) {
+    for (const warning of FETCH_CONFIG.warnings) {
+      console.warn(`Config warning: ${warning}`);
+    }
+  }
 
   const blogsData = JSON.parse(readFileSync(BLOGS_PATH, 'utf-8'));
   const blogs = blogsData.blogs;

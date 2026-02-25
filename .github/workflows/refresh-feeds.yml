@@ -46,6 +46,9 @@ jobs:
           SUBSTACK_BATCH_DELAY_MS: '5000'
         run: npm run fetch-feeds
 
+      - name: Verify pipeline output
+        run: npm run verify-pipeline
+
       - name: Commit and push if changed
         id: commit
         run: |
@@ -60,6 +63,28 @@ jobs:
             git push
             echo "changes=true" >> $GITHUB_OUTPUT
           fi
+
+      - name: Show refreshed revision and cache timestamp
+        if: steps.commit.outputs.changes == 'true'
+        id: build_meta
+        run: |
+          DEPLOYED_SHA="$(git rev-parse HEAD)"
+          echo "deployed_sha=$DEPLOYED_SHA" >> "$GITHUB_OUTPUT"
+          echo "$DEPLOYED_SHA"
+          node -e "const p = require('./data/cache/posts.json'); console.log('cache.lastUpdated=', p.lastUpdated, 'posts=', p.posts?.length || 0);"
+
+      - name: Build site
+        if: steps.commit.outputs.changes == 'true'
+        run: npm run build
+        env:
+          PUBLIC_SW_VERSION: ${{ steps.build_meta.outputs.deployed_sha }}
+
+      - name: Deploy to Cloudflare Workers
+        if: steps.commit.outputs.changes == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: Alert on feed errors
         if: always()

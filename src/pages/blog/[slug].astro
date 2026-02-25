@@ -1,12 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
-import blogsData from '../../../data/blogs.json';
-import postsData from '../../../data/cache/posts.json';
-import { createBlogMap, enrichPosts } from '../../lib/posts';
+import { getBlogMap, getBlogs, getPosts } from '../../lib/site-data';
+import { enrichPosts } from '../../lib/posts';
 import { formatDate } from '../../lib/dates';
 
 export function getStaticPaths() {
-  return blogsData.blogs.map((blog) => ({
+  return getBlogs().map((blog) => ({
     params: { slug: blog.id },
     props: { blog },
   }));
@@ -21,11 +20,11 @@ interface Blog {
 }
 
 const { blog } = Astro.props as { blog: Blog };
-const blogs = blogsData.blogs;
-const blogMap = createBlogMap(blogs);
+const blogs = getBlogs();
+const blogMap = getBlogMap(blogs);
 
 const posts = enrichPosts(
-  postsData.posts.filter((p) => p.blogId === blog.id),
+  getPosts().filter((p) => p.blogId === blog.id),
   blogMap
 );
 

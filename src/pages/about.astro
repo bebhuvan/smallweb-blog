@@ -3,11 +3,10 @@ import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
-import blogsData from '../../data/blogs.json';
-import postsData from '../../data/cache/posts.json';
+import { getBlogs, getPosts } from '../lib/site-data';
 
-const blogs = blogsData.blogs;
-const totalPosts = postsData.posts.length;
+const blogs = getBlogs();
+const totalPosts = getPosts().length;
 
 const categorySet = new Set<string>();
 blogs.forEach(b => b.categories.forEach((c: string) => categorySet.add(c)));
@@ -41,7 +40,7 @@ blogs.forEach(b => b.categories.forEach((c: string) => categorySet.add(c)));
 
         <h2>How it works</h2>
 
-        <p>RSS feeds are fetched automatically twice a day. Posts appear chronologically — no algorithms deciding what you should see. No tracking, no ads.</p>
+        <p>RSS feeds are fetched automatically three times a day. Posts appear chronologically — no algorithms deciding what you should see. No tracking, no ads.</p>
 
         <div class="stats-strip">
           <div class="stats-strip-item">

@@ -3,9 +3,8 @@ import Base from '../../layouts/Base.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import ThemeToggle from '../../components/ThemeToggle.astro';
-import blogsData from '../../../data/blogs.json';
-import postsData from '../../../data/cache/posts.json';
-import { createBlogMap, enrichPosts, pickFeaturedPost } from '../../lib/posts';
+import { getBlogMap, getBlogs, getPosts } from '../../lib/site-data';
+import { enrichPosts, pickFeaturedPost } from '../../lib/posts';
 import { formatDate } from '../../lib/dates';
 
 export function getStaticPaths() {
@@ -30,15 +29,15 @@ export function getStaticPaths() {
 const { slug } = Astro.params;
 const { category } = Astro.props;
 
-const blogs = blogsData.blogs;
-const blogMap = createBlogMap(blogs);
+const blogs = getBlogs();
+const blogMap = getBlogMap(blogs);
 
 const categoryBlogIds = new Set(
   blogs.filter((b) => b.categories.includes(slug as string)).map((b) => b.id)
 );
 
 const posts = enrichPosts(
-  postsData.posts.filter((p) => categoryBlogIds.has(p.blogId)),
+  getPosts().filter((p) => categoryBlogIds.has(p.blogId)),
   blogMap,
   { categoryOverride: category.slug }
 );

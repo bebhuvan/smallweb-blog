@@ -3,76 +3,15 @@ import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
-import blogsData from '../../data/blogs.json';
-import postsData from '../../data/cache/posts.json';
-import { createBlogMap, enrichPosts, pickFeaturedPost } from '../lib/posts';
+import { getBlogMap, getBlogs, getEnrichedPosts } from '../lib/site-data';
+import { curateHomepage } from '../lib/homepage';
 import { formatDate } from '../lib/dates';
 
-const blogs = blogsData.blogs;
-const posts = postsData.posts;
-
-const blogMap = createBlogMap(blogs);
-const enrichedPosts = enrichPosts(posts, blogMap);
-
-// Track used IDs
-const usedIds = new Set<string>();
-
-// Lead post: guard against odd dates
-const leadPick = pickFeaturedPost(enrichedPosts, blogMap, { minExcerptLength: 0 });
-const leadPost = leadPick.featured || enrichedPosts[0] || null;
-if (leadPost) usedIds.add(leadPost.id);
-
-// Secondary lead: next most recent post from a different category
-const secondaryLead = enrichedPosts.find(p => !usedIds.has(p.id) && p.category !== leadPost?.category) || null;
-if (secondaryLead) usedIds.add(secondaryLead.id);
-
-// Also New: next 5 most recent posts after the lead
-const alsoNew = enrichedPosts.filter(p => !usedIds.has(p.id)).slice(0, 5);
-alsoNew.forEach(p => usedIds.add(p.id));
-
-// Featured excerpt: pick the post with the longest excerpt from prose-heavy categories
-const proseCategories = ['philosophy', 'culture', 'life', 'psychology', 'history'];
-const excerptCandidates = enrichedPosts
-  .filter(p => proseCategories.includes(p.category) && p.excerpt && p.excerpt.length > 80 && !usedIds.has(p.id))
-  .sort((a, b) => (b.excerpt?.length || 0) - (a.excerpt?.length || 0));
-const featuredExcerpt = excerptCandidates[0] || null;
-if (featuredExcerpt) usedIds.add(featuredExcerpt.id);
-
-// All categories: 1 featured + 4 list items each
-const allCategories = ['tech', 'culture', 'life', 'design', 'economics', 'finance', 'history', 'philosophy', 'psychology', 'science'];
-const categoryPosts = new Map<string, typeof enrichedPosts>();
-for (const cat of allCategories) {
-  const catPosts = enrichedPosts.filter(p => p.category === cat && !usedIds.has(p.id)).slice(0, 5);
-  catPosts.forEach(p => usedIds.add(p.id));
-  categoryPosts.set(cat, catPosts);
-}
-
-// From the Archives: 5 older posts from different categories, rotating daily
-const twoWeeksAgo = new Date();
-twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
-const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
-
-const archiveCandidates = enrichedPosts.filter(p =>
-  !usedIds.has(p.id) && new Date(p.date) < twoWeeksAgo
-);
-
-// Pick 1 per category, seeded by day-of-year for daily rotation
-const archivePicks: typeof enrichedPosts = [];
-const archiveCatsUsed = new Set<string>();
-for (const cat of [...allCategories].sort((a, b) => {
-  // Rotate which categories appear first based on day
-  const ai = (allCategories.indexOf(a) + dayOfYear) % allCategories.length;
-  const bi = (allCategories.indexOf(b) + dayOfYear) % allCategories.length;
-  return ai - bi;
-})) {
-  if (archivePicks.length >= 5) break;
-  const candidate = archiveCandidates.find(p => p.category === cat && !archiveCatsUsed.has(cat));
-  if (candidate) {
-    archivePicks.push(candidate);
-    archiveCatsUsed.add(cat);
-    usedIds.add(candidate.id);
-  }
-}
+const blogs = getBlogs();
+const blogMap = getBlogMap(blogs);
+const enrichedPosts = getEnrichedPosts({ blogs, blogMap });
+const { leadPost, secondaryLead, alsoNew, featuredExcerpt, categoryPosts, archivePicks } =
+  curateHomepage(enrichedPosts, blogMap);
 
 function getCatColor(cat: string) {
   return `var(--${cat})`;
