@@ -1427,6 +1427,72 @@
         "tech"
       ],
       "description": "Reflections on four decades of programming, AI's impact on craft, and building things from scratch."
+    },
+    {
+      "id": "scottsmitelli",
+      "name": "Scott Smitelli",
+      "url": "https://www.scottsmitelli.com",
+      "feed": "https://www.scottsmitelli.com/index.xml",
+      "categories": [
+        "tech"
+      ],
+      "description": "Articles and projects on programming, software, and creative tech experiments."
+    },
+    {
+      "id": "karpathy",
+      "name": "Andrej Karpathy",
+      "url": "https://karpathy.github.io",
+      "feed": "https://karpathy.github.io/feed.xml",
+      "categories": [
+        "tech"
+      ],
+      "description": "Deep learning, neural networks, and accessible implementations of ML concepts."
+    },
+    {
+      "id": "ivanturkovic",
+      "name": "Ivan Turkovic",
+      "url": "https://www.ivanturkovic.com",
+      "feed": "https://www.ivanturkovic.com/feed/",
+      "categories": [
+        "tech"
+      ],
+      "description": "Honest takes on code, AI, and what actually works in software engineering."
+    },
+    {
+      "id": "protocolized",
+      "name": "Protocolized",
+      "url": "https://protocolized.summerofprotocols.com",
+      "feed": "https://protocolized.summerofprotocols.com/feed",
+      "categories": [
+        "culture",
+        "tech"
+      ],
+      "proxy": true,
+      "description": "Sci-fi, essays, and articles about the world's invisible infrastructure and strange rules."
+    },
+    {
+      "id": "minutes",
+      "name": "Minutes",
+      "url": "https://minutes.substack.com",
+      "feed": "https://minutes.substack.com/feed",
+      "categories": [
+        "life",
+        "philosophy"
+      ],
+      "proxy": true,
+      "description": "Long-form essays on walking, craftsmanship, and observations on life."
+    },
+    {
+      "id": "anticipatingtheunintended",
+      "name": "Anticipating the Unintended",
+      "url": "https://publicpolicy.substack.com",
+      "feed": "https://publicpolicy.substack.com/feed",
+      "categories": [
+        "economics",
+        "culture"
+      ],
+      "proxy": true,
+      "description": "Public policy frameworks, geopolitics, and governance from an Indian perspective."
     }
   ]
 }
