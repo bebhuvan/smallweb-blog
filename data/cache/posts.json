@@ -1,6 +1,38 @@
 {
-  "lastUpdated": "2026-03-05T18:49:00.267Z",
+  "lastUpdated": "2026-03-06T03:24:21.685Z",
   "posts": [
+    {
+      "id": "lqjl4u",
+      "blogId": "simonwillison",
+      "title": "Clinejection — Compromising Cline's Production Releases just by Prompting an Issue Triager",
+      "link": "https://simonwillison.net/2026/Mar/6/clinejection",
+      "date": "2026-03-06T02:39:04.000Z",
+      "excerpt": "Clinejection — Compromising Cline's Production Releases just by Prompting an Issue Triager Adnan Khan describes a devious attack chain against the Cline GitHub repository, which started with a prompt injection attack in the title of an issue opened against the repo. Cline were running AI-powered iss..."
+    },
+    {
+      "id": "e821uq",
+      "blogId": "kottke",
+      "title": " Director Rian Johnson (Knives Out, Poker Face)  wrote the... ",
+      "link": "https://kottke.org/26/03/0048504-director-rian-johnson-kni",
+      "date": "2026-03-06T01:35:19.000Z",
+      "excerpt": "Director Rian Johnson (Knives Out, Poker Face) wrote the review of the Thursday crossword puzzle for the NY Times today. “I love a good Thursday. The baffling special graphics, the wait-that-can’t-be-right puzzlement and that glorious ah-ha moment…”"
+    },
+    {
+      "id": "5soopw",
+      "blogId": "platformer",
+      "title": "Inside the backlash to the AI war machine",
+      "link": "https://www.platformer.news/openai-protest-military-ai-movement",
+      "date": "2026-03-06T01:12:23.000Z",
+      "excerpt": "A protest at OpenAI headquarters suggests the backlash to military AI is growing — even if its politics are still half-formed. PLUS: The Pentagon declares Anthropic a supply chain risk"
+    },
+    {
+      "id": "5kn0kp",
+      "blogId": "noahpinion",
+      "title": "If AI is a weapon, why don't we regulate it like one?",
+      "link": "https://www.noahpinion.blog/p/if-ai-is-a-weapon-why-dont-we-regulate",
+      "date": "2026-03-06T00:28:04.000Z",
+      "excerpt": "Thoughts on the fight between Anthropic and the Department of War."
+    },
     {
       "id": "gk86nl",
       "blogId": "sivers",
@@ -8,6 +40,174 @@
       "link": "https://sive.rs/bfaq",
       "date": "2026-03-06T00:00:00.000Z",
       "excerpt": "At sive.rs/book I have a collection of my notes from the 420+ books I’ve read since 2007. That’s all my notes are. I’m not summarizing the book. I’m just saving ideas for myself, for later reflection. It helps me remember what I learned from it. I kept these notes private for years, but decided to s..."
+    },
+    {
+      "id": "1dcknv",
+      "blogId": "simonwillison",
+      "title": "Introducing GPT‑5.4",
+      "link": "https://simonwillison.net/2026/Mar/5/introducing-gpt54",
+      "date": "2026-03-05T23:56:09.000Z",
+      "excerpt": "Introducing GPT‑5.4 Two new API models: gpt-5.4 and gpt-5.4-pro, also available in ChatGPT and Codex CLI. August 31st 2025 knowledge cutoff, 1 million token context window. Priced slightly higher than the GPT-5.2 family with a bump in price for both models if you go above 272,000 tokens. 5.4 beats c..."
+    },
+    {
+      "id": "mfcafk",
+      "blogId": "aldaily",
+      "title": "Counterculture prophet, Whole Earth cataloguer, proto-internet evangelist, Stewart Brand has a new obsession: maintenance",
+      "link": "https://www.theguardian.com/technology/2026/feb/25/tech-legend-stewart-brand-on-musk-bezos-and-his-extraordinary-life-we-dont-need-to-passively-accept-our-fate",
+      "date": "2026-03-05T22:08:43.000Z",
+      "excerpt": "Counterculture prophet, Whole Earth cataloguer, proto-internet evangelist, Stewart Brand has a new obsession: maintenance"
+    },
+    {
+      "id": "kuakux",
+      "blogId": "aldaily",
+      "title": "He championed Joyce, mentored Eliot, and broadcast fascist propaganda. Ezra Pound was indispensable as an artist and irredeemable as a man",
+      "link": "https://lithub.com/literary-celebrity-mussolinis-mouthpiece-and-american-traitor-who-was-ezra-pound",
+      "date": "2026-03-05T22:07:43.000Z",
+      "excerpt": "He championed Joyce, mentored Eliot, and broadcast fascist propaganda. Ezra Pound was indispensable as an artist and irredeemable as a man"
+    },
+    {
+      "id": "ydb4pk",
+      "blogId": "aldaily",
+      "title": "An Emerson for our times? Terry Tempest Williams’s “epic documentation of the Glorians” is full of celestial beings and desert miracles",
+      "link": "https://theamericanscholar.org/an-american-prophet-of-the-natural-world",
+      "date": "2026-03-05T22:06:43.000Z",
+      "excerpt": "An Emerson for our times? Terry Tempest Williams’s “epic documentation of the Glorians” is full of celestial beings and desert miracles"
+    },
+    {
+      "id": "ebltax",
+      "blogId": "aldaily",
+      "title": "Bolster civil discourse and the Great Books, or purge “commies”? The right is at war with itself over how to reform the university",
+      "link": "https://www.chronicle.com/article/the-rights-academic-civil-war",
+      "date": "2026-03-05T22:05:43.000Z",
+      "excerpt": "Bolster civil discourse and the Great Books, or purge “commies”? The right is at war with itself over how to reform the university"
+    },
+    {
+      "id": "z8c3oe",
+      "blogId": "aldaily",
+      "title": "Adam Phillips: \"Psychoanalysis is not better than aromatherapy or worse than neurology, it’s simply something for people who find it intriguing\"",
+      "link": "https://www.interviewmagazine.com/literature/adam-phillips-is-no-ones-guru",
+      "date": "2026-03-05T22:04:43.000Z",
+      "excerpt": "Adam Phillips: \"Psychoanalysis is not better than aromatherapy or worse than neurology, it’s simply something for people who find it intriguing\""
+    },
+    {
+      "id": "w647qv",
+      "blogId": "aldaily",
+      "title": "Shut out of plum positions because of his political sins, Malcolm Cowley became a triple-threat hired gun: reporting, reviewing, editing",
+      "link": "https://newrepublic.com/article/205583/editor-helped-build-golden-age-american-letters",
+      "date": "2026-03-05T22:03:43.000Z",
+      "excerpt": "Shut out of plum positions because of his political sins, Malcolm Cowley became a triple-threat hired gun: reporting, reviewing, editing"
+    },
+    {
+      "id": "rmobnb",
+      "blogId": "aldaily",
+      "title": "Harold Bloom made academics wince and general readers swoon. The asymmetry was the point",
+      "link": "https://thepointmag.com/examined-life/the-influence-of-anxiety",
+      "date": "2026-03-05T22:02:43.000Z",
+      "excerpt": "Harold Bloom made academics wince and general readers swoon. The asymmetry was the point"
+    },
+    {
+      "id": "pxc841",
+      "blogId": "aldaily",
+      "title": "In 2013 Mary Gaitskill told students: “Go home and look between your legs and tell me if that is a social construct.” All hell broke loose",
+      "link": "https://therepublicofletters.substack.com/p/an-interview-with-mary-gaitskill",
+      "date": "2026-03-05T22:01:43.000Z",
+      "excerpt": "In 2013 Mary Gaitskill told students: “Go home and look between your legs and tell me if that is a social construct.” All hell broke loose"
+    },
+    {
+      "id": "kwbqxi",
+      "blogId": "aldaily",
+      "title": "College students’ sense of meaning and purpose is transactional and internet-based. For them, the campus is a hustler’s paradise",
+      "link": "https://lareviewofbooks.org/article/mark-edmundson-literary-criticism-american-university-humanities-essay",
+      "date": "2026-03-05T22:00:43.000Z",
+      "excerpt": "College students’ sense of meaning and purpose is transactional and internet-based. For them, the campus is a hustler’s paradise"
+    },
+    {
+      "id": "gffijw",
+      "blogId": "aldaily",
+      "title": "A cow carcass, buckets of blood, poisoned dogs: A lot of death went into the making of Chaim Soutine’s art",
+      "link": "https://literaryreview.co.uk/blood-on-the-canvas",
+      "date": "2026-03-05T21:59:43.000Z",
+      "excerpt": "A cow carcass, buckets of blood, poisoned dogs: A lot of death went into the making of Chaim Soutine’s art"
+    },
+    {
+      "id": "nvqga",
+      "blogId": "kottke",
+      "title": "  Earth’s gravity is lumpy . “The gravity in... ",
+      "link": "https://kottke.org/26/03/0048496-earths-gravity-is-lumpy-t",
+      "date": "2026-03-05T21:55:27.000Z",
+      "excerpt": "Earth’s gravity is lumpy. “The gravity in East Antarctica is measurably weaker than anywhere else on the planet.”"
+    },
+    {
+      "id": "jmzqu5",
+      "blogId": "cleareyedai",
+      "title": "The magic phrase that kills AI regulation",
+      "link": "https://stevenadler.substack.com/p/the-magic-phrase-that-kills-ai-regulation",
+      "date": "2026-03-05T21:47:02.000Z",
+      "excerpt": "A \"federal framework\" isn't real AI policy unless it answers two questions"
+    },
+    {
+      "id": "hh8s9q",
+      "blogId": "kottke",
+      "title": " Big Tuskers ",
+      "link": "https://kottke.org/26/03/big-tuskers",
+      "date": "2026-03-05T21:00:00.000Z",
+      "excerpt": "Oh wow, I love these photographs of “big tusker” elephants by Johan Siggesson. I didn’t even know big tuskers were a thing — and they may not be for much longer: The term “Big Tusker” refers to an elephant with tusks so large they scrape the floor. Unfortunately, the opportunities for witnessing a b..."
+    },
+    {
+      "id": "ixqip",
+      "blogId": "braddelong",
+      "title": "Econ 196 :: The 1870s as the True Hinge of History? :: Pre-Class Assignment—do before 2026-03-08 23:59 PST:",
+      "link": "https://braddelong.substack.com/p/econ-196-the-1870s-as-the-true-hinge",
+      "date": "2026-03-05T20:23:09.000Z",
+      "excerpt": "What I am teaching in my seminar these days: was 1875 truly the singular hinge of human history, or at least of human economic history?…"
+    },
+    {
+      "id": "iase24",
+      "blogId": "kottke",
+      "title": " This is kind of amazing:  World Monitor  is a real-time... ",
+      "link": "https://kottke.org/26/03/0048502-this-is-kind-of-amazing",
+      "date": "2026-03-05T20:19:37.000Z",
+      "excerpt": "This is kind of amazing: World Monitor is a real-time global intelligence dashboard. Includes military activity, climate anomalies, live webcam feeds in warzones, internet outages, active fires, and even the Pentagon Pizza Index."
+    },
+    {
+      "id": "6o9ekf",
+      "blogId": "marginalrevolution",
+      "title": "Democracy continues",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/03/democracy-continues.html",
+      "date": "2026-03-05T20:05:30.000Z",
+      "excerpt": "Here is a link. The post Democracy continues appeared first on Marginal REVOLUTION."
+    },
+    {
+      "id": "jbmgco",
+      "blogId": "flowingdata",
+      "title": "Database to explore conflicts of interest through financial disclosures",
+      "link": "https://flowingdata.com/2026/03/05/database-to-explore-conflicts-of-interest-through-financial-disclosures",
+      "date": "2026-03-05T19:51:40.000Z",
+      "excerpt": "ProPublica has been collecting thousands of disclosure documents, and they made a searchable… Tags: conflict, finance, politics, ProPublica"
+    },
+    {
+      "id": "7ffotq",
+      "blogId": "kottke",
+      "title": " Yes, let’s  retire the restaurant monologue .... ",
+      "link": "https://kottke.org/26/03/0048498-yes-lets-retire-the-resta",
+      "date": "2026-03-05T19:38:50.000Z",
+      "excerpt": "Yes, let’s retire the restaurant monologue. “The urge to direct diners through every bite of a meal runs counter to what I love about dining out, one of just a few cornerstones of American life that have not yet been optimized into oblivion.”"
+    },
+    {
+      "id": "7z5kla",
+      "blogId": "pluralistic",
+      "title": "Pluralistic: Blowtorching the frog (05 Mar 2026) executive-dysfunction",
+      "link": "https://pluralistic.net/2026/03/05/executive-dysfunction",
+      "date": "2026-03-05T19:31:30.000Z",
+      "excerpt": "Today's links Blowtorching the frog: If I must have enemies, let them be impatient ones. Hey look at this: Delights to delectate. Object permanence: Bill Cosby v Waxy; Rodney King, 20 years on; Peter Watts v flesh-eating bacteria; American authoritarianism; Algebra II v Statistics for Citizenship; I..."
+    },
+    {
+      "id": "k4haqi",
+      "blogId": "kottke",
+      "title": " From ProPublica,  a database of financial disclosures... ",
+      "link": "https://kottke.org/26/03/0048501-from-propublica-a-databas",
+      "date": "2026-03-05T18:49:44.000Z",
+      "excerpt": "From ProPublica, a database of financial disclosures from the Trump regime’s political appointees. “Use this database to explore potential conflicts of interest for President Donald Trump and his team.”"
     },
     {
       "id": "2pj5jk",
@@ -24,6 +224,14 @@
       "link": "https://abnormalreturns.com/2026/03/05/thursday-links-automated-or-eliminated",
       "date": "2026-03-05T18:07:47.000Z",
       "excerpt": ""
+    },
+    {
+      "id": "9bud13",
+      "blogId": "wealthofcommonsense",
+      "title": "Preparing Without Predicting",
+      "link": "https://awealthofcommonsense.com/2026/03/preparing-without-predicting",
+      "date": "2026-03-05T17:55:07.000Z",
+      "excerpt": "Some thoughts on how to create an investment plan for an unknown future. The post Preparing Without Predicting appeared first on A Wealth of Common Sense. ..."
     },
     {
       "id": "elzxzs",
@@ -72,6 +280,14 @@
       "link": "https://www.theintrinsicperspective.com/p/bits-in-bits-out",
       "date": "2026-03-05T17:04:15.000Z",
       "excerpt": "Six years of AI and the world got stupider"
+    },
+    {
+      "id": "glwihg",
+      "blogId": "marginalian",
+      "title": "What Happens When We Die",
+      "link": "https://www.themarginalian.org/2026/03/05/alan-lightman-death",
+      "date": "2026-03-05T16:56:22.000Z",
+      "excerpt": "\"How can a creature who will certainly die have an understanding of things that will exist forever?\""
     },
     {
       "id": "wojnl",
@@ -202,62 +418,6 @@
       "excerpt": "What drives the men who make--and abuse--AI?"
     },
     {
-      "id": "ebltax",
-      "blogId": "aldaily",
-      "title": "Bolster civil discourse and the Great Books, or purge “commies”? The right is at war with itself over how to reform the university",
-      "link": "https://www.chronicle.com/article/the-rights-academic-civil-war",
-      "date": "2026-03-05T13:37:32.000Z",
-      "excerpt": "Bolster civil discourse and the Great Books, or purge “commies”? The right is at war with itself over how to reform the university"
-    },
-    {
-      "id": "z8c3oe",
-      "blogId": "aldaily",
-      "title": "Adam Phillips: \"Psychoanalysis is not better than aromatherapy or worse than neurology, it’s simply something for people who find it intriguing\"",
-      "link": "https://www.interviewmagazine.com/literature/adam-phillips-is-no-ones-guru",
-      "date": "2026-03-05T13:36:32.000Z",
-      "excerpt": "Adam Phillips: \"Psychoanalysis is not better than aromatherapy or worse than neurology, it’s simply something for people who find it intriguing\""
-    },
-    {
-      "id": "w647qv",
-      "blogId": "aldaily",
-      "title": "Shut out of plum positions because of his political sins, Malcolm Cowley became a triple-threat hired gun: reporting, reviewing, editing",
-      "link": "https://newrepublic.com/article/205583/editor-helped-build-golden-age-american-letters",
-      "date": "2026-03-05T13:35:32.000Z",
-      "excerpt": "Shut out of plum positions because of his political sins, Malcolm Cowley became a triple-threat hired gun: reporting, reviewing, editing"
-    },
-    {
-      "id": "rmobnb",
-      "blogId": "aldaily",
-      "title": "Harold Bloom made academics wince and general readers swoon. The asymmetry was the point",
-      "link": "https://thepointmag.com/examined-life/the-influence-of-anxiety",
-      "date": "2026-03-05T13:34:32.000Z",
-      "excerpt": "Harold Bloom made academics wince and general readers swoon. The asymmetry was the point"
-    },
-    {
-      "id": "pxc841",
-      "blogId": "aldaily",
-      "title": "In 2013 Mary Gaitskill told students: “Go home and look between your legs and tell me if that is a social construct.” All hell broke loose",
-      "link": "https://therepublicofletters.substack.com/p/an-interview-with-mary-gaitskill",
-      "date": "2026-03-05T13:33:32.000Z",
-      "excerpt": "In 2013 Mary Gaitskill told students: “Go home and look between your legs and tell me if that is a social construct.” All hell broke loose"
-    },
-    {
-      "id": "kwbqxi",
-      "blogId": "aldaily",
-      "title": "College students’ sense of meaning and purpose is transactional and internet-based. For them, the campus is a hustler’s paradise",
-      "link": "https://lareviewofbooks.org/article/mark-edmundson-literary-criticism-american-university-humanities-essay",
-      "date": "2026-03-05T13:32:32.000Z",
-      "excerpt": "College students’ sense of meaning and purpose is transactional and internet-based. For them, the campus is a hustler’s paradise"
-    },
-    {
-      "id": "gffijw",
-      "blogId": "aldaily",
-      "title": "A cow carcass, buckets of blood, poisoned dogs: A lot of death went into the making of Chaim Soutine’s art",
-      "link": "https://literaryreview.co.uk/blood-on-the-canvas",
-      "date": "2026-03-05T13:31:32.000Z",
-      "excerpt": "A cow carcass, buckets of blood, poisoned dogs: A lot of death went into the making of Chaim Soutine’s art"
-    },
-    {
       "id": "gmqh37",
       "blogId": "aldaily",
       "title": "In 2002, the college essay was declared dead. More than three years and hundreds of billions of dollars later, the college essay lives on",
@@ -304,6 +464,14 @@
       "link": "https://maxread.substack.com/p/talking-anthropic-iran-and-the-department",
       "date": "2026-03-05T12:03:23.000Z",
       "excerpt": "Greetings from Read Max HQ!"
+    },
+    {
+      "id": "srmh4p",
+      "blogId": "marginalian",
+      "title": "Oliver Sacks on the Three Essential Elements of Creativity",
+      "link": "https://www.themarginalian.org/2026/03/05/oliver-sacks-the-river-of-consciousness-the-creative-self",
+      "date": "2026-03-05T12:02:16.000Z",
+      "excerpt": "\"It takes a special energy, over and above one’s creative potential, a special audacity or subversiveness, to strike out in a new direction once one is settled.\""
     },
     {
       "id": "6gdkjv",
@@ -400,6 +568,14 @@
       "link": "https://www.commonreader.co.uk/p/my-appearance-on-conversations-with",
       "date": "2026-03-05T05:01:44.000Z",
       "excerpt": "Shakespeare, advertising, Harry Potter"
+    },
+    {
+      "id": "8pd9sh",
+      "blogId": "marginalian",
+      "title": "Albert Camus on the Source of Strength and How to Save Our Sanity in Trying Times",
+      "link": "https://www.themarginalian.org/2026/03/04/albert-camus-almond-trees-character",
+      "date": "2026-03-05T02:20:49.000Z",
+      "excerpt": "\"In the depths of winter, I finally learned that within me there lay an invincible summer.\""
     },
     {
       "id": "oesz5p",
@@ -520,6 +696,14 @@
       "link": "https://kottke.org/26/03/beginning-comes-after-the-end",
       "date": "2026-03-04T19:27:03.000Z",
       "excerpt": "A new book by Rebecca Solnit came out yesterday; it’s called The Beginning Comes After the End: Notes on a World of Change (Amazon). The synopsis: Rebecca Solnit offers a thrilling account of the sheer breadth and scale of social, political, scientific, and cultural change over the past three quarte..."
+    },
+    {
+      "id": "n9cl18",
+      "blogId": "marginalian",
+      "title": "The Paradox of Knowing Who You Are and What You Want: Cristina Campo on Fairy Tales, Time, and the Meaning of Maturity",
+      "link": "https://www.themarginalian.org/2026/03/04/cristina-campo-unforgivable-fairy-tales",
+      "date": "2026-03-04T18:50:02.000Z",
+      "excerpt": "“If you want your children to be intelligent, read them fairy tales,” Einstein reportedly told one mother who wished for her son to become a scientist. “If you want them to be very intelligent, read them more fairy tales.” Given that the deepest measure of intelligence is a plasticity of being that..."
     },
     {
       "id": "agwkt1",
