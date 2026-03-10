@@ -1,6 +1,342 @@
 {
-  "lastUpdated": "2026-03-10T09:42:51.049Z",
+  "lastUpdated": "2026-03-10T17:47:08.733Z",
   "posts": [
+    {
+      "id": "oamabe",
+      "blogId": "kottke",
+      "title": " Ghost Elephants ",
+      "link": "https://kottke.org/26/03/ghost-elephants",
+      "date": "2026-03-10T17:12:00.000Z",
+      "excerpt": "Ghost Elephants is a new documentary film directed by Werner Herzog for National Geographic. Here’s the trailer. For over a decade, Dr. Steve Boyes, conservation biologist and National Geographic Explorer, has been in search of a mysterious, elusive herd of Ghost Elephants in the highlands of Angola..."
+    },
+    {
+      "id": "s3dbvj",
+      "blogId": "markcarrigan",
+      "title": "What do LLMs do when they are left alone?",
+      "link": "https://markcarrigan.net/2026/03/10/what-do-llms-do-when-they-are-left-alone",
+      "date": "2026-03-10T16:22:26.000Z",
+      "excerpt": "This is absolutely fascinating. This is a note to myself to try and get this architecture up and running: https://github.com/szeider/contreact/ This fits really well with the findings of the AI Village over the last year. I asked Opus 4.6 to do whatever it wanted and it made this genuinely lovely pi..."
+    },
+    {
+      "id": "8cqoqw",
+      "blogId": "kottke",
+      "title": "  Github’s uptime lately  seems…..concerning? ",
+      "link": "https://kottke.org/26/03/0048523-githubs-uptime-lately-see",
+      "date": "2026-03-10T16:20:20.000Z",
+      "excerpt": "Github’s uptime lately seems…..concerning?"
+    },
+    {
+      "id": "746z7e",
+      "blogId": "marginalrevolution",
+      "title": "Tuesday assorted links",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/03/tuesday-assorted-links-559.html",
+      "date": "2026-03-10T16:08:48.000Z",
+      "excerpt": "1. Metropolitan Opera is trying to raise money (NYT). 2. How to write a LOTR bestseller (short video, with profanity). 3. Good WSJ review of the new Macca movie. 4. Why Lula is struggling. 5. A good analysis of CWT. 6. Wartime and feminization. The post Tuesday assorted links appeared first on Margi..."
+    },
+    {
+      "id": "z5y1o0",
+      "blogId": "marginalian",
+      "title": "The Other Significant Others: Living and Loving Outside the Confines of Conventional Friendship and Compulsory Coupledom",
+      "link": "https://www.themarginalian.org/2026/03/10/the-other-significant-others",
+      "date": "2026-03-10T16:03:40.000Z",
+      "excerpt": "\"While we weaken friendships by expecting too little of them, we undermine romantic relationships by expecting too much of them.\""
+    },
+    {
+      "id": "9jq1y7",
+      "blogId": "marginalian",
+      "title": "An Introvert’s Field Guide to Friendship: Thoreau on the Challenges and Rewards of Candid Connection",
+      "link": "https://www.themarginalian.org/2026/03/10/thoreau-friendship",
+      "date": "2026-03-10T16:01:11.000Z",
+      "excerpt": "\"We only need to be as true to others as we are to ourselves that there may be ground enough for friendship.\""
+    },
+    {
+      "id": "7h10h7",
+      "blogId": "benthamsbulldog",
+      "title": "You Need Self-Locating Evidence!",
+      "link": "https://benthams.substack.com/p/you-need-self-locating-evidence",
+      "date": "2026-03-10T15:50:39.000Z",
+      "excerpt": "Probabilities aren't just in the world!"
+    },
+    {
+      "id": "deyzf1",
+      "blogId": "paulkrugman",
+      "title": "Why I Don't Speak American",
+      "link": "https://paulkrugman.substack.com/p/why-i-dont-speak-american",
+      "date": "2026-03-10T15:38:14.000Z",
+      "excerpt": "And why it's a problem that Pete Hegseth says he does"
+    },
+    {
+      "id": "6770ne",
+      "blogId": "kottke",
+      "title": " “Billionaires made 19 percent of all reported... ",
+      "link": "https://kottke.org/26/03/0048529-billionaires-made-19-perc",
+      "date": "2026-03-10T15:30:50.000Z",
+      "excerpt": "“Billionaires made 19 percent of all reported federal campaign contributions in 2024, a Times analysis shows, and even more in some local elections.” The Scale of Billionaires’ Campaign Donations is Overwhelming U.S. Politics."
+    },
+    {
+      "id": "p8owi5",
+      "blogId": "pluralistic",
+      "title": "Pluralistic: Ad-tech is fascist tech (10 Mar 2026)",
+      "link": "https://pluralistic.net/2026/03/10/ice-tech",
+      "date": "2026-03-10T15:23:43.000Z",
+      "excerpt": "Today's links Ad-tech is fascist tech: Surveillance advertising is just surveillance. Hey look at this: Delights to delectate. Object permanence: Washpo v Bernie; Activists v Saif Gadaffi's London mansion; Spacefaring v contract language; Tuna-can tiffin pail; France v encryption. Upcoming appearanc..."
+    },
+    {
+      "id": "dfidg2",
+      "blogId": "spyglass",
+      "title": "Apple's Hail Mary, Anthropic's Savior",
+      "link": "https://spyglass.org/apples-hail-mary-anthropics-savior",
+      "date": "2026-03-10T15:21:01.000Z",
+      "excerpt": "It sounds crazy, but hear me out..."
+    },
+    {
+      "id": "3euqt",
+      "blogId": "kottke",
+      "title": " The Shape of Paris ",
+      "link": "https://kottke.org/26/03/the-shape-of-paris",
+      "date": "2026-03-10T14:30:00.000Z",
+      "excerpt": "The Shape of Paris is a balletic short film of skateboarder Andy Anderson zooming, grinding, spinning, and floating around Paris in the summertime. It is also beautifully shot by Brett Novak; Paris has never looked better. As a YT commenter put it: “bro wtf this is the cleanest footage I’ve ever see..."
+    },
+    {
+      "id": "lnpbsu",
+      "blogId": "larryswedroe",
+      "title": "Why Earnings Beat Cash Flow for Long-Term Investment Decisions",
+      "link": "https://larryswedroe.substack.com/p/why-earnings-beat-cash-flow-for-long",
+      "date": "2026-03-10T14:17:00.000Z",
+      "excerpt": "If you’ve ever wondered why Wall Street obsesses over earnings when cash flow seems more “real,” a new study has some answers that might change how you think about valuation."
+    },
+    {
+      "id": "fambeu",
+      "blogId": "kottke",
+      "title": " The Modern Times cafe moved to a pay-what-you-want model... ",
+      "link": "https://kottke.org/26/03/0048525-the-modern-times-cafe-mov",
+      "date": "2026-03-10T14:10:06.000Z",
+      "excerpt": "The Modern Times cafe moved to a pay-what-you-want model during the ICE occupation of Minneapolis. Now the cafe is making it permanent (and pivoting to a nonprofit). “Some had come for a free meal; others were there to pay double or triple their tab.”"
+    },
+    {
+      "id": "uucfc0",
+      "blogId": "cosmographia",
+      "title": "IRAN: PEOPLE OF THE PLATEAU",
+      "link": "https://cosmographia.substack.com/p/iran-people-of-the-plateau",
+      "date": "2026-03-10T14:01:14.000Z",
+      "excerpt": "Understanding Iran: Part II"
+    },
+    {
+      "id": "5qyrpd",
+      "blogId": "investmentecosystem",
+      "title": "Clippings 6 ~ Big moves",
+      "link": "https://investmentecosystem.substack.com/p/clippings-6-big-moves",
+      "date": "2026-03-10T13:52:08.000Z",
+      "excerpt": "A wild day, a combustible region, a change in a big trend (maybe), and other important eye candy."
+    },
+    {
+      "id": "5qresi",
+      "blogId": "aldaily",
+      "title": "“Anguish,” “agony,” “ache,” “affliction” — why are there so many words for pain? Darcey Steinke unpacks the meaning of suffering",
+      "link": "https://thebaffler.com/latest/the-darkness-from-the-darkness-giraldi",
+      "date": "2026-03-10T13:39:05.000Z",
+      "excerpt": "“Anguish,” “agony,” “ache,” “affliction” — why are there so many words for pain? Darcey Steinke unpacks the meaning of suffering"
+    },
+    {
+      "id": "rsx2nf",
+      "blogId": "aldaily",
+      "title": "The dictionary, initially a monument to language fixed in amber, is less a fortress than a weather vane",
+      "link": "https://www.thenation.com/article/culture/stefan-fatsis-dictionary-history",
+      "date": "2026-03-10T13:38:05.000Z",
+      "excerpt": "The dictionary, initially a monument to language fixed in amber, is less a fortress than a weather vane"
+    },
+    {
+      "id": "apdg1a",
+      "blogId": "aldaily",
+      "title": "Science and seeking. Participation in mainstream religions has plummeted. The study of consciousness has exploded. Coincidence?",
+      "link": "https://theamericanscholar.org/who-is-thinking",
+      "date": "2026-03-10T13:37:05.000Z",
+      "excerpt": "Science and seeking. Participation in mainstream religions has plummeted. The study of consciousness has exploded. Coincidence?"
+    },
+    {
+      "id": "v4bw78",
+      "blogId": "kottke",
+      "title": " “A group of runners starts jogging around a... ",
+      "link": "https://kottke.org/26/03/0048521-a-group-of-runners-starts",
+      "date": "2026-03-10T13:36:38.000Z",
+      "excerpt": "“A group of runners starts jogging around a circular track, with each runner maintaining a unique, constant pace. Will every runner end up ‘lonely,’ or relatively far from everyone else, at least once, no matter their speeds?”"
+    },
+    {
+      "id": "ergsbf",
+      "blogId": "aldaily",
+      "title": "Shulamith Firestone’s fundamental battle is with the grip of normalcy and conformity on every human life",
+      "link": "https://libertiesjournal.substack.com/p/midcentury-madness",
+      "date": "2026-03-10T13:36:05.000Z",
+      "excerpt": "Shulamith Firestone’s fundamental battle is with the grip of normalcy and conformity on every human life"
+    },
+    {
+      "id": "fe52mc",
+      "blogId": "aldaily",
+      "title": "António Lobo Antunes, a Portuguese novelist who captured his generation’s disillusionment with the war, is dead. He was 83",
+      "link": "https://www.theguardian.com/books/2026/mar/06/antonio-lobo-antunes-portuguese-novelist-dies-aged-83",
+      "date": "2026-03-10T13:35:05.000Z",
+      "excerpt": "António Lobo Antunes, a Portuguese novelist who captured his generation’s disillusionment with the war, is dead. He was 83"
+    },
+    {
+      "id": "sk2lp8",
+      "blogId": "aldaily",
+      "title": "In the trenches of World War I, a German Jew named Franz Rosenzweig began to create an audacious philosophical system",
+      "link": "https://www.wsj.com/arts-culture/books/love-is-strong-as-death-review-a-theologians-triangles-of-love-c0af5d67?st=7xCwGv&reflink=desktopwebshare_permalink",
+      "date": "2026-03-10T13:34:05.000Z",
+      "excerpt": "In the trenches of World War I, a German Jew named Franz Rosenzweig began to create an audacious philosophical system"
+    },
+    {
+      "id": "mfcafk",
+      "blogId": "aldaily",
+      "title": "Counterculture prophet, Whole Earth cataloguer, proto-internet evangelist, Stewart Brand has a new obsession: maintenance",
+      "link": "https://www.theguardian.com/technology/2026/feb/25/tech-legend-stewart-brand-on-musk-bezos-and-his-extraordinary-life-we-dont-need-to-passively-accept-our-fate",
+      "date": "2026-03-10T13:33:05.000Z",
+      "excerpt": "Counterculture prophet, Whole Earth cataloguer, proto-internet evangelist, Stewart Brand has a new obsession: maintenance"
+    },
+    {
+      "id": "kuakux",
+      "blogId": "aldaily",
+      "title": "He championed Joyce, mentored Eliot, and broadcast fascist propaganda. Ezra Pound was indispensable as an artist and irredeemable as a man",
+      "link": "https://lithub.com/literary-celebrity-mussolinis-mouthpiece-and-american-traitor-who-was-ezra-pound",
+      "date": "2026-03-10T13:32:05.000Z",
+      "excerpt": "He championed Joyce, mentored Eliot, and broadcast fascist propaganda. Ezra Pound was indispensable as an artist and irredeemable as a man"
+    },
+    {
+      "id": "ydb4pk",
+      "blogId": "aldaily",
+      "title": "An Emerson for our times? Terry Tempest Williams’s “epic documentation of the Glorians” is full of celestial beings and desert miracles",
+      "link": "https://theamericanscholar.org/an-american-prophet-of-the-natural-world",
+      "date": "2026-03-10T13:31:05.000Z",
+      "excerpt": "An Emerson for our times? Terry Tempest Williams’s “epic documentation of the Glorians” is full of celestial beings and desert miracles"
+    },
+    {
+      "id": "ebltax",
+      "blogId": "aldaily",
+      "title": "Bolster civil discourse and the Great Books, or purge “commies”? The right is at war with itself over how to reform the university",
+      "link": "https://www.chronicle.com/article/the-rights-academic-civil-war",
+      "date": "2026-03-10T13:30:05.000Z",
+      "excerpt": "Bolster civil discourse and the Great Books, or purge “commies”? The right is at war with itself over how to reform the university"
+    },
+    {
+      "id": "xf9gqd",
+      "blogId": "abnormalreturns",
+      "title": "Research links: excluded variables",
+      "link": "https://abnormalreturns.com/2026/03/10/research-links-excluded-variables",
+      "date": "2026-03-10T13:18:21.000Z",
+      "excerpt": "Tuesdays are all about academic (and practitioner) literature at Abnormal Returns. You can check out last week’s edition including a look at..."
+    },
+    {
+      "id": "wfuzkd",
+      "blogId": "persuasion",
+      "title": "What Regime Change Could Mean for Iran",
+      "link": "https://www.persuasion.community/p/what-regime-change-could-mean-for",
+      "date": "2026-03-10T13:15:40.000Z",
+      "excerpt": "The Islamic Republic enters a moment that could quickly become a legitimacy crisis."
+    },
+    {
+      "id": "845ips",
+      "blogId": "danq",
+      "title": "[Note]",
+      "link": "https://danq.me/2026/03/10/28497",
+      "date": "2026-03-10T12:38:55.000Z",
+      "excerpt": "A lot of things are hard right now. But I appreciate that Spring has come and I can enjoy a cheese & pickle sandwich and a fake beer for lunch in the sun. All to the sounds of the birds singing… and, somewhere behind me, the dog excitedly demolishing a pile of pine cones. It […]"
+    },
+    {
+      "id": "6g38sx",
+      "blogId": "ritholtz",
+      "title": "Transcript: Ed Perks, Franklin Income Investors CIO / Franklin Advisers President",
+      "link": "https://ritholtz.com/2026/03/transcript-ed-perks",
+      "date": "2026-03-10T12:30:52.000Z",
+      "excerpt": "The transcript from this week’s, MiB: Ed Perks, Franklin Income Investors CIO / Franklin Advisers President, is below. You can stream and download our full conversation, including any podcast extras, on Apple Podcasts, Spotify, YouTube, and Bloomberg. All of our earlier podcasts on your favorite pod..."
+    },
+    {
+      "id": "tbkfks",
+      "blogId": "kottke",
+      "title": "  Jay Graber is stepping down as CEO of Bluesky  to... ",
+      "link": "https://kottke.org/26/03/0048520-jay-graber-is-stepping-do",
+      "date": "2026-03-10T12:29:42.000Z",
+      "excerpt": "Jay Graber is stepping down as CEO of Bluesky to “transition to a new role as Bluesky’s Chief Innovation Officer”. And they’re looking for a new permanent CEO."
+    },
+    {
+      "id": "yff86h",
+      "blogId": "markcarrigan",
+      "title": "Guerrilla Prompting: teaching students to use LLMs with intellectual agency",
+      "link": "https://markcarrigan.net/2026/03/10/guerrilla-prompting-teaching-students-to-use-llms-with-intellectual-agency",
+      "date": "2026-03-10T12:20:44.000Z",
+      "excerpt": "What I’ve always meant by using LLMs as an interlocutor is in part about arguing with them. I sometimes ask them explicitly to debate. I always think about what they’re saying. I frequently push back. It’s how you ensure you’re thinking with the LLM rather than using it as a substitute for thought...."
+    },
+    {
+      "id": "2faaj3",
+      "blogId": "ofdollarsanddata",
+      "title": "Are Your Beliefs Assets or Liabilities?",
+      "link": "https://ofdollarsanddata.com/are-your-beliefs-assets-or-liabilities",
+      "date": "2026-03-10T11:45:32.000Z",
+      "excerpt": "I recently saw this video of Alex Hormozi where he talks about a speaking event he attended. At the event, the speaker wrote $1,000,000 on a large whiteboard. Then the speaker asked someone in the audience how much they make and they replied, \"$50,000 per year.\" So the speaker wrote $50,000 under th..."
+    },
+    {
+      "id": "ubcrrd",
+      "blogId": "onepercentrule",
+      "title": "The Instruments of Curiosity",
+      "link": "https://onepercentrule.substack.com/p/the-instruments-of-curiosity",
+      "date": "2026-03-10T11:33:44.000Z",
+      "excerpt": "The clearest guides to future careers I have encountered."
+    },
+    {
+      "id": "2ne9sk",
+      "blogId": "marginalrevolution",
+      "title": "Advantageous Selection",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/03/advantageous-selection.html",
+      "date": "2026-03-10T11:15:44.000Z",
+      "excerpt": "I tweeted: Should I be worried or reassured that my taxi driver isn’t wearing a seat belt? An econ puzzle. Most replies said I should be worried. I think that is correct and it reveals something of importance. First note that there is an incentive and a selection effect. All else equal, a driver wit..."
+    },
+    {
+      "id": "wn4853",
+      "blogId": "afterbabel",
+      "title": "Your Marriage Has a Third",
+      "link": "https://www.afterbabel.com/p/your-marriage-has-a-third",
+      "date": "2026-03-10T11:02:14.000Z",
+      "excerpt": "What The Phone-Based Adulthood is Doing to Love and Sex"
+    },
+    {
+      "id": "l0ife2",
+      "blogId": "markcarrigan",
+      "title": "On realising you’re actually a hedgehog",
+      "link": "https://markcarrigan.net/2026/03/10/on-realising-youre-actually-a-hedgehog",
+      "date": "2026-03-10T10:53:19.000Z",
+      "excerpt": "The Greek poet Archilochus wrote that ‘The fox knows many things, but the hedgehog knows one big thing‘. That was the basis for Berlin’s famous distinction between two styles of thinker: For there exists a great chasm between those, on one side, who relate everything to a single central vision, one..."
+    },
+    {
+      "id": "4tkipo",
+      "blogId": "paulkrugman",
+      "title": "The Impotence of Drill, Baby, Drill",
+      "link": "https://paulkrugman.substack.com/p/the-impotence-of-drill-baby-drill",
+      "date": "2026-03-10T10:31:41.000Z",
+      "excerpt": "America produces a lot of oil. It doesn’t matter."
+    },
+    {
+      "id": "nheg15",
+      "blogId": "markcarrigan",
+      "title": "Claude Code GitHub commits over time",
+      "link": "https://markcarrigan.net/2026/03/10/claude-code-github-commits-over-time",
+      "date": "2026-03-10T10:20:10.000Z",
+      "excerpt": "This is what survives the AI bubble bursting I suspect:"
+    },
+    {
+      "id": "j7lsa9",
+      "blogId": "persuasion",
+      "title": "A Very Brief Interview with Klaus Schwab",
+      "link": "https://www.persuasion.community/p/klaus-schwab",
+      "date": "2026-03-10T10:01:24.000Z",
+      "excerpt": "The founder of the World Economic Forum asked me for a blurb. I offered him an interview. 20 minutes in, he cut it short."
+    },
+    {
+      "id": "1k5hxc",
+      "blogId": "spyglass",
+      "title": "Apple is Writing Product Checks That Siri Can't Cash",
+      "link": "https://spyglass.org/apple-homepad-delay-siri",
+      "date": "2026-03-10T09:57:44.000Z",
+      "excerpt": "Apple's AI fiasco is impeding actual hardware launches..."
+    },
     {
       "id": "seln6",
       "blogId": "flowingdata",
@@ -64,86 +400,6 @@
       "link": "https://mostlyeconomics.wordpress.com/2026/03/10/rti-20-how-indias-right-to-information-act-was-gradually-weakened",
       "date": "2026-03-10T05:56:43.000Z",
       "excerpt": "Kurian Mathew of Madras Courier on 20 years of RTI: When the Right to Information Act was passed by Parliament in 2005, it was hailed as a major victory for democracy. For the first time, activists, journalists, and ordinary citizens could formally demand answers about how the government functions...."
-    },
-    {
-      "id": "5qresi",
-      "blogId": "aldaily",
-      "title": "“Anguish,” “agony,” “ache,” “affliction” — why are there so many words for pain? Darcey Steinke unpacks the meaning of suffering",
-      "link": "https://thebaffler.com/latest/the-darkness-from-the-darkness-giraldi",
-      "date": "2026-03-10T05:38:01.000Z",
-      "excerpt": "“Anguish,” “agony,” “ache,” “affliction” — why are there so many words for pain? Darcey Steinke unpacks the meaning of suffering"
-    },
-    {
-      "id": "rsx2nf",
-      "blogId": "aldaily",
-      "title": "The dictionary, initially a monument to language fixed in amber, is less of a fortress than a weather vane ",
-      "link": "https://www.thenation.com/article/culture/stefan-fatsis-dictionary-history",
-      "date": "2026-03-10T05:37:01.000Z",
-      "excerpt": "The dictionary, initially a monument to language fixed in amber, is less of a fortress than a weather vane"
-    },
-    {
-      "id": "apdg1a",
-      "blogId": "aldaily",
-      "title": "Science and seeking. Participation in mainstream religions has plummeted. The study of consciousness has exploded. Coincidence?",
-      "link": "https://theamericanscholar.org/who-is-thinking",
-      "date": "2026-03-10T05:36:01.000Z",
-      "excerpt": "Science and seeking. Participation in mainstream religions has plummeted. The study of consciousness has exploded. Coincidence?"
-    },
-    {
-      "id": "ergsbf",
-      "blogId": "aldaily",
-      "title": "Shulamith Firestone’s fundamental battle is with the grip of normalcy and conformity on every human life",
-      "link": "https://libertiesjournal.substack.com/p/midcentury-madness",
-      "date": "2026-03-10T05:35:01.000Z",
-      "excerpt": "Shulamith Firestone’s fundamental battle is with the grip of normalcy and conformity on every human life"
-    },
-    {
-      "id": "fe52mc",
-      "blogId": "aldaily",
-      "title": "António Lobo Antunes, a Portuguese novelist who captured his generation’s disillusionment with the war, is dead. He was 83",
-      "link": "https://www.theguardian.com/books/2026/mar/06/antonio-lobo-antunes-portuguese-novelist-dies-aged-83",
-      "date": "2026-03-10T05:34:01.000Z",
-      "excerpt": "António Lobo Antunes, a Portuguese novelist who captured his generation’s disillusionment with the war, is dead. He was 83"
-    },
-    {
-      "id": "sk2lp8",
-      "blogId": "aldaily",
-      "title": "In the trenches of World War I, a German Jew named Franz Rosenzweig began to create an audacious philosophical system",
-      "link": "https://www.wsj.com/arts-culture/books/love-is-strong-as-death-review-a-theologians-triangles-of-love-c0af5d67?st=7xCwGv&reflink=desktopwebshare_permalink",
-      "date": "2026-03-10T05:33:01.000Z",
-      "excerpt": "In the trenches of World War I, a German Jew named Franz Rosenzweig began to create an audacious philosophical system"
-    },
-    {
-      "id": "mfcafk",
-      "blogId": "aldaily",
-      "title": "Counterculture prophet, Whole Earth cataloguer, proto-internet evangelist, Stewart Brand has a new obsession: maintenance",
-      "link": "https://www.theguardian.com/technology/2026/feb/25/tech-legend-stewart-brand-on-musk-bezos-and-his-extraordinary-life-we-dont-need-to-passively-accept-our-fate",
-      "date": "2026-03-10T05:32:01.000Z",
-      "excerpt": "Counterculture prophet, Whole Earth cataloguer, proto-internet evangelist, Stewart Brand has a new obsession: maintenance"
-    },
-    {
-      "id": "kuakux",
-      "blogId": "aldaily",
-      "title": "He championed Joyce, mentored Eliot, and broadcast fascist propaganda. Ezra Pound was indispensable as an artist and irredeemable as a man",
-      "link": "https://lithub.com/literary-celebrity-mussolinis-mouthpiece-and-american-traitor-who-was-ezra-pound",
-      "date": "2026-03-10T05:31:01.000Z",
-      "excerpt": "He championed Joyce, mentored Eliot, and broadcast fascist propaganda. Ezra Pound was indispensable as an artist and irredeemable as a man"
-    },
-    {
-      "id": "ydb4pk",
-      "blogId": "aldaily",
-      "title": "An Emerson for our times? Terry Tempest Williams’s “epic documentation of the Glorians” is full of celestial beings and desert miracles",
-      "link": "https://theamericanscholar.org/an-american-prophet-of-the-natural-world",
-      "date": "2026-03-10T05:30:01.000Z",
-      "excerpt": "An Emerson for our times? Terry Tempest Williams’s “epic documentation of the Glorians” is full of celestial beings and desert miracles"
-    },
-    {
-      "id": "ebltax",
-      "blogId": "aldaily",
-      "title": "Bolster civil discourse and the Great Books, or purge “commies”? The right is at war with itself over how to reform the university",
-      "link": "https://www.chronicle.com/article/the-rights-academic-civil-war",
-      "date": "2026-03-10T05:29:01.000Z",
-      "excerpt": "Bolster civil discourse and the Great Books, or purge “commies”? The right is at war with itself over how to reform the university"
     },
     {
       "id": "6y1daz",
@@ -503,7 +759,7 @@
       "title": "  The NY Times went back through a century of... ",
       "link": "https://kottke.org/26/03/0048513-the-ny-times-went-back",
       "date": "2026-03-09T13:23:09.000Z",
-      "excerpt": "The NY Times went back through a century of women’s obituaries “to re-examine them with the benefit of distance — to see what was emphasized, what was minimized, what might have been left unsaid”. https://bsky.app/profile/prisonculture.bsky.social"
+      "excerpt": "The NY Times went back through a century of women’s obituaries “to re-examine them with the benefit of distance — to see what was emphasized, what was minimized, what might have been left unsaid”."
     },
     {
       "id": "r5mqx",
