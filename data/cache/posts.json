@@ -1,6 +1,286 @@
 {
-  "lastUpdated": "2026-03-11T17:51:50.563Z",
+  "lastUpdated": "2026-03-12T03:28:47.066Z",
   "posts": [
+    {
+      "id": "3et77o",
+      "blogId": "matt",
+      "title": "WordPress Everywhere",
+      "link": "https://ma.tt/2026/03/wordpress-everywhere",
+      "date": "2026-03-12T02:07:19.000Z",
+      "excerpt": "As we announced and TechCrunch covered, my.wordpress.net has soft-launched. What this means is you need to fundamentally shift how you think about WordPress. From the beginning, WordPress has always been open source, giving you freedom, liberty, autonomy, and digital sovereignty. Open source is the..."
+    },
+    {
+      "id": "hxznri",
+      "blogId": "commonreader",
+      "title": "Further thoughts on some of the topics from my 'Conversation with Tyler'",
+      "link": "https://www.commonreader.co.uk/p/further-thoughts-on-some-of-the-topics",
+      "date": "2026-03-12T01:50:03.000Z",
+      "excerpt": "religion, Dostoevsky, Pluribus, mental illness, reading Shakespeare, overrated, Milton, Bloom and Potter"
+    },
+    {
+      "id": "3hnx31",
+      "blogId": "kottke",
+      "title": " Missed this earlier in the week:  The Tournament of Books... ",
+      "link": "https://kottke.org/26/03/0048549-missed-this-earlier-in-th",
+      "date": "2026-03-12T00:35:46.000Z",
+      "excerpt": "Missed this earlier in the week: The Tournament of Books is underway! “Every March, the Tournament of Books is a month-long battle royale among the year’s best novels.”"
+    },
+    {
+      "id": "xb1aas",
+      "blogId": "marginalian",
+      "title": "What Birds Dream About: How Evolution Invented REM in the Avian Brain So We May Practice the Possible in Our Sleep",
+      "link": "https://www.themarginalian.org/2026/03/11/birds-dream-rem",
+      "date": "2026-03-12T00:10:57.000Z",
+      "excerpt": "\"It may be that in REM, this gloaming between waking consciousness and the unconscious, we practice the possible into the real... It may be that we evolved to dream ourselves into reality — a laboratory of consciousness that began in the bird brain.\""
+    },
+    {
+      "id": "h0q5",
+      "blogId": "susam",
+      "title": "Git Checkout, Reset and Restore",
+      "link": "https://susam.net/git-checkout-reset-restore.html",
+      "date": "2026-03-12T00:00:00.000Z",
+      "excerpt": "I have always used the git checkout and git reset commands to reset my working tree or index but since Git 2.23 there has been a git restore command available for these purposes. In this post, I record how some of the 'older' commands I use map to the new ones. Well, the new commands aren't exactly..."
+    },
+    {
+      "id": "qoznxn",
+      "blogId": "sivers",
+      "title": "I was inconsiderate but now I’m everywhere",
+      "link": "https://sive.rs/socials",
+      "date": "2026-03-12T00:00:00.000Z",
+      "excerpt": "When I was in the music business, there was a record producer who lived in New Jersey, but refused to come into New York City. Anyone that wanted to meet with him had to drive all the way down to his little town. I thought, “What’s his problem? Is he lazy or scared?” Some people only listen to audio..."
+    },
+    {
+      "id": "5tbzee",
+      "blogId": "kottke",
+      "title": "  This photo of an Icelandic glacier  is really something. ",
+      "link": "https://kottke.org/26/03/0048541-this-photo-of-an-icelandi",
+      "date": "2026-03-11T23:15:42.000Z",
+      "excerpt": "This photo of an Icelandic glacier is really something."
+    },
+    {
+      "id": "rgsxbn",
+      "blogId": "aldaily",
+      "title": "“Depending on who you ask, there are fewer than 10 full-time book review critics working today”",
+      "link": "https://derekkrissoff.substack.com/p/the-state-of-book-publicity-now",
+      "date": "2026-03-11T23:13:42.000Z",
+      "excerpt": "“Depending on who you ask, there are fewer than 10 full-time book review critics working today”"
+    },
+    {
+      "id": "afoypc",
+      "blogId": "aldaily",
+      "title": "When does an individually-felt emotion become part of a collective emotion? The question fascinated both Freud and Franz Boas",
+      "link": "https://aeon.co/essays/who-am-i-when-i-care-emotion-through-the-lens-of-franz-boas",
+      "date": "2026-03-11T23:12:42.000Z",
+      "excerpt": "When does an individually-felt emotion become part of a collective emotion? The question fascinated both Freud and Franz Boas"
+    },
+    {
+      "id": "jcyfp3",
+      "blogId": "aldaily",
+      "title": "At 50, Orwell said, “everyone has the face he deserves.” Can the same be said about our hands?",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n05/steven-shapin/heart-head-life-fate",
+      "date": "2026-03-11T23:11:42.000Z",
+      "excerpt": "At 50, Orwell said, “everyone has the face he deserves.” Can the same be said about our hands?"
+    },
+    {
+      "id": "693gzd",
+      "blogId": "aldaily",
+      "title": "Blood cancer has not abated the verbose, sardonic, and unpredictable Will Self’s rage with the literary world",
+      "link": "https://www.newstatesman.com/culture/books/2026/03/the-passion-of-will-self",
+      "date": "2026-03-11T23:10:42.000Z",
+      "excerpt": "Blood cancer has not abated the verbose, sardonic, and unpredictable Will Self’s rage with the literary world"
+    },
+    {
+      "id": "8q289i",
+      "blogId": "aldaily",
+      "title": "Elaine Scarry says pain unmakes language. Jan Steyn begs to differ — or at least keeps translating and typing",
+      "link": "https://www.thedial.world/articles/news/gout-jan-steyn",
+      "date": "2026-03-11T23:09:42.000Z",
+      "excerpt": "Elaine Scarry says pain unmakes language. Jan Steyn begs to differ — or at least keeps translating and typing"
+    },
+    {
+      "id": "niu9fg",
+      "blogId": "aldaily",
+      "title": "Monotheism has been called \"the single most significant innovation in history.\" And yet no one can quite define it",
+      "link": "https://www.newyorker.com/magazine/2026/03/09/how-god-got-so-great",
+      "date": "2026-03-11T23:08:42.000Z",
+      "excerpt": "Monotheism has been called \"the single most significant innovation in history.\" And yet no one can quite define it"
+    },
+    {
+      "id": "5qresi",
+      "blogId": "aldaily",
+      "title": "“Anguish,” “agony,” “ache,” “affliction” — why are there so many words for pain? Darcey Steinke unpacks the meaning of suffering",
+      "link": "https://thebaffler.com/latest/the-darkness-from-the-darkness-giraldi",
+      "date": "2026-03-11T23:07:42.000Z",
+      "excerpt": "“Anguish,” “agony,” “ache,” “affliction” — why are there so many words for pain? Darcey Steinke unpacks the meaning of suffering"
+    },
+    {
+      "id": "rsx2nf",
+      "blogId": "aldaily",
+      "title": "The dictionary, initially a monument to language fixed in amber, is less a fortress than a weather vane",
+      "link": "https://www.thenation.com/article/culture/stefan-fatsis-dictionary-history",
+      "date": "2026-03-11T23:06:42.000Z",
+      "excerpt": "The dictionary, initially a monument to language fixed in amber, is less a fortress than a weather vane"
+    },
+    {
+      "id": "apdg1a",
+      "blogId": "aldaily",
+      "title": "Science and seeking. Participation in mainstream religions has plummeted. The study of consciousness has exploded. Coincidence?",
+      "link": "https://theamericanscholar.org/who-is-thinking",
+      "date": "2026-03-11T23:05:42.000Z",
+      "excerpt": "Science and seeking. Participation in mainstream religions has plummeted. The study of consciousness has exploded. Coincidence?"
+    },
+    {
+      "id": "fe52mc",
+      "blogId": "aldaily",
+      "title": "António Lobo Antunes, a Portuguese novelist who captured his generation’s disillusionment with the war, is dead. He was 83",
+      "link": "https://www.theguardian.com/books/2026/mar/06/antonio-lobo-antunes-portuguese-novelist-dies-aged-83",
+      "date": "2026-03-11T23:04:42.000Z",
+      "excerpt": "António Lobo Antunes, a Portuguese novelist who captured his generation’s disillusionment with the war, is dead. He was 83"
+    },
+    {
+      "id": "rcmkjc",
+      "blogId": "simonwillison",
+      "title": "Sorting algorithms",
+      "link": "https://simonwillison.net/2026/Mar/11/sorting-algorithms",
+      "date": "2026-03-11T22:58:06.000Z",
+      "excerpt": "Sorting algorithms Today in animated explanations built using Claude: I've always been a fan of animated demonstrations of sorting algorithms so I decided to spin some up on my phone using Claude Artifacts, then added Python's timsort algorithm, then a feature to run them all at once. Here's the ful..."
+    },
+    {
+      "id": "91mqej",
+      "blogId": "kottke",
+      "title": "  The People Who Shun Super-Popular Pop Culture .... ",
+      "link": "https://kottke.org/26/03/0048546-the-people-who-shun-super",
+      "date": "2026-03-11T22:01:12.000Z",
+      "excerpt": "The People Who Shun Super-Popular Pop Culture. “Some people are early adopters; others are late adopters. I’m simply a weirdly resistant one.”"
+    },
+    {
+      "id": "tawlvk",
+      "blogId": "kottke",
+      "title": " There are at least 60 Pizza Hut Classics (red roofs,... ",
+      "link": "https://kottke.org/26/03/0048548-there-are-at-least-60",
+      "date": "2026-03-11T21:06:28.000Z",
+      "excerpt": "There are at least 60 Pizza Hut Classics (red roofs, checkered tablecloths, salad bar) in the US…but the company does nothing to promote them. “They are like wormholes in the chain restaurant galaxy, portals to the past found by serendipity.”"
+    },
+    {
+      "id": "hsg4c8",
+      "blogId": "astralcodexten",
+      "title": "Lines Composed In A Fake Sequoia Forest",
+      "link": "https://www.astralcodexten.com/p/lines-composed-in-a-fake-sequoia",
+      "date": "2026-03-11T20:46:55.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "bqulx2",
+      "blogId": "scattershot",
+      "title": "Untitled",
+      "link": "https://scattershot.blog/2026/03/11/as-we-enter-an-era",
+      "date": "2026-03-11T20:11:33.000Z",
+      "excerpt": "As we enter an era dominated by technologies and political ideologies designed to flatten the differences between humans, attach yourself to family, friends, and others who understand that erasing our differences doesn’t bring us closer to other people; it just makes us more like the machines. Toget..."
+    },
+    {
+      "id": "ib16gf",
+      "blogId": "kottke",
+      "title": " Africa (Toto) But It Lists Every Country in Africa ",
+      "link": "https://kottke.org/26/03/africa-toto-but-it-lists-every",
+      "date": "2026-03-11T20:10:00.000Z",
+      "excerpt": "From There I Ruined It, a version of Toto’s Africa but the lyrics are a listing of every country in Africa. They should teach this in American middle schools, not even joking. See also Coach from Cheers singing Al-ban-i-a (a song that pops into my head every time I read or hear about that county): T..."
+    },
+    {
+      "id": "91633q",
+      "blogId": "kottke",
+      "title": " Steve Scherer was a Reuters’ bureau chief in... ",
+      "link": "https://kottke.org/26/03/0048535-steve-scherer-was-a-reute",
+      "date": "2026-03-11T19:31:54.000Z",
+      "excerpt": "Steve Scherer was a Reuters’ bureau chief in Canada. Then he got laid off, had to leave the country, and now drives for Uber in Virginia, in a country he doesn’t recognize anymore after working for 28 years abroad."
+    },
+    {
+      "id": "6oa4s3",
+      "blogId": "kudmitry",
+      "title": "Feature unrequest",
+      "link": "https://kudmitry.com/articles/feature-unrequest",
+      "date": "2026-03-11T19:30:00.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "lr4crm",
+      "blogId": "paulkrugman",
+      "title": "Lunch Money with Paul Krugman and Heather Cox Richardson",
+      "link": "https://paulkrugman.substack.com/p/lunch-money-with-paul-krugman-and",
+      "date": "2026-03-11T19:20:03.000Z",
+      "excerpt": "A recording from Paul Krugman and Heather Cox Richardson's live video"
+    },
+    {
+      "id": "hbo9gx",
+      "blogId": "persuasion",
+      "title": "The Bourgeoisie Has Switched Sides",
+      "link": "https://www.persuasion.community/p/the-bourgeoisie-has-switched-sides",
+      "date": "2026-03-11T19:12:20.000Z",
+      "excerpt": "What happens when elites all believe the same thing."
+    },
+    {
+      "id": "rfmp97",
+      "blogId": "pluralistic",
+      "title": "Pluralistic: AI \"journalists\" prove that media bosses don't give a shit (11 Mar 2026)",
+      "link": "https://pluralistic.net/2026/03/11/modal-dialog-a-palooza",
+      "date": "2026-03-11T19:11:59.000Z",
+      "excerpt": "Today's links AI \"journalists\" prove that media bosses don't give a shit: In case there was ever any doubt. Hey look at this: Delights to delectate. Object permanence: Eggflation x excuseflation; Haunted Mansion stretch portraits; \"Lost Souls\"; Time Magazine x the first Worldcon; Obama v Freedom of..."
+    },
+    {
+      "id": "yvgojp",
+      "blogId": "kottke",
+      "title": " Wow, KDO pal and explorer Ariel Waldman  has her own show... ",
+      "link": "https://kottke.org/26/03/0048545-wow-kdo-pal-and-explorer",
+      "date": "2026-03-11T18:49:38.000Z",
+      "excerpt": "Wow, KDO pal and explorer Ariel Waldman has her own show on PBS! “LIFE UNEARTHED with Ariel Waldman is a science-driven docu-series revealing Earth’s ecosystems through radical shifts in scale…”"
+    },
+    {
+      "id": "s2hbde",
+      "blogId": "danshapiro",
+      "title": "Dark Factories: Rise of the Trycycle",
+      "link": "https://www.danshapiro.com/blog/2026/03/dark-factories-rise-of-the-trycycle",
+      "date": "2026-03-11T18:26:26.000Z",
+      "excerpt": "Companies are now producing Dark Factories – engines that turn specs into shipping software. The implementations can be complex and sometimes involve Mad Max metaphors. But they don’t have to be like…"
+    },
+    {
+      "id": "pe6d4s",
+      "blogId": "curtjaimungal",
+      "title": "General Relativity Is NOT Deterministic (Here's the Proof)",
+      "link": "https://curtjaimungal.substack.com/p/general-relativity-is-not-deterministic-2d8",
+      "date": "2026-03-11T18:16:39.000Z",
+      "excerpt": "I’ve been wanting to make this video for a while."
+    },
+    {
+      "id": "p0togn",
+      "blogId": "flowingdata",
+      "title": "Outdated data used in U.S. strike on elementary school in Iran",
+      "link": "https://flowingdata.com/2026/03/11/outdated-data-used-in-u-s-strike-on-elementary-school-in-iran",
+      "date": "2026-03-11T18:15:24.000Z",
+      "excerpt": "School children were killed in the poorly informed attack. The New York Times… Tags: Iran, New York Times, school"
+    },
+    {
+      "id": "afbv0t",
+      "blogId": "kottke",
+      "title": " Georg Cantor is celebrated for revolutionizing... ",
+      "link": "https://kottke.org/26/03/0048526-georg-cantor-is-celebrate",
+      "date": "2026-03-11T18:02:01.000Z",
+      "excerpt": "Georg Cantor is celebrated for revolutionizing mathematics by proving that there are different levels of infinity. But he didn’t do it alone and evidence has emerged that he plagiarized the work of a collaborator."
+    },
+    {
+      "id": "ysrzn1",
+      "blogId": "wealthofcommonsense",
+      "title": "Are We Due For a Correction?",
+      "link": "https://awealthofcommonsense.com/2026/03/are-we-due-for-a-correction",
+      "date": "2026-03-11T17:56:21.000Z",
+      "excerpt": "Why is the stock market so resilient this year? The post Are We Due For a Correction? appeared first on A Wealth of Common Sense. ..."
+    },
+    {
+      "id": "d32ya4",
+      "blogId": "marginalrevolution",
+      "title": "On the meaning of Sirāt (with plenty of spoilers)",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/03/on-the-meaning-of-sirat-with-plenty-of-spoilers.html",
+      "date": "2026-03-11T17:52:15.000Z",
+      "excerpt": "Sebastian Geoffroy: I left the film perplexed, but after some thought I have an interpretation. The film is a recognition that for most of the West, the story is about the individual, their actions, their decisions. However – for many in the non-Western world – the story is about things outside of t..."
+    },
     {
       "id": "nc542q",
       "blogId": "larryswedroe",
@@ -8,6 +288,14 @@
       "link": "https://larryswedroe.substack.com/p/the-illusion-of-diversification",
       "date": "2026-03-11T17:35:21.000Z",
       "excerpt": "What Your S&P 500 Index Fund Isn’t Telling You"
+    },
+    {
+      "id": "932mr",
+      "blogId": "abnormalreturns",
+      "title": "Wednesday links: highly skewed information",
+      "link": "https://abnormalreturns.com/2026/03/11/wednesday-links-highly-skewed-information",
+      "date": "2026-03-11T17:26:54.000Z",
+      "excerpt": ""
     },
     {
       "id": "wdpv7",
@@ -138,68 +426,12 @@
       "excerpt": "Benchmarks have never been less useful for telling us which models are best."
     },
     {
-      "id": "693gzd",
-      "blogId": "aldaily",
-      "title": "Blood cancer has not abated the verbose, sardonic, and unpredictable Will Self’s rage with the literary world",
-      "link": "https://www.newstatesman.com/culture/books/2026/03/the-passion-of-will-self",
-      "date": "2026-03-11T13:42:23.000Z",
-      "excerpt": "Blood cancer has not abated the verbose, sardonic, and unpredictable Will Self’s rage with the literary world"
-    },
-    {
-      "id": "8q289i",
-      "blogId": "aldaily",
-      "title": "Elaine Scarry says pain unmakes language. Jan Steyn begs to differ — or at least keeps translating and typing",
-      "link": "https://www.thedial.world/articles/news/gout-jan-steyn",
-      "date": "2026-03-11T13:41:23.000Z",
-      "excerpt": "Elaine Scarry says pain unmakes language. Jan Steyn begs to differ — or at least keeps translating and typing"
-    },
-    {
-      "id": "niu9fg",
-      "blogId": "aldaily",
-      "title": "Monotheism has been called \"the single most significant innovation in history.\" And yet no one can quite define it",
-      "link": "https://www.newyorker.com/magazine/2026/03/09/how-god-got-so-great",
-      "date": "2026-03-11T13:40:23.000Z",
-      "excerpt": "Monotheism has been called \"the single most significant innovation in history.\" And yet no one can quite define it"
-    },
-    {
-      "id": "5qresi",
-      "blogId": "aldaily",
-      "title": "“Anguish,” “agony,” “ache,” “affliction” — why are there so many words for pain? Darcey Steinke unpacks the meaning of suffering",
-      "link": "https://thebaffler.com/latest/the-darkness-from-the-darkness-giraldi",
-      "date": "2026-03-11T13:39:23.000Z",
-      "excerpt": "“Anguish,” “agony,” “ache,” “affliction” — why are there so many words for pain? Darcey Steinke unpacks the meaning of suffering"
-    },
-    {
-      "id": "rsx2nf",
-      "blogId": "aldaily",
-      "title": "The dictionary, initially a monument to language fixed in amber, is less a fortress than a weather vane",
-      "link": "https://www.thenation.com/article/culture/stefan-fatsis-dictionary-history",
-      "date": "2026-03-11T13:38:23.000Z",
-      "excerpt": "The dictionary, initially a monument to language fixed in amber, is less a fortress than a weather vane"
-    },
-    {
-      "id": "apdg1a",
-      "blogId": "aldaily",
-      "title": "Science and seeking. Participation in mainstream religions has plummeted. The study of consciousness has exploded. Coincidence?",
-      "link": "https://theamericanscholar.org/who-is-thinking",
-      "date": "2026-03-11T13:37:23.000Z",
-      "excerpt": "Science and seeking. Participation in mainstream religions has plummeted. The study of consciousness has exploded. Coincidence?"
-    },
-    {
       "id": "ergsbf",
       "blogId": "aldaily",
       "title": "Shulamith Firestone’s fundamental battle is with the grip of normalcy and conformity on every human life",
       "link": "https://libertiesjournal.substack.com/p/midcentury-madness",
       "date": "2026-03-11T13:36:23.000Z",
       "excerpt": "Shulamith Firestone’s fundamental battle is with the grip of normalcy and conformity on every human life"
-    },
-    {
-      "id": "fe52mc",
-      "blogId": "aldaily",
-      "title": "António Lobo Antunes, a Portuguese novelist who captured his generation’s disillusionment with the war, is dead. He was 83",
-      "link": "https://www.theguardian.com/books/2026/mar/06/antonio-lobo-antunes-portuguese-novelist-dies-aged-83",
-      "date": "2026-03-11T13:35:23.000Z",
-      "excerpt": "António Lobo Antunes, a Portuguese novelist who captured his generation’s disillusionment with the war, is dead. He was 83"
     },
     {
       "id": "sk2lp8",
@@ -420,7 +652,7 @@
     {
       "id": "wnb7na",
       "blogId": "davidoks",
-      "title": "Why the ATM didn’t kill bank teller jobs, but the iPhone did",
+      "title": "Why ATMs didn’t kill bank teller jobs, but the iPhone did",
       "link": "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
       "date": "2026-03-10T22:29:42.000Z",
       "excerpt": "There's a lot more to replacing labor than just automating tasks"
@@ -3232,6 +3464,14 @@
       "link": "https://flowingdata.com/2026/03/04/oil-supply-chain-slowdown",
       "date": "2026-03-04T18:31:38.000Z",
       "excerpt": "The New York Times mapped the traffic difference at the Strait of Hormuz,… Tags: New York Times, ships, traffic, war"
+    },
+    {
+      "id": "guj3vq",
+      "blogId": "spyglass",
+      "title": "MacBook Neo: Whoa",
+      "link": "https://spyglass.org/macbook-neo",
+      "date": "2026-03-04T17:56:43.000Z",
+      "excerpt": "Apple's newest Mac is priced to move..."
     },
     {
       "id": "gzgndc",
@@ -25362,14 +25602,6 @@
       "excerpt": "Happy New Year!"
     },
     {
-      "id": "40ynl0",
-      "blogId": "susam",
-      "title": "Now",
-      "link": "https://susam.net/now.html",
-      "date": "2026-01-02T00:00:00.000Z",
-      "excerpt": "Now now page where I keep a brief record of what I am up to these days. As of 03 Jan 2026, I am: Algebraic Graph Theory by Godsil and Royle. see here). Read on website | #meta"
-    },
-    {
       "id": "udwgcj",
       "blogId": "seangoedecke",
       "title": "Grok is enabling mass sexual harassment on Twitter",
@@ -25384,6 +25616,14 @@
       "link": "https://maggieappleton.com/now-2026-01",
       "date": "2026-01-02T00:00:00.000Z",
       "excerpt": "I entered the new year holding an inconsolable, shrieking baby while London set off an armageddon of fireworks around us. So goes parenthood. The baby is fine, just congested and teething. I am as “fine” as anyone can be after months of chronic sickness, broken sleep, and parental troubleshooting. I..."
+    },
+    {
+      "id": "40ynl0",
+      "blogId": "susam",
+      "title": "Now",
+      "link": "https://susam.net/now.html",
+      "date": "2026-01-02T00:00:00.000Z",
+      "excerpt": "Now now page where I keep a brief record of what I am up to these days. As of 03 Jan 2026, I am: Algebraic Graph Theory by Godsil and Royle. see here). Read on website | #meta"
     },
     {
       "id": "29v6eu",
@@ -38280,14 +38520,6 @@
       "link": "https://paulgraham.com/javacover.html",
       "date": "2001-04-01T00:00:00.000Z",
       "excerpt": ""
-    },
-    {
-      "id": "guj3vq",
-      "blogId": "spyglass",
-      "title": "MacBook Neo: Whoa",
-      "link": "https://spyglass.org/macbook-neo",
-      "date": "0306-12-01T00:00:00.000Z",
-      "excerpt": "Apple's newest Mac is priced to move..."
     }
   ]
 }
