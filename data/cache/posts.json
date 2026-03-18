@@ -1,6 +1,310 @@
 {
-  "lastUpdated": "2026-03-18T09:55:08.254Z",
+  "lastUpdated": "2026-03-18T18:01:27.295Z",
   "posts": [
+    {
+      "id": "yf3ex8",
+      "blogId": "kottke",
+      "title": " The Delta Air Lines Seatback Chess Bot Will Destroy You ",
+      "link": "https://kottke.org/26/03/delta-seatback-chess-bot",
+      "date": "2026-03-18T18:00:00.000Z",
+      "excerpt": "The chess program available on Delta Air Lines’ seatback screens is an ELO monster that can beat almost all opponents on easy mode. This guy used a series of increasingly powerful bots to see just how good the Delta chess bot is. Can it beat a grandmaster-level bot? (via clive thompson) Tags: chess..."
+    },
+    {
+      "id": "6c0h4x",
+      "blogId": "marginalian",
+      "title": "How Two Souls Can Interact with One Another: Simone de Beauvoir on Love and Friendship",
+      "link": "https://www.themarginalian.org/2026/03/18/simone-de-beauvoir-love-friendship",
+      "date": "2026-03-18T17:54:07.000Z",
+      "excerpt": "It is in relationships that we discover both our depths and our limits, there that we anneal ourselves and transcend ourselves, there that we are hurt the most and there that we find the most healing. But despite what a crucible of our emotional and spiritual lives relationships are — or perhaps pre..."
+    },
+    {
+      "id": "ek2mwt",
+      "blogId": "marginalian",
+      "title": "The Measure of a Life Well Lived: Henry Miller on How to Grow Old and the Secret of Remaining Young at Heart",
+      "link": "https://www.themarginalian.org/2026/03/18/henry-miller-on-turning-eighty",
+      "date": "2026-03-18T17:51:39.000Z",
+      "excerpt": "\"If you can fall in love again and again ... if you can forgive as well as forget, if you can keep from growing sour, surly, bitter and cynical, man you've got it half licked.\""
+    },
+    {
+      "id": "qb83qj",
+      "blogId": "simonwillison",
+      "title": "Snowflake Cortex AI Escapes Sandbox and Executes Malware",
+      "link": "https://simonwillison.net/2026/Mar/18/snowflake-cortex-ai",
+      "date": "2026-03-18T17:43:49.000Z",
+      "excerpt": "Snowflake Cortex AI Escapes Sandbox and Executes Malware PromptArmor report on a prompt injection attack chain in Snowflake's Cortex Agent, now fixed. The attack started when a Cortex user asked the agent to review a GitHub repository that had a prompt injection attack hidden at the bottom of the RE..."
+    },
+    {
+      "id": "o8rztu",
+      "blogId": "kottke",
+      "title": "  What does it feel like to be struck by lightning?... ",
+      "link": "https://kottke.org/26/03/0048576-what-does-it-feel-like",
+      "date": "2026-03-18T17:12:54.000Z",
+      "excerpt": "What does it feel like to be struck by lightning? “Some have to relearn simple things, things they’ve done their whole life — how to read, how to sing, how to ride a bike.”"
+    },
+    {
+      "id": "n9t1k3",
+      "blogId": "kottke",
+      "title": "  Trailer for Spider-Man: Brand New Day . I like that Tom... ",
+      "link": "https://kottke.org/26/03/0048609-trailer-for-spider-man-br",
+      "date": "2026-03-18T16:27:07.000Z",
+      "excerpt": "Trailer for Spider-Man: Brand New Day. I like that Tom Holland. I’m into it."
+    },
+    {
+      "id": "t8wf3i",
+      "blogId": "marginalrevolution",
+      "title": "Wednesday assorted links",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/03/wednesday-assorted-links-545.html",
+      "date": "2026-03-18T16:05:08.000Z",
+      "excerpt": "1. Congestion pricing for WDC? It is good to see a move away from the selective invocation of economic reasoning, and recognition that some degree of congestion does not justify every tariff. 2. Zimbabwean Uber drivers in Cape Town. 3. Northern Mariana Islands fact of the day. 4. Advances in asteroi..."
+    },
+    {
+      "id": "2yecm2",
+      "blogId": "ivanturkovic",
+      "title": "“Done” Is Not Merge: Why Your Definition of Done Is Probably a Lie",
+      "link": "https://www.ivanturkovic.com/2026/03/18/done-is-not-merge",
+      "date": "2026-03-18T16:04:04.000Z",
+      "excerpt": "The most dangerous lie in software engineering is a two-word status update: “It’s done.” In most teams, done means the pull request was merged. The CI pipeline turned green. The ticket moved to the right column on the board. Someone wrote “Done” in Slack, maybe with a checkmark emoji for extra confi..."
+    },
+    {
+      "id": "h49aif",
+      "blogId": "persuasion",
+      "title": "What AI Hypists Miss",
+      "link": "https://www.persuasion.community/p/ai-cant-deal-with-the-real-world",
+      "date": "2026-03-18T16:01:00.000Z",
+      "excerpt": "These systems still struggle with implementing real world solutions."
+    },
+    {
+      "id": "zfqkib",
+      "blogId": "kottke",
+      "title": "  The Fascinating Engineering of the Titanic: How the... ",
+      "link": "https://kottke.org/26/03/0048596-the-fascinating-engineeri",
+      "date": "2026-03-18T15:56:19.000Z",
+      "excerpt": "The Fascinating Engineering of the Titanic: How the Great Ocean Liner Was Built. “Issues of the journal The Engineer published between 1909 and 1911 contain detailed photographs of the construction of both the Titanic and Olympic…”"
+    },
+    {
+      "id": "3na2d6",
+      "blogId": "benthamsbulldog",
+      "title": "The Profound Vacuousness of the Manosphere ",
+      "link": "https://benthams.substack.com/p/the-profound-vacuousness-of-the-manosphere",
+      "date": "2026-03-18T15:45:50.000Z",
+      "excerpt": "When Louis Theroux mogged the whole manosphere"
+    },
+    {
+      "id": "n7p5bf",
+      "blogId": "larryswedroe",
+      "title": "Presidential Pressure on the Fed",
+      "link": "https://larryswedroe.substack.com/p/presidential-pressure-on-the-fed",
+      "date": "2026-03-18T15:28:22.000Z",
+      "excerpt": "What Investors Need to Know"
+    },
+    {
+      "id": "xd3egw",
+      "blogId": "kottke",
+      "title": "  Cesar Chavez, a Civil Rights Icon, Is Accused of Abusing... ",
+      "link": "https://kottke.org/26/03/0048608-cesar-chavez-a-civil-righ",
+      "date": "2026-03-18T15:05:01.000Z",
+      "excerpt": "Cesar Chavez, a Civil Rights Icon, Is Accused of Abusing Girls for Years. “Ms. Murguia and another woman, Debra Rojas, say that Mr. Chavez sexually abused them for years when they were girls, from around 1972 to 1977.”"
+    },
+    {
+      "id": "9ms6am",
+      "blogId": "abnormalreturns",
+      "title": "Personal finance links: extended expenses",
+      "link": "https://abnormalreturns.com/2026/03/18/personal-finance-links-extended-expenses",
+      "date": "2026-03-18T14:35:47.000Z",
+      "excerpt": "Wednesdays are all about personal finance here at Abnormal Returns. You can check out last week’s links including a look at why..."
+    },
+    {
+      "id": "pcwshb",
+      "blogId": "robhenderson",
+      "title": "Inside the Manosphere, Public Disorder, Smoking ",
+      "link": "https://www.robkhenderson.com/p/inside-the-manosphere-public-disorder",
+      "date": "2026-03-18T14:27:19.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "gwad7a",
+      "blogId": "kottke",
+      "title": " Riding the Subway to Coney Island in 1987 ",
+      "link": "https://kottke.org/26/03/subway-to-coney-island-1987",
+      "date": "2026-03-18T14:15:00.000Z",
+      "excerpt": "This is a mindblowing time capsule of ordinary life: video of a group of friends taking the NYC subway to Coney Island in 1987. Because it was before mobile phones, they had to arrange to meet one of the group members in the first car of the train along the way. The film was shot by Nelson Sullivan,..."
+    },
+    {
+      "id": "z5jspb",
+      "blogId": "aldaily",
+      "title": "James Joyce on typos: “These are not misprints but beauties of my style hitherto undreamt of”",
+      "link": "https://www.smithsonianmag.com/smart-news/typos-have-plagued-us-for-centuries-just-ask-the-publishers-who-printed-the-seventh-commandment-as-thou-shalt-commit-adultery-in-1631-180988353",
+      "date": "2026-03-18T13:59:19.000Z",
+      "excerpt": "James Joyce on typos: “These are not misprints but beauties of my style hitherto undreamt of”"
+    },
+    {
+      "id": "vyb1jl",
+      "blogId": "aldaily",
+      "title": "What began as a magazine in search of answers became an activist organ certain it possessed them all. Marco Roth on how n+1 lost its way",
+      "link": "https://thepointmag.substack.com/p/serpents-in-the-garden",
+      "date": "2026-03-18T13:58:19.000Z",
+      "excerpt": "What began as a magazine in search of answers became an activist organ certain it possessed them all. Marco Roth on how n+1 lost its way"
+    },
+    {
+      "id": "cquf2m",
+      "blogId": "aldaily",
+      "title": "Paul Kingsnorth argues that technocratic civilization is not merely misguided but malevolent. Blame \"the Machine\"",
+      "link": "https://www.thenewatlantis.com/publications/the-cassandra-of-the-machine",
+      "date": "2026-03-18T13:57:19.000Z",
+      "excerpt": "Paul Kingsnorth argues that technocratic civilization is not merely misguided but malevolent. Blame \"the Machine\""
+    },
+    {
+      "id": "ypk1kt",
+      "blogId": "aldaily",
+      "title": "Janet Flanner profiled Hitler the way she'd profiled Coco Chanel: as a human being. Hitler was pleased. American readers were not",
+      "link": "https://www.theatlantic.com/books/2026/02/women-who-reinvented-journalism/686146?gift=ih3Agm7ZTQUXUY2wyHjxRJSOAJrIiLOT5m4xtQNfxIw",
+      "date": "2026-03-18T13:56:19.000Z",
+      "excerpt": "Janet Flanner profiled Hitler the way she'd profiled Coco Chanel: as a human being. Hitler was pleased. American readers were not"
+    },
+    {
+      "id": "378ui0",
+      "blogId": "aldaily",
+      "title": "Sylvia Plath meditated in hers. Frida Kahlo painted her whole life floating in one. Is the bathtub a political object?",
+      "link": "https://thereader.mitpress.mit.edu/the-radical-tub",
+      "date": "2026-03-18T13:55:19.000Z",
+      "excerpt": "Sylvia Plath meditated in hers. Frida Kahlo painted her whole life floating in one. Is the bathtub a political object?"
+    },
+    {
+      "id": "34lwkm",
+      "blogId": "aldaily",
+      "title": "John Aubrey, born 400 years ago, lived a prodigiously productive literary life, starting innumerable projects and finishing just a few",
+      "link": "https://literaryreview.co.uk/speaking-through-the-ages",
+      "date": "2026-03-18T13:54:19.000Z",
+      "excerpt": "John Aubrey, born 400 years ago, lived a prodigiously productive literary life, starting innumerable projects and finishing just a few"
+    },
+    {
+      "id": "j24fvn",
+      "blogId": "aldaily",
+      "title": "Despite his gloomy, austere prose, Colm Tóibín is jolly, garrulous, and likes to gossip",
+      "link": "https://www.thetimes.com/culture/books/article/colm-toibin-interview-author-novelist-news-from-dublin-3ml3r6gr3",
+      "date": "2026-03-18T13:53:19.000Z",
+      "excerpt": "Despite his gloomy, austere prose, Colm Tóibín is jolly, garrulous, and likes to gossip"
+    },
+    {
+      "id": "b5djge",
+      "blogId": "aldaily",
+      "title": "The erasure of Black studies. Facing political pressure, universities are turning their backs on Black intellectual life",
+      "link": "https://www.chronicle.com/article/the-erasure-of-black-studies",
+      "date": "2026-03-18T13:52:19.000Z",
+      "excerpt": "The erasure of Black studies. Facing political pressure, universities are turning their backs on Black intellectual life"
+    },
+    {
+      "id": "9wmlrr",
+      "blogId": "aldaily",
+      "title": "What can Schrödinger's cat, Bayesian inference, and the neuroscience of time reveal about how we experience the present?",
+      "link": "https://www.wsj.com/arts-culture/books/in-search-of-now-review-time-out-of-mind-2e33a184?st=oF4dLf&reflink=desktopwebshare_permalink",
+      "date": "2026-03-18T13:51:19.000Z",
+      "excerpt": "What can Schrödinger's cat, Bayesian inference, and the neuroscience of time reveal about how we experience the present?"
+    },
+    {
+      "id": "po6i47",
+      "blogId": "aldaily",
+      "title": "The elite cultural esteem once lauded on Bellow and Updike is gone. Prestige fiction is dead — and that isn’t entirely a bad thing",
+      "link": "https://lareviewofbooks.org/article/novel-competition-cultural-economy-1965-1999-evan-brier",
+      "date": "2026-03-18T13:50:19.000Z",
+      "excerpt": "The elite cultural esteem once lauded on Bellow and Updike is gone. Prestige fiction is dead — and that isn’t entirely a bad thing"
+    },
+    {
+      "id": "i4w13x",
+      "blogId": "kottke",
+      "title": "  Jamelle Bouie says the SAVE Act will take us back to Jim... ",
+      "link": "https://kottke.org/26/03/0048607-jamelle-bouie-says-the-sa",
+      "date": "2026-03-18T13:40:25.000Z",
+      "excerpt": "Jamelle Bouie says the SAVE Act will take us back to Jim Crow South: “a one-party state, backed by the threat of violence, where the law ensures that most people cannot hope for meaningful political representation.”"
+    },
+    {
+      "id": "e4hag2",
+      "blogId": "mostlyeconomics",
+      "title": "Mostly Economics Blog ranked as one of the “Best 100 Economics Blogs to Follow in 2026”",
+      "link": "https://mostlyeconomics.wordpress.com/2026/03/18/mostly-economics-blg-ranked-as-one-of-the-best-100-economics-blogs-to-follow-in-2026",
+      "date": "2026-03-18T13:39:45.000Z",
+      "excerpt": "Humbling to feature in the Best 100 economics blog list for 2026. Thanks to all the vistors and well-wishers. The blog continues only because of you all."
+    },
+    {
+      "id": "ajysqq",
+      "blogId": "klementoninvesting",
+      "title": "Why oil-spooked markets may be wrong about the Fed",
+      "link": "https://klementoninvesting.substack.com/p/why-oil-spooked-markets-may-be-wrong",
+      "date": "2026-03-18T13:08:29.000Z",
+      "excerpt": "My latest opinion piece on Reuters has been published today and I am focusing on the Fed."
+    },
+    {
+      "id": "mbkm2j",
+      "blogId": "interconnects",
+      "title": "GPT 5.4 is a big step for Codex",
+      "link": "https://www.interconnects.ai/p/gpt-54-is-a-big-step-for-codex",
+      "date": "2026-03-18T13:02:54.000Z",
+      "excerpt": "On evaluating and understanding the frontier of agents, and why I still turn to Claude."
+    },
+    {
+      "id": "z28kmw",
+      "blogId": "wealthofcommonsense",
+      "title": "Animal Spirits: The Perfect Price of Oil",
+      "link": "https://awealthofcommonsense.com/2026/03/animal-spirits-the-perfect-price-of-oil",
+      "date": "2026-03-18T11:15:56.000Z",
+      "excerpt": "On today's show we discuss why oil prices aren't higher, complacency in the markets, energy stocks, oil as the new meme stock, geopolitical events vs. the stock market, why AI isn't a bubble, bitcoin isn't dead yet, housing affordability is improving, private credit redemptions, the case for PE stoc..."
+    },
+    {
+      "id": "sv4mob",
+      "blogId": "speakandregret",
+      "title": "Is Stereotype Threat Just Vibes Now?",
+      "link": "https://www.speakandregret.michaelinzlicht.com/p/is-steretype-threat-just-vibes-now",
+      "date": "2026-03-18T11:00:20.000Z",
+      "excerpt": "The title of this newsletter tells you that I use this space to speak my mind."
+    },
+    {
+      "id": "h5de95",
+      "blogId": "millersbookreview",
+      "title": "Women Saints and Scientists You Should Know ",
+      "link": "https://www.millersbookreview.com/p/women-saints-and-scientists-you-should-know-maria-skobtsova-henrietta-swan-leavitt-hildegard-of-bingen",
+      "date": "2026-03-18T11:00:19.000Z",
+      "excerpt": "The Inspiring Lives of Maria Skobtsova, Henrietta Leavitt, and Hildegard of Bingen"
+    },
+    {
+      "id": "w6drlo",
+      "blogId": "persuasion",
+      "title": "Ibram X. Kendi on Great Replacement Theory ",
+      "link": "https://www.persuasion.community/p/ibram-x-kendi",
+      "date": "2026-03-18T10:46:40.000Z",
+      "excerpt": "Yascha Mounk and Ibram X. Kendi also discuss anti-racism, equity, and education."
+    },
+    {
+      "id": "2u5z1p",
+      "blogId": "paulkrugman",
+      "title": "Donald Trump, Petropresident",
+      "link": "https://paulkrugman.substack.com/p/donald-trump-petropresident",
+      "date": "2026-03-18T10:31:22.000Z",
+      "excerpt": "Follow the Gulf oil money"
+    },
+    {
+      "id": "yi4i49",
+      "blogId": "ritholtz",
+      "title": "10 Wednesday AM Reads",
+      "link": "https://ritholtz.com/2026/03/10-wednesday-am-reads-365",
+      "date": "2026-03-18T10:30:16.000Z",
+      "excerpt": "My mid-week morning train Malvern reads: • The stock market looks wild under the surface: The S&P 500 appears relatively calm on the surface this year, but dig a little deeper and you’ll find some wild swings. Dispersion hiding beneath calm headline indices — sector rotations, factor volatility, and..."
+    },
+    {
+      "id": "6gha8e",
+      "blogId": "spyglass",
+      "title": "Microsoft Adds More Copilots to Help Copilot Copilot",
+      "link": "https://spyglass.org/microsoft-copilot-copilot-copilot",
+      "date": "2026-03-18T10:26:08.000Z",
+      "excerpt": "Their consumer and commercial AI efforts clearly haven't worked..."
+    },
+    {
+      "id": "5zxd69",
+      "blogId": "plainenglish",
+      "title": "‘Yes, AI Is a Bubble. There Is No Question.’",
+      "link": "https://www.derekthompson.org/p/yes-ai-is-a-bubble-there-is-no-question",
+      "date": "2026-03-18T10:01:59.000Z",
+      "excerpt": "The evidence that artificial intelligence is a big fat bubble has, confusingly, gotten much stronger and much weaker at the exact same time."
+    },
     {
       "id": "g8faz7",
       "blogId": "flowingdata",
@@ -32,86 +336,6 @@
       "link": "https://marginalrevolution.com/marginalrevolution/2026/03/international-comparison-of-physician-incomes.html",
       "date": "2026-03-18T06:41:47.000Z",
       "excerpt": "We compare physician incomes using tax data from the United States, Canada, Sweden, and the Netherlands. Physicians are concentrated in the top percentiles of the income distribution in all four countries, especially in the United States and certain specialties. Physician incomes are highest in the..."
-    },
-    {
-      "id": "z5jspb",
-      "blogId": "aldaily",
-      "title": "James Joyce on typos: “These are not misprints but beauties of my style hitherto undreamt of”",
-      "link": "https://www.smithsonianmag.com/smart-news/typos-have-plagued-us-for-centuries-just-ask-the-publishers-who-printed-the-seventh-commandment-as-thou-shalt-commit-adultery-in-1631-180988353",
-      "date": "2026-03-18T05:43:03.000Z",
-      "excerpt": "James Joyce on typos: “These are not misprints but beauties of my style hitherto undreamt of”"
-    },
-    {
-      "id": "vyb1jl",
-      "blogId": "aldaily",
-      "title": "What began as a magazine in search of answers became an activist organ certain it possessed them all. Marco Roth on how n+1 lost its way",
-      "link": "https://thepointmag.substack.com/p/serpents-in-the-garden",
-      "date": "2026-03-18T05:42:03.000Z",
-      "excerpt": "What began as a magazine in search of answers became an activist organ certain it possessed them all. Marco Roth on how n+1 lost its way"
-    },
-    {
-      "id": "cquf2m",
-      "blogId": "aldaily",
-      "title": "Paul Kingsnorth argues technocratic civilization is not merely misguided but malevolent. Blame \"the Machine\"",
-      "link": "https://www.thenewatlantis.com/publications/the-cassandra-of-the-machine",
-      "date": "2026-03-18T05:41:03.000Z",
-      "excerpt": "Paul Kingsnorth argues technocratic civilization is not merely misguided but malevolent. Blame \"the Machine\""
-    },
-    {
-      "id": "ypk1kt",
-      "blogId": "aldaily",
-      "title": "Janet Flanner profiled Hitler the way she'd profiled Coco Chanel: as a human being. Hitler was pleased. American readers were not",
-      "link": "https://www.theatlantic.com/books/2026/02/women-who-reinvented-journalism/686146?gift=ih3Agm7ZTQUXUY2wyHjxRJSOAJrIiLOT5m4xtQNfxIw",
-      "date": "2026-03-18T05:40:03.000Z",
-      "excerpt": "Janet Flanner profiled Hitler the way she'd profiled Coco Chanel: as a human being. Hitler was pleased. American readers were not"
-    },
-    {
-      "id": "378ui0",
-      "blogId": "aldaily",
-      "title": "Sylvia Plath meditated in hers. Frida Kahlo painted her whole life floating in one. Is the bathtub a political object?",
-      "link": "https://thereader.mitpress.mit.edu/the-radical-tub",
-      "date": "2026-03-18T05:39:03.000Z",
-      "excerpt": "Sylvia Plath meditated in hers. Frida Kahlo painted her whole life floating in one. Is the bathtub a political object?"
-    },
-    {
-      "id": "34lwkm",
-      "blogId": "aldaily",
-      "title": "John Aubrey, born 400 years ago, lived a prodigiously productive literary life, starting innumerable projects and finishing just a few",
-      "link": "https://literaryreview.co.uk/speaking-through-the-ages",
-      "date": "2026-03-18T05:38:03.000Z",
-      "excerpt": "John Aubrey, born 400 years ago, lived a prodigiously productive literary life, starting innumerable projects and finishing just a few"
-    },
-    {
-      "id": "j24fvn",
-      "blogId": "aldaily",
-      "title": "Despite his gloomy, austere prose, Colm Tóibín is jolly, garrulous, and likes to gossip",
-      "link": "https://www.thetimes.com/culture/books/article/colm-toibin-interview-author-novelist-news-from-dublin-3ml3r6gr3",
-      "date": "2026-03-18T05:37:03.000Z",
-      "excerpt": "Despite his gloomy, austere prose, Colm Tóibín is jolly, garrulous, and likes to gossip"
-    },
-    {
-      "id": "b5djge",
-      "blogId": "aldaily",
-      "title": "The erasure of Black studies. Facing political pressure, universities are turning their backs on Black intellectual life",
-      "link": "https://www.chronicle.com/article/the-erasure-of-black-studies",
-      "date": "2026-03-18T05:36:03.000Z",
-      "excerpt": "The erasure of Black studies. Facing political pressure, universities are turning their backs on Black intellectual life"
-    },
-    {
-      "id": "9wmlrr",
-      "blogId": "aldaily",
-      "title": "What can Schrödinger's cat, Bayesian inference, and the neuroscience of time reveal about how we experience the present?",
-      "link": "https://www.wsj.com/arts-culture/books/in-search-of-now-review-time-out-of-mind-2e33a184?st=oF4dLf&reflink=desktopwebshare_permalink",
-      "date": "2026-03-18T05:35:03.000Z",
-      "excerpt": "What can Schrödinger's cat, Bayesian inference, and the neuroscience of time reveal about how we experience the present?"
-    },
-    {
-      "id": "po6i47",
-      "blogId": "aldaily",
-      "title": "The elite cultural esteem once lauded on Bellow and Updike is gone. Prestige fiction is dead — and that isn’t entirely a bad thing",
-      "link": "https://lareviewofbooks.org/article/novel-competition-cultural-economy-1965-1999-evan-brier",
-      "date": "2026-03-18T05:34:03.000Z",
-      "excerpt": "The elite cultural esteem once lauded on Bellow and Updike is gone. Prestige fiction is dead — and that isn’t entirely a bad thing"
     },
     {
       "id": "cc96vx",
@@ -360,6 +584,14 @@
       "link": "https://kottke.org/26/03/0048579-nobody-gets-promoted-for-",
       "date": "2026-03-17T15:42:28.000Z",
       "excerpt": "Nobody Gets Promoted for Simplicity. “You can’t write a compelling narrative about the thing you didn’t build. Nobody gets promoted for the complexity they avoided.”"
+    },
+    {
+      "id": "fla24m",
+      "blogId": "collabfund",
+      "title": "Significance > Success",
+      "link": "https://collabfund.com/blog/significance-success",
+      "date": "2026-03-17T15:33:00.000Z",
+      "excerpt": "Everyone wants to be successful. Successful in our careers, our families, and our communities. I’ve certainly felt this way, that is until this past fall after attending two events, the first being a speech from someone who is more than a decade younger than I am. In October I attended The Mario St...."
     },
     {
       "id": "rxd66b",
