@@ -1,6 +1,230 @@
 {
-  "lastUpdated": "2026-03-18T18:01:27.295Z",
+  "lastUpdated": "2026-03-19T03:36:02.034Z",
   "posts": [
+    {
+      "id": "or25bx",
+      "blogId": "astralcodexten",
+      "title": "Being John Rawls",
+      "link": "https://www.astralcodexten.com/p/being-john-rawls",
+      "date": "2026-03-19T03:31:17.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "fpfdh3",
+      "blogId": "mostlyeconomics",
+      "title": "Book Review: Al-Aqsa Flood",
+      "link": "https://mostlyeconomics.wordpress.com/2026/03/19/book-review-al-aqsa-flood",
+      "date": "2026-03-19T03:24:57.000Z",
+      "excerpt": "Book Review: Al-Aqsa Flood Muhittin Ataman. Ed. 2024. Al-Aqsa Flood: A Turning Point in the Middle Eastern Politics. SETA Publications. Pages 320. Annavajhula J C Bose, PhD Former (Economics) Professor, SRCC, DU It is well-said that “religion often plays a dual role: it is both a lens through which..."
+    },
+    {
+      "id": "y78wzk",
+      "blogId": "simonwillison",
+      "title": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally",
+      "link": "https://simonwillison.net/2026/Mar/18/llm-in-a-flash",
+      "date": "2026-03-18T23:56:46.000Z",
+      "excerpt": "Autoresearching Apple's \"LLM in a Flash\" to run Qwen 397B locally Here's a fascinating piece of research by Dan Woods, who managed to get a custom version of Qwen3.5-397B-A17B running at 5.5+ tokens/second on a 48GB MacBook Pro M3 Max despite that model taking up 209GB (120GB quantized) on disk. Qwe..."
+    },
+    {
+      "id": "utx338",
+      "blogId": "marginalian",
+      "title": "The Four Desires Driving All Human Behavior: Bertrand Russell’s Magnificent Nobel Prize Acceptance Speech",
+      "link": "https://www.themarginalian.org/2026/03/18/bertrand-russell-nobel-prize-acceptance-speech",
+      "date": "2026-03-18T23:49:09.000Z",
+      "excerpt": "\"Nothing in the world is more exciting than a moment of sudden discovery or invention, and many more people are capable of experiencing such moments than is sometimes thought.\""
+    },
+    {
+      "id": "nkrk3l",
+      "blogId": "aldaily",
+      "title": "Robert Trivers, who died this week, “could be hilarious, infuriating, inappropriate, jocund, tactless, volatile, sometimes aggressive”",
+      "link": "https://www.skeptic.com/article/robert-trivers-1943-2026-reflects-on-his-life",
+      "date": "2026-03-18T23:30:42.000Z",
+      "excerpt": "Robert Trivers, who died this week, “could be hilarious, infuriating, inappropriate, jocund, tactless, volatile, sometimes aggressive”"
+    },
+    {
+      "id": "m33u22",
+      "blogId": "aldaily",
+      "title": "Virginia Woolf envisioned female intellectuals with the time and space to write. Hers was an enduring vision — but also a lonely one",
+      "link": "https://newrepublic.com/article/206731/loneliness-room-one-virginia-woolf-hold-up",
+      "date": "2026-03-18T23:29:42.000Z",
+      "excerpt": "Virginia Woolf envisioned female intellectuals with the time and space to write. Hers was an enduring vision — but also a lonely one"
+    },
+    {
+      "id": "hhpaq7",
+      "blogId": "aldaily",
+      "title": "A question for astrobiologists: If space dolphins or celestial jellyfishes live somewhere beyond Alpha Centauri, great — but then what?",
+      "link": "https://reviewcanada.ca/magazine/2026/04/desperately-seeking-space-friends-review-the-pale-blue-data-point",
+      "date": "2026-03-18T23:28:42.000Z",
+      "excerpt": "A question for astrobiologists: If space dolphins or celestial jellyfishes live somewhere beyond Alpha Centauri, great — but then what?"
+    },
+    {
+      "id": "z5jspb",
+      "blogId": "aldaily",
+      "title": "James Joyce on typos: “These are not misprints but beauties of my style hitherto undreamt of”",
+      "link": "https://www.smithsonianmag.com/smart-news/typos-have-plagued-us-for-centuries-just-ask-the-publishers-who-printed-the-seventh-commandment-as-thou-shalt-commit-adultery-in-1631-180988353",
+      "date": "2026-03-18T23:26:42.000Z",
+      "excerpt": "James Joyce on typos: “These are not misprints but beauties of my style hitherto undreamt of”"
+    },
+    {
+      "id": "vyb1jl",
+      "blogId": "aldaily",
+      "title": "What began as a magazine in search of answers became an activist organ certain it possessed them all. Marco Roth on how n+1 lost its way",
+      "link": "https://thepointmag.substack.com/p/serpents-in-the-garden",
+      "date": "2026-03-18T23:25:42.000Z",
+      "excerpt": "What began as a magazine in search of answers became an activist organ certain it possessed them all. Marco Roth on how n+1 lost its way"
+    },
+    {
+      "id": "cquf2m",
+      "blogId": "aldaily",
+      "title": "Paul Kingsnorth argues that technocratic civilization is not merely misguided but malevolent. Blame \"the Machine\"",
+      "link": "https://www.thenewatlantis.com/publications/the-cassandra-of-the-machine",
+      "date": "2026-03-18T23:24:42.000Z",
+      "excerpt": "Paul Kingsnorth argues that technocratic civilization is not merely misguided but malevolent. Blame \"the Machine\""
+    },
+    {
+      "id": "ypk1kt",
+      "blogId": "aldaily",
+      "title": "Janet Flanner profiled Hitler the way she'd profiled Coco Chanel: as a human being. Hitler was pleased. American readers were not",
+      "link": "https://www.theatlantic.com/books/2026/02/women-who-reinvented-journalism/686146?gift=ih3Agm7ZTQUXUY2wyHjxRJSOAJrIiLOT5m4xtQNfxIw",
+      "date": "2026-03-18T23:23:42.000Z",
+      "excerpt": "Janet Flanner profiled Hitler the way she'd profiled Coco Chanel: as a human being. Hitler was pleased. American readers were not"
+    },
+    {
+      "id": "378ui0",
+      "blogId": "aldaily",
+      "title": "Sylvia Plath meditated in hers. Frida Kahlo painted her whole life floating in one. Is the bathtub a political object?",
+      "link": "https://thereader.mitpress.mit.edu/the-radical-tub",
+      "date": "2026-03-18T23:22:42.000Z",
+      "excerpt": "Sylvia Plath meditated in hers. Frida Kahlo painted her whole life floating in one. Is the bathtub a political object?"
+    },
+    {
+      "id": "34lwkm",
+      "blogId": "aldaily",
+      "title": "John Aubrey, born 400 years ago, lived a prodigiously productive literary life, starting innumerable projects and finishing just a few",
+      "link": "https://literaryreview.co.uk/speaking-through-the-ages",
+      "date": "2026-03-18T23:21:42.000Z",
+      "excerpt": "John Aubrey, born 400 years ago, lived a prodigiously productive literary life, starting innumerable projects and finishing just a few"
+    },
+    {
+      "id": "45haus",
+      "blogId": "abnormalreturns",
+      "title": "Wednesday links: avoiding complexity",
+      "link": "https://abnormalreturns.com/2026/03/18/wednesday-links-avoiding-complexity",
+      "date": "2026-03-18T23:16:58.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "uakavq",
+      "blogId": "kottke",
+      "title": " This is  maybe the best baseball catch  you’ll ever... ",
+      "link": "https://kottke.org/26/03/0048585-this-is-maybe-the-best",
+      "date": "2026-03-18T23:12:20.000Z",
+      "excerpt": "This is maybe the best baseball catch you’ll ever see. Or the most fun one anyway."
+    },
+    {
+      "id": "5viozd",
+      "blogId": "astralcodexten",
+      "title": "Hidden Open Thread 425.5",
+      "link": "https://www.astralcodexten.com/p/hidden-open-thread-4255",
+      "date": "2026-03-18T22:41:42.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "b61q6y",
+      "blogId": "kottke",
+      "title": "  Miuccia Prada is worth $4.8 billion. How good of a... ",
+      "link": "https://kottke.org/26/03/0048606-miuccia-prada-is-worth-48",
+      "date": "2026-03-18T22:14:08.000Z",
+      "excerpt": "Miuccia Prada is worth $4.8 billion. How good of a person do you expect her to be? “I got to thinking about all this the other day while mulling the curious, oft-repeated fact that Miuccia Prada was, in her 1960s youth, a Communist.”"
+    },
+    {
+      "id": "n00pbg",
+      "blogId": "lukeburgis",
+      "title": "Be Not Conformed—René Girard at the Crossroads",
+      "link": "https://read.lukeburgis.com/p/be-not-conformedrene-girard-at-the",
+      "date": "2026-03-18T22:06:58.000Z",
+      "excerpt": "A new book announcement—Updates and Opportunities"
+    },
+    {
+      "id": "5omj9d",
+      "blogId": "spyglass",
+      "title": "Actually, MacBook Neo Is For Me",
+      "link": "https://spyglass.org/macbook-neo-thoughts",
+      "date": "2026-03-18T21:49:00.000Z",
+      "excerpt": "I didn't expect to, but I'm keeping it..."
+    },
+    {
+      "id": "lx3k80",
+      "blogId": "kottke",
+      "title": " “Birds in the United States are not only declining,... ",
+      "link": "https://kottke.org/26/03/0048601-birds-in-the-united-state",
+      "date": "2026-03-18T21:25:19.000Z",
+      "excerpt": "“Birds in the United States are not only declining, but they are declining faster, especially in areas with intensive agriculture, according to new research.”"
+    },
+    {
+      "id": "w2ji1z",
+      "blogId": "paulkrugman",
+      "title": "Meta Thoughts",
+      "link": "https://paulkrugman.substack.com/p/meta-thoughts",
+      "date": "2026-03-18T20:18:09.000Z",
+      "excerpt": "On setting $80 billion on fire"
+    },
+    {
+      "id": "o7m8uv",
+      "blogId": "kottke",
+      "title": "  A playable CSS-only Super Mario Bros game . Wow. ",
+      "link": "https://kottke.org/26/03/0048571-a-playable-css-only-super",
+      "date": "2026-03-18T20:00:08.000Z",
+      "excerpt": "A playable CSS-only Super Mario Bros game. Wow."
+    },
+    {
+      "id": "ssuya9",
+      "blogId": "danq",
+      "title": "[Repost] Hint Line 93",
+      "link": "https://danq.me/2026/03/18/hint-line-93",
+      "date": "2026-03-18T19:47:58.000Z",
+      "excerpt": "Hint Line 93 is an amazing interactive exhibit about the experience of working on a computer games hint line. It's a deeply-researched, immersive, and clever piece of art... and even though the real experience is in a Australian museum, you can play an approximation of it via the Web. Awesome."
+    },
+    {
+      "id": "x6e7f2",
+      "blogId": "kottke",
+      "title": "  A generator  for VHS slipcovers, cassette tape inserts,... ",
+      "link": "https://kottke.org/26/03/0048598-a-generator-for-vhs-slipc",
+      "date": "2026-03-18T19:01:14.000Z",
+      "excerpt": "A generator for VHS slipcovers, cassette tape inserts, CD labels & inserts. You can paste in Spotify URLs, search for movies, etc. Really cool and fun."
+    },
+    {
+      "id": "nrt5lb",
+      "blogId": "thezvi",
+      "title": "Anthropic vs. DoW #5: Motions Filed",
+      "link": "https://thezvi.substack.com/p/anthropic-vs-dow-5-motions-filed",
+      "date": "2026-03-18T18:56:27.000Z",
+      "excerpt": "The news has thankfully quieted down on this front, and is mostly about the lawsuit as we build towards a hearing next week, after which we will find out if a temporary restraining order or an injunction is on the table."
+    },
+    {
+      "id": "fksl2g",
+      "blogId": "braddelong",
+      "title": "CROSSPOST: TIMOTHY B. LEE: Why I'm Not Worried About AI Causing Mass Unemployment",
+      "link": "https://braddelong.substack.com/p/crosspost-timothy-b-lee-why-im-not",
+      "date": "2026-03-18T18:41:28.000Z",
+      "excerpt": "Thanks to Joe Weisenthal, I see that Tim B. Lee is taking a well-deserved victory lap with respect to “AI & Jobs”. His take:"
+    },
+    {
+      "id": "1ir114",
+      "blogId": "marginalrevolution",
+      "title": "*Recession*, by Tyler Goodspeed",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/03/recession-by-tyler-goodspeed.html",
+      "date": "2026-03-18T18:19:25.000Z",
+      "excerpt": "The subtitle is The Real Reasons Economies Shrink and What To Do About It. Here is from the book’s summary: Contrary to popular perception, recessions are not the inevitable bust that follows an unsustainable boom, and they do not operate like wildfires that clear out economic deadwood. Recessions a..."
+    },
+    {
+      "id": "wo9blh",
+      "blogId": "honestbroker",
+      "title": "The Shock of the Old",
+      "link": "https://www.honest-broker.com/p/the-shock-of-the-old",
+      "date": "2026-03-18T18:09:04.000Z",
+      "excerpt": "What happens when everything is a reboot?"
+    },
     {
       "id": "yf3ex8",
       "blogId": "kottke",
@@ -128,54 +352,6 @@
       "link": "https://kottke.org/26/03/subway-to-coney-island-1987",
       "date": "2026-03-18T14:15:00.000Z",
       "excerpt": "This is a mindblowing time capsule of ordinary life: video of a group of friends taking the NYC subway to Coney Island in 1987. Because it was before mobile phones, they had to arrange to meet one of the group members in the first car of the train along the way. The film was shot by Nelson Sullivan,..."
-    },
-    {
-      "id": "z5jspb",
-      "blogId": "aldaily",
-      "title": "James Joyce on typos: “These are not misprints but beauties of my style hitherto undreamt of”",
-      "link": "https://www.smithsonianmag.com/smart-news/typos-have-plagued-us-for-centuries-just-ask-the-publishers-who-printed-the-seventh-commandment-as-thou-shalt-commit-adultery-in-1631-180988353",
-      "date": "2026-03-18T13:59:19.000Z",
-      "excerpt": "James Joyce on typos: “These are not misprints but beauties of my style hitherto undreamt of”"
-    },
-    {
-      "id": "vyb1jl",
-      "blogId": "aldaily",
-      "title": "What began as a magazine in search of answers became an activist organ certain it possessed them all. Marco Roth on how n+1 lost its way",
-      "link": "https://thepointmag.substack.com/p/serpents-in-the-garden",
-      "date": "2026-03-18T13:58:19.000Z",
-      "excerpt": "What began as a magazine in search of answers became an activist organ certain it possessed them all. Marco Roth on how n+1 lost its way"
-    },
-    {
-      "id": "cquf2m",
-      "blogId": "aldaily",
-      "title": "Paul Kingsnorth argues that technocratic civilization is not merely misguided but malevolent. Blame \"the Machine\"",
-      "link": "https://www.thenewatlantis.com/publications/the-cassandra-of-the-machine",
-      "date": "2026-03-18T13:57:19.000Z",
-      "excerpt": "Paul Kingsnorth argues that technocratic civilization is not merely misguided but malevolent. Blame \"the Machine\""
-    },
-    {
-      "id": "ypk1kt",
-      "blogId": "aldaily",
-      "title": "Janet Flanner profiled Hitler the way she'd profiled Coco Chanel: as a human being. Hitler was pleased. American readers were not",
-      "link": "https://www.theatlantic.com/books/2026/02/women-who-reinvented-journalism/686146?gift=ih3Agm7ZTQUXUY2wyHjxRJSOAJrIiLOT5m4xtQNfxIw",
-      "date": "2026-03-18T13:56:19.000Z",
-      "excerpt": "Janet Flanner profiled Hitler the way she'd profiled Coco Chanel: as a human being. Hitler was pleased. American readers were not"
-    },
-    {
-      "id": "378ui0",
-      "blogId": "aldaily",
-      "title": "Sylvia Plath meditated in hers. Frida Kahlo painted her whole life floating in one. Is the bathtub a political object?",
-      "link": "https://thereader.mitpress.mit.edu/the-radical-tub",
-      "date": "2026-03-18T13:55:19.000Z",
-      "excerpt": "Sylvia Plath meditated in hers. Frida Kahlo painted her whole life floating in one. Is the bathtub a political object?"
-    },
-    {
-      "id": "34lwkm",
-      "blogId": "aldaily",
-      "title": "John Aubrey, born 400 years ago, lived a prodigiously productive literary life, starting innumerable projects and finishing just a few",
-      "link": "https://literaryreview.co.uk/speaking-through-the-ages",
-      "date": "2026-03-18T13:54:19.000Z",
-      "excerpt": "John Aubrey, born 400 years ago, lived a prodigiously productive literary life, starting innumerable projects and finishing just a few"
     },
     {
       "id": "j24fvn",
@@ -384,6 +560,14 @@
       "link": "https://susam.net/wander",
       "date": "2026-03-18T00:00:00.000Z",
       "excerpt": "I have put together a small tool to explore the small web of personal websites. It is called Wander. Please visit susam.net/wander/ to try out my Wander console. There are only a few pages in it right now, so you cannot use it to browse the small web endlessly yet. It is just a beginning and I hope..."
+    },
+    {
+      "id": "3fviu",
+      "blogId": "susam",
+      "title": "Wander 0.1.0",
+      "link": "https://susam.net/code/news/wander/0.1.0.html",
+      "date": "2026-03-18T00:00:00.000Z",
+      "excerpt": "Wander 0.1.0 is the first release of Wander, a small, decentralised, self-hosted web console that lets visitors to your website explore random pages from a community of personal websites. Anyone with a personal website can take this tool and host an instance of a Wander console. Each Wander console..."
     },
     {
       "id": "r49fm2",
