@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
+import { CATEGORIES } from '../lib/categories';
 import { getBlogMap, getBlogs, getEnrichedPosts } from '../lib/site-data';
 
 const blogs = getBlogs();
@@ -13,19 +14,6 @@ const enrichedPosts = getEnrichedPosts({ blogs, blogMap });
 const shuffled = [...enrichedPosts].sort(() => Math.random() - 0.5);
 const deckPosts = shuffled.slice(0, 50);
 
-const categoryColors: Record<string, string> = {
-  tech: 'var(--tech)', life: 'var(--life)', culture: 'var(--culture)',
-  design: 'var(--design)', finance: 'var(--finance)', economics: 'var(--economics)',
-  history: 'var(--history)', psychology: 'var(--psychology)', philosophy: 'var(--philosophy)',
-  science: 'var(--science)',
-};
-
-const categories = ['tech', 'design', 'life', 'culture', 'economics', 'finance', 'history', 'psychology', 'philosophy', 'science'];
-const categoryNames: Record<string, string> = {
-  tech: 'Tech', design: 'Design', life: 'Life', culture: 'Culture',
-  finance: 'Finance', economics: 'Economics', history: 'History',
-  psychology: 'Psychology', philosophy: 'Philosophy', science: 'Science',
-};
 ---
 
 <Base title="Discover — The Small Web" description="Discover new indie blogs — random picks and hidden gems from The Small Web collection.">
@@ -42,10 +30,10 @@ const categoryNames: Record<string, string> = {
 
       <div class="filter-ribbon">
         <button class="stamp active" data-filter="all">All</button>
-        {categories.map(cat => (
-          <button class="stamp" data-filter={cat}>
-            <span class="stamp-dot" style={`background:var(--${cat})`}></span>
-            {categoryNames[cat]}
+        {CATEGORIES.map((category) => (
+          <button class="stamp" data-filter={category.slug}>
+            <span class="stamp-dot" style={`background:var(${category.colorVar})`}></span>
+            {category.name}
           </button>
         ))}
       </div>
@@ -55,7 +43,7 @@ const categoryNames: Record<string, string> = {
           {deckPosts.slice(0, 5).reverse().map((post) => (
             <article
               class="discover-card"
-              style={`--card-color: ${categoryColors[post.category] || 'var(--accent)'}`}
+              style={`--card-color: var(--${post.category})`}
               data-link={post.link}
               data-category={post.category}
             >
@@ -217,14 +205,7 @@ const categoryNames: Record<string, string> = {
       const card = document.createElement('article');
       card.className = 'discover-card';
 
-      const categoryColors = {
-        tech: 'var(--tech)', life: 'var(--life)', culture: 'var(--culture)',
-        design: 'var(--design)', finance: 'var(--finance)', economics: 'var(--economics)',
-        history: 'var(--history)', psychology: 'var(--psychology)', philosophy: 'var(--philosophy)',
-        science: 'var(--science)',
-      };
-
-      card.style.setProperty('--card-color', categoryColors[post.category] || 'var(--accent)');
+      card.style.setProperty('--card-color', `var(--${post.category})`);
       card.dataset.link = post.link;
       card.dataset.category = post.category;
 

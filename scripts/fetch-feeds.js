@@ -10,6 +10,7 @@ import {
   upsertPosts,
   insertFetchLogs,
 } from './lib/db.js';
+import { buildPostsCache, buildStatusCache, writeCacheFiles } from './lib/cache-export.js';
 import { loadFetchConfig, formatFetchConfig } from './lib/fetch-config.js';
 import { sleep, mapWithLimit } from './lib/fetch/concurrency.js';
 import { fetchPageExcerpt } from './lib/fetch/excerpt.js';
@@ -380,29 +381,22 @@ async function main() {
       : nowIso;
     const cachePosts = allPosts.length > 0 ? allPosts : existingPosts;
 
-    const cache = {
-      lastUpdated: cacheLastUpdated,
-      posts: cachePosts,
-    };
-
-    const statusData = {
-      lastUpdated: nowIso,
-      feeds: allStatuses,
-      summary: {
-        total: allStatuses.length,
-        healthy: healthyCount,
-        errors: allStatuses.filter(s => s.status === 'error').length,
-      }
-    };
+    const postsCache = buildPostsCache(cachePosts, cacheLastUpdated);
+    const statusData = buildStatusCache(allStatuses, nowIso);
 
     console.log('  → Writing cache files');
-    writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
-    writeFileSync(STATUS_PATH, JSON.stringify(statusData, null, 2));
+    writeCacheFiles({
+      cacheDir: join(__dirname, '../data/cache'),
+      postsPath: CACHE_PATH,
+      statusPath: STATUS_PATH,
+      postsCache,
+      statusCache: statusData,
+    });
 
     console.log(`\n=== Summary ===`);
     console.log(`Total posts fetched: ${allPosts.length}`);
     console.log(`Feeds healthy: ${statusData.summary.healthy}/${statusData.summary.total}`);
-    console.log(`Cache updated: ${cache.lastUpdated}`);
+    console.log(`Cache updated: ${postsCache.lastUpdated}`);
   } finally {
     if (db) db.close();
   }

@@ -1,7 +1,5 @@
 import { pickFeaturedPost, type Blog, type EnrichedPost } from './posts';
-
-const PROSE_CATEGORIES = ['philosophy', 'culture', 'life', 'psychology', 'history'];
-const HOMEPAGE_CATEGORIES = ['tech', 'culture', 'life', 'design', 'economics', 'finance', 'history', 'philosophy', 'psychology', 'science'];
+import { HOMEPAGE_CATEGORY_SLUGS, PROSE_CATEGORY_SLUGS } from './categories';
 
 export type HomepageCuration<T extends EnrichedPost = EnrichedPost> = {
   leadPost: T | null;
@@ -35,7 +33,7 @@ export function curateHomepage<T extends EnrichedPost & { id?: string; excerpt?:
 
   const featuredExcerpt = enrichedPosts
     .filter((p) =>
-      PROSE_CATEGORIES.includes(p.category) &&
+      PROSE_CATEGORY_SLUGS.includes(p.category) &&
       Boolean(p.excerpt) &&
       (p.excerpt?.length || 0) > 80 &&
       (!p.id || !usedIds.has(p.id))
@@ -44,7 +42,7 @@ export function curateHomepage<T extends EnrichedPost & { id?: string; excerpt?:
   if (featuredExcerpt?.id) usedIds.add(featuredExcerpt.id);
 
   const categoryPosts = new Map<string, T[]>();
-  for (const cat of HOMEPAGE_CATEGORIES) {
+  for (const cat of HOMEPAGE_CATEGORY_SLUGS) {
     const catPosts = enrichedPosts
       .filter((p) => p.category === cat && (!p.id || !usedIds.has(p.id)))
       .slice(0, 5);
@@ -67,9 +65,9 @@ export function curateHomepage<T extends EnrichedPost & { id?: string; excerpt?:
 
   const archivePicks: T[] = [];
   const archiveCatsUsed = new Set<string>();
-  const rotatedCategories = [...HOMEPAGE_CATEGORIES].sort((a, b) => {
-    const ai = (HOMEPAGE_CATEGORIES.indexOf(a) + dayOfYear) % HOMEPAGE_CATEGORIES.length;
-    const bi = (HOMEPAGE_CATEGORIES.indexOf(b) + dayOfYear) % HOMEPAGE_CATEGORIES.length;
+  const rotatedCategories = [...HOMEPAGE_CATEGORY_SLUGS].sort((a, b) => {
+    const ai = (HOMEPAGE_CATEGORY_SLUGS.indexOf(a) + dayOfYear) % HOMEPAGE_CATEGORY_SLUGS.length;
+    const bi = (HOMEPAGE_CATEGORY_SLUGS.indexOf(b) + dayOfYear) % HOMEPAGE_CATEGORY_SLUGS.length;
     return ai - bi;
   });
 
@@ -89,7 +87,6 @@ export function curateHomepage<T extends EnrichedPost & { id?: string; excerpt?:
     featuredExcerpt,
     categoryPosts,
     archivePicks,
-    allCategories: [...HOMEPAGE_CATEGORIES],
+    allCategories: [...HOMEPAGE_CATEGORY_SLUGS],
   };
 }
-

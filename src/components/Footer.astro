@@ -1,11 +1,8 @@
 ---
-import blogsData from '../../data/blogs.json';
-import postsData from '../../data/cache/posts.json';
 import { formatDateTimeUtc } from '../lib/dates';
+import { getSiteStats } from '../lib/site-data';
 
-const blogCount = blogsData.blogs.length;
-const postCount = postsData.posts?.length || 0;
-const lastUpdatedRaw = postsData.lastUpdated || '';
+const { blogCount, postCount, lastUpdated: lastUpdatedRaw } = getSiteStats();
 const lastUpdated = formatDateTimeUtc(lastUpdatedRaw) || 'Unknown';
 ---
 

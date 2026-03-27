@@ -3,31 +3,21 @@ import Base from '../../layouts/Base.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import ThemeToggle from '../../components/ThemeToggle.astro';
+import { CATEGORY_MAP, CATEGORIES, type CategoryDefinition, type CategorySlug } from '../../lib/categories';
 import { getBlogMap, getBlogs, getPosts } from '../../lib/site-data';
 import { enrichPosts, pickFeaturedPost } from '../../lib/posts';
 import { formatDate } from '../../lib/dates';
 
 export function getStaticPaths() {
-  const categories = [
-    { slug: 'tech', name: 'Tech', description: 'Code, tools, and digital innovation' },
-    { slug: 'design', name: 'Design', description: 'Creativity, aesthetics, and user experience' },
-    { slug: 'life', name: 'Life', description: 'Personal growth, career, and daily reflections' },
-    { slug: 'culture', name: 'Culture', description: 'Society, trends, and the human experience' },
-    { slug: 'economics', name: 'Economics', description: 'Policy, markets, and the science of choices' },
-    { slug: 'finance', name: 'Finance', description: 'Investing, markets, and financial thinking' },
-    { slug: 'history', name: 'History', description: 'Lessons and narratives from the past' },
-    { slug: 'psychology', name: 'Psychology', description: 'Understanding the mind and behavior' },
-    { slug: 'philosophy', name: 'Philosophy', description: 'Wisdom, ethics, and first principles' },
-    { slug: 'science', name: 'Science', description: 'Physics, cosmology, and the nature of reality' },
-  ];
-  return categories.map((cat) => ({
+  return CATEGORIES.map((cat) => ({
     params: { slug: cat.slug },
     props: { category: cat },
   }));
 }
 
 const { slug } = Astro.params;
-const { category } = Astro.props;
+const { category: categoryProp } = Astro.props as { category: CategoryDefinition };
+const category = CATEGORY_MAP.get(slug as CategorySlug) || categoryProp;
 
 const blogs = getBlogs();
 const blogMap = getBlogMap(blogs);
@@ -83,7 +73,7 @@ const sortedMonths = Object.keys(postsByMonth).sort((a, b) => {
     <Header currentPath={`/category/${slug}`} currentCategory={slug as string} />
 
     <main class="category-main">
-      <div class="category-hero" style={`background: var(--${slug}-wash)`}>
+      <div class="category-hero" style={`background: var(${category.washVar})`}>
         <div class="category-hero-count">{posts.length} {posts.length === 1 ? 'article' : 'articles'}</div>
         <h1 class="category-hero-title">{category.name}</h1>
         <p class="category-hero-desc">{category.description}</p>

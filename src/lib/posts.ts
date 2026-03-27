@@ -2,8 +2,13 @@ export type Blog = {
   id: string;
   name: string;
   url: string;
+  feed?: string;
+  description?: string;
   categories?: string[];
+  proxy?: boolean;
   allowMissingDates?: boolean;
+  ignoreLinkDateInference?: boolean;
+  maxPosts?: number;
 };
 
 export type Post = {

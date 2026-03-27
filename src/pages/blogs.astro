@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
+import { CATEGORIES } from '../lib/categories';
 import { getBlogs, getPosts } from '../lib/site-data';
 
 const blogs = getBlogs();
@@ -29,13 +30,6 @@ enrichedBlogs.forEach(blog => {
   }
   blogsByCategory.get(cat)!.push(blog);
 });
-
-const categoryOrder = ['tech', 'design', 'life', 'culture', 'economics', 'finance', 'history', 'psychology', 'philosophy', 'science'];
-const categoryNames: Record<string, string> = {
-  tech: 'Tech', design: 'Design', life: 'Life', culture: 'Culture',
-  finance: 'Finance', economics: 'Economics', history: 'History',
-  psychology: 'Psychology', philosophy: 'Philosophy', science: 'Science',
-};
 
 // Find blog with most posts for featured
 const featuredBlog = [...enrichedBlogs].sort((a, b) => b.postCount - a.postCount)[0];
@@ -119,16 +113,16 @@ const opmlContent = generateOPML();
         </a>
       )}
 
-      {categoryOrder.map((cat, idx) => {
-        const catBlogs = blogsByCategory.get(cat);
+      {CATEGORIES.map((category, idx) => {
+        const catBlogs = blogsByCategory.get(category.slug);
         if (!catBlogs || catBlogs.length === 0) return null;
         return (
           <>
             {idx > 0 && <div class="cut">✂</div>}
             <section class="blogroll-section">
               <div class="section-head">
-                <span class="section-head-dot" style={`background: var(--${cat})`}></span>
-                <span class="section-head-text">{categoryNames[cat]}</span>
+                <span class="section-head-dot" style={`background: var(${category.colorVar})`}></span>
+                <span class="section-head-text">{category.name}</span>
                 <span class="section-head-count">{catBlogs.length} blogs</span>
               </div>
               <div class="blogs-grid">

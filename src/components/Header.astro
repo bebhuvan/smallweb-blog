@@ -1,4 +1,6 @@
 ---
+import { CATEGORIES } from '../lib/categories';
+
 interface Props {
   currentPath?: string;
   currentCategory?: string;
@@ -6,19 +8,6 @@ interface Props {
 }
 
 const { currentPath = '/', currentCategory, showCategoryNav = true } = Astro.props;
-
-const categories = [
-  { slug: 'tech', name: 'Tech', color: '--tech' },
-  { slug: 'design', name: 'Design', color: '--design' },
-  { slug: 'life', name: 'Life', color: '--life' },
-  { slug: 'culture', name: 'Culture', color: '--culture' },
-  { slug: 'economics', name: 'Economics', color: '--economics' },
-  { slug: 'finance', name: 'Finance', color: '--finance' },
-  { slug: 'history', name: 'History', color: '--history' },
-  { slug: 'psychology', name: 'Psychology', color: '--psychology' },
-  { slug: 'philosophy', name: 'Philosophy', color: '--philosophy' },
-  { slug: 'science', name: 'Science', color: '--science' },
-];
 
 const pageLinks = [
   { href: '/feed', name: 'Feed' },
@@ -57,11 +46,11 @@ function getIssueString() {
 {showCategoryNav && (
   <nav class="nav">
     <a href="/" class:list={["stamp", isHome && !currentCategory ? "active" : ""]}>All</a>
-    {categories.map((cat) => {
+    {CATEGORIES.map((cat) => {
       const isActive = currentCategory === cat.slug || currentPath === `/category/${cat.slug}`;
       return (
         <a href={`/category/${cat.slug}`} class:list={["stamp", isActive ? "active" : ""]}>
-          <span class="stamp-dot" style={`background:var(${cat.color})`}></span>{cat.name}
+          <span class="stamp-dot" style={`background:var(${cat.colorVar})`}></span>{cat.name}
         </a>
       );
     })}

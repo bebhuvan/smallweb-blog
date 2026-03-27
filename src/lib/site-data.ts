@@ -53,6 +53,15 @@ export function getPosts() {
   return getPostsCache().posts || [];
 }
 
+export function getSiteStats() {
+  const postsCache = getPostsCache();
+  return {
+    blogCount: getBlogs().length,
+    postCount: postsCache.posts?.length || 0,
+    lastUpdated: postsCache.lastUpdated || '',
+  };
+}
+
 export function getBlogMap(blogs = getBlogs()) {
   return createBlogMap(blogs);
 }
@@ -80,4 +89,3 @@ export async function getStatusCacheSafe(): Promise<StatusCache> {
     return EMPTY_STATUS;
   }
 }
-
