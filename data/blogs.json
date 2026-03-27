@@ -1545,6 +1545,66 @@
       ],
       "proxy": true,
       "description": "Science infrastructure, deep tech, and capital structures for consequential research and industry."
+    },
+    {
+      "id": "jasmine",
+      "name": "@jasmine’s substack",
+      "url": "https://jasmi.news",
+      "feed": "https://jasmi.news/feed",
+      "categories": [
+        "culture",
+        "tech"
+      ],
+      "proxy": true,
+      "description": "An anthropology of disruption, with essays on AI and Silicon Valley culture."
+    },
+    {
+      "id": "artificialbureaucracy",
+      "name": "Artificial Bureaucracy",
+      "url": "https://artificialbureaucracy.substack.com",
+      "feed": "https://artificialbureaucracy.substack.com/feed",
+      "categories": [
+        "history",
+        "tech"
+      ],
+      "proxy": true,
+      "description": "Kevin Baker on the history of computing, government software, and bureaucratic systems."
+    },
+    {
+      "id": "evernotquite",
+      "name": "Ever Not Quite",
+      "url": "https://evernotquite.substack.com",
+      "feed": "https://evernotquite.substack.com/feed",
+      "categories": [
+        "tech",
+        "philosophy"
+      ],
+      "proxy": true,
+      "description": "Essays about technology and the human."
+    },
+    {
+      "id": "casssunstein",
+      "name": "Cass’s Substack",
+      "url": "https://casssunstein.substack.com",
+      "feed": "https://casssunstein.substack.com/feed",
+      "categories": [
+        "economics",
+        "psychology"
+      ],
+      "proxy": true,
+      "description": "Cass Sunstein on policy, law, behavioral economics, and public reasoning."
+    },
+    {
+      "id": "critiqueanddigest",
+      "name": "The Abrahamic Metacritique",
+      "url": "https://critiqueanddigest.substack.com",
+      "feed": "https://critiqueanddigest.substack.com/feed",
+      "categories": [
+        "history",
+        "philosophy"
+      ],
+      "proxy": true,
+      "description": "Hussein Aboubakr Mansour on Middle Eastern history, Arab intellectual life, philosophy, and politics."
     }
   ]
 }
