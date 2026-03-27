@@ -1,6 +1,182 @@
 {
-  "lastUpdated": "2026-03-26T18:01:57.750Z",
+  "lastUpdated": "2026-03-27T03:46:58.288Z",
   "posts": [
+    {
+      "id": "id1zs5",
+      "blogId": "marginalian",
+      "title": "The Bird in the Heart: Terry Tempest Williams on the Paradox of Transformation and How to Live with Uncertainty",
+      "link": "https://www.themarginalian.org/2026/03/26/when-women-were-birds",
+      "date": "2026-03-27T02:34:16.000Z",
+      "excerpt": "\"We can change, evolve, and transform our own conditioning. We can choose to move like water rather than be molded like clay.\""
+    },
+    {
+      "id": "c28l9f",
+      "blogId": "simonwillison",
+      "title": "We Rewrote JSONata with AI in a Day, Saved $500K/Year",
+      "link": "https://simonwillison.net/2026/Mar/27/vine-porting-jsonata",
+      "date": "2026-03-27T00:35:01.000Z",
+      "excerpt": "We Rewrote JSONata with AI in a Day, Saved $500K/Year Bit of a hyperbolic framing but this looks like another case study of vibe porting, this time spinning up a new custom Go implementation of the JSONata JSON expression language - similar in focus to jq, and heavily associated with the Node-RED pl..."
+    },
+    {
+      "id": "393vhq",
+      "blogId": "astralcodexten",
+      "title": "Book Review: The White King Of La Gonave",
+      "link": "https://www.astralcodexten.com/p/book-review-the-white-king-of-la",
+      "date": "2026-03-27T00:26:19.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "d2mzbd",
+      "blogId": "simonwillison",
+      "title": "My minute-by-minute response to the LiteLLM malware attack",
+      "link": "https://simonwillison.net/2026/Mar/26/response-to-the-litellm-malware-attack",
+      "date": "2026-03-26T23:58:22.000Z",
+      "excerpt": "My minute-by-minute response to the LiteLLM malware attack Callum McMahon reported the LiteLLM malware attack to PyPI. Here he shares the Claude transcripts he used to help him confirm the vulnerability and decide what to do about it. Claude even suggested the PyPI security contact address after con..."
+    },
+    {
+      "id": "8h31yw",
+      "blogId": "aldaily",
+      "title": "Oliver Sacks and the art of annotation. His marginalia spanned 10,000 books, the chronicle of a life well read",
+      "link": "https://theamericanscholar.org/thinking-in-the-margins",
+      "date": "2026-03-26T23:42:20.000Z",
+      "excerpt": "Oliver Sacks and the art of annotation. His marginalia spanned 10,000 books, the chronicle of a life well read"
+    },
+    {
+      "id": "fj2if8",
+      "blogId": "aldaily",
+      "title": "An idolatrous, consumerist faith in AI that has distorted our thinking about human life and human meaning",
+      "link": "https://www.commonwealmagazine.org/wittgenstein-apocalypse-ludwig-stern-ai-artificial-intelligence-technology",
+      "date": "2026-03-26T23:41:20.000Z",
+      "excerpt": "An idolatrous, consumerist faith in AI that has distorted our thinking about human life and human meaning"
+    },
+    {
+      "id": "j7ok91",
+      "blogId": "aldaily",
+      "title": "Robert Macfarlane is one of the great nature writers of his generation, making him an unusual critic of the genre",
+      "link": "https://www.thenation.com/article/culture/robert-macfarlane-river-alive",
+      "date": "2026-03-26T23:40:20.000Z",
+      "excerpt": "Robert Macfarlane is one of the great nature writers of his generation, making him an unusual critic of the genre"
+    },
+    {
+      "id": "cbxfzr",
+      "blogId": "aldaily",
+      "title": "Robert Trivers reveled in explaining the contradictions of the human condition, and he himself was a mess of them. Steven Pinker explains",
+      "link": "https://quillette.com/2026/03/25/the-many-roots-of-our-suffering-reflections-on-robert-trivers-1943-2026",
+      "date": "2026-03-26T23:39:20.000Z",
+      "excerpt": "Robert Trivers reveled in explaining the contradictions of the human condition, and he himself was a mess of them. Steven Pinker explains"
+    },
+    {
+      "id": "jtafwd",
+      "blogId": "aldaily",
+      "title": "As Francis Bacon put it in 1597: “Some books are to be tasted, others to be swallowed, and some few to be chewed and digested”",
+      "link": "https://www.theatlantic.com/ideas/2026/03/slow-reading-books-benefits/686266?gift=ih3Agm7ZTQUXUY2wyHjxRFR2iAmdYiIlFC5rx2tjRuE",
+      "date": "2026-03-26T23:38:20.000Z",
+      "excerpt": "As Francis Bacon put it in 1597: “Some books are to be tasted, others to be swallowed, and some few to be chewed and digested”"
+    },
+    {
+      "id": "9r459d",
+      "blogId": "aldaily",
+      "title": "In the ’60s, Richard Hofstadter identified a “paranoid style.” Today’s version of that impulse, a “woke style,” is similarly inescapable — even on the Right",
+      "link": "https://www.chronicle.com/article/elise-stefanik-goes-woke",
+      "date": "2026-03-26T23:37:20.000Z",
+      "excerpt": "In the ’60s, Richard Hofstadter identified a “paranoid style.” Today’s version of that impulse, a “woke style,” is similarly inescapable — even on the Right"
+    },
+    {
+      "id": "o7c43i",
+      "blogId": "aldaily",
+      "title": "Long fact, literary nonfiction, narrative nonfiction: The genre is hard to define, essential, and imperiled. Paul Elie explains",
+      "link": "https://newrepublic.com/article/207659/non-fiction-publishing-threat-important-ever",
+      "date": "2026-03-26T23:36:20.000Z",
+      "excerpt": "Long fact, literary nonfiction, narrative nonfiction: The genre is hard to define, essential, and imperiled. Paul Elie explains"
+    },
+    {
+      "id": "nibkdh",
+      "blogId": "aldaily",
+      "title": "Constantine Cavafy preferred mystery, candlelight, and shadow. His biographers are still squinting",
+      "link": "https://yalereview.org/article/langdon-hammer-the-elusive-poet-of-desire",
+      "date": "2026-03-26T23:35:20.000Z",
+      "excerpt": "Constantine Cavafy preferred mystery, candlelight, and shadow. His biographers are still squinting"
+    },
+    {
+      "id": "krllw9",
+      "blogId": "aldaily",
+      "title": "In response to AI, artists and critics are increasingly retreating to a Romantic conception of art, but there are problems with that defense",
+      "link": "https://aeon.co/essays/if-we-hope-to-build-artificial-souls-where-should-we-start",
+      "date": "2026-03-26T23:34:20.000Z",
+      "excerpt": "In response to AI, artists and critics are increasingly retreating to a Romantic conception of art, but there are problems with that defense"
+    },
+    {
+      "id": "xwpk1c",
+      "blogId": "aldaily",
+      "title": "Marc Andreessen says introspection is a Viennese import from the 1920s. Montaigne, Bacon, and Descartes beg to differ ",
+      "link": "https://compactmag.substack.com/p/critique-of-agentic-reason",
+      "date": "2026-03-26T23:33:20.000Z",
+      "excerpt": "Marc Andreessen says introspection is a Viennese import from the 1920s. Montaigne, Bacon, and Descartes beg to differ"
+    },
+    {
+      "id": "b3fcbg",
+      "blogId": "wollenblog",
+      "title": "A reply to Lorenzo Elijah, PhD, on the gratitude theory of political obligation",
+      "link": "https://wollenblog.substack.com/p/a-reply-to-lorenzo-elijah-phd-on",
+      "date": "2026-03-26T23:09:46.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "5vip08",
+      "blogId": "astralcodexten",
+      "title": "Hidden Open Thread 426.5",
+      "link": "https://www.astralcodexten.com/p/hidden-open-thread-4265",
+      "date": "2026-03-26T23:06:51.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "v4ksqz",
+      "blogId": "persuasion",
+      "title": "My Intelligence Isn't Artificial, Thanks",
+      "link": "https://www.persuasion.community/p/why-i-still-boycott-ai",
+      "date": "2026-03-26T22:45:42.000Z",
+      "excerpt": "Why choosing my brain over a machine is the easiest decision I ever made."
+    },
+    {
+      "id": "ibf04i",
+      "blogId": "bignewsletter",
+      "title": "\"We Wanted Them to Feel It\": Ordinary Americans Take on Mark Zuckerberg and Big Tech in Jury Trials",
+      "link": "https://www.thebignewsletter.com/p/normal-americans-say-enough-to-big",
+      "date": "2026-03-26T22:07:22.000Z",
+      "excerpt": "In its 'Big Tobacco' moment, big tech lost major jury trials in Los Angeles and New Mexico over their behavior towards kids. The legal establishment is freaking out."
+    },
+    {
+      "id": "2d62ma",
+      "blogId": "wisdomofcrowds",
+      "title": "Techno Humanism? A Debate with Antón Barba-Kay and Jason Crawford",
+      "link": "https://wisdomofcrowds.live/p/techno-humanism-a-debate-with-anton",
+      "date": "2026-03-26T20:23:43.000Z",
+      "excerpt": "Live Podcast Recording—April 7; The Crown & Crow, Washington, DC"
+    },
+    {
+      "id": "f8m2hq",
+      "blogId": "persuasion",
+      "title": "This Week At Persuasion",
+      "link": "https://www.persuasion.community/p/this-week-at-persuasion-ecf",
+      "date": "2026-03-26T20:15:42.000Z",
+      "excerpt": "Quico Toro on development economics! Plus, Shashank Joshi on The Good Fight!"
+    },
+    {
+      "id": "88ao1k",
+      "blogId": "abnormalreturns",
+      "title": "Thursday links: an adversarial relationship",
+      "link": "https://abnormalreturns.com/2026/03/26/thursday-links-an-adversarial-relationship",
+      "date": "2026-03-26T20:03:49.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "52k9un",
+      "blogId": "kottke",
+      "title": " There’s an upside-down “H” on the... ",
+      "link": "https://kottke.org/26/03/0048602-theres-an-upside-down-h-o",
+      "date": "2026-03-26T17:58:45.000Z",
+      "excerpt": "There’s an upside-down “H” on the facade of a Frank Lloyd Wright building in Illinois. Here’s a deep dive into how it got there."
+    },
     {
       "id": "vvt5dw",
       "blogId": "danq",
@@ -47,7 +223,7 @@
       "title": "Quantization from the ground up",
       "link": "https://simonwillison.net/2026/Mar/26/quantization-from-the-ground-up",
       "date": "2026-03-26T16:21:09.000Z",
-      "excerpt": "Quantization from the ground up Sam Rose continues his streak of publishing spectacularly informative interactive essays, this time explaining how quantization of Large Language Models works. Also included is the best visual explanation I've ever seen of how floating point numbers are represented us..."
+      "excerpt": "Quantization from the ground up Sam Rose continues his streak of publishing spectacularly informative interactive essays, this time explaining how quantization of Large Language Models works (which he says might be \"the best post I've ever made\".) Also included is the best visual explanation I've ev..."
     },
     {
       "id": "muh99f",
@@ -60,7 +236,7 @@
     {
       "id": "dmw6ms",
       "blogId": "benthamsbulldog",
-      "title": "Let Robots Vote! ",
+      "title": "Let Conscious AI Vote! ",
       "link": "https://benthams.substack.com/p/let-robots-vote",
       "date": "2026-03-26T16:09:48.000Z",
       "excerpt": "If they have minds"
@@ -144,62 +320,6 @@
       "link": "https://ritholtz.com/2026/03/rwm-san-francisco",
       "date": "2026-03-26T14:00:32.000Z",
       "excerpt": "Ritholtz Wealth Management is heading west. The week of April 16, 2026, our team will be in San Francisco to meet with clients and advisors. If you’re in the Bay Area and want to connect, we’d love to hear from you. We’re also thrilled to announce a special live taping of Masters in… Read More The p..."
-    },
-    {
-      "id": "cbxfzr",
-      "blogId": "aldaily",
-      "title": "Robert Trivers reveled in explaining the contradictions of the human condition, and he himself was a mess of them. Steven Pinker explains",
-      "link": "https://quillette.com/2026/03/25/the-many-roots-of-our-suffering-reflections-on-robert-trivers-1943-2026",
-      "date": "2026-03-26T13:56:00.000Z",
-      "excerpt": "Robert Trivers reveled in explaining the contradictions of the human condition, and he himself was a mess of them. Steven Pinker explains"
-    },
-    {
-      "id": "jtafwd",
-      "blogId": "aldaily",
-      "title": "As Francis Bacon put it in 1597: “Some books are to be tasted, others to be swallowed, and some few to be chewed and digested”",
-      "link": "https://www.theatlantic.com/ideas/2026/03/slow-reading-books-benefits/686266?gift=ih3Agm7ZTQUXUY2wyHjxRFR2iAmdYiIlFC5rx2tjRuE",
-      "date": "2026-03-26T13:55:00.000Z",
-      "excerpt": "As Francis Bacon put it in 1597: “Some books are to be tasted, others to be swallowed, and some few to be chewed and digested”"
-    },
-    {
-      "id": "9r459d",
-      "blogId": "aldaily",
-      "title": "In the ’60s, Richard Hofstadter identified a “paranoid style.” Today’s version of that impulse, a “woke style,” is similarly inescapable — even on the Right",
-      "link": "https://www.chronicle.com/article/elise-stefanik-goes-woke",
-      "date": "2026-03-26T13:54:00.000Z",
-      "excerpt": "In the ’60s, Richard Hofstadter identified a “paranoid style.” Today’s version of that impulse, a “woke style,” is similarly inescapable — even on the Right"
-    },
-    {
-      "id": "o7c43i",
-      "blogId": "aldaily",
-      "title": "Long fact, literary nonfiction, narrative nonfiction: The genre is hard to define, essential, and imperiled. Paul Elie explains",
-      "link": "https://newrepublic.com/article/207659/non-fiction-publishing-threat-important-ever",
-      "date": "2026-03-26T13:53:00.000Z",
-      "excerpt": "Long fact, literary nonfiction, narrative nonfiction: The genre is hard to define, essential, and imperiled. Paul Elie explains"
-    },
-    {
-      "id": "nibkdh",
-      "blogId": "aldaily",
-      "title": "Constantine Cavafy preferred mystery, candlelight, and shadow. His biographers are still squinting",
-      "link": "https://yalereview.org/article/langdon-hammer-the-elusive-poet-of-desire",
-      "date": "2026-03-26T13:52:00.000Z",
-      "excerpt": "Constantine Cavafy preferred mystery, candlelight, and shadow. His biographers are still squinting"
-    },
-    {
-      "id": "krllw9",
-      "blogId": "aldaily",
-      "title": "In response to AI, artists and critics are increasingly retreating to a Romantic conception of art, but there are problems with that defense",
-      "link": "https://aeon.co/essays/if-we-hope-to-build-artificial-souls-where-should-we-start",
-      "date": "2026-03-26T13:51:00.000Z",
-      "excerpt": "In response to AI, artists and critics are increasingly retreating to a Romantic conception of art, but there are problems with that defense"
-    },
-    {
-      "id": "xwpk1c",
-      "blogId": "aldaily",
-      "title": "Marc Andreessen says introspection is a Viennese import from the 1920s. Montaigne, Bacon, and Descartes beg to differ ",
-      "link": "https://compactmag.substack.com/p/critique-of-agentic-reason",
-      "date": "2026-03-26T13:50:00.000Z",
-      "excerpt": "Marc Andreessen says introspection is a Viennese import from the 1920s. Montaigne, Bacon, and Descartes beg to differ"
     },
     {
       "id": "bnxl3d",
@@ -44968,6 +45088,14 @@
       "link": "https://paulgraham.com/javacover.html",
       "date": "2001-04-01T00:00:00.000Z",
       "excerpt": ""
+    },
+    {
+      "id": "ilxynk",
+      "blogId": "spyglass",
+      "title": "Big Techbacco",
+      "link": "https://spyglass.org/big-techbacco",
+      "date": "1729-12-15T00:00:00.000Z",
+      "excerpt": "The growing risk that these companies are viewed as a cancer..."
     }
   ]
 }
