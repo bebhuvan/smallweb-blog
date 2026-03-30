@@ -1,6 +1,230 @@
 {
-  "lastUpdated": "2026-03-29T17:32:53.999Z",
+  "lastUpdated": "2026-03-30T03:56:18.322Z",
   "posts": [
+    {
+      "id": "sek7zv",
+      "blogId": "thecuttingfloor",
+      "title": "Embodiment / Who can House the Machine?",
+      "link": "https://thecuttingfloor.substack.com/p/embodiment",
+      "date": "2026-03-30T03:50:38.000Z",
+      "excerpt": "Reality Is the Hardest Teacher Left"
+    },
+    {
+      "id": "qhww5a",
+      "blogId": "honestbroker",
+      "title": "Everything You Expect Is Missing in 'Project Hail Mary'",
+      "link": "https://www.honest-broker.com/p/everything-you-expect-is-missing",
+      "date": "2026-03-30T03:50:31.000Z",
+      "excerpt": "And that's for the better"
+    },
+    {
+      "id": "dmm8h5",
+      "blogId": "bignewsletter",
+      "title": "Monopoly Round-Up: The Iran War Price Hikes Start",
+      "link": "https://www.thebignewsletter.com/p/monopoly-round-up-the-iran-war-price",
+      "date": "2026-03-30T03:19:40.000Z",
+      "excerpt": "Prices are going up and markets are in chaos. This time, the rich aren't insulated. Plus, Australia bans social media for teens, Israeli soldiers are obsessed with betting on war, and more."
+    },
+    {
+      "id": "mdza8h",
+      "blogId": "mostlyeconomics",
+      "title": "Regulatory Reform for Sustainable Consumption in the FMCG Sector: The Case of Low TFM Soap Bar",
+      "link": "https://mostlyeconomics.wordpress.com/2026/03/30/regulatory-reform-for-sustainable-consumption-in-the-fmcg-sector-the-case-of-low-tfm-soap-bar",
+      "date": "2026-03-30T03:19:00.000Z",
+      "excerpt": "Rijit Sengupta, K.P. Ananthapadmanabhan and Praseetha P Kumar in this IPPR paper make a case for higher usage of low TFP (Total Fatty Matter) soaps: This conceptual policy paper with a specific technology case study underlines the importance of using scientific evidence in strengthening regulation t..."
+    },
+    {
+      "id": "d5r6br",
+      "blogId": "alanwsmith",
+      "title": "Pulling Magic Commander Rankings from EDHREC",
+      "link": "https://www.alanwsmith.com/en/3b/e9/v6/zj",
+      "date": "2026-03-30T02:44:49.000Z",
+      "excerpt": "I'm working on a tool to help me build Magic Decksmdb. It'll let me search and assemble cards from data via Scryfallsf. I also want to see other folks are doing. For example, which are the most used commanders. I'm grabbing data from EDHRECedh for that. This is the script I'm using to pull in the ra..."
+    },
+    {
+      "id": "1pwx28",
+      "blogId": "alanwsmith",
+      "title": "Parse a String of Text into JSON in Python",
+      "link": "https://www.alanwsmith.com/en/3b/e8/gm/e5",
+      "date": "2026-03-30T02:38:08.000Z",
+      "excerpt": "import json input = '{ \"alfa\": \"bravo\", \"charlie\": \"delta\" }' data = json.loads(input) print(data) print(\"----\") print(json.dumps(data, sort_keys=True, indent=2, default=str)) Output: {'alfa': 'bravo', 'charlie': 'delta'} ---- { \"alfa\": \"bravo\", \"charlie\": \"delta\" }"
+    },
+    {
+      "id": "7a10x6",
+      "blogId": "noahpinion",
+      "title": "Maybe you should have bought an electric car",
+      "link": "https://www.noahpinion.blog/p/maybe-you-should-have-bought-an-electric",
+      "date": "2026-03-30T02:08:06.000Z",
+      "excerpt": "The Iran War is illustrating the cost of anti-EV nonsense."
+    },
+    {
+      "id": "hwu0zi",
+      "blogId": "marginalrevolution",
+      "title": "*The AI Doc*",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/03/the-ai-doc.html",
+      "date": "2026-03-30T01:51:39.000Z",
+      "excerpt": "The subtitle of the movie is Or How I Became an Apocaloptimist, and here is the trailer. Overall this film was better and smarter than I was expecting. Intelligent people were allowed to speak, and to present various sides of the issue. It was also interesting to see how various people one knows com..."
+    },
+    {
+      "id": "b8eyys",
+      "blogId": "scattershot",
+      "title": "Friday's Trailheads",
+      "link": "https://scattershot.blog/2026/03/29/fridays-trailheads",
+      "date": "2026-03-30T01:12:37.000Z",
+      "excerpt": "Remembering the Man, Chuck Norris by Titus Techera There’s another way to think about movies, morality, and manliness, and Norris at his best showed that it’s available to people who don’t share in Hollywood’s glamour or its Progressive ideology. Instead, Norris connected manliness, as exemplified b..."
+    },
+    {
+      "id": "ldvxub",
+      "blogId": "matt",
+      "title": "JAŸ-Z Returns",
+      "link": "https://ma.tt/2026/03/hov",
+      "date": "2026-03-30T00:44:41.000Z",
+      "excerpt": "Since he spoke to Dean Baquet in 2017, JAŸ-Z hasn’t done an interview. Hov’s back! He sat down with GQ, and it’s a lovely listen and read. We played enough defense, 2026 is all about offense. Your morality defines who you are, not what you’ve attained."
+    },
+    {
+      "id": "ngoty2",
+      "blogId": "aldaily",
+      "title": "How to define a color. A seemingly simple task came to require scientific and industrial — as well as aesthetic — expertise",
+      "link": "https://www.wsj.com/arts-culture/books/true-color-review-not-so-black-and-white-12ed9615?st=ANhehf&reflink=desktopwebshare_permalink",
+      "date": "2026-03-29T23:52:17.000Z",
+      "excerpt": "How to define a color. A seemingly simple task came to require scientific and industrial — as well as aesthetic — expertise"
+    },
+    {
+      "id": "1yxbyv",
+      "blogId": "aldaily",
+      "title": "The philosopher and the tsar. Leibniz courted Peter the Great for decades, seeking influence and ducats. The effort resulted in frustration",
+      "link": "https://www.the-hinternet.com/p/the-philosopher-and-the-tsar",
+      "date": "2026-03-29T23:51:17.000Z",
+      "excerpt": "The philosopher and the tsar. Leibniz courted Peter the Great for decades, seeking influence and ducats. The effort resulted in frustration"
+    },
+    {
+      "id": "24bgvn",
+      "blogId": "aldaily",
+      "title": "Updike and the Jews: the men grotesque, hairy, hunched; the women dumpy and frizzy",
+      "link": "https://jewishreviewofbooks.com/literature/19654/updike-and-the-jews",
+      "date": "2026-03-29T23:50:17.000Z",
+      "excerpt": "Updike and the Jews: the men grotesque, hairy, hunched; the women dumpy and frizzy"
+    },
+    {
+      "id": "lk93q8",
+      "blogId": "wollenblog",
+      "title": "Two debates about the existence of God",
+      "link": "https://wollenblog.substack.com/p/two-debates",
+      "date": "2026-03-29T23:49:21.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "8h31yw",
+      "blogId": "aldaily",
+      "title": "Oliver Sacks and the art of annotation. His marginalia spanned 10,000 books, the chronicle of a life well read",
+      "link": "https://theamericanscholar.org/thinking-in-the-margins",
+      "date": "2026-03-29T23:49:17.000Z",
+      "excerpt": "Oliver Sacks and the art of annotation. His marginalia spanned 10,000 books, the chronicle of a life well read"
+    },
+    {
+      "id": "fj2if8",
+      "blogId": "aldaily",
+      "title": "An idolatrous, consumerist faith in AI has distorted our thinking about human life and human meaning",
+      "link": "https://www.commonwealmagazine.org/wittgenstein-apocalypse-ludwig-stern-ai-artificial-intelligence-technology",
+      "date": "2026-03-29T23:48:17.000Z",
+      "excerpt": "An idolatrous, consumerist faith in AI has distorted our thinking about human life and human meaning"
+    },
+    {
+      "id": "j7ok91",
+      "blogId": "aldaily",
+      "title": "Robert Macfarlane is one of the great nature writers of his generation, making him an unusual critic of the genre",
+      "link": "https://www.thenation.com/article/culture/robert-macfarlane-river-alive",
+      "date": "2026-03-29T23:47:17.000Z",
+      "excerpt": "Robert Macfarlane is one of the great nature writers of his generation, making him an unusual critic of the genre"
+    },
+    {
+      "id": "cbxfzr",
+      "blogId": "aldaily",
+      "title": "Robert Trivers reveled in explaining the contradictions of the human condition, and he himself was a mess of them. Steven Pinker explains",
+      "link": "https://quillette.com/2026/03/25/the-many-roots-of-our-suffering-reflections-on-robert-trivers-1943-2026",
+      "date": "2026-03-29T23:46:17.000Z",
+      "excerpt": "Robert Trivers reveled in explaining the contradictions of the human condition, and he himself was a mess of them. Steven Pinker explains"
+    },
+    {
+      "id": "jtafwd",
+      "blogId": "aldaily",
+      "title": "As Francis Bacon put it in 1597: “Some books are to be tasted, others to be swallowed, and some few to be chewed and digested”",
+      "link": "https://www.theatlantic.com/ideas/2026/03/slow-reading-books-benefits/686266?gift=ih3Agm7ZTQUXUY2wyHjxRFR2iAmdYiIlFC5rx2tjRuE",
+      "date": "2026-03-29T23:45:17.000Z",
+      "excerpt": "As Francis Bacon put it in 1597: “Some books are to be tasted, others to be swallowed, and some few to be chewed and digested”"
+    },
+    {
+      "id": "9r459d",
+      "blogId": "aldaily",
+      "title": "In the ’60s, Richard Hofstadter identified a “paranoid style.” Today’s version of that impulse, a “woke style,” is similarly inescapable — even on the Right",
+      "link": "https://www.chronicle.com/article/elise-stefanik-goes-woke",
+      "date": "2026-03-29T23:44:17.000Z",
+      "excerpt": "In the ’60s, Richard Hofstadter identified a “paranoid style.” Today’s version of that impulse, a “woke style,” is similarly inescapable — even on the Right"
+    },
+    {
+      "id": "nibkdh",
+      "blogId": "aldaily",
+      "title": "Constantine Cavafy preferred mystery, candlelight, and shadow. His biographers are still squinting",
+      "link": "https://yalereview.org/article/langdon-hammer-the-elusive-poet-of-desire",
+      "date": "2026-03-29T23:43:17.000Z",
+      "excerpt": "Constantine Cavafy preferred mystery, candlelight, and shadow. His biographers are still squinting"
+    },
+    {
+      "id": "gtpitk",
+      "blogId": "marginalian",
+      "title": "Ursula K. Le Guin on Suffering and Getting to the Other Side of Pain",
+      "link": "https://www.themarginalian.org/2026/03/29/ursula-k-le-guin-the-dispossessed-suffering",
+      "date": "2026-03-29T23:36:48.000Z",
+      "excerpt": "\"All you have is what you are, and what you give.\""
+    },
+    {
+      "id": "d8ayks",
+      "blogId": "critiqueanddigest",
+      "title": "Years Of Crisis And Decision",
+      "link": "https://critiqueanddigest.substack.com/p/the-years-of-crisis-and-decision",
+      "date": "2026-03-29T20:53:01.000Z",
+      "excerpt": "The World and Times of Naguib Mahfouz"
+    },
+    {
+      "id": "dx265o",
+      "blogId": "simonwillison",
+      "title": "Pretext",
+      "link": "https://simonwillison.net/2026/Mar/29/pretext",
+      "date": "2026-03-29T20:08:45.000Z",
+      "excerpt": "Pretext Exciting new browser library from Cheng Lou, previously a React core developer and the original creator of the react-motion animation library. Pretext solves the problem of calculating the height of a paragraph of line-wrapped text without touching the DOM. The usual way of doing this is to..."
+    },
+    {
+      "id": "ma3qpv",
+      "blogId": "simonwillison",
+      "title": "Pretext — Under the Hood",
+      "link": "https://simonwillison.net/2026/Mar/29/pretext-explainer",
+      "date": "2026-03-29T19:59:28.000Z",
+      "excerpt": "Tool: Pretext — Under the Hood See my notes on Pretext here."
+    },
+    {
+      "id": "6yo12j",
+      "blogId": "curtjaimungal",
+      "title": "Quantum Mechanics Contradicts Itself (and He Proved It)",
+      "link": "https://curtjaimungal.substack.com/p/quantum-mechanics-contradicts-itself",
+      "date": "2026-03-29T19:20:30.000Z",
+      "excerpt": "Why this ETH Zurich professor abandoned every interpretation"
+    },
+    {
+      "id": "jvkyq2",
+      "blogId": "marginalrevolution",
+      "title": "The Candidates’ tournament",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/03/the-candidates-tournament-2.html",
+      "date": "2026-03-29T19:12:32.000Z",
+      "excerpt": "Caruana and Sindharov have won today, obviously boosting Caruana’s chances as favorite (he beat Nakamura, the number two rated player in the tournament). Yet what the chess world needs right now is not a winner, but rather a greater sense of legitimacy for the world title. Ideally the same person sh..."
+    },
+    {
+      "id": "vzorko",
+      "blogId": "simonwillison",
+      "title": "Python Vulnerability Lookup",
+      "link": "https://simonwillison.net/2026/Mar/29/python-vulnerability-lookup",
+      "date": "2026-03-29T18:46:16.000Z",
+      "excerpt": "Tool: Python Vulnerability Lookup I learned that the OSV.dev open source vulnerability database has an open CORS JSON API, so I had Claude Code build this HTML tool for pasting in a pyproject.toml or requirements.txt file (or name of a GitHub repo containing those) and seeing a list of all reported..."
+    },
     {
       "id": "hjkwu",
       "blogId": "marginalian",
@@ -40,86 +264,6 @@
       "link": "https://awealthofcommonsense.com/2026/03/how-the-stock-market-performs-after-a-correction",
       "date": "2026-03-29T13:47:37.000Z",
       "excerpt": "How does the stock market perform after it's down 10%, 20% or 30%? The post How the Stock Market Performs After a Correction appeared first on A Wealth of Common Sense. ..."
-    },
-    {
-      "id": "ngoty2",
-      "blogId": "aldaily",
-      "title": "How to define a color. A seemingly simple task came to require scientific and industrial — as well as aesthetic — expertise",
-      "link": "https://www.wsj.com/arts-culture/books/true-color-review-not-so-black-and-white-12ed9615?st=ANhehf&reflink=desktopwebshare_permalink",
-      "date": "2026-03-29T13:21:04.000Z",
-      "excerpt": "How to define a color. A seemingly simple task came to require scientific and industrial — as well as aesthetic — expertise"
-    },
-    {
-      "id": "1yxbyv",
-      "blogId": "aldaily",
-      "title": "The philosopher and the tsar. Leibniz courted Peter the Great for decades, seeking influence and ducats. The effort resulted in frustration",
-      "link": "https://www.the-hinternet.com/p/the-philosopher-and-the-tsar",
-      "date": "2026-03-29T13:20:04.000Z",
-      "excerpt": "The philosopher and the tsar. Leibniz courted Peter the Great for decades, seeking influence and ducats. The effort resulted in frustration"
-    },
-    {
-      "id": "24bgvn",
-      "blogId": "aldaily",
-      "title": "Updike and the Jews: the men grotesque, hairy, hunched; the women dumpy and frizzy",
-      "link": "https://jewishreviewofbooks.com/literature/19654/updike-and-the-jews",
-      "date": "2026-03-29T13:19:04.000Z",
-      "excerpt": "Updike and the Jews: the men grotesque, hairy, hunched; the women dumpy and frizzy"
-    },
-    {
-      "id": "8h31yw",
-      "blogId": "aldaily",
-      "title": "Oliver Sacks and the art of annotation. His marginalia spanned 10,000 books, the chronicle of a life well read",
-      "link": "https://theamericanscholar.org/thinking-in-the-margins",
-      "date": "2026-03-29T13:18:04.000Z",
-      "excerpt": "Oliver Sacks and the art of annotation. His marginalia spanned 10,000 books, the chronicle of a life well read"
-    },
-    {
-      "id": "fj2if8",
-      "blogId": "aldaily",
-      "title": "An idolatrous, consumerist faith in AI has distorted our thinking about human life and human meaning",
-      "link": "https://www.commonwealmagazine.org/wittgenstein-apocalypse-ludwig-stern-ai-artificial-intelligence-technology",
-      "date": "2026-03-29T13:17:04.000Z",
-      "excerpt": "An idolatrous, consumerist faith in AI has distorted our thinking about human life and human meaning"
-    },
-    {
-      "id": "j7ok91",
-      "blogId": "aldaily",
-      "title": "Robert Macfarlane is one of the great nature writers of his generation, making him an unusual critic of the genre",
-      "link": "https://www.thenation.com/article/culture/robert-macfarlane-river-alive",
-      "date": "2026-03-29T13:16:04.000Z",
-      "excerpt": "Robert Macfarlane is one of the great nature writers of his generation, making him an unusual critic of the genre"
-    },
-    {
-      "id": "cbxfzr",
-      "blogId": "aldaily",
-      "title": "Robert Trivers reveled in explaining the contradictions of the human condition, and he himself was a mess of them. Steven Pinker explains",
-      "link": "https://quillette.com/2026/03/25/the-many-roots-of-our-suffering-reflections-on-robert-trivers-1943-2026",
-      "date": "2026-03-29T13:15:04.000Z",
-      "excerpt": "Robert Trivers reveled in explaining the contradictions of the human condition, and he himself was a mess of them. Steven Pinker explains"
-    },
-    {
-      "id": "jtafwd",
-      "blogId": "aldaily",
-      "title": "As Francis Bacon put it in 1597: “Some books are to be tasted, others to be swallowed, and some few to be chewed and digested”",
-      "link": "https://www.theatlantic.com/ideas/2026/03/slow-reading-books-benefits/686266?gift=ih3Agm7ZTQUXUY2wyHjxRFR2iAmdYiIlFC5rx2tjRuE",
-      "date": "2026-03-29T13:14:04.000Z",
-      "excerpt": "As Francis Bacon put it in 1597: “Some books are to be tasted, others to be swallowed, and some few to be chewed and digested”"
-    },
-    {
-      "id": "9r459d",
-      "blogId": "aldaily",
-      "title": "In the ’60s, Richard Hofstadter identified a “paranoid style.” Today’s version of that impulse, a “woke style,” is similarly inescapable — even on the Right",
-      "link": "https://www.chronicle.com/article/elise-stefanik-goes-woke",
-      "date": "2026-03-29T13:13:04.000Z",
-      "excerpt": "In the ’60s, Richard Hofstadter identified a “paranoid style.” Today’s version of that impulse, a “woke style,” is similarly inescapable — even on the Right"
-    },
-    {
-      "id": "nibkdh",
-      "blogId": "aldaily",
-      "title": "Constantine Cavafy preferred mystery, candlelight, and shadow. His biographers are still squinting",
-      "link": "https://yalereview.org/article/langdon-hammer-the-elusive-poet-of-desire",
-      "date": "2026-03-29T13:12:04.000Z",
-      "excerpt": "Constantine Cavafy preferred mystery, candlelight, and shadow. His biographers are still squinting"
     },
     {
       "id": "72hac2",
@@ -239,7 +383,7 @@
       "title": "Community Antibodies",
       "link": "https://ma.tt/2026/03/community-antibodies",
       "date": "2026-03-28T22:12:33.000Z",
-      "excerpt": "First, I want to say how great the jazz scene is in New York. I caught a little Latin at my go-to Guantamera last night, but the band seemed to be phoning it in a bit, so I walked over to Dizzy’s and heard an amazing big band performance by the Diva all-women Jass Orchestra, … Continue reading Commu..."
+      "excerpt": "First, I want to say how great the jazz scene is in New York. I caught a little Latin at my go-to Guantanamera last night, but the band seemed to be phoning it in a bit, so I walked over to Dizzy’s and heard an amazing big band performance by the Diva all-women Jass Orchestra, … Continue reading Com..."
     },
     {
       "id": "ip7f7n",
@@ -22010,20 +22154,20 @@
       "excerpt": "One of my core software engineering practices is writing, by hand, in a physical notebook[1]. It's one of the most important things I do to remain productive and effective. Maybe the single most important. And it's a practice that I see very few others using! When I polled my Mastodon followers, 25%..."
     },
     {
-      "id": "la2802",
-      "blogId": "lucumr",
-      "title": "A Language For Agents",
-      "link": "https://lucumr.pocoo.org/2026/2/9/a-language-for-agents",
-      "date": "2026-02-09T00:00:00.000Z",
-      "excerpt": "Last year I first started thinking about what the future of programming languages might look like now that agentic engineering is a growing thing. Initially I felt that the enormous corpus of pre-existing code would cement existing languages in place but now I’m starting to think the opposite is tru..."
-    },
-    {
       "id": "41r2d0",
       "blogId": "sivers",
       "title": "What next?",
       "link": "https://sive.rs/u60",
       "date": "2026-02-09T00:00:00.000Z",
       "excerpt": "I have so much more to say on this subject, but this book is done now because I believe short books are useful. So the conversation continues on the website: sive.rs/u sive.rs/contact sivers.com —— Derek Sivers New Zealand June 2024 (Saturday, winter)"
+    },
+    {
+      "id": "la2802",
+      "blogId": "lucumr",
+      "title": "A Language For Agents",
+      "link": "https://lucumr.pocoo.org/2026/2/9/a-language-for-agents",
+      "date": "2026-02-09T00:00:00.000Z",
+      "excerpt": "Last year I first started thinking about what the future of programming languages might look like now that agentic engineering is a growing thing. Initially I felt that the enormous corpus of pre-existing code would cement existing languages in place but now I’m starting to think the opposite is tru..."
     },
     {
       "id": "14cucz",
@@ -22338,20 +22482,20 @@
       "excerpt": "Large tech companies operate via systems. What that means is that the main outcomes - up to and including the overall success or failure of the company - are driven by a complex network of processes and incentives. These systems are outside the control of any particular person. Like the parts of a l..."
     },
     {
-      "id": "1pr26j",
-      "blogId": "shreevatsa",
-      "title": "“tāta” in the Rāmāyaṇa",
-      "link": "https://shreevatsa.net/post/taata-ramayana",
-      "date": "2026-02-08T00:00:00.000Z",
-      "excerpt": "The Sanskrit word tāta (“father”) is sometimes used affectionately for a younger person. (Similar to “appa” in Kannada etc.) This usage occurs widely in Sanskrit literature, but we can look at the Rāmāyaṇa as an example. Here are all the occurrences of the word tāta in the Rāmāyaṇa, thanks to Dr. Ol..."
-    },
-    {
       "id": "41r2ce",
       "blogId": "sivers",
       "title": "Reframing death",
       "link": "https://sive.rs/u59",
       "date": "2026-02-08T00:00:00.000Z",
       "excerpt": "For the last three years, my boy and I have had a pet mouse. We got her from a pet store, and he’s carried her in his hand through so many adventures in forests, beaches, and playgrounds. She sat on many little handmade boats down the creeks of New Zealand. Sand castles and Lego houses built just fo..."
+    },
+    {
+      "id": "1pr26j",
+      "blogId": "shreevatsa",
+      "title": "“tāta” in the Rāmāyaṇa",
+      "link": "https://shreevatsa.net/post/taata-ramayana",
+      "date": "2026-02-08T00:00:00.000Z",
+      "excerpt": "The Sanskrit word tāta (“father”) is sometimes used affectionately for a younger person. (Similar to “appa” in Kannada etc.) This usage occurs widely in Sanskrit literature, but we can look at the Rāmāyaṇa as an example. Here are all the occurrences of the word tāta in the Rāmāyaṇa, thanks to Dr. Ol..."
     },
     {
       "id": "mnc3je",
@@ -23178,20 +23322,20 @@
       "excerpt": "Last year, I completed 20 years in professional software development. I wanted to write a post to mark the occasion back then, but couldn't find the time. This post is my attempt to make up for that omission. In fact, I have been involved in software development for a little longer than 20 years. Al..."
     },
     {
-      "id": "r4mmnl",
-      "blogId": "anildash",
-      "title": "There's no such thing as \"tech\" (Ten years later)",
-      "link": "https://anildash.com/2026/02/06/no-such-thing-as-tech",
-      "date": "2026-02-06T00:00:00.000Z",
-      "excerpt": "Ten years ago I wrote that there is no “technology industry”. It’s more true than ever. There is no “tech”. There’s no such thing as “a FAANG company”. There is almost nothing in common between the very largest tech companies and the next several hundred biggest companies that happen to create tech..."
-    },
-    {
       "id": "41r2cc",
       "blogId": "sivers",
       "title": "Keep tuning and adjusting",
       "link": "https://sive.rs/u57",
       "date": "2026-02-06T00:00:00.000Z",
       "excerpt": "When I got my first guitar, the nice man at the shop put on new strings and tuned it. A week later, I brought it back to the shop because it sounded terrible. He told me it was just out of tune. I said, “But you tuned it already!” He explained that I constantly have to re-tune it every time I play...."
+    },
+    {
+      "id": "r4mmnl",
+      "blogId": "anildash",
+      "title": "There's no such thing as \"tech\" (Ten years later)",
+      "link": "https://anildash.com/2026/02/06/no-such-thing-as-tech",
+      "date": "2026-02-06T00:00:00.000Z",
+      "excerpt": "Ten years ago I wrote that there is no “technology industry”. It’s more true than ever. There is no “tech”. There’s no such thing as “a FAANG company”. There is almost nothing in common between the very largest tech companies and the next several hundred biggest companies that happen to create tech..."
     },
     {
       "id": "aojv2a",
@@ -24362,20 +24506,20 @@
       "excerpt": "Spotify’s Molly Holder on the power of prompted playlists. PLUS: Meta is testing a standalone Vibes app"
     },
     {
-      "id": "39slhn",
-      "blogId": "anildash",
-      "title": "New York Tech at 30: the Crossroads",
-      "link": "https://anildash.com/2026/02/03/nye-tech-30",
-      "date": "2026-02-04T00:00:00.000Z",
-      "excerpt": "This past week, over a series of events, the New York tech community celebrated the 30th anniversary of a nebulous idea described as “Silicon Alley”, the catch-all term for our greater collective of creators and collaborators, founders and funders, inventors and investors, educators and entrepreneur..."
-    },
-    {
       "id": "41r2ca",
       "blogId": "sivers",
       "title": "Why your choice is wrong",
       "link": "https://sive.rs/u55",
       "date": "2026-02-04T00:00:00.000Z",
       "excerpt": "No matter what choice you make, someone will tell you it’s wrong. It’s not what they need. It’s not what an expert recommends. You might feel a need to defend it, or argue why you’re right. Don’t bother. Your choice helps you do what you need to do, be who you want to be, or feel at peace. That’s en..."
+    },
+    {
+      "id": "39slhn",
+      "blogId": "anildash",
+      "title": "New York Tech at 30: the Crossroads",
+      "link": "https://anildash.com/2026/02/03/nye-tech-30",
+      "date": "2026-02-04T00:00:00.000Z",
+      "excerpt": "This past week, over a series of events, the New York tech community celebrated the 30th anniversary of a nebulous idea described as “Silicon Alley”, the catch-all term for our greater collective of creators and collaborators, founders and funders, inventors and investors, educators and entrepreneur..."
     },
     {
       "id": "fx2azi",
@@ -26354,20 +26498,20 @@
       "excerpt": "The industry is currently obsessed with defining standards for how Large Language Models (LLMs) should interact with software. We see a proliferation of SDKs, function calling schemas, and protocols like MCP (Model Context Protocol). They all aim to solve the same problem: bridging the gap between n..."
     },
     {
-      "id": "qfvs80",
-      "blogId": "lucumr",
-      "title": "Pi: The Minimal Agent Within OpenClaw",
-      "link": "https://lucumr.pocoo.org/2026/1/31/pi",
-      "date": "2026-01-31T00:00:00.000Z",
-      "excerpt": "If you haven’t been living under a rock, you will have noticed this week that a project of my friend Peter went viral on the internet. It went by many names. The most recent one is OpenClaw but in the news you might have encountered it as ClawdBot or MoltBot depending on when you read about it. It i..."
-    },
-    {
       "id": "41r2c6",
       "blogId": "sivers",
       "title": "From explorer to self-leader",
       "link": "https://sive.rs/u51",
       "date": "2026-01-31T00:00:00.000Z",
       "excerpt": "Picture the stereotype of an explorer, hundreds of years ago, on an expedition to uncharted lands. The explorer tries everything. Up that river. Down that valley. Into every inlet. The explorer finds a nice harbor that would make a great port, and notifies the queen. The leader goes in a straight li..."
+    },
+    {
+      "id": "qfvs80",
+      "blogId": "lucumr",
+      "title": "Pi: The Minimal Agent Within OpenClaw",
+      "link": "https://lucumr.pocoo.org/2026/1/31/pi",
+      "date": "2026-01-31T00:00:00.000Z",
+      "excerpt": "If you haven’t been living under a rock, you will have noticed this week that a project of my friend Peter went viral on the internet. It went by many names. The most recent one is OpenClaw but in the news you might have encountered it as ClawdBot or MoltBot depending on when you read about it. It i..."
     },
     {
       "id": "d6jraa",
@@ -26850,20 +26994,20 @@
       "excerpt": "Necessary cognitive fortification against propaganda, pseudoscience, and general falsehood."
     },
     {
-      "id": "gy6vxj",
-      "blogId": "nadh",
-      "title": "Code is cheap. Show me the talk.",
-      "link": "https://nadh.in/blog/code-is-cheap",
-      "date": "2026-01-30T00:00:00.000Z",
-      "excerpt": "TLDR; Software development, as it has been done for decades, is over. LLM coding tools have changed it fundamentally for the better or worse. “Talk is cheap. Show me the code.” — Linus Torvalds, August 2000"
-    },
-    {
       "id": "41r2c5",
       "blogId": "sivers",
       "title": "How to decide and make the best choice",
       "link": "https://sive.rs/u50",
       "date": "2026-01-30T00:00:00.000Z",
       "excerpt": "You can do anything. But you can’t do everything. You have to decide. If you don’t decide, you get nothing. How do you know what’s the best choice? Trick question! No choice is the best in itself. A choice becomes the best when you choose it. That’s when you make your decision congruent. You find pl..."
+    },
+    {
+      "id": "gy6vxj",
+      "blogId": "nadh",
+      "title": "Code is cheap. Show me the talk.",
+      "link": "https://nadh.in/blog/code-is-cheap",
+      "date": "2026-01-30T00:00:00.000Z",
+      "excerpt": "TLDR; Software development, as it has been done for decades, is over. LLM coding tools have changed it fundamentally for the better or worse. “Talk is cheap. Show me the code.” — Linus Torvalds, August 2000"
     },
     {
       "id": "yk6vvw",
@@ -28250,20 +28394,20 @@
       "excerpt": "QuickQWERTY 1.2.1 is now available. QuickQWERTY is a web-based touch typing tutor for QWERTY keyboards that runs directly in the web browser. This release contains a minor bug fix in Unit 4.3. Unit 4.3 is a 'Control' unit that lets you practise typing partial words as well as full words. In one plac..."
     },
     {
-      "id": "nus2g",
-      "blogId": "lucumr",
-      "title": "Colin and Earendil",
-      "link": "https://lucumr.pocoo.org/2026/1/27/earendil",
-      "date": "2026-01-27T00:00:00.000Z",
-      "excerpt": "Regular readers of this blog will know that I started a new company. We have put out just a tiny bit of information today, and some keen folks have discovered and reached out by email with many thoughtful responses. It has been delightful. Colin and I met here, in Vienna. We started sharing coffees,..."
-    },
-    {
       "id": "41r2bh",
       "blogId": "sivers",
       "title": "Traits of useful perspectives",
       "link": "https://sive.rs/u47",
       "date": "2026-01-27T00:00:00.000Z",
       "excerpt": "To list all the beliefs I’ve found useful would fill a whole book. (Actually, four books so far, since that’s what my previous books were about.) So instead, for your own ideation, it might help if I list the traits that my most useful perspectives have shared: Energizing: I’ll think of many smart b..."
+    },
+    {
+      "id": "nus2g",
+      "blogId": "lucumr",
+      "title": "Colin and Earendil",
+      "link": "https://lucumr.pocoo.org/2026/1/27/earendil",
+      "date": "2026-01-27T00:00:00.000Z",
+      "excerpt": "Regular readers of this blog will know that I started a new company. We have put out just a tiny bit of information today, and some keen folks have discovered and reached out by email with many thoughtful responses. It has been delightful. Colin and I met here, in Vienna. We started sharing coffees,..."
     },
     {
       "id": "24iv7q",
@@ -29258,20 +29402,20 @@
       "excerpt": "Trump's AI agenda is often described as a push for deregulation; an effort to cut red tape so AI companies can innovate. In truth, it's a big government project with designs toward domination."
     },
     {
-      "id": "j8dsbw",
-      "blogId": "maggieappleton",
-      "title": "Gas Town’s Agent Patterns, Design Bottlenecks, and Vibecoding at Scale",
-      "link": "https://maggieappleton.com/gastown",
-      "date": "2026-01-23T00:00:00.000Z",
-      "excerpt": "On agent orchestration patterns, why design and critical thinking are the new bottlenecks, and whether we should let go of looking at code"
-    },
-    {
       "id": "41r2bd",
       "blogId": "sivers",
       "title": "Who chooses your (next) thoughts?",
       "link": "https://sive.rs/u43",
       "date": "2026-01-23T00:00:00.000Z",
       "excerpt": "You might say, “I can’t help the way I feel”, as if it’s completely out of your control — as if you have no choice and are unable to feel any other way. But you do have a choice. Think a different way and you’ll feel a different way. You choose your reaction. Not the first one, but the next. Somethi..."
+    },
+    {
+      "id": "j8dsbw",
+      "blogId": "maggieappleton",
+      "title": "Gas Town’s Agent Patterns, Design Bottlenecks, and Vibecoding at Scale",
+      "link": "https://maggieappleton.com/gastown",
+      "date": "2026-01-23T00:00:00.000Z",
+      "excerpt": "On agent orchestration patterns, why design and critical thinking are the new bottlenecks, and whether we should let go of looking at code"
     },
     {
       "id": "cowpjc",
