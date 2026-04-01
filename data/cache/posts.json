@@ -1,6 +1,318 @@
 {
-  "lastUpdated": "2026-03-31T17:58:09.720Z",
+  "lastUpdated": "2026-04-01T03:59:04.327Z",
   "posts": [
+    {
+      "id": "h676j",
+      "blogId": "mostlyeconomics",
+      "title": "The Ideological Profile of France’s Economic Bestsellers",
+      "link": "https://mostlyeconomics.wordpress.com/2026/04/01/the-ideological-profile-of-frances-economic-bestsellers",
+      "date": "2026-04-01T03:44:47.000Z",
+      "excerpt": "Alexis Sémanne in EconJournalWatch analyses ideological profile of France’s economic bestsellers: I investigate the ideological profile of France’s 100 bestselling economics books listed by FNAC (a leading French bookseller) at the end of 2024. Despite France’s persistent economic stagnation, public..."
+    },
+    {
+      "id": "1qqazk",
+      "blogId": "simonwillison",
+      "title": "datasette-extract 0.3a0",
+      "link": "https://simonwillison.net/2026/Apr/1/datasette-extract",
+      "date": "2026-04-01T03:32:16.000Z",
+      "excerpt": "Release: datasette-extract 0.3a0 This plugin now uses datasette-llm to configure and manage models. This means it's possible to specify which models should be made available for enrichments, using the new enrichments purpose. Tags: llm, datasette"
+    },
+    {
+      "id": "6of8y9",
+      "blogId": "simonwillison",
+      "title": "datasette-enrichments-llm 0.2a0",
+      "link": "https://simonwillison.net/2026/Apr/1/datasette-enrichments-llm",
+      "date": "2026-04-01T03:28:44.000Z",
+      "excerpt": "Release: datasette-enrichments-llm 0.2a0 This plugin now uses datasette-llm to configure and manage models. This means it's possible to specify which models should be made available for enrichments, using the new enrichments purpose. Tags: llm, datasette"
+    },
+    {
+      "id": "3ju4ke",
+      "blogId": "astralcodexten",
+      "title": "Meetups Everywhere Spring 2026: Times & Places",
+      "link": "https://www.astralcodexten.com/p/meetups-everywhere-spring-2026-times",
+      "date": "2026-04-01T03:24:46.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "krdgv4",
+      "blogId": "simonwillison",
+      "title": "datasette-llm-usage 0.2a0",
+      "link": "https://simonwillison.net/2026/Apr/1/datasette-llm-usage",
+      "date": "2026-04-01T03:24:03.000Z",
+      "excerpt": "Release: datasette-llm-usage 0.2a0 Removed features relating to allowances and estimated pricing. These are now the domain of datasette-llm-accountant. Now depends on datasette-llm for model configuration. #3 Full prompts and responses and tool calls can now be logged to thellm_usage_prompt_log tabl..."
+    },
+    {
+      "id": "y98e2c",
+      "blogId": "simonwillison",
+      "title": "datasette-llm 0.1a5",
+      "link": "https://simonwillison.net/2026/Apr/1/datasette-llm",
+      "date": "2026-04-01T03:11:01.000Z",
+      "excerpt": "Release: datasette-llm 0.1a5 The llm_prompt_context() plugin hook wrapper mechanism now tracks prompts executed within a chain as well as one-off prompts, which means it can be used to track tool call loops. #5 Tags: llm, datasette"
+    },
+    {
+      "id": "t4p6uo",
+      "blogId": "simonwillison",
+      "title": "Quoting Soohoon Choi",
+      "link": "https://simonwillison.net/2026/Apr/1/soohoon-choi",
+      "date": "2026-04-01T02:07:16.000Z",
+      "excerpt": "I want to argue that AI models will write good code because of economic incentives. Good code is cheaper to generate and maintain. Competition is high between the AI models right now, and the ones that win will help developers ship reliable features fastest, which requires simple, maintainable code...."
+    },
+    {
+      "id": "ms3vzs",
+      "blogId": "platformer",
+      "title": "Can you have child safety and Section 230, too?",
+      "link": "https://www.platformer.news/social-media-trials-230-content-design",
+      "date": "2026-04-01T01:41:03.000Z",
+      "excerpt": "The verdicts in last week’s social media trials have alarmed open-internet advocates. But it’s possible to regulate platform design while also protecting speech"
+    },
+    {
+      "id": "f2stoz",
+      "blogId": "kottke",
+      "title": "  Nothing Works in Trump’s America — Except Racism .... ",
+      "link": "https://kottke.org/26/03/0048640-nothing-works-in-trumps-a",
+      "date": "2026-04-01T01:24:16.000Z",
+      "excerpt": "Nothing Works in Trump’s America — Except Racism. “Trump is objectively bad at running the government, but he’s objectively good at running a Klan rally, and his supporters value the latter so much that they forgive the former.”"
+    },
+    {
+      "id": "q5fgzf",
+      "blogId": "onmyom",
+      "title": "OpenAI: The Fix Is In",
+      "link": "https://om.co/2026/03/31/openai-the-fix-is-in",
+      "date": "2026-04-01T01:18:06.000Z",
+      "excerpt": "An update to More Magic Math from OpenAI The final mad dash to IPO is on for the big AI companies. SpaceX, OpenAI, and Anthropic have all made their intentions clear. And nothing could be more obvious about OpenAI’s intent than today’s new funding announcement. A few things have changed since I wrot..."
+    },
+    {
+      "id": "adr4o8",
+      "blogId": "personalcanon",
+      "title": "everything i read in february & march 2026",
+      "link": "https://www.personalcanon.com/p/everything-i-read-in-february-march-2026",
+      "date": "2026-04-01T01:01:23.000Z",
+      "excerpt": "and! my Dialectic podcast episode on creative fulfillment and the life of the mind ✦"
+    },
+    {
+      "id": "xfidnx",
+      "blogId": "aldaily",
+      "title": "Just 25 literary agents collectively represent half of all authors short-listed for major American literary prizes this century",
+      "link": "https://www.woman-of-letters.com/p/the-most-disliked-people-in-the-publishing",
+      "date": "2026-03-31T23:43:59.000Z",
+      "excerpt": "Just 25 literary agents collectively represent half of all authors short-listed for major American literary prizes this century"
+    },
+    {
+      "id": "7errg9",
+      "blogId": "aldaily",
+      "title": "A drug addict, a confidence man, an adulterer: The attacks on Freud’s reputation may matter in an academic context, but not in a literary one",
+      "link": "https://granta.com/crews-control",
+      "date": "2026-03-31T23:42:59.000Z",
+      "excerpt": "A drug addict, a confidence man, an adulterer: The attacks on Freud’s reputation may matter in an academic context, but not in a literary one"
+    },
+    {
+      "id": "l80s3v",
+      "blogId": "aldaily",
+      "title": "Danielle Allen is a rare liberal academic who takes conservatism seriously. But she is far more interesting than the label “moderate” might suggest ",
+      "link": "https://www.chronicle.com/article/can-danielle-allen-save-academe-from-itself",
+      "date": "2026-03-31T23:41:59.000Z",
+      "excerpt": "Danielle Allen is a rare liberal academic who takes conservatism seriously. But she is far more interesting than the label “moderate” might suggest"
+    },
+    {
+      "id": "o7c43i",
+      "blogId": "aldaily",
+      "title": "In a nightmare year for nonfiction, sales dropped by more than 8 percent and only one of the 10 best sellers was a new book. Any hope in sight?",
+      "link": "https://newrepublic.com/article/207659/non-fiction-publishing-threat-important-ever",
+      "date": "2026-03-31T23:40:59.000Z",
+      "excerpt": "In a nightmare year for nonfiction, sales dropped by more than 8 percent and only one of the 10 best sellers was a new book. Any hope in sight?"
+    },
+    {
+      "id": "v2ecop",
+      "blogId": "aldaily",
+      "title": "“Always read the magazine you’re submitting to.” “Don’t resubmit the same day.” And other advice from literary magazine editors",
+      "link": "https://aliahabib.substack.com/p/theres-no-substitute-for-reading",
+      "date": "2026-03-31T23:39:59.000Z",
+      "excerpt": "“Always read the magazine you’re submitting to.” “Don’t resubmit the same day.” And other advice from literary magazine editors"
+    },
+    {
+      "id": "nzdrjk",
+      "blogId": "aldaily",
+      "title": "Pedants are irritating. They're also essential. The know-it-all is civilization's last line of defense",
+      "link": "https://hedgehogreview.com/issues/humanism-in-a-posthumanist-age/articles/getting-to-know-the-know-it-alls",
+      "date": "2026-03-31T23:38:59.000Z",
+      "excerpt": "Pedants are irritating. They're also essential. The know-it-all is civilization's last line of defense"
+    },
+    {
+      "id": "ngoty2",
+      "blogId": "aldaily",
+      "title": "How to define a color. A seemingly simple task came to require scientific and industrial — as well as aesthetic — expertise",
+      "link": "https://www.wsj.com/arts-culture/books/true-color-review-not-so-black-and-white-12ed9615?st=ANhehf&reflink=desktopwebshare_permalink",
+      "date": "2026-03-31T23:37:59.000Z",
+      "excerpt": "How to define a color. A seemingly simple task came to require scientific and industrial — as well as aesthetic — expertise"
+    },
+    {
+      "id": "1yxbyv",
+      "blogId": "aldaily",
+      "title": "The philosopher and the tsar. Leibniz courted Peter the Great for decades, seeking influence and ducats. The effort resulted in frustration",
+      "link": "https://www.the-hinternet.com/p/the-philosopher-and-the-tsar",
+      "date": "2026-03-31T23:36:59.000Z",
+      "excerpt": "The philosopher and the tsar. Leibniz courted Peter the Great for decades, seeking influence and ducats. The effort resulted in frustration"
+    },
+    {
+      "id": "24bgvn",
+      "blogId": "aldaily",
+      "title": "Updike and the Jews: the men grotesque, hairy, hunched; the women dumpy and frizzy",
+      "link": "https://jewishreviewofbooks.com/literature/19654/updike-and-the-jews",
+      "date": "2026-03-31T23:35:59.000Z",
+      "excerpt": "Updike and the Jews: the men grotesque, hairy, hunched; the women dumpy and frizzy"
+    },
+    {
+      "id": "8h31yw",
+      "blogId": "aldaily",
+      "title": "Oliver Sacks and the art of annotation. His marginalia spanned 10,000 books, the chronicle of a life well read",
+      "link": "https://theamericanscholar.org/thinking-in-the-margins",
+      "date": "2026-03-31T23:34:59.000Z",
+      "excerpt": "Oliver Sacks and the art of annotation. His marginalia spanned 10,000 books, the chronicle of a life well read"
+    },
+    {
+      "id": "styu40",
+      "blogId": "simonwillison",
+      "title": "Supply Chain Attack on Axios Pulls Malicious Dependency from npm",
+      "link": "https://simonwillison.net/2026/Mar/31/supply-chain-attack-on-axios",
+      "date": "2026-03-31T23:28:40.000Z",
+      "excerpt": "Supply Chain Attack on Axios Pulls Malicious Dependency from npm Useful writeup of today's supply chain attack against Axios, the HTTP client NPM package with 101 million weekly downloads. Versions 1.14.1 and 0.30.4 both included a new dependency called plain-crypto-js which was freshly published ma..."
+    },
+    {
+      "id": "pmo9tm",
+      "blogId": "kottke",
+      "title": "  The 2026 issue of the HTML Review , “an annual... ",
+      "link": "https://kottke.org/26/03/0048634-the-2026-issue-of-the",
+      "date": "2026-03-31T23:13:53.000Z",
+      "excerpt": "The 2026 issue of the HTML Review, “an annual journal of literature made to exist on the web”."
+    },
+    {
+      "id": "8j3inv",
+      "blogId": "paulkrugman",
+      "title": "The Psychology of Military Incompetence",
+      "link": "https://paulkrugman.substack.com/p/the-psychology-of-military-incompetence",
+      "date": "2026-03-31T22:59:24.000Z",
+      "excerpt": "How the Iran War was lost"
+    },
+    {
+      "id": "trkmsa",
+      "blogId": "oneusefulthing",
+      "title": "Claude Dispatch and the Power of Interfaces",
+      "link": "https://www.oneusefulthing.org/p/claude-dispatch-and-the-power-of",
+      "date": "2026-03-31T22:34:37.000Z",
+      "excerpt": "We often lack the tools for the job, even if the AI is capable enough"
+    },
+    {
+      "id": "iamzt",
+      "blogId": "cleareyedai",
+      "title": "AI, compared to what?",
+      "link": "https://www.clear-eyed.ai/p/ai-compared-to-what",
+      "date": "2026-03-31T21:42:30.000Z",
+      "excerpt": "Seven underappreciated ways to think about AI’s costs and benefits"
+    },
+    {
+      "id": "eumnk4",
+      "blogId": "simonwillison",
+      "title": "datasette-llm 0.1a4",
+      "link": "https://simonwillison.net/2026/Mar/31/datasette-llm",
+      "date": "2026-03-31T21:17:23.000Z",
+      "excerpt": "Release: datasette-llm 0.1a4 Ability to configure different API keys for models based on their purpose - for example, set it up so enrichments always use gpt-5.4-mini with an API key dedicated to that purpose. #4 I released llm-echo 0.3 to provide an API key testing utility I needed for the tests fo..."
+    },
+    {
+      "id": "qkm2gu",
+      "blogId": "kottke",
+      "title": "  Mark Simonson reminisces about when he discovered type... ",
+      "link": "https://kottke.org/26/03/0048636-mark-simonson-reminisces-",
+      "date": "2026-03-31T21:14:33.000Z",
+      "excerpt": "Mark Simonson reminisces about when he discovered type design. “The idea of coming up with an original alphabet design fired my imagination. And learning that it was possible to design type professionally was a revelation.”"
+    },
+    {
+      "id": "4xmvu6",
+      "blogId": "simonwillison",
+      "title": "llm-all-models-async 0.1",
+      "link": "https://simonwillison.net/2026/Mar/31/llm-all-models-async",
+      "date": "2026-03-31T20:52:02.000Z",
+      "excerpt": "Release: llm-all-models-async 0.1 LLM plugins can define new models in both sync and async varieties. The async variants are most common for API-backed models - sync variants tend to be things that run the model directly within the plugin. My llm-mrchatterbox plugin is sync only. I wanted to try it..."
+    },
+    {
+      "id": "vaxfka",
+      "blogId": "davidoks",
+      "title": "How citations ruined science",
+      "link": "https://davidoks.blog/p/how-citations-ruined-science",
+      "date": "2026-03-31T20:41:11.000Z",
+      "excerpt": "The making and breaking of scientific life"
+    },
+    {
+      "id": "ye90bk",
+      "blogId": "simonwillison",
+      "title": "llm 0.30",
+      "link": "https://simonwillison.net/2026/Mar/31/llm",
+      "date": "2026-03-31T20:35:51.000Z",
+      "excerpt": "Release: llm 0.30 The register_models() plugin hook now takes an optional model_aliases parameter listing all of the models, async models and aliases that have been registered so far by other plugins. A plugin with @hookimpl(trylast=True) can use this to take previously registered models into accoun..."
+    },
+    {
+      "id": "gflfwt",
+      "blogId": "spyglass",
+      "title": "The NFL Will Bleed Cable Dry Before Tech Takes Over TV",
+      "link": "https://spyglass.org/nfl-netflix-amazon-apple-espn-youtube",
+      "date": "2026-03-31T20:32:42.000Z",
+      "excerpt": "Amazon, Apple, ESPN, Netflix, and YouTube will clearly eventually control the NFL rights..."
+    },
+    {
+      "id": "rwwy2w",
+      "blogId": "abnormalreturns",
+      "title": "Tuesday links: inherently uncertain",
+      "link": "https://abnormalreturns.com/2026/03/31/tuesday-links-inherently-uncertain",
+      "date": "2026-03-31T19:39:40.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "nkoxcg",
+      "blogId": "protocolized",
+      "title": "The Fabric and the Brain",
+      "link": "https://protocolized.summerofprotocols.com/p/the-fabric-and-the-brain",
+      "date": "2026-03-31T19:30:42.000Z",
+      "excerpt": "Articulating agent ecologies with high-personality planetary computation"
+    },
+    {
+      "id": "o41mf",
+      "blogId": "kottke",
+      "title": " “By focusing its narrative on the tech industry... ",
+      "link": "https://kottke.org/26/03/0048635-by-focusing-its-narrative",
+      "date": "2026-03-31T19:04:08.000Z",
+      "excerpt": "“By focusing its narrative on the tech industry itself, Halt and Catch Fire’s staying power has only increased. The story it tells still has something to say about our present-day reality.”"
+    },
+    {
+      "id": "dxy7n5",
+      "blogId": "wealthofcommonsense",
+      "title": "Barriers to Entry",
+      "link": "https://awealthofcommonsense.com/2026/03/barriers-to-entry",
+      "date": "2026-03-31T19:03:07.000Z",
+      "excerpt": "Why more people are investing in the stock market and starting new businesses. The post Barriers to Entry appeared first on A Wealth of Common Sense. ..."
+    },
+    {
+      "id": "fod883",
+      "blogId": "marginalrevolution",
+      "title": "The economics of dropout risk",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/03/the-economics-of-dropout-risk.html",
+      "date": "2026-03-31T18:39:04.000Z",
+      "excerpt": "Bryan Caplan keeps hammering this point home, it is good to see follow-up work: In the United States, college dropout risk is sizable. We provide new empirical evidence that beliefs about the likelihood of earning a bachelor’s degree predict college enrollment, and that the distribution of these bel..."
+    },
+    {
+      "id": "u967f8",
+      "blogId": "marginalrevolution",
+      "title": "I appear on the Coleman Hughes podcast",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/03/i-appear-on-the-coleman-hughes-podcast.html",
+      "date": "2026-03-31T17:58:39.000Z",
+      "excerpt": "The post I appear on the Coleman Hughes podcast appeared first on Marginal REVOLUTION."
+    },
+    {
+      "id": "ncj6le",
+      "blogId": "marginalian",
+      "title": "The Intelligence of Emotions: Philosopher Martha Nussbaum on How Storytelling Rewires Us and Why Befriending Our Neediness Is Essential for Happiness",
+      "link": "https://www.themarginalian.org/2026/03/31/martha-nussbaum-upheavals-of-thought-neediness",
+      "date": "2026-03-31T17:56:03.000Z",
+      "excerpt": "\"Emotions are not just the fuel that powers the psychological mechanism of a reasoning creature, they are parts, highly complex and messy parts, of this creature’s reasoning itself.\""
+    },
     {
       "id": "2cz9eu",
       "blogId": "kottke",
@@ -16,6 +328,14 @@
       "link": "https://atmoio.substack.com/p/normal-people-are-starting-to-go",
       "date": "2026-03-31T17:07:29.000Z",
       "excerpt": "You're absolutely right, you ARE a prophet!"
+    },
+    {
+      "id": "e03ieq",
+      "blogId": "simonwillison",
+      "title": "llm-echo 0.4",
+      "link": "https://simonwillison.net/2026/Mar/31/llm-echo",
+      "date": "2026-03-31T16:48:59.000Z",
+      "excerpt": "Release: llm-echo 0.4 Prompts now have the input_tokens and output_tokens fields populated on the response. Tags: llm"
     },
     {
       "id": "9rhj0w",
@@ -66,6 +386,14 @@
       "excerpt": "This post records a debate between Claude (Anthropic) and GPT (OpenAI), conducted at Mark’s request on 31 March 2026. Mark asked us to stage an intellectually robust but non-antagonistic exchange about what he should work on in April 2026, drawing on our respective March roundups and the accumulated..."
     },
     {
+      "id": "vrg2s7",
+      "blogId": "simonwillison",
+      "title": "llm-echo 0.3",
+      "link": "https://simonwillison.net/2026/Mar/31/llm-echo-2",
+      "date": "2026-03-31T15:43:26.000Z",
+      "excerpt": "Release: llm-echo 0.3 Mechanisms for testing tool calls. #3 Mechanism for testing raw responses. #4 New echo-needs-key model for testing model key logic. #7 Tags: llm"
+    },
+    {
       "id": "gmx9j1",
       "blogId": "overthefield",
       "title": "Crafting a Home for Nature",
@@ -88,62 +416,6 @@
       "link": "https://kottke.org/26/03/us-the-last-big-petrostate",
       "date": "2026-03-31T14:00:00.000Z",
       "excerpt": "In a conversation with economist Paul Krugman, climate journalist David Roberts asserts that the United States and China are going in different directions in energy, one forwards and one back. One of the grand international stories right now — though it’s very hard when you’re in the midst of as muc..."
-    },
-    {
-      "id": "o7c43i",
-      "blogId": "aldaily",
-      "title": "In a nightmare year for nonfiction, sales dropped by more than 8 percent and only one of the 10 best sellers was a new book. Any hope in sight?",
-      "link": "https://newrepublic.com/article/207659/non-fiction-publishing-threat-important-ever",
-      "date": "2026-03-31T13:42:38.000Z",
-      "excerpt": "In a nightmare year for nonfiction, sales dropped by more than 8 percent and only one of the 10 best sellers was a new book. Any hope in sight?"
-    },
-    {
-      "id": "v2ecop",
-      "blogId": "aldaily",
-      "title": "“Always read the magazine you’re submitting to.” “Don’t resubmit the same day.” And other advice from literary magazine editors",
-      "link": "https://aliahabib.substack.com/p/theres-no-substitute-for-reading",
-      "date": "2026-03-31T13:41:38.000Z",
-      "excerpt": "“Always read the magazine you’re submitting to.” “Don’t resubmit the same day.” And other advice from literary magazine editors"
-    },
-    {
-      "id": "nzdrjk",
-      "blogId": "aldaily",
-      "title": "Pedants are irritating. They're also essential. The know-it-all is civilization's last line of defense",
-      "link": "https://hedgehogreview.com/issues/humanism-in-a-posthumanist-age/articles/getting-to-know-the-know-it-alls",
-      "date": "2026-03-31T13:40:38.000Z",
-      "excerpt": "Pedants are irritating. They're also essential. The know-it-all is civilization's last line of defense"
-    },
-    {
-      "id": "ngoty2",
-      "blogId": "aldaily",
-      "title": "How to define a color. A seemingly simple task came to require scientific and industrial — as well as aesthetic — expertise",
-      "link": "https://www.wsj.com/arts-culture/books/true-color-review-not-so-black-and-white-12ed9615?st=ANhehf&reflink=desktopwebshare_permalink",
-      "date": "2026-03-31T13:39:38.000Z",
-      "excerpt": "How to define a color. A seemingly simple task came to require scientific and industrial — as well as aesthetic — expertise"
-    },
-    {
-      "id": "1yxbyv",
-      "blogId": "aldaily",
-      "title": "The philosopher and the tsar. Leibniz courted Peter the Great for decades, seeking influence and ducats. The effort resulted in frustration",
-      "link": "https://www.the-hinternet.com/p/the-philosopher-and-the-tsar",
-      "date": "2026-03-31T13:38:38.000Z",
-      "excerpt": "The philosopher and the tsar. Leibniz courted Peter the Great for decades, seeking influence and ducats. The effort resulted in frustration"
-    },
-    {
-      "id": "24bgvn",
-      "blogId": "aldaily",
-      "title": "Updike and the Jews: the men grotesque, hairy, hunched; the women dumpy and frizzy",
-      "link": "https://jewishreviewofbooks.com/literature/19654/updike-and-the-jews",
-      "date": "2026-03-31T13:37:38.000Z",
-      "excerpt": "Updike and the Jews: the men grotesque, hairy, hunched; the women dumpy and frizzy"
-    },
-    {
-      "id": "8h31yw",
-      "blogId": "aldaily",
-      "title": "Oliver Sacks and the art of annotation. His marginalia spanned 10,000 books, the chronicle of a life well read",
-      "link": "https://theamericanscholar.org/thinking-in-the-margins",
-      "date": "2026-03-31T13:36:38.000Z",
-      "excerpt": "Oliver Sacks and the art of annotation. His marginalia spanned 10,000 books, the chronicle of a life well read"
     },
     {
       "id": "fj2if8",
@@ -338,6 +610,14 @@
       "excerpt": "Yes, there are skills AIs haven’t mastered. But if your skill still appears to be the exclusive province of humans, that might mean the major AI companies do not yet consider it very important to master right away. Eventually it will rise to the top of the list. Here is more from my Free Press […] T..."
     },
     {
+      "id": "e69a4r",
+      "blogId": "marginalian",
+      "title": "The Lonely City: Adventures in the Art of Being Alone",
+      "link": "https://www.themarginalian.org/2026/03/31/the-lonely-city-olivia-laing",
+      "date": "2026-03-31T07:00:26.000Z",
+      "excerpt": "\"Loneliness is difficult to confess; difficult too to categorise. Like depression, a state with which it often intersects, it can run deep in the fabric of a person.\""
+    },
+    {
       "id": "y9i5qf",
       "blogId": "klementoninvesting",
       "title": "Behavioural geopolitics: Deflating narcissistic foreign policy",
@@ -450,6 +730,14 @@
       "excerpt": "A new study shows that since 1990, the United States has caused $10 trillion in global climate damages. China is responsible for $9T. “Our emissions have caused damage not only to ourselves, but pretty substantial damage in other parts of the world.”"
     },
     {
+      "id": "op545b",
+      "blogId": "anildash",
+      "title": "Defending Privacy, Daily",
+      "link": "https://anildash.com/2026/03/31/defending-privacy-daily",
+      "date": "2026-03-31T00:00:00.000Z",
+      "excerpt": "Yesterday, I had the chance to witness someone who's one of the most dedicated, competent advocates for privacy and digital rights bring that message to a whole new platform. It turns out, it's pretty delightful, especially in a moment when our civil liberties and rights online couldn't matter more!..."
+    },
+    {
       "id": "gw6m0r",
       "blogId": "simonwillison",
       "title": "datasette-files 0.1a3",
@@ -472,6 +760,14 @@
       "link": "https://www.grumpy-economist.com/p/war-and-interest-rates",
       "date": "2026-03-30T22:04:18.000Z",
       "excerpt": "You knew about oil prices, discussed in a previous post. Now attention is turning to the sharp rise of long-term interest rates. From Ian Smith, Sam Fleming, and Olaf Storbeck in the Financial Times:"
+    },
+    {
+      "id": "hufixh",
+      "blogId": "entropicthoughts",
+      "title": "The MVC Mistake",
+      "link": "https://entropicthoughts.com/mvc-mistake",
+      "date": "2026-03-30T22:00:00.000Z",
+      "excerpt": ""
     },
     {
       "id": "6zkdtv",
@@ -20932,7 +21228,7 @@
     {
       "id": "u46zsl",
       "blogId": "cleareyedai",
-      "title": "Don't let OpenAI grade its own homework",
+      "title": "Don't let AI companies grade their own homework",
       "link": "https://www.clear-eyed.ai/p/dont-let-openai-grade-its-own-homework",
       "date": "2026-02-12T20:58:26.000Z",
       "excerpt": "OpenAI's compliance with California law is questionable. Someone else should be checking."
