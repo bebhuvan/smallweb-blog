@@ -1,6 +1,222 @@
 {
-  "lastUpdated": "2026-04-05T17:32:36.306Z",
+  "lastUpdated": "2026-04-06T03:56:20.127Z",
   "posts": [
+    {
+      "id": "88jlas",
+      "blogId": "onmyom",
+      "title": "Sam Always Wins",
+      "link": "https://om.co/2026/04/05/951836",
+      "date": "2026-04-06T03:30:14.000Z",
+      "excerpt": "“Sam Altman has it. You could parachute him into an island full of cannibals and come back in 5 years and he’d be the king.” — @paulg Anytime anyone underestimates or tries to do an end run around @sama, I remind myself of this golden nugget from PG, the man who knew him best before …"
+    },
+    {
+      "id": "ek6dej",
+      "blogId": "simonwillison",
+      "title": "datasette-ports 0.2",
+      "link": "https://simonwillison.net/2026/Apr/6/datasette-ports-2",
+      "date": "2026-04-06T03:25:43.000Z",
+      "excerpt": "Release: datasette-ports 0.2 No longer requires Datasette - running uvx datasette-ports now works as well. Installing it as a Datasette plugin continues to provide the datasette ports command. Tags: datasette"
+    },
+    {
+      "id": "8x2ahl",
+      "blogId": "simonwillison",
+      "title": "scan-for-secrets 0.3",
+      "link": "https://simonwillison.net/2026/Apr/6/scan-for-secrets",
+      "date": "2026-04-06T02:59:28.000Z",
+      "excerpt": "Release: scan-for-secrets 0.3 New -r/--redact option which shows the list of matches, asks for confirmation and then replaces every match with REDACTED, taking escaping rules into account. New Python function redact_file(file_path: str | Path, secrets: list[str], replacement: str = \"REDACTED\") -> in..."
+    },
+    {
+      "id": "fnhmch",
+      "blogId": "simonwillison",
+      "title": "Cleanup Claude Code Paste",
+      "link": "https://simonwillison.net/2026/Apr/6/cleanup-claude-code-paste",
+      "date": "2026-04-06T02:55:23.000Z",
+      "excerpt": "Tool: Cleanup Claude Code Paste Super-niche tool this. I sometimes copy prompts out of the Claude Code terminal app and they come out with a bunch of weird additional whitespace. This tool cleans that up. Tags: tools, claude-code"
+    },
+    {
+      "id": "cr2083",
+      "blogId": "bignewsletter",
+      "title": "Monopoly Round-Up: Lina Khan Is Back",
+      "link": "https://www.thebignewsletter.com/p/monopoly-round-up-the-next-chapter",
+      "date": "2026-04-06T02:05:06.000Z",
+      "excerpt": "Pam Bondi got fired, Sysco buys Restaurant Depot, CBS lies about California gas prices, a private equity roll-up is killing bowling leagues, and Palantir will help the IRS do audits."
+    },
+    {
+      "id": "ky8efu",
+      "blogId": "critiqueanddigest",
+      "title": "One Damn Thing After Another",
+      "link": "https://critiqueanddigest.substack.com/p/one-damn-thing-after-another",
+      "date": "2026-04-06T01:34:01.000Z",
+      "excerpt": "Cycles of Power and Ambition in the Middle East"
+    },
+    {
+      "id": "nfwuwh",
+      "blogId": "marginalian",
+      "title": "Sentinels of the Soul: Kahlil Gibran’s Moving Letter to a Soldier in a Senseless War",
+      "link": "https://www.themarginalian.org/2026/04/05/gibran-war",
+      "date": "2026-04-06T00:27:30.000Z",
+      "excerpt": "War is an ism — nationalism, dogmatism, capitalism — paid for by an is: the living beingness of human beings made a sacrificial offering to an ideology so powerful it has quelled the two things that make us most human: compassion and critical thinking. “Those people who see clearly the necessity of..."
+    },
+    {
+      "id": "7rxsfq",
+      "blogId": "simonwillison",
+      "title": "datasette-ports 0.1",
+      "link": "https://simonwillison.net/2026/Apr/6/datasette-ports",
+      "date": "2026-04-06T00:23:55.000Z",
+      "excerpt": "Release: datasette-ports 0.1 Another example of README-driven development, this time solving a problem that might be unique to me. I often find myself running a bunch of different Datasette instances with different databases and different in-development plugins, spreads across dozens of different te..."
+    },
+    {
+      "id": "ujtynl",
+      "blogId": "simonwillison",
+      "title": "Eight years of wanting, three months of building with AI",
+      "link": "https://simonwillison.net/2026/Apr/5/building-with-ai",
+      "date": "2026-04-05T23:54:18.000Z",
+      "excerpt": "Eight years of wanting, three months of building with AI Lalit Maganti provides one of my favorite pieces of long-form writing on agentic engineering I've seen in ages. They spent eight years thinking about and then three months building syntaqlite, which they describe as \"high-fidelity devtools tha..."
+    },
+    {
+      "id": "vcxqfr",
+      "blogId": "aldaily",
+      "title": "The \"literacy crisis\" is older than the iPhone and AI. Dante faced it, so did Wordsworth. Crisis is writing's natural condition",
+      "link": "https://unherd.com/2026/04/the-false-dawn-of-the-post-literate-society?edition=us",
+      "date": "2026-04-05T23:45:02.000Z",
+      "excerpt": "The \"literacy crisis\" is older than the iPhone and AI. Dante faced it, so did Wordsworth. Crisis is writing's natural condition"
+    },
+    {
+      "id": "qndz3m",
+      "blogId": "aldaily",
+      "title": "By the mid-1930s Frank Lloyd Wright was seen as a relic of a previous era. Then he created a new kind of American sublime",
+      "link": "https://aeon.co/essays/frank-lloyd-wright-as-a-mirror-of-the-american-condition",
+      "date": "2026-04-05T23:44:02.000Z",
+      "excerpt": "By the mid-1930s Frank Lloyd Wright was seen as a relic of a previous era. Then he created a new kind of American sublime"
+    },
+    {
+      "id": "6md3b5",
+      "blogId": "aldaily",
+      "title": "Willa Cather’s will prohibited the direct quotation of her letters. The result was a bizarre, confused scholarly morass",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n06/patricia-lockwood/supersensual-ear",
+      "date": "2026-04-05T23:43:02.000Z",
+      "excerpt": "Willa Cather’s will prohibited the direct quotation of her letters. The result was a bizarre, confused scholarly morass"
+    },
+    {
+      "id": "rf5v0y",
+      "blogId": "aldaily",
+      "title": "Jürgen Habermas, “a rationalist when it was unfashionable to be one,” died last month. He was 96... Foreign Policy... Jan-Werner Müller... Matt McManus... Cass Sunstein... Nancy Fraser... Alexander C. Karp...",
+      "link": "https://www.nytimes.com/2026/03/14/books/jurgen-habermas-dead.html?unlocked_article_code=1.TlA.748E.Gyp1BUOsB_-R&smid=url-share",
+      "date": "2026-04-05T23:42:02.000Z",
+      "excerpt": "Jürgen Habermas, “a rationalist when it was unfashionable to be one,” died last month. He was 96... Foreign Policy... Jan-Werner Müller... Matt McManus... Cass Sunstein... Nancy Fraser... Alexander C. Karp..."
+    },
+    {
+      "id": "vlix7s",
+      "blogId": "aldaily",
+      "title": "Jan Morris correctly predicted that whatever her merits as writer, her obituary would inevitably read \"Sex Change Author Dies\"",
+      "link": "https://literaryreview.co.uk/plum-assignments",
+      "date": "2026-04-05T23:41:02.000Z",
+      "excerpt": "Jan Morris correctly predicted that whatever her merits as writer, her obituary would inevitably read \"Sex Change Author Dies\""
+    },
+    {
+      "id": "gd0r4r",
+      "blogId": "aldaily",
+      "title": "Nobody understands Gertrude Stein. With her, incomprehension was always, at least partly, the point",
+      "link": "https://www.thenation.com/article/culture/gertrude-stein-afterlife-wade-review",
+      "date": "2026-04-05T23:40:02.000Z",
+      "excerpt": "Nobody understands Gertrude Stein. With her, incomprehension was always, at least partly, the point"
+    },
+    {
+      "id": "xfidnx",
+      "blogId": "aldaily",
+      "title": "Just 25 literary agents collectively represent half of all authors short-listed for major American literary prizes this century",
+      "link": "https://www.woman-of-letters.com/p/the-most-disliked-people-in-the-publishing",
+      "date": "2026-04-05T23:39:02.000Z",
+      "excerpt": "Just 25 literary agents collectively represent half of all authors short-listed for major American literary prizes this century"
+    },
+    {
+      "id": "7errg9",
+      "blogId": "aldaily",
+      "title": "Drug addict, confidence man, adulterer: The attacks on Freud’s reputation may matter in an academic context, but not in a literary one",
+      "link": "https://granta.com/crews-control",
+      "date": "2026-04-05T23:38:02.000Z",
+      "excerpt": "Drug addict, confidence man, adulterer: The attacks on Freud’s reputation may matter in an academic context, but not in a literary one"
+    },
+    {
+      "id": "l80s3v",
+      "blogId": "aldaily",
+      "title": "Danielle Allen is a rare liberal academic who takes conservatism seriously. But she is far more interesting than the label “moderate” might suggest ",
+      "link": "https://www.chronicle.com/article/can-danielle-allen-save-academe-from-itself",
+      "date": "2026-04-05T23:37:02.000Z",
+      "excerpt": "Danielle Allen is a rare liberal academic who takes conservatism seriously. But she is far more interesting than the label “moderate” might suggest"
+    },
+    {
+      "id": "o7c43i",
+      "blogId": "aldaily",
+      "title": "In a nightmare year for nonfiction, sales dropped by more than 8 percent and only one of the 10 best sellers was a new book. Any hope in sight?",
+      "link": "https://newrepublic.com/article/207659/non-fiction-publishing-threat-important-ever",
+      "date": "2026-04-05T23:36:02.000Z",
+      "excerpt": "In a nightmare year for nonfiction, sales dropped by more than 8 percent and only one of the 10 best sellers was a new book. Any hope in sight?"
+    },
+    {
+      "id": "5vml4c",
+      "blogId": "persuasion",
+      "title": "Episode 184: Frank Dikötter on How Communism Conquered a Quarter of Humanity",
+      "link": "https://www.persuasion.community/p/episode-184-frank-dikotter-on-how",
+      "date": "2026-04-05T22:00:44.000Z",
+      "excerpt": "Bookstack at Persuasion is delivered to you every other Sunday at 6am EST."
+    },
+    {
+      "id": "i65qhg",
+      "blogId": "simonwillison",
+      "title": "Quoting Chengpeng Mou",
+      "link": "https://simonwillison.net/2026/Apr/5/chengpeng-mou",
+      "date": "2026-04-05T21:47:06.000Z",
+      "excerpt": "From anonymized U.S. ChatGPT data, we are seeing: ~2M weekly messages on health insurance ~600K weekly messages [classified as healthcare] from people living in “hospital deserts” (30 min drive to nearest hospital) 7 out of 10 msgs happen outside clinic hours — Chengpeng Mou, Head of Business Financ..."
+    },
+    {
+      "id": "92vjfb",
+      "blogId": "curtjaimungal",
+      "title": "“I See It, But I Don’t Believe It...”",
+      "link": "https://curtjaimungal.substack.com/p/i-see-it-but-i-dont-believe-it",
+      "date": "2026-04-05T21:26:25.000Z",
+      "excerpt": "What is Infinity, Actually?"
+    },
+    {
+      "id": "fi31i4",
+      "blogId": "venkateshrao",
+      "title": "On Cooling America Out",
+      "link": "https://contraptions.venkateshrao.com/p/on-cooling-america-out",
+      "date": "2026-04-05T21:12:46.000Z",
+      "excerpt": "We've been the marks of our own long cons, all the way up"
+    },
+    {
+      "id": "jjukm5",
+      "blogId": "simonwillison",
+      "title": "Syntaqlite Playground",
+      "link": "https://simonwillison.net/2026/Apr/5/syntaqlite",
+      "date": "2026-04-05T19:32:59.000Z",
+      "excerpt": "Tool: Syntaqlite Playground Lalit Maganti's syntaqlite is currently being discussed on Hacker News thanks to Eight years of wanting, three months of building with AI, a deep dive into how it was built. This inspired me to revisit a research project I ran when Lalit first released it a couple of week..."
+    },
+    {
+      "id": "xw0164",
+      "blogId": "ritholtz",
+      "title": "Lefsetz: Anybody Can Get Publicity",
+      "link": "https://ritholtz.com/2026/04/anybody-can-get-publicity",
+      "date": "2026-04-05T19:00:00.000Z",
+      "excerpt": "We are all looking to make it. And we employ signifiers, status markers, to indicate that we’ve crossed the threshold, that we are no longer trapped amongst the great unwashed, that finally we are SOMEBODY! And one of the main ways you felt settled, that you were not only on your way, but part… Read..."
+    },
+    {
+      "id": "3zx5wj",
+      "blogId": "marginalian",
+      "title": "Diseases of the Will: Neuroscience Founding Father Santiago Ramón y Cajal on the Six Psychological Flaws That Keep the Gifted from Living Up to Their Gift",
+      "link": "https://www.themarginalian.org/2026/04/05/diseases-of-the-will-cajal-advice-for-a-young-investigator",
+      "date": "2026-04-05T18:54:59.000Z",
+      "excerpt": "\"Our neurons must be used ... not only to know but also to transform knowledge; not only to experience but also to construct.\""
+    },
+    {
+      "id": "a189bi",
+      "blogId": "marginalrevolution",
+      "title": "Auden on Iceland",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/04/auden-on-iceland.html",
+      "date": "2026-04-05T17:57:45.000Z",
+      "excerpt": "If you have no particular intellectual interests or ambitions and are content with the company of your family and friends, then life on Iceland must be very pleasant, because the inhabitants are friendly, tolerant, and sane. They are genuinely proud of their country and its history, but without the..."
+    },
     {
       "id": "8azfyg",
       "blogId": "atmoio",
@@ -44,7 +260,7 @@
     {
       "id": "gwgtrm",
       "blogId": "benthamsbulldog",
-      "title": "Humans Killed the Megafauna ",
+      "title": "No, Warming Didn't Kill the Megafauna ",
       "link": "https://benthams.substack.com/p/humans-killed-the-megafauna",
       "date": "2026-04-05T15:22:06.000Z",
       "excerpt": "A bunch of big animals went extinct around when humans arrived. Scholars disagree about why."
@@ -56,6 +272,14 @@
       "link": "https://abnormalreturns.com/2026/04/05/sunday-links-a-fundamental-promise",
       "date": "2026-04-05T14:46:31.000Z",
       "excerpt": ""
+    },
+    {
+      "id": "hpsijr",
+      "blogId": "marginalian",
+      "title": "Relationship Rupture and the Limbic System: The Physiology of Abandonment and Separation",
+      "link": "https://www.themarginalian.org/2026/04/05/general-theory-of-love-separation",
+      "date": "2026-04-05T14:25:30.000Z",
+      "excerpt": "\"A relationship is a physiologic process, as real and as potent as any pill or surgical procedure.\""
     },
     {
       "id": "dfo9z8",
@@ -72,86 +296,6 @@
       "link": "https://www.robkhenderson.com/p/everyone-is-allowed-to-know-how-much",
       "date": "2026-04-05T13:39:53.000Z",
       "excerpt": ""
-    },
-    {
-      "id": "vcxqfr",
-      "blogId": "aldaily",
-      "title": "The \"literacy crisis\" is older than the iPhone and AI. Dante faced it, so did Wordsworth. Crisis is writing's natural condition",
-      "link": "https://unherd.com/2026/04/the-false-dawn-of-the-post-literate-society?edition=us",
-      "date": "2026-04-05T13:28:38.000Z",
-      "excerpt": "The \"literacy crisis\" is older than the iPhone and AI. Dante faced it, so did Wordsworth. Crisis is writing's natural condition"
-    },
-    {
-      "id": "qndz3m",
-      "blogId": "aldaily",
-      "title": "By the mid-1930s Frank Lloyd Wright was seen as a relic of a previous era. Then he created a new kind of American sublime",
-      "link": "https://aeon.co/essays/frank-lloyd-wright-as-a-mirror-of-the-american-condition",
-      "date": "2026-04-05T13:27:38.000Z",
-      "excerpt": "By the mid-1930s Frank Lloyd Wright was seen as a relic of a previous era. Then he created a new kind of American sublime"
-    },
-    {
-      "id": "6md3b5",
-      "blogId": "aldaily",
-      "title": "Willa Cather’s will prohibited the direct quotation of her letters. The result was a bizarre, confused scholarly morass",
-      "link": "https://www.lrb.co.uk/the-paper/v48/n06/patricia-lockwood/supersensual-ear",
-      "date": "2026-04-05T13:26:38.000Z",
-      "excerpt": "Willa Cather’s will prohibited the direct quotation of her letters. The result was a bizarre, confused scholarly morass"
-    },
-    {
-      "id": "rf5v0y",
-      "blogId": "aldaily",
-      "title": "Jürgen Habermas, “a rationalist when it was unfashionable to be one,” died last month. He was 96... Foreign Policy... Jan-Werner Müller... Matt McManus... Cass Sunstein... Nancy Fraser... Alexander C. Karp...",
-      "link": "https://www.nytimes.com/2026/03/14/books/jurgen-habermas-dead.html?unlocked_article_code=1.TlA.748E.Gyp1BUOsB_-R&smid=url-share",
-      "date": "2026-04-05T13:25:38.000Z",
-      "excerpt": "Jürgen Habermas, “a rationalist when it was unfashionable to be one,” died last month. He was 96... Foreign Policy... Jan-Werner Müller... Matt McManus... Cass Sunstein... Nancy Fraser... Alexander C. Karp..."
-    },
-    {
-      "id": "vlix7s",
-      "blogId": "aldaily",
-      "title": "Jan Morris correctly predicted that whatever her merits as writer, her obituary would inevitably read \"Sex Change Author Dies\"",
-      "link": "https://literaryreview.co.uk/plum-assignments",
-      "date": "2026-04-05T13:24:38.000Z",
-      "excerpt": "Jan Morris correctly predicted that whatever her merits as writer, her obituary would inevitably read \"Sex Change Author Dies\""
-    },
-    {
-      "id": "gd0r4r",
-      "blogId": "aldaily",
-      "title": "Nobody understands Gertrude Stein. With her, incomprehension was always, at least partly, the point",
-      "link": "https://www.thenation.com/article/culture/gertrude-stein-afterlife-wade-review",
-      "date": "2026-04-05T13:23:38.000Z",
-      "excerpt": "Nobody understands Gertrude Stein. With her, incomprehension was always, at least partly, the point"
-    },
-    {
-      "id": "xfidnx",
-      "blogId": "aldaily",
-      "title": "Just 25 literary agents collectively represent half of all authors short-listed for major American literary prizes this century",
-      "link": "https://www.woman-of-letters.com/p/the-most-disliked-people-in-the-publishing",
-      "date": "2026-04-05T13:22:38.000Z",
-      "excerpt": "Just 25 literary agents collectively represent half of all authors short-listed for major American literary prizes this century"
-    },
-    {
-      "id": "7errg9",
-      "blogId": "aldaily",
-      "title": "Drug addict, confidence man, adulterer: The attacks on Freud’s reputation may matter in an academic context, but not in a literary one",
-      "link": "https://granta.com/crews-control",
-      "date": "2026-04-05T13:21:38.000Z",
-      "excerpt": "Drug addict, confidence man, adulterer: The attacks on Freud’s reputation may matter in an academic context, but not in a literary one"
-    },
-    {
-      "id": "l80s3v",
-      "blogId": "aldaily",
-      "title": "Danielle Allen is a rare liberal academic who takes conservatism seriously. But she is far more interesting than the label “moderate” might suggest ",
-      "link": "https://www.chronicle.com/article/can-danielle-allen-save-academe-from-itself",
-      "date": "2026-04-05T13:20:38.000Z",
-      "excerpt": "Danielle Allen is a rare liberal academic who takes conservatism seriously. But she is far more interesting than the label “moderate” might suggest"
-    },
-    {
-      "id": "o7c43i",
-      "blogId": "aldaily",
-      "title": "In a nightmare year for nonfiction, sales dropped by more than 8 percent and only one of the 10 best sellers was a new book. Any hope in sight?",
-      "link": "https://newrepublic.com/article/207659/non-fiction-publishing-threat-important-ever",
-      "date": "2026-04-05T13:19:38.000Z",
-      "excerpt": "In a nightmare year for nonfiction, sales dropped by more than 8 percent and only one of the 10 best sellers was a new book. Any hope in sight?"
     },
     {
       "id": "y9kwas",
