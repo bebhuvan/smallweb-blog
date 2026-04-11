@@ -4,8 +4,9 @@ interface Props {
   colophon?: string;
 }
 
+const year = new Date().getFullYear();
 const {
-  left = `smallweb · MMXXVI`,
+  left = `smallweb · ${year}`,
   colophon = 'Set in Fraunces & Source Serif on parchment, with a single carmine accent.',
 } = Astro.props;
 ---
