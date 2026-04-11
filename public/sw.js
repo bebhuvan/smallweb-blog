@@ -1,15 +1,14 @@
-const SW_VERSION = new URL(self.location).searchParams.get('v') || 'v3';
+const SW_VERSION = new URL(self.location).searchParams.get('v') || 'v4-bloom';
 const CACHE_NAME = `small-web-${SW_VERSION}`;
 const OFFLINE_URL = '/offline';
 
-// Assets to cache immediately on install
+// Assets to cache immediately on install.
+// Deliberately excludes /archive and /feed — those pages are large and
+// will be fetched + cached on first visit via the network-first handler.
 const PRECACHE_ASSETS = [
   '/',
-  '/archive',
-  '/blogs',
   '/about',
-  '/feed',
-  '/discover',
+  '/blogs',
   '/offline',
 ];
 

@@ -1,0 +1,302 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { CATEGORIES } from '../lib/categories';
+import { getBlogs, getEnrichedPosts, getBlogMap } from '../lib/site-data';
+
+const blogs = getBlogs();
+const blogMap = getBlogMap(blogs);
+const posts = getEnrichedPosts({ blogs, blogMap });
+
+const now = new Date();
+const monthStart = new Date(now.getFullYear(), now.getMonth(), 1).getTime();
+
+function romanize(n: number) {
+  const map: [number, string][] = [[10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']];
+  let out = '';
+  let num = n;
+  for (const [v, s] of map) {
+    while (num >= v) { out += s; num -= v; }
+  }
+  return out;
+}
+
+function splitItalic(name: string): [string, string] {
+  const n = name.length;
+  const tailLen = n <= 4 ? 1 : n <= 6 ? 2 : 3;
+  return [name.slice(0, n - tailLen), name.slice(n - tailLen)];
+}
+
+const shelves = CATEGORIES.map((c, i) => {
+  const catWriters = blogs.filter((b) => (b.categories || []).includes(c.slug)).length;
+  const catPosts = posts.filter((p) => p.category === c.slug);
+  const thisMonth = catPosts.filter((p) => new Date(p.date).getTime() >= monthStart).length;
+  const latest = catPosts[0];
+  const [head, tail] = splitItalic(c.name);
+  return {
+    ...c,
+    head,
+    tail,
+    numeral: romanize(i + 1),
+    writers: catWriters,
+    essays: catPosts.length,
+    thisMonth,
+    latest,
+  };
+});
+---
+
+<Base title="Departments — smallweb" description="The ten shelves that make up smallweb — from tech to philosophy.">
+  <Header currentPath="/departments" tag="the ten shelves of the library" />
+
+  <main>
+
+    <section class="dept-hero">
+      <aside class="side-left">
+        <span class="side-label">The shelves</span>
+        Ten departments, hand-maintained.
+        <div class="ornament"></div>
+        Each shelf gathers a handful of independent writers under a single quiet heading.
+      </aside>
+
+      <div class="dept-title-block">
+        <span class="eyebrow" data-cat="culture">Ten departments</span>
+        <h1>The <em>library</em>,<br />by shelf.</h1>
+      </div>
+
+      <aside class="side-right">
+        <div class="dept-stat figures"><em>{CATEGORIES.length}</em></div>
+        <div class="side-note">shelves in rotation.</div>
+        <div class="ornament"></div>
+        <div class="side-note"><b class="figures">{blogs.length}</b> writers across the library.</div>
+      </aside>
+    </section>
+
+    <ol class="dept-index">
+      {shelves.map((s) => (
+        <li class="dept-entry" data-cat={s.slug}>
+          <a href={`/category/${s.slug}`}>
+            <span class="de-num">{s.numeral}.</span>
+            <div class="de-body">
+              <h2 class="de-name">{s.head}<em>{s.tail}</em></h2>
+              <p class="de-desc">{s.description}.</p>
+              <div class="de-meta">
+                <span><b class="figures">{s.writers}</b> {s.writers === 1 ? 'writer' : 'writers'}</span>
+                <span class="sep">·</span>
+                <span><b class="figures">{s.essays}</b> essays</span>
+                {s.thisMonth > 0 && (
+                  <>
+                    <span class="sep">·</span>
+                    <span><b class="figures">{s.thisMonth}</b> this month</span>
+                  </>
+                )}
+              </div>
+              {s.latest && (
+                <div class="de-latest">
+                  <span class="de-latest-label">Latest</span>
+                  <span class="de-latest-title">{s.latest.title}</span>
+                  <span class="de-latest-writer">{s.latest.blogName}</span>
+                </div>
+              )}
+            </div>
+          </a>
+        </li>
+      ))}
+    </ol>
+
+  </main>
+
+  <Footer left="Departments · smallweb" colophon="Ten shelves, hand-maintained." />
+</Base>
+
+<style>
+  .dept-hero {
+    display: grid;
+    grid-template-columns: 180px 1fr 220px;
+    gap: 56px;
+    align-items: start;
+    padding-bottom: 72px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .side-left, .side-right {
+    font-family: var(--serif-body);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    font-style: italic;
+  }
+  .side-left { text-align: right; padding-top: 18px; }
+  .side-right { padding-top: 18px; }
+
+  .dept-title-block h1 {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(56px, 9vw, 124px);
+    line-height: 0.88;
+    letter-spacing: -0.035em;
+    margin: 18px 0 0;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    color: var(--ink);
+  }
+  .dept-title-block h1 em { font-style: italic; color: var(--accent); }
+
+  .side-right .dept-stat {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144;
+  }
+  .side-right .dept-stat em { font-style: italic; color: var(--accent); }
+  .side-right .side-note {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-top: 10px;
+  }
+
+  .dept-index {
+    list-style: none;
+    margin: 0;
+    padding: 64px 0 0;
+  }
+  .dept-entry {
+    border-bottom: 1px solid var(--rule);
+    --de-color: var(--ink);
+  }
+  .dept-entry:last-child { border-bottom: 0; }
+  .dept-entry[data-cat="tech"]       { --de-color: var(--tech); }
+  .dept-entry[data-cat="culture"]    { --de-color: var(--culture); }
+  .dept-entry[data-cat="economics"]  { --de-color: var(--economics); }
+  .dept-entry[data-cat="finance"]    { --de-color: var(--finance); }
+  .dept-entry[data-cat="life"]       { --de-color: var(--life); }
+  .dept-entry[data-cat="philosophy"] { --de-color: var(--philosophy); }
+  .dept-entry[data-cat="psychology"] { --de-color: var(--psychology); }
+  .dept-entry[data-cat="design"]     { --de-color: var(--design); }
+  .dept-entry[data-cat="history"]    { --de-color: var(--history); }
+  .dept-entry[data-cat="science"]    { --de-color: var(--science); }
+
+  .dept-entry a {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 56px;
+    padding: 48px 0;
+    color: inherit;
+    text-decoration: none;
+    align-items: baseline;
+    transition: padding-left 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .dept-entry a:hover { padding-left: 24px; }
+  .dept-entry a:hover .de-name { color: var(--de-color); }
+  .dept-entry a:hover .de-num { color: var(--de-color); }
+
+  .de-num {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 0.82;
+    letter-spacing: -0.02em;
+    color: var(--dim);
+    text-align: right;
+    font-variation-settings: "opsz" 144;
+    transition: color 240ms ease;
+    align-self: start;
+    padding-top: 6px;
+  }
+
+  .de-body { display: flex; flex-direction: column; gap: 14px; max-width: 64ch; }
+  .de-name {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(32px, 4.4vw, 52px);
+    line-height: 0.95;
+    letter-spacing: -0.028em;
+    color: var(--ink);
+    margin: 0;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+    transition: color 240ms ease;
+  }
+  .de-name em { font-style: italic; color: var(--de-color); }
+  .de-desc {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.38;
+    color: var(--ink-2);
+    margin: 0;
+    max-width: 52ch;
+  }
+  .de-meta {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    flex-wrap: wrap;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dim);
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .de-meta b { color: var(--ink); font-weight: 600; }
+  .de-meta .sep { color: var(--rule); }
+
+  .de-latest {
+    margin-top: 10px;
+    padding-top: 16px;
+    border-top: 1px dotted var(--rule);
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    flex-wrap: wrap;
+    max-width: 58ch;
+  }
+  .de-latest-label {
+    font-family: var(--sans);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--de-color);
+    flex-shrink: 0;
+  }
+  .de-latest-title {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--ink-2);
+  }
+  .de-latest-writer {
+    font-family: var(--sans);
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+    font-weight: 500;
+  }
+
+  @media (max-width: 980px) {
+    .dept-hero {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding-bottom: 40px;
+    }
+    .side-left, .side-right { text-align: left; padding-top: 0; }
+    .dept-index { padding-top: 40px; }
+    .dept-entry a {
+      grid-template-columns: 72px 1fr;
+      gap: 28px;
+      padding: 36px 0;
+    }
+    .dept-entry a:hover { padding-left: 12px; }
+    .de-num { font-size: 48px; padding-top: 4px; }
+    .de-name { font-size: clamp(28px, 7vw, 42px); }
+    .de-desc { font-size: 17px; }
+  }
+</style>

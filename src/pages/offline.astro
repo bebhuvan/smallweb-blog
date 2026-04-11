@@ -1,35 +1,56 @@
 ---
 import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Base title="Offline — The Small Web">
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">The Small Web</a>
-    </div>
-  </header>
+<Base title="Offline · smallweb">
+  <Header currentPath="/offline" tag="a moment without the network" />
 
-  <main style="max-width: 600px; margin: 0 auto; padding: 6rem 2rem; text-align: center;">
-    <div style="font-size: 4rem; margin-bottom: 1.5rem;">
-      📡
-    </div>
-    <h1 style="font-family: var(--serif); font-size: 2.5rem; font-weight: 600; margin-bottom: 1rem;">
-      You're offline
-    </h1>
-    <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem;">
-      It looks like you've lost your internet connection. The page you're looking for isn't available offline yet.
-    </p>
-    <p style="font-size: 0.95rem; color: var(--text-faint);">
-      Previously visited pages may still be available. Try going back or check your connection.
-    </p>
-    <div style="margin-top: 2.5rem;">
-      <a href="/" class="contact-btn">
-        Try again
-      </a>
-    </div>
+  <main class="offline">
+    <span class="eyebrow" data-cat="life">Offline</span>
+    <h1>You appear to be <em>offline</em>.</h1>
+    <p class="lede">It looks like the connection has dropped. Previously visited pages may still be available — try going back, or wait a moment and reload.</p>
+    <a class="back" href="/">Try again →</a>
   </main>
 
-  <footer class="site-footer">
-    <p class="footer-text">The Small Web</p>
-  </footer>
+  <Footer left="Offline · smallweb" colophon="The quieter corner, quietened further." />
 </Base>
+
+<style>
+  .offline {
+    max-width: 58ch;
+    padding: 64px 0 96px;
+    text-align: left;
+  }
+  .offline h1 {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(44px, 7vw, 88px);
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    margin: 14px 0 22px;
+    font-variation-settings: "opsz" 144, "SOFT" 40;
+    color: var(--ink);
+  }
+  .offline h1 em { font-style: italic; color: var(--accent); }
+  .offline .lede {
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--ink-2);
+    margin-bottom: 32px;
+  }
+  .offline .back {
+    font-family: var(--sans);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    display: inline-block;
+    transition: background 160ms ease, color 160ms ease;
+  }
+  .offline .back:hover { background: var(--ink); color: var(--paper); }
+</style>

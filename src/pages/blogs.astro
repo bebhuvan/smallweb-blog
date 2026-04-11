@@ -2,383 +2,198 @@
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import ThemeToggle from '../components/ThemeToggle.astro';
-import { CATEGORIES } from '../lib/categories';
+import { CATEGORIES, CATEGORY_MAP, type CategorySlug } from '../lib/categories';
 import { getBlogs, getPosts } from '../lib/site-data';
 
 const blogs = getBlogs();
 const posts = getPosts();
 
-// Count posts per blog
 const postCounts = new Map<string, number>();
-posts.forEach(post => {
-  postCounts.set(post.blogId, (postCounts.get(post.blogId) || 0) + 1);
-});
+posts.forEach((p) => postCounts.set(p.blogId, (postCounts.get(p.blogId) || 0) + 1));
 
-// Enrich blogs with post counts and sort by name
-const enrichedBlogs = blogs.map(blog => ({
-  ...blog,
-  postCount: postCounts.get(blog.id) || 0,
-})).sort((a, b) => a.name.localeCompare(b.name));
+const enrichedBlogs = blogs
+  .map((blog) => ({ ...blog, postCount: postCounts.get(blog.id) || 0 }))
+  .sort((a, b) => a.name.localeCompare(b.name));
 
-// Group by primary category
 const blogsByCategory = new Map<string, typeof enrichedBlogs>();
-enrichedBlogs.forEach(blog => {
-  const cat = blog.categories[0];
-  if (!blogsByCategory.has(cat)) {
-    blogsByCategory.set(cat, []);
-  }
-  blogsByCategory.get(cat)!.push(blog);
-});
-
-// Find blog with most posts for featured
-const featuredBlog = [...enrichedBlogs].sort((a, b) => b.postCount - a.postCount)[0];
-
-function getInitials(name: string) {
-  return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+for (const b of enrichedBlogs) {
+  const primary = b.categories?.[0] || 'tech';
+  if (!blogsByCategory.has(primary)) blogsByCategory.set(primary, []);
+  blogsByCategory.get(primary)!.push(b);
 }
 
-function generateOPML() {
-  const outlines = blogs.map(blog =>
-    `      <outline type="rss" text="${blog.name}" title="${blog.name}" xmlUrl="${blog.feed}" htmlUrl="${blog.url}"/>`
-  ).join('\n');
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<opml version="2.0">
-  <head>
-    <title>The Small Web - Blogroll</title>
-    <dateCreated>${new Date().toISOString()}</dateCreated>
-  </head>
-  <body>
-    <outline text="The Small Web" title="The Small Web">
-${outlines}
-    </outline>
-  </body>
-</opml>`;
+function host(url: string) {
+  try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return url; }
 }
-
-const opmlContent = generateOPML();
 ---
 
-<Base title="Blogroll — The Small Web" description="All the indie blogs we curate and index.">
-  <ThemeToggle />
+<Base title="Writers — smallweb" description="Every indie blog indexed by smallweb, grouped by department.">
+  <Header currentPath="/blogs" tag={`${blogs.length} writers across ${blogsByCategory.size} shelves`} />
 
-  <div class="page">
-    <Header currentPath="/blogs" showCategoryNav={false} />
+  <main>
 
-    <main class="blogs-main">
-      <div class="editorial-header">
-        <h1 class="editorial-title">Blogroll</h1>
-        <p class="editorial-sub">All {blogs.length} indie blogs we curate</p>
-        <hr class="editorial-rule">
+    <section class="writers-hero">
+      <div>
+        <span class="eyebrow" data-cat="culture">The library</span>
+        <h1>The <em>writers</em>.</h1>
+        <p class="lede">Every blog in the library, grouped by shelf. Click a name to read their recent essays; click the domain to visit their site.</p>
       </div>
-
-      <div class="blogs-toolbar">
-        <div class="toolbar-stats">
-          <strong>{blogs.length}</strong> blogs ·
-          <strong>{posts.length}</strong> posts ·
-          <strong>{blogsByCategory.size}</strong> categories
-        </div>
-        <div class="toolbar-actions">
-          <button class="toolbar-btn" id="exportOPML" title="Export as OPML for RSS readers">
-            Export OPML
-          </button>
-          <a href="/rss.xml" class="toolbar-btn rss-link">RSS</a>
-        </div>
+      <div class="count">
+        <b class="figures">{blogs.length}</b> writers · {blogsByCategory.size} shelves
       </div>
+    </section>
 
-      {featuredBlog && (
-        <a
-          href={`/blog/${featuredBlog.id}`}
-          class="blog-featured"
-        >
-          <div class="blog-featured-inner">
-            <div class="blog-avatar" style={`background: var(--${featuredBlog.categories[0]})`}>
-              {getInitials(featuredBlog.name)}
-            </div>
-            <div class="blog-content">
-              <h3 class="blog-name">{featuredBlog.name}</h3>
-              <span class="blog-url">{new URL(featuredBlog.url).hostname}</span>
-              {featuredBlog.description && <p class="blog-description">{featuredBlog.description}</p>}
-              <div class="blog-footer">
-                <div class="blog-categories">
-                  {featuredBlog.categories.map((c: string) => (
-                    <span class="blog-cat" style={`border-color:var(--${c}); color:var(--${c})`}>{c}</span>
-                  ))}
-                </div>
-                <span class="blog-posts">{featuredBlog.postCount} posts</span>
-              </div>
-            </div>
+    {CATEGORIES.map((category) => {
+      const items = blogsByCategory.get(category.slug);
+      if (!items || items.length === 0) return null;
+      return (
+        <section class="shelf" style={`--category-color: var(${category.colorVar});`}>
+          <div class="shelf-head">
+            <h2>{category.name}<em>.</em></h2>
+            <span class="shelf-count"><span class="figures">{items.length}</span> writers</span>
           </div>
-        </a>
-      )}
+          <ul class="writer-list">
+            {items.map((b) => (
+              <li>
+                <a class="writer-row" href={`/blog/${b.id}`}>
+                  <span class="w-name">{b.name}</span>
+                  <span class="w-host">{host(b.url)}</span>
+                  <span class="w-count figures">{b.postCount}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      );
+    })}
 
-      {CATEGORIES.map((category, idx) => {
-        const catBlogs = blogsByCategory.get(category.slug);
-        if (!catBlogs || catBlogs.length === 0) return null;
-        return (
-          <>
-            {idx > 0 && <div class="cut">✂</div>}
-            <section class="blogroll-section">
-              <div class="section-head">
-                <span class="section-head-dot" style={`background: var(${category.colorVar})`}></span>
-                <span class="section-head-text">{category.name}</span>
-                <span class="section-head-count">{catBlogs.length} blogs</span>
-              </div>
-              <div class="blogs-grid">
-                {catBlogs.map(blog => (
-                  <a
-                    href={`/blog/${blog.id}`}
-                    class="blog-card"
-                  >
-                    <div class="blog-card-inner">
-                      <div class="blog-avatar" style={`background: var(--${blog.categories[0]})`}>
-                        {getInitials(blog.name)}
-                      </div>
-                      <div class="blog-content">
-                        <h3 class="blog-name">{blog.name}</h3>
-                        <span class="blog-url">{new URL(blog.url).hostname}</span>
-                        {blog.description && <p class="blog-description">{blog.description}</p>}
-                        <div class="blog-footer">
-                          <div class="blog-categories">
-                            {blog.categories.map((c: string) => (
-                              <span class="blog-cat" style={`border-color:var(--${c}); color:var(--${c})`}>{c}</span>
-                            ))}
-                          </div>
-                          <span class="blog-posts">{blog.postCount} posts</span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </section>
-          </>
-        );
-      })}
-    </main>
+  </main>
 
-    <Footer />
-  </div>
-
-  <script define:vars={{ opmlContent }}>
-    document.getElementById('exportOPML')?.addEventListener('click', () => {
-      const blob = new Blob([opmlContent], { type: 'text/xml' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'the-small-web-blogroll.opml';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    });
-  </script>
+  <Footer left="Writers · smallweb" colophon={`${blogs.length} hand-picked blogs, in one quiet room.`} />
 </Base>
 
 <style>
-  .blogs-main {
-    padding: 0 0 2rem;
-  }
-
-  .blogs-toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 0;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--rule);
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .toolbar-stats {
-    font-size: 0.8rem;
-    color: var(--ink-muted);
-  }
-
-  .toolbar-stats strong {
-    color: var(--ink);
-    font-weight: 600;
-  }
-
-  .toolbar-actions {
-    display: flex;
-    gap: 0.5rem;
-  }
-
-  .toolbar-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.3rem 0.65rem;
-    font-family: var(--sans);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    background: none;
-    border: 1.5px solid var(--rule);
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-
-  .toolbar-btn:hover {
-    border-color: var(--ink);
-    color: var(--ink);
-  }
-
-  .toolbar-btn.rss-link {
-    color: var(--accent);
-    border-color: var(--accent);
-  }
-
-  .blogroll-section {
-    margin-bottom: 1.5rem;
-  }
-
-  .blogs-grid {
+  .writers-hero {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: end;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--rule);
   }
-
-  .blog-card {
-    display: block;
-    padding: 1.25rem;
-    border: 1.5px solid var(--rule);
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.3s ease;
+  .writers-hero h1 {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(52px, 8vw, 108px);
+    line-height: 0.86;
+    letter-spacing: -0.035em;
+    margin: 10px 0 22px;
+    font-variation-settings: "opsz" 144, "SOFT" 40;
+    color: var(--ink);
   }
-
-  .blog-card:hover {
-    border-color: var(--accent);
+  .writers-hero h1 em { font-style: italic; color: var(--accent); }
+  .writers-hero .lede {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--ink-2);
+    max-width: 52ch;
+    margin: 0;
   }
+  .writers-hero .count {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(18px, 2.2vw, 28px);
+    color: var(--dim);
+    padding-bottom: 12px;
+  }
+  .writers-hero .count b { color: var(--accent); font-weight: 300; }
 
-  .blog-card-inner {
+  .shelf { padding: 56px 0 24px; border-bottom: 1px solid var(--rule); }
+  .shelf:last-of-type { border-bottom: 0; }
+  .shelf-head {
     display: flex;
-    gap: 1rem;
-  }
-
-  .blog-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: white;
-    flex-shrink: 0;
-  }
-
-  .blog-content {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .blog-name {
-    font-family: var(--serif);
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-    transition: color 0.3s ease;
-  }
-
-  .blog-card:hover .blog-name,
-  .blog-featured:hover .blog-name {
-    color: var(--accent);
-  }
-
-  .blog-url {
-    font-size: 0.75rem;
-    color: var(--ink-faint);
-  }
-
-  .blog-description {
-    font-size: 0.8rem;
-    color: var(--ink-muted);
-    line-height: 1.5;
-    margin-top: 0.5rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .blog-footer {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-top: 0.6rem;
-    gap: 0.5rem;
-  }
-
-  .blog-categories {
-    display: flex;
-    gap: 0.35rem;
+    align-items: baseline;
+    padding-bottom: 18px;
+    margin-bottom: 8px;
+    gap: 16px;
     flex-wrap: wrap;
   }
-
-  .blog-cat {
-    font-size: 0.55rem;
-    font-weight: 700;
+  .shelf-head h2 {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 0.9;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin: 0;
+    font-variation-settings: "opsz" 144;
+  }
+  .shelf-head h2 em { font-style: italic; color: var(--category-color); }
+  .shelf-count {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding: 0.15rem 0.4rem;
-    border: 1.5px solid;
+    color: var(--dim);
+    font-weight: 600;
   }
 
-  .blog-posts {
-    font-size: 0.68rem;
-    color: var(--ink-faint);
-    white-space: nowrap;
+  .writer-list { list-style: none; margin: 0; padding: 0; }
+  .writer-row {
+    display: grid;
+    grid-template-columns: 1fr auto 60px;
+    gap: 24px;
+    padding: 16px 0;
+    border-bottom: 1px dotted var(--rule);
+    align-items: baseline;
+    color: inherit;
+    transition: padding-left 200ms ease;
+    position: relative;
+  }
+  .writer-row::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%;
+    width: 0;
+    height: 1px;
+    background: var(--category-color);
+    transition: width 220ms ease;
+  }
+  .writer-row:hover { padding-left: 16px; }
+  .writer-row:hover::before { width: 10px; }
+  .writer-row:hover .w-name { color: var(--accent); }
+  .w-name {
+    font-family: var(--serif-display);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--ink);
+    transition: color 180ms ease;
+  }
+  .w-host {
+    font-family: var(--sans);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .w-count {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--dim);
+    text-align: right;
   }
 
-  @media (max-width: 768px) {
-    .blogs-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .blogs-toolbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .blogs-main {
-      padding: 0 0 1.25rem;
-    }
-
-    .blog-card {
-      padding: 1rem;
-    }
-
-    .blog-card-inner {
-      gap: 0.75rem;
-    }
-
-    .blog-avatar {
-      width: 34px;
-      height: 34px;
-      font-size: 0.65rem;
-    }
-
-    .blog-name { font-size: 0.9rem; }
-    .blog-description { font-size: 0.75rem; margin-top: 0.35rem; }
-
-    .blog-footer {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.3rem;
-    }
-
-    .toolbar-actions { width: 100%; }
-    .toolbar-btn { flex: 1; justify-content: center; }
+  @media (max-width: 980px) {
+    .writers-hero { grid-template-columns: 1fr; gap: 12px; padding-bottom: 40px; }
+    .writers-hero h1 { font-size: clamp(44px, 14vw, 72px); }
+    .writer-row { grid-template-columns: 1fr auto; gap: 4px 16px; padding: 14px 0; }
+    .w-host { grid-column: 1; font-size: 10px; }
+    .w-count { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
   }
 </style>

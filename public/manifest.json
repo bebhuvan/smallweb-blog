@@ -1,11 +1,11 @@
 {
-  "name": "The Small Web",
-  "short_name": "Small Web",
-  "description": "A curated collection of the best indie blogs. Hand-picked writing from independent voices.",
+  "name": "smallweb",
+  "short_name": "smallweb",
+  "description": "A reading room for the unhurried web. Hand-picked essays from independent writers.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FAF7F2",
-  "theme_color": "#D95D39",
+  "background_color": "#fbfaf6",
+  "theme_color": "#c94a2e",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -43,14 +43,19 @@
   "screenshots": [],
   "shortcuts": [
     {
-      "name": "Archive",
-      "url": "/archive",
-      "description": "Browse all posts"
+      "name": "Feed",
+      "url": "/feed",
+      "description": "Every essay, as it lands"
     },
     {
-      "name": "Blogs",
+      "name": "Writers",
       "url": "/blogs",
-      "description": "View curated blogs"
+      "description": "Browse the library"
+    },
+    {
+      "name": "Archive",
+      "url": "/archive",
+      "description": "Essays by month"
     }
   ]
 }

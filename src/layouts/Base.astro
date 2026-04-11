@@ -12,7 +12,7 @@ interface Props {
 
 const {
   title,
-  description = "A curated collection of the best indie blogs. Hand-picked writing from independent voices who care about their craft. No algorithms, no ads—just great reads.",
+  description = "A reading room for the unhurried web. Hand-picked essays from independent writers who still believe an essay is worth an afternoon — no algorithms, no ads, no feeds that double in length while you look away.",
   ogImage = "/og-image.png",
   ogType = "website",
   jsonLd,
@@ -26,9 +26,9 @@ const swVersion = import.meta.env.PUBLIC_SW_VERSION || new Date().toISOString().
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "The Small Web",
+  "name": "smallweb",
   "url": siteUrl,
-  "description": "A curated collection of the best indie blogs. Hand-picked writing from independent voices who care about their craft.",
+  "description": "A reading room for the unhurried web. Hand-picked essays from independent writers.",
   "potentialAction": {
     "@type": "SearchAction",
     "target": `${siteUrl}/archive?q={search_term_string}`,
@@ -45,14 +45,34 @@ const websiteJsonLd = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
 
-    <!-- Font preloads -->
+    <!-- Font preloads (Fraunces is the LCP face — drop cap + masthead) -->
     <link rel="preload" href="/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <!-- Only preload the likely LCP font to reduce contention -->
+    <link rel="preload" href="/fonts/fraunces-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Google Fonts (Source Serif 4 body + Inter Tight metadata) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Inter+Tight:wght@400;500;600&display=swap"
+    />
+
+    <!-- Theme: apply saved preference before paint to prevent flash -->
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var dark = stored ? stored === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
 
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#D95D39" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fbfaf6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#14110d" media="(prefers-color-scheme: dark)" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Small Web" />
@@ -90,24 +110,15 @@ const websiteJsonLd = {
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="The Small Web RSS" href="/rss.xml" />
 
-    <!-- Critical CSS for fast FCP -->
+    <!-- Critical CSS for first paint — tokens + base only -->
     <style is:inline>
-      :root{--bg:#FAF7F2;--ink:#2C2825;--accent:#C45A35;--serif:'Fraunces',Georgia,serif;--sans:'Nunito Sans',system-ui,sans-serif}
-      .dark{--bg:#1A1816;--ink:#E0DCD5}
-      *,*::before,*::after{box-sizing:border-box;margin:0}
-      html{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:17px}
+      :root{--paper:#fbfaf6;--ink:#17130e;--ink-2:#3a322a;--dim:#8a8275;--rule:#e3dccb;--accent:#c94a2e;--serif-display:'Fraunces',Georgia,serif;--serif-body:'Source Serif 4',Georgia,serif;--sans:'Inter Tight',system-ui,sans-serif}
+      .dark{--paper:#14110d;--ink:#ece4d0;--ink-2:#b8ae94;--dim:#7c7363;--rule:#2e2820;--accent:#e86a4a}
+      *,*::before,*::after{box-sizing:border-box}
+      html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:var(--serif-body);font-size:17px;-webkit-font-smoothing:antialiased}
       body{min-height:100vh;overflow-x:hidden}
-      .page{max-width:1000px;margin:0 auto;padding:0 2.5rem}
-      .masthead{padding:3.5rem 0 1.25rem}
-      .masthead-title{font-family:var(--serif);font-size:clamp(3.2rem,7vw,5rem);font-weight:900;line-height:0.92;letter-spacing:-0.04em}
+      a{color:inherit;text-decoration:none}
     </style>
-
-    <!-- Theme: prevent flash -->
-    <script is:inline>
-      if (localStorage.theme === 'dark' || (!localStorage.theme && matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      }
-    </script>
 
     <!-- Prefetch key pages -->
     <link rel="prefetch" href="/about" />
@@ -117,12 +128,10 @@ const websiteJsonLd = {
     <slot />
 
     <!-- Service Worker Registration -->
-    <script is:inline>
+    <script is:inline define:vars={{ swVersion }}>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register(`/sw.js?v=${swVersion}`)
-            .then(reg => console.log('SW registered'))
-            .catch(err => console.log('SW registration failed:', err));
+          navigator.serviceWorker.register(`/sw.js?v=${swVersion}`).catch(() => {});
         });
       }
     </script>

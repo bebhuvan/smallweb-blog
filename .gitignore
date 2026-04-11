@@ -33,3 +33,10 @@ docs/reliability-refactor-plan.md
 
 # sqlite db artifacts
 data/smallweb.db*
+
+# design mocks and handoff planning docs (local only)
+mocks/
+scripts/test-snippet.js
+
+# local agent state
+.claude/

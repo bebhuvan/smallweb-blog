@@ -2,7 +2,6 @@
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import ThemeToggle from '../components/ThemeToggle.astro';
 import { CATEGORIES } from '../lib/categories';
 import { getBlogMap, getBlogs, getEnrichedPosts } from '../lib/site-data';
 
@@ -16,16 +15,14 @@ const deckPosts = shuffled.slice(0, 50);
 
 ---
 
-<Base title="Discover — The Small Web" description="Discover new indie blogs — random picks and hidden gems from The Small Web collection.">
-  <ThemeToggle />
+<Base title="Discover — smallweb" description="Swipe through hand-picked reads from indie blogs.">
+  <Header currentPath="/discover" tag="a deck of essays, shuffled for you" />
 
-  <div class="page">
-    <Header currentPath="/discover" showCategoryNav={false} />
-
-    <main class="discover-main">
+  <main class="discover-main">
       <div class="discover-header">
-        <h1 class="editorial-title">Discover</h1>
-        <p class="editorial-sub">Swipe through hand-picked reads from indie blogs</p>
+        <span class="eyebrow" data-cat="culture">Discover</span>
+        <h1 class="discover-h1">The <em>deck</em>.</h1>
+        <p class="discover-sub">Swipe through hand-picked reads from indie blogs.</p>
       </div>
 
       <div class="filter-ribbon">
@@ -89,8 +86,7 @@ const deckPosts = shuffled.slice(0, 50);
       </div>
     </main>
 
-    <Footer />
-  </div>
+  <Footer left="Discover · smallweb" colophon="A small deck, shuffled for the evening." />
 
   <script define:vars={{ allPosts: deckPosts }}>
     let currentIndex = 0;
@@ -432,12 +428,61 @@ const deckPosts = shuffled.slice(0, 50);
   /* ─── Header ─── */
   .discover-header {
     text-align: center;
-    padding: 2.5rem 0 1.75rem;
+    padding: 2rem 0 1.5rem;
+  }
+  .discover-h1 {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(44px, 7vw, 88px);
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    margin: 12px 0 10px;
+    font-variation-settings: "opsz" 144, "SOFT" 40;
+    color: var(--ink);
+  }
+  .discover-h1 em { font-style: italic; color: var(--accent); }
+  .discover-sub {
+    font-family: var(--serif-display);
+    font-style: italic;
+    color: var(--ink-2);
+    font-size: 18px;
+    margin: 0;
   }
 
-  /* ─── Filter → Stack spacing ─── */
-  .discover-main .filter-ribbon {
-    padding-bottom: 1.5rem;
+  /* ─── Filter ribbon ─── */
+  .filter-ribbon {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 24px 16px 32px;
+  }
+  .filter-ribbon .stamp {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    background: none;
+    border: 1px solid var(--rule);
+    padding: 8px 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: border-color 160ms ease, color 160ms ease;
+  }
+  .filter-ribbon .stamp:hover,
+  .filter-ribbon .stamp.active {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .filter-ribbon .stamp-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
   }
 
   /* ─── Card Stack ─── */
@@ -459,7 +504,7 @@ const deckPosts = shuffled.slice(0, 50);
   .card-count {
     margin-top: 1.5rem;
     font-size: 0.8rem;
-    color: var(--ink-faint);
+    color: var(--dim);
     font-variant-numeric: tabular-nums;
   }
 
@@ -467,8 +512,8 @@ const deckPosts = shuffled.slice(0, 50);
     position: absolute;
     width: 100%;
     height: 440px;
-    background: #fff;
-    border: 1.5px solid var(--rule);
+    background: var(--paper);
+    border: 1px solid var(--rule);
     padding: 2rem;
     cursor: pointer;
     display: flex;
@@ -477,10 +522,6 @@ const deckPosts = shuffled.slice(0, 50);
     user-select: none;
     will-change: transform, opacity;
     overflow: hidden;
-  }
-
-  .dark .discover-card {
-    background: var(--bg-soft);
   }
 
   .discover-card:not(:last-child) .discover-badge,
@@ -493,11 +534,7 @@ const deckPosts = shuffled.slice(0, 50);
   }
 
   .discover-card:not(:last-child) {
-    background: #fff !important;
-  }
-
-  .dark .discover-card:not(:last-child) {
-    background: var(--bg-soft) !important;
+    background: var(--paper) !important;
   }
 
   .discover-card::before {
@@ -535,7 +572,7 @@ const deckPosts = shuffled.slice(0, 50);
   .discover-badge.science { border-color: var(--science); color: var(--science); }
 
   .discover-title {
-    font-family: var(--serif);
+    font-family: var(--serif-display);
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.2;
@@ -546,7 +583,7 @@ const deckPosts = shuffled.slice(0, 50);
   .discover-excerpt {
     font-size: 0.92rem;
     line-height: 1.6;
-    color: var(--ink-muted);
+    color: var(--ink-2);
     flex: 1;
     overflow: hidden;
     display: -webkit-box;
@@ -573,7 +610,7 @@ const deckPosts = shuffled.slice(0, 50);
 
   .blog-hostname {
     font-size: 0.75rem;
-    color: var(--ink-faint);
+    color: var(--dim);
   }
 
   /* ─── Controls ─── */
@@ -601,8 +638,8 @@ const deckPosts = shuffled.slice(0, 50);
     justify-content: center;
     gap: 0.4rem;
     transition: all 0.2s ease;
-    background: var(--bg);
-    color: var(--ink-muted);
+    background: var(--paper);
+    color: var(--ink-2);
     font-family: var(--sans);
     font-weight: 600;
     font-size: 0.7rem;
@@ -617,14 +654,14 @@ const deckPosts = shuffled.slice(0, 50);
 
   .action-btn.next {
     padding: 0 1.25rem;
-    background: var(--bg-soft);
+    background: var(--paper-2);
   }
 
   .action-btn.read {
     padding: 0 1.5rem;
     background: var(--ink);
     border-color: var(--ink);
-    color: var(--bg);
+    color: var(--paper);
   }
 
   .action-btn.read:hover {
@@ -638,7 +675,7 @@ const deckPosts = shuffled.slice(0, 50);
 
   .discover-hint {
     text-align: center;
-    color: var(--ink-faint);
+    color: var(--dim);
     font-size: 0.72rem;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -651,7 +688,7 @@ const deckPosts = shuffled.slice(0, 50);
   .discover-hint kbd {
     display: inline-block;
     padding: 0.15rem 0.35rem;
-    background: var(--bg-soft);
+    background: var(--paper-2);
     border: 1px solid var(--rule);
     font-family: inherit;
     font-size: 0.6rem;
@@ -672,11 +709,11 @@ const deckPosts = shuffled.slice(0, 50);
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--ink-muted);
+    color: var(--ink-2);
   }
 
   .end-state h3 {
-    font-family: var(--serif);
+    font-family: var(--serif-display);
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;

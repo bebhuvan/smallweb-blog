@@ -2,171 +2,28 @@
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import ThemeToggle from '../components/ThemeToggle.astro';
-import { getBlogMap, getBlogs, getEnrichedPosts } from '../lib/site-data';
-import { formatDate } from '../lib/dates';
+import ArchiveBody from '../components/ArchiveBody.astro';
+import { getArchiveData, postsForYear, totalForYear } from '../lib/archive';
 
-const blogs = getBlogs();
-const blogMap = getBlogMap(blogs);
-
-// Compute unique categories count
-const categorySet = new Set<string>();
-blogs.forEach(b => b.categories.forEach((c: string) => categorySet.add(c)));
-
-const enrichedPosts = getEnrichedPosts({ blogs, blogMap });
-
-// Determine today/yesterday for freshness
-const now = new Date();
-const todayStr = now.toISOString().slice(0, 10);
-const yesterday = new Date(now);
-yesterday.setDate(yesterday.getDate() - 1);
-const yesterdayStr = yesterday.toISOString().slice(0, 10);
-
-function isFresh(dateStr: string) {
-  const d = dateStr.slice(0, 10);
-  return d === todayStr || d === yesterdayStr;
-}
-
-// Group posts by month
-type PostsByMonth = { [key: string]: typeof enrichedPosts };
-const postsByMonth: PostsByMonth = {};
-
-enrichedPosts.forEach((post) => {
-  const date = new Date(post.date);
-  const monthKey = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
-  if (!postsByMonth[monthKey]) {
-    postsByMonth[monthKey] = [];
-  }
-  postsByMonth[monthKey].push(post);
-});
-
-const sortedMonths = Object.keys(postsByMonth).sort((a, b) => {
-  return new Date(b).getTime() - new Date(a).getTime();
-});
-
-function splitMonthYear(monthStr: string) {
-  const parts = monthStr.split(' ');
-  return { month: parts[0], year: parts[1] };
-}
+const { allPosts, years, currentYear, earliestYear, totalPosts, totalWriters } = getArchiveData();
+const yearPosts = postsForYear(allPosts, currentYear);
+const totalYearPosts = totalForYear(allPosts, currentYear);
 ---
 
-<Base title="Archive — The Small Web" description="Search and browse the full archive of posts from indie blogs curated by The Small Web.">
-  <ThemeToggle />
+<Base title={`Archive ${currentYear} — smallweb`} description={`Every essay indexed by smallweb in ${currentYear}, by month.`}>
+  <Header currentPath="/archive" tag={`every essay ever indexed · ${currentYear}`} />
 
-  <div class="page">
-    <Header currentPath="/archive" />
+  <main>
+    <ArchiveBody
+      posts={yearPosts}
+      years={years}
+      activeYear={currentYear}
+      totalPosts={totalPosts}
+      totalYearPosts={totalYearPosts}
+      totalWriters={totalWriters}
+      earliestYear={earliestYear}
+    />
+  </main>
 
-    <main class="archive-main">
-      <div class="editorial-header">
-        <h1 class="editorial-title">Archive</h1>
-        <p class="editorial-sub">Every post from every blog, searchable</p>
-        <hr class="editorial-rule">
-      </div>
-
-      <div class="editorial-stats">
-        <span><strong>{enrichedPosts.length}</strong> posts</span>
-        <span><strong>{blogs.length}</strong> blogs</span>
-        <span><strong>{categorySet.size}</strong> categories</span>
-      </div>
-
-      <div class="search-container" style="margin-top: 1rem;">
-        <div class="search-box">
-          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-          </svg>
-          <input type="text" class="search-input" id="search-input" placeholder="Search posts, authors, topics...">
-        </div>
-      </div>
-
-      <div id="archive-content">
-        {sortedMonths.map((month) => {
-          const { month: m, year: y } = splitMonthYear(month);
-          return (
-            <section class="archive-month" data-month={month}>
-              <h2 class="month-header-editorial">
-                {m} <span class="month-header-year">{y}</span>
-              </h2>
-              <div class="archive-list">
-                {postsByMonth[month].map((post) => (
-                  <a
-                    href={post.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class:list={["archive-item", isFresh(post.date) ? "is-fresh" : ""]}
-                    data-title={post.title.toLowerCase()}
-                    data-author={post.blogName.toLowerCase()}
-                    data-category={post.category}
-                  >
-                    <span class="archive-date">{formatDate(post.date)}</span>
-                    <div class="archive-content">
-                      <h3 class="archive-title">{post.title}</h3>
-                      <p class="archive-meta">{post.blogName}</p>
-                    </div>
-                    <span class={`archive-category ${post.category}`}>
-                      <span class="archive-cat-dot" style={`background: var(--${post.category})`}></span>
-                      {post.category}
-                    </span>
-                  </a>
-                ))}
-              </div>
-            </section>
-          );
-        })}
-      </div>
-
-      <div id="no-results" style="display: none; text-align: center; padding: 3rem; color: var(--ink-muted);">
-        <p>No posts found matching your search.</p>
-      </div>
-    </main>
-
-    <Footer />
-  </div>
-
-  <script>
-    const searchInput = document.getElementById('search-input') as HTMLInputElement;
-    const noResults = document.getElementById('no-results');
-
-    searchInput?.addEventListener('input', (e) => {
-      const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
-      const items = document.querySelectorAll('.archive-item');
-      const months = document.querySelectorAll('.archive-month');
-      let totalVisible = 0;
-
-      items.forEach((item) => {
-        const title = item.getAttribute('data-title') || '';
-        const author = item.getAttribute('data-author') || '';
-        const category = item.getAttribute('data-category') || '';
-        const matches = !query || title.includes(query) || author.includes(query) || category.includes(query);
-        (item as HTMLElement).style.display = matches ? '' : 'none';
-        if (matches) totalVisible++;
-      });
-
-      months.forEach((month) => {
-        const monthItems = month.querySelectorAll('.archive-item');
-        let monthHasVisible = false;
-        monthItems.forEach((item) => {
-          if ((item as HTMLElement).style.display !== 'none') monthHasVisible = true;
-        });
-        (month as HTMLElement).style.display = monthHasVisible ? '' : 'none';
-      });
-
-      if (noResults) {
-        noResults.style.display = totalVisible === 0 && query ? 'block' : 'none';
-      }
-    });
-  </script>
+  <Footer left={`Archive · ${currentYear}`} colophon="Every essay we have ever pointed at, in one place." />
 </Base>
-
-<style>
-  .archive-main {
-    padding: 0 0 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  @media (max-width: 600px) {
-    .archive-main {
-      padding: 0 0 1.25rem;
-    }
-  }
-</style>

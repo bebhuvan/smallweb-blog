@@ -1,0 +1,329 @@
+---
+import { CATEGORIES, CATEGORY_MAP, type CategorySlug } from '../lib/categories';
+import type { EnrichedPost } from '../lib/posts';
+
+interface Props {
+  posts: EnrichedPost[];
+  years: number[];
+  activeYear: number;
+  totalPosts: number;
+  totalYearPosts: number;
+  totalWriters: number;
+  earliestYear: number;
+}
+
+const { posts, years, activeYear, totalPosts, totalYearPosts, totalWriters, earliestYear } = Astro.props;
+const truncated = totalYearPosts > posts.length;
+
+// Group by YYYY-MM (within the active year only).
+type PostsByMonth = Record<string, typeof posts>;
+const postsByMonth: PostsByMonth = {};
+for (const p of posts) {
+  const d = new Date(p.date);
+  if (Number.isNaN(d.getTime())) continue;
+  const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+  (postsByMonth[key] ||= []).push(p);
+}
+const sortedMonthKeys = Object.keys(postsByMonth).sort((a, b) => b.localeCompare(a));
+
+function monthTitle(key: string) {
+  const [y, m] = key.split('-').map(Number);
+  const d = new Date(y, (m || 1) - 1, 1);
+  return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+}
+
+function shortDate(dateStr: string) {
+  const d = new Date(dateStr);
+  if (Number.isNaN(d.getTime())) return { day: '', month: '' };
+  return {
+    day: String(d.getDate()).padStart(2, '0'),
+    month: d.toLocaleDateString('en-US', { month: 'short' }),
+  };
+}
+
+function yearHref(y: number) {
+  return y === new Date().getFullYear() ? '/archive' : `/archive/${y}`;
+}
+---
+
+<section class="archive-hero">
+  <div>
+    <span class="eyebrow" data-cat="design">Archive · {activeYear}</span>
+    <h1>The <em>archive</em>.</h1>
+  </div>
+  <div class="count">
+    {truncated ? (
+      <>latest <b class="figures">{posts.length.toLocaleString()}</b> of <b class="figures">{totalYearPosts.toLocaleString()}</b> in {activeYear}</>
+    ) : (
+      <><b class="figures">{posts.length.toLocaleString()}</b> essays in {activeYear}</>
+    )}
+    · since <b>{earliestYear}</b>
+  </div>
+</section>
+
+<div class="archive-filters" id="archive-filters">
+  <span class="label">Category</span>
+  <button type="button" data-filter-cat="" class="active">All</button>
+  {CATEGORIES.map((c) => (
+    <button type="button" data-filter-cat={c.slug}>{c.name}</button>
+  ))}
+  <span style="flex: 1"></span>
+  <span class="label">Year</span>
+  {years.map((y) => (
+    <a href={yearHref(y)} class={y === activeYear ? 'active' : ''}>{y}</a>
+  ))}
+</div>
+
+<p class="empty" id="archive-empty" hidden>No essays match this filter.</p>
+
+{sortedMonthKeys.map((key) => (
+  <section class="archive-month">
+    <div class="month-head">
+      <h2>{monthTitle(key)}</h2>
+      <span class="month-count"><span class="figures">{postsByMonth[key].length}</span> essays</span>
+    </div>
+
+    {postsByMonth[key].map((post) => {
+      const { day, month } = shortDate(post.date);
+      return (
+        <a
+          class="archive-row"
+          data-cat={post.category}
+          href={post.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="ar-date"><b>{day}</b> {month}</span>
+          <span class="ar-title">{post.title}</span>
+          <span class="ar-writer">{post.blogName}</span>
+          <span class="ar-cat">{CATEGORY_MAP.get(post.category as CategorySlug)?.name || post.category}</span>
+        </a>
+      );
+    })}
+  </section>
+))}
+
+<script is:inline>
+  (() => {
+    const filters = document.getElementById('archive-filters');
+    const empty = document.getElementById('archive-empty');
+    if (!filters) return;
+    let cat = '';
+
+    function apply() {
+      const rows = document.querySelectorAll('.archive-row');
+      let shown = 0;
+      rows.forEach((row) => {
+        const rc = row.getAttribute('data-cat') || '';
+        const ok = !cat || rc === cat;
+        row.style.display = ok ? '' : 'none';
+        if (ok) shown++;
+      });
+      document.querySelectorAll('.archive-month').forEach((section) => {
+        const anyVisible = Array.from(section.querySelectorAll('.archive-row'))
+          .some((r) => r.style.display !== 'none');
+        section.style.display = anyVisible ? '' : 'none';
+      });
+      if (empty) empty.hidden = shown !== 0;
+    }
+
+    filters.querySelectorAll('button[data-filter-cat]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        cat = btn.getAttribute('data-filter-cat') || '';
+        filters.querySelectorAll('button[data-filter-cat]').forEach((b) => b.classList.toggle('active', b === btn));
+        apply();
+      });
+    });
+  })();
+</script>
+
+<style>
+  /* ─── archive page body ─── */
+  .archive-hero {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: end;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .archive-hero h1 {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(52px, 8vw, 112px);
+    line-height: 0.86;
+    letter-spacing: -0.035em;
+    margin: 10px 0 0;
+    font-variation-settings: "opsz" 144, "SOFT" 40;
+    color: var(--ink);
+  }
+  .archive-hero h1 em { font-style: italic; color: var(--accent); }
+  .archive-hero .count {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(18px, 2.2vw, 28px);
+    font-style: italic;
+    color: var(--dim);
+    font-variation-settings: "opsz" 144;
+    padding-bottom: 12px;
+  }
+  .archive-hero .count b { color: var(--accent); font-weight: 300; font-style: italic; }
+
+  .archive-filters {
+    display: flex;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .archive-filters .label { color: var(--dim); font-weight: 600; }
+  .archive-filters button,
+  .archive-filters a {
+    font: inherit;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    color: var(--ink-2);
+    padding: 10px 2px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-decoration: none;
+    transition: color 160ms ease, border-color 160ms ease;
+  }
+  .archive-filters button:hover,
+  .archive-filters button.active,
+  .archive-filters a:hover,
+  .archive-filters a.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .archive-month {
+    padding: 56px 0 32px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .archive-month:last-of-type { border-bottom: 0; }
+  .month-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 18px;
+    margin-bottom: 12px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .month-head h2 {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 0.9;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin: 0;
+    font-variation-settings: "opsz" 144;
+  }
+  .month-head .month-count {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--dim);
+    font-weight: 600;
+  }
+
+  .archive-row {
+    display: grid;
+    grid-template-columns: 88px 1fr 180px 110px;
+    gap: 28px;
+    padding: 16px 0;
+    border-bottom: 1px dotted var(--rule);
+    align-items: baseline;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: padding-left 200ms ease;
+  }
+  .archive-row:last-of-type { border-bottom: 0; }
+  .archive-row::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 220ms ease;
+  }
+  .archive-row:hover { padding-left: 16px; }
+  .archive-row:hover::before { width: 10px; }
+  .archive-row:hover .ar-title { color: var(--accent); }
+  .archive-row .ar-date {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--dim);
+    text-transform: uppercase;
+    font-feature-settings: "tnum", "lnum";
+  }
+  .archive-row .ar-date b { color: var(--ink); font-weight: 600; }
+  .archive-row .ar-title {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.2;
+    letter-spacing: -0.008em;
+    color: var(--ink);
+    transition: color 180ms ease;
+  }
+  .archive-row .ar-writer {
+    font-family: var(--sans);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .archive-row .ar-cat {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .archive-row[data-cat="tech"] .ar-cat       { color: var(--tech); }
+  .archive-row[data-cat="culture"] .ar-cat    { color: var(--culture); }
+  .archive-row[data-cat="economics"] .ar-cat  { color: var(--economics); }
+  .archive-row[data-cat="finance"] .ar-cat    { color: var(--finance); }
+  .archive-row[data-cat="life"] .ar-cat       { color: var(--life); }
+  .archive-row[data-cat="philosophy"] .ar-cat { color: var(--philosophy); }
+  .archive-row[data-cat="psychology"] .ar-cat { color: var(--psychology); }
+  .archive-row[data-cat="design"] .ar-cat     { color: var(--design); }
+  .archive-row[data-cat="history"] .ar-cat    { color: var(--history); }
+  .archive-row[data-cat="science"] .ar-cat    { color: var(--science); }
+
+  .empty {
+    padding: 64px 0;
+    color: var(--dim);
+    font-style: italic;
+    text-align: center;
+  }
+
+  @media (max-width: 980px) {
+    .archive-hero { grid-template-columns: 1fr; gap: 8px; }
+    .archive-hero h1 { font-size: clamp(44px, 14vw, 72px); }
+    .archive-filters { gap: 10px 14px; padding: 18px 0; }
+    .archive-filters button,
+    .archive-filters a { padding: 12px 4px; }
+    .archive-row { grid-template-columns: 1fr; gap: 4px; padding: 16px 0 18px; }
+    .archive-row .ar-cat { text-align: left; }
+    .month-head h2 { font-size: 32px; }
+  }
+</style>

@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ArchiveBody from '../../components/ArchiveBody.astro';
+import { getArchiveData, postsForYear, totalForYear } from '../../lib/archive';
+
+export function getStaticPaths() {
+  const { years, currentYear } = getArchiveData();
+  // Only build pages for non-current years; /archive handles the current year.
+  return years
+    .filter((y) => y !== currentYear)
+    .map((year) => ({ params: { year: String(year) }, props: { year } }));
+}
+
+const { year } = Astro.props as { year: number };
+const { allPosts, years, earliestYear, totalPosts, totalWriters } = getArchiveData();
+const yearPosts = postsForYear(allPosts, year);
+const totalYearPosts = totalForYear(allPosts, year);
+---
+
+<Base title={`Archive ${year} — smallweb`} description={`Every essay indexed by smallweb in ${year}, by month.`}>
+  <Header currentPath="/archive" tag={`every essay indexed · ${year}`} />
+
+  <main>
+    <ArchiveBody
+      posts={yearPosts}
+      years={years}
+      activeYear={year}
+      totalPosts={totalPosts}
+      totalYearPosts={totalYearPosts}
+      totalWriters={totalWriters}
+      earliestYear={earliestYear}
+    />
+  </main>
+
+  <Footer left={`Archive · ${year}`} colophon="Every essay we have ever pointed at, in one place." />
+</Base>

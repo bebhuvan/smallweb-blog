@@ -2,380 +2,574 @@
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import ThemeToggle from '../components/ThemeToggle.astro';
 import { getBlogMap, getBlogs, getEnrichedPosts } from '../lib/site-data';
 import { curateHomepage } from '../lib/homepage';
+import { CATEGORIES, CATEGORY_MAP, HOMEPAGE_CATEGORY_SLUGS, type CategorySlug } from '../lib/categories';
 import { formatDate } from '../lib/dates';
 
 const blogs = getBlogs();
 const blogMap = getBlogMap(blogs);
 const enrichedPosts = getEnrichedPosts({ blogs, blogMap });
-const { leadPost, secondaryLead, alsoNew, featuredExcerpt, categoryPosts, archivePicks } =
-  curateHomepage(enrichedPosts, blogMap);
+const { leadPost, categoryPosts, featuredExcerpt, archivePicks } = curateHomepage(enrichedPosts, blogMap);
 
-function getCatColor(cat: string) {
-  return `var(--${cat})`;
+function splitItalic(name: string): [string, string] {
+  const n = name.length;
+  const tailLen = n <= 4 ? 1 : n <= 6 ? 2 : 3;
+  return [name.slice(0, n - tailLen), name.slice(n - tailLen)];
 }
 
-function truncateText(text: string, max: number) {
-  const trimmed = text.trim();
-  if (trimmed.length <= max) return trimmed;
-  return `${trimmed.slice(0, max).trimEnd()}...`;
+function truncate(text: string | undefined, max: number) {
+  if (!text) return '';
+  const t = text.trim();
+  return t.length <= max ? t : `${t.slice(0, max).trimEnd()}…`;
 }
+
+function readingMinutes(post: { excerpt?: string }) {
+  const words = (post.excerpt || '').split(/\s+/).length;
+  return Math.max(1, Math.round(words / 200) + 8);
+}
+
+function shortDate(dateStr: string) {
+  const d = new Date(dateStr);
+  if (Number.isNaN(d.getTime())) return '';
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
+function romanize(n: number) {
+  const map: [number, string][] = [
+    [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I'],
+  ];
+  let out = '';
+  let num = n;
+  for (const [v, s] of map) {
+    while (num >= v) { out += s; num -= v; }
+  }
+  return out;
+}
+
+// Columns — one per homepage category, 3 most-recent posts each.
+const columns = HOMEPAGE_CATEGORY_SLUGS.map((slug, i) => {
+  const cat = CATEGORY_MAP.get(slug);
+  const curated = categoryPosts.get(slug) || [];
+  const posts = curated.length > 0
+    ? curated.slice(0, 3)
+    : enrichedPosts.filter((p) => p.category === slug).slice(0, 3);
+  const [head, tail] = splitItalic(cat?.name || slug);
+  return {
+    slug,
+    name: cat?.name || slug,
+    head,
+    tail,
+    numeral: romanize(i + 1),
+    posts,
+  };
+}).filter((col) => col.posts.length > 0);
+
+// Feature — use featuredExcerpt if present, else the 2nd freshest prose post.
+const feature = featuredExcerpt
+  || enrichedPosts.find((p) => p !== leadPost && (p.excerpt?.length || 0) > 120)
+  || null;
+
+const freshCount = enrichedPosts.filter((p) => {
+  const d = new Date(p.date).getTime();
+  return Date.now() - d < 1000 * 60 * 60 * 48;
+}).length;
 ---
 
-<Base title="The Small Web — Curated Indie Blogs" jsonLd={{
+<Base title="smallweb — a quieter way to read the web" jsonLd={{
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "The Small Web",
   "url": "https://smallweb.blog",
-  "description": "A curated collection of the best indie blogs. Hand-picked writing from independent voices who care about their craft."
+  "description": "A curated collection of indie blogs. Hand-picked writing from independent voices."
 }}>
-  <ThemeToggle />
+  <Header currentPath="/" />
 
-  <div class="page">
-    <Header currentPath="/" />
+  <main>
 
-    <main class="home-main">
-    <!-- Lead -->
-    <section class="lead">
-      <div class="lead-col">
-        {leadPost && (
-          <a href={leadPost.link} target="_blank" rel="noopener noreferrer" class="lead-main">
-            <span class={`lead-stamp ${leadPost.category}`}>{leadPost.category} · {formatDate(leadPost.date)}</span>
-            <h2 class="lead-title">{leadPost.title}</h2>
-            <p class="lead-byline">By <strong>{leadPost.blogName}</strong> · {new URL(leadPost.blogUrl).hostname}</p>
-            {leadPost.excerpt && <p class="lead-excerpt">{truncateText(leadPost.excerpt, 220)}</p>}
-          </a>
+    {leadPost && (
+      <section class="hero">
+        <aside class="side-left">
+          <span class="side-label">Today</span>
+          {freshCount} essays in the room.
+          <div class="ornament"></div>
+          Nothing is ranked or scored. Move at your own pace.
+        </aside>
+
+        <article class="lead-body">
+          <span class="eyebrow" data-cat={leadPost.category}>
+            {CATEGORY_MAP.get(leadPost.category as CategorySlug)?.name || leadPost.category} · Long read
+          </span>
+          <h1>
+            <a href={leadPost.link} target="_blank" rel="noopener noreferrer">{leadPost.title}</a>
+          </h1>
+          {leadPost.excerpt && (
+            <p class="lede">{truncate(leadPost.excerpt, 340)}</p>
+          )}
+          <div class="byline">
+            <span>By <b>{leadPost.blogName}</b></span>
+            <span class="figures">{readingMinutes(leadPost)} min</span>
+            <span class="figures">{formatDate(leadPost.date)}</span>
+          </div>
+        </article>
+
+        {leadPost.excerpt && (
+          <aside class="side-right">
+            <span class="side-label">Marginalia</span>
+            <q>{truncate(leadPost.excerpt, 140)}</q>
+            <div class="ornament"></div>
+            See also {blogs.length} writers across ten shelves in the library.
+          </aside>
         )}
-        {secondaryLead && (
-          <a href={secondaryLead.link} target="_blank" rel="noopener noreferrer" class="lead-secondary">
-            <span class={`lead-stamp ${secondaryLead.category}`}>{secondaryLead.category} · {formatDate(secondaryLead.date)}</span>
-            <h3 class="lead-secondary-title">{secondaryLead.title}</h3>
-            <p class="lead-byline">By <strong>{secondaryLead.blogName}</strong> · {new URL(secondaryLead.blogUrl).hostname}</p>
-            {secondaryLead.excerpt && <p class="lead-excerpt">{truncateText(secondaryLead.excerpt, 200)}</p>}
-          </a>
-        )}
+      </section>
+    )}
+
+    <section class="columns">
+      <div class="section-head">
+        <h2>The <em>Reading Room</em></h2>
+        <small>All ten shelves · {columns.reduce((n, c) => n + c.posts.length, 0)} essays</small>
       </div>
-      <div class="lead-side">
-        <div class="lead-side-label">Also New</div>
-        {alsoNew.map((post) => (
-          <a href={post.link} target="_blank" rel="noopener noreferrer" class="pick">
-            <div class="pick-cat" style={`color:${getCatColor(post.category)}`}>
-              <span class="pick-cat-dot" style={`background:${getCatColor(post.category)}`}></span>
-              {post.category}
+      <div class="columns-grid">
+        {columns.map((col) => (
+          <div class="col" data-cat={col.slug}>
+            <div class="col-head">
+              <h3><a href={`/category/${col.slug}`}>{col.head}<em>{col.tail}</em></a></h3>
+              <span class="col-count figures">{col.posts.length} new</span>
             </div>
-            <h4 class="pick-title">{post.title}</h4>
-            <p class="pick-meta">{post.blogName} · {formatDate(post.date)}</p>
-          </a>
+            <div class="col-body">
+              {col.posts.map((post) => (
+                <article class="story">
+                  <h4>
+                    <a href={post.link} target="_blank" rel="noopener noreferrer">{post.title}</a>
+                  </h4>
+                  <div class="meta">{post.blogName} · <span class="figures">{shortDate(post.date)}</span></div>
+                </article>
+              ))}
+            </div>
+            <a class="col-foot" href={`/category/${col.slug}`}>All {col.name.toLowerCase()} →</a>
+          </div>
         ))}
       </div>
     </section>
 
-    <!-- See all link -->
-    <div class="see-all-link">
-      <a href="/feed">See all articles →</a>
-    </div>
-
-    <!-- Cut -->
-    <div class="cut">✂</div>
-
-    {/* ── Row 1: Tech + Culture — standard ink-on-paper 2-col ── */}
-    {(() => {
-      const lp = categoryPosts.get('tech') || [];
-      const rp = categoryPosts.get('culture') || [];
-      return (
-        <section class="category-pair">
-          <div class="category-col">
-            <div class="category-col-head">
-              <span class="category-col-dot" style="background:var(--tech)"></span>
-              <span class="category-col-name">Tech</span>
-              <a href="/category/tech" class="category-col-link">All tech →</a>
-            </div>
-            {lp[0] && (
-              <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
-                <h4 class="category-col-featured-title">{lp[0].title}</h4>
-                <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
-                {lp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(lp[0].excerpt, 160)}</p>}
-              </a>
-            )}
-            {lp.slice(1).map((post) => (
-              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
-                <h4 class="category-col-item-title">{post.title}</h4>
-                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-              </a>
-            ))}
-          </div>
-          <div class="category-col">
-            <div class="category-col-head">
-              <span class="category-col-dot" style="background:var(--culture)"></span>
-              <span class="category-col-name">Culture</span>
-              <a href="/category/culture" class="category-col-link">All culture →</a>
-            </div>
-            {rp[0] && (
-              <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
-                <h4 class="category-col-featured-title">{rp[0].title}</h4>
-                <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
-                {rp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(rp[0].excerpt, 160)}</p>}
-              </a>
-            )}
-            {rp.slice(1).map((post) => (
-              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
-                <h4 class="category-col-item-title">{post.title}</h4>
-                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-              </a>
-            ))}
-          </div>
-        </section>
-      );
-    })()}
-
-    {/* ── Featured Excerpt ── */}
-    {featuredExcerpt && (
-      <>
-        <div class="cut">✕</div>
-        <a href={featuredExcerpt.link} target="_blank" rel="noopener noreferrer" class="pasted-quote">
-          <div class="pasted-quote-bg"></div>
-          <div class="pasted-quote-inner">
-            <div class="pasted-quote-label">From the blogs</div>
-            <p class="pasted-quote-text">{featuredExcerpt.excerpt!.slice(0, 280)}{featuredExcerpt.excerpt!.length > 280 ? '...' : ''}</p>
-            <div class="pasted-quote-src">{featuredExcerpt.blogName} · {featuredExcerpt.title}</div>
-          </div>
-        </a>
-      </>
-    )}
-
-    <div class="cut">✂</div>
-
-    {/* ── Row 2: Life + Design — wash band ── */}
-    {(() => {
-      const lp = categoryPosts.get('life') || [];
-      const rp = categoryPosts.get('design') || [];
-      return (
-        <section class="category-pair category-pair--wash" style="--pair-wash-l: var(--life-wash); --pair-wash-r: var(--design-wash)">
-          <div class="category-col">
-            <div class="category-col-head">
-              <span class="category-col-dot" style="background:var(--life)"></span>
-              <span class="category-col-name">Life</span>
-              <a href="/category/life" class="category-col-link">All life →</a>
-            </div>
-            {lp[0] && (
-              <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
-                <h4 class="category-col-featured-title">{lp[0].title}</h4>
-                <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
-                {lp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(lp[0].excerpt, 160)}</p>}
-              </a>
-            )}
-            {lp.slice(1).map((post) => (
-              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
-                <h4 class="category-col-item-title">{post.title}</h4>
-                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-              </a>
-            ))}
-          </div>
-          <div class="category-col">
-            <div class="category-col-head">
-              <span class="category-col-dot" style="background:var(--design)"></span>
-              <span class="category-col-name">Design</span>
-              <a href="/category/design" class="category-col-link">All design →</a>
-            </div>
-            {rp[0] && (
-              <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
-                <h4 class="category-col-featured-title">{rp[0].title}</h4>
-                <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
-                {rp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(rp[0].excerpt, 160)}</p>}
-              </a>
-            )}
-            {rp.slice(1).map((post) => (
-              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
-                <h4 class="category-col-item-title">{post.title}</h4>
-                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-              </a>
-            ))}
-          </div>
-        </section>
-      );
-    })()}
-
-    <div class="cut">✕</div>
-
-    {/* ── Row 3: Economics + Finance — plain ── */}
-    {(() => {
-      const lp = categoryPosts.get('economics') || [];
-      const rp = categoryPosts.get('finance') || [];
-      return (
-        <section class="category-pair">
-          <div class="category-col">
-            <div class="category-col-head">
-              <span class="category-col-dot" style="background:var(--economics)"></span>
-              <span class="category-col-name">Economics</span>
-              <a href="/category/economics" class="category-col-link">All economics →</a>
-            </div>
-            {lp[0] && (
-              <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
-                <h4 class="category-col-featured-title">{lp[0].title}</h4>
-                <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
-                {lp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(lp[0].excerpt, 160)}</p>}
-              </a>
-            )}
-            {lp.slice(1).map((post) => (
-              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
-                <h4 class="category-col-item-title">{post.title}</h4>
-                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-              </a>
-            ))}
-          </div>
-          <div class="category-col">
-            <div class="category-col-head">
-              <span class="category-col-dot" style="background:var(--finance)"></span>
-              <span class="category-col-name">Finance</span>
-              <a href="/category/finance" class="category-col-link">All finance →</a>
-            </div>
-            {rp[0] && (
-              <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
-                <h4 class="category-col-featured-title">{rp[0].title}</h4>
-                <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
-                {rp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(rp[0].excerpt, 160)}</p>}
-              </a>
-            )}
-            {rp.slice(1).map((post) => (
-              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
-                <h4 class="category-col-item-title">{post.title}</h4>
-                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-              </a>
-            ))}
-          </div>
-        </section>
-      );
-    })()}
-
-    <div class="cut">✂</div>
-
-    {/* ── Row 4: History + Philosophy — wash band ── */}
-    {(() => {
-      const lp = categoryPosts.get('history') || [];
-      const rp = categoryPosts.get('philosophy') || [];
-      return (
-        <section class="category-pair category-pair--wash" style="--pair-wash-l: var(--history-wash); --pair-wash-r: var(--philosophy-wash)">
-          <div class="category-col">
-            <div class="category-col-head">
-              <span class="category-col-dot" style="background:var(--history)"></span>
-              <span class="category-col-name">History</span>
-              <a href="/category/history" class="category-col-link">All history →</a>
-            </div>
-            {lp[0] && (
-              <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
-                <h4 class="category-col-featured-title">{lp[0].title}</h4>
-                <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
-                {lp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(lp[0].excerpt, 160)}</p>}
-              </a>
-            )}
-            {lp.slice(1).map((post) => (
-              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
-                <h4 class="category-col-item-title">{post.title}</h4>
-                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-              </a>
-            ))}
-          </div>
-          <div class="category-col">
-            <div class="category-col-head">
-              <span class="category-col-dot" style="background:var(--philosophy)"></span>
-              <span class="category-col-name">Philosophy</span>
-              <a href="/category/philosophy" class="category-col-link">All philosophy →</a>
-            </div>
-            {rp[0] && (
-              <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
-                <h4 class="category-col-featured-title">{rp[0].title}</h4>
-                <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
-                {rp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(rp[0].excerpt, 160)}</p>}
-              </a>
-            )}
-            {rp.slice(1).map((post) => (
-              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
-                <h4 class="category-col-item-title">{post.title}</h4>
-                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-              </a>
-            ))}
-          </div>
-        </section>
-      );
-    })()}
-
-    {/* ── From the Archives ── */}
     {archivePicks.length > 0 && (
-      <section class="archives-strip">
-        <div class="archives-strip-label">From the Archives</div>
-        <div class="archives-strip-grid">
-          {archivePicks.map((post) => (
-            <a href={post.link} target="_blank" rel="noopener noreferrer" class="archives-strip-card" style={`--card-accent: var(--${post.category})`}>
-              <span class="archives-strip-cat">
-                <span class="archives-strip-cat-dot" style={`background:var(--${post.category})`}></span>
-                {post.category}
-              </span>
-              <h4 class="archives-strip-title">{post.title}</h4>
-              {post.excerpt && (
-                <p class="archives-strip-excerpt">{truncateText(post.excerpt, 140)}</p>
-              )}
-              <p class="archives-strip-meta">{post.blogName}</p>
-            </a>
+      <section class="archive-strip">
+        <aside class="as-rail">
+          <span class="side-label">From the stacks</span>
+          <p class="as-blurb">Five rediscoveries pulled from the back issues, rotated by the day.</p>
+          <div class="ornament"></div>
+          <p class="as-note">Read slowly. There is no hurry.</p>
+        </aside>
+
+        <ol class="as-picks">
+          {archivePicks.map((post, i) => (
+            <li class="as-pick" data-cat={post.category}>
+              <a href={post.link} target="_blank" rel="noopener noreferrer">
+                <span class="as-num">{romanize(i + 1)}.</span>
+                <div class="as-body">
+                  <span class="eyebrow" data-cat={post.category}>
+                    {CATEGORY_MAP.get(post.category as CategorySlug)?.name || post.category}
+                  </span>
+                  <h3 class="as-title">{post.title}</h3>
+                  <div class="as-meta">
+                    <span>{post.blogName}</span>
+                    <span class="as-date figures">{shortDate(post.date)}</span>
+                  </div>
+                </div>
+              </a>
+            </li>
           ))}
-        </div>
+        </ol>
       </section>
     )}
 
-    <div class="cut">✕</div>
+    {feature && (
+      <section class="feature">
+        <aside class="side-left">
+          <span class="side-label">The feature</span>
+          {readingMinutes(feature)} minutes of long-form.
+          <div class="ornament"></div>
+          Filed in {CATEGORY_MAP.get(feature.category as CategorySlug)?.name || feature.category}.
+        </aside>
 
-    {/* ── Row 5: Psychology + Science — plain ── */}
-    {(() => {
-      const lp = categoryPosts.get('psychology') || [];
-      const rp = categoryPosts.get('science') || [];
-      return (
-        <section class="category-pair">
-          <div class="category-col">
-            <div class="category-col-head">
-              <span class="category-col-dot" style="background:var(--psychology)"></span>
-              <span class="category-col-name">Psychology</span>
-              <a href="/category/psychology" class="category-col-link">All psychology →</a>
-            </div>
-            {lp[0] && (
-              <a href={lp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
-                <h4 class="category-col-featured-title">{lp[0].title}</h4>
-                <p class="category-col-featured-meta">{lp[0].blogName} · {formatDate(lp[0].date)}</p>
-                {lp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(lp[0].excerpt, 160)}</p>}
-              </a>
-            )}
-            {lp.slice(1).map((post) => (
-              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
-                <h4 class="category-col-item-title">{post.title}</h4>
-                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-              </a>
-            ))}
+        <div class="feature-body">
+          <span class="eyebrow" data-cat={feature.category}>
+            {CATEGORY_MAP.get(feature.category as CategorySlug)?.name || feature.category} · Feature
+          </span>
+          <h2>
+            <a href={feature.link} target="_blank" rel="noopener noreferrer">{feature.title}</a>
+          </h2>
+          {feature.excerpt && <p class="first">{truncate(feature.excerpt, 420)}</p>}
+          <div class="byline">
+            <span>By <b>{feature.blogName}</b></span>
+            <span class="figures">{readingMinutes(feature)} min</span>
+            <span class="figures">{formatDate(feature.date)}</span>
           </div>
-          <div class="category-col">
-            <div class="category-col-head">
-              <span class="category-col-dot" style="background:var(--science)"></span>
-              <span class="category-col-name">Science</span>
-              <a href="/category/science" class="category-col-link">All science →</a>
-            </div>
-            {rp[0] && (
-              <a href={rp[0].link} target="_blank" rel="noopener noreferrer" class="category-col-featured">
-                <h4 class="category-col-featured-title">{rp[0].title}</h4>
-                <p class="category-col-featured-meta">{rp[0].blogName} · {formatDate(rp[0].date)}</p>
-                {rp[0].excerpt && <p class="category-col-featured-excerpt">{truncateText(rp[0].excerpt, 160)}</p>}
-              </a>
-            )}
-            {rp.slice(1).map((post) => (
-              <a href={post.link} target="_blank" rel="noopener noreferrer" class="category-col-item">
-                <h4 class="category-col-item-title">{post.title}</h4>
-                <p class="category-col-item-meta">{post.blogName} · {formatDate(post.date)}</p>
-              </a>
-            ))}
-          </div>
-        </section>
-      );
-    })()}
+        </div>
 
-    </main>
-    <Footer />
-  </div>
+        {feature.excerpt && (
+          <aside class="side-right">
+            <span class="side-label">A passage</span>
+            <q>{truncate(feature.excerpt, 160)}</q>
+            <div class="ornament"></div>
+            Part of a longer piece on the writer's own site.
+          </aside>
+        )}
+      </section>
+    )}
+
+  </main>
+
+  <Footer />
 </Base>
+
+<style>
+  /* ─── page-local: homepage composition ─── */
+
+  .hero {
+    display: grid;
+    grid-template-columns: 180px 1fr 220px;
+    gap: 56px;
+    align-items: start;
+    padding-bottom: 72px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .side-left, .side-right {
+    font-family: var(--serif-body);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    font-style: italic;
+  }
+  .side-left  { text-align: right; padding-top: 18px; }
+  .side-right { padding-top: 18px; }
+
+  .lead-body h1 {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(40px, 6vw, 88px);
+    line-height: 0.96;
+    letter-spacing: -0.028em;
+    margin: 22px 0 26px;
+    font-variation-settings: "opsz" 144, "SOFT" 40;
+    color: var(--ink);
+  }
+  .lead-body h1 a { color: inherit; }
+  .lead-body h1 a:hover { color: var(--accent); }
+  .lede {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    max-width: 58ch;
+    margin: 0 0 24px;
+  }
+  .lede::first-letter {
+    font-family: var(--serif-display);
+    float: left;
+    font-size: 92px;
+    line-height: 0.82;
+    padding: 12px 14px 0 0;
+    color: var(--accent);
+    font-weight: 400;
+    font-style: italic;
+    font-variation-settings: "opsz" 144;
+  }
+  .side-right q {
+    quotes: "\201C" "\201D";
+    display: block;
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.38;
+    font-style: italic;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144;
+  }
+
+  .columns {
+    padding: 96px 0 104px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .columns .section-head { margin-bottom: 64px; }
+
+  .columns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 72px 56px;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    --col-color: var(--ink);
+  }
+  .col[data-cat="tech"]       { --col-color: var(--tech); }
+  .col[data-cat="culture"]    { --col-color: var(--culture); }
+  .col[data-cat="economics"]  { --col-color: var(--economics); }
+  .col[data-cat="finance"]    { --col-color: var(--finance); }
+  .col[data-cat="life"]       { --col-color: var(--life); }
+  .col[data-cat="philosophy"] { --col-color: var(--philosophy); }
+  .col[data-cat="psychology"] { --col-color: var(--psychology); }
+  .col[data-cat="design"]     { --col-color: var(--design); }
+  .col[data-cat="history"]    { --col-color: var(--history); }
+  .col[data-cat="science"]    { --col-color: var(--science); }
+
+  .col-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--col-color);
+    gap: 12px;
+  }
+  .col-head h3 {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin: 0;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+    color: var(--col-color);
+  }
+  .col-head h3 a { color: inherit; }
+  .col-head h3 a:hover { color: var(--accent); }
+  .col-head h3 em { font-style: italic; font-weight: 300; }
+  .col-count {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dim);
+    white-space: nowrap;
+  }
+
+  .col-body { flex: 1; }
+
+  .story { padding: 0; margin-bottom: 28px; }
+  .story:last-child { margin-bottom: 0; }
+  .story h4 {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.25;
+    letter-spacing: -0.006em;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .story h4 a { color: inherit; transition: color 160ms ease; }
+  .story h4 a:hover { color: var(--accent); }
+  .story .meta {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+    font-weight: 500;
+  }
+
+  .col-foot {
+    display: inline-block;
+    margin-top: 32px;
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--dim);
+    transition: color 160ms ease;
+    align-self: flex-start;
+  }
+  .col-foot:hover { color: var(--col-color); }
+
+  /* ─── archive strip — numbered clippings from the stacks ─── */
+  .archive-strip {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 72px;
+    margin-top: 96px;
+    padding: 96px 0 88px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  .archive-strip::before,
+  .archive-strip::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: var(--rule);
+  }
+  .archive-strip::before { top: 8px; }
+  .archive-strip::after  { bottom: 8px; }
+
+  .as-rail { padding-top: 8px; }
+  .as-rail .side-label { margin-bottom: 20px; }
+  .as-rail .as-blurb {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 0;
+    font-variation-settings: "opsz" 144;
+  }
+  .as-rail .as-note {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    margin: 0;
+    max-width: 24ch;
+  }
+
+  .as-picks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .as-pick {
+    border-top: 1px solid var(--rule-soft);
+  }
+  .as-pick:first-child { border-top: 0; }
+  .as-pick a {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 40px;
+    padding: 24px 0;
+    color: inherit;
+    text-decoration: none;
+    align-items: baseline;
+    transition: padding-left 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .as-pick a:hover { padding-left: 16px; }
+  .as-pick a:hover .as-title { color: var(--accent); }
+  .as-pick a:hover .as-num { color: var(--accent); }
+
+  .as-num {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 58px;
+    line-height: 0.82;
+    letter-spacing: -0.02em;
+    color: var(--dim);
+    font-variation-settings: "opsz" 144;
+    text-align: right;
+    transition: color 200ms ease;
+    align-self: start;
+    padding-top: 4px;
+  }
+
+  .as-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .as-body .eyebrow { font-size: 9.5px; }
+  .as-title {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: clamp(22px, 2.6vw, 28px);
+    line-height: 1.2;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    margin: 0;
+    transition: color 180ms ease;
+    max-width: 52ch;
+  }
+  .as-title em { font-style: italic; }
+  .as-meta {
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--dim);
+    font-weight: 500;
+    margin-top: 6px;
+  }
+  .as-meta .as-date { color: var(--ink-2); letter-spacing: 0.08em; }
+
+  .feature {
+    display: grid;
+    grid-template-columns: 180px 1fr 220px;
+    gap: 56px;
+    padding: 96px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-top: 72px;
+    position: relative;
+  }
+  .feature::before,
+  .feature::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: var(--rule);
+  }
+  .feature::before { top: 8px; }
+  .feature::after  { bottom: 8px; }
+  .feature-body h2 {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(34px, 4.6vw, 58px);
+    line-height: 1;
+    letter-spacing: -0.022em;
+    margin: 16px 0 26px;
+    font-variation-settings: "opsz" 144, "SOFT" 40;
+  }
+  .feature-body h2 a { color: inherit; }
+  .feature-body h2 a:hover { color: var(--accent); }
+  .feature-body p {
+    font-size: 17px;
+    line-height: 1.66;
+    color: var(--ink-2);
+    margin: 0 0 18px;
+    max-width: 60ch;
+  }
+  .feature-body p.first::first-letter {
+    font-family: var(--serif-display);
+    float: left;
+    font-size: 78px;
+    line-height: 0.84;
+    padding: 8px 12px 0 0;
+    color: var(--ink);
+    font-weight: 300;
+    font-variation-settings: "opsz" 144;
+  }
+  .feature .byline { margin-top: 24px; }
+
+  @media (max-width: 980px) {
+    .hero, .feature {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding: 40px 0;
+    }
+    .feature { padding: 56px 0; margin-top: 40px; }
+    .side-left { text-align: left; padding-top: 0; }
+    .side-right { padding-top: 0; }
+    .columns { padding: 48px 0; }
+    .columns-grid { gap: 40px; }
+    .columns .section-head { margin-bottom: 32px; }
+    .archive-strip {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 56px 0 48px;
+      margin-top: 40px;
+    }
+    .as-rail .as-blurb { font-size: 17px; }
+    .as-pick a { grid-template-columns: 56px 1fr; gap: 24px; padding: 20px 0; }
+    .as-num { font-size: 40px; }
+    .as-title { font-size: 20px; }
+  }
+</style>

@@ -1,65 +1,50 @@
 ---
-import { CATEGORIES } from '../lib/categories';
+import { getSiteStats } from '../lib/site-data';
+import ThemeToggle from './ThemeToggle.astro';
 
 interface Props {
   currentPath?: string;
-  currentCategory?: string;
-  showCategoryNav?: boolean;
+  tag?: string;
 }
 
-const { currentPath = '/', currentCategory, showCategoryNav = true } = Astro.props;
+const { currentPath = '/', tag = 'a reading room for the unhurried web' } = Astro.props;
 
-const pageLinks = [
-  { href: '/feed', name: 'Feed' },
-  { href: '/discover', name: 'Discover' },
-  { href: '/archive', name: 'Archive' },
-  { href: '/blogs', name: 'Blogroll' },
-  { href: '/about', name: 'About' },
+const { blogCount } = getSiteStats();
+
+const now = new Date();
+const dayOfYear = Math.floor((now.getTime() - new Date(now.getFullYear(), 0, 0).getTime()) / 86400000);
+const issueNo = dayOfYear;
+const weekday = now.toLocaleDateString('en-US', { weekday: 'long' });
+const monthDay = now.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+const year = now.getFullYear();
+
+const nav = [
+  { href: '/', label: 'Today', match: (p: string) => p === '/' },
+  { href: '/departments', label: 'Departments', match: (p: string) => p === '/departments' || p.startsWith('/category') },
+  { href: '/blogs', label: 'Writers', match: (p: string) => p.startsWith('/blogs') || p.startsWith('/blog/') },
+  { href: '/archive', label: 'Archive', match: (p: string) => p.startsWith('/archive') },
+  { href: '/about', label: 'About', match: (p: string) => p.startsWith('/about') },
 ];
-
-const isHome = currentPath === '/';
-
-function getIssueString() {
-  const now = new Date();
-  const dayOfYear = Math.floor((now.getTime() - new Date(now.getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
-  const monthName = now.toLocaleDateString('en-US', { month: 'long' });
-  return `Issue No. ${dayOfYear} · ${monthName} ${now.getFullYear()}`;
-}
 ---
 
-<div class="utility-bar">
-  <span class="utility-issue">{getIssueString()}</span>
-  <nav class="utility-nav">
-    {pageLinks.map((link) => (
-      <a href={link.href} class:list={["utility-link", currentPath === link.href ? "active" : ""]}>{link.name}</a>
-    ))}
-    <a href="/rss.xml" class="utility-link rss">RSS</a>
-  </nav>
-</div>
-
 <header class="masthead">
-  <h1 class="masthead-title"><a href="/">The <span class="word-accent">Small</span> Web</a></h1>
-  <p class="masthead-sub">small blogs, singular voices</p>
-  <hr class="masthead-rule">
+  <div class="left">
+    Vol. II &middot; <b class="figures">No. {issueNo}</b><br />
+    Established <b>MMXXV</b>
+  </div>
+  <h1 class="title"><a href="/">sm<em>all</em>web</a></h1>
+  <div class="right">
+    {weekday}, <b class="figures">{monthDay}</b>, {year}<br />
+    <b class="figures">{blogCount}</b> writers in the library
+  </div>
+  <ThemeToggle />
 </header>
 
-{showCategoryNav && (
-  <nav class="nav">
-    <a href="/" class:list={["stamp", isHome && !currentCategory ? "active" : ""]}>All</a>
-    {CATEGORIES.map((cat) => {
-      const isActive = currentCategory === cat.slug || currentPath === `/category/${cat.slug}`;
-      return (
-        <a href={`/category/${cat.slug}`} class:list={["stamp", isActive ? "active" : ""]}>
-          <span class="stamp-dot" style={`background:var(${cat.colorVar})`}></span>{cat.name}
-        </a>
-      );
-    })}
+<div class="subbar">
+  <nav>
+    {nav.map((n) => (
+      <a href={n.href} class={n.match(currentPath) ? 'active' : ''}>{n.label}</a>
+    ))}
   </nav>
-)}
-
-<style>
-  .masthead-title a {
-    color: inherit;
-    text-decoration: none;
-  }
-</style>
+  <span class="tag"><slot name="tag">{tag}</slot></span>
+</div>

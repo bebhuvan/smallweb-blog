@@ -1,23 +1,21 @@
 ---
-import { formatDateTimeUtc } from '../lib/dates';
-import { getSiteStats } from '../lib/site-data';
+interface Props {
+  left?: string;
+  colophon?: string;
+}
 
-const { blogCount, postCount, lastUpdated: lastUpdatedRaw } = getSiteStats();
-const lastUpdated = formatDateTimeUtc(lastUpdatedRaw) || 'Unknown';
+const {
+  left = `smallweb · MMXXVI`,
+  colophon = 'Set in Fraunces & Source Serif on parchment, with a single carmine accent.',
+} = Astro.props;
 ---
 
-<footer class="footer">
-  <div class="footer-info">
-    <strong>{blogCount}</strong> blogs · <strong>{postCount}</strong> posts · last updated {lastUpdated} · no ads, ever
-  </div>
-  <div class="footer-links">
-    <a href="/feed">Feed</a>
-    <a href="/discover">Discover</a>
-    <a href="/archive">Archive</a>
-    <a href="/blogs">Blogroll</a>
-    <a href="/install">Install App</a>
-    <a href="/about">About</a>
+<footer class="page">
+  <span>{left}</span>
+  <span class="colophon">{colophon}</span>
+  <span class="colo-links">
+    <a href="/rss.xml">RSS</a>
     <a href="https://github.com/bebhuvan/smallweb-blog" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="/rss.xml" style="color:var(--accent)">RSS</a>
-  </div>
+    <a href="/about">About</a>
+  </span>
 </footer>

@@ -2,72 +2,129 @@
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import ThemeToggle from '../components/ThemeToggle.astro';
 ---
 
-<Base title="Install App — The Small Web" description="Add The Small Web to your home screen as a lightweight app.">
-  <ThemeToggle />
+<Base title="Install · smallweb" description="Add smallweb to your home screen as a lightweight app.">
+  <Header currentPath="/install" tag="offline reading, on any screen" />
 
-  <div class="page">
-    <Header currentPath="/install" showCategoryNav={false} />
+  <main>
+    <section class="install-hero">
+      <span class="eyebrow" data-cat="tech">Install</span>
+      <h1>A shortcut on your <em>home screen</em>.</h1>
+      <p class="lede">Smallweb works as a lightweight, offline-friendly app. No App Store required — Safari and Chrome can add it directly from the browser.</p>
+    </section>
 
-    <main class="install-main">
-      <div class="editorial-header">
-        <h1 class="editorial-title">Install App</h1>
-        <p class="editorial-sub">A lightweight, offline-friendly shortcut to The Small Web</p>
-        <hr class="editorial-rule">
-      </div>
-
-      <div class="content">
-        <h2>iPhone / iPad (Safari)</h2>
+    <section class="install-steps">
+      <article>
+        <h2>iPhone &amp; iPad <small>Safari</small></h2>
         <ol>
-          <li>Open <strong>smallweb.blog</strong> in Safari.</li>
-          <li>Tap the <strong>Share</strong> button.</li>
-          <li>Choose <strong>Add to Home Screen</strong>.</li>
-          <li>Name it and tap <strong>Add</strong>.</li>
+          <li>Open <b>smallweb.blog</b> in Safari.</li>
+          <li>Tap the <b>Share</b> button.</li>
+          <li>Choose <b>Add to Home Screen</b>.</li>
+          <li>Name it and tap <b>Add</b>.</li>
         </ol>
+      </article>
 
-        <h2>Android (Chrome)</h2>
+      <article>
+        <h2>Android <small>Chrome</small></h2>
         <ol>
-          <li>Open <strong>smallweb.blog</strong> in Chrome.</li>
-          <li>Tap the <strong>menu</strong> (three dots).</li>
-          <li>Select <strong>Install app</strong> or <strong>Add to Home screen</strong>.</li>
+          <li>Open <b>smallweb.blog</b> in Chrome.</li>
+          <li>Tap the menu (three dots).</li>
+          <li>Select <b>Install app</b> or <b>Add to Home screen</b>.</li>
         </ol>
+      </article>
 
-        <h2>Desktop (Chrome / Edge)</h2>
+      <article>
+        <h2>Desktop <small>Chrome · Edge</small></h2>
         <ol>
-          <li>Open <strong>smallweb.blog</strong>.</li>
-          <li>Click the <strong>Install</strong> icon in the address bar (or in the menu).</li>
+          <li>Open <b>smallweb.blog</b>.</li>
+          <li>Click the <b>Install</b> icon in the address bar.</li>
           <li>Confirm the install.</li>
         </ol>
+      </article>
+    </section>
 
-        <div class="pasted-quote" style="cursor: default;">
-          <div class="pasted-quote-inner">
-            <div class="pasted-quote-label">Tip</div>
-            <p class="pasted-quote-text">The app works best after your first visit — it caches key pages and loads faster next time.</p>
-          </div>
-        </div>
-      </div>
-    </main>
+    <blockquote class="tip">
+      The app works best after your first visit — it caches key pages and loads faster next time.
+    </blockquote>
+  </main>
 
-    <Footer />
-  </div>
+  <Footer left="Install · smallweb" colophon="A quiet reader, in your pocket." />
 </Base>
 
 <style>
-  .install-main {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0 0 2rem;
+  .install-hero {
+    max-width: 56ch;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .install-hero h1 {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(44px, 7vw, 88px);
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    margin: 14px 0 22px;
+    font-variation-settings: "opsz" 144, "SOFT" 40;
+    color: var(--ink);
+  }
+  .install-hero h1 em { font-style: italic; color: var(--accent); }
+  .install-hero .lede {
+    font-family: var(--serif-body);
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--ink-2);
   }
 
-  .install-main ol {
-    margin: 0.6rem 0 1.6rem 1.25rem;
-    color: var(--ink-muted);
+  .install-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    padding: 56px 0 48px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .install-steps h2 {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .install-steps h2 small {
+    display: inline-block;
+    margin-left: 10px;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dim);
+    font-weight: 600;
+  }
+  .install-steps ol {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 16px;
     line-height: 1.7;
+    color: var(--ink-2);
+  }
+  .install-steps li { margin: 8px 0; }
+  .install-steps b { color: var(--ink); font-weight: 600; }
+
+  .tip {
+    margin: 48px 0 0;
+    padding: 24px 28px;
+    border-left: 2px solid var(--accent);
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--ink);
+    max-width: 64ch;
   }
 
-  .install-main li {
-    margin: 0.35rem 0;
+  @media (max-width: 980px) {
+    .install-steps { grid-template-columns: 1fr; gap: 32px; padding: 40px 0; }
   }
 </style>

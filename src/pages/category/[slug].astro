@@ -2,11 +2,9 @@
 import Base from '../../layouts/Base.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import ThemeToggle from '../../components/ThemeToggle.astro';
-import { CATEGORY_MAP, CATEGORIES, type CategoryDefinition, type CategorySlug } from '../../lib/categories';
+import { CATEGORIES, CATEGORY_MAP, type CategoryDefinition, type CategorySlug } from '../../lib/categories';
 import { getBlogMap, getBlogs, getPosts } from '../../lib/site-data';
-import { enrichPosts, pickFeaturedPost } from '../../lib/posts';
-import { formatDate } from '../../lib/dates';
+import { enrichPosts } from '../../lib/posts';
 
 export function getStaticPaths() {
   return CATEGORIES.map((cat) => ({
@@ -22,9 +20,8 @@ const category = CATEGORY_MAP.get(slug as CategorySlug) || categoryProp;
 const blogs = getBlogs();
 const blogMap = getBlogMap(blogs);
 
-const categoryBlogIds = new Set(
-  blogs.filter((b) => b.categories.includes(slug as string)).map((b) => b.id)
-);
+const categoryBlogs = blogs.filter((b) => (b.categories || []).includes(slug as string));
+const categoryBlogIds = new Set(categoryBlogs.map((b) => b.id));
 
 const posts = enrichPosts(
   getPosts().filter((p) => categoryBlogIds.has(p.blogId)),
@@ -32,123 +29,311 @@ const posts = enrichPosts(
   { categoryOverride: category.slug }
 );
 
-const { featured: featuredPost, remaining: remainingPosts } = pickFeaturedPost(posts, blogMap, {
-  minExcerptLength: 80,
-});
+// Stats for the side panel.
+const now = new Date();
+const firstOfMonth = new Date(now.getFullYear(), now.getMonth(), 1).getTime();
+const postsThisMonth = posts.filter((p) => new Date(p.date).getTime() >= firstOfMonth).length;
 
-// Find a post with a long excerpt for the quote block
-const quotePost = posts.find((p) => p.excerpt && p.excerpt.length > 120);
+function shortDate(dateStr: string) {
+  const d = new Date(dateStr);
+  if (Number.isNaN(d.getTime())) return '';
+  return d.toLocaleDateString('en-US', { month: 'short', day: '2-digit' });
+}
 
-// Group remaining posts by month
-type PostsByMonth = { [key: string]: typeof posts };
-const postsByMonth: PostsByMonth = {};
+function readingMinutes(post: { excerpt?: string }) {
+  const words = (post.excerpt || '').split(/\s+/).length;
+  return Math.max(1, Math.round(words / 200) + 5);
+}
 
-remainingPosts.forEach((post) => {
-  const date = new Date(post.date);
-  const monthKey = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
-  if (!postsByMonth[monthKey]) {
-    postsByMonth[monthKey] = [];
-  }
-  postsByMonth[monthKey].push(post);
-});
+function truncate(text: string | undefined, max: number) {
+  if (!text) return '';
+  const t = text.trim();
+  return t.length <= max ? t : `${t.slice(0, max).trimEnd()}…`;
+}
 
-const sortedMonths = Object.keys(postsByMonth).sort((a, b) => {
-  return new Date(b).getTime() - new Date(a).getTime();
-});
-
+const visiblePosts = posts.slice(0, 30);
+const writersRail = categoryBlogs.slice(0, 12);
 ---
 
-<Base title={`${category.name} — The Small Web`} description={category.description} jsonLd={{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smallweb.blog" },
-    { "@type": "ListItem", "position": 2, "name": "Categories", "item": "https://smallweb.blog/blogs" },
-    { "@type": "ListItem", "position": 3, "name": category.name }
-  ]
-}}>
-  <ThemeToggle />
+<Base title={`${category.name} — smallweb`} description={category.description}>
+  <Header currentPath={`/category/${slug}`} tag={category.description} />
 
-  <div class="page">
-    <Header currentPath={`/category/${slug}`} currentCategory={slug as string} />
+  <main style={`--category-color: var(${category.colorVar});`}>
 
-    <main class="category-main">
-      <div class="category-hero" style={`background: var(${category.washVar})`}>
-        <div class="category-hero-count">{posts.length} {posts.length === 1 ? 'article' : 'articles'}</div>
-        <h1 class="category-hero-title">{category.name}</h1>
-        <p class="category-hero-desc">{category.description}</p>
+    <section class="cat-hero">
+      <aside class="side-left">
+        <span class="side-label">Department</span>
+        The {category.name.toLowerCase()} shelf — {category.description.toLowerCase()}.
+      </aside>
+
+      <div class="cat-title-block">
+        <span class="eyebrow" data-cat={category.slug}>Department</span>
+        <h1>{category.name}<em>.</em></h1>
+        <p class="lede">{category.description}.</p>
       </div>
 
-      {posts.length > 0 ? (
-        <div>
-          {featuredPost && (
-            <a href={featuredPost.link} target="_blank" rel="noopener noreferrer" class="asym-featured" style="margin-top: 1.5rem;">
-              <h2 class="asym-featured-title">{featuredPost.title}</h2>
-              <p class="asym-featured-meta">{featuredPost.blogName} · {formatDate(featuredPost.date)}</p>
-              {featuredPost.excerpt && (
-                <p class="asym-featured-excerpt">{featuredPost.excerpt}</p>
-              )}
-            </a>
-          )}
+      <aside class="side-right">
+        <div class="side-stat figures"><em>{categoryBlogs.length}</em></div>
+        <div class="side-note">writers on this shelf.</div>
+        <div class="ornament"></div>
+        <div class="side-note"><b class="figures">{postsThisMonth}</b> essays this month.</div>
+      </aside>
+    </section>
 
-          {quotePost && quotePost !== featuredPost && (
-            <a href={quotePost.link} target="_blank" rel="noopener noreferrer" class="pasted-quote">
-              <div class="pasted-quote-inner">
-                <div class="pasted-quote-label">From this category</div>
-                <p class="pasted-quote-text">{quotePost.excerpt}</p>
-                <p class="pasted-quote-src">— {quotePost.blogName}</p>
-              </div>
-            </a>
-          )}
+    <div class="cat-main">
 
-          <div class="cut">✂</div>
-
-          {sortedMonths.map((month) => (
-            <section class="archive-month">
-              <h2 class="month-header month-header-accented" style={`border-left-color: var(--${slug})`}>
-                {month}
-              </h2>
-              <div class="archive-list">
-                {postsByMonth[month].map((post) => (
-                  <a
-                    href={post.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="archive-item"
-                  >
-                    <span class="archive-date">{formatDate(post.date)}</span>
-                    <div class="archive-content">
-                      <h4 class="archive-title">{post.title}</h4>
-                      <p class="archive-meta">{post.blogName}</p>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </section>
-          ))}
+      <section class="post-list">
+        <div class="section-head">
+          <h2>Lately on the <em>shelf</em></h2>
+          <small>{visiblePosts.length} of {posts.length}</small>
         </div>
-      ) : (
-        <p class="empty-msg">No articles in this category yet.</p>
-      )}
-    </main>
 
-    <Footer />
-  </div>
+        {visiblePosts.length === 0 && (
+          <p class="empty">No essays on this shelf yet.</p>
+        )}
+
+        {visiblePosts.map((post) => (
+          <a class="post-item" href={post.link} target="_blank" rel="noopener noreferrer">
+            <div class="post-meta-left">
+              <span class="date">{shortDate(post.date)}</span>
+              <span class="time">{readingMinutes(post)} min read</span>
+              <span class="writer">{post.blogName}</span>
+            </div>
+            <div class="post-body">
+              <h3 class="post-title">{post.title}</h3>
+              {post.excerpt && <p class="post-excerpt">{truncate(post.excerpt, 260)}</p>}
+            </div>
+          </a>
+        ))}
+      </section>
+
+      <aside class="writers-rail">
+        <h3>Writers on this shelf</h3>
+        <ul>
+          {writersRail.map((b) => (
+            <li>
+              <a href={`/blog/${b.id}`}>
+                {b.name}
+                <small>{b.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</small>
+              </a>
+            </li>
+          ))}
+        </ul>
+        {categoryBlogs.length > writersRail.length && (
+          <div class="rail-foot">
+            See all <a href="/blogs">{categoryBlogs.length} writers</a>, or browse <a href="/">today's reading room</a>.
+          </div>
+        )}
+      </aside>
+
+    </div>
+
+  </main>
+
+  <Footer left={`Dept. · ${category.name}`} colophon={category.description} />
 </Base>
 
 <style>
-  .category-main {
-    padding: 0 0 2rem;
+  /* ─── page-local: category page ─── */
+  .cat-hero {
+    display: grid;
+    grid-template-columns: 180px 1fr 220px;
+    gap: 56px;
+    align-items: end;
+    padding-bottom: 72px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .side-left, .side-right {
+    font-family: var(--serif-body);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    font-style: italic;
+  }
+  .cat-hero .side-left  { text-align: right; padding-bottom: 14px; }
+  .cat-hero .side-right { padding-bottom: 14px; }
+  .cat-title-block h1 {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: clamp(64px, 10vw, 140px);
+    line-height: 0.82;
+    letter-spacing: -0.04em;
+    margin: 10px 0 0;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    color: var(--ink);
+  }
+  .cat-title-block h1 em { font-style: italic; color: var(--category-color); }
+  .cat-title-block .lede {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    max-width: 54ch;
+    margin: 32px 0 0;
+    font-style: italic;
+    font-family: var(--serif-display);
+    font-weight: 300;
   }
 
-  .empty-msg {
-    text-align: center;
-    padding: 3rem;
-    color: var(--ink-muted);
-    font-size: 1rem;
+  .side-right .side-stat {
+    font-family: var(--serif-display);
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144;
+    margin-bottom: 4px;
+  }
+  .side-right .side-stat em { font-style: italic; color: var(--category-color); }
+  .side-right .side-note {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    font-style: italic;
+    margin-top: 12px;
   }
 
-  @media (max-width: 600px) {
-    .category-main { padding: 0 0 1.25rem; }
+  .cat-main {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 80px;
+    padding: 72px 0 0;
+  }
+
+  .post-list { display: flex; flex-direction: column; }
+  .post-list .section-head { margin-bottom: 8px; }
+  .post-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 48px;
+    padding: 48px 0;
+    align-items: baseline;
+    text-decoration: none;
+    color: inherit;
+    transition: padding-left 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    border-bottom: 1px dotted var(--rule);
+  }
+  .post-item:last-child { border-bottom: 0; }
+  .post-item:hover { padding-left: 16px; }
+  .post-item:hover .post-title { color: var(--accent); }
+
+  .post-meta-left {
+    text-align: right;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+    line-height: 1.8;
+    padding-top: 6px;
+  }
+  .post-meta-left .date {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    text-transform: none;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 8px;
+    font-variation-settings: "opsz" 144;
+    font-feature-settings: "tnum", "lnum";
+  }
+  .post-meta-left .time { display: block; color: var(--category-color); font-weight: 600; }
+  .post-meta-left .writer { display: block; color: var(--ink-2); font-weight: 500; margin-top: 6px; }
+
+  .post-body { padding-top: 4px; }
+  .post-title {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: clamp(22px, 2.4vw, 28px);
+    line-height: 1.18;
+    letter-spacing: -0.012em;
+    margin: 0 0 12px;
+    color: var(--ink);
+    transition: color 180ms ease;
+  }
+  .post-excerpt {
+    font-size: 16px;
+    line-height: 1.68;
+    color: var(--ink-2);
+    margin: 12px 0 0;
+    max-width: 60ch;
+  }
+
+  .writers-rail {
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    padding-top: 18px;
+    border-top: 2px solid var(--category-color);
+  }
+  .writers-rail h3 {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--category-color);
+    margin: 0 0 22px;
+    font-weight: 600;
+  }
+  .writers-rail ul { list-style: none; margin: 0; padding: 0; }
+  .writers-rail li { padding: 14px 0; }
+  .writers-rail li + li { border-top: 1px dotted var(--rule); }
+  .writers-rail li a {
+    display: block;
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    transition: color 160ms ease;
+  }
+  .writers-rail li a:hover { color: var(--category-color); }
+  .writers-rail li a small {
+    display: block;
+    font-family: var(--sans);
+    font-size: 9.5px;
+    font-weight: 500;
+    color: var(--dim);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
+  .writers-rail .rail-foot {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.55;
+  }
+  .writers-rail .rail-foot a {
+    color: var(--category-color);
+    border-bottom: 1px solid var(--rule);
+    transition: border-color 160ms ease;
+  }
+  .writers-rail .rail-foot a:hover { border-bottom-color: var(--category-color); }
+
+  .empty {
+    padding: 48px 0;
+    color: var(--dim);
+    font-style: italic;
+  }
+
+  @media (max-width: 980px) {
+    .cat-hero { grid-template-columns: 1fr; gap: 24px; padding-bottom: 40px; }
+    .cat-hero .side-left, .cat-hero .side-right { text-align: left; padding-bottom: 0; }
+    .cat-title-block h1 { font-size: clamp(56px, 16vw, 96px); }
+    .cat-main { grid-template-columns: 1fr; gap: 48px; padding-top: 40px; }
+    .post-item { grid-template-columns: 1fr; gap: 12px; padding: 24px 0; }
+    .post-meta-left { text-align: left; padding-top: 0; display: flex; gap: 14px; flex-wrap: wrap; }
+    .post-meta-left .date { display: inline; margin: 0; font-size: 18px; }
+    .post-title { font-size: 22px; }
+    .writers-rail { position: static; }
   }
 </style>

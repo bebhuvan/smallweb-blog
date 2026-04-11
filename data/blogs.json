@@ -683,7 +683,7 @@
     },
     {
       "id": "larryswedroe",
-      "name": "Larry’s Substack",
+      "name": "Larry\u2019s Substack",
       "url": "https://larryswedroe.substack.com",
       "feed": "https://larryswedroe.substack.com/feed",
       "categories": [
@@ -977,7 +977,7 @@
       "categories": [
         "science"
       ],
-      "description": "Theories of Everything — deep dives into theoretical physics, quantum mechanics, cosmology, and philosophy of science.",
+      "description": "Theories of Everything \u2014 deep dives into theoretical physics, quantum mechanics, cosmology, and philosophy of science.",
       "proxy": true
     },
     {
@@ -1000,7 +1000,7 @@
         "life",
         "culture"
       ],
-      "description": "Escaping Flatland — essays on creativity, agency, relationships, and the writing life from a Baltic island."
+      "description": "Escaping Flatland \u2014 essays on creativity, agency, relationships, and the writing life from a Baltic island."
     },
     {
       "id": "aiascendant",
@@ -1010,7 +1010,7 @@
       "categories": [
         "tech"
       ],
-      "description": "Gradient Ascendant — AI analysis through technical, cultural, and philosophical lenses."
+      "description": "Gradient Ascendant \u2014 AI analysis through technical, cultural, and philosophical lenses."
     },
     {
       "id": "danq",
@@ -1036,7 +1036,7 @@
     },
     {
       "id": "tautvilas",
-      "name": "Tautvilas Mečinskas",
+      "name": "Tautvilas Me\u010dinskas",
       "url": "https://tautvilas.medium.com",
       "feed": "https://tautvilas.medium.com/feed",
       "categories": [
@@ -1330,7 +1330,7 @@
       "categories": [
         "tech"
       ],
-      "description": "Jack Clark’s weekly newsletter on AI research and industry.",
+      "description": "Jack Clark\u2019s weekly newsletter on AI research and industry.",
       "proxy": true
     },
     {
@@ -1393,7 +1393,7 @@
       "categories": [
         "finance"
       ],
-      "description": "Quantitative finance and risk management — quantitative when possible, qualitative when necessary."
+      "description": "Quantitative finance and risk management \u2014 quantitative when possible, qualitative when necessary."
     },
     {
       "id": "ritholtz",
@@ -1548,7 +1548,7 @@
     },
     {
       "id": "jasmine",
-      "name": "@jasmine’s substack",
+      "name": "@jasmine\u2019s substack",
       "url": "https://jasmi.news",
       "feed": "https://jasmi.news/feed",
       "categories": [
@@ -1584,7 +1584,7 @@
     },
     {
       "id": "casssunstein",
-      "name": "Cass’s Substack",
+      "name": "Cass\u2019s Substack",
       "url": "https://casssunstein.substack.com",
       "feed": "https://casssunstein.substack.com/feed",
       "categories": [
@@ -1640,7 +1640,7 @@
         "culture"
       ],
       "proxy": true,
-      "description": "Séb Krier on AI, policy, and the societal shape of technological change."
+      "description": "S\u00e9b Krier on AI, policy, and the societal shape of technological change."
     },
     {
       "id": "figsinwintertime",
@@ -1688,7 +1688,7 @@
         "culture"
       ],
       "proxy": true,
-      "description": "Douglas Rushkoff on sustaining humanity in a digital world — tech, media, and culture."
+      "description": "Douglas Rushkoff on sustaining humanity in a digital world \u2014 tech, media, and culture."
     },
     {
       "id": "constructionphysics",
@@ -1712,7 +1712,19 @@
         "philosophy"
       ],
       "proxy": true,
-      "description": "Omar Najjarine on virtue, meaning, and cultural critique — essays from a lecturer and autodidact."
+      "description": "Omar Najjarine on virtue, meaning, and cultural critique \u2014 essays from a lecturer and autodidact."
+    },
+    {
+      "id": "robinjbrooks",
+      "name": "Robin J Brooks",
+      "url": "https://robinjbrooks.substack.com",
+      "feed": "https://robinjbrooks.substack.com/feed",
+      "categories": [
+        "economics",
+        "finance"
+      ],
+      "description": "Robin Brooks on FX, macro, and the plumbing of global capital flows \u2014 Brookings senior fellow, former chief economist at IIF.",
+      "proxy": true
     }
   ]
 }
