@@ -1,54 +1,91 @@
 import type { APIRoute } from 'astro';
 import { getBlogs, getPosts } from '../lib/site-data';
 
+const SITE_URL = 'https://smallweb.blog';
+const FEED_LIMIT = 100;
+
+function escapeXml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function escapeAttr(text: string): string {
+  return escapeXml(text).replace(/"/g, '&quot;');
+}
+
 export const GET: APIRoute = async () => {
   const blogs = getBlogs();
   const posts = getPosts();
   const blogMap = new Map(blogs.map((b) => [b.id, b]));
 
-  const siteUrl = 'https://smallweb.blog';
-  const now = new Date().toUTCString();
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const MIN_YEAR = currentYear - 2;
+  const MAX_YEAR = currentYear + 1;
 
-  const items = posts.slice(0, 100).map((post) => {
-    const blog = blogMap.get(post.blogId);
-    const pubDate = new Date(post.date).toUTCString();
-    const categories = blog?.categories?.map((cat: string) => `      <category>${cat}</category>`).join('\n') || '';
+  // Sort by date desc, drop bogus/missing dates, take top N.
+  const items = posts
+    .map((p) => ({ post: p, ts: new Date(p.date).getTime() }))
+    .filter((it) => {
+      if (Number.isNaN(it.ts)) return false;
+      const y = new Date(it.ts).getFullYear();
+      return y >= MIN_YEAR && y <= MAX_YEAR;
+    })
+    .sort((a, b) => b.ts - a.ts)
+    .slice(0, FEED_LIMIT)
+    .map(({ post, ts }) => {
+      const blog = blogMap.get(post.blogId);
+      const pubDate = new Date(ts).toUTCString();
+      const writer = blog?.name || 'Unknown';
+      const categories = (blog?.categories || [])
+        .map((c: string) => `      <category>${escapeXml(c)}</category>`)
+        .join('\n');
+      const description = post.excerpt
+        ? `      <description><![CDATA[${post.excerpt}]]></description>\n`
+        : '';
+      const sourceUrl = blog?.feed ? ` url="${escapeAttr(blog.feed)}"` : '';
 
-    return `
-    <item>
+      return `    <item>
       <title><![CDATA[${post.title}]]></title>
-      <link>${post.link}</link>
-      <guid isPermaLink="true">${post.link}</guid>
+      <link>${escapeXml(post.link)}</link>
+      <guid isPermaLink="true">${escapeXml(post.link)}</guid>
       <pubDate>${pubDate}</pubDate>
-      <author>${blog?.name || 'Unknown'}</author>
-      <source url="${blog?.feed || ''}">${blog?.name || 'Unknown'}</source>
-      ${post.excerpt ? `<description><![CDATA[${post.excerpt}]]></description>` : ''}
-${categories}
+      <dc:creator><![CDATA[${writer}]]></dc:creator>
+      <source${sourceUrl}>${escapeXml(writer)}</source>
+${description}${categories}
     </item>`;
-  }).join('');
+    })
+    .join('\n');
+
+  const lastBuildDate = now.toUTCString();
 
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>The Small Web</title>
-    <description>A curated collection of the best indie blogs. Hand-picked writing from independent voices who care about their craft.</description>
-    <link>${siteUrl}</link>
-    <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>smallweb</title>
+    <link>${SITE_URL}</link>
+    <description>A reading room for the unhurried web. Hand-picked essays from ${blogs.length} independent writers, refreshed every few hours.</description>
     <language>en-us</language>
-    <lastBuildDate>${now}</lastBuildDate>
+    <lastBuildDate>${lastBuildDate}</lastBuildDate>
+    <generator>smallweb on Astro</generator>
     <ttl>360</ttl>
+    <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>${siteUrl}/favicon.svg</url>
-      <title>The Small Web</title>
-      <link>${siteUrl}</link>
+      <url>${SITE_URL}/og-image.png</url>
+      <title>smallweb</title>
+      <link>${SITE_URL}</link>
     </image>
-    ${items}
+${items}
   </channel>
 </rss>`;
 
-  return new Response(rss.trim(), {
+  return new Response(rss, {
     headers: {
-      'Content-Type': 'application/xml; charset=utf-8',
+      'Content-Type': 'application/rss+xml; charset=utf-8',
       'Cache-Control': 'public, max-age=3600',
     },
   });

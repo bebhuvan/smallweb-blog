@@ -32,6 +32,10 @@ function truncate(text: string | undefined, max: number) {
       <div>
         <span class="eyebrow" data-cat="science">The feed</span>
         <h1>Every <em>essay</em>, as it lands.</h1>
+        <p class="feed-sub">
+          Chronological. No algorithm. Read it here, or
+          <a href="/rss.xml" type="application/rss+xml">subscribe by RSS</a>.
+        </p>
       </div>
       <div class="count">
         latest <b class="figures">{enrichedPosts.length}</b> of <b class="figures">{totalPosts.toLocaleString()}</b> · {blogs.length} writers
@@ -77,6 +81,23 @@ function truncate(text: string | undefined, max: number) {
     color: var(--ink);
   }
   .feed-hero h1 em { font-style: italic; color: var(--accent); }
+  .feed-sub {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(17px, 1.8vw, 19px);
+    line-height: 1.4;
+    color: var(--ink-2);
+    margin: 18px 0 0;
+    max-width: 52ch;
+    font-variation-settings: "opsz" 144;
+  }
+  .feed-sub a {
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    transition: border-color 160ms ease;
+  }
+  .feed-sub a:hover { border-bottom-color: var(--accent); }
   .feed-hero .count {
     font-family: var(--serif-display);
     font-style: italic;
