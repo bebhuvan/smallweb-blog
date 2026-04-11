@@ -260,13 +260,13 @@
       "name": "Arts & Letters Daily",
       "url": "https://www.aldaily.com",
       "feed": "https://www.aldaily.com/feed/",
-    "categories": [
-      "culture"
-    ],
-    "description": "Curated essays on ideas, philosophy, literature, and the arts.",
-    "allowMissingDates": true,
-    "ignoreLinkDateInference": true
-  },
+      "categories": [
+        "culture"
+      ],
+      "description": "Curated essays on ideas, philosophy, literature, and the arts.",
+      "allowMissingDates": true,
+      "ignoreLinkDateInference": true
+    },
     {
       "id": "sentiers",
       "name": "Sentiers",
@@ -1605,6 +1605,114 @@
       ],
       "proxy": true,
       "description": "Hussein Aboubakr Mansour on Middle Eastern history, Arab intellectual life, philosophy, and politics."
+    },
+    {
+      "id": "mosaics",
+      "name": "Mosaics Newsletter",
+      "url": "https://stephanieshen.substack.com",
+      "feed": "https://stephanieshen.substack.com/feed",
+      "categories": [
+        "philosophy",
+        "psychology"
+      ],
+      "proxy": true,
+      "description": "Stephanie Shen on the mind, consciousness, and ideas from philosophy, neuroscience, and literature."
+    },
+    {
+      "id": "pointingatthings",
+      "name": "Pointing at Things",
+      "url": "https://pointingatthings.substack.com",
+      "feed": "https://pointingatthings.substack.com/feed",
+      "categories": [
+        "life",
+        "psychology"
+      ],
+      "proxy": true,
+      "description": "Practical essays on agency, introspection, career, and money."
+    },
+    {
+      "id": "technologik",
+      "name": "Technologik",
+      "url": "https://technologik.substack.com",
+      "feed": "https://technologik.substack.com/feed",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "proxy": true,
+      "description": "Séb Krier on AI, policy, and the societal shape of technological change."
+    },
+    {
+      "id": "figsinwintertime",
+      "name": "Figs in Winter",
+      "url": "https://figsinwintertime.substack.com",
+      "feed": "https://figsinwintertime.substack.com/feed",
+      "categories": [
+        "philosophy",
+        "culture"
+      ],
+      "proxy": true,
+      "description": "Massimo Pigliucci on Stoicism, skepticism, and living meaningfully through reason."
+    },
+    {
+      "id": "sceneswithsimon",
+      "name": "Scenes with Simon",
+      "url": "https://sceneswithsimon.com",
+      "feed": "https://sceneswithsimon.com/feed",
+      "categories": [
+        "culture",
+        "tech"
+      ],
+      "proxy": true,
+      "description": "Simon de la Rouviere on creativity, culture, and the internet's effect on both."
+    },
+    {
+      "id": "innerwilds",
+      "name": "Inner Wilds",
+      "url": "https://www.innerwilds.blog",
+      "feed": "https://www.innerwilds.blog/feed",
+      "categories": [
+        "life",
+        "philosophy"
+      ],
+      "proxy": true,
+      "description": "River Kenna on the sacred, embodiment, healing, and the inner life."
+    },
+    {
+      "id": "rushkoff",
+      "name": "Rushkoff",
+      "url": "https://rushkoff.substack.com",
+      "feed": "https://rushkoff.substack.com/feed",
+      "categories": [
+        "tech",
+        "culture"
+      ],
+      "proxy": true,
+      "description": "Douglas Rushkoff on sustaining humanity in a digital world — tech, media, and culture."
+    },
+    {
+      "id": "constructionphysics",
+      "name": "Construction Physics",
+      "url": "https://www.construction-physics.com",
+      "feed": "https://www.construction-physics.com/feed",
+      "categories": [
+        "tech",
+        "economics"
+      ],
+      "proxy": true,
+      "description": "Brian Potter on buildings, infrastructure, industrial technology, and how things actually get made."
+    },
+    {
+      "id": "omarnajjarine",
+      "name": "The Autodidact",
+      "url": "https://omarnajjarine.substack.com",
+      "feed": "https://omarnajjarine.substack.com/feed",
+      "categories": [
+        "culture",
+        "philosophy"
+      ],
+      "proxy": true,
+      "description": "Omar Najjarine on virtue, meaning, and cultural critique — essays from a lecturer and autodidact."
     }
   ]
 }
