@@ -45,17 +45,10 @@ const websiteJsonLd = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
 
-    <!-- Font preloads (Fraunces is the LCP face — drop cap + masthead) -->
+    <!-- Font preloads — LCP-critical faces only -->
     <link rel="preload" href="/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/fraunces-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
-
-    <!-- Google Fonts (Source Serif 4 body + Inter Tight metadata) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Inter+Tight:wght@400;500;600&display=swap"
-    />
+    <link rel="preload" href="/fonts/source-serif-4-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Theme: apply saved preference before paint to prevent flash -->
     <script is:inline>
