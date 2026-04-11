@@ -1,14 +1,29 @@
 // Cloudflare Worker serving static assets
 
-// Security headers for all HTML responses
+// Security headers for all HTML responses.
+// All fonts and styles are now self-hosted, so the CSP can be tight —
+// no third-party origins are allowed.
 const securityHeaders = {
-  'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
-  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+  'Content-Security-Policy': [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline'",
+    "style-src 'self' 'unsafe-inline'",
+    "font-src 'self'",
+    "img-src 'self' data:",
+    "connect-src 'self'",
+    "manifest-src 'self'",
+    "frame-ancestors 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    "upgrade-insecure-requests",
+  ].join('; '),
+  'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
   'X-Content-Type-Options': 'nosniff',
   'X-Frame-Options': 'DENY',
   'Cross-Origin-Opener-Policy': 'same-origin',
+  'Cross-Origin-Resource-Policy': 'same-origin',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
-  'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
+  'Permissions-Policy': 'geolocation=(), microphone=(), camera=(), interest-cohort=()',
 };
 
 // Cache headers for static assets
@@ -54,7 +69,11 @@ export default {
     // Clone response and add headers
     const newHeaders = new Headers(response.headers);
 
-    // Add security headers to HTML responses
+    // HSTS + X-Content-Type-Options apply to every response.
+    newHeaders.set('Strict-Transport-Security', securityHeaders['Strict-Transport-Security']);
+    newHeaders.set('X-Content-Type-Options', securityHeaders['X-Content-Type-Options']);
+
+    // Full security header set is meaningful only on HTML responses.
     if (contentType.includes('text/html')) {
       for (const [key, value] of Object.entries(securityHeaders)) {
         newHeaders.set(key, value);

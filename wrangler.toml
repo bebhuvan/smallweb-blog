@@ -3,10 +3,14 @@ main = "worker/index.js"
 compatibility_date = "2024-01-01"
 workers_dev = true
 
-# Static Assets configuration for Workers
+# Static Assets configuration for Workers.
+# `run_worker_first = true` makes the fetch handler run for every request,
+# including matched static assets — required so the worker can attach
+# security headers (CSP, HSTS, COOP, X-Frame-Options) and cache directives.
 [assets]
 directory = "./dist"
 binding = "ASSETS"
+run_worker_first = true
 
 # Custom domain
 [[routes]]
