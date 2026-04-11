@@ -20,6 +20,7 @@ const year = now.getFullYear();
 
 const nav = [
   { href: '/', label: 'Today', match: (p: string) => p === '/' },
+  { href: '/feed', label: 'Feed', match: (p: string) => p.startsWith('/feed') },
   { href: '/departments', label: 'Departments', match: (p: string) => p === '/departments' || p.startsWith('/category') },
   { href: '/blogs', label: 'Writers', match: (p: string) => p.startsWith('/blogs') || p.startsWith('/blog/') },
   { href: '/archive', label: 'Archive', match: (p: string) => p.startsWith('/archive') },
