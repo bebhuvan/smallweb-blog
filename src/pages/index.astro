@@ -127,22 +127,27 @@ const freshCount = enrichedPosts.filter((p) => {
     <section class="columns">
       <div class="section-head">
         <h2>The <em>Reading Room</em></h2>
-        <small>All ten shelves · {columns.reduce((n, c) => n + c.posts.length, 0)} essays</small>
+        <small>Ten shelves · {columns.reduce((n, c) => n + c.posts.length, 0)} essays</small>
       </div>
       <div class="columns-grid">
-        {columns.map((col) => (
+        {columns.map((col, ci) => (
           <div class="col" data-cat={col.slug}>
             <div class="col-head">
               <h3><a href={`/category/${col.slug}`}>{col.head}<em>{col.tail}</em></a></h3>
-              <span class="col-count figures">{col.posts.length} new</span>
             </div>
             <div class="col-body">
-              {col.posts.map((post) => (
-                <article class="story">
+              {col.posts.map((post, pi) => (
+                <article class:list={['story', pi === 0 && 'story-lead']}>
                   <h4>
                     <a href={post.link} target="_blank" rel="noopener noreferrer">{post.title}</a>
                   </h4>
-                  <div class="meta">{post.blogName} · <span class="figures">{shortDate(post.date)}</span></div>
+                  {pi === 0 && post.excerpt && (
+                    <p class="story-excerpt">{truncate(post.excerpt, 120)}</p>
+                  )}
+                  <div class="meta">
+                    <a href={`/blog/${post.blogId}`} class="meta-writer">{post.blogName}</a>
+                    <span class="figures">{shortDate(post.date)}</span>
+                  </div>
                 </article>
               ))}
             </div>
@@ -287,15 +292,14 @@ const freshCount = enrichedPosts.filter((p) => {
   }
 
   .columns {
-    padding: 96px 0 104px;
-    border-bottom: 1px solid var(--rule);
+    padding: 104px 0 112px;
   }
-  .columns .section-head { margin-bottom: 64px; }
+  .columns .section-head { margin-bottom: 72px; }
 
   .columns-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 72px 56px;
+    gap: 80px 56px;
   }
 
   .col {
@@ -314,64 +318,95 @@ const freshCount = enrichedPosts.filter((p) => {
   .col[data-cat="history"]    { --col-color: var(--history); }
   .col[data-cat="science"]    { --col-color: var(--science); }
 
+  /* ─ column heading ─ */
   .col-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding-bottom: 16px;
-    margin-bottom: 28px;
+    padding-bottom: 18px;
+    margin-bottom: 32px;
     border-bottom: 1px solid var(--col-color);
-    gap: 12px;
   }
   .col-head h3 {
     font-family: var(--serif-display);
     font-weight: 300;
-    font-size: 30px;
-    line-height: 0.95;
-    letter-spacing: -0.02em;
+    font-size: 32px;
+    line-height: 0.92;
+    letter-spacing: -0.025em;
     margin: 0;
     font-variation-settings: "opsz" 144, "SOFT" 30;
-    color: var(--col-color);
+    color: var(--ink);
   }
   .col-head h3 a { color: inherit; }
-  .col-head h3 a:hover { color: var(--accent); }
-  .col-head h3 em { font-style: italic; font-weight: 300; }
-  .col-count {
-    font-family: var(--sans);
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--dim);
-    white-space: nowrap;
+  .col-head h3 a:hover { color: var(--col-color); }
+  .col-head h3 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--col-color);
   }
 
+  /* ─ stories ─ */
   .col-body { flex: 1; }
 
-  .story { padding: 0; margin-bottom: 28px; }
+  .story { margin-bottom: 24px; }
   .story:last-child { margin-bottom: 0; }
   .story h4 {
     font-family: var(--serif-display);
     font-weight: 400;
-    font-size: 19px;
-    line-height: 1.25;
-    letter-spacing: -0.006em;
-    margin: 0 0 8px;
+    font-size: 17px;
+    line-height: 1.28;
+    letter-spacing: -0.004em;
+    margin: 0 0 6px;
     color: var(--ink);
   }
   .story h4 a { color: inherit; transition: color 160ms ease; }
   .story h4 a:hover { color: var(--accent); }
   .story .meta {
     font-family: var(--sans);
-    font-size: 10px;
-    letter-spacing: 0.14em;
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--dim);
     font-weight: 500;
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+  }
+  .story .meta-writer {
+    color: var(--ink-2);
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: color 160ms ease, border-color 160ms ease;
+  }
+  .story .meta-writer:hover {
+    color: var(--col-color);
+    border-bottom-color: var(--col-color);
   }
 
+  /* ─ lead story per column ─ */
+  .story-lead {
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .story-lead h4 {
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.012em;
+    margin-bottom: 10px;
+  }
+  .story-excerpt {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    margin: 0 0 12px;
+    max-width: 42ch;
+  }
+
+  /* ─ column footer ─ */
   .col-foot {
     display: inline-block;
-    margin-top: 32px;
+    margin-top: auto;
+    padding-top: 24px;
     font-family: var(--sans);
     font-size: 10px;
     font-weight: 600;
@@ -565,10 +600,13 @@ const freshCount = enrichedPosts.filter((p) => {
     .feature-body h2 { font-size: clamp(28px, 7vw, 44px); }
 
     .columns { padding: 56px 0; }
-    .columns-grid { gap: 48px; }
-    .columns .section-head { margin-bottom: 36px; }
+    .columns-grid { gap: 56px; }
+    .columns .section-head { margin-bottom: 40px; }
     .col-body .story:nth-child(n+4) { display: none; }
-    .col-foot { margin-top: 16px; }
+    .story-lead { padding-bottom: 20px; margin-bottom: 22px; }
+    .story-lead h4 { font-size: 20px; }
+    .story-excerpt { font-size: 14px; }
+    .col-foot { padding-top: 16px; }
 
     .archive-strip {
       grid-template-columns: 1fr;
