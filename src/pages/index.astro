@@ -52,8 +52,8 @@ const columns = HOMEPAGE_CATEGORY_SLUGS.map((slug, i) => {
   const cat = CATEGORY_MAP.get(slug);
   const curated = categoryPosts.get(slug) || [];
   const posts = curated.length > 0
-    ? curated.slice(0, 3)
-    : enrichedPosts.filter((p) => p.category === slug).slice(0, 3);
+    ? curated.slice(0, 5)
+    : enrichedPosts.filter((p) => p.category === slug).slice(0, 5);
   const [head, tail] = splitItalic(cat?.name || slug);
   return {
     slug,
@@ -552,24 +552,35 @@ const freshCount = enrichedPosts.filter((p) => {
   @media (max-width: 980px) {
     .hero, .feature {
       grid-template-columns: 1fr;
-      gap: 28px;
+      gap: 0;
       padding: 40px 0;
     }
+    .hero .side-left,
+    .hero .side-right,
+    .feature .side-left,
+    .feature .side-right { display: none; }
     .feature { padding: 56px 0; margin-top: 40px; }
-    .side-left { text-align: left; padding-top: 0; }
-    .side-right { padding-top: 0; }
-    .columns { padding: 48px 0; }
-    .columns-grid { gap: 40px; }
-    .columns .section-head { margin-bottom: 32px; }
+    .feature::before, .feature::after { display: none; }
+    .lead-body h1 { font-size: clamp(36px, 9vw, 56px); }
+    .feature-body h2 { font-size: clamp(28px, 7vw, 44px); }
+
+    .columns { padding: 56px 0; }
+    .columns-grid { gap: 48px; }
+    .columns .section-head { margin-bottom: 36px; }
+    .col-body .story:nth-child(n+4) { display: none; }
+    .col-foot { margin-top: 16px; }
+
     .archive-strip {
       grid-template-columns: 1fr;
-      gap: 32px;
+      gap: 24px;
       padding: 56px 0 48px;
-      margin-top: 40px;
+      margin-top: 48px;
     }
-    .as-rail .as-blurb { font-size: 17px; }
-    .as-pick a { grid-template-columns: 56px 1fr; gap: 24px; padding: 20px 0; }
-    .as-num { font-size: 40px; }
-    .as-title { font-size: 20px; }
+    .archive-strip::before, .archive-strip::after { display: none; }
+    .as-rail { display: none; }
+    .as-picks { border-top: 2px solid var(--accent); padding-top: 24px; }
+    .as-pick a { grid-template-columns: 48px 1fr; gap: 20px; padding: 18px 0; }
+    .as-num { font-size: 36px; }
+    .as-title { font-size: 19px; }
   }
 </style>
