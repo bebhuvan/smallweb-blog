@@ -276,39 +276,64 @@ h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd { margin: 0; }
 .subbar {
   max-width: var(--page-max);
   margin: 0 auto;
-  padding: 14px var(--page-pad-x) 18px;
+  padding: 20px var(--page-pad-x) 24px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 16px;
+  align-items: baseline;
+  gap: 24px;
   border-bottom: 1px solid var(--rule);
   flex-wrap: wrap;
 }
 .subbar nav {
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-family: var(--serif-display);
+  font-size: 17px;
+  letter-spacing: 0;
+  text-transform: none;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
 .subbar nav a {
-  margin-right: 28px;
+  position: relative;
+  font-style: italic;
+  font-weight: 300;
   color: var(--ink-2);
-  padding-bottom: 2px;
-  border-bottom: 1px solid transparent;
-  transition: border-color 160ms ease, color 160ms ease;
+  margin: 0;
+  padding: 0 16px;
+  border-bottom: 0;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  transition: color 160ms ease;
 }
-.subbar nav a:last-child { margin-right: 0; }
-.subbar nav a:hover,
-.subbar nav a.active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+.subbar nav a:first-child { padding-left: 0; }
+.subbar nav a:last-child  { padding-right: 0; }
+.subbar nav a:not(:last-child)::after {
+  content: "·";
+  position: absolute;
+  right: -3px;
+  color: var(--rule);
+  font-style: normal;
+  pointer-events: none;
+}
+.subbar nav a:hover { color: var(--accent); }
+.subbar nav a.active { color: var(--ink); }
+.subbar nav a.active::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 .subbar .tag {
   font-family: var(--serif-display);
   font-style: italic;
-  font-weight: 400;
-  font-size: 14.5px;
+  font-weight: 300;
+  font-size: 15px;
   color: var(--ink-2);
+  font-variation-settings: "opsz" 144;
 }
 .subbar .tag a { color: inherit; border-bottom: 1px solid var(--rule); }
 .subbar .tag a:hover { color: var(--accent); border-bottom-color: var(--accent); }
@@ -418,8 +443,12 @@ footer.page .colo-links {
     padding: 14px 24px;
     text-align: center;
   }
-  .subbar nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 24px; }
-  .subbar nav a { margin-right: 0; }
+  .subbar { padding: 16px 24px 18px; }
+  .subbar nav { gap: 4px 16px; justify-content: center; font-size: 16px; }
+  .subbar nav a { padding: 0 8px; margin: 0; }
+  .subbar nav a:first-child { padding-left: 8px; }
+  .subbar nav a:last-child  { padding-right: 8px; }
+  .subbar nav a:not(:last-child)::after { right: -4px; }
   main { padding: 40px 24px 64px; }
   .section-head { flex-wrap: wrap; gap: 12px; }
   footer.page {

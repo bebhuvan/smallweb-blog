@@ -10,7 +10,7 @@ import { formatDate } from '../lib/dates';
 const blogs = getBlogs();
 const blogMap = getBlogMap(blogs);
 const enrichedPosts = getEnrichedPosts({ blogs, blogMap });
-const { leadPost, categoryPosts, featuredExcerpt, archivePicks } = curateHomepage(enrichedPosts, blogMap);
+const { leadPost, categoryPosts, featuredExcerpt, archivePicks, alsoNew } = curateHomepage(enrichedPosts, blogMap);
 
 function splitItalic(name: string): [string, string] {
   const n = name.length;
@@ -64,6 +64,21 @@ const columns = HOMEPAGE_CATEGORY_SLUGS.map((slug, i) => {
     posts,
   };
 }).filter((col) => col.posts.length > 0);
+
+// Also-today picks — diversify across categories, skipping the lead's category.
+const alsoDiverse = (() => {
+  const picks: typeof alsoNew = [];
+  const seen = new Set<string>();
+  if (leadPost?.category) seen.add(leadPost.category);
+  for (const p of enrichedPosts) {
+    if (p === leadPost) continue;
+    if (seen.has(p.category)) continue;
+    picks.push(p);
+    seen.add(p.category);
+    if (picks.length >= 3) break;
+  }
+  return picks;
+})();
 
 // Feature — use featuredExcerpt if present, else the 2nd freshest prose post.
 const feature = featuredExcerpt
@@ -124,6 +139,32 @@ const freshCount = enrichedPosts.filter((p) => {
       </section>
     )}
 
+    {alsoDiverse.length > 0 && (
+      <section class="also-today">
+        <aside class="at-rail">
+          <span class="side-label">Also today</span>
+          <p class="at-blurb">Three fresh pieces, each from a different room.</p>
+        </aside>
+
+        <ol class="at-row">
+          {alsoDiverse.map((post) => (
+            <li class="at-item" data-cat={post.category}>
+              <a href={post.link} target="_blank" rel="noopener noreferrer">
+                <span class="eyebrow" data-cat={post.category}>
+                  {CATEGORY_MAP.get(post.category as CategorySlug)?.name || post.category}
+                </span>
+                <h4 class="at-title">{post.title}</h4>
+                <div class="at-meta">
+                  <span class="at-writer">{post.blogName}</span>
+                  <span class="figures">{shortDate(post.date)}</span>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
     <section class="columns">
       <div class="section-head">
         <h2>The <em>Reading Room</em></h2>
@@ -133,6 +174,7 @@ const freshCount = enrichedPosts.filter((p) => {
         {columns.map((col, ci) => (
           <div class="col" data-cat={col.slug}>
             <div class="col-head">
+              <span class="col-numeral">{col.numeral}.</span>
               <h3><a href={`/category/${col.slug}`}>{col.head}<em>{col.tail}</em></a></h3>
             </div>
             <div class="col-body">
@@ -291,6 +333,71 @@ const freshCount = enrichedPosts.filter((p) => {
     font-variation-settings: "opsz" 144;
   }
 
+  /* ─── also today — three fresh picks under the hero ─── */
+  .also-today {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 56px;
+    padding: 52px 0 56px;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .at-rail { text-align: right; padding-top: 4px; }
+  .at-rail .side-label { margin-bottom: 12px; }
+  .at-rail .at-blurb {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15.5px;
+    line-height: 1.45;
+    color: var(--ink-2);
+    margin: 0;
+    margin-left: auto;
+    max-width: 22ch;
+    font-variation-settings: "opsz" 144;
+  }
+  .at-row {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 44px;
+  }
+  .at-item { padding-right: 24px; border-right: 1px solid var(--rule-soft); }
+  .at-item:last-child { border-right: 0; padding-right: 0; }
+  .at-item a { display: block; color: inherit; }
+  .at-item .eyebrow { font-size: 9.5px; }
+  .at-title {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.24;
+    letter-spacing: -0.01em;
+    margin: 14px 0 12px;
+    color: var(--ink);
+    transition: color 180ms ease;
+    font-variation-settings: "opsz" 144, "SOFT" 20;
+  }
+  .at-item a:hover .at-title { color: var(--accent); }
+  .at-meta {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-2);
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+  }
+  .at-meta .figures {
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+
   .columns {
     padding: 104px 0 112px;
   }
@@ -303,9 +410,28 @@ const freshCount = enrichedPosts.filter((p) => {
   }
 
   .col {
+    position: relative;
     display: flex;
     flex-direction: column;
     --col-color: var(--ink);
+  }
+  /* shelves — hairlines drawn at the midpoint of the column gap */
+  @media (min-width: 981px) {
+    .col::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      left: -28px;
+      width: 1px;
+      background: var(--rule-soft);
+    }
+  }
+  @media (min-width: 981px) and (max-width: 1079px) {
+    .col:nth-child(2n+1)::before { display: none; }
+  }
+  @media (min-width: 1080px) {
+    .col:nth-child(3n+1)::before { display: none; }
   }
   .col[data-cat="tech"]       { --col-color: var(--tech); }
   .col[data-cat="culture"]    { --col-color: var(--culture); }
@@ -320,9 +446,30 @@ const freshCount = enrichedPosts.filter((p) => {
 
   /* ─ column heading ─ */
   .col-head {
+    position: relative;
     padding-bottom: 18px;
-    margin-bottom: 32px;
-    border-bottom: 1px solid var(--col-color);
+    margin-bottom: 30px;
+  }
+  .col-head::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 44px;
+    height: 2px;
+    background: var(--col-color);
+  }
+  .col-numeral {
+    display: block;
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--col-color);
+    margin-bottom: 8px;
+    font-variation-settings: "opsz" 144;
+    opacity: 0.9;
   }
   .col-head h3 {
     font-family: var(--serif-display);
@@ -345,7 +492,7 @@ const freshCount = enrichedPosts.filter((p) => {
   /* ─ stories ─ */
   .col-body { flex: 1; }
 
-  .story { margin-bottom: 24px; }
+  .story { margin-bottom: 22px; }
   .story:last-child { margin-bottom: 0; }
   .story h4 {
     font-family: var(--serif-display);
@@ -359,19 +506,28 @@ const freshCount = enrichedPosts.filter((p) => {
   .story h4 a { color: inherit; transition: color 160ms ease; }
   .story h4 a:hover { color: var(--accent); }
   .story .meta {
-    font-family: var(--sans);
-    font-size: 9.5px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--dim);
-    font-weight: 500;
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 12.5px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink-2);
+    font-weight: 400;
     display: flex;
-    gap: 8px;
+    gap: 10px;
     align-items: baseline;
+  }
+  .story .meta .figures {
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--dim);
+    text-transform: uppercase;
   }
   .story .meta-writer {
     color: var(--ink-2);
-    font-weight: 600;
+    font-weight: 400;
     border-bottom: 1px solid transparent;
     transition: color 160ms ease, border-color 160ms ease;
   }
@@ -406,17 +562,18 @@ const freshCount = enrichedPosts.filter((p) => {
   .col-foot {
     display: inline-block;
     margin-top: auto;
-    padding-top: 24px;
-    font-family: var(--sans);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--dim);
-    transition: color 160ms ease;
+    padding-top: 22px;
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.005em;
+    color: var(--ink-2);
+    font-variation-settings: "opsz" 144;
+    transition: color 160ms ease, padding-left 200ms ease;
     align-self: flex-start;
   }
-  .col-foot:hover { color: var(--col-color); }
+  .col-foot:hover { color: var(--col-color); padding-left: 4px; }
 
   /* ─── archive strip — numbered clippings from the stacks ─── */
   .archive-strip {
@@ -598,6 +755,21 @@ const freshCount = enrichedPosts.filter((p) => {
     .feature::before, .feature::after { display: none; }
     .lead-body h1 { font-size: clamp(36px, 9vw, 56px); }
     .feature-body h2 { font-size: clamp(28px, 7vw, 44px); }
+
+    .also-today {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 32px 0 28px;
+    }
+    .at-rail { display: none; }
+    .at-row { grid-template-columns: 1fr; gap: 0; }
+    .at-item {
+      padding: 16px 0;
+      border-right: 0;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .at-item:last-child { border-bottom: 0; padding-bottom: 0; }
+    .at-title { font-size: 18px; margin: 8px 0 6px; }
 
     .columns { padding: 56px 0; }
     .columns-grid { gap: 56px; }
