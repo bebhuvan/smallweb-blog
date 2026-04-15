@@ -1,6 +1,230 @@
 {
-  "lastUpdated": "2026-04-14T18:06:52.548Z",
+  "lastUpdated": "2026-04-15T03:56:53.119Z",
   "posts": [
+    {
+      "id": "8n0057",
+      "blogId": "pointingatthings",
+      "title": "The Life and Grind of the Buddha",
+      "link": "https://pointingatthings.substack.com/p/the-life-and-grind-of-the-buddha",
+      "date": "2026-04-15T03:55:59.000Z",
+      "excerpt": "How One Prince 10x'd His Pipeline and Disrupted the Entire Suffering Vertical"
+    },
+    {
+      "id": "lskq1b",
+      "blogId": "thecuttingfloor",
+      "title": "A Cheap Way of Not Drowning",
+      "link": "https://thecuttingfloor.substack.com/p/a-cheap-way-of-not-drowning",
+      "date": "2026-04-15T03:16:36.000Z",
+      "excerpt": "A small AI system for turning overload into judgment"
+    },
+    {
+      "id": "768h3y",
+      "blogId": "simonwillison",
+      "title": "Zig 0.16.0 release notes: \"Juicy Main\"",
+      "link": "https://simonwillison.net/2026/Apr/15/juicy-main",
+      "date": "2026-04-15T01:59:21.000Z",
+      "excerpt": "Zig 0.16.0 release notes: \"Juicy Main\" Zig has really good release notes - comprehensive, detailed, and with relevant usage examples for each of the new features. Of particular note in the newly released Zig 0.16.0 is what they are calling \"Juicy Main\" - a dependency injection feature for your progr..."
+    },
+    {
+      "id": "9wozq0",
+      "blogId": "simonwillison",
+      "title": "datasette PR #2689: Replace token-based CSRF with Sec-Fetch-Site header protection",
+      "link": "https://simonwillison.net/2026/Apr/14/replace-token-based-csrf",
+      "date": "2026-04-14T23:58:53.000Z",
+      "excerpt": "datasette PR #2689: Replace token-based CSRF with Sec-Fetch-Site header protection Datasette has long protected against CSRF attacks using CSRF tokens, implemented using my asgi-csrf Python library. These are something of a pain to work with - you need to scatter forms in templates with <input type=..."
+    },
+    {
+      "id": "m3fyif",
+      "blogId": "aldaily",
+      "title": "Who gets Guggenheim fellowships? A century’s worth of data shows the rise of creative artists, and the decline of humanists and natural scientists",
+      "link": "https://www.publicbooks.org/who-gets-guggenheims",
+      "date": "2026-04-14T23:50:38.000Z",
+      "excerpt": "Who gets Guggenheim fellowships? A century’s worth of data shows the rise of creative artists, and the decline of humanists and natural scientists"
+    },
+    {
+      "id": "6gjyxr",
+      "blogId": "aldaily",
+      "title": "Ancient Greek cities joined the Delian League to resist Persian aggression. They soon found themselves under the thumb of Athens ",
+      "link": "https://www.wsj.com/arts-culture/books/hubris-review-when-athens-became-an-empire-55a79d01?st=woxh3e&reflink=desktopwebshare_permalink",
+      "date": "2026-04-14T23:49:38.000Z",
+      "excerpt": "Ancient Greek cities joined the Delian League to resist Persian aggression. They soon found themselves under the thumb of Athens"
+    },
+    {
+      "id": "2gerio",
+      "blogId": "aldaily",
+      "title": "Nietzsche the mystic. There is something odd about a profoundly atheistic thinker holding quasi-religious convictions",
+      "link": "https://aeon.co/essays/the-mysticism-of-nietzsches-doctrine-of-the-eternal-return",
+      "date": "2026-04-14T23:48:38.000Z",
+      "excerpt": "Nietzsche the mystic. There is something odd about a profoundly atheistic thinker holding quasi-religious convictions"
+    },
+    {
+      "id": "tqzwm4",
+      "blogId": "aldaily",
+      "title": "“The American novel offers the dream of escape: away from civilization and into the forest, away from marriage and onto the sea, away from history and back to boyhood”",
+      "link": "https://www.chronicle.com/article/was-leslie-fiedler-ahead-of-his-time",
+      "date": "2026-04-14T23:47:38.000Z",
+      "excerpt": "“The American novel offers the dream of escape: away from civilization and into the forest, away from marriage and onto the sea, away from history and back to boyhood”"
+    },
+    {
+      "id": "vj6kku",
+      "blogId": "aldaily",
+      "title": "If you would save the planet, forget The Planet. Think only of the sensual properties of one dear place",
+      "link": "https://hedgehogreview.com/issues/humanism-in-a-posthumanist-age/articles/how-not-to-save-the-planet",
+      "date": "2026-04-14T23:46:38.000Z",
+      "excerpt": "If you would save the planet, forget The Planet. Think only of the sensual properties of one dear place"
+    },
+    {
+      "id": "dfrmmn",
+      "blogId": "aldaily",
+      "title": "“In my day, artists kept it real” is a sentiment that will never get old — as long as aging critics keep employing it",
+      "link": "https://lareviewofbooks.org/article/blank-space-cultural-history-capitalism-w-david-marx",
+      "date": "2026-04-14T23:45:38.000Z",
+      "excerpt": "“In my day, artists kept it real” is a sentiment that will never get old — as long as aging critics keep employing it"
+    },
+    {
+      "id": "scmv4e",
+      "blogId": "aldaily",
+      "title": "Jamaica Kincaid: “I find England ugly…I hate England; the weather is like a jail sentence…the food in England is like a jail sentence”",
+      "link": "https://www.thenation.com/article/culture/jamaica-kincaid-essays",
+      "date": "2026-04-14T23:44:38.000Z",
+      "excerpt": "Jamaica Kincaid: “I find England ugly…I hate England; the weather is like a jail sentence…the food in England is like a jail sentence”"
+    },
+    {
+      "id": "mkpfz2",
+      "blogId": "aldaily",
+      "title": "Making it in a non-existent profession. The economics of the writing life are grim, mercurial, and infrequently discussed",
+      "link": "https://thebaffler.com/odds-and-ends/the-profession-that-does-not-exist-symposium",
+      "date": "2026-04-14T23:43:38.000Z",
+      "excerpt": "Making it in a non-existent profession. The economics of the writing life are grim, mercurial, and infrequently discussed"
+    },
+    {
+      "id": "glj5f3",
+      "blogId": "aldaily",
+      "title": "\"Most historians would rather go out naked in public than prune their copious footnotes.\" Not Albert O. Hirschman ",
+      "link": "https://www.publicbooks.org/albert-o-hirschmans-the-passions-and-the-interests",
+      "date": "2026-04-14T23:42:38.000Z",
+      "excerpt": "\"Most historians would rather go out naked in public than prune their copious footnotes.\" Not Albert O. Hirschman"
+    },
+    {
+      "id": "13c621",
+      "blogId": "aldaily",
+      "title": "In early-19th-century Britain, body snatchers were such a problem that lead-lined coffins, metal cages, and other hardware were used to protect the dead",
+      "link": "https://publicdomainreview.org/essay/the-great-majority",
+      "date": "2026-04-14T23:41:38.000Z",
+      "excerpt": "In early-19th-century Britain, body snatchers were such a problem that lead-lined coffins, metal cages, and other hardware were used to protect the dead"
+    },
+    {
+      "id": "i174wd",
+      "blogId": "atmoio",
+      "title": "Harvard just discovered what AI actually is",
+      "link": "https://atmoio.substack.com/p/harvard-just-discovered-what-ai-actually",
+      "date": "2026-04-14T23:23:48.000Z",
+      "excerpt": "\"trendslop\""
+    },
+    {
+      "id": "4yi0vl",
+      "blogId": "spyglass",
+      "title": "Netflix Clearly Remains Movie Theater Curious",
+      "link": "https://spyglass.org/netflix-movies-movie-theaters",
+      "date": "2026-04-14T22:47:00.000Z",
+      "excerpt": "Even without Warner Bros, they're going to become a theatrical player..."
+    },
+    {
+      "id": "ajt58o",
+      "blogId": "simonwillison",
+      "title": "Trusted access for the next era of cyber defense",
+      "link": "https://simonwillison.net/2026/Apr/14/trusted-access-openai",
+      "date": "2026-04-14T21:23:59.000Z",
+      "excerpt": "Trusted access for the next era of cyber defense OpenAI's answer to Claude Mythos appears to be a new model called GPT-5.4-Cyber: In preparation for increasingly more capable models from OpenAI over the next few months, we are fine-tuning our models specifically to enable defensive cybersecurity use..."
+    },
+    {
+      "id": "g7q9w5",
+      "blogId": "kottke",
+      "title": "  If Every Congressman Facing Credible Rape Allegations... ",
+      "link": "https://kottke.org/26/04/0048753-if-every-congressman-faci",
+      "date": "2026-04-14T21:21:47.000Z",
+      "excerpt": "If Every Congressman Facing Credible Rape Allegations Resigned, We’d Have No One Left to Govern the Country. “It’s naïve to imagine the government can continue to function without the tireless dedication of our best and brightest rapists.”"
+    },
+    {
+      "id": "aor81z",
+      "blogId": "bloodinthemachine",
+      "title": "Why the AI backlash has turned violent",
+      "link": "https://www.bloodinthemachine.com/p/why-the-ai-backlash-has-turned-violent",
+      "date": "2026-04-14T21:06:21.000Z",
+      "excerpt": "And why it's probably only going to get worse from here."
+    },
+    {
+      "id": "rc0rbr",
+      "blogId": "interconnects",
+      "title": "What I’ve been building: ATOM Report, post-training course, finishing my book, and ongoing research",
+      "link": "https://www.interconnects.ai/p/what-ive-been-building-atom-report",
+      "date": "2026-04-14T20:41:12.000Z",
+      "excerpt": "What I've been up to!"
+    },
+    {
+      "id": "fpmdpa",
+      "blogId": "kottke",
+      "title": " Authoritarian Megalomaniacs Love Gaudy Buildings ",
+      "link": "https://kottke.org/26/04/authoritarian-megalomaniacs-love-gaudy-buildings",
+      "date": "2026-04-14T20:32:00.000Z",
+      "excerpt": "You know who else wanted to construct gaudy buildings in his own image? Here’s Timothy Ryback on Adolf Hitler’s obsession “with adding an expensive new wing to the Reich chancellery”. The new annex, connected to the chancellery by a marble corridor hung with crystal chandeliers, was part of Hitler’s..."
+    },
+    {
+      "id": "x3jvv4",
+      "blogId": "markcarrigan",
+      "title": "The most unnerving AI slop I’ve seen in ages",
+      "link": "https://markcarrigan.net/2026/04/14/the-most-unnerving-ai-slop-ive-seen-in-ages",
+      "date": "2026-04-14T19:58:31.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "hn0nuq",
+      "blogId": "wealthofcommonsense",
+      "title": "Tops and Bottoms",
+      "link": "https://awealthofcommonsense.com/2026/04/tops-and-bottoms",
+      "date": "2026-04-14T19:50:11.000Z",
+      "excerpt": "What if you invested at the bottom of a bear market? What about the top before a bear market? The post Tops and Bottoms appeared first on A Wealth of Common Sense. ..."
+    },
+    {
+      "id": "5h6139",
+      "blogId": "kottke",
+      "title": " This looks interesting:  Quiche is a highly customizable... ",
+      "link": "https://kottke.org/26/04/0048684-this-looks-interesting-qu",
+      "date": "2026-04-14T19:47:59.000Z",
+      "excerpt": "This looks interesting: Quiche is a highly customizable but simple browser for iOS."
+    },
+    {
+      "id": "l9kkm5",
+      "blogId": "simonwillison",
+      "title": "Cybersecurity Looks Like Proof of Work Now",
+      "link": "https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work",
+      "date": "2026-04-14T19:41:48.000Z",
+      "excerpt": "Cybersecurity Looks Like Proof of Work Now The UK's AI Safety Institute recently published Our evaluation of Claude Mythos Preview’s cyber capabilities, their own independent analysis of Claude Mythos which backs up Anthropic's claims that it is exceptionally effective at identifying security vulner..."
+    },
+    {
+      "id": "g683r4",
+      "blogId": "onmyom",
+      "title": "Human Error is OK! Machine Madness is a No-No! Why?",
+      "link": "https://om.co/2026/04/14/human-error-is-ok-machine-madness-is-a-no-no-why",
+      "date": "2026-04-14T19:30:00.000Z",
+      "excerpt": "We forgive human error as if it were weather. We treat machine error as if it were heresy. That thought has kept nagging at me as I read about three recent technology screw-ups. Anthropic exposed unreleased files. Anthropic then shipped 512,000 lines of internal code, roadmap and all, to the public..."
+    },
+    {
+      "id": "qtum1b",
+      "blogId": "kottke",
+      "title": " “ The internet known within China is a very... ",
+      "link": "https://kottke.org/26/04/0048745-the-internet-known-within",
+      "date": "2026-04-14T19:00:17.000Z",
+      "excerpt": "“The internet known within China is a very different internet to the one known by the world at large. It is censored, regulated and structured quite differently. It is controlled and managed, rather than organic and sprawling.”"
+    },
+    {
+      "id": "hb2car",
+      "blogId": "marginalrevolution",
+      "title": "That was then, this is now",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/04/that-was-then-this-is-now-55.html",
+      "date": "2026-04-14T18:42:15.000Z",
+      "excerpt": "But despite the pitiful state into which the country had descended, the major outside powers, Russian and the Ottoman Empire, did not intervene as they had in 1722-1725. It was partly that they were busy elsewhere, and surely also that the outcome of their previous attempts had not encouraged them t..."
+    },
     {
       "id": "ftjteg",
       "blogId": "kottke",
@@ -154,68 +378,12 @@
       "excerpt": "The R&D Premium: Why Innovation-Intensive Stocks Outperform"
     },
     {
-      "id": "tqzwm4",
-      "blogId": "aldaily",
-      "title": "“The American novel offers the dream of escape: away from civilization and into the forest, away from marriage and onto the sea, away from history and back to boyhood”",
-      "link": "https://www.chronicle.com/article/was-leslie-fiedler-ahead-of-his-time",
-      "date": "2026-04-14T14:03:59.000Z",
-      "excerpt": "“The American novel offers the dream of escape: away from civilization and into the forest, away from marriage and onto the sea, away from history and back to boyhood”"
-    },
-    {
-      "id": "vj6kku",
-      "blogId": "aldaily",
-      "title": "If you would save the planet, forget The Planet. Think only of the sensual properties of one dear place",
-      "link": "https://hedgehogreview.com/issues/humanism-in-a-posthumanist-age/articles/how-not-to-save-the-planet",
-      "date": "2026-04-14T14:02:59.000Z",
-      "excerpt": "If you would save the planet, forget The Planet. Think only of the sensual properties of one dear place"
-    },
-    {
-      "id": "dfrmmn",
-      "blogId": "aldaily",
-      "title": "“In my day, artists kept it real” is a sentiment that will never get old — as long as aging critics keep employing it",
-      "link": "https://lareviewofbooks.org/article/blank-space-cultural-history-capitalism-w-david-marx",
-      "date": "2026-04-14T14:01:59.000Z",
-      "excerpt": "“In my day, artists kept it real” is a sentiment that will never get old — as long as aging critics keep employing it"
-    },
-    {
-      "id": "scmv4e",
-      "blogId": "aldaily",
-      "title": "Jamaica Kincaid: “I find England ugly…I hate England; the weather is like a jail sentence…the food in England is like a jail sentence”",
-      "link": "https://www.thenation.com/article/culture/jamaica-kincaid-essays",
-      "date": "2026-04-14T14:00:59.000Z",
-      "excerpt": "Jamaica Kincaid: “I find England ugly…I hate England; the weather is like a jail sentence…the food in England is like a jail sentence”"
-    },
-    {
-      "id": "mkpfz2",
-      "blogId": "aldaily",
-      "title": "Making it in a non-existent profession. The economics of the writing life are grim, mercurial, and infrequently discussed",
-      "link": "https://thebaffler.com/odds-and-ends/the-profession-that-does-not-exist-symposium",
-      "date": "2026-04-14T13:59:59.000Z",
-      "excerpt": "Making it in a non-existent profession. The economics of the writing life are grim, mercurial, and infrequently discussed"
-    },
-    {
-      "id": "glj5f3",
-      "blogId": "aldaily",
-      "title": "\"Most historians would rather go out naked in public than prune their copious footnotes.\" Not Albert O. Hirschman ",
-      "link": "https://www.publicbooks.org/albert-o-hirschmans-the-passions-and-the-interests",
-      "date": "2026-04-14T13:58:59.000Z",
-      "excerpt": "\"Most historians would rather go out naked in public than prune their copious footnotes.\" Not Albert O. Hirschman"
-    },
-    {
       "id": "60epq0",
       "blogId": "aldaily",
       "title": "Are do-gooders an inferior class, consigned to drudgery? Elizabeth Anderson traces the contours of the progressive work ethic",
       "link": "https://thepointmag.com/criticism/clocked-out",
       "date": "2026-04-14T13:57:59.000Z",
       "excerpt": "Are do-gooders an inferior class, consigned to drudgery? Elizabeth Anderson traces the contours of the progressive work ethic"
-    },
-    {
-      "id": "13c621",
-      "blogId": "aldaily",
-      "title": "In early-19th-century Britain, body snatchers were such a problem that lead-lined coffins, metal cages, and other hardware were used to protect the dead",
-      "link": "https://publicdomainreview.org/essay/the-great-majority",
-      "date": "2026-04-14T13:56:59.000Z",
-      "excerpt": "In early-19th-century Britain, body snatchers were such a problem that lead-lined coffins, metal cages, and other hardware were used to protect the dead"
     },
     {
       "id": "cosbda",
@@ -424,6 +592,14 @@
       "link": "https://marginalrevolution.com/marginalrevolution/2026/04/dark-labor-claims-to-upset-almost-everybody.html",
       "date": "2026-04-14T05:17:43.000Z",
       "excerpt": "This paper introduces Entangled Time — a novel economic variable representing the simultaneous production-consumption state characterizing human engagement with algorithmic digital interfaces. We develop a formal equilibrium model in which rational agents allocate time to zero-price digital platform..."
+    },
+    {
+      "id": "yq7y9f",
+      "blogId": "scattershot",
+      "title": "Monday’s Trailheads",
+      "link": "https://scattershot.blog/2026/04/13/mondays-trailheads",
+      "date": "2026-04-14T04:25:03.000Z",
+      "excerpt": "Why Viktor Orbán lost by Frank Furedi Within two hours of the polls closing on Sunday, it was clear that Hungary’s governing party, Fidesz, had lost the General Election to Péter Magyar’s Tisza Party. Prime minister Viktor Orbán soon gave a gracious concession speech and promised to fight on in oppo..."
     },
     {
       "id": "ggt9ic",
@@ -2479,7 +2655,7 @@
       "title": "What you call gate keeping I call quality control",
       "link": "https://figsinwintertime.substack.com/p/what-you-call-gate-keeping-i-call",
       "date": "2026-04-09T10:01:06.000Z",
-      "excerpt": "In defense of quality editors, criticis, and peer reviewers"
+      "excerpt": "In defense of quality editors, critics, and peer reviewers"
     },
     {
       "id": "oeg72h",
