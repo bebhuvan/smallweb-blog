@@ -3,7 +3,6 @@ import { HOMEPAGE_CATEGORY_SLUGS, PROSE_CATEGORY_SLUGS } from './categories';
 
 export type HomepageCuration<T extends EnrichedPost = EnrichedPost> = {
   leadPost: T | null;
-  secondaryLead: T | null;
   alsoNew: T[];
   featuredExcerpt: T | null;
   categoryPosts: Map<string, T[]>;
@@ -82,7 +81,6 @@ export function curateHomepage<T extends EnrichedPost & { id?: string; excerpt?:
 
   return {
     leadPost,
-    secondaryLead,
     alsoNew,
     featuredExcerpt,
     categoryPosts,
