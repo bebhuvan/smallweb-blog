@@ -1,6 +1,166 @@
 {
-  "lastUpdated": "2026-04-19T17:37:51.139Z",
+  "lastUpdated": "2026-04-20T04:16:49.464Z",
   "posts": [
+    {
+      "id": "pzpdl5",
+      "blogId": "bignewsletter",
+      "title": "Monopoly Round-Up: The Week the Oligarchs Started to Face Real Opposition",
+      "link": "https://www.thebignewsletter.com/p/monopoly-round-up-the-week-the-oligarchs",
+      "date": "2026-04-20T03:48:54.000Z",
+      "excerpt": "With losses in cases involving Ticketmaster, Nexstar-TEGNA, and Amazon this week, plus a data center ban in Maine and taxes on $5M+ apartments in NYC, the superrich are starting to face obstacles."
+    },
+    {
+      "id": "hmt4iw",
+      "blogId": "simonwillison",
+      "title": "SQL functions in Google Sheets to fetch data from Datasette",
+      "link": "https://simonwillison.net/2026/Apr/20/datasette-sql",
+      "date": "2026-04-20T02:33:58.000Z",
+      "excerpt": "TIL: SQL functions in Google Sheets to fetch data from Datasette I put together some notes on patterns for fetching data from a Datasette instance directly into Google Sheets - using the importdata() function, a \"named function\" that wraps it or a Google Apps Script if you need to send an API token..."
+    },
+    {
+      "id": "jtabg1",
+      "blogId": "commonreader",
+      "title": "wisdom through the awful grace of God",
+      "link": "https://www.commonreader.co.uk/p/wisdom-through-the-awful-grace-of",
+      "date": "2026-04-20T00:51:08.000Z",
+      "excerpt": "Arlington cemetery"
+    },
+    {
+      "id": "bo15g5",
+      "blogId": "simonwillison",
+      "title": "Claude Token Counter, now with model comparisons",
+      "link": "https://simonwillison.net/2026/Apr/20/claude-token-counts",
+      "date": "2026-04-20T00:50:45.000Z",
+      "excerpt": "Claude Token Counter, now with model comparisons I upgraded my Claude Token Counter tool to add the ability to run the same count against different models in order to compare them. As far as I can tell Claude Opus 4.7 is the first model to change the tokenizer, so it's only worth running comparisons..."
+    },
+    {
+      "id": "8yr4cl",
+      "blogId": "aldaily",
+      "title": "The Turkish novelist Leylâ Erbil was an autodidact and outcast who liked being mad, bad, and sad in a nation of pious Kemalists",
+      "link": "https://thepointmag.com/criticism/a-history-of-erasures",
+      "date": "2026-04-20T00:06:27.000Z",
+      "excerpt": "The Turkish novelist Leylâ Erbil was an autodidact and outcast who liked being mad, bad, and sad in a nation of pious Kemalists"
+    },
+    {
+      "id": "4lwkbr",
+      "blogId": "aldaily",
+      "title": "Elitist critics condemn literary “slop,” but in 50 years they may write redemptive theories of such slop and cut the ribbon at the Slop Museum",
+      "link": "https://substack.com/home/post/p-194503302",
+      "date": "2026-04-20T00:05:27.000Z",
+      "excerpt": "Elitist critics condemn literary “slop,” but in 50 years they may write redemptive theories of such slop and cut the ribbon at the Slop Museum"
+    },
+    {
+      "id": "6upf3c",
+      "blogId": "aldaily",
+      "title": "Brooding on verandas, slurping Pepsi Max, carefully observing the color of urine — across thousands of pages, certain Knausgaardian tropes repeat",
+      "link": "https://www.thedriftmag.com/roman-flood",
+      "date": "2026-04-20T00:04:27.000Z",
+      "excerpt": "Brooding on verandas, slurping Pepsi Max, carefully observing the color of urine — across thousands of pages, certain Knausgaardian tropes repeat"
+    },
+    {
+      "id": "5j525w",
+      "blogId": "aldaily",
+      "title": "A major discovery in Central Asia. More than a dozen books published in a single week. Is “Blake Whiting” the most productive historian working today?",
+      "link": "https://theamericanscholar.org/who-is-blake-whiting",
+      "date": "2026-04-20T00:03:27.000Z",
+      "excerpt": "A major discovery in Central Asia. More than a dozen books published in a single week. Is “Blake Whiting” the most productive historian working today?"
+    },
+    {
+      "id": "xtawx1",
+      "blogId": "aldaily",
+      "title": "Contemporary writing about womanhood is full of apologizing or justifying or moralizing. Such frameworks shed little light",
+      "link": "https://newrepublic.com/article/208306/rebecca-west-martha-gellhorn-art-self-reinvention",
+      "date": "2026-04-20T00:02:27.000Z",
+      "excerpt": "Contemporary writing about womanhood is full of apologizing or justifying or moralizing. Such frameworks shed little light"
+    },
+    {
+      "id": "ewcqzw",
+      "blogId": "aldaily",
+      "title": "Why AI can’t smell. Current “e-nose” technology is the size of a fridge, costs a half-million dollars, and takes six hours to run a sample",
+      "link": "https://www.noemamag.com/why-ai-needs-a-sense-of-smell",
+      "date": "2026-04-20T00:01:27.000Z",
+      "excerpt": "Why AI can’t smell. Current “e-nose” technology is the size of a fridge, costs a half-million dollars, and takes six hours to run a sample"
+    },
+    {
+      "id": "mrqo4o",
+      "blogId": "aldaily",
+      "title": "Helen DeWitt turned down a $175,000 prize because of the strings attached. Is she a principled actor or a spoiled, entitled nightmare?",
+      "link": "https://www.theguardian.com/commentisfree/2026/apr/15/helen-dewitt-author-turn-down-prize-publishing-fiction",
+      "date": "2026-04-20T00:00:27.000Z",
+      "excerpt": "Helen DeWitt turned down a $175,000 prize because of the strings attached. Is she a principled actor or a spoiled, entitled nightmare?"
+    },
+    {
+      "id": "ycdqpl",
+      "blogId": "aldaily",
+      "title": "Why can humans, unlike all other animals, make pyramids, or spaceships, or musical instruments? Language",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n07/francis-gooding/rocket-science-for-monkeys",
+      "date": "2026-04-19T23:59:27.000Z",
+      "excerpt": "Why can humans, unlike all other animals, make pyramids, or spaceships, or musical instruments? Language"
+    },
+    {
+      "id": "up2rsz",
+      "blogId": "aldaily",
+      "title": "Ben Lerner: “Wherever I am now, I am not a young novelist. Heart surgery will do that to you, in addition to everything else”",
+      "link": "https://www.vulture.com/article/ben-lerner-transcription-interview.html",
+      "date": "2026-04-19T23:58:27.000Z",
+      "excerpt": "Ben Lerner: “Wherever I am now, I am not a young novelist. Heart surgery will do that to you, in addition to everything else”"
+    },
+    {
+      "id": "m3fyif",
+      "blogId": "aldaily",
+      "title": "Who gets Guggenheim fellowships? A century’s worth of data shows the rise of creative artists, and the decline of humanists and natural scientists",
+      "link": "https://www.publicbooks.org/who-gets-guggenheims",
+      "date": "2026-04-19T23:57:27.000Z",
+      "excerpt": "Who gets Guggenheim fellowships? A century’s worth of data shows the rise of creative artists, and the decline of humanists and natural scientists"
+    },
+    {
+      "id": "nizlqv",
+      "blogId": "braddelong",
+      "title": "DRAFT: Origins of a “Human” Economy",
+      "link": "https://braddelong.substack.com/p/draft-origins-of-a-human-economy",
+      "date": "2026-04-19T23:43:55.000Z",
+      "excerpt": "A hornfels quarry in KwaZulu‑Natal and a basalt workshop in the Jordan Valley show that spatial division of labor, long‑term planning, and cumulative culture are not modern inventions but..."
+    },
+    {
+      "id": "g6r93z",
+      "blogId": "simonwillison",
+      "title": "Headless everything for personal AI",
+      "link": "https://simonwillison.net/2026/Apr/19/headless-everything",
+      "date": "2026-04-19T21:46:38.000Z",
+      "excerpt": "Headless everything for personal AI Matt Webb thinks headless services are about to become much more common: Why? Because using personal AIs is a better experience for users than using services directly (honestly); and headless services are quicker and more dependable for the personal AIs than havin..."
+    },
+    {
+      "id": "bnn3m5",
+      "blogId": "lukeburgis",
+      "title": "Combatting the Hive Conscience ",
+      "link": "https://read.lukeburgis.com/p/combatting-the-hive-conscience",
+      "date": "2026-04-19T21:38:34.000Z",
+      "excerpt": "What to do when you're told what you should stand for"
+    },
+    {
+      "id": "vwtuom",
+      "blogId": "wisdomofcrowds",
+      "title": "Did We Get Hungary Wrong?",
+      "link": "https://wisdomofcrowds.live/p/did-we-get-hungary-wrong",
+      "date": "2026-04-19T20:30:43.000Z",
+      "excerpt": "Julian Waller on Orbán's fall, Magyar's rise, and a decade of bad shorthand."
+    },
+    {
+      "id": "gcz3id",
+      "blogId": "marginalrevolution",
+      "title": "That was then, this is now",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/04/that-was-then-this-is-now-57.html",
+      "date": "2026-04-19T19:26:54.000Z",
+      "excerpt": "At the advent of a more aggressive Persian Gulf policy on the part of Iran during the interwar years, the resilience of these symbols was watched like a kind of barometer that attested to Britain’s levell of commitment to the maintenance of security in the Persian Gulf. Britainäs abstention from the..."
+    },
+    {
+      "id": "ih4k04",
+      "blogId": "andymasley",
+      "title": "Contra Benn Jordan, data center (and all) sub-audible infrasound issues are fake",
+      "link": "https://blog.andymasley.com/p/contra-benn-jordan-data-center-and",
+      "date": "2026-04-19T19:01:11.000Z",
+      "excerpt": "One of the most popular videos made about data centers ever is a complete moment-by-moment disaster"
+    },
     {
       "id": "wu4yf",
       "blogId": "wealthofcommonsense",
@@ -48,86 +208,6 @@
       "link": "https://atmoio.substack.com/p/opus-47-is-the-her-stage-of-ai",
       "date": "2026-04-19T15:17:47.000Z",
       "excerpt": "How Opus 4.7 demonstrates the \"Appstore-ization\" of AI, and what it means for the future and progress towards AGI."
-    },
-    {
-      "id": "8yr4cl",
-      "blogId": "aldaily",
-      "title": "The Turkish novelist Leylâ Erbil was an autodidact and outcast who liked being mad, bad, and sad in a nation of pious Kemalists",
-      "link": "https://thepointmag.com/criticism/a-history-of-erasures",
-      "date": "2026-04-19T13:35:07.000Z",
-      "excerpt": "The Turkish novelist Leylâ Erbil was an autodidact and outcast who liked being mad, bad, and sad in a nation of pious Kemalists"
-    },
-    {
-      "id": "4lwkbr",
-      "blogId": "aldaily",
-      "title": "Elitist critics condemn literary “slop,” but in 50 years they may write redemptive theories of such slop and cut the ribbon at the Slop Museum",
-      "link": "https://substack.com/home/post/p-194503302",
-      "date": "2026-04-19T13:34:07.000Z",
-      "excerpt": "Elitist critics condemn literary “slop,” but in 50 years they may write redemptive theories of such slop and cut the ribbon at the Slop Museum"
-    },
-    {
-      "id": "6upf3c",
-      "blogId": "aldaily",
-      "title": "Brooding on verandas, slurping Pepsi Max, carefully observing the color of urine — across thousands of pages, certain Knausgaardian tropes repeat",
-      "link": "https://www.thedriftmag.com/roman-flood",
-      "date": "2026-04-19T13:33:07.000Z",
-      "excerpt": "Brooding on verandas, slurping Pepsi Max, carefully observing the color of urine — across thousands of pages, certain Knausgaardian tropes repeat"
-    },
-    {
-      "id": "5j525w",
-      "blogId": "aldaily",
-      "title": "A major discovery in Central Asia. More than a dozen books published in a single week. Is “Blake Whiting” the most productive historian working today?",
-      "link": "https://theamericanscholar.org/who-is-blake-whiting",
-      "date": "2026-04-19T13:32:07.000Z",
-      "excerpt": "A major discovery in Central Asia. More than a dozen books published in a single week. Is “Blake Whiting” the most productive historian working today?"
-    },
-    {
-      "id": "xtawx1",
-      "blogId": "aldaily",
-      "title": "Contemporary writing about womanhood is full of apologizing or justifying or moralizing. Such frameworks shed little light",
-      "link": "https://newrepublic.com/article/208306/rebecca-west-martha-gellhorn-art-self-reinvention",
-      "date": "2026-04-19T13:31:07.000Z",
-      "excerpt": "Contemporary writing about womanhood is full of apologizing or justifying or moralizing. Such frameworks shed little light"
-    },
-    {
-      "id": "ewcqzw",
-      "blogId": "aldaily",
-      "title": "Why AI can’t smell. Current “e-nose” technology is the size of a fridge, costs a half-million dollars, and takes six hours to run a sample",
-      "link": "https://www.noemamag.com/why-ai-needs-a-sense-of-smell",
-      "date": "2026-04-19T13:30:07.000Z",
-      "excerpt": "Why AI can’t smell. Current “e-nose” technology is the size of a fridge, costs a half-million dollars, and takes six hours to run a sample"
-    },
-    {
-      "id": "mrqo4o",
-      "blogId": "aldaily",
-      "title": "Helen DeWitt turned down a $175,000 prize because of the strings attached. Is she a principled actor or a spoiled, entitled nightmare?",
-      "link": "https://www.theguardian.com/commentisfree/2026/apr/15/helen-dewitt-author-turn-down-prize-publishing-fiction",
-      "date": "2026-04-19T13:29:07.000Z",
-      "excerpt": "Helen DeWitt turned down a $175,000 prize because of the strings attached. Is she a principled actor or a spoiled, entitled nightmare?"
-    },
-    {
-      "id": "ycdqpl",
-      "blogId": "aldaily",
-      "title": "Why can humans, unlike all other animals, make pyramids, or spaceships, or musical instruments? Language",
-      "link": "https://www.lrb.co.uk/the-paper/v48/n07/francis-gooding/rocket-science-for-monkeys",
-      "date": "2026-04-19T13:28:07.000Z",
-      "excerpt": "Why can humans, unlike all other animals, make pyramids, or spaceships, or musical instruments? Language"
-    },
-    {
-      "id": "up2rsz",
-      "blogId": "aldaily",
-      "title": "Ben Lerner: “Wherever I am now, I am not a young novelist. Heart surgery will do that to you, in addition to everything else”",
-      "link": "https://www.vulture.com/article/ben-lerner-transcription-interview.html",
-      "date": "2026-04-19T13:27:07.000Z",
-      "excerpt": "Ben Lerner: “Wherever I am now, I am not a young novelist. Heart surgery will do that to you, in addition to everything else”"
-    },
-    {
-      "id": "m3fyif",
-      "blogId": "aldaily",
-      "title": "Who gets Guggenheim fellowships? A century’s worth of data shows the rise of creative artists, and the decline of humanists and natural scientists",
-      "link": "https://www.publicbooks.org/who-gets-guggenheims",
-      "date": "2026-04-19T13:26:07.000Z",
-      "excerpt": "Who gets Guggenheim fellowships? A century’s worth of data shows the rise of creative artists, and the decline of humanists and natural scientists"
     },
     {
       "id": "jpxgiz",
@@ -391,7 +471,7 @@
       "title": "Rationale for trend-following updated ",
       "link": "https://mrzepczynski.blogspot.com/2026/04/rationale-for-trend-following-updated.html",
       "date": "2026-04-18T15:09:00.000Z",
-      "excerpt": "The case for trend-following is well established, yet, given the fluctuations in returns when there is no crisis, it is worth revisiting fundamentals and discussing the rationale for this hedge fund strategy. Meketa, the pension consulting firm, produced a white paper on the topic at the end of the..."
+      "excerpt": "The case for trend-following is well established, yet, given the fluctuations in returns during periods without a crisis, it is worth revisiting fundamentals and discussing the rationale for this hedge fund strategy. Meketa, the pension consulting firm, produced a white paper on the topic at the end..."
     },
     {
       "id": "kzfhck",
