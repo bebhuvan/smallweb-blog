@@ -1,6 +1,262 @@
 {
-  "lastUpdated": "2026-04-23T18:07:40.010Z",
+  "lastUpdated": "2026-04-24T04:14:38.147Z",
   "posts": [
+    {
+      "id": "6rj3g1",
+      "blogId": "simonwillison",
+      "title": "It's a big one",
+      "link": "https://simonwillison.net/2026/Apr/24/weekly",
+      "date": "2026-04-24T04:09:54.000Z",
+      "excerpt": "This week's edition of my email newsletter (aka content from this blog delivered to your inbox) features 4 pelicans riding bicycles, 1 possum on an e-scooter, up to 5 raccoons with ham radios hiding in crowds, 5 blog posts, 8 links, 3 quotes and a new chapter of my Agentic Engineering Patterns guide..."
+    },
+    {
+      "id": "1vl1ry",
+      "blogId": "scattershot",
+      "title": "Thursday’s Trailheads",
+      "link": "https://scattershot.blog/2026/04/23/thursdays-trailheads",
+      "date": "2026-04-24T04:07:28.000Z",
+      "excerpt": "Distracted by Books and Dragons by Rebecca Richards Aside from the surface-level parallel of war in the Middle East, low literacy rates, and a recent pandemic, our times appear to have little in common with the Middle Ages. Yet, we can relate to the cultural unease, the irreversible march of time an..."
+    },
+    {
+      "id": "jqw9lm",
+      "blogId": "marginalian",
+      "title": "Wilderness, Solitude, and Creativity: Artist and Philosopher Rockwell Kent’s Century-Old Meditations on Art and Life During Seven Months on a Small Alaskan Island",
+      "link": "https://www.themarginalian.org/2026/04/23/rockwell-kent-wilderness",
+      "date": "2026-04-24T02:49:48.000Z",
+      "excerpt": "\"These are the times in life — when nothing happens — but in quietness the soul expands.\""
+    },
+    {
+      "id": "dpjqpt",
+      "blogId": "simonwillison",
+      "title": "russellromney/honker",
+      "link": "https://simonwillison.net/2026/Apr/24/honker",
+      "date": "2026-04-24T01:50:07.000Z",
+      "excerpt": "russellromney/honker \"Postgres NOTIFY/LISTEN semantics\" for SQLite, implemented as a Rust SQLite extension and various language bindings to help make use of it. The design of this looks very solid. It lets you write Python code for queues that looks like this: import honker db = honker.open(\"app.db\"..."
+    },
+    {
+      "id": "bjurb0",
+      "blogId": "simonwillison",
+      "title": "An update on recent Claude Code quality reports",
+      "link": "https://simonwillison.net/2026/Apr/24/recent-claude-code-quality-reports",
+      "date": "2026-04-24T01:31:25.000Z",
+      "excerpt": "An update on recent Claude Code quality reports It turns out the high volume of complaints that Claude Code was providing worse quality results over the past two months was grounded in real problems. The models themselves were not to blame, but three separate issues in the Claude Code harness caused..."
+    },
+    {
+      "id": "ypje57",
+      "blogId": "simonwillison",
+      "title": "Serving the For You feed",
+      "link": "https://simonwillison.net/2026/Apr/24/serving-the-for-you-feed",
+      "date": "2026-04-24T01:08:17.000Z",
+      "excerpt": "Serving the For You feed One of Bluesky's most interesting features is that anyone can run their own custom \"feed\" implementation and make it available to other users - effectively enabling custom algorithms that can use any mechanism they like to recommend posts. spacecowboy runs the For You Feed,..."
+    },
+    {
+      "id": "j9svg3",
+      "blogId": "aldaily",
+      "title": "Tantrums, tears, and meltdowns. The history of chess grandmasters is replete with tragic stories of lives undone by delusion and paranoia",
+      "link": "https://porticoquarterly.com/book/the-last-of-the-lost-generation",
+      "date": "2026-04-24T00:05:54.000Z",
+      "excerpt": "Tantrums, tears, and meltdowns. The history of chess grandmasters is replete with tragic stories of lives undone by delusion and paranoia"
+    },
+    {
+      "id": "fwfjf3",
+      "blogId": "aldaily",
+      "title": "“Slavery has been such a widespread practice throughout human history that it has rarely needed a particular racial ideology in order to take root”",
+      "link": "https://thepointmag.com/criticism/ideas-of-slavery-john-samuel-harpham",
+      "date": "2026-04-24T00:04:54.000Z",
+      "excerpt": "“Slavery has been such a widespread practice throughout human history that it has rarely needed a particular racial ideology in order to take root”"
+    },
+    {
+      "id": "2r903d",
+      "blogId": "aldaily",
+      "title": "There is a cost to being unreachable. But the cost of being available is far higher. Jerusalem Demsas's experiment in disconnectedness",
+      "link": "https://www.theargumentmag.com/p/helen-dewitt-is-the-psycho-we-need",
+      "date": "2026-04-24T00:02:54.000Z",
+      "excerpt": "There is a cost to being unreachable. But the cost of being available is far higher. Jerusalem Demsas's experiment in disconnectedness"
+    },
+    {
+      "id": "fj20nj",
+      "blogId": "aldaily",
+      "title": "While many critics have recognized JG Ballard's talent, few could describe it. He's always been too anarchic and too unsettling for general acceptance",
+      "link": "https://www.theguardian.com/books/2026/apr/20/the-illuminated-man-by-christopher-priest-and-nina-allan-review-an-unconventional-portrait-of-jg-ballard",
+      "date": "2026-04-24T00:01:54.000Z",
+      "excerpt": "While many critics have recognized JG Ballard's talent, few could describe it. He's always been too anarchic and too unsettling for general acceptance"
+    },
+    {
+      "id": "mqzuo1",
+      "blogId": "aldaily",
+      "title": "Due to changes in the DSM, it’s now difficult to be diagnosed with hypochondria. And yet the disease persists as a character type",
+      "link": "https://www.publicbooks.org/the-hypochondriacs-complaint",
+      "date": "2026-04-24T00:00:54.000Z",
+      "excerpt": "Due to changes in the DSM, it’s now difficult to be diagnosed with hypochondria. And yet the disease persists as a character type"
+    },
+    {
+      "id": "16w2z8",
+      "blogId": "aldaily",
+      "title": "Cass Sunstein: “To attribute social terribleness to liberalism is reckless. Liberalism isn’t a force in history. It’s not Voldemort”",
+      "link": "https://thepointmag.substack.com/p/93b3c1f7-f8af-4aa8-8781-06f0b140b595",
+      "date": "2026-04-23T23:59:54.000Z",
+      "excerpt": "Cass Sunstein: “To attribute social terribleness to liberalism is reckless. Liberalism isn’t a force in history. It’s not Voldemort”"
+    },
+    {
+      "id": "ebx1lp",
+      "blogId": "aldaily",
+      "title": "What causes X? For lazy social scientists, everything can be attributed to “culture,” a point so vague that it effectively argues nothing at all",
+      "link": "https://www.alexnowrasteh.com/p/the-culture-crutch",
+      "date": "2026-04-23T23:58:54.000Z",
+      "excerpt": "What causes X? For lazy social scientists, everything can be attributed to “culture,” a point so vague that it effectively argues nothing at all"
+    },
+    {
+      "id": "ss6b1b",
+      "blogId": "aldaily",
+      "title": "Prophets used to be executed for being wrong. While the penalties are less severe, the lure of prediction remains the same",
+      "link": "https://www.wsj.com/arts-culture/books/prophecy-review-clairvoyance-and-control-455c13fe?st=zR2Wmn&reflink=desktopwebshare_permalink",
+      "date": "2026-04-23T23:57:54.000Z",
+      "excerpt": "Prophets used to be executed for being wrong. While the penalties are less severe, the lure of prediction remains the same"
+    },
+    {
+      "id": "tmzsih",
+      "blogId": "aldaily",
+      "title": "Larry McMurtry in Hollywood. His novels became source material for movies that reinscribed the very myths of the West that he'd sought to undo",
+      "link": "https://www.thenation.com/article/culture/larry-mcmurtry-biography",
+      "date": "2026-04-23T23:56:54.000Z",
+      "excerpt": "Larry McMurtry in Hollywood. His novels became source material for movies that reinscribed the very myths of the West that he'd sought to undo"
+    },
+    {
+      "id": "dq430m",
+      "blogId": "marginalian",
+      "title": "Marianne Moore on the There Elements of Persuasive Writing",
+      "link": "https://www.themarginalian.org/2026/04/23/marianne-moore-predilections-writing",
+      "date": "2026-04-23T22:50:34.000Z",
+      "excerpt": "Several years ago, rummaging through the archives of the Academy of American Poets, I came upon a box labeled “Ballots 1950” — the record of the secret vote by the chancellors the year the Academy’s prestigious fellowship was awarded to E.E. Cummings, catapulting him into renown. The voting process..."
+    },
+    {
+      "id": "25ttn1",
+      "blogId": "marginalian",
+      "title": "The Invention of Empathy: Rilke, Rodin, and the Art of “Inseeing”",
+      "link": "https://www.themarginalian.org/2026/04/23/you-must-change-rilke-rodin-empathy",
+      "date": "2026-04-23T22:48:38.000Z",
+      "excerpt": "How a doctor, a philosopher, a poet, and a sculptor co-created the modern concept of empathy."
+    },
+    {
+      "id": "j70nfu",
+      "blogId": "marginalian",
+      "title": "Oliver Sacks on Gratitude, the Measure of Living, and the Dignity of Dying",
+      "link": "https://www.themarginalian.org/2026/04/23/oliver-sacks-gratitude-book",
+      "date": "2026-04-23T22:47:38.000Z",
+      "excerpt": "\"I have been a sentient being, a thinking animal, on this beautiful planet, and that in itself has been an enormous privilege and adventure.\""
+    },
+    {
+      "id": "gxyof8",
+      "blogId": "kottke",
+      "title": "  Leaving Neverland director Dan Reed on the Michael... ",
+      "link": "https://kottke.org/26/04/0048803-leaving-neverland-directo",
+      "date": "2026-04-23T22:28:09.000Z",
+      "excerpt": "Leaving Neverland director Dan Reed on the Michael biopic out in theaters right now: “How can you tell an authentic story about Michael Jackson without ever mentioning the fact that he was seriously accused of being a child molester?”"
+    },
+    {
+      "id": "qlo87x",
+      "blogId": "simonwillison",
+      "title": "Extract PDF text in your browser with LiteParse for the web",
+      "link": "https://simonwillison.net/2026/Apr/23/liteparse-for-the-web",
+      "date": "2026-04-23T21:54:24.000Z",
+      "excerpt": "LlamaIndex have a most excellent open source project called LiteParse, which provides a Node.js CLI tool for extracting text from PDFs. I got a version of LiteParse working entirely in the browser, using most of the same libraries that LiteParse uses to run in Node.js. Spatial text parsing Refreshin..."
+    },
+    {
+      "id": "ai1m23",
+      "blogId": "damodaran",
+      "title": "To a Trillion(s) Dollars and beyond: A SpaceX IPO Odyssey!",
+      "link": "https://aswathdamodaran.blogspot.com/2026/04/to-trillion-dollars-and-beyond-spacex.html",
+      "date": "2026-04-23T21:20:00.000Z",
+      "excerpt": "In 2001, A Space Odyssey, a movie that was well ahead of its time when it was released in 1968, Hal (the computer) famously responded to questions about his reliability with “it (mstakes) can only be attributable to human error”. I was reminded of my fallibility repeatedly as I tried to value SpaceX..."
+    },
+    {
+      "id": "2d17y1",
+      "blogId": "kottke",
+      "title": " Twin Peaks × LCD Soundsystem:  a video mashup of Dance... ",
+      "link": "https://kottke.org/26/04/0048802-twin-peaks-lcd-soundsyste",
+      "date": "2026-04-23T21:14:28.000Z",
+      "excerpt": "Twin Peaks × LCD Soundsystem: a video mashup of Dance Yrself Clean and the Twin Peaks theme music. Perfect. A damn fine cup of coffee, even."
+    },
+    {
+      "id": "y5tmac",
+      "blogId": "protocolized",
+      "title": "The Headless Empire",
+      "link": "https://protocolized.summerofprotocols.com/p/the-headless-empire",
+      "date": "2026-04-23T21:03:54.000Z",
+      "excerpt": "The Magazine of Strange Rules"
+    },
+    {
+      "id": "lof2dk",
+      "blogId": "curtjaimungal",
+      "title": "“Buddhism Can’t Explain This” and other musings with Zizek",
+      "link": "https://curtjaimungal.substack.com/p/buddhism-cant-explain-this-and-other",
+      "date": "2026-04-23T20:25:51.000Z",
+      "excerpt": "The best NON-political conversation with Slavoj, ever. ;)"
+    },
+    {
+      "id": "pkf2q1",
+      "blogId": "kottke",
+      "title": "  ProPublica explores what a future without vaccines would... ",
+      "link": "https://kottke.org/26/04/0048801-propublica-explores-what-",
+      "date": "2026-04-23T20:12:35.000Z",
+      "excerpt": "ProPublica explores what a future without vaccines would look like in the US. Hundreds of thousands of deaths, tens of thousands of children paralyzed, and many other children stricken with serious but easily preventable health issues."
+    },
+    {
+      "id": "e0t3wb",
+      "blogId": "oneusefulthing",
+      "title": "Sign of the future: GPT-5.5 ",
+      "link": "https://www.oneusefulthing.org/p/sign-of-the-future-gpt-55",
+      "date": "2026-04-23T20:00:38.000Z",
+      "excerpt": "One impressive step on the curve"
+    },
+    {
+      "id": "gxltrg",
+      "blogId": "simonwillison",
+      "title": "A pelican for GPT-5.5 via the semi-official Codex backdoor API",
+      "link": "https://simonwillison.net/2026/Apr/23/gpt-5-5",
+      "date": "2026-04-23T19:59:47.000Z",
+      "excerpt": "GPT-5.5 is out. It's available in OpenAI Codex and is rolling out to paid ChatGPT subscribers. I've had some preview access and found it to be a fast, effective and highly capable model. As is usually the case these days, it's hard to put into words what's good about it - I ask it to build things an..."
+    },
+    {
+      "id": "n24mnz",
+      "blogId": "kottke",
+      "title": "  The earliest-known recordings of whale songs (from 1949)... ",
+      "link": "https://kottke.org/26/04/0048798-the-earliest-known-record",
+      "date": "2026-04-23T19:38:41.000Z",
+      "excerpt": "The earliest-known recordings of whale songs (from 1949) were recently discovered in the Woods Hole Oceanographic Institution’s archive. The scientists who recorded the audio didn’t even know what they were listening to."
+    },
+    {
+      "id": "jkdz3y",
+      "blogId": "klementoninvesting",
+      "title": "No, stocks are not a good inflation hedge",
+      "link": "https://klementoninvesting.substack.com/p/no-stocks-are-not-a-good-inflation",
+      "date": "2026-04-23T18:59:30.000Z",
+      "excerpt": "My latest post for Reuters is online."
+    },
+    {
+      "id": "nkrnwh",
+      "blogId": "commonreader",
+      "title": "The New Dark Ages: James Marriott in conversation with Henry Oliver",
+      "link": "https://www.commonreader.co.uk/p/the-new-dark-ages-james-marriott",
+      "date": "2026-04-23T18:41:55.000Z",
+      "excerpt": "8th July Dr. Johnson House, 6.30pm-8pm"
+    },
+    {
+      "id": "g2ly0w",
+      "blogId": "kottke",
+      "title": " Eye Contact With a Humpback Whale ",
+      "link": "https://kottke.org/26/04/eye-contact-with-a-humpback-whale",
+      "date": "2026-04-23T18:34:40.000Z",
+      "excerpt": "I’ve never seen anything like these photos before. In October 2024, Rachel Moore had a close encounter with a humpback whale in French Polynesia and took these photos of the whale’s eye. Moore wrote of the experience: This moment of eye contact was beyond my wildest dreams. I’ve never encountered a..."
+    },
+    {
+      "id": "2ex5fr",
+      "blogId": "honestbroker",
+      "title": "Why I Believe in Karma",
+      "link": "https://www.honest-broker.com/p/why-i-believe-in-karma",
+      "date": "2026-04-23T18:32:02.000Z",
+      "excerpt": "Let me share the evidence"
+    },
     {
       "id": "h82eue",
       "blogId": "marginalrevolution",
@@ -114,68 +370,12 @@
       "excerpt": "Thursdays are all about longform links on Abnormal Returns. Wherever possible, free links for premium sites are used. You can check out..."
     },
     {
-      "id": "2r903d",
-      "blogId": "aldaily",
-      "title": "There is a cost to being unreachable. But the cost of being available is far higher. Jerusalem Demsas's experiment in disconnectedness",
-      "link": "https://www.theargumentmag.com/p/helen-dewitt-is-the-psycho-we-need",
-      "date": "2026-04-23T14:04:37.000Z",
-      "excerpt": "There is a cost to being unreachable. But the cost of being available is far higher. Jerusalem Demsas's experiment in disconnectedness"
-    },
-    {
-      "id": "fj20nj",
-      "blogId": "aldaily",
-      "title": "While many critics have recognized JG Ballard's talent, few could describe it. He's always been too anarchic and too unsettling for general acceptance",
-      "link": "https://www.theguardian.com/books/2026/apr/20/the-illuminated-man-by-christopher-priest-and-nina-allan-review-an-unconventional-portrait-of-jg-ballard",
-      "date": "2026-04-23T14:03:37.000Z",
-      "excerpt": "While many critics have recognized JG Ballard's talent, few could describe it. He's always been too anarchic and too unsettling for general acceptance"
-    },
-    {
       "id": "ycnv1h",
       "blogId": "persuasion",
       "title": "Lessons in Combating Polarization",
       "link": "https://www.persuasion.community/p/lessons-in-combating-polarization",
       "date": "2026-04-23T14:03:29.000Z",
       "excerpt": "Countries can come back from the doom spiral. Look at South Africa."
-    },
-    {
-      "id": "mqzuo1",
-      "blogId": "aldaily",
-      "title": "Due to changes in the DSM, it’s now difficult to be diagnosed with hypochondria. And yet the disease persists as a character type",
-      "link": "https://www.publicbooks.org/the-hypochondriacs-complaint",
-      "date": "2026-04-23T14:02:37.000Z",
-      "excerpt": "Due to changes in the DSM, it’s now difficult to be diagnosed with hypochondria. And yet the disease persists as a character type"
-    },
-    {
-      "id": "16w2z8",
-      "blogId": "aldaily",
-      "title": "Cass Sunstein: “To attribute social terribleness to liberalism is reckless. Liberalism isn’t a force in history. It’s not Voldemort”",
-      "link": "https://thepointmag.substack.com/p/93b3c1f7-f8af-4aa8-8781-06f0b140b595",
-      "date": "2026-04-23T14:01:37.000Z",
-      "excerpt": "Cass Sunstein: “To attribute social terribleness to liberalism is reckless. Liberalism isn’t a force in history. It’s not Voldemort”"
-    },
-    {
-      "id": "ebx1lp",
-      "blogId": "aldaily",
-      "title": "What causes X? For lazy social scientists, everything can be attributed to “culture,” a point so vague that it effectively argues nothing at all",
-      "link": "https://www.alexnowrasteh.com/p/the-culture-crutch",
-      "date": "2026-04-23T14:00:37.000Z",
-      "excerpt": "What causes X? For lazy social scientists, everything can be attributed to “culture,” a point so vague that it effectively argues nothing at all"
-    },
-    {
-      "id": "ss6b1b",
-      "blogId": "aldaily",
-      "title": "Prophets used to be executed for being wrong. While the penalties are less severe, the lure of prediction remains the same",
-      "link": "https://www.wsj.com/arts-culture/books/prophecy-review-clairvoyance-and-control-455c13fe?st=zR2Wmn&reflink=desktopwebshare_permalink",
-      "date": "2026-04-23T13:59:37.000Z",
-      "excerpt": "Prophets used to be executed for being wrong. While the penalties are less severe, the lure of prediction remains the same"
-    },
-    {
-      "id": "tmzsih",
-      "blogId": "aldaily",
-      "title": "Larry McMurtry in Hollywood. His novels became source material for movies that reinscribed the very myths of the West that he'd sought to undo",
-      "link": "https://www.thenation.com/article/culture/larry-mcmurtry-biography",
-      "date": "2026-04-23T13:58:37.000Z",
-      "excerpt": "Larry McMurtry in Hollywood. His novels became source material for movies that reinscribed the very myths of the West that he'd sought to undo"
     },
     {
       "id": "odftlh",
@@ -200,14 +400,6 @@
       "link": "https://hedgehogreview.com/web-features/thr/posts/the-man-who-invented-the-future",
       "date": "2026-04-23T13:56:37.000Z",
       "excerpt": "Francis Bacon was as much a creature of his own era as he was a technocratic prophet of ours. The two designations are inseparable"
-    },
-    {
-      "id": "dq430m",
-      "blogId": "marginalian",
-      "title": "Marianne Moore on the There Elements of Persuasive Writing",
-      "link": "https://www.themarginalian.org/2026/04/23/marianne-moore-predilections-writing",
-      "date": "2026-04-23T13:56:34.000Z",
-      "excerpt": "Several years ago, rummaging through the archives of the Academy of American Poets, I came upon a box labeled “Ballots 1950” — the record of the secret vote by the chancellors the year the Academy’s prestigious fellowship was awarded to E.E. Cummings, catapulting him into renown. The voting process..."
     },
     {
       "id": "8yr4cl",
@@ -456,6 +648,14 @@
       "link": "https://critiqueanddigest.substack.com/p/how-i-learned-to-stop-worrying-and",
       "date": "2026-04-23T02:22:39.000Z",
       "excerpt": "The Democratic Party Embraces Third Worldism"
+    },
+    {
+      "id": "jvmrhh",
+      "blogId": "lucumr",
+      "title": "Equity for Europeans",
+      "link": "https://lucumr.pocoo.org/2026/4/23/equity-for-europeans",
+      "date": "2026-04-23T00:00:00.000Z",
+      "excerpt": "If you spend enough time in US business or finance conversations, one word keeps showing up: equity. Coming from a German-speaking, central European background, I found it surprisingly hard to fully internalize what that word means. More than that, I find it very hard to talk with other Europeans ab..."
     },
     {
       "id": "t9pr9h",
@@ -2984,6 +3184,14 @@
       "link": "https://braddelong.substack.com/p/note-to-self-my-views-this-afternoon",
       "date": "2026-04-17T00:10:54.000Z",
       "excerpt": "Behind the paywall because this is of interest only to those genuinely interested in closely following my MAMLM-interpretation & assessment journey. Current viewpoint: Pantomimes of thought: LLMs..."
+    },
+    {
+      "id": "bc8jbr",
+      "blogId": "platformer",
+      "title": "The scientific case for being nice to your chatbot",
+      "link": "https://www.platformer.news/chatbot-emotion-research-anthropic-alignment-interpretability",
+      "date": "2026-04-17T00:00:42.000Z",
+      "excerpt": "New research confirms that LLMs often perform better when you encourage them. But why?"
     },
     {
       "id": "l9zl2u",
@@ -42818,20 +43026,20 @@
       "excerpt": "Formats over apps."
     },
     {
-      "id": "m19zr6",
-      "blogId": "lucumr",
-      "title": "Agent Psychosis: Are We Going Insane?",
-      "link": "https://lucumr.pocoo.org/2026/1/18/agent-psychosis",
-      "date": "2026-01-18T00:00:00.000Z",
-      "excerpt": "You can use Polecats without the Refinery and even without the Witness or Deacon. Just tell the Mayor to shut down the rig and sling work to the polecats with the message that they are to merge to main directly. Or the polecats can submit MRs and then the Mayor can merge them manually. It’s really u..."
-    },
-    {
       "id": "lv9sib",
       "blogId": "shreevatsa",
       "title": "Mahabharata text and English translations",
       "link": "https://shreevatsa.net/post/mahabharata-texts-and-translations",
       "date": "2026-01-18T00:00:00.000Z",
       "excerpt": "Just writing down what I know, for future reference. Sanskrit text: manuscript traditions Loosely speaking, the available manuscripts of the Mahābhārata fall into three categories, called recensions: Southern (longest/most elaborate) Northern (≈“Vulgate”) Kaśmīrī (even shorter) The critical edition..."
+    },
+    {
+      "id": "m19zr6",
+      "blogId": "lucumr",
+      "title": "Agent Psychosis: Are We Going Insane?",
+      "link": "https://lucumr.pocoo.org/2026/1/18/agent-psychosis",
+      "date": "2026-01-18T00:00:00.000Z",
+      "excerpt": "You can use Polecats without the Refinery and even without the Witness or Deacon. Just tell the Mayor to shut down the rig and sling work to the polecats with the message that they are to merge to main directly. Or the polecats can submit MRs and then the Mayor can merge them manually. It’s really u..."
     },
     {
       "id": "41r2an",
@@ -59866,12 +60074,12 @@
       "excerpt": ""
     },
     {
-      "id": "bc8jbr",
+      "id": "stxzwp",
       "blogId": "platformer",
-      "title": "The scientific case for being nice to your chatbot",
-      "link": "https://www.platformer.news/chatbot-emotion-research-anthropic-alignment-interpretability",
-      "date": "1901-10-18T00:00:00.000Z",
-      "excerpt": "New research confirms that LLMs often perform better when you encourage them. But why?"
+      "title": "The week that Meta employees became training data",
+      "link": "https://www.platformer.news/meta-mci-monitoring-layoffs-knowledge-work",
+      "date": "0998-06-09T00:00:00.000Z",
+      "excerpt": "Invasive monitoring and a fresh round of layoffs have workers I spoke to on edge. Is this the future of knowledge work?"
     },
     {
       "id": "hd6wu0",
