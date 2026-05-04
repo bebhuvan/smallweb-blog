@@ -1,6 +1,358 @@
 {
-  "lastUpdated": "2026-05-04T11:05:55.102Z",
+  "lastUpdated": "2026-05-04T18:16:34.397Z",
   "posts": [
+    {
+      "id": "da7wst",
+      "blogId": "danq",
+      "title": "[Article] Moving a static site from GitHub to Codeberg Pages",
+      "link": "https://danq.me/2026/05/04/github-to-codeberg-pages",
+      "date": "2026-05-04T18:08:29.000Z",
+      "excerpt": "I was recently reminded that I wanted to try out Codeberg Pages, so I migrated a static site over from GitHub Pages. It mostly worked, and a learned a little along the way about how Codeberg Pages works."
+    },
+    {
+      "id": "cci974",
+      "blogId": "marginalrevolution",
+      "title": "Trade and the End of Antiquity",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/05/trade-and-the-end-of-antiquity.html",
+      "date": "2026-05-04T18:04:23.000Z",
+      "excerpt": "What was the role of trade, and how did economic activity evolve at the End of Antiquity, when political power shifts away from the Mediterranean towards northern Europe and the Middle East? To answer those questions, we assemble a database of hundreds of thousands of ancient coins from the fourth t..."
+    },
+    {
+      "id": "8q5qr6",
+      "blogId": "simonwillison",
+      "title": "TRE Python binding — ReDoS robustness demo",
+      "link": "https://simonwillison.net/2026/May/4/tre-python-binding",
+      "date": "2026-05-04T17:52:00.000Z",
+      "excerpt": "Research: TRE Python binding — ReDoS robustness demo If it's good enough for antirez to add to Redis I figured Ville Laurikari's TRE regular expression engine was worth exploring in a little more detail. I had Claude Code build an experimental Python binding (it used ctypes) and try some malicious r..."
+    },
+    {
+      "id": "yamy1p",
+      "blogId": "kottke",
+      "title": " NASA has released some 12,000 unseen photos from the... ",
+      "link": "https://kottke.org/26/05/0048865-here-are-some-of-the-best",
+      "date": "2026-05-04T17:40:00.000Z",
+      "excerpt": "NASA has released some 12,000 unseen photos from the recent Artemis II mission; here are some of the best shots."
+    },
+    {
+      "id": "iwg4pa",
+      "blogId": "abnormalreturns",
+      "title": "Monday links: ignoring geopolitical turmoil",
+      "link": "https://abnormalreturns.com/2026/05/04/monday-links-ignoring-geopolitical-turmoil",
+      "date": "2026-05-04T17:33:44.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "nhs1oe",
+      "blogId": "davidoks",
+      "title": "Why airlines are always going bankrupt",
+      "link": "https://davidoks.blog/p/why-airlines-are-always-going-bankrupt",
+      "date": "2026-05-04T17:27:00.000Z",
+      "excerpt": "How aviation companies (fail to) make a profit"
+    },
+    {
+      "id": "x68hij",
+      "blogId": "braddelong",
+      "title": "Charts of the Day: Tesla",
+      "link": "https://braddelong.substack.com/p/charts-of-the-day-tesla",
+      "date": "2026-05-04T17:09:47.000Z",
+      "excerpt": "Tesla is a trillion‑dollar stock priced like a world‑eating tech platform at the exact moment all the bad, boring car‑company things have finally caught up with it. The chip shortage lottery win..."
+    },
+    {
+      "id": "33j21x",
+      "blogId": "kottke",
+      "title": " The Contiguous 41 States ",
+      "link": "https://kottke.org/26/05/the-contiguous-41-states",
+      "date": "2026-05-04T16:59:00.000Z",
+      "excerpt": "Nowhere on XKCD’s map of The Contiguous 41 States does it say that you need to find the missing seven states, but that’s immediately where my mind went. And it was a little more challenging than I anticipated — all of New England is present & accounted for somehow? The answer key is here, along with..."
+    },
+    {
+      "id": "2b8sta",
+      "blogId": "kottke",
+      "title": "  A 55-minute mix of Boards of Canada B-sides and rarities . ",
+      "link": "https://kottke.org/26/05/0048863-a-55-minute-mix-of-boards",
+      "date": "2026-05-04T16:15:00.000Z",
+      "excerpt": "A 55-minute mix of Boards of Canada B-sides and rarities."
+    },
+    {
+      "id": "m43lk7",
+      "blogId": "interconnects",
+      "title": "The distillation panic",
+      "link": "https://www.interconnects.ai/p/the-distillation-panic",
+      "date": "2026-05-04T15:56:44.000Z",
+      "excerpt": "‘Distillation attacks’ is a horrible term for what is happening right now."
+    },
+    {
+      "id": "76tkfl",
+      "blogId": "simonwillison",
+      "title": "Redis Array Playground",
+      "link": "https://simonwillison.net/2026/May/4/redis-array",
+      "date": "2026-05-04T15:53:57.000Z",
+      "excerpt": "Tool: Redis Array Playground Salvatore Sanfilippo submitted a PR adding a new data type - arrays - to Redis. The new commands are ARCOUNT, ARDEL, ARDELRANGE, ARGET, ARGETRANGE, ARGREP, ARINFO, ARINSERT, ARLASTITEMS, ARLEN, ARMGET, ARMSET, ARNEXT, AROP, ARRING, ARSCAN, ARSEEK, ARSET. The implementati..."
+    },
+    {
+      "id": "6ksw5l",
+      "blogId": "benthamsbulldog",
+      "title": "Goodmaxxing",
+      "link": "https://benthams.substack.com/p/goodmaxxing",
+      "date": "2026-05-04T15:30:15.000Z",
+      "excerpt": "A letter to Gen Alpha"
+    },
+    {
+      "id": "u9xagw",
+      "blogId": "marginalrevolution",
+      "title": "Monday assorted links",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/05/monday-assorted-links-558.html",
+      "date": "2026-05-04T15:29:37.000Z",
+      "excerpt": "1. Ezra Klein on whether AI is likely to lead to mass unemployment (NYT). 2. There is a great Kentucky Derby stagnation. 3. Is open source AI overrated? 4. The deadweight loss of the human capital in prison? 5. How AI is transforming China’s entertainment industry (NYT). 6. “Twelve free, citation-ri..."
+    },
+    {
+      "id": "eyvfdj",
+      "blogId": "kottke",
+      "title": "  “They Would Never Use the Death Star on Us”:... ",
+      "link": "https://kottke.org/26/05/0048864-they-would-never-use-the-",
+      "date": "2026-05-04T15:20:00.000Z",
+      "excerpt": "“They Would Never Use the Death Star on Us”: Alderaan Residents Reflect on Their Support for the Empire as a Large Imperial Installation Enters the System. “The Senate was ineffective, and the liberal Jedi were out of touch…”"
+    },
+    {
+      "id": "dw2nno",
+      "blogId": "afterbabel",
+      "title": "We Took Away the Phones — Now What? ",
+      "link": "https://www.afterbabel.com/p/rebuilding-youth-community-groups-kaplan",
+      "date": "2026-05-04T14:58:53.000Z",
+      "excerpt": "How rebuilding youth community groups can restore a play-based childhood."
+    },
+    {
+      "id": "qibuei",
+      "blogId": "kottke",
+      "title": " The Visual Comedy of Wes Anderson’s Isle of Dogs ",
+      "link": "https://kottke.org/26/05/the-visual-comedy-of-wes-andersons-isle-of-dogs",
+      "date": "2026-05-04T14:36:52.000Z",
+      "excerpt": "I’m gonna call it: Every Frame a Painting, my all-time favorite YouTube channel, is back. Tony Zhou and Taylor Ramos stopped producing their fantastic video essays back in 2017 and while they have popped up here and there since then, they’ve mostly stuck to their retirement. But for the past few mon..."
+    },
+    {
+      "id": "d0s9z6",
+      "blogId": "onmyom",
+      "title": "How AI Is Changing the Network(s)",
+      "link": "https://om.co/2026/05/04/how-ai-is-changing-the-networks",
+      "date": "2026-05-04T14:30:00.000Z",
+      "excerpt": "As is always the case, this started with a simple question: Will AI change how networks work? Will it impact the speeds we need at home and on our phones? My assumption was that AI would accelerate this — personal AI agents querying the cloud all day, your house talking constantly to a model (or …"
+    },
+    {
+      "id": "vj8p17",
+      "blogId": "onmyom",
+      "title": "Say Hello to the Internet of AI",
+      "link": "https://om.co/2026/05/04/say-hello-to-the-internet-of-ai",
+      "date": "2026-05-04T14:15:00.000Z",
+      "excerpt": "Every so often, I would notice that our upstream bandwidth consumption was going up. Average upload usage is growing 21.7% year over year, more than twice the rate of downstream growth. The network is finally tilting toward something symmetrical, after thirty years of being optimized to deliver tele..."
+    },
+    {
+      "id": "17qvgd",
+      "blogId": "mrzepczynski",
+      "title": "What are equity markets discounting? it is not risk ",
+      "link": "https://mrzepczynski.blogspot.com/2026/05/what-are-equity-markets-discounting-it.html",
+      "date": "2026-05-04T14:08:00.000Z",
+      "excerpt": "The Iran conflict is not over, yet the markets are optimistic. Perhaps it is because we don’t know what to call this oil crisis. Is it a war? A dispute? A current pause? The SPX was up over 10% for the month. The high beta names were up over 15%. For the sector extremes, the communication services s..."
+    },
+    {
+      "id": "f0ypxf",
+      "blogId": "aldaily",
+      "title": "You've seen crows picking at roadkill. Disgusting? Those birds are doing us a favor",
+      "link": "https://www.wsj.com/arts-culture/books/beauty-of-the-beasts-review-the-gross-and-the-grimy-ba9798d6?st=o16HgG&reflink=desktopwebshare_permalink",
+      "date": "2026-05-04T14:05:06.000Z",
+      "excerpt": "You've seen crows picking at roadkill. Disgusting? Those birds are doing us a favor"
+    },
+    {
+      "id": "90fub2",
+      "blogId": "aldaily",
+      "title": "AI anxiety predates AI. The fear that machine writing will replace human writing has a long history",
+      "link": "https://thereader.mitpress.mit.edu/what-is-authorship-when-machines-can-write",
+      "date": "2026-05-04T14:04:06.000Z",
+      "excerpt": "AI anxiety predates AI. The fear that machine writing will replace human writing has a long history"
+    },
+    {
+      "id": "p2tplp",
+      "blogId": "aldaily",
+      "title": "Harvey Mansfield, Harvard's \"annoying Socratic gadfly,\" spent decades championing lost causes. At 94, he's suddenly winning",
+      "link": "https://www.chronicle.com/article/harvards-annoying-socratic-gadfly-takes-a-victory-lap",
+      "date": "2026-05-04T14:03:06.000Z",
+      "excerpt": "Harvey Mansfield, Harvard's \"annoying Socratic gadfly,\" spent decades championing lost causes. At 94, he's suddenly winning"
+    },
+    {
+      "id": "uwmqdv",
+      "blogId": "aldaily",
+      "title": "Wittgenstein finished the Tractatus certain all philosophical problems were solved. Then spent his life disagreeing.",
+      "link": "https://literaryreview.co.uk/its-a-wonderful-life",
+      "date": "2026-05-04T14:02:06.000Z",
+      "excerpt": "Wittgenstein finished the Tractatus certain all philosophical problems were solved. Then spent his life disagreeing."
+    },
+    {
+      "id": "ajzhuo",
+      "blogId": "aldaily",
+      "title": "Will human-written fiction become artisanal cheese, a luxury for the wealthy few while others eat Velveeta?",
+      "link": "https://www.commonwealmagazine.org/writing-artificial-intelligence-ai-rand-richards-cooper",
+      "date": "2026-05-04T14:01:06.000Z",
+      "excerpt": "Will human-written fiction become artisanal cheese, a luxury for the wealthy few while others eat Velveeta?"
+    },
+    {
+      "id": "h1c7f1",
+      "blogId": "aldaily",
+      "title": "How two filmmakers, a borrowed camera, and a Judas Priest concert led to an immortal documentary",
+      "link": "https://www.nytimes.com/2026/04/27/arts/music/heavy-metal-parking-lot-movie.html?unlocked_article_code=1.e1A.5Rqu.X2iJnuukeKKI&smid=url-share",
+      "date": "2026-05-04T14:00:06.000Z",
+      "excerpt": "How two filmmakers, a borrowed camera, and a Judas Priest concert led to an immortal documentary"
+    },
+    {
+      "id": "3kzacv",
+      "blogId": "aldaily",
+      "title": "The music critic Michael Steinberg, finding his profession “an irritant and a depressant,” went to work for orchestras",
+      "link": "https://theamericanscholar.org/the-peoples-critic",
+      "date": "2026-05-04T13:59:06.000Z",
+      "excerpt": "The music critic Michael Steinberg, finding his profession “an irritant and a depressant,” went to work for orchestras"
+    },
+    {
+      "id": "7wc89w",
+      "blogId": "aldaily",
+      "title": "Kierkegaard vs. Copenhagen's tabloid press. \"Twenty-five signatures make the most frightful stupidity into an opinion\"",
+      "link": "https://www.plough.com/en/topics/faith/discipleship/when-kierkegaard-got-cancelled",
+      "date": "2026-05-04T13:58:06.000Z",
+      "excerpt": "Kierkegaard vs. Copenhagen's tabloid press. \"Twenty-five signatures make the most frightful stupidity into an opinion\""
+    },
+    {
+      "id": "cpd4iq",
+      "blogId": "aldaily",
+      "title": "From Bacon's \"sound houses\" to the Star Wars cantina: Why does science fiction sound like that?",
+      "link": "https://daily.jstor.org/why-does-music-in-science-fiction-sound-like-that",
+      "date": "2026-05-04T13:57:06.000Z",
+      "excerpt": "From Bacon's \"sound houses\" to the Star Wars cantina: Why does science fiction sound like that?"
+    },
+    {
+      "id": "u4yiu",
+      "blogId": "kottke",
+      "title": "  How Sylvester Stallone Rescued the First Rambo Film With... ",
+      "link": "https://kottke.org/26/05/0048862-how-sylvester-stallone-re",
+      "date": "2026-05-04T13:57:00.000Z",
+      "excerpt": "How Sylvester Stallone Rescued the First Rambo Film With a Radical Recut, Cutting It From 3½ Hours to 93 Minutes. “The solution that ended up saving the movie wasn’t much less drastic, producing a 93-minute cut that excised most of Rambo’s dialogue.”"
+    },
+    {
+      "id": "z217sl",
+      "blogId": "aldaily",
+      "title": "Your sous vide wand. Your car. Your search results. All enshittified, all on purpose, all at once. Cory Doctorow explains",
+      "link": "https://reviewcanada.ca/magazine/2026/05/screen-and-shout-review-enshittification-needy-media",
+      "date": "2026-05-04T13:56:06.000Z",
+      "excerpt": "Your sous vide wand. Your car. Your search results. All enshittified, all on purpose, all at once. Cory Doctorow explains"
+    },
+    {
+      "id": "4v46y3",
+      "blogId": "mrzepczynski",
+      "title": "Periods of Stagflation - there have always been with us",
+      "link": "https://mrzepczynski.blogspot.com/2026/05/periods-of-stagflation-there-have.html",
+      "date": "2026-05-04T13:46:00.000Z",
+      "excerpt": "Despite strong performance in equity markets, there is still considerable talk of stagflation. The stagflation story is not just a 70's problem. It can happen in other countries and almost any time. It is more likely that we have a supply shock that can affect both prices and growth. The longer the..."
+    },
+    {
+      "id": "1enmo1",
+      "blogId": "abnormalreturns",
+      "title": "Adviser links: a fool’s errand",
+      "link": "https://abnormalreturns.com/2026/05/04/adviser-links-a-fools-errand",
+      "date": "2026-05-04T13:37:17.000Z",
+      "excerpt": "Mondays are all about financial adviser-related links here at Abnormal Returns. You can check out last week’s links including a look at..."
+    },
+    {
+      "id": "7uxmt7",
+      "blogId": "mrzepczynski",
+      "title": "Risk aversion index worth a look ",
+      "link": "https://mrzepczynski.blogspot.com/2026/05/risk-aversion-index-worth-look.html",
+      "date": "2026-05-04T13:33:00.000Z",
+      "excerpt": "There is a growing number of risk measurement indices, although the definitions of these risk or uncertainty indices are not always clear. We can start with the VIX index, which is not really an uncertainty or risk index but a proxy for option volatility and is often called a fear index. There is a..."
+    },
+    {
+      "id": "1bz556",
+      "blogId": "persuasion",
+      "title": "AI Companies Aren’t Evil. But They Are Reckless.",
+      "link": "https://www.persuasion.community/p/the-case-for-ai-regulation",
+      "date": "2026-05-04T13:30:41.000Z",
+      "excerpt": "You can’t build machines that jeopardize civilization without expecting regulators to step in."
+    },
+    {
+      "id": "w1k413",
+      "blogId": "larryswedroe",
+      "title": "Private Credit: The Market’s Quiet Stabilizer",
+      "link": "https://larryswedroe.substack.com/p/private-credit-the-markets-quiet",
+      "date": "2026-05-04T13:27:59.000Z",
+      "excerpt": "The prevailing narrative in financial markets has painted nonbank lenders as procyclical actors who amplify credit booms, then retreat faster than traditional banks when conditions deteriorate."
+    },
+    {
+      "id": "hpx579",
+      "blogId": "astralcodexten",
+      "title": "Open Thread 432",
+      "link": "https://www.astralcodexten.com/p/open-thread-432",
+      "date": "2026-05-04T12:54:07.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "i31vc5",
+      "blogId": "importai",
+      "title": "Import AI 455: AI systems are about to start building themselves.",
+      "link": "https://importai.substack.com/p/import-ai-455-automating-ai-research",
+      "date": "2026-05-04T12:32:09.000Z",
+      "excerpt": "The first step towards recursive self improvement"
+    },
+    {
+      "id": "w2faa0",
+      "blogId": "ritholtz",
+      "title": "How NOT to Invest Paperback Arrives!",
+      "link": "https://ritholtz.com/2026/05/how-not-to-invest-paperback-arrives",
+      "date": "2026-05-04T12:30:14.000Z",
+      "excerpt": "It’s here! The paperback of “How NOT to Invest” arrives (tomorrow). I am looking forward to being out and discussing the book in all of the usual places. I will share some excerpts this week, along with a few stories about how it came about. The world of publishing has changed since “Bailout… Read M..."
+    },
+    {
+      "id": "gmi7te",
+      "blogId": "freddiedeboer",
+      "title": "Please Stop Making Reductive Claims About Economic Hardship and Mental Health",
+      "link": "https://freddiedeboer.substack.com/p/please-stop-making-reductive-claims",
+      "date": "2026-05-04T12:01:54.000Z",
+      "excerpt": "it doesn't help poor people and it doesn't help the mentally ill"
+    },
+    {
+      "id": "3lv0n5",
+      "blogId": "hyperdimensional",
+      "title": "Aviate, Navigate, Communicate",
+      "link": "https://www.hyperdimensional.co/p/aviate-navigate-communicate",
+      "date": "2026-05-04T11:46:11.000Z",
+      "excerpt": "What to do about Mythos"
+    },
+    {
+      "id": "5kfc5t",
+      "blogId": "conspicuouscognition",
+      "title": "Aliens, Superintelligence, and the Future of Science (with David Kipping)",
+      "link": "https://www.conspicuouscognition.com/p/aliens-superintelligence-and-the",
+      "date": "2026-05-04T11:32:07.000Z",
+      "excerpt": "What the search for alien life can teach us about AI — and vice versa"
+    },
+    {
+      "id": "9a99p2",
+      "blogId": "marginalrevolution",
+      "title": "The Southern Poverty Law Center Indictment",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/05/the-southern-poverty-law-center-indictment.html",
+      "date": "2026-05-04T11:17:55.000Z",
+      "excerpt": "The excellent Patrick McKenzie has a very long Bits About Money post on the the Southern Poverty Law Center (SPLC) indictment. It is filled with details about bank operating procedures. I’m going to summarize. The post is divided into what I think of as two parts. First, did the SPLC commit bank fra..."
+    },
+    {
+      "id": "mmyv98",
+      "blogId": "wealthofcommonsense",
+      "title": "Talk Your Book: Animal Spirits Live with F/m Investments",
+      "link": "https://awealthofcommonsense.com/2026/05/talk-your-book-animal-spirits-live-with-f-m-investments",
+      "date": "2026-05-04T11:15:21.000Z",
+      "excerpt": "On today's Talk Your Book we have a live show we recorded in Washington D.C. with Alex Morris from F/m Investments that covers inflation, the Fed, AI, tax alpha and much more The post Talk Your Book: Animal Spirits Live with F/m Investments appeared first on A Wealth of Common Sense. ..."
+    },
+    {
+      "id": "xkbo68",
+      "blogId": "millersbookreview",
+      "title": "Books: Everybody’s Favorite Magical Machine",
+      "link": "https://www.millersbookreview.com/p/books-everybodys-favorite-magical-machine-interview-with-slant-books",
+      "date": "2026-05-04T11:02:13.000Z",
+      "excerpt": "An Interview You’ll Love, or so I Suspect"
+    },
     {
       "id": "dsnu3b",
       "blogId": "paulkrugman",
@@ -15,7 +367,7 @@
       "title": "10 Monday AM Reads",
       "link": "https://ritholtz.com/2026/05/10-monday-am-reads-473",
       "date": "2026-05-04T10:30:03.000Z",
-      "excerpt": "My back-to-work morning train reads: • Sell in May and Go Away? Not This Year. The S&P 500 Just Had Its Best Month Since 2020. Don’t let sell in May’ spook you. Stocks have been on a tear. The Dow Jones Industrial Average DJIA -0.31% has risen 0.9% this past week through midday Friday, while… Read M..."
+      "excerpt": "Our May the Force (May 4th) back-to-work morning train reads: • Sell in May and Go Away? Not This Year. The S&P 500 Just Had Its Best Month Since 2020. Don’t let sell in May’ spook you. Stocks have been on a tear. The Dow Jones Industrial Average DJIA -0.31% has risen 0.9% this past… Read More The p..."
     },
     {
       "id": "qt26bl",
@@ -28,7 +380,7 @@
     {
       "id": "cwjh45",
       "blogId": "pluralistic",
-      "title": "Pluralistic: Demand destruction vs fuel-superceding infrastructure (04 May 2026)",
+      "title": "Pluralistic: Demand destruction vs fuel-superseding infrastructure (04 May 2026)",
       "link": "https://pluralistic.net/2026/05/04/hope-in-the-dark",
       "date": "2026-05-04T09:39:28.000Z",
       "excerpt": "Today's links Demand destruction vs fuel-superceding infrastructure: Will Trump hormuz us into the full Gretacene? Hey look at this: Delights to delectate. Object permanence: Beck, Scientologist; Citizen journalism; Podcast-killing treaty; US x Kiwi copyright; Apple did a crime; DeCSS v civilian avi..."
@@ -82,86 +434,6 @@
       "excerpt": "David (of Forking Mad+) asked \"who knows that you blog?\". I join the increasing list of bloggers who've answered his question."
     },
     {
-      "id": "f0ypxf",
-      "blogId": "aldaily",
-      "title": "You've seen crows picking at roadkill. Disgusting? Those birds are doing us a favor",
-      "link": "https://www.wsj.com/arts-culture/books/beauty-of-the-beasts-review-the-gross-and-the-grimy-ba9798d6?st=o16HgG&reflink=desktopwebshare_permalink",
-      "date": "2026-05-04T06:49:15.000Z",
-      "excerpt": "You've seen crows picking at roadkill. Disgusting? Those birds are doing us a favor"
-    },
-    {
-      "id": "90fub2",
-      "blogId": "aldaily",
-      "title": "AI anxiety predates AI. The fear that machine writing will replace human writing has a long history",
-      "link": "https://thereader.mitpress.mit.edu/what-is-authorship-when-machines-can-write",
-      "date": "2026-05-04T06:48:15.000Z",
-      "excerpt": "AI anxiety predates AI. The fear that machine writing will replace human writing has a long history"
-    },
-    {
-      "id": "p2tplp",
-      "blogId": "aldaily",
-      "title": "Harvey Mansfield, Harvard's \"annoying Socratic gadfly,\" spent decades championing lost causes. At 94, he's suddenly winning",
-      "link": "https://www.chronicle.com/article/harvards-annoying-socratic-gadfly-takes-a-victory-lap",
-      "date": "2026-05-04T06:47:15.000Z",
-      "excerpt": "Harvey Mansfield, Harvard's \"annoying Socratic gadfly,\" spent decades championing lost causes. At 94, he's suddenly winning"
-    },
-    {
-      "id": "uwmqdv",
-      "blogId": "aldaily",
-      "title": "Wittgenstein finished the Tractatus certain all philosophical problems were solved. Then spent his life disagreeing.",
-      "link": "https://literaryreview.co.uk/its-a-wonderful-life",
-      "date": "2026-05-04T06:46:15.000Z",
-      "excerpt": "Wittgenstein finished the Tractatus certain all philosophical problems were solved. Then spent his life disagreeing."
-    },
-    {
-      "id": "ajzhuo",
-      "blogId": "aldaily",
-      "title": "Will human-written fiction become artisanal cheese, a luxury for the wealthy few while others eat Velveeta?",
-      "link": "https://www.commonwealmagazine.org/writing-artificial-intelligence-ai-rand-richards-cooper",
-      "date": "2026-05-04T06:45:15.000Z",
-      "excerpt": "Will human-written fiction become artisanal cheese, a luxury for the wealthy few while others eat Velveeta?"
-    },
-    {
-      "id": "h1c7f1",
-      "blogId": "aldaily",
-      "title": "How two filmmakers, a borrowed camera, and a Judas Priest concert led to an immortal documentary",
-      "link": "https://www.nytimes.com/2026/04/27/arts/music/heavy-metal-parking-lot-movie.html?unlocked_article_code=1.e1A.5Rqu.X2iJnuukeKKI&smid=url-share",
-      "date": "2026-05-04T06:44:15.000Z",
-      "excerpt": "How two filmmakers, a borrowed camera, and a Judas Priest concert led to an immortal documentary"
-    },
-    {
-      "id": "3kzacv",
-      "blogId": "aldaily",
-      "title": "The music critic Michael Steinberg, finding his profession “an irritant and a depressant,” went to work for orchestras",
-      "link": "https://theamericanscholar.org/the-peoples-critic",
-      "date": "2026-05-04T06:43:15.000Z",
-      "excerpt": "The music critic Michael Steinberg, finding his profession “an irritant and a depressant,” went to work for orchestras"
-    },
-    {
-      "id": "7wc89w",
-      "blogId": "aldaily",
-      "title": "Kierkegaard vs. Copenhagen's tabloid press. \"Twenty-five signatures make the most frightful stupidity into an opinion\"",
-      "link": "https://www.plough.com/en/topics/faith/discipleship/when-kierkegaard-got-cancelled",
-      "date": "2026-05-04T06:42:15.000Z",
-      "excerpt": "Kierkegaard vs. Copenhagen's tabloid press. \"Twenty-five signatures make the most frightful stupidity into an opinion\""
-    },
-    {
-      "id": "cpd4iq",
-      "blogId": "aldaily",
-      "title": "From Bacon's \"sound houses\" to the Star Wars cantina: Why does science fiction sound like that?",
-      "link": "https://daily.jstor.org/why-does-music-in-science-fiction-sound-like-that",
-      "date": "2026-05-04T06:41:15.000Z",
-      "excerpt": "From Bacon's \"sound houses\" to the Star Wars cantina: Why does science fiction sound like that?"
-    },
-    {
-      "id": "z217sl",
-      "blogId": "aldaily",
-      "title": "Your sous vide wand. Your car. Your search results. All enshittified, all on purpose, all at once. Cory Doctorow explains",
-      "link": "https://reviewcanada.ca/magazine/2026/05/screen-and-shout-review-enshittification-needy-media",
-      "date": "2026-05-04T06:40:15.000Z",
-      "excerpt": "Your sous vide wand. Your car. Your search results. All enshittified, all on purpose, all at once. Cory Doctorow explains"
-    },
-    {
       "id": "qdzznn",
       "blogId": "marginalrevolution",
       "title": "What makes art great?",
@@ -208,6 +480,14 @@
       "link": "https://susam.net/from-rss-to-atom.html",
       "date": "2026-05-04T00:00:00.000Z",
       "excerpt": "Yesterday, I switched my website from RSS feeds to Atom feeds. In case you are wondering whether you have somehow landed on an ancient post from 2010, no, you have not. Yes, this is the year 2026, and I have finally switched from RSS feeds to Atom feeds. Yes, I am fifteen, or perhaps twenty, years t..."
+    },
+    {
+      "id": "q9xk8",
+      "blogId": "lucumr",
+      "title": "Content for Content’s Sake",
+      "link": "https://lucumr.pocoo.org/2026/5/4/content-for-contents-sake",
+      "date": "2026-05-04T00:00:00.000Z",
+      "excerpt": "Language is constantly evolving, particularly in some communities. Not everybody is ready for it at all times. I, for instance, cannot stand that my community is now constantly “cooking” or “cooked”, that people in it are “locked in” or “cracked.” I don’t like it, because the use of the words primar..."
     },
     {
       "id": "9dayuj",
