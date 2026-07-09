@@ -524,7 +524,8 @@
       "categories": [
         "tech"
       ],
-      "description": "A newsletter about emerging technology and the future of governance."
+      "description": "A newsletter about emerging technology and the future of governance.",
+      "proxy": true
     },
     {
       "id": "kneelingbus",
@@ -934,7 +935,8 @@
         "psychology",
         "culture"
       ],
-      "description": "Adam Mastroianni on science reform, human behavior, and the history of the present."
+      "description": "Adam Mastroianni on science reform, human behavior, and the history of the present.",
+      "proxy": true
     },
     {
       "id": "intrinsicperspective",
@@ -1736,6 +1738,100 @@
         "culture"
       ],
       "description": "Maria Konnikova on psychology, decision-making, and the art of thinking well.",
+      "proxy": true
+    },
+    {
+      "id": "rbaldwin",
+      "name": "Richard Baldwin Substack",
+      "url": "https://rbaldwin.substack.com",
+      "feed": "https://rbaldwin.substack.com/feed",
+      "categories": [
+        "economics",
+        "finance"
+      ],
+      "description": "Richard Baldwin on globalisation, trade, and the future of the world economy.",
+      "proxy": true
+    },
+    {
+      "id": "craigmod",
+      "name": "Craig Mod",
+      "url": "https://craigmod.com",
+      "feed": "https://craigmod.com/index.xml",
+      "categories": [
+        "culture",
+        "design"
+      ],
+      "description": "Craig Mod's essays and updates on writing, photography, walking, books, and publishing."
+    },
+    {
+      "id": "dataforindia",
+      "name": "Data For India",
+      "url": "https://www.dataforindia.com",
+      "feed": "https://www.dataforindia.com/rss/",
+      "categories": [
+        "economics",
+        "science"
+      ],
+      "description": "Insights, charts, and data that expand understanding of India."
+    },
+    {
+      "id": "thetwocents",
+      "name": "The Two Cents",
+      "url": "https://thetwocents.substack.com",
+      "feed": "https://thetwocents.substack.com/feed",
+      "categories": [
+        "economics",
+        "finance"
+      ],
+      "description": "Hanno Lustig and Romain Wacziarg on economic policy and political economy.",
+      "proxy": true
+    },
+    {
+      "id": "naomiklein",
+      "name": "Patterns by Naomi Klein",
+      "url": "https://naomiklein.substack.com",
+      "feed": "https://naomiklein.substack.com/feed",
+      "categories": [
+        "culture",
+        "philosophy"
+      ],
+      "description": "Naomi Klein on politics, culture, and the patterns behind an age of serial shocks.",
+      "proxy": true
+    },
+    {
+      "id": "pathlesspath",
+      "name": "Pathless by Paul Millerd",
+      "url": "https://newsletter.pathlesspath.com",
+      "feed": "https://newsletter.pathlesspath.com/feed",
+      "categories": [
+        "life",
+        "culture"
+      ],
+      "description": "Paul Millerd on work, success, and imagining different ways to build a life.",
+      "proxy": true
+    },
+    {
+      "id": "africanistperspective",
+      "name": "An Africanist Perspective",
+      "url": "https://www.africanistperspective.com",
+      "feed": "https://www.africanistperspective.com/feed",
+      "categories": [
+        "economics",
+        "culture"
+      ],
+      "description": "African political economy, foreign affairs, and commentary.",
+      "proxy": true
+    },
+    {
+      "id": "xkdr",
+      "name": "XKDR Forum",
+      "url": "https://xkdr.substack.com",
+      "feed": "https://xkdr.substack.com/feed",
+      "categories": [
+        "science",
+        "tech"
+      ],
+      "description": "Cross-disciplinary knowledge, data, and research from XKDR Forum.",
       "proxy": true
     }
   ]
