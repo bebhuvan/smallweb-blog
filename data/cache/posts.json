@@ -1,6 +1,206 @@
 {
-  "lastUpdated": "2026-07-13T18:46:57.829Z",
+  "lastUpdated": "2026-07-14T03:53:11.583Z",
   "posts": [
+    {
+      "id": "rrv4mp",
+      "blogId": "slackwire",
+      "title": "Profits, Payouts and Equity Prices, Part 1",
+      "link": "https://jwmason.org/slackwire/profits-payouts-and-equity-prices-part-1",
+      "date": "2026-07-14T02:25:25.000Z",
+      "excerpt": "TLDR: The value of corporate equity relative to GDP is at a historical high. But this does not necessarily mean there’s a bubble: profits and shareholder payouts are also very high relative to historical values. I first started thinking about economics thirty years ago, during the (first) tech boom...."
+    },
+    {
+      "id": "t796tl",
+      "blogId": "simonwillison",
+      "title": "Using uvx in GitHub Actions in a cache-friendly way",
+      "link": "https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache",
+      "date": "2026-07-14T00:56:20.000Z",
+      "excerpt": "TIL: Using uvx in GitHub Actions in a cache-friendly way I finally found a cache-friendly recipe for using uvx tool-name in GitHub Actions workflows that I like. The trick is setting a UV_EXCLUDE_NEWER: \"2026-07-12\" environment variable at the start of the workflow and then using that as part of the..."
+    },
+    {
+      "id": "6549aw",
+      "blogId": "commonreader",
+      "title": "No Spanish reading crisis?",
+      "link": "https://www.commonreader.co.uk/p/no-spanish-reading-crisis",
+      "date": "2026-07-14T00:41:33.000Z",
+      "excerpt": "66% of Spaniards read for pleasure; 75% of 14-24 year olds"
+    },
+    {
+      "id": "r124k1",
+      "blogId": "platformer",
+      "title": "The loudest warning about AI and jobs yet",
+      "link": "https://www.platformer.news/ai-jobs-warning-brynjolfsson-acemoglu",
+      "date": "2026-07-14T00:00:37.000Z",
+      "excerpt": "200 economists and AI leaders say something big is happening. What should we do about it? Plus: Apple sues OpenAI"
+    },
+    {
+      "id": "azl2d4",
+      "blogId": "kottke",
+      "title": " “A star located about 1,300 light-years from Earth... ",
+      "link": "https://kottke.org/26/07/0049329-by-looking-for-cosmic-coo",
+      "date": "2026-07-13T23:50:00.000Z",
+      "excerpt": "“A star located about 1,300 light-years from Earth shows signs of having devoured one of its planets — and is now gearing up for a second helping…” Scientists found signs of the meal by looking for “cosmic cookie crumbs”."
+    },
+    {
+      "id": "iqurm4",
+      "blogId": "aldaily",
+      "title": "“I do support you—difficult job. But Barbara and I are bothered about the raunchy stuff—urine ... fist up rectum” ",
+      "link": "https://www.newyorker.com/magazine/2026/07/20/the-perfect-moment-isaac-butler-book-review",
+      "date": "2026-07-13T23:44:49.000Z",
+      "excerpt": "“I do support you—difficult job. But Barbara and I are bothered about the raunchy stuff—urine ... fist up rectum”"
+    },
+    {
+      "id": "vxcaxw",
+      "blogId": "aldaily",
+      "title": "Ten thousand books in 600 square feet: For a young member of the literati, it was a temple of the mind; for his landlord, it was a fire hazard",
+      "link": "https://www.nytimes.com/2026/07/09/style/too-many-books-new-york-city-apartment-scholar-landlord.html?unlocked_article_code=1.wlA.NyKz.wTNIRk7ZcNZZ&smid=url-share",
+      "date": "2026-07-13T23:43:49.000Z",
+      "excerpt": "Ten thousand books in 600 square feet: For a young member of the literati, it was a temple of the mind; for his landlord, it was a fire hazard"
+    },
+    {
+      "id": "usetqi",
+      "blogId": "aldaily",
+      "title": "Carolyn Rouse did an interview to rebut the charge that anthropology has too much politics and too little rigor. It didn't go well",
+      "link": "https://www.chronicle.com/article/is-anthropology-hopelessly-politicized",
+      "date": "2026-07-13T23:42:49.000Z",
+      "excerpt": "Carolyn Rouse did an interview to rebut the charge that anthropology has too much politics and too little rigor. It didn't go well"
+    },
+    {
+      "id": "3irac0",
+      "blogId": "aldaily",
+      "title": "Young J. G. Ballard and his family were imprisoned in a Japanese camp for a two and a half years — he called it the best time of his life",
+      "link": "https://lareviewofbooks.org/article/jg-ballard-illuminated-man-christopher-priest-nina-allan",
+      "date": "2026-07-13T23:41:49.000Z",
+      "excerpt": "Young J. G. Ballard and his family were imprisoned in a Japanese camp for a two and a half years — he called it the best time of his life"
+    },
+    {
+      "id": "viczyx",
+      "blogId": "aldaily",
+      "title": "Michel Foucault, who warned against domination, became dominant himself. He'd have savored the irony ",
+      "link": "https://www.nytimes.com/2026/07/10/books/review/michel-foucault-ai-tech-power.html?unlocked_article_code=1.xVA.g3Y4.iL2jlbjIyYrU&smid=url-share",
+      "date": "2026-07-13T23:40:49.000Z",
+      "excerpt": "Michel Foucault, who warned against domination, became dominant himself. He'd have savored the irony"
+    },
+    {
+      "id": "o3p2b6",
+      "blogId": "aldaily",
+      "title": "PEN America was founded in 1922 to protect free speech and defend writers. That creed has developed a blind spot",
+      "link": "https://www.theatlantic.com/books/2026/07/why-pen-americas-president-dinaw-mengestu-resigned/687891?gift=ih3Agm7ZTQUXUY2wyHjxRDu9cC9_SqFgijAImeqnIIA",
+      "date": "2026-07-13T23:39:49.000Z",
+      "excerpt": "PEN America was founded in 1922 to protect free speech and defend writers. That creed has developed a blind spot"
+    },
+    {
+      "id": "f2hlnk",
+      "blogId": "aldaily",
+      "title": "The French surrealists, stricken by serving in World War I, adopted a new philosophical approach: “vibrant pessimism”",
+      "link": "https://lareviewofbooks.org/article/andre-breton-nadja-magic-art-cavalier-perspective-pessimism",
+      "date": "2026-07-13T23:38:49.000Z",
+      "excerpt": "The French surrealists, stricken by serving in World War I, adopted a new philosophical approach: “vibrant pessimism”"
+    },
+    {
+      "id": "kwy4as",
+      "blogId": "aldaily",
+      "title": "We are becoming participants in a vast philosophical experiment: Will Kant or Nietzsche be proved right?",
+      "link": "https://yalereview.org/article/ai-and-the-future-of-writing",
+      "date": "2026-07-13T23:37:49.000Z",
+      "excerpt": "We are becoming participants in a vast philosophical experiment: Will Kant or Nietzsche be proved right?"
+    },
+    {
+      "id": "80h5xf",
+      "blogId": "aldaily",
+      "title": "In 1962, Marshall McLuhan predicted that we would become post-literate. He was early, but he wasn't wrong",
+      "link": "https://www.theatlantic.com/magazine/2026/08/reading-crisis-postliterate-age/687618?gift=2DPnH7-w5PunRuGFjgT5W_MrnbmougxrepHf2J8gYBk",
+      "date": "2026-07-13T23:36:49.000Z",
+      "excerpt": "In 1962, Marshall McLuhan predicted that we would become post-literate. He was early, but he wasn't wrong"
+    },
+    {
+      "id": "8m4a4p",
+      "blogId": "aldaily",
+      "title": "Naomi Kanakia has two questions about n+1: How did it publish so much consistently amazing work? And why did it get so bad?",
+      "link": "https://www.woman-of-letters.com/p/n1",
+      "date": "2026-07-13T23:35:49.000Z",
+      "excerpt": "Naomi Kanakia has two questions about n+1: How did it publish so much consistently amazing work? And why did it get so bad?"
+    },
+    {
+      "id": "ba712o",
+      "blogId": "simonwillison",
+      "title": "DOOMQL",
+      "link": "https://simonwillison.net/2026/Jul/13/doomql",
+      "date": "2026-07-13T22:34:41.000Z",
+      "excerpt": "DOOMQL Peter Gostev built this using GPT-5.6 Sol. This is a lot of fun: DOOMQL started with a deliberately unreasonable question: what if SQLite were the game engine, not merely the place where a game stores data? The result is a small, original Doom-like game in which SQL owns movement, collision,..."
+    },
+    {
+      "id": "j8wq73",
+      "blogId": "bloodinthemachine",
+      "title": "What VAR tells us about AI",
+      "link": "https://www.bloodinthemachine.com/p/what-var-tells-us-about-ai",
+      "date": "2026-07-13T22:23:44.000Z",
+      "excerpt": "FIFA's semi-automated refereeing system promises neutrality but brims with bias. It's widely despised yet embraced by elites. It is, in other words, a lot like AI."
+    },
+    {
+      "id": "xvytkc",
+      "blogId": "simonwillison",
+      "title": "datasette code-frequency chart on GitHub",
+      "link": "https://simonwillison.net/2026/Jul/13/datasette-code-frequency",
+      "date": "2026-07-13T21:45:27.000Z",
+      "excerpt": "datasette code-frequency chart on GitHub Out of curiosity I decided to see if I could find a useful illustration of the impact of coding agents and Opus 4.5 class models on my own output. The best I've found so far is this GitHub chart of frequency of code changes to my Datasette open source project..."
+    },
+    {
+      "id": "20v8ok",
+      "blogId": "kottke",
+      "title": " Digger ",
+      "link": "https://kottke.org/26/07/digger",
+      "date": "2026-07-13T21:35:00.000Z",
+      "excerpt": "I’d seen that there was a new Tom Cruise movie coming out this fall called Digger, but I was not prepared for the trailer, in which we see Cruise playing a dipshit oligarch in what appears to be a Dr. Strangelove-style satire/thriller. The most powerful man in the world embarks on a frantic mission..."
+    },
+    {
+      "id": "eflji8",
+      "blogId": "thezvi",
+      "title": "Better Call Sol The Workhorse",
+      "link": "https://thezvi.substack.com/p/better-call-sol-the-workhorse",
+      "date": "2026-07-13T20:46:04.000Z",
+      "excerpt": "OpenAI’s GPT-5.6-Sol is finally here, along with the cheaper Terra and Luna."
+    },
+    {
+      "id": "ce05cp",
+      "blogId": "kottke",
+      "title": "  TIL about Fredkin’s paradox . “With this kind of... ",
+      "link": "https://kottke.org/26/07/0049320-til-about-fredkins-parado",
+      "date": "2026-07-13T20:39:00.000Z",
+      "excerpt": "TIL about Fredkin’s paradox. “With this kind of decision, what Fredkin’s paradox tells us is if it’s very difficult to decide, it’s probably because the alternatives are equivalent, and therefore it doesn’t matter which one you choose.”"
+    },
+    {
+      "id": "b3gh4k",
+      "blogId": "kottke",
+      "title": "  The Universe of Short Film  is an amazing site for... ",
+      "link": "https://kottke.org/26/07/0049291-the-universe-of-short-fil",
+      "date": "2026-07-13T19:49:00.000Z",
+      "excerpt": "The Universe of Short Film is an amazing site for watching, sharing, and connecting around short films. This is really cool…not sure why the site isn’t better known."
+    },
+    {
+      "id": "9v8154",
+      "blogId": "persuasion",
+      "title": "Trump’s Health Is… Complicated",
+      "link": "https://www.persuasion.community/p/trump-is-old-but-senile-probably",
+      "date": "2026-07-13T19:40:15.000Z",
+      "excerpt": "He isn’t as decrepit as Democrats pretend. But Republicans are slowly imagining a post-Trump world."
+    },
+    {
+      "id": "c2oxo1",
+      "blogId": "marginalrevolution",
+      "title": "Persistent Inequality in Publishing in Economics",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/07/persistent-inequality-in-publishing-in-economics.html",
+      "date": "2026-07-13T19:30:13.000Z",
+      "excerpt": "This paper documents new facts about concentration in publishing in economics. First, the profession grows downward . The number of economists grew almost sixfold since 1990, but new entrants publish in lower-tier journals while incumbents hold the top. Second, there is high and persistent concentra..."
+    },
+    {
+      "id": "emnlah",
+      "blogId": "kottke",
+      "title": " Earth’s Holes ",
+      "link": "https://kottke.org/26/07/earths-holes",
+      "date": "2026-07-13T18:49:00.000Z",
+      "excerpt": "From XKCD, a tour of some of the Earth’s deepest and most notable holes, including mines, caves, boreholes, subway stations, lakes, tunnels, neutrino detectors, and, of course, the Mariana Trench. I was surprised to learn that a pair of boreholes, the Kola Superdeep Borehole and the Deepwater Horizo..."
+    },
     {
       "id": "1olub9",
       "blogId": "abnormalreturns",
@@ -144,62 +344,6 @@
       "link": "https://curtjaimungal.substack.com/p/ginestra-bianconi-the-physicist-who-557",
       "date": "2026-07-13T14:54:00.000Z",
       "excerpt": "I personally subscribe to The Economist."
-    },
-    {
-      "id": "3irac0",
-      "blogId": "aldaily",
-      "title": "Young J. G. Ballard and his family were imprisoned in a Japanese camp for a two and a half years — he called it the best time of his life",
-      "link": "https://lareviewofbooks.org/article/jg-ballard-illuminated-man-christopher-priest-nina-allan",
-      "date": "2026-07-13T14:43:47.000Z",
-      "excerpt": "Young J. G. Ballard and his family were imprisoned in a Japanese camp for a two and a half years — he called it the best time of his life"
-    },
-    {
-      "id": "viczyx",
-      "blogId": "aldaily",
-      "title": "Michel Foucault, who warned against domination, became dominant himself. He'd have savored the irony ",
-      "link": "https://www.nytimes.com/2026/07/10/books/review/michel-foucault-ai-tech-power.html?unlocked_article_code=1.xVA.g3Y4.iL2jlbjIyYrU&smid=url-share",
-      "date": "2026-07-13T14:42:47.000Z",
-      "excerpt": "Michel Foucault, who warned against domination, became dominant himself. He'd have savored the irony"
-    },
-    {
-      "id": "o3p2b6",
-      "blogId": "aldaily",
-      "title": "PEN America was founded in 1922 to protect free speech and defend writers. That creed has developed a blind spot",
-      "link": "https://www.theatlantic.com/books/2026/07/why-pen-americas-president-dinaw-mengestu-resigned/687891?gift=ih3Agm7ZTQUXUY2wyHjxRDu9cC9_SqFgijAImeqnIIA",
-      "date": "2026-07-13T14:41:47.000Z",
-      "excerpt": "PEN America was founded in 1922 to protect free speech and defend writers. That creed has developed a blind spot"
-    },
-    {
-      "id": "f2hlnk",
-      "blogId": "aldaily",
-      "title": "The French surrealists, stricken by serving in World War I, adopted a new philosophical approach: “vibrant pessimism”",
-      "link": "https://lareviewofbooks.org/article/andre-breton-nadja-magic-art-cavalier-perspective-pessimism",
-      "date": "2026-07-13T14:40:47.000Z",
-      "excerpt": "The French surrealists, stricken by serving in World War I, adopted a new philosophical approach: “vibrant pessimism”"
-    },
-    {
-      "id": "kwy4as",
-      "blogId": "aldaily",
-      "title": "We are becoming participants in a vast philosophical experiment: Will Kant or Nietzsche be proved right?",
-      "link": "https://yalereview.org/article/ai-and-the-future-of-writing",
-      "date": "2026-07-13T14:39:47.000Z",
-      "excerpt": "We are becoming participants in a vast philosophical experiment: Will Kant or Nietzsche be proved right?"
-    },
-    {
-      "id": "80h5xf",
-      "blogId": "aldaily",
-      "title": "In 1962, Marshall McLuhan predicted that we would become post-literate. He was early, but he wasn't wrong",
-      "link": "https://www.theatlantic.com/magazine/2026/08/reading-crisis-postliterate-age/687618?gift=2DPnH7-w5PunRuGFjgT5W_MrnbmougxrepHf2J8gYBk",
-      "date": "2026-07-13T14:38:47.000Z",
-      "excerpt": "In 1962, Marshall McLuhan predicted that we would become post-literate. He was early, but he wasn't wrong"
-    },
-    {
-      "id": "8m4a4p",
-      "blogId": "aldaily",
-      "title": "Naomi Kanakia has two questions about n+1: How did it publish so much consistently amazing work? And why did it get so bad?",
-      "link": "https://www.woman-of-letters.com/p/n1",
-      "date": "2026-07-13T14:37:47.000Z",
-      "excerpt": "Naomi Kanakia has two questions about n+1: How did it publish so much consistently amazing work? And why did it get so bad?"
     },
     {
       "id": "8fklqr",
@@ -18831,7 +18975,7 @@
       "title": "The Convergence",
       "link": "https://thechoiceengine.substack.com/p/the-convergence",
       "date": "2026-02-10T11:07:15.000Z",
-      "excerpt": "The following account is reconstructed from documents I obtained in 2022 from a former employee of Prometheus Research Group, a machine-learning laboratory incorporated in Delaware in 2017 and dissolved, per state filings, on 11 March 2021.¹ The documents include internal correspondence, experiment..."
+      "excerpt": "The following account is reconstructed from documents I obtained in 2022 from a former employee of Prometheus Research Group, a machine-learning laboratory incorporated in Delaware in 2017 and dissolved, per state filings, on 11 March 2021.1 The documents include internal correspondence, experiment..."
     },
     {
       "id": "5oxcqu",
