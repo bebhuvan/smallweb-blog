@@ -1,6 +1,182 @@
 {
-  "lastUpdated": "2026-07-15T18:10:37.195Z",
+  "lastUpdated": "2026-07-16T03:56:49.916Z",
   "posts": [
+    {
+      "id": "fs0k70",
+      "blogId": "astralcodexten",
+      "title": "Six Slightly Skew Boogeymen",
+      "link": "https://www.astralcodexten.com/p/six-slightly-skew-boogeymen",
+      "date": "2026-07-16T00:55:28.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "258efo",
+      "blogId": "simonwillison",
+      "title": "Mermaid to Unicode box art (grok-mermaid)",
+      "link": "https://simonwillison.net/2026/Jul/16/grok-mermaid",
+      "date": "2026-07-16T00:33:18.000Z",
+      "excerpt": "Tool: Mermaid to Unicode box art (grok-mermaid) While exploring the codebase for the newly open-sourced Grok CLI coding agent I came across xai-grok-markdown/src/mermaid.rs, a \"self-contained terminal renderer for Mermaid diagrams\" written in Rust. I figured it would be fun to try that out in a brow..."
+    },
+    {
+      "id": "ky0lmc",
+      "blogId": "persuasion",
+      "title": "ICE Is Trump’s Standing Army Now",
+      "link": "https://www.persuasion.community/p/ice-is-trumps-standing-army-now",
+      "date": "2026-07-16T00:15:32.000Z",
+      "excerpt": "The new immigration surge proves the administration has learned nothing—except how to make less noise."
+    },
+    {
+      "id": "g96hiq",
+      "blogId": "simonwillison",
+      "title": "xai-org/grok-build, now open source",
+      "link": "https://simonwillison.net/2026/Jul/15/grok-build",
+      "date": "2026-07-15T23:59:30.000Z",
+      "excerpt": "xai-org/grok-build, now open source xAI's grok CLI tool faced severe community backlash yesterday when it became apparent that running the command in a directory could upload that entire directory to xAI's Google Cloud buckets. One user reported running it in their home directory and seeing it uploa..."
+    },
+    {
+      "id": "5ry9jc",
+      "blogId": "aldaily",
+      "title": "Wondering why \"everything feels divided and why it sucks constantly?\" Blame the uni-context. Agnes Callard explains",
+      "link": "https://www.derekthompson.org/p/a-philosophers-one-word-theory-to",
+      "date": "2026-07-15T23:50:49.000Z",
+      "excerpt": "Wondering why \"everything feels divided and why it sucks constantly?\" Blame the uni-context. Agnes Callard explains"
+    },
+    {
+      "id": "4ztprl",
+      "blogId": "aldaily",
+      "title": "Ketamine, public cuddling, and prediction markets on just about everything pervade Manifest, a gathering of self-described “rationalists”",
+      "link": "https://www.thenewcritic.com/p/manifest-man",
+      "date": "2026-07-15T23:49:49.000Z",
+      "excerpt": "Ketamine, public cuddling, and prediction markets on just about everything pervade Manifest, a gathering of self-described “rationalists”"
+    },
+    {
+      "id": "4z039q",
+      "blogId": "aldaily",
+      "title": "With their mad methods and aesthetic gimmicks, William S. Burroughs and Brion Gysin were, together, a brand: The Cut-Up Boys of the Interzone ",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n13/iain-sinclair/bad-magic",
+      "date": "2026-07-15T23:48:49.000Z",
+      "excerpt": "With their mad methods and aesthetic gimmicks, William S. Burroughs and Brion Gysin were, together, a brand: The Cut-Up Boys of the Interzone"
+    },
+    {
+      "id": "pxorz",
+      "blogId": "aldaily",
+      "title": "A poet and a theologian grope towards meaning by mail, trading letters about faith and friendship for two years ",
+      "link": "https://arcmag.org/bosom-buddies",
+      "date": "2026-07-15T23:47:49.000Z",
+      "excerpt": "A poet and a theologian grope towards meaning by mail, trading letters about faith and friendship for two years"
+    },
+    {
+      "id": "ic0zsu",
+      "blogId": "aldaily",
+      "title": "“The smartphone erodes freedom not because it invades our private space, but because it gives us the feel of a private world”",
+      "link": "https://www.thenewatlantis.com/publications/byung-chul-han-what-happened-to-freedom",
+      "date": "2026-07-15T23:46:49.000Z",
+      "excerpt": "“The smartphone erodes freedom not because it invades our private space, but because it gives us the feel of a private world”"
+    },
+    {
+      "id": "ixvueu",
+      "blogId": "aldaily",
+      "title": "Saul Bellow peeked under Allan Bloom's kimono and called it a tribute. Was the betrayal worth it?",
+      "link": "https://www.thebulwark.com/p/ravelstein-revisited-saul-bellow",
+      "date": "2026-07-15T23:45:49.000Z",
+      "excerpt": "Saul Bellow peeked under Allan Bloom's kimono and called it a tribute. Was the betrayal worth it?"
+    },
+    {
+      "id": "iqurm4",
+      "blogId": "aldaily",
+      "title": "“I do support you—difficult job. But Barbara and I are bothered about the raunchy stuff—urine ... fist up rectum” ",
+      "link": "https://www.newyorker.com/magazine/2026/07/20/the-perfect-moment-isaac-butler-book-review",
+      "date": "2026-07-15T23:44:49.000Z",
+      "excerpt": "“I do support you—difficult job. But Barbara and I are bothered about the raunchy stuff—urine ... fist up rectum”"
+    },
+    {
+      "id": "vxcaxw",
+      "blogId": "aldaily",
+      "title": "Ten thousand books in 600 square feet: For a young member of the literati, it was a temple of the mind; for his landlord, it was a fire hazard",
+      "link": "https://www.nytimes.com/2026/07/09/style/too-many-books-new-york-city-apartment-scholar-landlord.html?unlocked_article_code=1.wlA.NyKz.wTNIRk7ZcNZZ&smid=url-share",
+      "date": "2026-07-15T23:43:49.000Z",
+      "excerpt": "Ten thousand books in 600 square feet: For a young member of the literati, it was a temple of the mind; for his landlord, it was a fire hazard"
+    },
+    {
+      "id": "usetqi",
+      "blogId": "aldaily",
+      "title": "Carolyn Rouse did an interview to rebut the charge that anthropology has too much politics and too little rigor. It didn't go well",
+      "link": "https://www.chronicle.com/article/is-anthropology-hopelessly-politicized",
+      "date": "2026-07-15T23:42:49.000Z",
+      "excerpt": "Carolyn Rouse did an interview to rebut the charge that anthropology has too much politics and too little rigor. It didn't go well"
+    },
+    {
+      "id": "3irac0",
+      "blogId": "aldaily",
+      "title": "Young J. G. Ballard and his family were imprisoned in a Japanese camp for a two and a half years — he called it the best time of his life",
+      "link": "https://lareviewofbooks.org/article/jg-ballard-illuminated-man-christopher-priest-nina-allan",
+      "date": "2026-07-15T23:41:49.000Z",
+      "excerpt": "Young J. G. Ballard and his family were imprisoned in a Japanese camp for a two and a half years — he called it the best time of his life"
+    },
+    {
+      "id": "ltzozo",
+      "blogId": "kottke",
+      "title": "  A few highlights from a collection of lovely... ",
+      "link": "https://kottke.org/26/07/0049340-a-few-highlights-from-a-c",
+      "date": "2026-07-15T23:13:00.000Z",
+      "excerpt": "A few highlights from a collection of lovely woodblock-printed sugoroku game boards from Japan. “The gameboards use stories and maps to teach children history and geography.”"
+    },
+    {
+      "id": "281fw9",
+      "blogId": "braddelong",
+      "title": "CROSSPOST: PAOLO PERRONE: AI Coding Tools: What Changed in the Last 6 Months",
+      "link": "https://braddelong.substack.com/p/crosspost-paolo-perrone-ai-coding",
+      "date": "2026-07-15T22:47:10.000Z",
+      "excerpt": "Paolo's own subheadline: \"A 10-minute update on what shipped, what broke, and what it costs now\". From Autocomplete to loose cannons in this truly New Age of \"AI\" agentic coding tools..."
+    },
+    {
+      "id": "ww2am",
+      "blogId": "kottke",
+      "title": " The Naturalist’s Library (1833-43) ",
+      "link": "https://kottke.org/26/07/the-naturalists-library-1833-43",
+      "date": "2026-07-15T22:03:00.000Z",
+      "excerpt": "Nicholas Rougeux, whose work I have featured here before, has published a complete digital edition of William Jardine’s 40-volume book series on natural history published in the early-to-mid 19th-century. As part of the project, Rougeux restored each of the more than 1300 illustrations in the librar..."
+    },
+    {
+      "id": "xwbc5s",
+      "blogId": "damodaran",
+      "title": "Country Risk: Drivers, Measures and Investment Implications - The 2026 Edition!",
+      "link": "https://aswathdamodaran.blogspot.com/2026/07/country-risk-drivers-measures-and.html",
+      "date": "2026-07-15T21:40:14.000Z",
+      "excerpt": "I am a creature of habit in my personal and professional life, and in the context of the content that I post online, there is a ritual that I follow with my data updates. I start the year with my general data update online, and follow up with a series of posts where I examine the implications of thi..."
+    },
+    {
+      "id": "yz2qv9",
+      "blogId": "abnormalreturns",
+      "title": "Wednesday links: tough times for investors",
+      "link": "https://abnormalreturns.com/2026/07/15/wednesday-links-tough-times-for-investors",
+      "date": "2026-07-15T19:35:08.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "lmmdgk",
+      "blogId": "kottke",
+      "title": "  Legibility of effort in the LLM age . “What... ",
+      "link": "https://kottke.org/26/07/0049341-legibility-of-effort-in-t",
+      "date": "2026-07-15T18:50:00.000Z",
+      "excerpt": "Legibility of effort in the LLM age. “What software (and writing, to an extent) is missing now is legibility of effort - the ability to tell at a glance whether something took a human meaningful work.”"
+    },
+    {
+      "id": "sqh9uf",
+      "blogId": "marginalrevolution",
+      "title": "Those new service sector jobs",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/07/those-new-service-sector-jobs-16.html",
+      "date": "2026-07-15T18:31:09.000Z",
+      "excerpt": "It’s 85 years since Brian O’Nolan, better known as Flann O’Brien and Myles na gCopaleen, proposed a Book Handling Agency in The Irish Times. On Sunday evening, Flann’s idea became reality. In a Berlin bar’s back room, Cabinet Magazine, a literary quarterly, assembled a crack team of white-coated lit..."
+    },
+    {
+      "id": "mj3prh",
+      "blogId": "honestbroker",
+      "title": "Talking About My Generation",
+      "link": "https://www.honest-broker.com/p/talking-about-my-generation",
+      "date": "2026-07-15T18:25:19.000Z",
+      "excerpt": "What do I think about Boomers? Do you really want to know?"
+    },
     {
       "id": "klait0",
       "blogId": "kottke",
@@ -160,62 +336,6 @@
       "link": "https://www.programmablemutter.com/p/the-political-economy-of-billionaire",
       "date": "2026-07-15T14:09:34.000Z",
       "excerpt": "The passions are devouring the interests"
-    },
-    {
-      "id": "pxorz",
-      "blogId": "aldaily",
-      "title": "A poet and a theologian grope towards meaning by mail, trading letters about faith and friendship for two years ",
-      "link": "https://arcmag.org/bosom-buddies",
-      "date": "2026-07-15T14:03:34.000Z",
-      "excerpt": "A poet and a theologian grope towards meaning by mail, trading letters about faith and friendship for two years"
-    },
-    {
-      "id": "ic0zsu",
-      "blogId": "aldaily",
-      "title": "“The smartphone erodes freedom not because it invades our private space, but because it gives us the feel of a private world”",
-      "link": "https://www.thenewatlantis.com/publications/byung-chul-han-what-happened-to-freedom",
-      "date": "2026-07-15T14:02:34.000Z",
-      "excerpt": "“The smartphone erodes freedom not because it invades our private space, but because it gives us the feel of a private world”"
-    },
-    {
-      "id": "ixvueu",
-      "blogId": "aldaily",
-      "title": "Saul Bellow peeked under Allan Bloom's kimono and called it a tribute. Was the betrayal worth it?",
-      "link": "https://www.thebulwark.com/p/ravelstein-revisited-saul-bellow",
-      "date": "2026-07-15T14:01:34.000Z",
-      "excerpt": "Saul Bellow peeked under Allan Bloom's kimono and called it a tribute. Was the betrayal worth it?"
-    },
-    {
-      "id": "iqurm4",
-      "blogId": "aldaily",
-      "title": "“I do support you—difficult job. But Barbara and I are bothered about the raunchy stuff—urine ... fist up rectum” ",
-      "link": "https://www.newyorker.com/magazine/2026/07/20/the-perfect-moment-isaac-butler-book-review",
-      "date": "2026-07-15T14:00:34.000Z",
-      "excerpt": "“I do support you—difficult job. But Barbara and I are bothered about the raunchy stuff—urine ... fist up rectum”"
-    },
-    {
-      "id": "vxcaxw",
-      "blogId": "aldaily",
-      "title": "Ten thousand books in 600 square feet: For a young member of the literati, it was a temple of the mind; for his landlord, it was a fire hazard",
-      "link": "https://www.nytimes.com/2026/07/09/style/too-many-books-new-york-city-apartment-scholar-landlord.html?unlocked_article_code=1.wlA.NyKz.wTNIRk7ZcNZZ&smid=url-share",
-      "date": "2026-07-15T13:59:34.000Z",
-      "excerpt": "Ten thousand books in 600 square feet: For a young member of the literati, it was a temple of the mind; for his landlord, it was a fire hazard"
-    },
-    {
-      "id": "usetqi",
-      "blogId": "aldaily",
-      "title": "Carolyn Rouse did an interview to rebut the charge that anthropology has too much politics and too little rigor. It didn't go well",
-      "link": "https://www.chronicle.com/article/is-anthropology-hopelessly-politicized",
-      "date": "2026-07-15T13:58:34.000Z",
-      "excerpt": "Carolyn Rouse did an interview to rebut the charge that anthropology has too much politics and too little rigor. It didn't go well"
-    },
-    {
-      "id": "3irac0",
-      "blogId": "aldaily",
-      "title": "Young J. G. Ballard and his family were imprisoned in a Japanese camp for a two and a half years — he called it the best time of his life",
-      "link": "https://lareviewofbooks.org/article/jg-ballard-illuminated-man-christopher-priest-nina-allan",
-      "date": "2026-07-15T13:57:34.000Z",
-      "excerpt": "Young J. G. Ballard and his family were imprisoned in a Japanese camp for a two and a half years — he called it the best time of his life"
     },
     {
       "id": "viczyx",
