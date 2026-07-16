@@ -1,6 +1,310 @@
 {
-  "lastUpdated": "2026-07-16T10:59:52.193Z",
+  "lastUpdated": "2026-07-16T18:09:40.801Z",
   "posts": [
+    {
+      "id": "ubslfe",
+      "blogId": "casssunstein",
+      "title": "Who Has Rights?",
+      "link": "https://casssunstein.substack.com/p/who-has-rights",
+      "date": "2026-07-16T18:05:30.000Z",
+      "excerpt": "AI? Dogs? Pigeons?"
+    },
+    {
+      "id": "958l4x",
+      "blogId": "simonwillison",
+      "title": "Quoting Thibault Sottiaux",
+      "link": "https://simonwillison.net/2026/Jul/16/bad-codex-bug",
+      "date": "2026-07-16T17:45:59.000Z",
+      "excerpt": "On file deletions. We’ve investigated a handful of reports where GPT-5.6 unexpectedly deleted files. What we have found is that this most commonly occurs when: Full access mode is enabled and codex is run without sandboxing protections, including without auto review being enabled The model attempts..."
+    },
+    {
+      "id": "65ab2e",
+      "blogId": "kottke",
+      "title": " From the Brooklyn Public Library,  a list of “the... ",
+      "link": "https://kottke.org/26/07/0049343-a-list-of-the-250-most-in",
+      "date": "2026-07-16T17:39:00.000Z",
+      "excerpt": "From the Brooklyn Public Library, a list of “the 250 most influential books in United States history”. Incl. Neuromancer, The Fire Next Time, Nickel and Dimed, The Power Broker, and The Snowy Day."
+    },
+    {
+      "id": "638crz",
+      "blogId": "abnormalreturns",
+      "title": "Thursday links: the need for regulation",
+      "link": "https://abnormalreturns.com/2026/07/16/thursday-links-the-need-for-regulation",
+      "date": "2026-07-16T17:24:48.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "hbqcby",
+      "blogId": "kottke",
+      "title": " New-to-me podcast that looks really interesting:  Time... ",
+      "link": "https://kottke.org/26/07/0049279-time-sensitive",
+      "date": "2026-07-16T17:00:00.000Z",
+      "excerpt": "New-to-me podcast that looks really interesting: Time Sensitive, “a podcast featuring candid, revealing long-form conversations with leading minds about their life and work through the lens of time”."
+    },
+    {
+      "id": "am5cc0",
+      "blogId": "marginalrevolution",
+      "title": "Thursday assorted links",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/07/thursday-assorted-links-561.html",
+      "date": "2026-07-16T16:59:20.000Z",
+      "excerpt": "1. On the decline of sumptuousness in cinema, part II. 2. Funding canonical visions. 3. Thiel and Wolfe on the Pope and the Antichrist. 4. Claims about blue eyes. 5. Are the world’s best counterfeit artists in Colombia? (NYT) 6. Britain nationalizes its last major steel mill (NYT). 7. “Expected work..."
+    },
+    {
+      "id": "fz7zcl",
+      "blogId": "investmentecosystem",
+      "title": "Clippings 14 ~ Allocation decisions",
+      "link": "https://investmentecosystem.substack.com/p/clippings-14-allocation-decisions",
+      "date": "2026-07-16T16:44:49.000Z",
+      "excerpt": "Great charts on correlation, valuation, buybacks, target date funds, index flip-flops, private credit, and more."
+    },
+    {
+      "id": "6rfecw",
+      "blogId": "naomiklein",
+      "title": "SpaceX Isn’t a Company. It’s a Metaphor for the Rapture of the Super Rich",
+      "link": "https://naomiklein.substack.com/p/spacex-isnt-a-company-its-a-metaphor",
+      "date": "2026-07-16T16:02:54.000Z",
+      "excerpt": "Here's why wealth and fascism are a package deal"
+    },
+    {
+      "id": "yhcf2x",
+      "blogId": "ritholtz",
+      "title": "Summer Reading List",
+      "link": "https://ritholtz.com/2026/07/summer-reading-list-2",
+      "date": "2026-07-16T16:00:07.000Z",
+      "excerpt": "I have been busy on a few projects, most of which are wrapping up. Blogging has been light, but I have some fun things teed up in the near future. I wanted to come out of hiding to share a few recent media mentions of “How Not to Invest,” along with a broader… Read More The post Summer Reading List..."
+    },
+    {
+      "id": "1o2v1n",
+      "blogId": "atmoio",
+      "title": "The case against Passion",
+      "link": "https://atmoio.substack.com/p/the-case-against-passion",
+      "date": "2026-07-16T15:53:32.000Z",
+      "excerpt": "\"Follow your dreams\" is terrible advice past a certain age"
+    },
+    {
+      "id": "dsh3d3",
+      "blogId": "thezvi",
+      "title": "AI #177 Part 1: Tip of the Iceberg",
+      "link": "https://thezvi.substack.com/p/ai-177-part-1-tip-of-the-iceberg",
+      "date": "2026-07-16T15:46:42.000Z",
+      "excerpt": "This week saw the releases of, among other things:"
+    },
+    {
+      "id": "lbimb4",
+      "blogId": "kottke",
+      "title": " Amazing Newspaper Ad Highlighting Period Poverty ",
+      "link": "https://kottke.org/26/07/amazing-newspaper-ad-highlighting-period-poverty",
+      "date": "2026-07-16T15:36:00.000Z",
+      "excerpt": "To draw attention to the millions of girls who cannot afford period products, the MENstruation Foundation ran a unique advertisement in three major South African newspapers. Readers of The Star, The Mercury and Cape Times opened their newspapers this week to find something deeply uncomfortable: peri..."
+    },
+    {
+      "id": "bg3w8d",
+      "blogId": "simonwillison",
+      "title": "Inkling: Our open-weights model",
+      "link": "https://simonwillison.net/2026/Jul/16/inkling",
+      "date": "2026-07-16T15:35:25.000Z",
+      "excerpt": "Inkling: Our open-weights model Mira Murati's Thinking Machines Lab just released their first open-weights model. Inkling is \"a Mixture-of-Experts transformer with 975B total parameters, 41B active\" - an Apache-2.0 licensed multimodal model trained on 45 trillion tokens of text, images, audio and vi..."
+    },
+    {
+      "id": "p0yi7t",
+      "blogId": "kottke",
+      "title": "  Uncovered , a site for judging books by their first... ",
+      "link": "https://kottke.org/26/07/0049336-uncovered",
+      "date": "2026-07-16T14:56:00.000Z",
+      "excerpt": "Uncovered, a site for judging books by their first pages. “No cover. No bestseller sticker, no celebrity book club, no BookTok trend. You read the opening of a real book, blind, and answer the only question that matters: would you keep reading?”"
+    },
+    {
+      "id": "tn5n4f",
+      "blogId": "robhenderson",
+      "title": "Childhood Patterns, Dangerous Female, MAGA Kabuki",
+      "link": "https://www.robkhenderson.com/p/childhood-patterns-dangerous-female",
+      "date": "2026-07-16T14:18:15.000Z",
+      "excerpt": "Links and recommendations"
+    },
+    {
+      "id": "29esar",
+      "blogId": "kottke",
+      "title": "  The Resonant Computing Manifesto . “We can now build... ",
+      "link": "https://kottke.org/26/07/0049333-the-resonant-computing-ma",
+      "date": "2026-07-16T14:15:00.000Z",
+      "excerpt": "The Resonant Computing Manifesto. “We can now build technology that adaptively shapes itself in service of our individual and collective aspirations. We can build resonant environments that bring out the best in every human who inhabits them.”"
+    },
+    {
+      "id": "5ry9jc",
+      "blogId": "aldaily",
+      "title": "Wondering why \"everything feels divided and why it sucks constantly\"? Blame the uni-context. Agnes Callard explains",
+      "link": "https://www.derekthompson.org/p/a-philosophers-one-word-theory-to",
+      "date": "2026-07-16T13:54:57.000Z",
+      "excerpt": "Wondering why \"everything feels divided and why it sucks constantly\"? Blame the uni-context. Agnes Callard explains"
+    },
+    {
+      "id": "4ztprl",
+      "blogId": "aldaily",
+      "title": "Ketamine, public cuddling, and prediction markets on just about everything pervade Manifest, a gathering of self-described “rationalists”",
+      "link": "https://www.thenewcritic.com/p/manifest-man",
+      "date": "2026-07-16T13:53:57.000Z",
+      "excerpt": "Ketamine, public cuddling, and prediction markets on just about everything pervade Manifest, a gathering of self-described “rationalists”"
+    },
+    {
+      "id": "4z039q",
+      "blogId": "aldaily",
+      "title": "With their mad methods and aesthetic gimmicks, William S. Burroughs and Brion Gysin were, together, a brand: The Cut-Up Boys of the Interzone ",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n13/iain-sinclair/bad-magic",
+      "date": "2026-07-16T13:52:57.000Z",
+      "excerpt": "With their mad methods and aesthetic gimmicks, William S. Burroughs and Brion Gysin were, together, a brand: The Cut-Up Boys of the Interzone"
+    },
+    {
+      "id": "pxorz",
+      "blogId": "aldaily",
+      "title": "A poet and a theologian grope towards meaning by mail, trading letters about faith and friendship for two years ",
+      "link": "https://arcmag.org/bosom-buddies",
+      "date": "2026-07-16T13:51:57.000Z",
+      "excerpt": "A poet and a theologian grope towards meaning by mail, trading letters about faith and friendship for two years"
+    },
+    {
+      "id": "ic0zsu",
+      "blogId": "aldaily",
+      "title": "“The smartphone erodes freedom not because it invades our private space, but because it gives us the feel of a private world”",
+      "link": "https://www.thenewatlantis.com/publications/byung-chul-han-what-happened-to-freedom",
+      "date": "2026-07-16T13:50:57.000Z",
+      "excerpt": "“The smartphone erodes freedom not because it invades our private space, but because it gives us the feel of a private world”"
+    },
+    {
+      "id": "ixvueu",
+      "blogId": "aldaily",
+      "title": "Saul Bellow peeked under Allan Bloom's kimono and called it a tribute. Was the betrayal worth it?",
+      "link": "https://www.thebulwark.com/p/ravelstein-revisited-saul-bellow",
+      "date": "2026-07-16T13:49:57.000Z",
+      "excerpt": "Saul Bellow peeked under Allan Bloom's kimono and called it a tribute. Was the betrayal worth it?"
+    },
+    {
+      "id": "iqurm4",
+      "blogId": "aldaily",
+      "title": "“I do support you—difficult job. But Barbara and I are bothered about the raunchy stuff—urine ... fist up rectum” ",
+      "link": "https://www.newyorker.com/magazine/2026/07/20/the-perfect-moment-isaac-butler-book-review",
+      "date": "2026-07-16T13:48:57.000Z",
+      "excerpt": "“I do support you—difficult job. But Barbara and I are bothered about the raunchy stuff—urine ... fist up rectum”"
+    },
+    {
+      "id": "vxcaxw",
+      "blogId": "aldaily",
+      "title": "Ten thousand books in 600 square feet: For a young member of the literati, it was a temple of the mind; for his landlord, it was a fire hazard",
+      "link": "https://www.nytimes.com/2026/07/09/style/too-many-books-new-york-city-apartment-scholar-landlord.html?unlocked_article_code=1.wlA.NyKz.wTNIRk7ZcNZZ&smid=url-share",
+      "date": "2026-07-16T13:47:57.000Z",
+      "excerpt": "Ten thousand books in 600 square feet: For a young member of the literati, it was a temple of the mind; for his landlord, it was a fire hazard"
+    },
+    {
+      "id": "usetqi",
+      "blogId": "aldaily",
+      "title": "Carolyn Rouse did an interview to rebut the charge that anthropology has too much politics and too little rigor. It didn't go well",
+      "link": "https://www.chronicle.com/article/is-anthropology-hopelessly-politicized",
+      "date": "2026-07-16T13:46:57.000Z",
+      "excerpt": "Carolyn Rouse did an interview to rebut the charge that anthropology has too much politics and too little rigor. It didn't go well"
+    },
+    {
+      "id": "3irac0",
+      "blogId": "aldaily",
+      "title": "Young J. G. Ballard and his family were imprisoned in a Japanese camp for a two and a half years — he called it the best time of his life",
+      "link": "https://lareviewofbooks.org/article/jg-ballard-illuminated-man-christopher-priest-nina-allan",
+      "date": "2026-07-16T13:45:57.000Z",
+      "excerpt": "Young J. G. Ballard and his family were imprisoned in a Japanese camp for a two and a half years — he called it the best time of his life"
+    },
+    {
+      "id": "85cnl7",
+      "blogId": "kottke",
+      "title": "  What would a rainbow look like if we had two suns (like... ",
+      "link": "https://kottke.org/26/07/0049323-what-would-a-rainbow-look",
+      "date": "2026-07-16T13:30:00.000Z",
+      "excerpt": "What would a rainbow look like if we had two suns (like on Tatooine)?"
+    },
+    {
+      "id": "1jyhz4",
+      "blogId": "simonwillison",
+      "title": "Quoting Linus Torvalds",
+      "link": "https://simonwillison.net/2026/Jul/16/linus-torvalds",
+      "date": "2026-07-16T13:26:10.000Z",
+      "excerpt": "I realize that some people really dislike AI, but this is an area where I'm willing to absolutely put my foot down as the top-level maintainer. Linux is not one of those anti-AI projects, and if somebody has issues with that, they can do the open-source thing and fork it. Or just walk away. AI is a..."
+    },
+    {
+      "id": "lduff6",
+      "blogId": "abnormalreturns",
+      "title": "Longform links: detecting AI errors",
+      "link": "https://abnormalreturns.com/2026/07/16/longform-links-detecting-ai-errors",
+      "date": "2026-07-16T13:19:48.000Z",
+      "excerpt": "Thursdays are all about longform links on Abnormal Returns. Wherever possible, free links for premium sites are used. You can check out..."
+    },
+    {
+      "id": "72ev4o",
+      "blogId": "larryswedroe",
+      "title": "The Seven Sins of Quantitative Investing: Lessons from Deutsche Bank’s Quant Handbook",
+      "link": "https://larryswedroe.substack.com/p/the-seven-sins-of-quantitative-investing",
+      "date": "2026-07-16T13:16:15.000Z",
+      "excerpt": "A Substack subscriber asked that I write up this paper."
+    },
+    {
+      "id": "x41zh0",
+      "blogId": "flowingdata",
+      "title": "✚ Ideas, data, and graphics",
+      "link": "https://flowingdata.com/2026/07/16/process-397-workflow",
+      "date": "2026-07-16T13:06:13.000Z",
+      "excerpt": "This week, I provide an update on my own process from start to finish, in 2026. Tags: workflow"
+    },
+    {
+      "id": "b6fkm9",
+      "blogId": "cosmographia",
+      "title": "East meets West",
+      "link": "https://cosmographia.substack.com/p/east-meets-west",
+      "date": "2026-07-16T13:04:22.000Z",
+      "excerpt": "The first encounter between Japan and Europeans"
+    },
+    {
+      "id": "obwoyz",
+      "blogId": "freddiedeboer",
+      "title": "Yes, David Ellison's Merger is Bad, But a Netflix Takeover of Warner Bros Isn't Much Better",
+      "link": "https://freddiedeboer.substack.com/p/yes-david-ellisons-merger-is-bad",
+      "date": "2026-07-16T12:03:19.000Z",
+      "excerpt": "The future of Warner Bros is again up in the air."
+    },
+    {
+      "id": "d0zewk",
+      "blogId": "constructionphysics",
+      "title": "How Predictable Are Laws?",
+      "link": "https://www.construction-physics.com/p/how-predictable-are-laws",
+      "date": "2026-07-16T12:03:18.000Z",
+      "excerpt": "An enormous amount of ink has been spilled (some of it by me) on the trials and tribulations of complying with the National Environmental Policy Act, better known as NEPA."
+    },
+    {
+      "id": "6b3h27",
+      "blogId": "africanistperspective",
+      "title": "Why is it so difficult (and crazy expensive) to fly within Africa?",
+      "link": "https://www.africanistperspective.com/p/why-is-it-so-difficult-and-crazy",
+      "date": "2026-07-16T11:26:10.000Z",
+      "excerpt": "Thinking through the economics and politics of connectivity over a vast continent"
+    },
+    {
+      "id": "vcbxai",
+      "blogId": "paulkrugman",
+      "title": "Democracy in an Age of Powermaxxing",
+      "link": "https://paulkrugman.substack.com/p/democracy-in-an-age-of-powermaxxing",
+      "date": "2026-07-16T11:25:51.000Z",
+      "excerpt": "The billionaire backlash has finally arrived. But is it too late?"
+    },
+    {
+      "id": "hndtwe",
+      "blogId": "marginalrevolution",
+      "title": "The Equal Pay Madness Just Got Madder",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/07/the-equal-pay-madness-just-got-madder.html",
+      "date": "2026-07-16T11:12:11.000Z",
+      "excerpt": "In my post Equality Act 2010 I discussed the UK’s absolutely insane wage policy: In short, supply and demand have been replaced by judges and labor boards with the authority to deem which jobs are “equal” and therefore should be paid equally….No one is alleging that male and female warehouse workers..."
+    },
+    {
+      "id": "eppasd",
+      "blogId": "danq",
+      "title": "[Reply] Reply to: Deleting Systems You Don’t Understand",
+      "link": "https://danq.me/2026/07/16/reply-to-deleting-systems-you-dont-understand",
+      "date": "2026-07-16T11:04:48.000Z",
+      "excerpt": "Ibrahim Diallo shared his experience of deleting all his family PC's .ini files when he was 10, not knowing they were important, and compares it to what some developers do when they refactor-out something that seems insignificant. I reply with a story from early in my career..."
+    },
     {
       "id": "c0sg8f",
       "blogId": "marginalrevolution",
@@ -8,6 +312,14 @@
       "link": "https://marginalrevolution.com/marginalrevolution/2026/07/spreading-ai-to-the-rest-of-the-world.html",
       "date": "2026-07-16T10:49:56.000Z",
       "excerpt": "Another job we’ll have, I call this imperialism, but I mean that in a value neutral way. But AI comes to different parts of the world at different speeds. I think the countries where AI changes a lot of things first, there’ll be a very high demand for people from those places, which I’ll think […] T..."
+    },
+    {
+      "id": "5ab0jq",
+      "blogId": "ritholtz",
+      "title": "10 Thursday AM Reads",
+      "link": "https://ritholtz.com/2026/07/10-thursday-am-reads-502",
+      "date": "2026-07-16T10:30:43.000Z",
+      "excerpt": "My morning train WFH reads: • What Americans Need to Understand About China: Ezra Klein interviews former Australian PM Kevin Rudd — one of the West’s most fluent China hands — on the gaps in American understanding that keep producing bad policy. (New York Times) • Jony Ive is cooking in the OpenAI..."
     },
     {
       "id": "lor3ul",
@@ -40,86 +352,6 @@
       "link": "https://robinjbrooks.substack.com/p/china-is-winning",
       "date": "2026-07-16T09:02:15.000Z",
       "excerpt": "China's export sector has emerged massively strengthened from the US tariff stand-off"
-    },
-    {
-      "id": "5ry9jc",
-      "blogId": "aldaily",
-      "title": "Wondering why \"everything feels divided and why it sucks constantly\"? Blame the uni-context. Agnes Callard explains",
-      "link": "https://www.derekthompson.org/p/a-philosophers-one-word-theory-to",
-      "date": "2026-07-16T06:53:06.000Z",
-      "excerpt": "Wondering why \"everything feels divided and why it sucks constantly\"? Blame the uni-context. Agnes Callard explains"
-    },
-    {
-      "id": "4ztprl",
-      "blogId": "aldaily",
-      "title": "Ketamine, public cuddling, and prediction markets on just about everything pervade Manifest, a gathering of self-described “rationalists”",
-      "link": "https://www.thenewcritic.com/p/manifest-man",
-      "date": "2026-07-16T06:52:06.000Z",
-      "excerpt": "Ketamine, public cuddling, and prediction markets on just about everything pervade Manifest, a gathering of self-described “rationalists”"
-    },
-    {
-      "id": "4z039q",
-      "blogId": "aldaily",
-      "title": "With their mad methods and aesthetic gimmicks, William S. Burroughs and Brion Gysin were, together, a brand: The Cut-Up Boys of the Interzone ",
-      "link": "https://www.lrb.co.uk/the-paper/v48/n13/iain-sinclair/bad-magic",
-      "date": "2026-07-16T06:51:06.000Z",
-      "excerpt": "With their mad methods and aesthetic gimmicks, William S. Burroughs and Brion Gysin were, together, a brand: The Cut-Up Boys of the Interzone"
-    },
-    {
-      "id": "pxorz",
-      "blogId": "aldaily",
-      "title": "A poet and a theologian grope towards meaning by mail, trading letters about faith and friendship for two years ",
-      "link": "https://arcmag.org/bosom-buddies",
-      "date": "2026-07-16T06:50:06.000Z",
-      "excerpt": "A poet and a theologian grope towards meaning by mail, trading letters about faith and friendship for two years"
-    },
-    {
-      "id": "ic0zsu",
-      "blogId": "aldaily",
-      "title": "“The smartphone erodes freedom not because it invades our private space, but because it gives us the feel of a private world”",
-      "link": "https://www.thenewatlantis.com/publications/byung-chul-han-what-happened-to-freedom",
-      "date": "2026-07-16T06:49:06.000Z",
-      "excerpt": "“The smartphone erodes freedom not because it invades our private space, but because it gives us the feel of a private world”"
-    },
-    {
-      "id": "ixvueu",
-      "blogId": "aldaily",
-      "title": "Saul Bellow peeked under Allan Bloom's kimono and called it a tribute. Was the betrayal worth it?",
-      "link": "https://www.thebulwark.com/p/ravelstein-revisited-saul-bellow",
-      "date": "2026-07-16T06:48:06.000Z",
-      "excerpt": "Saul Bellow peeked under Allan Bloom's kimono and called it a tribute. Was the betrayal worth it?"
-    },
-    {
-      "id": "iqurm4",
-      "blogId": "aldaily",
-      "title": "“I do support you—difficult job. But Barbara and I are bothered about the raunchy stuff—urine ... fist up rectum” ",
-      "link": "https://www.newyorker.com/magazine/2026/07/20/the-perfect-moment-isaac-butler-book-review",
-      "date": "2026-07-16T06:47:06.000Z",
-      "excerpt": "“I do support you—difficult job. But Barbara and I are bothered about the raunchy stuff—urine ... fist up rectum”"
-    },
-    {
-      "id": "vxcaxw",
-      "blogId": "aldaily",
-      "title": "Ten thousand books in 600 square feet: For a young member of the literati, it was a temple of the mind; for his landlord, it was a fire hazard",
-      "link": "https://www.nytimes.com/2026/07/09/style/too-many-books-new-york-city-apartment-scholar-landlord.html?unlocked_article_code=1.wlA.NyKz.wTNIRk7ZcNZZ&smid=url-share",
-      "date": "2026-07-16T06:46:06.000Z",
-      "excerpt": "Ten thousand books in 600 square feet: For a young member of the literati, it was a temple of the mind; for his landlord, it was a fire hazard"
-    },
-    {
-      "id": "usetqi",
-      "blogId": "aldaily",
-      "title": "Carolyn Rouse did an interview to rebut the charge that anthropology has too much politics and too little rigor. It didn't go well",
-      "link": "https://www.chronicle.com/article/is-anthropology-hopelessly-politicized",
-      "date": "2026-07-16T06:45:06.000Z",
-      "excerpt": "Carolyn Rouse did an interview to rebut the charge that anthropology has too much politics and too little rigor. It didn't go well"
-    },
-    {
-      "id": "3irac0",
-      "blogId": "aldaily",
-      "title": "Young J. G. Ballard and his family were imprisoned in a Japanese camp for a two and a half years — he called it the best time of his life",
-      "link": "https://lareviewofbooks.org/article/jg-ballard-illuminated-man-christopher-priest-nina-allan",
-      "date": "2026-07-16T06:44:06.000Z",
-      "excerpt": "Young J. G. Ballard and his family were imprisoned in a Japanese camp for a two and a half years — he called it the best time of his life"
     },
     {
       "id": "dyniuu",
@@ -40807,7 +41039,7 @@
       "title": " Heard It Through the Grapevine ",
       "link": "https://kottke.org/14/09/heard-it-through-the-grapevine",
       "date": "2014-09-19T15:13:14.000Z",
-      "excerpt": "Marvin Gaye’s isolated vocals on I Heard It Through The Grapevine. The man has pipes. [This is a vintage post originally from Sep 2014.] Tags: Marvin Gaye · music · video"
+      "excerpt": "Marvin Gaye’s isolated vocals on I Heard It Through The Grapevine. The man has pipes. [This is a vintage post originally from Sep 2014.] Tags: Marvin Gaye · music · timeless posts · video"
     },
     {
       "id": "93k44i",
