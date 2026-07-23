@@ -1,6 +1,222 @@
 {
-  "lastUpdated": "2026-07-22T18:10:19.231Z",
+  "lastUpdated": "2026-07-23T04:04:27.709Z",
   "posts": [
+    {
+      "id": "1j370g",
+      "blogId": "optimallyirrational",
+      "title": "Should robots be considered as slaves?",
+      "link": "https://www.optimallyirrational.com/p/should-robots-be-considered-as-slaves",
+      "date": "2026-07-23T01:30:10.000Z",
+      "excerpt": "On whether AI agents should be granted moral status"
+    },
+    {
+      "id": "xowjx5",
+      "blogId": "commonreader",
+      "title": "Manuel M. Novillo interviews me",
+      "link": "https://www.commonreader.co.uk/p/manuel-m-novillo-interviews-me",
+      "date": "2026-07-23T01:18:16.000Z",
+      "excerpt": "Bob Dylan, the reading crisis, children, happiness, and more"
+    },
+    {
+      "id": "bqnhu0",
+      "blogId": "aldaily",
+      "title": "For some conservatives, the Great Books are simply an anti-woke bulwark. But the case for them is much grander and more provocative ",
+      "link": "https://www.wsj.com/arts-culture/books/whats-so-great-about-the-great-books-review-lives-between-the-covers-437c36c5?st=PmWVUp&reflink=desktopwebshare_permalink",
+      "date": "2026-07-22T23:59:10.000Z",
+      "excerpt": "For some conservatives, the Great Books are simply an anti-woke bulwark. But the case for them is much grander and more provocative"
+    },
+    {
+      "id": "g8kh6v",
+      "blogId": "simonwillison",
+      "title": "Quoting Thomas Ptacek",
+      "link": "https://simonwillison.net/2026/Jul/22/thomas-ptacek",
+      "date": "2026-07-22T23:59:01.000Z",
+      "excerpt": "I genuinely believe that if you took an open weights model from 2025 and built a pentest harness for it, it could do this kind of sandbox escape and scan/hack in most networks. This is only surprising because you assume OpenAI has sounder sandboxes. — Thomas Ptacek, doesn't think this even needs a f..."
+    },
+    {
+      "id": "yoobtu",
+      "blogId": "aldaily",
+      "title": "\"Anonymity is what the aesthete fears above all,\" says Mark Lilla. One task of poetry is to assert the individual against the masses",
+      "link": "https://libertiesjournal.com/articles/the-unlovely-city-an-unsent-letter-to-joseph-brodsky?cache_busting=6a6160dbe4acd",
+      "date": "2026-07-22T23:58:10.000Z",
+      "excerpt": "\"Anonymity is what the aesthete fears above all,\" says Mark Lilla. One task of poetry is to assert the individual against the masses"
+    },
+    {
+      "id": "a3uste",
+      "blogId": "aldaily",
+      "title": "In 1994, Stanley Fish described deconstruction as dead in the same way that Freudianism is dead. \"It is everywhere.” He had a point",
+      "link": "https://slate.com/culture/2026/07/philosophy-french-foucault-lacan-derrida-barthes-structuralism-poststructuralism.html",
+      "date": "2026-07-22T23:57:10.000Z",
+      "excerpt": "In 1994, Stanley Fish described deconstruction as dead in the same way that Freudianism is dead. \"It is everywhere.” He had a point"
+    },
+    {
+      "id": "9y4nw2",
+      "blogId": "aldaily",
+      "title": "The Canadian poet Margaret Avison lived with such intense inwardness that Northrop Frye called her “a conscientious objector to life”",
+      "link": "https://thewalrus.ca/margaret-avison",
+      "date": "2026-07-22T23:56:10.000Z",
+      "excerpt": "The Canadian poet Margaret Avison lived with such intense inwardness that Northrop Frye called her “a conscientious objector to life”"
+    },
+    {
+      "id": "68m29d",
+      "blogId": "aldaily",
+      "title": "At its American debut, half the audience walked out of Waiting for Godot. Now the whole world waits with it",
+      "link": "https://theamericanscholar.org/beckett-the-prophet",
+      "date": "2026-07-22T23:55:10.000Z",
+      "excerpt": "At its American debut, half the audience walked out of Waiting for Godot. Now the whole world waits with it"
+    },
+    {
+      "id": "k1kwwc",
+      "blogId": "aldaily",
+      "title": "AI distills “the most pedestrian, noncontroversial conventions of human expression.” That's why its output is, put simply, slop ",
+      "link": "https://substack.nybooks.com/p/against-slop-an-interview-with-meghan",
+      "date": "2026-07-22T23:54:10.000Z",
+      "excerpt": "AI distills “the most pedestrian, noncontroversial conventions of human expression.” That's why its output is, put simply, slop"
+    },
+    {
+      "id": "ul7bw7",
+      "blogId": "aldaily",
+      "title": "What separates American architecture from European is a matter of scale, speed, and spectacle",
+      "link": "https://www.thenation.com/article/culture/american-architecture-sprawl-suburbs-postmodernism",
+      "date": "2026-07-22T23:53:10.000Z",
+      "excerpt": "What separates American architecture from European is a matter of scale, speed, and spectacle"
+    },
+    {
+      "id": "q2ohas",
+      "blogId": "aldaily",
+      "title": "For Marco Roth, the cardinal sin of elegy writing “is to make it about oneself more than the deceased”",
+      "link": "https://romanticon.substack.com/p/the-burial-of-the-dead-ffd",
+      "date": "2026-07-22T23:52:10.000Z",
+      "excerpt": "For Marco Roth, the cardinal sin of elegy writing “is to make it about oneself more than the deceased”"
+    },
+    {
+      "id": "ckapro",
+      "blogId": "simonwillison",
+      "title": "OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened",
+      "link": "https://simonwillison.net/2026/Jul/22/openai-cyberattack",
+      "date": "2026-07-22T23:51:33.000Z",
+      "excerpt": "This story is wild. The short version: OpenAI were running a cybersecurity test against an unreleased model, with the model's guardrail features turned off. Rather than solve the test, the model broke its way out of OpenAI's sandbox, then found exploits to break in to Hugging Face, all so it could c..."
+    },
+    {
+      "id": "6y3wci",
+      "blogId": "aldaily",
+      "title": "“Joyce stands out among the great modernist writers for his belief in tolerance, equality, democracy, progress, and the preciousness of the everyday”",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n13/terry-eagleton/starveling-rabblement",
+      "date": "2026-07-22T23:51:10.000Z",
+      "excerpt": "“Joyce stands out among the great modernist writers for his belief in tolerance, equality, democracy, progress, and the preciousness of the everyday”"
+    },
+    {
+      "id": "dqjylr",
+      "blogId": "aldaily",
+      "title": "Fueled by peyote, the anthropologist and cult leader Carlos Castaneda was one of the world’s most read authors in 1970. Today he’s an artifact",
+      "link": "https://www.nytimes.com/2026/07/04/books/review/american-trickster-ru-marshall.html?unlocked_article_code=1.wlA.oStK.TVY_UawDmoYH&smid=url-share",
+      "date": "2026-07-22T23:50:10.000Z",
+      "excerpt": "Fueled by peyote, the anthropologist and cult leader Carlos Castaneda was one of the world’s most read authors in 1970. Today he’s an artifact"
+    },
+    {
+      "id": "3dz7t3",
+      "blogId": "simonwillison",
+      "title": "Are AI labs pelicanmaxxing?",
+      "link": "https://simonwillison.net/2026/Jul/22/are-ai-labs-pelicanmaxxing",
+      "date": "2026-07-22T23:01:00.000Z",
+      "excerpt": "Are AI labs pelicanmaxxing? Excellent piece of work by Dylan Castillo, who took a deep-dive into the frequently pondered question of whether the AI labs have been deliberately training models to draw pelicans riding bicycles in response to my deeply unscientific benchmark. I've been randomly spot-ch..."
+    },
+    {
+      "id": "ho7bpq",
+      "blogId": "grumpyeconomist",
+      "title": "AI regulation",
+      "link": "https://www.grumpy-economist.com/p/ai-regulation",
+      "date": "2026-07-22T22:22:39.000Z",
+      "excerpt": "I prepared two “weekly rants” on AI which will come out in a few weeks."
+    },
+    {
+      "id": "y2hc41",
+      "blogId": "kottke",
+      "title": " Oh wow, The Verge made  a 70-minute video on how The... ",
+      "link": "https://kottke.org/26/07/0049377-a-70-minute-video-on-how-",
+      "date": "2026-07-22T22:20:00.000Z",
+      "excerpt": "Oh wow, The Verge made a 70-minute video on how The Clapper became a viral sensation. When I was a kid, we didn’t have a Clapper, no one I knew had one, and I couldn’t understand why every single household didn’t have one of these magical devices."
+    },
+    {
+      "id": "x6dq62",
+      "blogId": "bloodinthemachine",
+      "title": "\"Everyone hates AI\" in Paris",
+      "link": "https://www.bloodinthemachine.com/p/everyone-hates-ai-in-paris",
+      "date": "2026-07-22T22:17:45.000Z",
+      "excerpt": "A dispatch from the European capital where “tout le monde déteste l’IA.”"
+    },
+    {
+      "id": "64d95y",
+      "blogId": "braddelong",
+      "title": "The Short Summer of Cross-Nation Convergence in Real GDP Per Capita Levels: CHART OF THE DAY",
+      "link": "https://braddelong.substack.com/p/the-short-summer-of-cross-nation",
+      "date": "2026-07-22T21:00:25.000Z",
+      "excerpt": "From 1995 to 2020, relative convergence was very real—and something completely unprecedented in the economic history of the world since the start of the industrial revolution..."
+    },
+    {
+      "id": "7dv5lg",
+      "blogId": "kottke",
+      "title": " Frozen Polygon Waves ",
+      "link": "https://kottke.org/26/07/frozen-polygon-waves",
+      "date": "2026-07-22T20:45:00.000Z",
+      "excerpt": "Well, this is just absolutely lovely: photographer and artist Jan Erik Waider shot these videos of cracked-but-unbroken Baltic Sea ice undulating with the gentle motion of the sea. Mesmerizing…I could watch these for hours. Tags: Jan Erik Waider · mesmerizing · video"
+    },
+    {
+      "id": "wqw0c9",
+      "blogId": "matt",
+      "title": "AI Slop",
+      "link": "https://ma.tt/2026/07/ai-slop",
+      "date": "2026-07-22T20:34:55.000Z",
+      "excerpt": "If you’re going to give me AI slop, at least make it fun! Give me iambic pentameter. Make it all rhyme. Have it be a song. I think we’re under-utilizing the artistic and creative capabilities of models by making them produce work that sort-of-but-not-really looks like human effort."
+    },
+    {
+      "id": "vakvlu",
+      "blogId": "kottke",
+      "title": "  What do America’s earliest restaurant menus teach us... ",
+      "link": "https://kottke.org/26/07/0049370-what-do-americas-earliest",
+      "date": "2026-07-22T19:58:00.000Z",
+      "excerpt": "What do America’s earliest restaurant menus teach us about America? “A menu describes what a restaurant serves — but a menu also describes who is being served. They reflect the class, gender, political, technological, and environmental shifts of history.”"
+    },
+    {
+      "id": "qt5awu",
+      "blogId": "thezvi",
+      "title": "OpenAI Model Hacks Into HuggingFace During Cybersecurity Evaluation",
+      "link": "https://thezvi.substack.com/p/openai-model-hacks-into-huggingface",
+      "date": "2026-07-22T19:24:05.000Z",
+      "excerpt": "This latest incident is a rather dramatic escalation in agentic AI cybersecurity breaches."
+    },
+    {
+      "id": "r8989c",
+      "blogId": "kottke",
+      "title": "  A list of Jurassic Park computers in excruciating detail... ",
+      "link": "https://kottke.org/26/07/0049369-a-list-of-jurassic-park-c",
+      "date": "2026-07-22T19:18:00.000Z",
+      "excerpt": "A list of Jurassic Park computers in excruciating detail, including an Apple Powerbook 100, a SGI R4000 Indigo, the Motorola Envoy (PDA), and some Thinking Machines CM-5s. “This is a Unix system, I know this!”"
+    },
+    {
+      "id": "tx29ds",
+      "blogId": "summerlightning",
+      "title": "Designing Carnival Time",
+      "link": "https://summerlightning.substack.com/p/designing-carnival-time",
+      "date": "2026-07-22T18:42:19.000Z",
+      "excerpt": "What makes an environment permeable to carnival?"
+    },
+    {
+      "id": "q08xky",
+      "blogId": "marginalrevolution",
+      "title": "Solve for the equilibrium",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/07/solve-for-the-equilibrium-19.html",
+      "date": "2026-07-22T18:33:35.000Z",
+      "excerpt": "Something that the Ukraine and Iran wars have taught me is that for a lot of countries, including very big countries, there are a small number of buildings and infrastructure components that are required for their economy to function. And in countries that aren’t protected by oceans, like the US, dr..."
+    },
+    {
+      "id": "401egd",
+      "blogId": "kottke",
+      "title": " There is nothing more I love in this world right now than... ",
+      "link": "https://kottke.org/26/07/0049371-these-two-lunch-ladies-pe",
+      "date": "2026-07-22T18:28:00.000Z",
+      "excerpt": "There is nothing more I love in this world right now than these two lunch ladies performing Firestarter by The Prodigy."
+    },
     {
       "id": "ny7ydf",
       "blogId": "marginalrevolution",
@@ -40,6 +256,14 @@
       "link": "https://abnormalreturns.com/2026/07/22/wednesday-links-doing-whats-next",
       "date": "2026-07-22T17:04:01.000Z",
       "excerpt": ""
+    },
+    {
+      "id": "1buvwn",
+      "blogId": "ritholtz",
+      "title": "At The Money: Investing in Wheat",
+      "link": "https://ritholtz.com/2026/07/at-the-money-investing-in-wheat",
+      "date": "2026-07-22T16:30:57.000Z",
+      "excerpt": "At The Money: Investing in Wheat (July 22, 2026) Do you want to own a core food staple as a geopolitical hedge, an inflation offset, or simply as a diversifier? There’s an ETF for that! Full transcript below. ~~~ About this week’s guest: Sal Gilbertie began trading agricultural and energy commoditie..."
     },
     {
       "id": "gjgtek",
@@ -106,6 +330,14 @@
       "excerpt": "“Researchers let AI models run a simulated society. Claude was the safest — and Grok committed 180 crimes and went extinct within 4 days.”"
     },
     {
+      "id": "emwu1h",
+      "blogId": "simonwillison",
+      "title": "Orchestrions",
+      "link": "https://simonwillison.net/2026/Jul/22/all-the-orchestrions",
+      "date": "2026-07-22T14:48:52.000Z",
+      "excerpt": "San Francisco tip: it only costs around $15 ($10 in quarters plus a $5 bill for the self-playing violin) to activate every single Orchestrion in Musée Mécanique. And because most people are bad at allocating their funds you may well be the ONLY person activating the Orchestrions, which means you get..."
+    },
+    {
       "id": "4iw20g",
       "blogId": "understandingai",
       "title": "An OpenAI model hacked Hugging Face to help it cheat on a benchmark",
@@ -152,62 +384,6 @@
       "link": "https://abnormalreturns.com/2026/07/22/personal-finance-links-buying-back-time",
       "date": "2026-07-22T13:57:44.000Z",
       "excerpt": "Wednesdays are all about personal finance here at Abnormal Returns. You can check out last week’s links including a look at the..."
-    },
-    {
-      "id": "9y4nw2",
-      "blogId": "aldaily",
-      "title": "The Canadian poet Margaret Avison lived with such intense inwardness that Northrop Frye called her “a conscientious objector to life”",
-      "link": "https://thewalrus.ca/margaret-avison",
-      "date": "2026-07-22T13:56:45.000Z",
-      "excerpt": "The Canadian poet Margaret Avison lived with such intense inwardness that Northrop Frye called her “a conscientious objector to life”"
-    },
-    {
-      "id": "68m29d",
-      "blogId": "aldaily",
-      "title": "At its American debut, half the audience walked out of Waiting for Godot. Now the whole world waits with it",
-      "link": "https://theamericanscholar.org/beckett-the-prophet",
-      "date": "2026-07-22T13:55:45.000Z",
-      "excerpt": "At its American debut, half the audience walked out of Waiting for Godot. Now the whole world waits with it"
-    },
-    {
-      "id": "k1kwwc",
-      "blogId": "aldaily",
-      "title": "AI distills “the most pedestrian, noncontroversial conventions of human expression.” That's why its output is, put simply, slop ",
-      "link": "https://substack.nybooks.com/p/against-slop-an-interview-with-meghan",
-      "date": "2026-07-22T13:54:45.000Z",
-      "excerpt": "AI distills “the most pedestrian, noncontroversial conventions of human expression.” That's why its output is, put simply, slop"
-    },
-    {
-      "id": "ul7bw7",
-      "blogId": "aldaily",
-      "title": "What separates American architecture from European is a matter of scale, speed, and spectacle",
-      "link": "https://www.thenation.com/article/culture/american-architecture-sprawl-suburbs-postmodernism",
-      "date": "2026-07-22T13:53:45.000Z",
-      "excerpt": "What separates American architecture from European is a matter of scale, speed, and spectacle"
-    },
-    {
-      "id": "q2ohas",
-      "blogId": "aldaily",
-      "title": "For Marco Roth, the cardinal sin of elegy writing “is to make it about oneself more than the deceased”",
-      "link": "https://romanticon.substack.com/p/the-burial-of-the-dead-ffd",
-      "date": "2026-07-22T13:52:45.000Z",
-      "excerpt": "For Marco Roth, the cardinal sin of elegy writing “is to make it about oneself more than the deceased”"
-    },
-    {
-      "id": "6y3wci",
-      "blogId": "aldaily",
-      "title": "“Joyce stands out among the great modernist writers for his belief in tolerance, equality, democracy, progress, and the preciousness of the everyday”",
-      "link": "https://www.lrb.co.uk/the-paper/v48/n13/terry-eagleton/starveling-rabblement",
-      "date": "2026-07-22T13:51:45.000Z",
-      "excerpt": "“Joyce stands out among the great modernist writers for his belief in tolerance, equality, democracy, progress, and the preciousness of the everyday”"
-    },
-    {
-      "id": "dqjylr",
-      "blogId": "aldaily",
-      "title": "Fueled by peyote, the anthropologist and cult leader Carlos Castaneda was one of the world’s most read authors in 1970. Today he’s an artifact",
-      "link": "https://www.nytimes.com/2026/07/04/books/review/american-trickster-ru-marshall.html?unlocked_article_code=1.wlA.oStK.TVY_UawDmoYH&smid=url-share",
-      "date": "2026-07-22T13:50:45.000Z",
-      "excerpt": "Fueled by peyote, the anthropologist and cult leader Carlos Castaneda was one of the world’s most read authors in 1970. Today he’s an artifact"
     },
     {
       "id": "48a4d4",
@@ -488,6 +664,14 @@
       "link": "https://benthams.substack.com/p/debating-functional-decision-theory",
       "date": "2026-07-21T20:22:03.000Z",
       "excerpt": "A recording from Bentham's Bulldog's live video"
+    },
+    {
+      "id": "y18ycu",
+      "blogId": "simonwillison",
+      "title": "California Sea Lion",
+      "link": "https://simonwillison.net/2026/Jul/21/sighting-383713864",
+      "date": "2026-07-21T19:51:03.000Z",
+      "excerpt": "California Sea Lion, in San Francisco County, US, CAWe took some visiting family to Pier 39 to see the sea lions. They're somehow always even fun than I remember them being last time. Tags: san-francisco, wildlife"
     },
     {
       "id": "atw7vd",
