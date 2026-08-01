@@ -1833,6 +1833,51 @@
       ],
       "description": "Cross-disciplinary knowledge, data, and research from XKDR Forum.",
       "proxy": true
+    },
+    {
+      "id": "theclimatebrink",
+      "name": "The Climate Brink",
+      "url": "https://www.theclimatebrink.com",
+      "feed": "https://www.theclimatebrink.com/feed",
+      "categories": [
+        "science"
+      ],
+      "description": "Andrew Dessler and Zeke Hausfather on climate science, global warming, and a sustainable future.",
+      "proxy": true
+    },
+    {
+      "id": "frantic",
+      "name": "frantic.im",
+      "url": "https://frantic.im",
+      "feed": "https://frantic.im/feed.xml",
+      "categories": [
+        "tech",
+        "life"
+      ],
+      "description": "Alex Kotliarskyi's occasional posts on technology, productivity, and side projects."
+    },
+    {
+      "id": "zachholman",
+      "name": "Zach Holman",
+      "url": "https://zachholman.com",
+      "feed": "https://zachholman.com/atom.xml",
+      "categories": [
+        "tech",
+        "finance"
+      ],
+      "description": "Zach Holman on startups, angel investing, software, and building companies."
+    },
+    {
+      "id": "listeningtothesirens",
+      "name": "Listening to the Sirens",
+      "url": "https://listeningtothesirens.substack.com",
+      "feed": "https://listeningtothesirens.substack.com/feed",
+      "categories": [
+        "culture",
+        "life"
+      ],
+      "description": "Russ Roberts on life in Israel during and after October 7.",
+      "proxy": true
     }
   ]
 }
