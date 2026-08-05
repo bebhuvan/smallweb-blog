@@ -1,6 +1,190 @@
 {
-  "lastUpdated": "2026-08-04T18:30:08.335Z",
+  "lastUpdated": "2026-08-05T03:55:11.876Z",
   "posts": [
+    {
+      "id": "dzgjp8",
+      "blogId": "dataforindia",
+      "title": "Getting the ABCs right",
+      "link": "https://www.dataforindia.com/the-big-shift/getting-the-abcs-right",
+      "date": "2026-08-05T02:30:24.000Z",
+      "excerpt": "Data For India’s subscriber only newsletter, delivering data informed stories about India’s long term transformation, right to your inbox."
+    },
+    {
+      "id": "m17cmh",
+      "blogId": "matt",
+      "title": "Michel the GOAT",
+      "link": "https://ma.tt/2026/08/michel-goat",
+      "date": "2026-08-05T01:58:57.000Z",
+      "excerpt": "I don’t usually blog all my comments other places, but while drafting a completely different blog post I came across this great post, Michel Valdrighi: The Coder Whose Code Never Went Silent. I had to leave a comment, because Michel’s story is not well-known. Michel Valdrighi is the GOAT. His elegan..."
+    },
+    {
+      "id": "l2jbhw",
+      "blogId": "simonwillison",
+      "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
+      "link": "https://simonwillison.net/2026/Aug/4/new-release-of-llm",
+      "date": "2026-08-04T23:58:24.000Z",
+      "excerpt": "I released LLM 0.32 this morning, the most significant new version of LLM since the initial launch of the project. The new version includes support for visible reasoning traces, server-side provider tools, redesigned content-addressable SQLite logs, new models, and new features enabled by the OpenAI..."
+    },
+    {
+      "id": "lq7m1d",
+      "blogId": "aldaily",
+      "title": "Freudianism died in 1963, killed by Karl Popper. Yet in every generation there is an attempt at rehabilitation. Meet Mark Solms",
+      "link": "https://www.theatlantic.com/magazine/2026/09/freud-psychoanalysis-theories-brain-science/687957?gift=1ga2TvL-DbuHDQIcYF7oR8dogJMMXp6vZXpySsUqqIs",
+      "date": "2026-08-04T23:41:50.000Z",
+      "excerpt": "Freudianism died in 1963, killed by Karl Popper. Yet in every generation there is an attempt at rehabilitation. Meet Mark Solms"
+    },
+    {
+      "id": "m0xq8x",
+      "blogId": "aldaily",
+      "title": "Sexual Personae was a scandal, and a ticket to infamy for its author, Camille Paglia. Its 700 pages remain incendiary — and exhausting",
+      "link": "https://unherd.com/2026/08/camile-paglia-is-still-exhausting?edition=us",
+      "date": "2026-08-04T23:40:50.000Z",
+      "excerpt": "Sexual Personae was a scandal, and a ticket to infamy for its author, Camille Paglia. Its 700 pages remain incendiary — and exhausting"
+    },
+    {
+      "id": "8qp4lw",
+      "blogId": "aldaily",
+      "title": "MFA programs teach pacing, structure, rhythm. It can not teach a writer to have something worth saying",
+      "link": "https://www.theguardian.com/us-news/2026/aug/03/mfa-writing-programs",
+      "date": "2026-08-04T23:39:50.000Z",
+      "excerpt": "MFA programs teach pacing, structure, rhythm. It can not teach a writer to have something worth saying"
+    },
+    {
+      "id": "ytacpz",
+      "blogId": "aldaily",
+      "title": "Paul Celan met Martin Heidegger three times, an improbable pairing of Holocaust survivor and Nazi sympathizer",
+      "link": "https://theamericanscholar.org/verse-from-the-abyss",
+      "date": "2026-08-04T23:38:50.000Z",
+      "excerpt": "Paul Celan met Martin Heidegger three times, an improbable pairing of Holocaust survivor and Nazi sympathizer"
+    },
+    {
+      "id": "athtbu",
+      "blogId": "aldaily",
+      "title": "What connects the writer Ottessa Moshfegh, a fired professor in Florida, and a prudish college president? A creeping puritanism",
+      "link": "https://chronicleofhighereducation.substack.com/p/ottessa-moshfegh-a-fired-professor",
+      "date": "2026-08-04T23:37:50.000Z",
+      "excerpt": "What connects the writer Ottessa Moshfegh, a fired professor in Florida, and a prudish college president? A creeping puritanism"
+    },
+    {
+      "id": "uyu5tw",
+      "blogId": "aldaily",
+      "title": "Medieval parents — they're just like us! Forget the cold and indifferent caricature that has persisted for decades",
+      "link": "https://worksinprogress.co/issue/did-medieval-people-love-their-children",
+      "date": "2026-08-04T23:36:50.000Z",
+      "excerpt": "Medieval parents — they're just like us! Forget the cold and indifferent caricature that has persisted for decades"
+    },
+    {
+      "id": "macpmn",
+      "blogId": "aldaily",
+      "title": "With age, Auden's brilliance on the page grew ever more estranged from his unwashed, drug-and-drink-addled private existence",
+      "link": "https://www.wsj.com/arts-culture/books/auden-review-nimble-mind-earthbound-body-fbb8bdab?st=qLP2Z5&reflink=desktopwebshare_permalink",
+      "date": "2026-08-04T23:35:50.000Z",
+      "excerpt": "With age, Auden's brilliance on the page grew ever more estranged from his unwashed, drug-and-drink-addled private existence"
+    },
+    {
+      "id": "lycdvq",
+      "blogId": "aldaily",
+      "title": "\"Sonny Rollins was the last feral master of an art that has become at least partly domesticated\"",
+      "link": "https://www.nplusonemag.com/online-only/online-only/let-everything-change",
+      "date": "2026-08-04T23:34:50.000Z",
+      "excerpt": "\"Sonny Rollins was the last feral master of an art that has become at least partly domesticated\""
+    },
+    {
+      "id": "cs1u0j",
+      "blogId": "aldaily",
+      "title": "What we lost when we lost the video-store clerk: The quirky sensibility of the movie geek has been replaced by the algorithm",
+      "link": "https://thereader.mitpress.mit.edu/the-lost-civic-life-of-movie-rental-stores",
+      "date": "2026-08-04T23:33:50.000Z",
+      "excerpt": "What we lost when we lost the video-store clerk: The quirky sensibility of the movie geek has been replaced by the algorithm"
+    },
+    {
+      "id": "qt6rs9",
+      "blogId": "aldaily",
+      "title": "Two kinds of truth, two kinds of beauty, two kinds of art. One reproduces the world; the other creates it",
+      "link": "https://aeon.co/essays/humans-did-not-invent-art-it-was-the-other-way-around",
+      "date": "2026-08-04T23:32:50.000Z",
+      "excerpt": "Two kinds of truth, two kinds of beauty, two kinds of art. One reproduces the world; the other creates it"
+    },
+    {
+      "id": "d87yci",
+      "blogId": "simonwillison",
+      "title": "llm-anthropic 0.26",
+      "link": "https://simonwillison.net/2026/Aug/4/llm-anthropic",
+      "date": "2026-08-04T22:00:58.000Z",
+      "excerpt": "Release: llm-anthropic 0.26 Includes new features enabled by LLM 0.32: New models: claude-fable-5, claude-sonnet-5, and claude-opus-5. #75, #76 Added server-side tools for WebSearch, WebFetch, CodeExecution, and AnthropicMCP, available through LLM's -T interface or Python tools=. The previous -o web..."
+    },
+    {
+      "id": "bx1m4k",
+      "blogId": "kottke",
+      "title": " In recent years, science has been learning more and more... ",
+      "link": "https://kottke.org/26/08/0049424-how-central-the-role-of-i",
+      "date": "2026-08-04T21:46:00.000Z",
+      "excerpt": "In recent years, science has been learning more and more about how central the role of inflammation is to our health. “The paradox that often makes treating chronic inflammation so difficult: It can be vital and harmful at the same time.”"
+    },
+    {
+      "id": "gfkztz",
+      "blogId": "astralcodexten",
+      "title": "The Beauty Of Settled Science",
+      "link": "https://www.astralcodexten.com/p/the-beauty-of-settled-science",
+      "date": "2026-08-04T21:32:18.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "u7wfy1",
+      "blogId": "kottke",
+      "title": " Huh,  here’s the trailer for a new director’s cut (of... ",
+      "link": "https://kottke.org/26/08/0049444-heres-the-trailer-for-a-n",
+      "date": "2026-08-04T20:50:00.000Z",
+      "excerpt": "Huh, here’s the trailer for a new director’s cut (of sorts) of the second X-Files movie (called I Want to Believe, orig. released in 2008) that, per Wikipedia, “will restore horror elements that were previously removed”."
+    },
+    {
+      "id": "nyfw7j",
+      "blogId": "kottke",
+      "title": " Are You Good at Mowing Lawns? ",
+      "link": "https://kottke.org/26/08/are-you-good-at-mowing-lawns",
+      "date": "2026-08-04T19:50:00.000Z",
+      "excerpt": "I don’t know what sort of neurodiverse bucket this puts me in, but I think a lot about mowing the lawn1 relative to how much time I actually spend mowing lawns (~6-7 hours per year). And so I was completely fascinated by The Pudding’s latest post on optimal lawn mowing paths and “why some people mow..."
+    },
+    {
+      "id": "2szz8t",
+      "blogId": "honestbroker",
+      "title": "How to Lose $35 Billion with Philosophy",
+      "link": "https://www.honest-broker.com/p/how-to-lose-35-billion-with-philosophy",
+      "date": "2026-08-04T19:17:02.000Z",
+      "excerpt": "We've come a long way from Plato and Aristotle"
+    },
+    {
+      "id": "4azq0x",
+      "blogId": "simonwillison",
+      "title": "PipeNetwork/minimax-h3-mlx",
+      "link": "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx",
+      "date": "2026-08-04T19:10:09.000Z",
+      "excerpt": "PipeNetwork/minimax-h3-mlx MiniMax released MiniMax-H3 two days ago - they describe it as a \"a general-purpose, omni-modal generative system\", which in practice means it accepts text, images, audio and video and can use them to generate up to 15 second video clips with audio included. This Python pa..."
+    },
+    {
+      "id": "jomx5s",
+      "blogId": "kottke",
+      "title": " “ poetry camera  is a new way to see your world.... ",
+      "link": "https://kottke.org/26/08/0049152-poetry-camera",
+      "date": "2026-08-04T19:03:00.000Z",
+      "excerpt": "“poetry camera is a new way to see your world. take a photo with the camera… poetry camera thinks… and prints out a poem about the scene.”"
+    },
+    {
+      "id": "7xn6oz",
+      "blogId": "marginalrevolution",
+      "title": "Estimating the Economic Value of Zoning Reform",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/08/estimating-the-economic-value-of-zoning-reform.html",
+      "date": "2026-08-04T18:51:23.000Z",
+      "excerpt": "We estimate the economic value of zoning reform in São Paulo, which altered maximum permitted construction along transportation corridors. Developers increased filings for multifamily construction in blocks affected by the reform, leading to more housing supply and lower housing prices in neighborho..."
+    },
+    {
+      "id": "9jxyum",
+      "blogId": "wealthofcommonsense",
+      "title": "Spending Money",
+      "link": "https://awealthofcommonsense.com/2026/08/spending-money",
+      "date": "2026-08-04T18:29:15.000Z",
+      "excerpt": "Why does the economy continue to grow? The post Spending Money appeared first on A Wealth of Common Sense. ..."
+    },
     {
       "id": "50ug27",
       "blogId": "kottke",
@@ -10,12 +194,28 @@
       "excerpt": "The Phone in Your Hand. “A layer-by-layer teardown of the most intricate object you’ve ever held.”"
     },
     {
+      "id": "qi1cni",
+      "blogId": "casssunstein",
+      "title": "The Goldstein Effect",
+      "link": "https://casssunstein.substack.com/p/the-goldstein-effect",
+      "date": "2026-08-04T18:06:24.000Z",
+      "excerpt": "What Orwell Saw"
+    },
+    {
       "id": "ltcp0u",
       "blogId": "dataforindia",
       "title": "Measuring obesity in India",
       "link": "https://www.dataforindia.com/measuring-obesity",
       "date": "2026-08-04T17:19:04.000Z",
       "excerpt": "Given the rise of obesity in India, examining how it is understood and measured becomes vital. Different measures have their own limitations, but can point to risk factors."
+    },
+    {
+      "id": "47sozh",
+      "blogId": "simonwillison",
+      "title": "llm 0.32",
+      "link": "https://simonwillison.net/2026/Aug/4/llm",
+      "date": "2026-08-04T17:15:33.000Z",
+      "excerpt": "Release: llm 0.32 See my detailed blog post about this release. Tags: llm"
     },
     {
       "id": "ev4dac",
@@ -80,62 +280,6 @@
       "link": "https://www.conspicuouscognition.com/p/the-social-roots-of-delusions",
       "date": "2026-08-04T14:47:28.000Z",
       "excerpt": "Clinical delusions, collective irrationality, and the fragile achievement of human knowledge"
-    },
-    {
-      "id": "ytacpz",
-      "blogId": "aldaily",
-      "title": "Paul Celan met Martin Heidegger three times, an improbable pairing of Holocaust survivor and Nazi sympathizer",
-      "link": "https://theamericanscholar.org/verse-from-the-abyss",
-      "date": "2026-08-04T14:25:07.000Z",
-      "excerpt": "Paul Celan met Martin Heidegger three times, an improbable pairing of Holocaust survivor and Nazi sympathizer"
-    },
-    {
-      "id": "athtbu",
-      "blogId": "aldaily",
-      "title": "What connects the writer Ottessa Moshfegh, a fired professor in Florida, and a prudish college president? A creeping puritanism",
-      "link": "https://chronicleofhighereducation.substack.com/p/ottessa-moshfegh-a-fired-professor",
-      "date": "2026-08-04T14:24:07.000Z",
-      "excerpt": "What connects the writer Ottessa Moshfegh, a fired professor in Florida, and a prudish college president? A creeping puritanism"
-    },
-    {
-      "id": "uyu5tw",
-      "blogId": "aldaily",
-      "title": "Medieval parents — they're just like us! Forget the cold and indifferent caricature that has persisted for decades",
-      "link": "https://worksinprogress.co/issue/did-medieval-people-love-their-children",
-      "date": "2026-08-04T14:23:07.000Z",
-      "excerpt": "Medieval parents — they're just like us! Forget the cold and indifferent caricature that has persisted for decades"
-    },
-    {
-      "id": "macpmn",
-      "blogId": "aldaily",
-      "title": "With age, Auden's brilliance on the page grew ever more estranged from his unwashed, drug-and-drink-addled private existence",
-      "link": "https://www.wsj.com/arts-culture/books/auden-review-nimble-mind-earthbound-body-fbb8bdab?st=qLP2Z5&reflink=desktopwebshare_permalink",
-      "date": "2026-08-04T14:22:07.000Z",
-      "excerpt": "With age, Auden's brilliance on the page grew ever more estranged from his unwashed, drug-and-drink-addled private existence"
-    },
-    {
-      "id": "lycdvq",
-      "blogId": "aldaily",
-      "title": "\"Sonny Rollins was the last feral master of an art that has become at least partly domesticated\"",
-      "link": "https://www.nplusonemag.com/online-only/online-only/let-everything-change",
-      "date": "2026-08-04T14:21:07.000Z",
-      "excerpt": "\"Sonny Rollins was the last feral master of an art that has become at least partly domesticated\""
-    },
-    {
-      "id": "cs1u0j",
-      "blogId": "aldaily",
-      "title": "What we lost when we lost the video-store clerk: The quirky sensibility of the movie geek has been replaced by the algorithm",
-      "link": "https://thereader.mitpress.mit.edu/the-lost-civic-life-of-movie-rental-stores",
-      "date": "2026-08-04T14:20:07.000Z",
-      "excerpt": "What we lost when we lost the video-store clerk: The quirky sensibility of the movie geek has been replaced by the algorithm"
-    },
-    {
-      "id": "qt6rs9",
-      "blogId": "aldaily",
-      "title": "Two kinds of truth, two kinds of beauty, two kinds of art. One reproduces the world; the other creates it",
-      "link": "https://aeon.co/essays/humans-did-not-invent-art-it-was-the-other-way-around",
-      "date": "2026-08-04T14:19:07.000Z",
-      "excerpt": "Two kinds of truth, two kinds of beauty, two kinds of art. One reproduces the world; the other creates it"
     },
     {
       "id": "4ln3jr",
@@ -338,6 +482,14 @@
       "excerpt": "We study the effects of H-1B immigration on U.S. industries that employ H-1B workers and their trading partners. Using a novel cross-industry design and the 1999–2003 expansion of the H-1B visa cap for identification, we find that H-1B exposure raised incomes for natives and pre-existing immigrants,..."
     },
     {
+      "id": "mcmtr4",
+      "blogId": "marginalian",
+      "title": "Trial, Triumph, and the Art of the Possible: The Remarkable Story Behind Beethoven’s “Ode to Joy”",
+      "link": "https://www.themarginalian.org/2026/08/04/beethoven-ode-to-joy",
+      "date": "2026-08-04T06:02:10.000Z",
+      "excerpt": "A hymn of rage, a hymn of redemption, and a timeless love letter to the possible."
+    },
+    {
       "id": "9r80fa",
       "blogId": "marginalrevolution",
       "title": "Emergent Ventures winners, 57th cohort",
@@ -440,6 +592,14 @@
       "link": "https://markcarrigan.net/2026/08/03/are-ubiquitous-llms-changing-the-economics-of-modern-slavery",
       "date": "2026-08-03T20:28:11.000Z",
       "excerpt": "I’ve been reading recently about the terrifying scale of modern slavery underpinning the online scam industry. Victims are recruited internationally with the promise of reliable work only to be bundled into cars and taken to heavily fortified compounds, where they are forced to meet targets for onli..."
+    },
+    {
+      "id": "bhg93d",
+      "blogId": "marginalian",
+      "title": "What Makes You You Makes the Universe: Nobel Laureate Erwin Schrödinger on Quantum Physics, Vedanta, and the Ongoing Mystery of What We Are",
+      "link": "https://www.themarginalian.org/2026/08/03/erwin-shcrodinger-my-view-of-the-world",
+      "date": "2026-08-03T20:27:30.000Z",
+      "excerpt": "\"This life of yours which you are living is not merely a piece of the entire existence, but is in a certain sense the whole.\""
     },
     {
       "id": "gpjgzq",
@@ -896,6 +1056,14 @@
       "link": "https://theconvivialsociety.substack.com/p/names-sabbath-universities-bookstores",
       "date": "2026-08-03T05:16:05.000Z",
       "excerpt": "The Convivial Society's Commonplace Book, No. 1"
+    },
+    {
+      "id": "moz8sz",
+      "blogId": "simonwillison",
+      "title": "condense-json 1.1",
+      "link": "https://simonwillison.net/2026/Aug/3/condense-json",
+      "date": "2026-08-03T04:56:26.000Z",
+      "excerpt": "Release: condense-json 1.1 After shipping condense-json 1.0 I started integrating it into LLM, and found there were some desirable new features already: Replacements object can now include values other than strings. These will be identified and used as structural replacements by condense_json() and..."
     },
     {
       "id": "441pk2",
