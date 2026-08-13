@@ -1,6 +1,318 @@
 {
-  "lastUpdated": "2026-08-13T10:05:11.253Z",
+  "lastUpdated": "2026-08-13T17:59:21.634Z",
   "posts": [
+    {
+      "id": "r29v2u",
+      "blogId": "kottke",
+      "title": "  A recently unearthed conversation with Anthony Bourdain... ",
+      "link": "https://kottke.org/26/08/0049490-a-recently-unearthed-conv",
+      "date": "2026-08-13T17:47:00.000Z",
+      "excerpt": "A recently unearthed conversation with Anthony Bourdain from 2005. “We discuss Tony’s preferred sucker-punch etiquette, his loyalty to cigarettes & the Chateau Marmont, ayahuasca in Peru, and the talk show he dreamed up with Christopher Walken in mind.”"
+    },
+    {
+      "id": "5tpmk9",
+      "blogId": "flowingdata",
+      "title": "OpenAI accidentally makes attack bots",
+      "link": "https://flowingdata.com/2026/08/13/openai-accidentally-makes-attack-bots",
+      "date": "2026-08-13T17:41:53.000Z",
+      "excerpt": "Multiple bots exploited a vulnerability in OpenAI’s security system to gain internet access.… Tags: attack, bot, OpenAI"
+    },
+    {
+      "id": "9o4qag",
+      "blogId": "economicforces",
+      "title": "Hotelling doesn't say what you think it says",
+      "link": "https://www.economicforces.xyz/p/hotelling-doesnt-say-what-you-think",
+      "date": "2026-08-13T17:25:17.000Z",
+      "excerpt": "“Why do gas stations locate across the street from each other?” Hotelling."
+    },
+    {
+      "id": "bvo66t",
+      "blogId": "kottke",
+      "title": " Supersonic Trebuchet ",
+      "link": "https://kottke.org/26/08/supersonic-trebuchet",
+      "date": "2026-08-13T16:47:00.000Z",
+      "excerpt": "Ok so when you woke up this morning, you probably didn’t expect to watch a 20-minute video about a trebuchet — but to be fair, I didn’t either. But Tom Stanton’s build of a fully mechanical trebuchet that propels a tiny plastic pellet faster than the speed of sound (complete with tiny sonic boom) is..."
+    },
+    {
+      "id": "8orfcl",
+      "blogId": "braddelong",
+      "title": "READING: The Duc de Saint-Simon on the Battle of Blenheim",
+      "link": "https://braddelong.substack.com/p/reading-the-duc-de-saint-simon-on",
+      "date": "2026-08-13T16:34:43.000Z",
+      "excerpt": "322 years ago today, in 1704, a combined Austrian, Dutch, British, Hanoverian, Hessian, Danish, and Prussian army under the joint command of John Churchill, Duke of Marlborough, and Eugen Franz..."
+    },
+    {
+      "id": "pzkfdk",
+      "blogId": "programmablemutter",
+      "title": "No-One Makes You Shop at Amazon",
+      "link": "https://www.programmablemutter.com/p/no-one-makes-you-shop-at-amazon",
+      "date": "2026-08-13T16:33:56.000Z",
+      "excerpt": "Responding to Noah Smith"
+    },
+    {
+      "id": "6jwcuh",
+      "blogId": "understandingai",
+      "title": "Labs are struggling to keep frontier models under control",
+      "link": "https://www.understandingai.org/p/labs-are-struggling-to-keep-frontier",
+      "date": "2026-08-13T16:28:51.000Z",
+      "excerpt": "OpenAI and Anthropic may have accidentally trained models to get better at hacking."
+    },
+    {
+      "id": "hqdzdl",
+      "blogId": "freddiedeboer",
+      "title": "My Dog Died During Lockdown",
+      "link": "https://freddiedeboer.substack.com/p/my-dog-died-during-lockdown",
+      "date": "2026-08-13T16:24:46.000Z",
+      "excerpt": "I’m tempted to say that Brooklyn was an odd place to ride out Covid, but I guess it was an odd experience everywhere."
+    },
+    {
+      "id": "1f0z3h",
+      "blogId": "kottke",
+      "title": " Craig Mod wrote about his recent adventures using LLMs:... ",
+      "link": "https://kottke.org/26/08/0049492-a-swarm-of-blood-robots",
+      "date": "2026-08-13T16:12:00.000Z",
+      "excerpt": "Craig Mod wrote about his recent adventures using LLMs: A Swarm of Blood Robots. “I now have a comprehensive family tree, naming the very boats my Italian and Polish ancestors came over on in the late 1800s, the villages a few came from…”"
+    },
+    {
+      "id": "tgvoln",
+      "blogId": "marginalrevolution",
+      "title": "Thursday assorted links",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/08/thursday-assorted-links-565.html",
+      "date": "2026-08-13T16:03:42.000Z",
+      "excerpt": "1. Write a paper in six days with only AIs, then record all of that and write a second paper about writing the first. 2. Saloni on the future of medicine. “Every disease is a policy failure.” 3. John List on generalizability, very important. And his comments here. 4. China is now regulating AI compa..."
+    },
+    {
+      "id": "ifsodg",
+      "blogId": "kottke",
+      "title": " “Draw any shape and hear it as a drum.”... ",
+      "link": "https://kottke.org/26/08/0049489-eigendrum",
+      "date": "2026-08-13T15:47:00.000Z",
+      "excerpt": "“Draw any shape and hear it as a drum.” Eigendrum: a drum simulator where you can change the shape of the drum to see how it affects the sound it makes."
+    },
+    {
+      "id": "4t8m11",
+      "blogId": "benthamsbulldog",
+      "title": "Internet Cancel Mobs ",
+      "link": "https://benthams.substack.com/p/the-puzzle-of-internet-cancel-mobs",
+      "date": "2026-08-13T15:30:27.000Z",
+      "excerpt": "They seem powerful when coming for knitters who committed some convoluted and dubious alleged microaggression but totally impotent when coming for more controversial figures"
+    },
+    {
+      "id": "7n3x15",
+      "blogId": "thezvi",
+      "title": "AI #181: Astra Goes Cyber Critical",
+      "link": "https://thezvi.substack.com/p/ai-181-astra-goes-cyber-critical",
+      "date": "2026-08-13T15:14:10.000Z",
+      "excerpt": "The hacking of HuggingFace by an internal OpenAI model, and more importantly the internal events that led to that and the fallout from it, remain the thing that matters."
+    },
+    {
+      "id": "ydupvk",
+      "blogId": "commonreader",
+      "title": "Why we still read novels",
+      "link": "https://www.commonreader.co.uk/p/why-we-still-read-novels",
+      "date": "2026-08-13T15:03:07.000Z",
+      "excerpt": "Philip Hensher's new History of the Novel in Britain"
+    },
+    {
+      "id": "e2pjaw",
+      "blogId": "kottke",
+      "title": "  G.P.S. and the Lost Art of Getting Lost . “G.P.S.... ",
+      "link": "https://kottke.org/26/08/0049488-gps-and-the-lost-art-of-g",
+      "date": "2026-08-13T14:59:00.000Z",
+      "excerpt": "G.P.S. and the Lost Art of Getting Lost. “G.P.S. has also led us to outsource existential skills: locating yourself in space, parsing out your surroundings, staying calm when you don’t know where you are. Do we lose something when we no longer get lost?”"
+    },
+    {
+      "id": "9lz2hb",
+      "blogId": "wealthofcommonsense",
+      "title": "Where Housing is the Most Expensive",
+      "link": "https://awealthofcommonsense.com/2026/08/where-housing-is-the-most-expensive",
+      "date": "2026-08-13T14:49:29.000Z",
+      "excerpt": "A closer look at housing prices around the globe. The post Where Housing is the Most Expensive appeared first on A Wealth of Common Sense. ..."
+    },
+    {
+      "id": "89sqxe",
+      "blogId": "abnormalreturns",
+      "title": "Longform links: replacing the experience",
+      "link": "https://abnormalreturns.com/2026/08/13/longform-links-replacing-the-experience",
+      "date": "2026-08-13T14:25:24.000Z",
+      "excerpt": "Thursdays are all about longform links on Abnormal Returns. Wherever possible, free links for premium sites are used. You can check out..."
+    },
+    {
+      "id": "wgt8t8",
+      "blogId": "braddelong",
+      "title": "CROSSPOST: SCOTT AARONSON (2013): Against John Searle's Analogy of an Apparently Chinese-Understanding Room",
+      "link": "https://braddelong.substack.com/p/crosspost-scott-aaronson-2013-against",
+      "date": "2026-08-13T14:14:46.000Z",
+      "excerpt": "Scott Aaronson’s complexity rebuttal to Searle's \"machines can mimic but cannot understand\"; Searle's intuition pump hides the scale of the computations..."
+    },
+    {
+      "id": "a577lh",
+      "blogId": "kottke",
+      "title": " Some of the most storied problems in mathematics, those... ",
+      "link": "https://kottke.org/26/08/0049485-are-being-solved-by-llms",
+      "date": "2026-08-13T13:55:00.000Z",
+      "excerpt": "Some of the most storied problems in mathematics, those posed by Paul Erdős, are being solved by LLMs."
+    },
+    {
+      "id": "ql5p0z",
+      "blogId": "aldaily",
+      "title": "After a minor renaissance in the late 20th century, narrative poetry is being eclipsed by lyric poetry. That’s a shame",
+      "link": "https://newversereview.substack.com/p/the-purpose-of-poetry-is-to-tell",
+      "date": "2026-08-13T13:53:59.000Z",
+      "excerpt": "After a minor renaissance in the late 20th century, narrative poetry is being eclipsed by lyric poetry. That’s a shame"
+    },
+    {
+      "id": "46pdmd",
+      "blogId": "aldaily",
+      "title": "There's a name for demanding a group publicly recite a political position as the price of belonging: illiberalism",
+      "link": "https://salmagundi.skidmore.edu/articles/2331-the-mess-at-pen-america",
+      "date": "2026-08-13T13:52:59.000Z",
+      "excerpt": "There's a name for demanding a group publicly recite a political position as the price of belonging: illiberalism"
+    },
+    {
+      "id": "m102z2",
+      "blogId": "aldaily",
+      "title": "Terry Eagleton: “Few acts of self-sacrifice can compare with sitting through Oxford High Table stone-cold sober for more than three decades”",
+      "link": "https://www.commonwealmagazine.org/eagleton-becoming-notorious-terry",
+      "date": "2026-08-13T13:51:59.000Z",
+      "excerpt": "Terry Eagleton: “Few acts of self-sacrifice can compare with sitting through Oxford High Table stone-cold sober for more than three decades”"
+    },
+    {
+      "id": "qw3h49",
+      "blogId": "aldaily",
+      "title": "Editing was largely absent from British publishing until midcentury, emerging only as firms grew too big to take risks on new writers",
+      "link": "https://porticoquarterly.com/essay/wielding-the-blue-pencil",
+      "date": "2026-08-13T13:50:59.000Z",
+      "excerpt": "Editing was largely absent from British publishing until midcentury, emerging only as firms grew too big to take risks on new writers"
+    },
+    {
+      "id": "gnsg56",
+      "blogId": "aldaily",
+      "title": "What if feelings aren’t peripheral to rational thought and are, instead, part of the machinery that makes rational thought possible?",
+      "link": "https://www.noemamag.com/the-tantalizing-possibility-of-locating-consciousness-in-the-brain",
+      "date": "2026-08-13T13:49:59.000Z",
+      "excerpt": "What if feelings aren’t peripheral to rational thought and are, instead, part of the machinery that makes rational thought possible?"
+    },
+    {
+      "id": "bomt11",
+      "blogId": "aldaily",
+      "title": "For John Berger, the dead and the living were interdependent — and the stronger the link, the happier and healthier the society",
+      "link": "https://www.theguardian.com/books/2026/aug/10/john-berger-from-life-by-tom-overton-review-a-vibrant-biography-of-the-pioneering-critic",
+      "date": "2026-08-13T13:48:59.000Z",
+      "excerpt": "For John Berger, the dead and the living were interdependent — and the stronger the link, the happier and healthier the society"
+    },
+    {
+      "id": "mtdgor",
+      "blogId": "aldaily",
+      "title": "Psychiatry and anti-psychiatry have quietly borrowed each other's language for decades, each remaking itself in the image of the other",
+      "link": "https://thelampmagazine.com/issues/issue-36/over-the-borderline",
+      "date": "2026-08-13T13:47:59.000Z",
+      "excerpt": "Psychiatry and anti-psychiatry have quietly borrowed each other's language for decades, each remaking itself in the image of the other"
+    },
+    {
+      "id": "nmt4n0",
+      "blogId": "aldaily",
+      "title": "For decades, Anglophilia steadily fed the imaginations of “respectable” American conservatives. No longer",
+      "link": "https://www.newstatesman.com/ideas/2026/07/the-closing-of-the-anglophile-mind-0",
+      "date": "2026-08-13T13:46:59.000Z",
+      "excerpt": "For decades, Anglophilia steadily fed the imaginations of “respectable” American conservatives. No longer"
+    },
+    {
+      "id": "bw1ts9",
+      "blogId": "aldaily",
+      "title": "How did Heidegger, married and 35, explain his affair with 18-year old Hannah Arendt? “The demonic has seized me”",
+      "link": "https://www.newyorker.com/magazine/2026/08/17/hannah-arendt-life-of-the-mind-thomas-meyer-book-review-an-admirable-woman-arthur-cohen",
+      "date": "2026-08-13T13:45:59.000Z",
+      "excerpt": "How did Heidegger, married and 35, explain his affair with 18-year old Hannah Arendt? “The demonic has seized me”"
+    },
+    {
+      "id": "lln1qg",
+      "blogId": "aldaily",
+      "title": "“We have inherited the surfaces of decadence — luxury, excess, artifice, bodily display — but have surrendered the fin de siècle’s commitment to pleasure”",
+      "link": "https://www.theguardian.com/us-news/ng-interactive/2026/jul/26/age-of-decadence-pleasure-ai",
+      "date": "2026-08-13T13:44:59.000Z",
+      "excerpt": "“We have inherited the surfaces of decadence — luxury, excess, artifice, bodily display — but have surrendered the fin de siècle’s commitment to pleasure”"
+    },
+    {
+      "id": "xduezf",
+      "blogId": "robhenderson",
+      "title": "Why Winners Keep Winning",
+      "link": "https://www.robkhenderson.com/p/why-winners-keep-winning",
+      "date": "2026-08-13T13:42:24.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "ie896l",
+      "blogId": "flowingdata",
+      "title": "✚ Set expectations and verify",
+      "link": "https://flowingdata.com/2026/08/13/set-expectations-and-verify",
+      "date": "2026-08-13T13:06:37.000Z",
+      "excerpt": "This week, we talk flimsy results and how to work on things that build trust over content. Tags: Large Language Model, mistakes, trust"
+    },
+    {
+      "id": "qniwnl",
+      "blogId": "rbaldwin",
+      "title": "Who Is Losing Factory Jobs to China? ",
+      "link": "https://rbaldwin.substack.com/p/who-is-losing-factory-jobs-to-china",
+      "date": "2026-08-13T12:21:17.000Z",
+      "excerpt": "Nobody, since 2013."
+    },
+    {
+      "id": "3h5r6f",
+      "blogId": "persuasion",
+      "title": "Serbia Turns Toward the West",
+      "link": "https://www.persuasion.community/p/serbia-turns-toward-the-west",
+      "date": "2026-08-13T11:15:21.000Z",
+      "excerpt": "President Vučić is navigating a course between Putin and Trump—but will soon have to choose."
+    },
+    {
+      "id": "2u90aw",
+      "blogId": "mostlyeconomics",
+      "title": "Can structural reforms unleash private investment?",
+      "link": "https://mostlyeconomics.wordpress.com/2026/08/13/can-structural-reforms-unleash-private-investment",
+      "date": "2026-08-13T11:10:45.000Z",
+      "excerpt": "Christos Mavrogiannis, Nico Zorell and Christoph Zwick in this new ECB paper discusses the impact of structural reforms on the private investments: This paper examines the impact of labour and product market reforms on private investment across 26 advanced economies from 1975 to 2020. To this end, w..."
+    },
+    {
+      "id": "lzyra8",
+      "blogId": "marginalrevolution",
+      "title": "USA fact of the day",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/08/usa-fact-of-the-day-17.html",
+      "date": "2026-08-13T10:40:20.000Z",
+      "excerpt": "Here is the source. The post USA fact of the day appeared first on Marginal REVOLUTION."
+    },
+    {
+      "id": "9x2rf6",
+      "blogId": "paulkrugman",
+      "title": "Why Isn’t the Price of Oil Even Higher?",
+      "link": "https://paulkrugman.substack.com/p/why-isnt-the-price-of-oil-even-higher",
+      "date": "2026-08-13T10:31:05.000Z",
+      "excerpt": "This is your economy on crack (spread)"
+    },
+    {
+      "id": "5srvl5",
+      "blogId": "ritholtz",
+      "title": "10 Thursday AM Reads",
+      "link": "https://ritholtz.com/2026/08/10-thursday-am-reads-506",
+      "date": "2026-08-13T10:30:57.000Z",
+      "excerpt": "My morning reads: • Corporate America Has Suddenly Decided to Stop Blowing Money on AI: Companies big and small are mixing models and it’s changing the economics and power players of the industry. Model costs have collapsed and the spending discipline has arrived all at once. (Wall Street Journal) •..."
+    },
+    {
+      "id": "m18o2h",
+      "blogId": "figsinwintertime",
+      "title": "Forget the good life, try the good day",
+      "link": "https://figsinwintertime.substack.com/p/forget-the-good-life-try-the-good",
+      "date": "2026-08-13T10:01:25.000Z",
+      "excerpt": "What the Stoics can teach us about the only unit of life we actually control"
+    },
+    {
+      "id": "5bfq84",
+      "blogId": "danq",
+      "title": "[Checkin] Dan Q found GCA1006 BALCÓ DEL MEDITERRANI",
+      "link": "https://danq.me/2026/08/13/dan-q-found-gca1006-balco-del-mediterrani",
+      "date": "2026-08-13T09:10:00.000Z",
+      "excerpt": "This checkin to GCA1006 BALCÓ DEL MEDITERRANI reflects a geocaching.com log entry. See more of Dan's cache logs. QEF while exploring Tarragona with the family. TFTC!"
+    },
     {
       "id": "ej0390",
       "blogId": "flowingdata",
@@ -16,6 +328,14 @@
       "link": "https://robinjbrooks.substack.com/p/another-benign-inflation-reading",
       "date": "2026-08-13T09:02:17.000Z",
       "excerpt": "There's just no way the Fed will hike with the kind of inflation readings we're getting"
+    },
+    {
+      "id": "4sspav",
+      "blogId": "pertinentobservations",
+      "title": "Claude helped me buy coffee",
+      "link": "https://noenthuda.substack.com/p/claude-helped-me-buy-coffee",
+      "date": "2026-08-13T07:41:21.000Z",
+      "excerpt": "In all my experiments I kept buying suboptimal coffee, so got Claude to build a recommendation system to help me shop better"
     },
     {
       "id": "lwogq1",
@@ -34,92 +354,12 @@
       "excerpt": "This checkin to GC8D4H7 Benvinguts a Vistabella. reflects a geocaching.com log entry. See more of Dan's cache logs. I had to work hard to find this one! In the end, my selfie-csmers helped me a lot, but what also helped was that I’ve seen (and hidden) containers of this type before. SL, TFTC, and gr..."
     },
     {
-      "id": "ql5p0z",
-      "blogId": "aldaily",
-      "title": "After a minor renaissance in the late 20th century, narrative poetry is being eclipsed by lyric poetry. That’s a shame",
-      "link": "https://newversereview.substack.com/p/the-purpose-of-poetry-is-to-tell",
-      "date": "2026-08-13T05:52:37.000Z",
-      "excerpt": "After a minor renaissance in the late 20th century, narrative poetry is being eclipsed by lyric poetry. That’s a shame"
-    },
-    {
-      "id": "46pdmd",
-      "blogId": "aldaily",
-      "title": "There's a name for demanding a group publicly recite a political position as the price of belonging: illiberalism",
-      "link": "https://salmagundi.skidmore.edu/articles/2331-the-mess-at-pen-america",
-      "date": "2026-08-13T05:51:37.000Z",
-      "excerpt": "There's a name for demanding a group publicly recite a political position as the price of belonging: illiberalism"
-    },
-    {
-      "id": "m102z2",
-      "blogId": "aldaily",
-      "title": "Terry Eagleton: “Few acts of self-sacrifice can compare with sitting through Oxford High Table stone-cold sober for more than three decades”",
-      "link": "https://www.commonwealmagazine.org/eagleton-becoming-notorious-terry",
-      "date": "2026-08-13T05:50:37.000Z",
-      "excerpt": "Terry Eagleton: “Few acts of self-sacrifice can compare with sitting through Oxford High Table stone-cold sober for more than three decades”"
-    },
-    {
-      "id": "qw3h49",
-      "blogId": "aldaily",
-      "title": "Editing was largely absent from British publishing until midcentury, emerging only as firms grew too big to take risks on new writers",
-      "link": "https://porticoquarterly.com/essay/wielding-the-blue-pencil",
-      "date": "2026-08-13T05:49:37.000Z",
-      "excerpt": "Editing was largely absent from British publishing until midcentury, emerging only as firms grew too big to take risks on new writers"
-    },
-    {
-      "id": "gnsg56",
-      "blogId": "aldaily",
-      "title": "What if feelings aren’t peripheral to rational thought and are, instead, part of the machinery that makes rational thought possible?",
-      "link": "https://www.noemamag.com/the-tantalizing-possibility-of-locating-consciousness-in-the-brain",
-      "date": "2026-08-13T05:48:37.000Z",
-      "excerpt": "What if feelings aren’t peripheral to rational thought and are, instead, part of the machinery that makes rational thought possible?"
-    },
-    {
-      "id": "bomt11",
-      "blogId": "aldaily",
-      "title": "For John Berger, the dead and the living were interdependent — and the stronger the link, the happier and healthier the society",
-      "link": "https://www.theguardian.com/books/2026/aug/10/john-berger-from-life-by-tom-overton-review-a-vibrant-biography-of-the-pioneering-critic",
-      "date": "2026-08-13T05:47:37.000Z",
-      "excerpt": "For John Berger, the dead and the living were interdependent — and the stronger the link, the happier and healthier the society"
-    },
-    {
-      "id": "mtdgor",
-      "blogId": "aldaily",
-      "title": "Psychiatry and anti-psychiatry have quietly borrowed each other's language for decades, each remaking itself in the image of the other",
-      "link": "https://thelampmagazine.com/issues/issue-36/over-the-borderline",
-      "date": "2026-08-13T05:46:37.000Z",
-      "excerpt": "Psychiatry and anti-psychiatry have quietly borrowed each other's language for decades, each remaking itself in the image of the other"
-    },
-    {
       "id": "4cy20z",
       "blogId": "danq",
       "title": "[Checkin] Dan Q found GC5QRR1 RAPOEB 35 fase llarga.",
       "link": "https://danq.me/2026/08/13/dan-q-found-gc5qrr1-rapoeb-35-fase-llarga",
       "date": "2026-08-13T05:46:00.000Z",
       "excerpt": "This checkin to GC5QRR1 RAPOEB 35 fase llarga. reflects a geocaching.com log entry. See more of Dan's cache logs. I startled a lizard while retrieving this good-sized cache. My trouser legs are now covered with burrs, from all the sticky plants underfoot. TFTC, and for this leg of the series; now it..."
-    },
-    {
-      "id": "nmt4n0",
-      "blogId": "aldaily",
-      "title": "For decades, Anglophilia steadily fed the imaginations of “respectable” American conservatives. No longer",
-      "link": "https://www.newstatesman.com/ideas/2026/07/the-closing-of-the-anglophile-mind-0",
-      "date": "2026-08-13T05:45:37.000Z",
-      "excerpt": "For decades, Anglophilia steadily fed the imaginations of “respectable” American conservatives. No longer"
-    },
-    {
-      "id": "bw1ts9",
-      "blogId": "aldaily",
-      "title": "How did Heidegger, married and 35, explain his affair with 18-year old Hannah Arendt? “The demonic has seized me”",
-      "link": "https://www.newyorker.com/magazine/2026/08/17/hannah-arendt-life-of-the-mind-thomas-meyer-book-review-an-admirable-woman-arthur-cohen",
-      "date": "2026-08-13T05:44:37.000Z",
-      "excerpt": "How did Heidegger, married and 35, explain his affair with 18-year old Hannah Arendt? “The demonic has seized me”"
-    },
-    {
-      "id": "lln1qg",
-      "blogId": "aldaily",
-      "title": "“We have inherited the surfaces of decadence — luxury, excess, artifice, bodily display — but have surrendered the fin de siècle’s commitment to pleasure”",
-      "link": "https://www.theguardian.com/us-news/ng-interactive/2026/jul/26/age-of-decadence-pleasure-ai",
-      "date": "2026-08-13T05:43:37.000Z",
-      "excerpt": "“We have inherited the surfaces of decadence — luxury, excess, artifice, bodily display — but have surrendered the fin de siècle’s commitment to pleasure”"
     },
     {
       "id": "8e9ki2",
