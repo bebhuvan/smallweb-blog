@@ -1,6 +1,190 @@
 {
-  "lastUpdated": "2026-08-19T17:28:48.610Z",
+  "lastUpdated": "2026-08-20T02:13:06.835Z",
   "posts": [
+    {
+      "id": "4yjxm0",
+      "blogId": "noahpinion",
+      "title": "Economists should be worried about birth rates",
+      "link": "https://www.noahpinion.blog/p/economists-should-be-worried-about",
+      "date": "2026-08-19T23:27:31.000Z",
+      "excerpt": "Don’t be so quick to dismiss the threat of an aging, declining population."
+    },
+    {
+      "id": "lrpexy",
+      "blogId": "simonwillison",
+      "title": "smolmachines / smolvm as a sandbox for untrusted Python & JavaScript",
+      "link": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox",
+      "date": "2026-08-19T23:16:00.000Z",
+      "excerpt": "Research: smolmachines / smolvm as a sandbox for untrusted Python & JavaScript I tasked Claude Fable 5 running in Claude Code for web with the following research task: Put https://smolmachines.com through its paces as a fast secure sandbox. Explore what it would take to use this to run untrusted Pyt..."
+    },
+    {
+      "id": "u5c1iw",
+      "blogId": "simonwillison",
+      "title": "Quoting Jeremy Morrell",
+      "link": "https://simonwillison.net/2026/Aug/19/jeremy-morrell",
+      "date": "2026-08-19T22:56:31.000Z",
+      "excerpt": "My hypothesis is that there is a new opportunity for Extensible Software on the web. LLMs radically lower the cost of authoring extensions, and modern sandbox primitives lower the deployment cost and provide good security boundaries. We can build our app as a solid, accountable core, and allow users..."
+    },
+    {
+      "id": "o63umq",
+      "blogId": "simonwillison",
+      "title": "Conceptual integrity and counting lines of code",
+      "link": "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code",
+      "date": "2026-08-19T22:46:07.000Z",
+      "excerpt": "Last week I recorded an episode of the Talking Postgres podcast with Claire Giordano on the subject of \"How AI is changing software development\". We had a really great conversation. Here are a couple of my highlights from a lightly edited transcript (prompt to Claude: \"very minor edits to remove dis..."
+    },
+    {
+      "id": "f9eexe",
+      "blogId": "aldaily",
+      "title": "Book publishing is awash in AI scandals. As one agent puts it, AI slop has gotten so bad it makes Fifty Shades of Grey look like Tolstoy",
+      "link": "https://www.wsj.com/arts-culture/books/generative-ai-book-publishing-be79a287?st=UWZgcq&reflink=desktopwebshare_permalink",
+      "date": "2026-08-19T22:09:49.000Z",
+      "excerpt": "Book publishing is awash in AI scandals. As one agent puts it, AI slop has gotten so bad it makes Fifty Shades of Grey look like Tolstoy"
+    },
+    {
+      "id": "y81vwn",
+      "blogId": "aldaily",
+      "title": "\"The thought that Socrates would care about how his icon is fashioned seems strange to me, but the thought that Plato would care is not strange\"",
+      "link": "https://www.nybooks.com/online/2026/08/18/socrates-turf-agnes-callard-merve-emre",
+      "date": "2026-08-19T22:08:49.000Z",
+      "excerpt": "\"The thought that Socrates would care about how his icon is fashioned seems strange to me, but the thought that Plato would care is not strange\""
+    },
+    {
+      "id": "xv95k",
+      "blogId": "aldaily",
+      "title": "History is the story of corrupt elites and the virtuous activists who oppose them. Or so it was, formulaically, for Howard Zinn",
+      "link": "https://newrepublic.com/article/213778/howard-zinn-biography-simple-story-american-history",
+      "date": "2026-08-19T22:07:49.000Z",
+      "excerpt": "History is the story of corrupt elites and the virtuous activists who oppose them. Or so it was, formulaically, for Howard Zinn"
+    },
+    {
+      "id": "hvivbp",
+      "blogId": "aldaily",
+      "title": "The ultimate scholarly shortcut, the Ars Notoria was said to instantly grant the full range of medieval learning — but at the risk of poisoning one’s soul",
+      "link": "https://publicdomainreview.org/essay/ars-notoria",
+      "date": "2026-08-19T22:06:49.000Z",
+      "excerpt": "The ultimate scholarly shortcut, the Ars Notoria was said to instantly grant the full range of medieval learning — but at the risk of poisoning one’s soul"
+    },
+    {
+      "id": "hjmq05",
+      "blogId": "aldaily",
+      "title": "In weird-girl literature, detached protagonists have bad jobs, slightly happier best friends, and troubled relationships. Are the novels any good?",
+      "link": "https://www.woman-of-letters.com/p/the-weird-girl-novel",
+      "date": "2026-08-19T22:05:49.000Z",
+      "excerpt": "In weird-girl literature, detached protagonists have bad jobs, slightly happier best friends, and troubled relationships. Are the novels any good?"
+    },
+    {
+      "id": "3tuh13",
+      "blogId": "aldaily",
+      "title": "Few American writers have skewered the self-deluding barbarity that is American foreign policy with as much force as Dwight Macdonald",
+      "link": "https://www.bostonreview.net/articles/think-again",
+      "date": "2026-08-19T22:04:49.000Z",
+      "excerpt": "Few American writers have skewered the self-deluding barbarity that is American foreign policy with as much force as Dwight Macdonald"
+    },
+    {
+      "id": "6fjn2c",
+      "blogId": "aldaily",
+      "title": "What caused a particularly lurid sex scandal in Prussian Königsberg? The theosophical views and alluring curls of Johann Wilhelm Ebel ",
+      "link": "https://www.newyorker.com/magazine/2026/08/24/a-scandal-in-konigsberg-christopher-clark-book-review",
+      "date": "2026-08-19T22:03:49.000Z",
+      "excerpt": "What caused a particularly lurid sex scandal in Prussian Königsberg? The theosophical views and alluring curls of Johann Wilhelm Ebel"
+    },
+    {
+      "id": "podwkv",
+      "blogId": "aldaily",
+      "title": "W.G. Sebald’s poetic, picturesque accounts of Austrian literature are, at crucial points, gravely distorted",
+      "link": "https://clereviewofbooks.com/wg-sebald-silent-catastrophes",
+      "date": "2026-08-19T22:02:49.000Z",
+      "excerpt": "W.G. Sebald’s poetic, picturesque accounts of Austrian literature are, at crucial points, gravely distorted"
+    },
+    {
+      "id": "83j4k6",
+      "blogId": "aldaily",
+      "title": "The smorgasbord: What began as modest, rule-bound dining in Sweden evolved into something akin to a “pagan feast” in the United States",
+      "link": "https://www.cabinetmagazine.org/issues/71/licht.php",
+      "date": "2026-08-19T22:01:49.000Z",
+      "excerpt": "The smorgasbord: What began as modest, rule-bound dining in Sweden evolved into something akin to a “pagan feast” in the United States"
+    },
+    {
+      "id": "x1rq81",
+      "blogId": "aldaily",
+      "title": "The “.” emerged 2,000 years ago. “?” in the 8th century, “!” in the 14th. Then not much changed since about 1600",
+      "link": "https://www.wsj.com/arts-culture/books/on-the-mark-review-whats-the-point-7d336fe4?st=gVaexZ&reflink=desktopwebshare_permalink",
+      "date": "2026-08-19T22:00:49.000Z",
+      "excerpt": "The “.” emerged 2,000 years ago. “?” in the 8th century, “!” in the 14th. Then not much changed since about 1600"
+    },
+    {
+      "id": "60l41p",
+      "blogId": "grumpyeconomist",
+      "title": "Wealth Tax 2.0 ",
+      "link": "https://www.grumpy-economist.com/p/wealth-tax-20",
+      "date": "2026-08-19T21:29:52.000Z",
+      "excerpt": "Senator Bernie Sanders and Representative Ro Khanna just introduced a bill proposing a permanent national 5% wealth tax on billionaires, along with an ambitious spending program for the results."
+    },
+    {
+      "id": "7lsmvw",
+      "blogId": "commonreader",
+      "title": "Life of M, by Rachel Cusk",
+      "link": "https://www.commonreader.co.uk/p/life-of-m-by-rachel-cusk",
+      "date": "2026-08-19T21:06:02.000Z",
+      "excerpt": "Perhaps I am the wrong reader of Life of M. Certainly I find Cusk’s books unsympathetic generally. (I hated Outline.) But I was absorbed enough to want to finish this novel, even though I don’t find it impressive."
+    },
+    {
+      "id": "905uh1",
+      "blogId": "summerlightning",
+      "title": "Gramsci Theme Parks",
+      "link": "https://summerlightning.substack.com/p/gramsci-theme-parks",
+      "date": "2026-08-19T20:43:03.000Z",
+      "excerpt": "The economy of things in the unmaking"
+    },
+    {
+      "id": "zgni2i",
+      "blogId": "ivanturkovic",
+      "title": "I Still Miss Writing Code",
+      "link": "https://www.ivanturkovic.com/2026/08/19/still-miss-writing-code",
+      "date": "2026-08-19T20:08:50.000Z",
+      "excerpt": "There is a specific kind of quiet I have been thinking about lately. It is late. The office is empty, or the house is finally asleep. There is a problem on the screen that refuses to be solved, and for once there is nothing else. No Slack. No calendar invite. No one asking for an... The post I Still..."
+    },
+    {
+      "id": "1qkbz8",
+      "blogId": "braddelong",
+      "title": "More Signs of a Bubble Peak: BREAKING NEWS WATCH OF THE DAY",
+      "link": "https://braddelong.substack.com/p/more-signs-of-a-bubble-peak-breaking",
+      "date": "2026-08-19T20:08:17.000Z",
+      "excerpt": "OpenAI, the company that had been selling vibes, looks like it is starting to husband its cash in the face of the Anthropic challenge: two peer coding agents and yet a 5.5x revenue growth-rate gap..."
+    },
+    {
+      "id": "ef2nn0",
+      "blogId": "thezvi",
+      "title": "OpenAI Takes Initial Steps To Address Its Alignment Problems",
+      "link": "https://thezvi.substack.com/p/openai-takes-initial-steps-to-address",
+      "date": "2026-08-19T19:51:17.000Z",
+      "excerpt": "OpenAI has some severe misalignment problems, and experienced total failures of its infrastructure and supervision."
+    },
+    {
+      "id": "o58pnc",
+      "blogId": "marginalrevolution",
+      "title": "Declining Occupations and Career Outcomes in the United States",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/08/declining-occupations-and-career-outcomes-in-the-united-states.html",
+      "date": "2026-08-19T18:41:36.000Z",
+      "excerpt": "This strikes me as somewhat less of a problem than I might have thought: We study long-run career consequences of initial employment in an occupation that subsequently declines. Linking the 2000 Decennial Census to US administrative employment and earnings records through 2020, we follow more than 2..."
+    },
+    {
+      "id": "p9oaum",
+      "blogId": "abnormalreturns",
+      "title": "Wednesday links: shrinkflation and skimpflation",
+      "link": "https://abnormalreturns.com/2026/08/19/wednesday-links-shrinkflation-and-skimpflation",
+      "date": "2026-08-19T17:49:12.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "xqkobl",
+      "blogId": "honestbroker",
+      "title": "Stanford's Secret Course on How to Rule the World ",
+      "link": "https://www.honest-broker.com/p/stanfords-secret-course-on-how-to",
+      "date": "2026-08-19T17:36:47.000Z",
+      "excerpt": "And its link to the scandal surrounding Bill Gates’s daughter"
+    },
     {
       "id": "9nstk6",
       "blogId": "conspicuouscognition",
@@ -106,6 +290,14 @@
       "excerpt": "Wednesdays are all about personal finance here at Abnormal Returns. You can check out last week’s links including a look at the..."
     },
     {
+      "id": "pa9cpl",
+      "blogId": "naomiklein",
+      "title": "Six (Other) Books to Pre-Order Now",
+      "link": "https://naomiklein.substack.com/p/six-other-books-to-pre-order-now",
+      "date": "2026-08-19T14:03:31.000Z",
+      "excerpt": "If you like my books, I think you’ll like these too"
+    },
+    {
       "id": "knu72b",
       "blogId": "millersbookreview",
       "title": "That’s the Deal: What Rankles You Most About AI Prose?",
@@ -120,62 +312,6 @@
       "link": "https://braddelong.substack.com/p/can-we-sell-equity-financing-of-the",
       "date": "2026-08-19T13:42:27.000Z",
       "excerpt": "Jensen Huang keeps two books: last year’s says old chips are worthless and obsolete, while this year’s says that old chips are high-quality ten-year bonds; & Elisabeth Lopatto says: “WAIT A MINUTE!!!”"
-    },
-    {
-      "id": "hvivbp",
-      "blogId": "aldaily",
-      "title": "The ultimate scholarly shortcut, the Ars Notoria was said to instantly grant the full range of Medieval learning — but at the risk of poisoning one’s soul",
-      "link": "https://publicdomainreview.org/essay/ars-notoria",
-      "date": "2026-08-19T13:20:50.000Z",
-      "excerpt": "The ultimate scholarly shortcut, the Ars Notoria was said to instantly grant the full range of Medieval learning — but at the risk of poisoning one’s soul"
-    },
-    {
-      "id": "hjmq05",
-      "blogId": "aldaily",
-      "title": "In weird girl literature detached protagonists have bad jobs, slightly-happier best friends, and troubled relationships. Are the novels any good?",
-      "link": "https://www.woman-of-letters.com/p/the-weird-girl-novel",
-      "date": "2026-08-19T13:19:50.000Z",
-      "excerpt": "In weird girl literature detached protagonists have bad jobs, slightly-happier best friends, and troubled relationships. Are the novels any good?"
-    },
-    {
-      "id": "3tuh13",
-      "blogId": "aldaily",
-      "title": "Few American writers have skewered the self-deluding barbarity that is American foreign policy with as much force as Dwight Macdonald",
-      "link": "https://www.bostonreview.net/articles/think-again",
-      "date": "2026-08-19T13:18:50.000Z",
-      "excerpt": "Few American writers have skewered the self-deluding barbarity that is American foreign policy with as much force as Dwight Macdonald"
-    },
-    {
-      "id": "6fjn2c",
-      "blogId": "aldaily",
-      "title": "What caused a particularly lurid sex scandal in Prussian Königsberg? The theosophical views and alluring curls of Johann Wilhelm Ebel ",
-      "link": "https://www.newyorker.com/magazine/2026/08/24/a-scandal-in-konigsberg-christopher-clark-book-review",
-      "date": "2026-08-19T13:17:50.000Z",
-      "excerpt": "What caused a particularly lurid sex scandal in Prussian Königsberg? The theosophical views and alluring curls of Johann Wilhelm Ebel"
-    },
-    {
-      "id": "podwkv",
-      "blogId": "aldaily",
-      "title": "W.G. Sebald’s poetic, picturesque accounts of Austrian literature are, at crucial points, gravely distorted",
-      "link": "https://clereviewofbooks.com/wg-sebald-silent-catastrophes",
-      "date": "2026-08-19T13:16:50.000Z",
-      "excerpt": "W.G. Sebald’s poetic, picturesque accounts of Austrian literature are, at crucial points, gravely distorted"
-    },
-    {
-      "id": "83j4k6",
-      "blogId": "aldaily",
-      "title": "The smorgasbord: What began as modest, rule-bound dining in Sweden evolved into something akin to a “pagan feast” in the United States",
-      "link": "https://www.cabinetmagazine.org/issues/71/licht.php",
-      "date": "2026-08-19T13:15:50.000Z",
-      "excerpt": "The smorgasbord: What began as modest, rule-bound dining in Sweden evolved into something akin to a “pagan feast” in the United States"
-    },
-    {
-      "id": "x1rq81",
-      "blogId": "aldaily",
-      "title": "The “.” emerged 2,000 years ago. “?” in the 8th century, “!” in the 14th. Then not much changed since about 1600",
-      "link": "https://www.wsj.com/arts-culture/books/on-the-mark-review-whats-the-point-7d336fe4?st=gVaexZ&reflink=desktopwebshare_permalink",
-      "date": "2026-08-19T13:14:50.000Z",
-      "excerpt": "The “.” emerged 2,000 years ago. “?” in the 8th century, “!” in the 14th. Then not much changed since about 1600"
     },
     {
       "id": "rgs3dh",
@@ -15314,6 +15450,14 @@
       "excerpt": ""
     },
     {
+      "id": "xt6kdp",
+      "blogId": "seangoedecke",
+      "title": "Good writing is obvious, not original",
+      "link": "https://seangoedecke.com/good-writing-is-obvious-not-original",
+      "date": "2026-07-14T00:00:00.000Z",
+      "excerpt": ""
+    },
+    {
       "id": "azl2d4",
       "blogId": "kottke",
       "title": " “A star located about 1,300 light-years from Earth... ",
@@ -26146,20 +26290,20 @@
       "excerpt": "Elon Musk's SpaceX IPO is a very scary moment for the stock market. And AI is getting repriced in an ugly way as corporate America finally has to start paying for the tools."
     },
     {
-      "id": "x7tan6",
-      "blogId": "seangoedecke",
-      "title": "Weird projects I shipped with AI",
-      "link": "https://seangoedecke.com/weird-projects-i-shipped-with-ai",
-      "date": "2026-06-01T00:00:00.000Z",
-      "excerpt": ""
-    },
-    {
       "id": "eoodvc",
       "blogId": "craigmod",
       "title": "[RIDGELINE] Walking the Brooklyn Bridge",
       "link": "https://craigmod.com/ridgeline/228",
       "date": "2026-06-01T00:00:00.000Z",
       "excerpt": "Ridgeline subscribers — Thanks for all the “Yo!“s last week. It looks like transmissions from mailbot2k are getting through. (Let me know if you see any “rendering errors” in your email clients; I think we fixed the Proton Mail issues.) FYI, because the last issue of Roden ended up in many a spam fo..."
+    },
+    {
+      "id": "x7tan6",
+      "blogId": "seangoedecke",
+      "title": "Weird projects I shipped with AI",
+      "link": "https://seangoedecke.com/weird-projects-i-shipped-with-ai",
+      "date": "2026-06-01T00:00:00.000Z",
+      "excerpt": ""
     },
     {
       "id": "kgzexy",
