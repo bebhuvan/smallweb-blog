@@ -1878,6 +1878,28 @@
       ],
       "description": "Russ Roberts on life in Israel during and after October 7.",
       "proxy": true
+    },
+    {
+      "id": "nicholasdecker",
+      "name": "Homo Economicus",
+      "url": "https://nicholasdecker.substack.com",
+      "feed": "https://nicholasdecker.substack.com/feed",
+      "categories": [
+        "economics",
+        "culture"
+      ],
+      "description": "Nicholas Decker on monetary policy, academia, and applied economics."
+    },
+    {
+      "id": "lcamtuf",
+      "name": "lcamtuf's thing",
+      "url": "https://blog.coredump.cx",
+      "feed": "https://blog.coredump.cx/feed",
+      "categories": [
+        "tech",
+        "science"
+      ],
+      "description": "Michal Zalewski on geek culture, algorithms, and electronic circuit design."
     }
   ]
 }
