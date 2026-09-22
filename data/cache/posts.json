@@ -1,44 +1,140 @@
 {
-  "lastUpdated": "2026-09-22T05:36:39.790Z",
+  "lastUpdated": "2026-09-22T13:57:09.116Z",
   "posts": [
     {
-      "id": "y50uj5",
+      "id": "7df71g",
+      "blogId": "mrzepczynski",
+      "title": "Fimrs need to be HRO - highly resilient organizations ",
+      "link": "https://mrzepczynski.blogspot.com/2026/09/fimrs-need-to-be-hro-highly-resilient.html",
+      "date": "2026-09-22T13:50:31.000Z",
+      "excerpt": "Better risk management requires mindful organizing that creates high-reliability organizations. Mindful organizing develops decision-making processes to protect against high volatility, chaotic markets, and surprises. This post synthesizes the key points of Managing the Unexpected: Sustained Perform..."
+    },
+    {
+      "id": "1pv67o",
+      "blogId": "interconnects",
+      "title": "Debating RSI, the US-China Gap, and Jaggedness with JS Denain of Epoch AI",
+      "link": "https://www.interconnects.ai/p/debating-rsi-the-us-china-gap-and",
+      "date": "2026-09-22T13:37:45.000Z",
+      "excerpt": "Podcast #19"
+    },
+    {
+      "id": "ybza81",
+      "blogId": "spyglass",
+      "title": "Soylent Googlebook is Android",
+      "link": "https://spyglass.org/googlebook-android",
+      "date": "2026-09-22T13:36:38.000Z",
+      "excerpt": "Google's latest OS seems more about Android vs. Windows (and maybe Mac) than about some new AI PC play..."
+    },
+    {
+      "id": "ciy15j",
+      "blogId": "kottke",
+      "title": "“The best next steps are the concrete ones: Big AI needs...",
+      "link": "https://kottke.org/26/09/0049658-the-best-next-steps-are-t",
+      "date": "2026-09-22T13:30:00.000Z",
+      "excerpt": "“The best next steps are the concrete ones: Big AI needs to follow all current laws—just like everyone else. So far—they haven’t. When Big AI breaks those laws, they must face pros­e­cu­tion and penal­ties—just like everyone else. So far—they haven’t.”"
+    },
+    {
+      "id": "yo42pj",
+      "blogId": "everythingisbullshit",
+      "title": "AI Is Not the End of the World",
+      "link": "https://www.everythingisbullshit.blog/p/ai-is-not-the-end-of-the-world",
+      "date": "2026-09-22T13:03:45.000Z",
+      "excerpt": "This is a revised version of an essay I wrote a couple years ago."
+    },
+    {
+      "id": "va74ho",
+      "blogId": "thezvi",
+      "title": "Politics Gets Interested In Those Trying Not To Die",
+      "link": "https://thezvi.substack.com/p/politics-gets-interested-in-those",
+      "date": "2026-09-22T12:58:51.000Z",
+      "excerpt": "This was the month the world took notice that AI might kill everyone."
+    },
+    {
+      "id": "xwa37l",
       "blogId": "marginalrevolution",
-      "title": "Banning self-recursive improvement in AI models?",
-      "link": "https://marginalrevolution.com/marginalrevolution/2026/09/banning-self-recursive-improvement-in-ai-models.html",
-      "date": "2026-09-22T04:45:57.000Z",
-      "excerpt": "Some people are suggesting this, including Ezra Klein. I do not understand how it is supposed to work. Put aside the issue of foregone innovations, let us say I seek to access an AI from overseas. Am I allowed to visit their website? So many sites have AI behind them, including Chinese open source A..."
+      "title": "Dartmouth Provost okie-dokie",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/09/dartmouth-provost-okie-dokie.html",
+      "date": "2026-09-22T12:20:22.000Z",
+      "excerpt": "On Aug. 26, a Semafor investigation using Pangram to determine whether recent guest columns in major newspapers were written using artificial intelligence identified a column by Schnell as “100% AI-written.” Schnell’s column in The Washington Post — titled “Universities are fighting AI cheating. But..."
+    },
+    {
+      "id": "lobbzv",
+      "blogId": "danq",
+      "title": "[Repost] Polyday Politics workshop",
+      "link": "https://danq.me/2026/09/22/polyday-politics-workshop",
+      "date": "2026-09-22T12:16:24.000Z",
+      "excerpt": "Grant ran a workshop on politics (and law) around polyamory, at a recent event. I wasn't there, but enjoyed reading his notes after-the-fact... and wanted to use the opportunity to share some of my own thoughts and experiences."
+    },
+    {
+      "id": "motlqt",
+      "blogId": "ofdollarsanddata",
+      "title": "Is Startup Equity a Bad Deal?",
+      "link": "https://ofdollarsanddata.com/is-startup-equity-a-bad-deal",
+      "date": "2026-09-22T11:45:57.000Z",
+      "excerpt": "Imagine joining a startup as employee number 10. Your salary is a bit below what the market pays for your role, but, in exchange, you get equity. How much? 0.25% of the company to be exact. You do the math in your head—if the company sells for $100M in a few years, you'll make $250,000. Not bad, rig..."
+    },
+    {
+      "id": "huf8w1",
+      "blogId": "commonreader",
+      "title": "Tolkien in Poets’ Corner",
+      "link": "https://www.commonreader.co.uk/p/tolkien-in-poets-corner",
+      "date": "2026-09-22T11:17:26.000Z",
+      "excerpt": "JRR Tolkien and CS Lewis used to regularly share a pub table in Oxford to discuss their work."
+    },
+    {
+      "id": "psbbe8",
+      "blogId": "ritholtz",
+      "title": "10 Tuesday AM Reads",
+      "link": "https://ritholtz.com/2026/09/10-tuesday-am-reads-491",
+      "date": "2026-09-22T10:30:44.000Z",
+      "excerpt": "My first day of Autumn reads (Fall Equinox is 8:04 P.M!): ​• How Much Is Being Close to Your Favorite Artist Worth? Superfans Are Reshaping the Concert Industry: Rosalind Adams on fans spending thousands for barricade spots and VIP perks — and how that’s becoming normal. Some admit to spending thous..."
+    },
+    {
+      "id": "bhakua",
+      "blogId": "figsinwintertime",
+      "title": "Early Socratic dialogues: Hippias Major",
+      "link": "https://figsinwintertime.substack.com/p/early-socratic-dialogues-hippias",
+      "date": "2026-09-22T10:00:46.000Z",
+      "excerpt": "What is fineness?"
     },
     {
       "id": "bmqyem",
       "blogId": "aldaily",
       "title": "Annie Dillard “was a sort of drill sergeant of human consciousness: determined, always, to force herself, and others, to see”",
       "link": "https://www.nytimes.com/2026/09/20/magazine/annie-dillard-writing-voice-remembrance.html?unlocked_article_code=1.C1E.inu6.tqXiYEeFj2o3&smid=url-share",
-      "date": "2026-09-22T01:29:22.000Z",
+      "date": "2026-09-22T09:46:28.000Z",
       "excerpt": "Annie Dillard “was a sort of drill sergeant of human consciousness: determined, always, to force herself, and others, to see”"
+    },
+    {
+      "id": "vfmd4u",
+      "blogId": "paulkrugman",
+      "title": "Will Crypto Crash the Blue Wave?",
+      "link": "https://paulkrugman.substack.com/p/will-crypto-crash-the-blue-wave",
+      "date": "2026-09-22T09:46:07.000Z",
+      "excerpt": "AI gets the attention, but the Big Scam is still spending big"
     },
     {
       "id": "5bmexr",
       "blogId": "aldaily",
       "title": "“Reading is like exercise. You have to go a little bit beyond what you’re comfortable with, a little bit more than you can really do”",
       "link": "https://www.chronicle.com/article/deciding-that-things-are-too-hard-for-students-is-a-self-fulfilling-prophecy",
-      "date": "2026-09-22T01:28:22.000Z",
+      "date": "2026-09-22T09:45:28.000Z",
       "excerpt": "“Reading is like exercise. You have to go a little bit beyond what you’re comfortable with, a little bit more than you can really do”"
     },
     {
       "id": "b55wzs",
       "blogId": "aldaily",
-      "title": "It was announced to much fanfare that AI had solved the Navier–Stokes problem. As a mathematician explains, that’s only sort of the case",
+      "title": "AI has solved the longtime Navier–Stokes problem, said the triumphant announcement. Well, sort of. A mathematician explains",
       "link": "https://inference-review.com/article/ai-will-not-make-mathematicians-obsolete",
-      "date": "2026-09-22T01:27:22.000Z",
-      "excerpt": "It was announced to much fanfare that AI had solved the Navier–Stokes problem. As a mathematician explains, that’s only sort of the case"
+      "date": "2026-09-22T09:44:28.000Z",
+      "excerpt": "AI has solved the longtime Navier–Stokes problem, said the triumphant announcement. Well, sort of. A mathematician explains"
     },
     {
       "id": "f566gf",
       "blogId": "aldaily",
       "title": "Critical theory can be used to convey sophistication — but when it goes wrong, the whiff of pretension and arrogance is unmistakable",
       "link": "https://hedgehogreview.com/web-features/thr/posts/slouching-toward-paris",
-      "date": "2026-09-22T01:26:22.000Z",
+      "date": "2026-09-22T09:43:28.000Z",
       "excerpt": "Critical theory can be used to convey sophistication — but when it goes wrong, the whiff of pretension and arrogance is unmistakable"
     },
     {
@@ -46,7 +142,7 @@
       "blogId": "aldaily",
       "title": "Saffron for joy, ostrich liver for melancholy: medieval mental health was absurd. Yet some aspects seem strangely modern",
       "link": "https://aeon.co/essays/the-curio-cabinet-of-medieval-mental-health",
-      "date": "2026-09-22T01:25:22.000Z",
+      "date": "2026-09-22T09:42:28.000Z",
       "excerpt": "Saffron for joy, ostrich liver for melancholy: medieval mental health was absurd. Yet some aspects seem strangely modern"
     },
     {
@@ -54,7 +150,7 @@
       "blogId": "aldaily",
       "title": "“The body could have been that of a hobo.” The life — and death — of Victor Serge is evidence that years spent on the barricades take a toll",
       "link": "https://newleftreview.org/sidecar/posts/against-the-tide",
-      "date": "2026-09-22T01:24:22.000Z",
+      "date": "2026-09-22T09:41:28.000Z",
       "excerpt": "“The body could have been that of a hobo.” The life — and death — of Victor Serge is evidence that years spent on the barricades take a toll"
     },
     {
@@ -62,7 +158,7 @@
       "blogId": "aldaily",
       "title": "How a young Roger Scruton, an apolitical and unusually charming Cambridge undergraduate, became Britain's most reviled intellectual",
       "link": "https://firstthings.com/the-making-of-roger-scruton",
-      "date": "2026-09-22T01:23:22.000Z",
+      "date": "2026-09-22T09:40:28.000Z",
       "excerpt": "How a young Roger Scruton, an apolitical and unusually charming Cambridge undergraduate, became Britain's most reviled intellectual"
     },
     {
@@ -70,7 +166,7 @@
       "blogId": "aldaily",
       "title": "The split between Harold Bloom and Northrop Frye led to no shortage of bad blood. But were their theories of literary inheritance that far apart?",
       "link": "https://lareviewofbooks.org/article/harold-bloom-letters-man-who-read-everything-influence",
-      "date": "2026-09-22T01:22:22.000Z",
+      "date": "2026-09-22T09:39:28.000Z",
       "excerpt": "The split between Harold Bloom and Northrop Frye led to no shortage of bad blood. But were their theories of literary inheritance that far apart?"
     },
     {
@@ -78,7 +174,7 @@
       "blogId": "aldaily",
       "title": "In 2011, a reddish hair was found in Thomas Jefferson's Bible. That discovery prompted a decade of DNA testing – and a lot of ill will",
       "link": "https://www.chronicle.com/article/the-smithsonian-used-her-dna-and-lost-her-trust",
-      "date": "2026-09-22T01:21:22.000Z",
+      "date": "2026-09-22T09:38:28.000Z",
       "excerpt": "In 2011, a reddish hair was found in Thomas Jefferson's Bible. That discovery prompted a decade of DNA testing – and a lot of ill will"
     },
     {
@@ -86,8 +182,72 @@
       "blogId": "aldaily",
       "title": "Why collect stamps? Explanations include nostalgia, anal-retentiveness, erotic frustration, and the desire to escape into a remote, private world",
       "link": "https://www.wsj.com/arts-culture/books/the-madmans-guide-to-stamp-collecting-review-sticking-to-what-they-know-e96da0e9?st=Ewt8CS&reflink=desktopwebshare_permalink",
-      "date": "2026-09-22T01:20:22.000Z",
+      "date": "2026-09-22T09:37:28.000Z",
       "excerpt": "Why collect stamps? Explanations include nostalgia, anal-retentiveness, erotic frustration, and the desire to escape into a remote, private world"
+    },
+    {
+      "id": "ulgejb",
+      "blogId": "sivers",
+      "title": "Very good China book, following four real women in current China",
+      "link": "https://sive.rs/d",
+      "date": "2026-09-22T09:12:41.000Z",
+      "excerpt": "Very good China book, following four real women in current China: Private Revolutions by Yuan Yang. My notes: sive.rs/book/ChinaFourWomen"
+    },
+    {
+      "id": "ub8jwv",
+      "blogId": "flowingdata",
+      "title": "Music generated through live freeway traffic feed",
+      "link": "https://flowingdata.com/2026/09/22/music-generated-through-live-freeway-traffic-feed",
+      "date": "2026-09-22T09:12:35.000Z",
+      "excerpt": "A live Caltrans feed of the southbound 101 highway in California is translated… Tags: highway, music, traffic"
+    },
+    {
+      "id": "1x9xe1",
+      "blogId": "robinjbrooks",
+      "title": "How Weak is the Brazilian Real?",
+      "link": "https://robinjbrooks.substack.com/p/how-weak-is-the-brazilian-real",
+      "date": "2026-09-22T09:01:59.000Z",
+      "excerpt": "The Brazilian Real isn’t actually weak and could rally a lot if Bolsonaro wins"
+    },
+    {
+      "id": "3bos4m",
+      "blogId": "noahpinion",
+      "title": "The problem(s) with utilitarianism",
+      "link": "https://www.noahpinion.blog/p/the-problems-with-utilitarianism",
+      "date": "2026-09-22T08:53:46.000Z",
+      "excerpt": "Our favorite moral philosophy is about to come under increasing strain."
+    },
+    {
+      "id": "kqinwk",
+      "blogId": "pluralistic",
+      "title": "Pluralistic: Bonta sold us out to Trump's oligarchs (22 Sep 2026)",
+      "link": "https://pluralistic.net/2026/09/22/happy-chudmas",
+      "date": "2026-09-22T08:19:01.000Z",
+      "excerpt": "Today's links Bonta sold us out to Trump's oligarchs: A \"settlement\" that promises less than nothing. Hey look at this: Delights to delectate. Object permanence: Warren on taxing the rich and class warfare; Psychology v reproducibility; Copyright troll sentenced for beating Uber driver; \"Halloween M..."
+    },
+    {
+      "id": "ulyr44",
+      "blogId": "kottke",
+      "title": "Ed Sheeran tried to stay neutral on a moving train. “If...",
+      "link": "https://kottke.org/26/09/0049657-ed-sheeran-tried-to-stay-",
+      "date": "2026-09-22T07:42:00.000Z",
+      "excerpt": "Ed Sheeran tried to stay neutral on a moving train. “If [celebrities] remain neutral (silent), they won’t offend anyone and they will, hopefully, appeal to everyone. They use the facade of neutrality as shelter, as a place to take refuge.”"
+    },
+    {
+      "id": "8lrnmd",
+      "blogId": "klementoninvesting",
+      "title": "The impact of the US-China chip ban on third parties",
+      "link": "https://klementoninvesting.substack.com/p/the-impact-of-the-us-china-chip-ban",
+      "date": "2026-09-22T06:00:17.000Z",
+      "excerpt": "Since 2020, US administrations of both parties have implemented bans on chip and semiconductor manufacturing equipment to China."
+    },
+    {
+      "id": "y50uj5",
+      "blogId": "marginalrevolution",
+      "title": "Banning self-recursive improvement in AI models?",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/09/banning-self-recursive-improvement-in-ai-models.html",
+      "date": "2026-09-22T04:45:57.000Z",
+      "excerpt": "Some people are suggesting this, including Ezra Klein. I do not understand how it is supposed to work. Put aside the issue of foregone innovations, let us say I seek to access an AI from overseas. Am I allowed to visit their website? So many sites have AI behind them, including Chinese open source A..."
     },
     {
       "id": "yo6o7j",
@@ -144,6 +304,14 @@
       "link": "https://www.astralcodexten.com/p/open-thread-452",
       "date": "2026-09-21T22:05:59.000Z",
       "excerpt": "..."
+    },
+    {
+      "id": "mjkla7",
+      "blogId": "entropicthoughts",
+      "title": "Cheaper LLM labelling",
+      "link": "https://entropicthoughts.com/cheaper-llm-labeling",
+      "date": "2026-09-21T22:00:00.000Z",
+      "excerpt": "I have a small project where I needed to label commits as either “maintenance” or “new development”. The obvious way to do it is with a cheap but relatively capable LLM, like GPT 5.6 Luna. I tested it on a small set of commits and manually verified its labelling, and it emitted the same label as I w..."
     },
     {
       "id": "hr4d79",
@@ -3656,14 +3824,6 @@
       "link": "https://mrzepczynski.blogspot.com/2026/09/the-danger-in-in-covariance-matrix.html",
       "date": "2026-09-13T19:19:36.000Z",
       "excerpt": "While most investors focus on volatility, the covariance matrix can significantly affect performance and is hard to measure. A large covariance matrix with N assets will have N(N+1)/2 free parameters and T degrees of freedom based on the number of observations. A large portfolio will be hard to calc..."
-    },
-    {
-      "id": "ulgejb",
-      "blogId": "sivers",
-      "title": "Best food I’ve ever eaten",
-      "link": "https://sive.rs/d",
-      "date": "2026-09-13T18:41:13.000Z",
-      "excerpt": "Best food I’ve ever eaten: When in Finland go to liemi.fi/ and order SHANGHAI TACOS WITH HALLOUMI. I had them every day for four days."
     },
     {
       "id": "wjeppt",
@@ -8280,6 +8440,14 @@
       "link": "https://ploum.net/2026-09-02-i_dont_have_a_smartphone.html",
       "date": "2026-09-02T00:00:00.000Z",
       "excerpt": "I Don’t Have a Smartphone… Tradução para português por Berlim …or, at least, I wish I didn’t. \"I don’t have a smartphone,\" is what I tell people and professionals nowadays. This allows me to cut the crap about companies insisting that I install their app or restaurants wishing that I scan a QR code..."
+    },
+    {
+      "id": "txycm3",
+      "blogId": "sivers",
+      "title": "Reflections and Moral Maxims - by François duc de La Rochefoucauld",
+      "link": "https://sive.rs/book/Rochefoucauld",
+      "date": "2026-09-02T00:00:00.000Z",
+      "excerpt": "summary: Entertaining for the first few minutes, then you catch on to the formula of his little stupid sayings based on opposites. Then you notice his deeply misanthropic disgust of all people, especially women. Also this book has a weirdly verbose preface by the translator, almost as long as the co..."
     },
     {
       "id": "orshsh",
@@ -17178,6 +17346,14 @@
       "excerpt": ""
     },
     {
+      "id": "g7mj6x",
+      "blogId": "sivers",
+      "title": "Turkey - Culture Smart - by Charlotte McPherson",
+      "link": "https://sive.rs/book/TurkeyCS",
+      "date": "2026-08-11T00:00:00.000Z",
+      "excerpt": "summary: Türkiye history and cultural understanding. One of the better books in this series. The history helps explain today’s secular/religious balance or divisions. Then manners and travel tips. recommend: 7/10 my notes: Turkey seems Westernized and modern in many ways, but this appearance is misl..."
+    },
+    {
       "id": "1hwtv4",
       "blogId": "simonwillison",
       "title": "Introducing Muse Glimmer",
@@ -23184,6 +23360,14 @@
       "link": "https://www.noahpinion.blog/p/roundup-85-most-policy-is-also-industrial",
       "date": "2026-07-28T00:33:43.000Z",
       "excerpt": "Trump and science; U.S. national debt; Europe and software; America and trains; China and metal refining; Indian women; Murder"
+    },
+    {
+      "id": "yex4fb",
+      "blogId": "sivers",
+      "title": "On Looking: Eleven Walks with Expert Eyes - by Alexandra Horowitz",
+      "link": "https://sive.rs/book/OnLooking",
+      "date": "2026-07-28T00:00:00.000Z",
+      "excerpt": "summary: Author walks around the city - usually her New York City neighborhood - with 11 different experts in different fields. Geologist, artist, sound designer, physician, child, dog, and a blind woman. Each pointing out what she hadn’t noticed. You’ll learn lots of trivia from this, but it’s fun,..."
     },
     {
       "id": "hkmzpq",
@@ -37786,6 +37970,14 @@
       "excerpt": "Elon Musk is a trans-humanist, the ultimate expression of the Chicago School philosophy. The Pope offers a different vision about how limits make us human. Plus, Iran, Warner/Paramount, and more..."
     },
     {
+      "id": "j843mc",
+      "blogId": "sivers",
+      "title": "Private Revolutions - by Yuan Yang",
+      "link": "https://sive.rs/book/ChinaFourWomen",
+      "date": "2026-06-15T00:00:00.000Z",
+      "excerpt": "summary: Non-fiction story of four real women in current China, following their lives from childhood in the 1990s until 2023 when the book was published. I love her direct writing style, and the stories were pretty fascinating. A great 3rd or 4th book to help understand contemporary Chinese culture...."
+    },
+    {
       "id": "d1q91d",
       "blogId": "anildash",
       "title": "Maybe it's time for lots of little indie AIs to take over",
@@ -42674,20 +42866,20 @@
       "excerpt": "QuickQWERTY 1.2.3 is now available. QuickQWERTY is a web-based touch typing tutor for QWERTY keyboards that runs directly in the browser. This release includes two small bug fixes. In the previous release, QuickQWERTY source code management moved from GitHub to Codeberg. During that update, the lice..."
     },
     {
-      "id": "jv13b0",
-      "blogId": "sivers",
-      "title": "Netizen",
-      "link": "https://sive.rs/netizen",
-      "date": "2026-05-03T00:00:00.000Z",
-      "excerpt": "I can relate to the original meaning of this old term that means to be good citizen of the internet. Wikipedia says a “netizen” is someone who actively contributes to the development of the internet, not for personal gain or profit, but to make the internet a better place. only way to connect a Mac..."
-    },
-    {
       "id": "kjxmh5",
       "blogId": "sivers",
       "title": "Cambridge Language Surveys: Chinese - by Jerry Norman",
       "link": "https://sive.rs/book/ChineseLangJerryNorman",
       "date": "2026-05-03T00:00:00.000Z",
       "excerpt": "summary: 80’s book about Chinese, helped me understand how simplified Chinese writing came about: not as much top-down as bottom-up formalizing of shorthand and cursive that had been in use for centuries. recommend: 3/10 my notes: In the Ming and Qing dynasties there developed a very strong conserva..."
+    },
+    {
+      "id": "jv13b0",
+      "blogId": "sivers",
+      "title": "Netizen",
+      "link": "https://sive.rs/netizen",
+      "date": "2026-05-03T00:00:00.000Z",
+      "excerpt": "I can relate to the original meaning of this old term that means to be good citizen of the internet. Wikipedia says a “netizen” is someone who actively contributes to the development of the internet, not for personal gain or profit, but to make the internet a better place. only way to connect a Mac..."
     },
     {
       "id": "z9uoed",
