@@ -1,6 +1,254 @@
 {
-  "lastUpdated": "2026-10-06T15:46:30.791Z",
+  "lastUpdated": "2026-10-06T21:30:18.510Z",
   "posts": [
+    {
+      "id": "yj7vo3",
+      "blogId": "astralcodexten",
+      "title": "An Open Letter To Steven Pinker On AI",
+      "link": "https://www.astralcodexten.com/p/an-open-letter-to-steven-pinker-on",
+      "date": "2026-10-06T21:23:06.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "l0o0ge",
+      "blogId": "kottke",
+      "title": "From a tongue-in-cheek Google Japan, a conveyor belt...",
+      "link": "https://kottke.org/26/10/0049746-a-conveyor-belt-keyboard",
+      "date": "2026-10-06T21:20:00.000Z",
+      "excerpt": "From a tongue-in-cheek Google Japan, a conveyor belt keyboard, where the keys move and your hand stays still while typing. One of several unusual keyboards released by the company. You can even build your own."
+    },
+    {
+      "id": "7c25ps",
+      "blogId": "simonwillison",
+      "title": "EmbeddingGemma 2",
+      "link": "https://simonwillison.net/2026/Oct/6/hn-49983751",
+      "date": "2026-10-06T20:37:53.000Z",
+      "excerpt": "My comment on EmbeddingGemma 2 — Hacker News.I really appreciate that EmbeddingGemma 2 is under the Apache 2.0 license. For embedding models in particular, I don't think it makes sense to use a closed, proprietary, hosted-only model. Most applications of embedding models involve calculating thousand..."
+    },
+    {
+      "id": "prgl94",
+      "blogId": "wealthofcommonsense",
+      "title": "The Rich Are Getting Richer. So Is Everyone Else",
+      "link": "https://awealthofcommonsense.com/2026/10/the-rich-are-getting-richer-so-is-everyone-else",
+      "date": "2026-10-06T20:20:51.000Z",
+      "excerpt": "Americans are extraordinarily rich. The post The Rich Are Getting Richer. So Is Everyone Else appeared first on A Wealth of Common Sense. ..."
+    },
+    {
+      "id": "533r0y",
+      "blogId": "simonwillison",
+      "title": "Introducing Mistral Large 4: Le chonk",
+      "link": "https://simonwillison.net/2026/Oct/6/le-chonk",
+      "date": "2026-10-06T20:18:19.000Z",
+      "excerpt": "Introducing Mistral Large 4: Le chonk Mistral are back in the game. Today they're releasing a preview of Mistral Large 4, a 1 trillion parameter, 49 billion active parameter model trained on their own cluster of 3,800 NVIDIA Grace Blackwell GPUs. The preview is available via their API. They promise..."
+    },
+    {
+      "id": "b6u3w4",
+      "blogId": "kottke",
+      "title": "Silent Friend",
+      "link": "https://kottke.org/26/10/silent-friend",
+      "date": "2026-10-06T20:17:00.000Z",
+      "excerpt": "Silent Friend is a historical drama written and directed by Hungarian filmmaker Ildikó Enyedi. Here’s the description: In the botanical garden of a medieval German university, a ginkgo tree hundreds of years old watches its human neighbors through the slip-stream of time. Among them, a young woman i..."
+    },
+    {
+      "id": "osrths",
+      "blogId": "simonwillison",
+      "title": "Using Parseable with Datasette for OpenTelemetry traces",
+      "link": "https://simonwillison.net/2026/Oct/6/datasette-parseable-opentelemetry",
+      "date": "2026-10-06T19:07:31.000Z",
+      "excerpt": "TIL: Using Parseable with Datasette for OpenTelemetry traces I saw Parseable in a Show HN today - it's a new observability platform with both an open source (AGPL) Rust implementation (a single ~180MB binary), an \"Enterprise\" version with extra features and a cloud hosted option. Since Datasette 1.0..."
+    },
+    {
+      "id": "fbebw2",
+      "blogId": "kottke",
+      "title": "Things That Are Good to Do. Including “admit what you...",
+      "link": "https://kottke.org/26/10/0049748-things-that-are-good-to-d",
+      "date": "2026-10-06T19:01:00.000Z",
+      "excerpt": "Things That Are Good to Do. Including “admit what you don’t know”, “put the cart away”, “rest before you’re exhausted” (I often get this one wrong), and “walk home if you can”."
+    },
+    {
+      "id": "7whf6i",
+      "blogId": "kottke",
+      "title": "The Ku Klux Klan is rebranding itself as The Knights...",
+      "link": "https://kottke.org/26/10/0049747-rebranding-itself-as-the-",
+      "date": "2026-10-06T18:31:00.000Z",
+      "excerpt": "The Ku Klux Klan is rebranding itself as The Knights Party, centered on “family and faith” along with proud & open white supremacy. 💩🖕"
+    },
+    {
+      "id": "7c2x6z",
+      "blogId": "simonwillison",
+      "title": "Mistral Large 4",
+      "link": "https://simonwillison.net/2026/Oct/6/hn-49982139",
+      "date": "2026-10-06T18:20:58.000Z",
+      "excerpt": "My comment on Mistral Large 4 — Hacker News. wren6991: The benchmark is saturated. Frontier models are tested with an armadillo in fishnet tights jaywalking on Mars. OK well I couldn't resist this one: llm -m claude-opus-5.5 'Generate an SVG of an armadillo in fishnet tights jaywalking on Mars' llm..."
+    },
+    {
+      "id": "qw736z",
+      "blogId": "flowingdata",
+      "title": "Beliefs in life after death",
+      "link": "https://flowingdata.com/2026/10/06/beliefs-in-life-after-death",
+      "date": "2026-10-06T17:55:27.000Z",
+      "excerpt": "Is there something that comes after we die? For the Pudding, Alvin Chang… Tags: Alvin Chang, life, mortality, Pudding, religion"
+    },
+    {
+      "id": "k6q0wg",
+      "blogId": "naomiklein",
+      "title": "End Times Fascism in the news, making news: the conversations and controversies so far",
+      "link": "https://naomiklein.substack.com/p/end-times-fascism-in-the-news-making",
+      "date": "2026-10-06T17:37:15.000Z",
+      "excerpt": "A sampling of interviews, from TV to podcasts"
+    },
+    {
+      "id": "mx5dt5",
+      "blogId": "strangeloopcanon",
+      "title": "Agent governance looks less like moral education and more like institutional economics",
+      "link": "https://www.strangeloopcanon.com/p/agent-governance-looks-less-like",
+      "date": "2026-10-06T17:36:28.000Z",
+      "excerpt": "how agents turn ruthless on paper first"
+    },
+    {
+      "id": "1ayfbs",
+      "blogId": "larryswedroe",
+      "title": "The Evolution of Retail Investors From Speculation to Fundamentals",
+      "link": "https://larryswedroe.substack.com/p/the-evolution-of-retail-investors",
+      "date": "2026-10-06T17:24:09.000Z",
+      "excerpt": "The stereotype of the retail investor as an undifferentiated mass of Robinhood traders chasing meme stocks has always been too simple."
+    },
+    {
+      "id": "j2ezy6",
+      "blogId": "abnormalreturns",
+      "title": "Tuesday links: bonds as diversifier",
+      "link": "https://abnormalreturns.com/2026/10/06/tuesday-links-bonds-as-diversifier",
+      "date": "2026-10-06T17:17:46.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "9u3f4z",
+      "blogId": "critiqueanddigest",
+      "title": "A World of Hurt",
+      "link": "https://critiqueanddigest.substack.com/p/a-world-of-hurt",
+      "date": "2026-10-06T17:15:36.000Z",
+      "excerpt": "The Middle East Three Years After October 7"
+    },
+    {
+      "id": "g432hb",
+      "blogId": "aldaily",
+      "title": "The almost-forgotten Akhenaten. The pharaoh revolutionized Egyptian theology and art, then was erased from the material record",
+      "link": "https://www.theatlantic.com/magazine/2026/11/public-monuments-egyptian-art-exhibits/688700?gift=2DPnH7-w5PunRuGFjgT5WxxBLsXpFbypFsq1_OYo0ko",
+      "date": "2026-10-06T17:15:07.000Z",
+      "excerpt": "The almost-forgotten Akhenaten. The pharaoh revolutionized Egyptian theology and art, then was erased from the material record"
+    },
+    {
+      "id": "o2wonh",
+      "blogId": "aldaily",
+      "title": "Are single-mindedness and arrogance what’s required to write great fiction? Consider the case of Cormac McCarthy",
+      "link": "https://www.nytimes.com/2026/10/05/books/review/tracy-daugherty-cormac-mccarthy.html?unlocked_article_code=1.GVE.5ymi.kNsN3uRW1AqJ&smid=url-share",
+      "date": "2026-10-06T17:14:07.000Z",
+      "excerpt": "Are single-mindedness and arrogance what’s required to write great fiction? Consider the case of Cormac McCarthy"
+    },
+    {
+      "id": "10ymmp",
+      "blogId": "aldaily",
+      "title": "“The real secret to beating envy is to realize that envy, in addition to being a great vice and an internal poison, is a drag”",
+      "link": "https://thelampmagazine.com/issues/issue-37/so-light-and-gold",
+      "date": "2026-10-06T17:13:07.000Z",
+      "excerpt": "“The real secret to beating envy is to realize that envy, in addition to being a great vice and an internal poison, is a drag”"
+    },
+    {
+      "id": "860uku",
+      "blogId": "aldaily",
+      "title": "Habermas believed that the gap between expert and layperson could always, in principle, be closed by the right chain of translation",
+      "link": "https://aeon.co/essays/habermass-theory-of-truth-meant-he-changed-his-mind",
+      "date": "2026-10-06T17:12:07.000Z",
+      "excerpt": "Habermas believed that the gap between expert and layperson could always, in principle, be closed by the right chain of translation"
+    },
+    {
+      "id": "59fm9w",
+      "blogId": "aldaily",
+      "title": "The problem with pandemic novels: Their authors were scared, unmoored, and used their fiction as a staging ground for psychological parables",
+      "link": "https://www.metropolitanreview.org/p/the-failure-of-the-pandemic-novel",
+      "date": "2026-10-06T17:11:07.000Z",
+      "excerpt": "The problem with pandemic novels: Their authors were scared, unmoored, and used their fiction as a staging ground for psychological parables"
+    },
+    {
+      "id": "ehah26",
+      "blogId": "kottke",
+      "title": "Watch One of Radiohead’s Best Live Shows: Bonnaroo 2006",
+      "link": "https://kottke.org/26/10/watch-one-of-radioheads-best-live-shows-bonnaroo-2006",
+      "date": "2026-10-06T17:11:00.000Z",
+      "excerpt": "Back in ~2008, right on the cusp of stardom, Lady Gaga did a crate-digging video in a London record shop and named Radiohead’s set at Bonnaroo 2006 as her favorite show she’s ever been to. A post-fame Gaga reaffirmed her choice in this 2018 Vogue interview. Many share her opinion. Here’s the officia..."
+    },
+    {
+      "id": "oesw9i",
+      "blogId": "aldaily",
+      "title": "From the perspective of a career academic, the discourse in large parts of literary Substack appears worrisomely thin and uninformed",
+      "link": "https://paroxysms.substack.com/p/what-is-literary-substack",
+      "date": "2026-10-06T17:10:07.000Z",
+      "excerpt": "From the perspective of a career academic, the discourse in large parts of literary Substack appears worrisomely thin and uninformed"
+    },
+    {
+      "id": "jxjyjf",
+      "blogId": "aldaily",
+      "title": "Self-help and life hacks treat existence as a puzzle to be solved. The ancients had a name for that: heresy",
+      "link": "https://www.commonwealmagazine.org/literature-not-about-you",
+      "date": "2026-10-06T17:09:07.000Z",
+      "excerpt": "Self-help and life hacks treat existence as a puzzle to be solved. The ancients had a name for that: heresy"
+    },
+    {
+      "id": "k7ocub",
+      "blogId": "aldaily",
+      "title": "\"Lust in Chekhov’s story is a humble sin, worthy of pity. It causes no wars and burns no buildings\"",
+      "link": "https://thelampmagazine.com/issues/issue-37/the-long-dream",
+      "date": "2026-10-06T17:08:07.000Z",
+      "excerpt": "\"Lust in Chekhov’s story is a humble sin, worthy of pity. It causes no wars and burns no buildings\""
+    },
+    {
+      "id": "kny9vr",
+      "blogId": "aldaily",
+      "title": "A poem you can put your beer on. The mimeo revolution of the 1960s generated a deluge of experimental printing",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n18/gill-partington/boxed-into-our-language",
+      "date": "2026-10-06T17:07:07.000Z",
+      "excerpt": "A poem you can put your beer on. The mimeo revolution of the 1960s generated a deluge of experimental printing"
+    },
+    {
+      "id": "opzprm",
+      "blogId": "aldaily",
+      "title": "Contrarianism and controversy raised John Berger’s reputation as writer — while degrading his mental health",
+      "link": "https://lareviewofbooks.org/article/john-berger-from-life-tom-overton-biography-art",
+      "date": "2026-10-06T17:06:07.000Z",
+      "excerpt": "Contrarianism and controversy raised John Berger’s reputation as writer — while degrading his mental health"
+    },
+    {
+      "id": "e3eizv",
+      "blogId": "spyglass",
+      "title": "Tech CEOs: Thou Art a Villain",
+      "link": "https://spyglass.org/tech-hollywood-villain",
+      "date": "2026-10-06T16:52:07.000Z",
+      "excerpt": "This Fall, Hollywood is coming at tech with a vengeance..."
+    },
+    {
+      "id": "k5mxwl",
+      "blogId": "marginalrevolution",
+      "title": "Tuesday assorted links",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/10/tuesday-assorted-links-589.html",
+      "date": "2026-10-06T16:50:43.000Z",
+      "excerpt": "1. What is the real rate of Chinese economic growth? 2. An Abundance caucus rolls out a bipartisan agenda. 3. Canada fell to 18th from 9th in global ranking of economic freedom. 4. Will there ever be a Latin Bomb? 5. Why didn’t you use an LLM? 6. “Not only does it now cost France more […] The post T..."
+    },
+    {
+      "id": "btyv58",
+      "blogId": "kottke",
+      "title": "An interesting long profile of Mark Zuckerberg. “Mark is...",
+      "link": "https://kottke.org/26/10/0049741-an-interesting-long-profi",
+      "date": "2026-10-06T16:01:00.000Z",
+      "excerpt": "An interesting long profile of Mark Zuckerberg. “Mark is the fucking Terminator. He’s actually not an asshole, which is interesting. He’s not a miserable fuck. But his source of advantage is he’s never happy. He just doesn’t fucking stop.”"
+    },
+    {
+      "id": "2gwikh",
+      "blogId": "abnormalreturns",
+      "title": "Research links: lost capacities",
+      "link": "https://abnormalreturns.com/2026/10/06/research-links-lost-capacities",
+      "date": "2026-10-06T15:34:22.000Z",
+      "excerpt": "Tuesdays are all about academic (and practitioner) literature at Abnormal Returns. You can check out last week’s edition including a look at..."
+    },
     {
       "id": "q09nxm",
       "blogId": "kottke",
@@ -40,6 +288,14 @@
       "link": "https://braddelong.substack.com/p/crosspost-steve-vladeck-256-so-unexplained",
       "date": "2026-10-06T14:13:49.000Z",
       "excerpt": "A lot of false statements by Samuel Alito in his book “So Ordered”: he rebuts a caricature of his critics, and ignores all the ways his own behavior contradicts nearly all his claims..."
+    },
+    {
+      "id": "9z5ctp",
+      "blogId": "ritholtz",
+      "title": "What Is Driving Rates Higher and Bonds Lower?",
+      "link": "https://ritholtz.com/2026/10/what-is-driving-rates-higher-and-bonds-lower",
+      "date": "2026-10-06T14:00:51.000Z",
+      "excerpt": "The biggest question confronting investors today isn’t about AI, market concentration, or technology. Instead, it’s about the bond market. Like nearly everything in investing, it’s rarely about any one thing; instead, a mix of factors drives interest rates. Some matter more than others, but together..."
     },
     {
       "id": "yy9ru3",
@@ -90,86 +346,6 @@
       "excerpt": "A few months ago, I saw this tweet about the World Sauna Championships and how men will literally push themselves to the brink of death to win them, despite there being no tangible rewards. As the author of the tweet noted: It was interesting to me because it's another piece of evidence that as soon..."
     },
     {
-      "id": "g432hb",
-      "blogId": "aldaily",
-      "title": "The almost-forgotten Akhenaten. The pharaoh revolutionized Egyptian theology and art, then was erased from the material record",
-      "link": "https://www.theatlantic.com/magazine/2026/11/public-monuments-egyptian-art-exhibits/688700?gift=2DPnH7-w5PunRuGFjgT5WxxBLsXpFbypFsq1_OYo0ko",
-      "date": "2026-10-06T11:29:23.000Z",
-      "excerpt": "The almost-forgotten Akhenaten. The pharaoh revolutionized Egyptian theology and art, then was erased from the material record"
-    },
-    {
-      "id": "o2wonh",
-      "blogId": "aldaily",
-      "title": "Are single-mindedness and arrogance what’s required to write great fiction? Consider the case of Cormac McCarthy",
-      "link": "https://www.nytimes.com/2026/10/05/books/review/tracy-daugherty-cormac-mccarthy.html?unlocked_article_code=1.GVE.5ymi.kNsN3uRW1AqJ&smid=url-share",
-      "date": "2026-10-06T11:28:23.000Z",
-      "excerpt": "Are single-mindedness and arrogance what’s required to write great fiction? Consider the case of Cormac McCarthy"
-    },
-    {
-      "id": "10ymmp",
-      "blogId": "aldaily",
-      "title": "“The real secret to beating envy is to realize that envy, in addition to being a great vice and an internal poison, is a drag”",
-      "link": "https://thelampmagazine.com/issues/issue-37/so-light-and-gold",
-      "date": "2026-10-06T11:27:23.000Z",
-      "excerpt": "“The real secret to beating envy is to realize that envy, in addition to being a great vice and an internal poison, is a drag”"
-    },
-    {
-      "id": "860uku",
-      "blogId": "aldaily",
-      "title": "Habermas believed that the gap between expert and layperson could always, in principle, be closed by the right chain of translation",
-      "link": "https://aeon.co/essays/habermass-theory-of-truth-meant-he-changed-his-mind",
-      "date": "2026-10-06T11:26:23.000Z",
-      "excerpt": "Habermas believed that the gap between expert and layperson could always, in principle, be closed by the right chain of translation"
-    },
-    {
-      "id": "59fm9w",
-      "blogId": "aldaily",
-      "title": "The problem with pandemic novels: Their authors were scared, unmoored, and used their fiction as a staging ground for psychological parables",
-      "link": "https://www.metropolitanreview.org/p/the-failure-of-the-pandemic-novel",
-      "date": "2026-10-06T11:25:23.000Z",
-      "excerpt": "The problem with pandemic novels: Their authors were scared, unmoored, and used their fiction as a staging ground for psychological parables"
-    },
-    {
-      "id": "oesw9i",
-      "blogId": "aldaily",
-      "title": "From the perspective of a career academic, the discourse in large parts of literary Substack appears worrisomely thin and uninformed",
-      "link": "https://paroxysms.substack.com/p/what-is-literary-substack",
-      "date": "2026-10-06T11:24:23.000Z",
-      "excerpt": "From the perspective of a career academic, the discourse in large parts of literary Substack appears worrisomely thin and uninformed"
-    },
-    {
-      "id": "jxjyjf",
-      "blogId": "aldaily",
-      "title": "Self-help and life hacks treat existence as a puzzle to be solved. The ancients had a name for that: heresy",
-      "link": "https://www.commonwealmagazine.org/literature-not-about-you",
-      "date": "2026-10-06T11:23:23.000Z",
-      "excerpt": "Self-help and life hacks treat existence as a puzzle to be solved. The ancients had a name for that: heresy"
-    },
-    {
-      "id": "k7ocub",
-      "blogId": "aldaily",
-      "title": "\"Lust in Chekhov’s story is a humble sin, worthy of pity. It causes no wars and burns no buildings\"",
-      "link": "https://thelampmagazine.com/issues/issue-37/the-long-dream",
-      "date": "2026-10-06T11:22:23.000Z",
-      "excerpt": "\"Lust in Chekhov’s story is a humble sin, worthy of pity. It causes no wars and burns no buildings\""
-    },
-    {
-      "id": "kny9vr",
-      "blogId": "aldaily",
-      "title": "A poem you can put your beer on. The mimeo revolution of the 1960s generated a deluge of experimental printing",
-      "link": "https://www.lrb.co.uk/the-paper/v48/n18/gill-partington/boxed-into-our-language",
-      "date": "2026-10-06T11:21:23.000Z",
-      "excerpt": "A poem you can put your beer on. The mimeo revolution of the 1960s generated a deluge of experimental printing"
-    },
-    {
-      "id": "opzprm",
-      "blogId": "aldaily",
-      "title": "Contrarianism and controversy raised John Berger’s reputation as writer — while degrading his mental health",
-      "link": "https://lareviewofbooks.org/article/john-berger-from-life-tom-overton-biography-art",
-      "date": "2026-10-06T11:20:23.000Z",
-      "excerpt": "Contrarianism and controversy raised John Berger’s reputation as writer — while degrading his mental health"
-    },
-    {
       "id": "hbblh3",
       "blogId": "marginalrevolution",
       "title": "Paul Graham Versus the Pope",
@@ -200,6 +376,14 @@
       "link": "https://figsinwintertime.substack.com/p/teleology-vs-teleonomy-is-it-purpose",
       "date": "2026-10-06T10:01:36.000Z",
       "excerpt": "There’s a crucial distinction in the philosophy of biology that everyone ought to know about"
+    },
+    {
+      "id": "7ufdk",
+      "blogId": "ritholtz",
+      "title": "10 Tuesday AM Reads",
+      "link": "https://ritholtz.com/2026/10/10-tuesday-am-reads-493",
+      "date": "2026-10-06T10:00:22.000Z",
+      "excerpt": "My Two-for-Tuesday morning reads: • The Mighty American Consumer Is Crashing Through Inflation and Driving Growth: Spending is rising because prices are climbing and Americans are buying more stuff, despite long-running frustrations over inflation. (Wall Street Journal) • New Innovation Is Required..."
     },
     {
       "id": "szvmk5",
