@@ -1,6 +1,150 @@
 {
-  "lastUpdated": "2026-11-10T00:35:41.397Z",
+  "lastUpdated": "2026-11-10T07:54:52.835Z",
   "posts": [
+    {
+      "id": "t1zjrr",
+      "blogId": "simonwillison",
+      "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+      "link": "https://simonwillison.net/2026/Nov/10/muse-ember",
+      "date": "2026-11-10T07:28:21.000Z",
+      "excerpt": "Introducing Our Smallest, Most Efficient Model: Muse Ember Meta AI just launched their entry in the Claude Haiku/GPT Luna category: Muse Ember, which they describe as: [...] our smallest and most efficient model designed for complex reasoning execution and the work agents repeat all day: tool calls,..."
+    },
+    {
+      "id": "gbulsm",
+      "blogId": "klementoninvesting",
+      "title": "The start-up challenge in Europe",
+      "link": "https://klementoninvesting.substack.com/p/the-start-up-challenge-in-europe",
+      "date": "2026-11-10T07:09:33.000Z",
+      "excerpt": "The start-up scene in the US is the envy of bankers and investors across Europe and the UK."
+    },
+    {
+      "id": "1n2oud",
+      "blogId": "marginalrevolution",
+      "title": "*Unbeatable: The Brutally Honest Case for Free Markets*",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/11/unbeatable-the-brutally-honest-case-for-free-markets.html",
+      "date": "2026-11-10T05:39:10.000Z",
+      "excerpt": "That is the new and forthcoming book from Bryan Caplan, University of Chicago Press. Excerpt: Real-world free markets deliver one broad benefit that flies under the radar of economic theory: They shield humanity from its own Social Desirability Bias. Markets do the good things that sounds bad. Good..."
+    },
+    {
+      "id": "ivcew7",
+      "blogId": "simonwillison",
+      "title": "Quoting Prompting Claude Fable 5.2",
+      "link": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52",
+      "date": "2026-11-10T05:34:14.000Z",
+      "excerpt": "Claude Fable 5.2 responds closely to what the prompt says about who owns the code it works on. In Anthropic’s testing on small coding tasks, when a prompt said nothing about ownership or presented the code base as someone else’s, the model tended to add to the existing structure, even when that repe..."
+    },
+    {
+      "id": "uk5qa5",
+      "blogId": "simonwillison",
+      "title": "Yonkers Rises",
+      "link": "https://simonwillison.net/2026/Nov/10/yonkers-rises",
+      "date": "2026-11-10T03:53:04.000Z",
+      "excerpt": "Tool: Yonkers Rises I realized I didn't know where Yonkers was, so I looked it up on Google Maps and then, to help embed it's location and shape in my head (and to try out Claude Fable 5.2's 3D modeling and animation skills), I prompted Fable 5.2 Medium to: Make a three js animation where yonkers st..."
+    },
+    {
+      "id": "vq5rip",
+      "blogId": "lcamtuf",
+      "title": "Ontology #2: wish you were here",
+      "link": "https://blog.coredump.cx/p/ontology-2-wish-you-were-here",
+      "date": "2026-11-10T03:16:45.000Z",
+      "excerpt": "We offer no answers. Have a good day."
+    },
+    {
+      "id": "nd9ve4",
+      "blogId": "aldaily",
+      "title": "Anthropologists love to debate if their field is insufficiently reflexive, too reflexive, too relativistic, or too subservient to dominant norms. Enough!",
+      "link": "https://www.chronicle.com/article/anthropologys-forever-war-with-itself",
+      "date": "2026-11-10T02:51:37.000Z",
+      "excerpt": "Anthropologists love to debate if their field is insufficiently reflexive, too reflexive, too relativistic, or too subservient to dominant norms. Enough!"
+    },
+    {
+      "id": "yqty3h",
+      "blogId": "aldaily",
+      "title": "\"Academics routinely betray their best selves and lapse into a tendentious moralism when they enter the wider world of American political debate\"",
+      "link": "https://chronicleofhighereducation.substack.com/p/the-complacent-style-in-american",
+      "date": "2026-11-10T02:50:37.000Z",
+      "excerpt": "\"Academics routinely betray their best selves and lapse into a tendentious moralism when they enter the wider world of American political debate\""
+    },
+    {
+      "id": "coppro",
+      "blogId": "aldaily",
+      "title": "“We live in a time and a place when and where taste, inner resourcefulness, and fortitude are neither encouraged nor rewarded”",
+      "link": "https://hedgehogreview.com/issues/why-america-needs-a-third-founding/articles/agency-for-everyone",
+      "date": "2026-11-10T02:49:37.000Z",
+      "excerpt": "“We live in a time and a place when and where taste, inner resourcefulness, and fortitude are neither encouraged nor rewarded”"
+    },
+    {
+      "id": "6ozrrx",
+      "blogId": "aldaily",
+      "title": "In medieval times, curiosity was seen as a largely vacuous interest in novel or forbidden information",
+      "link": "https://thereader.mitpress.mit.edu/curiosity-is-no-solo-act",
+      "date": "2026-11-10T02:48:37.000Z",
+      "excerpt": "In medieval times, curiosity was seen as a largely vacuous interest in novel or forbidden information"
+    },
+    {
+      "id": "h133ph",
+      "blogId": "aldaily",
+      "title": "For five decades, George Scialabba has carried the torch for secular progressivism and literary criticism",
+      "link": "https://lareviewofbooks.org/article/george-scialabba-sealed-envelope-toward-intelligent-utopia-morality",
+      "date": "2026-11-10T02:47:37.000Z",
+      "excerpt": "For five decades, George Scialabba has carried the torch for secular progressivism and literary criticism"
+    },
+    {
+      "id": "ohigj5",
+      "blogId": "aldaily",
+      "title": "Electroconvulsive therapy appears to offer depressives an agonizing choice: their personality or their memory",
+      "link": "https://www.theatlantic.com/family/2026/11/shock-therapy-memory-loss/689267?gift=2DPnH7-w5PunRuGFjgT5W1rR0bpsivplOnut1KOYlz4",
+      "date": "2026-11-10T02:46:37.000Z",
+      "excerpt": "Electroconvulsive therapy appears to offer depressives an agonizing choice: their personality or their memory"
+    },
+    {
+      "id": "nu2221",
+      "blogId": "aldaily",
+      "title": "Simon Winchester, a charming rogue who traded geology for journalism and became a prolific and peripatetic polymath, has died. He was 82",
+      "link": "https://www.nytimes.com/2026/11/04/obituaries/simon-winchester-dead.html?unlocked_article_code=1.OFE.Z9H3.bwLy4rDM7sTl&smid=url-share",
+      "date": "2026-11-10T02:45:37.000Z",
+      "excerpt": "Simon Winchester, a charming rogue who traded geology for journalism and became a prolific and peripatetic polymath, has died. He was 82"
+    },
+    {
+      "id": "mkflch",
+      "blogId": "aldaily",
+      "title": "In 17th-century England, a flood could be blamed on a “Papistical Conspiracy of Traitors” — but general sinfulness could not be dismissed ",
+      "link": "https://publicdomainreview.org/essay/wonderful-weather",
+      "date": "2026-11-10T02:44:37.000Z",
+      "excerpt": "In 17th-century England, a flood could be blamed on a “Papistical Conspiracy of Traitors” — but general sinfulness could not be dismissed"
+    },
+    {
+      "id": "sookwl",
+      "blogId": "aldaily",
+      "title": "Why did American departments of literature prove so hospitable, or susceptible, to French theory?",
+      "link": "https://www.theideasletter.org/essay/the-poison-and-the-cure",
+      "date": "2026-11-10T02:43:37.000Z",
+      "excerpt": "Why did American departments of literature prove so hospitable, or susceptible, to French theory?"
+    },
+    {
+      "id": "753yb1",
+      "blogId": "aldaily",
+      "title": "Robert Wilson created spectacles that defied interpretation. So his critics wrote about their own ideas instead",
+      "link": "https://www.bookforum.com/print/3302/the-ticket-that-exploded-63089",
+      "date": "2026-11-10T02:42:37.000Z",
+      "excerpt": "Robert Wilson created spectacles that defied interpretation. So his critics wrote about their own ideas instead"
+    },
+    {
+      "id": "afe3pi",
+      "blogId": "danq",
+      "title": "[Article] Geohashing.site's Better Banhammer",
+      "link": "https://danq.me/2026/11/10/geohashing-sites-better-banhammer",
+      "date": "2026-11-10T02:00:42.000Z",
+      "excerpt": "Off the back of yesterday's conversations about PHP-powered honeypots to IP-ban badly-behaved bots, I'd like to share the configuration I've been using to effectively protect Geohashing.site this year."
+    },
+    {
+      "id": "dmsrv9",
+      "blogId": "flowingdata",
+      "title": "No Republican New England senators for the first time in a long time",
+      "link": "https://flowingdata.com/2026/11/09/new-england-senators-2026",
+      "date": "2026-11-10T00:39:16.000Z",
+      "excerpt": "For CT Insider, Philip Bump made a racetrack-like graphic to show the timeline… Tags: CT Insider, New England, Philip Bump, Senate, timeline"
+    },
     {
       "id": "i5gebb",
       "blogId": "lukeburgis",
@@ -15,7 +159,7 @@
       "title": "llm-anthropic 0.31",
       "link": "https://simonwillison.net/2026/Nov/9/llm-anthropic",
       "date": "2026-11-09T23:58:46.000Z",
-      "excerpt": "Release: llm-anthropic 0.31 Anthropic released Fable 5.2 and Mythos 5.2 today. I've added them to llm-anthropic, so you can now run prompts through Fable 5.2 like this: uv tool install llm llm install llm-anthropic llm keys set anthropic # paste key here llm -m claude-fable-5.2 \"Generate an SVG of a..."
+      "excerpt": "Release: llm-anthropic 0.31 Anthropic released Fable 5.2 and Mythos 5.2 today. Fable 5.2 is currently ranked first on Artificial Analysis. Anthropic say it \"solved two open problems in the physics of black holes\", so clearly their internal benchmarks have become more ambitious! I've added the new mo..."
     },
     {
       "id": "xj85t3",
@@ -79,87 +223,7 @@
       "title": "The Welcome Rain Falling From the Sky",
       "link": "https://kottke.org/26/11/the-welcome-rain-falling-from-the-sky",
       "date": "2026-11-09T19:40:00.000Z",
-      "excerpt": "I love Taiwanese artist Kuang-Yu Tsui’s 1997 conceptual art piece The Welcome Rain Falling From the Sky but I couldn’t really tell you what it means. Something about the way people are bombarded with advertisements for consumer goods? I also couldn’t help but think of the iOS game co-created Neven M..."
-    },
-    {
-      "id": "nd9ve4",
-      "blogId": "aldaily",
-      "title": "Anthropologists love to debate if their field is insufficiently reflexive, too reflexive, too relativistic, or too subservient to dominant norms. Enough!",
-      "link": "https://www.chronicle.com/article/anthropologys-forever-war-with-itself",
-      "date": "2026-11-09T19:19:16.000Z",
-      "excerpt": "Anthropologists love to debate if their field is insufficiently reflexive, too reflexive, too relativistic, or too subservient to dominant norms. Enough!"
-    },
-    {
-      "id": "yqty3h",
-      "blogId": "aldaily",
-      "title": "\"Academics routinely betray their best selves and lapse into a tendentious moralism when they enter the wider world of American political debate\"",
-      "link": "https://chronicleofhighereducation.substack.com/p/the-complacent-style-in-american",
-      "date": "2026-11-09T19:18:16.000Z",
-      "excerpt": "\"Academics routinely betray their best selves and lapse into a tendentious moralism when they enter the wider world of American political debate\""
-    },
-    {
-      "id": "coppro",
-      "blogId": "aldaily",
-      "title": "“We live in a time and a place when and where taste, inner resourcefulness, and fortitude are neither encouraged nor rewarded”",
-      "link": "https://hedgehogreview.com/issues/why-america-needs-a-third-founding/articles/agency-for-everyone",
-      "date": "2026-11-09T19:17:16.000Z",
-      "excerpt": "“We live in a time and a place when and where taste, inner resourcefulness, and fortitude are neither encouraged nor rewarded”"
-    },
-    {
-      "id": "6ozrrx",
-      "blogId": "aldaily",
-      "title": "In medieval times, curiosity was seen as a largely vacuous interest in novel or forbidden information",
-      "link": "https://thereader.mitpress.mit.edu/curiosity-is-no-solo-act",
-      "date": "2026-11-09T19:16:16.000Z",
-      "excerpt": "In medieval times, curiosity was seen as a largely vacuous interest in novel or forbidden information"
-    },
-    {
-      "id": "h133ph",
-      "blogId": "aldaily",
-      "title": "For five decades, George Scialabba has carried the torch for secular progressivism and literary criticism",
-      "link": "https://lareviewofbooks.org/article/george-scialabba-sealed-envelope-toward-intelligent-utopia-morality",
-      "date": "2026-11-09T19:15:16.000Z",
-      "excerpt": "For five decades, George Scialabba has carried the torch for secular progressivism and literary criticism"
-    },
-    {
-      "id": "ohigj5",
-      "blogId": "aldaily",
-      "title": "Electroconvulsive therapy appears to offer depressives an agonizing choice: their personality or their memory",
-      "link": "https://www.theatlantic.com/family/2026/11/shock-therapy-memory-loss/689267?gift=2DPnH7-w5PunRuGFjgT5W1rR0bpsivplOnut1KOYlz4",
-      "date": "2026-11-09T19:14:16.000Z",
-      "excerpt": "Electroconvulsive therapy appears to offer depressives an agonizing choice: their personality or their memory"
-    },
-    {
-      "id": "nu2221",
-      "blogId": "aldaily",
-      "title": "Simon Winchester, a charming rogue who traded geology for journalism and became a prolific and peripatetic polymath, has died. He was 82",
-      "link": "https://www.nytimes.com/2026/11/04/obituaries/simon-winchester-dead.html?unlocked_article_code=1.OFE.Z9H3.bwLy4rDM7sTl&smid=url-share",
-      "date": "2026-11-09T19:13:16.000Z",
-      "excerpt": "Simon Winchester, a charming rogue who traded geology for journalism and became a prolific and peripatetic polymath, has died. He was 82"
-    },
-    {
-      "id": "mkflch",
-      "blogId": "aldaily",
-      "title": "In 17th-century England, a flood could be blamed on a “Papistical Conspiracy of Traitors” — but general sinfulness could not be dismissed ",
-      "link": "https://publicdomainreview.org/essay/wonderful-weather",
-      "date": "2026-11-09T19:12:16.000Z",
-      "excerpt": "In 17th-century England, a flood could be blamed on a “Papistical Conspiracy of Traitors” — but general sinfulness could not be dismissed"
-    },
-    {
-      "id": "sookwl",
-      "blogId": "aldaily",
-      "title": "Why did American departments of literature prove so hospitable, or susceptible, to French theory?",
-      "link": "https://www.theideasletter.org/essay/the-poison-and-the-cure",
-      "date": "2026-11-09T19:11:16.000Z",
-      "excerpt": "Why did American departments of literature prove so hospitable, or susceptible, to French theory?"
-    },
-    {
-      "id": "753yb1",
-      "blogId": "aldaily",
-      "title": "Robert Wilson created spectacles that defied interpretation. So his critics wrote about their own ideas instead",
-      "link": "https://www.bookforum.com/print/3302/the-ticket-that-exploded-63089",
-      "date": "2026-11-09T19:10:16.000Z",
-      "excerpt": "Robert Wilson created spectacles that defied interpretation. So his critics wrote about their own ideas instead"
+      "excerpt": "I love Taiwanese artist Kuang-Yu Tsui’s 1997 conceptual art piece The Welcome Rain Falling From the Sky but I couldn’t really tell you what it means. Something about the way people are bombarded with advertisements for consumer goods? I also couldn’t help but think of the iOS game co-created by Neve..."
     },
     {
       "id": "1bjveo",
