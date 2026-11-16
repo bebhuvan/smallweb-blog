@@ -1,1402 +1,1402 @@
 {
-  "lastUpdated": "2026-11-16T07:29:18.954Z",
+  "lastUpdated": "2026-11-16T19:18:40.887Z",
   "feeds": [
     {
       "blogId": "fromjason",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:14.701Z",
-      "latencyMs": 368,
+      "lastFetched": "2026-11-16T19:16:35.016Z",
+      "latencyMs": 314,
       "error": null
     },
     {
       "blogId": "susam",
       "status": "ok",
       "postCount": 9,
-      "lastFetched": "2026-11-16T07:27:14.993Z",
-      "latencyMs": 652,
+      "lastFetched": "2026-11-16T19:16:35.499Z",
+      "latencyMs": 789,
       "error": null
     },
     {
       "blogId": "seangoedecke",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:14.725Z",
-      "latencyMs": 384,
+      "lastFetched": "2026-11-16T19:16:35.041Z",
+      "latencyMs": 330,
       "error": null
     },
     {
       "blogId": "ploum",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:15.435Z",
-      "latencyMs": 1093,
+      "lastFetched": "2026-11-16T19:16:36.054Z",
+      "latencyMs": 1342,
       "error": null
     },
     {
       "blogId": "simonwillison",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:14.615Z",
-      "latencyMs": 272,
+      "lastFetched": "2026-11-16T19:16:34.949Z",
+      "latencyMs": 237,
       "error": null
     },
     {
       "blogId": "entropicthoughts",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:15.274Z",
-      "latencyMs": 931,
+      "lastFetched": "2026-11-16T19:16:35.844Z",
+      "latencyMs": 1131,
       "error": null
     },
     {
       "blogId": "ntietz",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:15.139Z",
-      "latencyMs": 796,
+      "lastFetched": "2026-11-16T19:16:36.044Z",
+      "latencyMs": 1331,
       "error": null
     },
     {
       "blogId": "stephango",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:14.914Z",
-      "latencyMs": 570,
+      "lastFetched": "2026-11-16T19:16:35.208Z",
+      "latencyMs": 494,
       "error": null
     },
     {
       "blogId": "emilburzo",
       "status": "ok",
       "postCount": 11,
-      "lastFetched": "2026-11-16T07:27:15.512Z",
-      "latencyMs": 1168,
+      "lastFetched": "2026-11-16T19:16:35.849Z",
+      "latencyMs": 1135,
       "error": null
     },
     {
       "blogId": "alanwsmith",
       "status": "ok",
       "postCount": 9,
-      "lastFetched": "2026-11-16T07:27:15.196Z",
-      "latencyMs": 851,
+      "lastFetched": "2026-11-16T19:16:35.372Z",
+      "latencyMs": 657,
       "error": null
     },
     {
       "blogId": "kudmitry",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:16.301Z",
-      "latencyMs": 1686,
+      "lastFetched": "2026-11-16T19:16:37.183Z",
+      "latencyMs": 2234,
       "error": null
     },
     {
       "blogId": "seanheelan",
       "status": "error",
       "postCount": 0,
-      "lastFetched": "2026-11-16T07:27:30.921Z",
-      "latencyMs": 16220,
+      "lastFetched": "2026-11-16T19:16:50.859Z",
+      "latencyMs": 15843,
       "error": "Proxy returned 403: Fetch failed"
     },
     {
       "blogId": "gamesbymason",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:15.378Z",
-      "latencyMs": 653,
+      "lastFetched": "2026-11-16T19:16:35.899Z",
+      "latencyMs": 858,
       "error": null
     },
     {
       "blogId": "overreacted",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:15.147Z",
-      "latencyMs": 233,
+      "lastFetched": "2026-11-16T19:16:35.358Z",
+      "latencyMs": 150,
       "error": null
     },
     {
       "blogId": "wealthofcommonsense",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:15.361Z",
-      "latencyMs": 368,
+      "lastFetched": "2026-11-16T19:16:35.454Z",
+      "latencyMs": 96,
       "error": null
     },
     {
       "blogId": "abnormalreturns",
       "status": "ok",
       "postCount": 14,
-      "lastFetched": "2026-11-16T07:27:15.508Z",
-      "latencyMs": 369,
+      "lastFetched": "2026-11-16T19:16:36.242Z",
+      "latencyMs": 870,
       "error": null
     },
     {
       "blogId": "mrkaran",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:15.505Z",
-      "latencyMs": 358,
+      "lastFetched": "2026-11-16T19:16:35.767Z",
+      "latencyMs": 313,
       "error": null
     },
     {
       "blogId": "pieterlevels",
       "status": "ok",
       "postCount": 1,
-      "lastFetched": "2026-11-16T07:27:15.510Z",
-      "latencyMs": 314,
+      "lastFetched": "2026-11-16T19:16:35.681Z",
+      "latencyMs": 182,
       "error": null
     },
     {
       "blogId": "pluralistic",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:16.515Z",
-      "latencyMs": 1241,
+      "lastFetched": "2026-11-16T19:16:36.636Z",
+      "latencyMs": 955,
       "error": null
     },
     {
       "blogId": "sivers",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:16.190Z",
-      "latencyMs": 829,
+      "lastFetched": "2026-11-16T19:16:36.667Z",
+      "latencyMs": 900,
       "error": null
     },
     {
       "blogId": "maggieappleton",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:15.609Z",
-      "latencyMs": 231,
+      "lastFetched": "2026-11-16T19:16:36.050Z",
+      "latencyMs": 206,
       "error": null
     },
     {
       "blogId": "marginalian",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.028Z",
-      "latencyMs": 593,
+      "lastFetched": "2026-11-16T19:16:36.083Z",
+      "latencyMs": 234,
       "error": null
     },
     {
       "blogId": "paulgraham",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:15.614Z",
-      "latencyMs": 109,
+      "lastFetched": "2026-11-16T19:16:36.061Z",
+      "latencyMs": 162,
       "error": null
     },
     {
       "blogId": "aldaily",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:15.841Z",
-      "latencyMs": 332,
+      "lastFetched": "2026-11-16T19:16:36.425Z",
+      "latencyMs": 381,
       "error": null
     },
     {
       "blogId": "sentiers",
       "status": "ok",
       "postCount": 15,
-      "lastFetched": "2026-11-16T07:27:15.704Z",
-      "latencyMs": 194,
+      "lastFetched": "2026-11-16T19:16:36.300Z",
+      "latencyMs": 250,
       "error": null
     },
     {
       "blogId": "benedictevans",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.071Z",
-      "latencyMs": 559,
+      "lastFetched": "2026-11-16T19:16:36.795Z",
+      "latencyMs": 741,
       "error": null
     },
     {
       "blogId": "nesslabs",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:16.000Z",
-      "latencyMs": 391,
+      "lastFetched": "2026-11-16T19:16:36.230Z",
+      "latencyMs": 169,
       "error": null
     },
     {
       "blogId": "slackwire",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:16.178Z",
-      "latencyMs": 564,
+      "lastFetched": "2026-11-16T19:16:36.651Z",
+      "latencyMs": 568,
       "error": null
     },
     {
       "blogId": "marginalrevolution",
       "status": "ok",
       "postCount": 15,
-      "lastFetched": "2026-11-16T07:27:15.992Z",
-      "latencyMs": 288,
+      "lastFetched": "2026-11-16T19:16:36.347Z",
+      "latencyMs": 117,
       "error": null
     },
     {
       "blogId": "interconnects",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:15.974Z",
-      "latencyMs": 133,
+      "lastFetched": "2026-11-16T19:16:36.372Z",
+      "latencyMs": 130,
       "error": null
     },
     {
       "blogId": "markcarrigan",
       "status": "error",
       "postCount": 0,
-      "lastFetched": "2026-11-16T07:27:31.662Z",
-      "latencyMs": 15688,
+      "lastFetched": "2026-11-16T19:16:51.597Z",
+      "latencyMs": 15297,
       "error": "Proxy returned 403: Fetch failed"
     },
     {
       "blogId": "lucumr",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:16.224Z",
-      "latencyMs": 232,
+      "lastFetched": "2026-11-16T19:16:36.535Z",
+      "latencyMs": 188,
       "error": null
     },
     {
       "blogId": "kottke",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:16.305Z",
-      "latencyMs": 305,
+      "lastFetched": "2026-11-16T19:16:36.773Z",
+      "latencyMs": 401,
       "error": null
     },
     {
       "blogId": "shreevatsa",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:16.463Z",
-      "latencyMs": 435,
+      "lastFetched": "2026-11-16T19:16:36.780Z",
+      "latencyMs": 355,
       "error": null
     },
     {
       "blogId": "lukeburgis",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.245Z",
-      "latencyMs": 174,
+      "lastFetched": "2026-11-16T19:16:36.785Z",
+      "latencyMs": 250,
       "error": null
     },
     {
       "blogId": "commonreader",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.416Z",
-      "latencyMs": 238,
+      "lastFetched": "2026-11-16T19:16:36.736Z",
+      "latencyMs": 100,
       "error": null
     },
     {
       "blogId": "programmablemutter",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.422Z",
-      "latencyMs": 232,
+      "lastFetched": "2026-11-16T19:16:36.822Z",
+      "latencyMs": 171,
       "error": null
     },
     {
       "blogId": "venkateshrao",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.429Z",
-      "latencyMs": 205,
+      "lastFetched": "2026-11-16T19:16:36.831Z",
+      "latencyMs": 164,
       "error": null
     },
     {
       "blogId": "millersbookreview",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.545Z",
-      "latencyMs": 300,
+      "lastFetched": "2026-11-16T19:16:36.890Z",
+      "latencyMs": 154,
       "error": null
     },
     {
       "blogId": "strangeloopcanon",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.493Z",
-      "latencyMs": 192,
+      "lastFetched": "2026-11-16T19:16:36.923Z",
+      "latencyMs": 150,
       "error": null
     },
     {
       "blogId": "collabfund",
       "status": "ok",
       "postCount": 18,
-      "lastFetched": "2026-11-16T07:27:16.640Z",
-      "latencyMs": 335,
+      "lastFetched": "2026-11-16T19:16:37.007Z",
+      "latencyMs": 227,
       "error": null
     },
     {
       "blogId": "astralcodexten",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.818Z",
-      "latencyMs": 402,
+      "lastFetched": "2026-11-16T19:16:37.027Z",
+      "latencyMs": 242,
       "error": null
     },
     {
       "blogId": "plainenglish",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.581Z",
-      "latencyMs": 159,
+      "lastFetched": "2026-11-16T19:16:36.984Z",
+      "latencyMs": 189,
       "error": null
     },
     {
       "blogId": "noahpinion",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.681Z",
-      "latencyMs": 252,
+      "lastFetched": "2026-11-16T19:16:37.042Z",
+      "latencyMs": 220,
       "error": null
     },
     {
       "blogId": "understandingai",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.621Z",
-      "latencyMs": 158,
+      "lastFetched": "2026-11-16T19:16:37.095Z",
+      "latencyMs": 264,
       "error": null
     },
     {
       "blogId": "highcapacity",
       "status": "error",
       "postCount": 0,
-      "lastFetched": "2026-11-16T07:27:17.309Z",
-      "latencyMs": 816,
+      "lastFetched": "2026-11-16T19:16:37.786Z",
+      "latencyMs": 896,
       "error": "Attribute without value\nLine: 171\nColumn: 37\nChar: >"
     },
     {
       "blogId": "grumpyeconomist",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.796Z",
-      "latencyMs": 281,
+      "lastFetched": "2026-11-16T19:16:37.219Z",
+      "latencyMs": 296,
       "error": null
     },
     {
       "blogId": "oneusefulthing",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.869Z",
-      "latencyMs": 324,
+      "lastFetched": "2026-11-16T19:16:37.262Z",
+      "latencyMs": 278,
       "error": null
     },
     {
       "blogId": "defaultblog",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:16.784Z",
-      "latencyMs": 203,
+      "lastFetched": "2026-11-16T19:16:37.245Z",
+      "latencyMs": 238,
       "error": null
     },
     {
       "blogId": "onmyom",
       "status": "error",
       "postCount": 0,
-      "lastFetched": "2026-11-16T07:27:32.349Z",
-      "latencyMs": 15728,
+      "lastFetched": "2026-11-16T19:16:52.480Z",
+      "latencyMs": 15453,
       "error": "Proxy returned 403: Fetch failed"
     },
     {
       "blogId": "ofdollarsanddata",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:17.239Z",
-      "latencyMs": 599,
+      "lastFetched": "2026-11-16T19:16:37.671Z",
+      "latencyMs": 629,
       "error": null
     },
     {
       "blogId": "flowingdata",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:16.894Z",
-      "latencyMs": 213,
+      "lastFetched": "2026-11-16T19:16:37.301Z",
+      "latencyMs": 206,
       "error": null
     },
     {
       "blogId": "anildash",
       "status": "ok",
       "postCount": 12,
-      "lastFetched": "2026-11-16T07:27:17.104Z",
-      "latencyMs": 320,
+      "lastFetched": "2026-11-16T19:16:37.400Z",
+      "latencyMs": 217,
       "error": null
     },
     {
       "blogId": "spyglass",
       "status": "ok",
       "postCount": 15,
-      "lastFetched": "2026-11-16T07:27:17.549Z",
-      "latencyMs": 753,
+      "lastFetched": "2026-11-16T19:16:38.181Z",
+      "latencyMs": 962,
       "error": null
     },
     {
       "blogId": "honestbroker",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:17.098Z",
-      "latencyMs": 280,
+      "lastFetched": "2026-11-16T19:16:37.357Z",
+      "latencyMs": 112,
       "error": null
     },
     {
       "blogId": "wisdomofcrowds",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:17.191Z",
-      "latencyMs": 322,
+      "lastFetched": "2026-11-16T19:16:37.404Z",
+      "latencyMs": 142,
       "error": null
     },
     {
       "blogId": "bloodinthemachine",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:17.270Z",
-      "latencyMs": 375,
+      "lastFetched": "2026-11-16T19:16:37.433Z",
+      "latencyMs": 132,
       "error": null
     },
     {
       "blogId": "smallpotatoes",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:17.330Z",
-      "latencyMs": 232,
+      "lastFetched": "2026-11-16T19:16:37.458Z",
+      "latencyMs": 101,
       "error": null
     },
     {
       "blogId": "ageofinvention",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:17.341Z",
-      "latencyMs": 237,
+      "lastFetched": "2026-11-16T19:16:37.686Z",
+      "latencyMs": 286,
       "error": null
     },
     {
       "blogId": "optimallyirrational",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:17.411Z",
-      "latencyMs": 220,
+      "lastFetched": "2026-11-16T19:16:37.850Z",
+      "latencyMs": 446,
       "error": null
     },
     {
       "blogId": "conspicuouscognition",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:17.513Z",
-      "latencyMs": 274,
+      "lastFetched": "2026-11-16T19:16:37.641Z",
+      "latencyMs": 208,
       "error": null
     },
     {
       "blogId": "speakandregret",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:17.446Z",
-      "latencyMs": 176,
+      "lastFetched": "2026-11-16T19:16:37.806Z",
+      "latencyMs": 348,
       "error": null
     },
     {
       "blogId": "intrinsicperspective",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:17.497Z",
-      "latencyMs": 188,
+      "lastFetched": "2026-11-16T19:16:37.761Z",
+      "latencyMs": 120,
       "error": null
     },
     {
       "blogId": "everythingisbullshit",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:17.577Z",
-      "latencyMs": 247,
+      "lastFetched": "2026-11-16T19:16:37.774Z",
+      "latencyMs": 103,
       "error": null
     },
     {
       "blogId": "henrikkarlsson",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:17.600Z",
-      "latencyMs": 259,
+      "lastFetched": "2026-11-16T19:16:37.815Z",
+      "latencyMs": 129,
       "error": null
     },
     {
       "blogId": "aiascendant",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:17.608Z",
-      "latencyMs": 197,
+      "lastFetched": "2026-11-16T19:16:37.899Z",
+      "latencyMs": 138,
       "error": null
     },
     {
       "blogId": "danq",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:19.430Z",
-      "latencyMs": 1984,
+      "lastFetched": "2026-11-16T19:16:39.687Z",
+      "latencyMs": 1913,
       "error": null
     },
     {
       "blogId": "mertbulan",
       "status": "ok",
       "postCount": 15,
-      "lastFetched": "2026-11-16T07:27:18.279Z",
-      "latencyMs": 782,
+      "lastFetched": "2026-11-16T19:16:38.049Z",
+      "latencyMs": 263,
       "error": null
     },
     {
       "blogId": "tautvilas",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:17.739Z",
-      "latencyMs": 226,
+      "lastFetched": "2026-11-16T19:16:38.021Z",
+      "latencyMs": 215,
       "error": null
     },
     {
       "blogId": "oliverhartwich",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:17.653Z",
-      "latencyMs": 104,
+      "lastFetched": "2026-11-16T19:16:37.927Z",
+      "latencyMs": 112,
       "error": null
     },
     {
       "blogId": "miketech",
       "status": "ok",
       "postCount": 1,
-      "lastFetched": "2026-11-16T07:27:17.715Z",
-      "latencyMs": 138,
+      "lastFetched": "2026-11-16T19:16:38.050Z",
+      "latencyMs": 200,
       "error": null
     },
     {
       "blogId": "platformer",
       "status": "ok",
       "postCount": 15,
-      "lastFetched": "2026-11-16T07:27:17.790Z",
-      "latencyMs": 190,
+      "lastFetched": "2026-11-16T19:16:38.121Z",
+      "latencyMs": 222,
       "error": null
     },
     {
       "blogId": "scattershot",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:17.865Z",
-      "latencyMs": 257,
+      "lastFetched": "2026-11-16T19:16:38.293Z",
+      "latencyMs": 366,
       "error": null
     },
     {
       "blogId": "nadh",
       "status": "ok",
       "postCount": 18,
-      "lastFetched": "2026-11-16T07:27:18.111Z",
-      "latencyMs": 458,
+      "lastFetched": "2026-11-16T19:16:38.487Z",
+      "latencyMs": 466,
       "error": null
     },
     {
       "blogId": "tessellatum",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:19.858Z",
-      "latencyMs": 2143,
+      "lastFetched": "2026-11-16T19:16:42.378Z",
+      "latencyMs": 4329,
       "error": null
     },
     {
       "blogId": "mostlyeconomics",
-      "status": "error",
-      "postCount": 0,
-      "lastFetched": "2026-11-16T07:27:33.213Z",
-      "latencyMs": 15474,
-      "error": "Proxy returned 403: Fetch failed"
+      "status": "ok",
+      "postCount": 10,
+      "lastFetched": "2026-11-16T19:16:38.210Z",
+      "latencyMs": 160,
+      "error": null
     },
     {
       "blogId": "matt",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:18.230Z",
-      "latencyMs": 440,
+      "lastFetched": "2026-11-16T19:16:38.614Z",
+      "latencyMs": 493,
       "error": null
     },
     {
       "blogId": "mrzepczynski",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:18.166Z",
-      "latencyMs": 301,
+      "lastFetched": "2026-11-16T19:16:38.420Z",
+      "latencyMs": 238,
       "error": null
     },
     {
       "blogId": "damodaran",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:18.430Z",
-      "latencyMs": 319,
+      "lastFetched": "2026-11-16T19:16:38.661Z",
+      "latencyMs": 451,
       "error": null
     },
     {
       "blogId": "ritholtz",
       "status": "error",
       "postCount": 0,
-      "lastFetched": "2026-11-16T07:27:33.414Z",
-      "latencyMs": 15248,
+      "lastFetched": "2026-11-16T19:16:53.519Z",
+      "latencyMs": 15226,
       "error": "Proxy returned 403: Fetch failed"
     },
     {
       "blogId": "danshapiro",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:18.489Z",
-      "latencyMs": 259,
+      "lastFetched": "2026-11-16T19:16:38.854Z",
+      "latencyMs": 434,
       "error": null
     },
     {
       "blogId": "surfingcomplexity",
       "status": "error",
       "postCount": 0,
-      "lastFetched": "2026-11-16T07:27:33.755Z",
-      "latencyMs": 15476,
+      "lastFetched": "2026-11-16T19:16:53.764Z",
+      "latencyMs": 15277,
       "error": "Proxy returned 403: Fetch failed"
     },
     {
       "blogId": "jamesdrandall",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:19.039Z",
-      "latencyMs": 609,
+      "lastFetched": "2026-11-16T19:16:39.146Z",
+      "latencyMs": 532,
       "error": null
     },
     {
       "blogId": "scottsmitelli",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:18.700Z",
-      "latencyMs": 211,
+      "lastFetched": "2026-11-16T19:16:39.168Z",
+      "latencyMs": 507,
       "error": null
     },
     {
       "blogId": "karpathy",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:18.882Z",
-      "latencyMs": 182,
+      "lastFetched": "2026-11-16T19:16:39.031Z",
+      "latencyMs": 177,
       "error": null
     },
     {
       "blogId": "ivanturkovic",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:19.666Z",
-      "latencyMs": 784,
+      "lastFetched": "2026-11-16T19:16:39.483Z",
+      "latencyMs": 452,
       "error": null
     },
     {
       "blogId": "craigmod",
       "status": "ok",
       "postCount": 25,
-      "lastFetched": "2026-11-16T07:27:19.197Z",
-      "latencyMs": 158,
+      "lastFetched": "2026-11-16T19:16:39.351Z",
+      "latencyMs": 205,
       "error": null
     },
     {
       "blogId": "dataforindia",
       "status": "ok",
       "postCount": 15,
-      "lastFetched": "2026-11-16T07:27:20.541Z",
-      "latencyMs": 1344,
+      "lastFetched": "2026-11-16T19:16:40.745Z",
+      "latencyMs": 1577,
       "error": null
     },
     {
       "blogId": "frantic",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:19.663Z",
-      "latencyMs": 233,
+      "lastFetched": "2026-11-16T19:16:39.642Z",
+      "latencyMs": 291,
       "error": null
     },
     {
       "blogId": "zachholman",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:27:19.939Z",
-      "latencyMs": 276,
+      "lastFetched": "2026-11-16T19:16:39.889Z",
+      "latencyMs": 406,
       "error": null
     },
     {
       "blogId": "lcamtuf",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:20.259Z",
-      "latencyMs": 593,
+      "lastFetched": "2026-11-16T19:16:40.098Z",
+      "latencyMs": 456,
       "error": null
     },
     {
       "blogId": "teendifferent",
       "status": "ok",
       "postCount": 13,
-      "lastFetched": "2026-11-16T07:27:33.928Z",
-      "latencyMs": 173,
+      "lastFetched": "2026-11-16T19:16:54.044Z",
+      "latencyMs": 280,
       "error": null
     },
     {
       "blogId": "thezvi",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:33.977Z",
-      "latencyMs": 220,
+      "lastFetched": "2026-11-16T19:16:54.033Z",
+      "latencyMs": 268,
       "error": null
     },
     {
       "blogId": "hollisrobbins",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:33.913Z",
-      "latencyMs": 156,
+      "lastFetched": "2026-11-16T19:16:53.919Z",
+      "latencyMs": 153,
       "error": null
     },
     {
       "blogId": "freddiedeboer",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:33.893Z",
-      "latencyMs": 136,
+      "lastFetched": "2026-11-16T19:16:53.899Z",
+      "latencyMs": 132,
       "error": null
     },
     {
       "blogId": "onepercentrule",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:39.141Z",
-      "latencyMs": 163,
+      "lastFetched": "2026-11-16T19:16:59.153Z",
+      "latencyMs": 109,
       "error": null
     },
     {
       "blogId": "maxread",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:39.099Z",
-      "latencyMs": 119,
+      "lastFetched": "2026-11-16T19:16:59.131Z",
+      "latencyMs": 85,
       "error": null
     },
     {
       "blogId": "summerlightning",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:39.207Z",
-      "latencyMs": 227,
+      "lastFetched": "2026-11-16T19:16:59.162Z",
+      "latencyMs": 116,
       "error": null
     },
     {
       "blogId": "ghostsofelectricity",
       "status": "ok",
       "postCount": 17,
-      "lastFetched": "2026-11-16T07:27:39.157Z",
-      "latencyMs": 176,
+      "lastFetched": "2026-11-16T19:16:59.182Z",
+      "latencyMs": 135,
       "error": null
     },
     {
       "blogId": "hyperdimensional",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:44.520Z",
-      "latencyMs": 311,
+      "lastFetched": "2026-11-16T19:17:04.406Z",
+      "latencyMs": 222,
       "error": null
     },
     {
       "blogId": "kneelingbus",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:44.380Z",
-      "latencyMs": 170,
+      "lastFetched": "2026-11-16T19:17:04.373Z",
+      "latencyMs": 188,
       "error": null
     },
     {
       "blogId": "thecuttingfloor",
-      "status": "ok",
-      "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:44.424Z",
-      "latencyMs": 212,
-      "error": null
+      "status": "error",
+      "postCount": 0,
+      "lastFetched": "2026-11-16T19:17:04.355Z",
+      "latencyMs": 170,
+      "error": "Proxy returned 429: Fetch failed"
     },
     {
       "blogId": "paulkrugman",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:44.374Z",
-      "latencyMs": 163,
+      "lastFetched": "2026-11-16T19:17:04.266Z",
+      "latencyMs": 80,
       "error": null
     },
     {
       "blogId": "arpitrage",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:49.706Z",
-      "latencyMs": 185,
+      "lastFetched": "2026-11-16T19:17:09.517Z",
+      "latencyMs": 109,
       "error": null
     },
     {
       "blogId": "kyla",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:49.780Z",
-      "latencyMs": 258,
+      "lastFetched": "2026-11-16T19:17:10.154Z",
+      "latencyMs": 745,
       "error": null
     },
     {
       "blogId": "larryswedroe",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:49.709Z",
-      "latencyMs": 186,
+      "lastFetched": "2026-11-16T19:17:09.769Z",
+      "latencyMs": 359,
       "error": null
     },
     {
       "blogId": "klementoninvesting",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:49.680Z",
-      "latencyMs": 157,
+      "lastFetched": "2026-11-16T19:17:09.494Z",
+      "latencyMs": 84,
       "error": null
     },
     {
       "blogId": "downtownjoshbrown",
       "status": "error",
       "postCount": 0,
-      "lastFetched": "2026-11-16T07:27:54.922Z",
-      "latencyMs": 140,
+      "lastFetched": "2026-11-16T19:17:15.331Z",
+      "latencyMs": 176,
       "error": "Proxy returned 429: Fetch failed"
     },
     {
       "blogId": "betterletter",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:55.042Z",
-      "latencyMs": 259,
+      "lastFetched": "2026-11-16T19:17:15.297Z",
+      "latencyMs": 141,
       "error": null
     },
     {
       "blogId": "overthefield",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:54.886Z",
-      "latencyMs": 102,
+      "lastFetched": "2026-11-16T19:17:15.234Z",
+      "latencyMs": 76,
       "error": null
     },
     {
       "blogId": "pilgrimsinthemachine",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:27:54.979Z",
-      "latencyMs": 194,
+      "lastFetched": "2026-11-16T19:17:15.256Z",
+      "latencyMs": 99,
       "error": null
     },
     {
       "blogId": "convivialsociety",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:00.179Z",
-      "latencyMs": 136,
+      "lastFetched": "2026-11-16T19:17:20.473Z",
+      "latencyMs": 141,
       "error": null
     },
     {
       "blogId": "stockviz",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:00.256Z",
-      "latencyMs": 211,
+      "lastFetched": "2026-11-16T19:17:20.449Z",
+      "latencyMs": 116,
       "error": null
     },
     {
       "blogId": "openquestions",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:00.212Z",
-      "latencyMs": 167,
+      "lastFetched": "2026-11-16T19:17:20.433Z",
+      "latencyMs": 99,
       "error": null
     },
     {
       "blogId": "wollenblog",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:00.240Z",
-      "latencyMs": 194,
+      "lastFetched": "2026-11-16T19:17:20.468Z",
+      "latencyMs": 134,
       "error": null
     },
     {
       "blogId": "koenfucius",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:05.449Z",
-      "latencyMs": 191,
+      "lastFetched": "2026-11-16T19:17:26.668Z",
+      "latencyMs": 1193,
       "error": null
     },
     {
       "blogId": "experimentalhistory",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:05.472Z",
-      "latencyMs": 213,
+      "lastFetched": "2026-11-16T19:17:25.769Z",
+      "latencyMs": 293,
       "error": null
     },
     {
       "blogId": "benthamsbulldog",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:05.418Z",
-      "latencyMs": 159,
+      "lastFetched": "2026-11-16T19:17:25.576Z",
+      "latencyMs": 99,
       "error": null
     },
     {
       "blogId": "curtjaimungal",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:05.456Z",
-      "latencyMs": 197,
+      "lastFetched": "2026-11-16T19:17:26.578Z",
+      "latencyMs": 1101,
       "error": null
     },
     {
       "blogId": "nicholasgruen",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:10.752Z",
-      "latencyMs": 278,
+      "lastFetched": "2026-11-16T19:17:31.971Z",
+      "latencyMs": 301,
       "error": null
     },
     {
       "blogId": "atmoio",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:10.615Z",
-      "latencyMs": 140,
+      "lastFetched": "2026-11-16T19:17:31.733Z",
+      "latencyMs": 62,
       "error": null
     },
     {
       "blogId": "pertinentobservations",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:10.570Z",
-      "latencyMs": 95,
+      "lastFetched": "2026-11-16T19:17:31.745Z",
+      "latencyMs": 73,
       "error": null
     },
     {
       "blogId": "nevermetascience",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:10.635Z",
-      "latencyMs": 159,
+      "lastFetched": "2026-11-16T19:17:31.766Z",
+      "latencyMs": 93,
       "error": null
     },
     {
       "blogId": "personalcanon",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:16.049Z",
-      "latencyMs": 296,
+      "lastFetched": "2026-11-16T19:17:37.327Z",
+      "latencyMs": 355,
       "error": null
     },
     {
       "blogId": "cosmographia",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:15.929Z",
-      "latencyMs": 175,
+      "lastFetched": "2026-11-16T19:17:37.096Z",
+      "latencyMs": 122,
       "error": null
     },
     {
       "blogId": "nadig",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:15.917Z",
-      "latencyMs": 162,
+      "lastFetched": "2026-11-16T19:17:37.285Z",
+      "latencyMs": 311,
       "error": null
     },
     {
       "blogId": "thechoiceengine",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:28:15.906Z",
-      "latencyMs": 151,
+      "lastFetched": "2026-11-16T19:17:37.156Z",
+      "latencyMs": 181,
       "error": null
     },
     {
       "blogId": "braddelong",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:21.221Z",
-      "latencyMs": 171,
+      "lastFetched": "2026-11-16T19:17:42.600Z",
+      "latencyMs": 271,
       "error": null
     },
     {
       "blogId": "branko",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:21.184Z",
-      "latencyMs": 132,
+      "lastFetched": "2026-11-16T19:17:42.449Z",
+      "latencyMs": 118,
       "error": null
     },
     {
       "blogId": "bignewsletter",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:21.276Z",
-      "latencyMs": 224,
+      "lastFetched": "2026-11-16T19:17:42.479Z",
+      "latencyMs": 148,
       "error": null
     },
     {
       "blogId": "economicforces",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:21.287Z",
-      "latencyMs": 234,
+      "lastFetched": "2026-11-16T19:17:42.677Z",
+      "latencyMs": 346,
       "error": null
     },
     {
       "blogId": "thebasecamp",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:26.450Z",
-      "latencyMs": 162,
+      "lastFetched": "2026-11-16T19:17:47.779Z",
+      "latencyMs": 101,
       "error": null
     },
     {
       "blogId": "worksonmymachine",
-      "status": "ok",
-      "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:26.512Z",
-      "latencyMs": 222,
-      "error": null
+      "status": "error",
+      "postCount": 0,
+      "lastFetched": "2026-11-16T19:17:48.005Z",
+      "latencyMs": 324,
+      "error": "Proxy returned 429: Fetch failed"
     },
     {
       "blogId": "cleareyedai",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:26.612Z",
-      "latencyMs": 322,
+      "lastFetched": "2026-11-16T19:17:47.873Z",
+      "latencyMs": 193,
       "error": null
     },
     {
       "blogId": "davidoks",
-      "status": "error",
-      "postCount": 0,
-      "lastFetched": "2026-11-16T07:28:26.561Z",
-      "latencyMs": 270,
-      "error": "Proxy returned 429: Fetch failed"
+      "status": "ok",
+      "postCount": 20,
+      "lastFetched": "2026-11-16T19:17:47.985Z",
+      "latencyMs": 304,
+      "error": null
     },
     {
       "blogId": "robhenderson",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:31.768Z",
-      "latencyMs": 156,
+      "lastFetched": "2026-11-16T19:17:53.281Z",
+      "latencyMs": 276,
       "error": null
     },
     {
       "blogId": "andymasley",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:31.907Z",
-      "latencyMs": 293,
+      "lastFetched": "2026-11-16T19:17:53.264Z",
+      "latencyMs": 257,
       "error": null
     },
     {
       "blogId": "helentoner",
       "status": "ok",
       "postCount": 10,
-      "lastFetched": "2026-11-16T07:28:31.773Z",
-      "latencyMs": 159,
+      "lastFetched": "2026-11-16T19:17:53.093Z",
+      "latencyMs": 86,
       "error": null
     },
     {
       "blogId": "persuasion",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:31.837Z",
-      "latencyMs": 221,
+      "lastFetched": "2026-11-16T19:17:53.313Z",
+      "latencyMs": 305,
       "error": null
     },
     {
       "blogId": "afterbabel",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:37.085Z",
-      "latencyMs": 177,
+      "lastFetched": "2026-11-16T19:17:58.688Z",
+      "latencyMs": 374,
       "error": null
     },
     {
       "blogId": "importai",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:37.029Z",
-      "latencyMs": 120,
+      "lastFetched": "2026-11-16T19:17:58.407Z",
+      "latencyMs": 92,
       "error": null
     },
     {
       "blogId": "byfire",
       "status": "ok",
       "postCount": 12,
-      "lastFetched": "2026-11-16T07:28:37.037Z",
-      "latencyMs": 128,
+      "lastFetched": "2026-11-16T19:17:58.412Z",
+      "latencyMs": 96,
       "error": null
     },
     {
       "blogId": "investmentecosystem",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:37.187Z",
-      "latencyMs": 277,
+      "lastFetched": "2026-11-16T19:17:58.670Z",
+      "latencyMs": 354,
       "error": null
     },
     {
       "blogId": "weltinnenpolitik",
       "status": "error",
       "postCount": 0,
-      "lastFetched": "2026-11-16T07:28:42.310Z",
-      "latencyMs": 121,
+      "lastFetched": "2026-11-16T19:18:03.850Z",
+      "latencyMs": 161,
       "error": "Proxy returned 429: Fetch failed"
     },
     {
       "blogId": "protocolized",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:42.368Z",
-      "latencyMs": 178,
+      "lastFetched": "2026-11-16T19:18:03.888Z",
+      "latencyMs": 198,
       "error": null
     },
     {
       "blogId": "minutes",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:42.334Z",
-      "latencyMs": 144,
+      "lastFetched": "2026-11-16T19:18:03.905Z",
+      "latencyMs": 215,
       "error": null
     },
     {
       "blogId": "anticipatingtheunintended",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:42.387Z",
-      "latencyMs": 196,
+      "lastFetched": "2026-11-16T19:18:03.783Z",
+      "latencyMs": 92,
       "error": null
     },
     {
       "blogId": "samkriss",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:47.505Z",
-      "latencyMs": 116,
+      "lastFetched": "2026-11-16T19:18:09.136Z",
+      "latencyMs": 229,
       "error": null
     },
     {
       "blogId": "anastasiagamick",
       "status": "ok",
       "postCount": 4,
-      "lastFetched": "2026-11-16T07:28:47.483Z",
-      "latencyMs": 94,
+      "lastFetched": "2026-11-16T19:18:09.059Z",
+      "latencyMs": 151,
       "error": null
     },
     {
       "blogId": "jasmine",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:47.680Z",
-      "latencyMs": 291,
+      "lastFetched": "2026-11-16T19:18:09.235Z",
+      "latencyMs": 326,
       "error": null
     },
     {
       "blogId": "artificialbureaucracy",
       "status": "ok",
       "postCount": 11,
-      "lastFetched": "2026-11-16T07:28:47.516Z",
-      "latencyMs": 126,
+      "lastFetched": "2026-11-16T19:18:08.999Z",
+      "latencyMs": 89,
       "error": null
     },
     {
       "blogId": "evernotquite",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:52.867Z",
-      "latencyMs": 186,
+      "lastFetched": "2026-11-16T19:18:14.439Z",
+      "latencyMs": 203,
       "error": null
     },
     {
       "blogId": "casssunstein",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:52.835Z",
-      "latencyMs": 152,
+      "lastFetched": "2026-11-16T19:18:14.338Z",
+      "latencyMs": 101,
       "error": null
     },
     {
       "blogId": "critiqueanddigest",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:52.806Z",
-      "latencyMs": 123,
+      "lastFetched": "2026-11-16T19:18:14.317Z",
+      "latencyMs": 79,
       "error": null
     },
     {
       "blogId": "mosaics",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:52.937Z",
-      "latencyMs": 253,
+      "lastFetched": "2026-11-16T19:18:14.453Z",
+      "latencyMs": 215,
       "error": null
     },
     {
       "blogId": "pointingatthings",
-      "status": "ok",
-      "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:58.102Z",
-      "latencyMs": 164,
-      "error": null
+      "status": "error",
+      "postCount": 0,
+      "lastFetched": "2026-11-16T19:18:19.655Z",
+      "latencyMs": 200,
+      "error": "Proxy returned 429: Fetch failed"
     },
     {
       "blogId": "technologik",
       "status": "ok",
       "postCount": 1,
-      "lastFetched": "2026-11-16T07:28:58.063Z",
-      "latencyMs": 123,
+      "lastFetched": "2026-11-16T19:18:19.635Z",
+      "latencyMs": 179,
       "error": null
     },
     {
       "blogId": "figsinwintertime",
-      "status": "ok",
-      "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:58.044Z",
-      "latencyMs": 104,
-      "error": null
+      "status": "error",
+      "postCount": 0,
+      "lastFetched": "2026-11-16T19:18:19.804Z",
+      "latencyMs": 347,
+      "error": "Proxy returned 429: Fetch failed"
     },
     {
       "blogId": "sceneswithsimon",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:28:58.158Z",
-      "latencyMs": 217,
+      "lastFetched": "2026-11-16T19:18:19.582Z",
+      "latencyMs": 125,
       "error": null
     },
     {
       "blogId": "innerwilds",
-      "status": "ok",
-      "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:03.385Z",
-      "latencyMs": 226,
-      "error": null
+      "status": "error",
+      "postCount": 0,
+      "lastFetched": "2026-11-16T19:18:25.072Z",
+      "latencyMs": 266,
+      "error": "Proxy returned 429: Fetch failed"
     },
     {
       "blogId": "rushkoff",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:03.269Z",
-      "latencyMs": 109,
+      "lastFetched": "2026-11-16T19:18:25.108Z",
+      "latencyMs": 301,
       "error": null
     },
     {
       "blogId": "constructionphysics",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:03.311Z",
-      "latencyMs": 151,
+      "lastFetched": "2026-11-16T19:18:24.939Z",
+      "latencyMs": 131,
       "error": null
     },
     {
       "blogId": "omarnajjarine",
-      "status": "error",
-      "postCount": 0,
-      "lastFetched": "2026-11-16T07:29:03.290Z",
-      "latencyMs": 129,
-      "error": "Proxy returned 429: Fetch failed"
+      "status": "ok",
+      "postCount": 20,
+      "lastFetched": "2026-11-16T19:18:24.984Z",
+      "latencyMs": 176,
+      "error": null
     },
     {
       "blogId": "robinjbrooks",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:08.531Z",
-      "latencyMs": 145,
+      "lastFetched": "2026-11-16T19:18:30.330Z",
+      "latencyMs": 220,
       "error": null
     },
     {
       "blogId": "mariakonnikova",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:08.514Z",
-      "latencyMs": 126,
+      "lastFetched": "2026-11-16T19:18:30.174Z",
+      "latencyMs": 63,
       "error": null
     },
     {
       "blogId": "rbaldwin",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:08.511Z",
-      "latencyMs": 123,
+      "lastFetched": "2026-11-16T19:18:30.352Z",
+      "latencyMs": 240,
       "error": null
     },
     {
       "blogId": "thetwocents",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:08.500Z",
-      "latencyMs": 111,
+      "lastFetched": "2026-11-16T19:18:30.222Z",
+      "latencyMs": 110,
       "error": null
     },
     {
       "blogId": "naomiklein",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:13.643Z",
-      "latencyMs": 111,
+      "lastFetched": "2026-11-16T19:18:35.563Z",
+      "latencyMs": 209,
       "error": null
     },
     {
       "blogId": "pathlesspath",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:13.716Z",
-      "latencyMs": 183,
+      "lastFetched": "2026-11-16T19:18:35.617Z",
+      "latencyMs": 262,
       "error": null
     },
     {
       "blogId": "africanistperspective",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:13.684Z",
-      "latencyMs": 150,
+      "lastFetched": "2026-11-16T19:18:35.457Z",
+      "latencyMs": 101,
       "error": null
     },
     {
       "blogId": "xkdr",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:13.659Z",
-      "latencyMs": 125,
+      "lastFetched": "2026-11-16T19:18:35.464Z",
+      "latencyMs": 108,
       "error": null
     },
     {
       "blogId": "theclimatebrink",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:18.903Z",
-      "latencyMs": 186,
+      "lastFetched": "2026-11-16T19:18:40.837Z",
+      "latencyMs": 218,
       "error": null
     },
     {
       "blogId": "listeningtothesirens",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:18.869Z",
-      "latencyMs": 151,
+      "lastFetched": "2026-11-16T19:18:40.741Z",
+      "latencyMs": 121,
       "error": null
     },
     {
       "blogId": "nicholasdecker",
       "status": "ok",
       "postCount": 20,
-      "lastFetched": "2026-11-16T07:29:18.883Z",
-      "latencyMs": 164,
+      "lastFetched": "2026-11-16T19:18:40.734Z",
+      "latencyMs": 114,
       "error": null
     }
   ],
   "summary": {
     "total": 174,
-    "healthy": 163,
-    "errors": 11
+    "healthy": 161,
+    "errors": 13
   }
 }
