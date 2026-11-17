@@ -1,6 +1,206 @@
 {
-  "lastUpdated": "2026-11-17T18:10:42.527Z",
+  "lastUpdated": "2026-11-17T23:48:12.106Z",
   "posts": [
+    {
+      "id": "mcioab",
+      "blogId": "commonreader",
+      "title": "Does Claude’s Constitution mean anything?",
+      "link": "https://www.commonreader.co.uk/p/does-claudes-constitution-mean-anything",
+      "date": "2026-11-17T23:42:58.000Z",
+      "excerpt": "What Anthropic’s corporate prose style has in common with Sam Kriss"
+    },
+    {
+      "id": "y4827",
+      "blogId": "simonwillison",
+      "title": "External sandboxes for coding agents",
+      "link": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents",
+      "date": "2026-11-17T22:52:29.000Z",
+      "excerpt": "External sandboxes for coding agents I've been exploring new ways to sandbox code that is executed by agents, with a focus on making it safer to try out local models without worrying that a mistake or prompt injection attack might cause them to take damaging actions on a machine. I worked on this pr..."
+    },
+    {
+      "id": "ugyp4s",
+      "blogId": "simonwillison",
+      "title": "GPT‑6.2 Astra and GPT‑6.2 Sol",
+      "link": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol",
+      "date": "2026-11-17T22:38:52.000Z",
+      "excerpt": "GPT‑6.2 Astra and GPT‑6.2 Sol OpenAI: We’re introducing GPT‑6.2 Astra, our new frontier model for your hardest projects, and GPT‑6.2 Sol, our efficient, versatile model for everyday work. They're available in the API as gpt-6.2-astra and gpt-6.2-sol. I shipped LLM 0.38 with support for the new model..."
+    },
+    {
+      "id": "tnpemx",
+      "blogId": "kottke",
+      "title": "Pew Research Center identified 9 main US political...",
+      "link": "https://kottke.org/26/11/0050012-pew-research-center-ident",
+      "date": "2026-11-17T22:00:00.000Z",
+      "excerpt": "Pew Research Center identified 9 main US political groups: No Apologies Right, Faith First Conservatives, Unconventional Right, Pragmatic & Polite Right, Tuned-Out Middle, Order & Opportunity Left, Left-Out Left, Loyal Liberals, Leftward Progressives."
+    },
+    {
+      "id": "t0vev2",
+      "blogId": "braddelong",
+      "title": "Pre-Show: Hexapodia Podcast LXVI: Ryan Avent, Noah Smith, & Brad Delong: “In Good Faith: How The Nature of Belief Shapes the Fate of Societies”",
+      "link": "https://braddelong.substack.com/p/pre-show-hexapodia-podcast-lxvi-ryan",
+      "date": "2026-11-17T21:23:49.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "y9ngiw",
+      "blogId": "persuasion",
+      "title": "The Dems' Playbook Is Vanishingly Simple",
+      "link": "https://www.persuasion.community/p/scott-colom-showed-the-way-to-win",
+      "date": "2026-11-17T21:20:36.000Z",
+      "excerpt": "Scott Colom executed it to perfection."
+    },
+    {
+      "id": "7irlt2",
+      "blogId": "kottke",
+      "title": "An Inconvenient Life",
+      "link": "https://kottke.org/26/11/an-inconvenient-life",
+      "date": "2026-11-17T20:41:00.000Z",
+      "excerpt": "Lyndsay Rush, who describes herself as a “part-time poet, full-time dingdong”, goes by the handle of @maryoliversdrunkcousin on Instagram. Her forthcoming collection of poems is called Microdosing Hope (out in March 2027). I liked this one she shared recently, called An Inconvenient Life: I want a d..."
+    },
+    {
+      "id": "j1g8cq",
+      "blogId": "marginalrevolution",
+      "title": "The Kalshi market on U.S. productivity growth",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/11/the-kalshi-market-on-u-s-productivity-growth.html",
+      "date": "2026-11-17T20:34:15.000Z",
+      "excerpt": "It is coming in at 2.2%, people. That is for over the next five years. tys…though even I think it will be a bit higher than that. Yes the liquidity is tiny, but that is endogenous to the reality that huge profits are not to be made there. You are free to trade yourself of […] The post The Kalshi mar..."
+    },
+    {
+      "id": "yn691h",
+      "blogId": "kottke",
+      "title": "Trailer for a new documentary on Jean-Michel Basquiat....",
+      "link": "https://kottke.org/26/11/0049996-trailer-for-a-new-documen",
+      "date": "2026-11-17T19:56:00.000Z",
+      "excerpt": "Trailer for a new documentary on Jean-Michel Basquiat. Authorized by his family, out on Netflix Dec 11th."
+    },
+    {
+      "id": "shwdll",
+      "blogId": "wealthofcommonsense",
+      "title": "A Strange Year in the Stock Market",
+      "link": "https://awealthofcommonsense.com/2026/11/a-strange-year-in-the-stock-market",
+      "date": "2026-11-17T19:42:56.000Z",
+      "excerpt": "A look at performance of the stock market this year. The post A Strange Year in the Stock Market appeared first on A Wealth of Common Sense. ..."
+    },
+    {
+      "id": "u9fsjv",
+      "blogId": "marginalrevolution",
+      "title": "What should I ask Alexander Mikaberidze?",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/11/what-should-i-ask-alexander-mikaberidze.html",
+      "date": "2026-11-17T19:17:25.000Z",
+      "excerpt": "He is the author and the new and excellent The Louisiana Purchase: The Grand Bargain and the Making of America. He also wrote The Napoleonic Wars: A Global History, one of my favorite history books. He has extensive other writings on the history of the Russian military during that same period. From..."
+    },
+    {
+      "id": "fjlnho",
+      "blogId": "kottke",
+      "title": "Knithub is an app for creating and previewing knitting...",
+      "link": "https://kottke.org/26/11/0050020-knithub",
+      "date": "2026-11-17T19:04:00.000Z",
+      "excerpt": "Knithub is an app for creating and previewing knitting and crochet patterns. Available on the web, iOS, and Android."
+    },
+    {
+      "id": "kopelw",
+      "blogId": "aldaily",
+      "title": "People love stories of accidental scientific discoveries. But they are mostly, at best, actively misleading",
+      "link": "https://worksinprogress.co/issue/accidental-discoveries?v4=",
+      "date": "2026-11-17T18:39:31.000Z",
+      "excerpt": "People love stories of accidental scientific discoveries. But they are mostly, at best, actively misleading"
+    },
+    {
+      "id": "efw0yx",
+      "blogId": "aldaily",
+      "title": "Cruelty, indignity, and the early history of the Americas. A new 700-page work follows North America up to 1680",
+      "link": "https://www.thenation.com/article/society/peter-mancall-contested-continent-native-history-north-america",
+      "date": "2026-11-17T18:38:31.000Z",
+      "excerpt": "Cruelty, indignity, and the early history of the Americas. A new 700-page work follows North America up to 1680"
+    },
+    {
+      "id": "g2y5on",
+      "blogId": "aldaily",
+      "title": "Why is the literary establishment turning a blind eye toward likely AI usage in award-winning fiction? ",
+      "link": "https://thepointmag.com/examined-life/the-part-about-the-machines",
+      "date": "2026-11-17T18:37:31.000Z",
+      "excerpt": "Why is the literary establishment turning a blind eye toward likely AI usage in award-winning fiction?"
+    },
+    {
+      "id": "ypamth",
+      "blogId": "aldaily",
+      "title": "Patricia Highsmith was rude, bigoted, and indifferent to her readers. Yet few novelists read human character so precisely",
+      "link": "https://www.theguardian.com/books/2026/nov/15/she-was-a-monster-the-real-patricia-highsmith-by-the-people-who-knew-her",
+      "date": "2026-11-17T18:36:31.000Z",
+      "excerpt": "Patricia Highsmith was rude, bigoted, and indifferent to her readers. Yet few novelists read human character so precisely"
+    },
+    {
+      "id": "xioz2e",
+      "blogId": "aldaily",
+      "title": "Aquaterra. A continent’s worth of land, once inhabited, now lies underwater. Archaeologists are finally realizing the possibilities",
+      "link": "https://www.theatlantic.com/magazine/2026/12/aquaterra-ancient-human-migration/689029?gift=2DPnH7-w5PunRuGFjgT5W-m3JXZDsV5PdxKRtZkm57k",
+      "date": "2026-11-17T18:35:31.000Z",
+      "excerpt": "Aquaterra. A continent’s worth of land, once inhabited, now lies underwater. Archaeologists are finally realizing the possibilities"
+    },
+    {
+      "id": "ey61cl",
+      "blogId": "abnormalreturns",
+      "title": "Tuesday links: a better edge",
+      "link": "https://abnormalreturns.com/2026/11/17/tuesday-links-a-better-edge",
+      "date": "2026-11-17T18:34:38.000Z",
+      "excerpt": ""
+    },
+    {
+      "id": "n3lod2",
+      "blogId": "aldaily",
+      "title": "“A human being is far more valuable than his opinions.” When Gershom Scholem blasted Hannah Arendt, she wondered: could they still be friends?",
+      "link": "https://theamericanscholar.org/the-knifes-edge",
+      "date": "2026-11-17T18:34:31.000Z",
+      "excerpt": "“A human being is far more valuable than his opinions.” When Gershom Scholem blasted Hannah Arendt, she wondered: could they still be friends?"
+    },
+    {
+      "id": "ku5fdb",
+      "blogId": "aldaily",
+      "title": "Editors were once heroic literary figures, spotting and nurturing hidden talent. Conglomeration in publishing has changed all that",
+      "link": "https://rosselliotbarkan.com/p/the-end-of-the-editor",
+      "date": "2026-11-17T18:33:31.000Z",
+      "excerpt": "Editors were once heroic literary figures, spotting and nurturing hidden talent. Conglomeration in publishing has changed all that"
+    },
+    {
+      "id": "sbn02d",
+      "blogId": "aldaily",
+      "title": "The history of the telephone: It was a curiosity, then a luxury item, and then an ordinary necessity",
+      "link": "https://lithub.com/how-the-telephone-changed-the-world",
+      "date": "2026-11-17T18:32:31.000Z",
+      "excerpt": "The history of the telephone: It was a curiosity, then a luxury item, and then an ordinary necessity"
+    },
+    {
+      "id": "1e5wgg",
+      "blogId": "aldaily",
+      "title": "Camus in love. He exchanged nearly 1,000 letters with Maria Casarès. They are intimate, poetic, unbridled",
+      "link": "https://literaryreview.co.uk/here-in-the-world",
+      "date": "2026-11-17T18:31:31.000Z",
+      "excerpt": "Camus in love. He exchanged nearly 1,000 letters with Maria Casarès. They are intimate, poetic, unbridled"
+    },
+    {
+      "id": "8moh79",
+      "blogId": "aldaily",
+      "title": "Janet Malcolm’s journalistic persona was terrifyingly sharp. But her personal letters? “Messy, confusing, repetitive, and frequently boring”",
+      "link": "https://www.nytimes.com/2026/11/11/books/review/the-absent-woman-eve-sneider.html?unlocked_article_code=1.P1E.I8Gj.EJ8iutx4uRAD&smid=url-share",
+      "date": "2026-11-17T18:30:31.000Z",
+      "excerpt": "Janet Malcolm’s journalistic persona was terrifyingly sharp. But her personal letters? “Messy, confusing, repetitive, and frequently boring”"
+    },
+    {
+      "id": "rys85u",
+      "blogId": "kottke",
+      "title": "ChatGPT Analyzed 32,245 of My Text Messages. “There are...",
+      "link": "https://kottke.org/26/11/0050011-chatgpt-analyzed-32245-of",
+      "date": "2026-11-17T18:18:00.000Z",
+      "excerpt": "ChatGPT Analyzed 32,245 of My Text Messages. “There are moments where I think you are plainly the harder person to be friends with.”"
+    },
+    {
+      "id": "ovl2pq",
+      "blogId": "flowingdata",
+      "title": "Flight traffic during the ground stop",
+      "link": "https://flowingdata.com/2026/11/17/flight-traffic-during-the-ground-stop",
+      "date": "2026-11-17T18:17:07.000Z",
+      "excerpt": "The New York Times mapped flights at major airports before and after the… Tags: flights, grounded, New York Times"
+    },
     {
       "id": "d6au89",
       "blogId": "braddelong",
@@ -120,62 +320,6 @@
       "link": "https://marginalrevolution.com/marginalrevolution/2026/11/tuesday-assorted-links-595.html",
       "date": "2026-11-17T13:46:49.000Z",
       "excerpt": "1. Luka has become a very good player. Defense is much better too. 2. No comment. 3. Did England bribe Scotland into political union? 4. Survey article on the economics of mental health, one of the most important and understudied areas. 5. Science isn’t just a series of lucky accidents. 6. Kalshi fi..."
-    },
-    {
-      "id": "ypamth",
-      "blogId": "aldaily",
-      "title": "Patricia Highsmith was rude, bigoted, and indifferent to her readers. Yet few novelists read human character so precisely",
-      "link": "https://www.theguardian.com/books/2026/nov/15/she-was-a-monster-the-real-patricia-highsmith-by-the-people-who-knew-her",
-      "date": "2026-11-17T13:08:36.000Z",
-      "excerpt": "Patricia Highsmith was rude, bigoted, and indifferent to her readers. Yet few novelists read human character so precisely"
-    },
-    {
-      "id": "xioz2e",
-      "blogId": "aldaily",
-      "title": "Aquaterra. A continent’s worth of land, once inhabited, now lies underwater. Archaeologists are finally realizing the possibilities",
-      "link": "https://www.theatlantic.com/magazine/2026/12/aquaterra-ancient-human-migration/689029?gift=2DPnH7-w5PunRuGFjgT5W-m3JXZDsV5PdxKRtZkm57k",
-      "date": "2026-11-17T13:07:36.000Z",
-      "excerpt": "Aquaterra. A continent’s worth of land, once inhabited, now lies underwater. Archaeologists are finally realizing the possibilities"
-    },
-    {
-      "id": "n3lod2",
-      "blogId": "aldaily",
-      "title": "“A human being is far more valuable than his opinions.” When Gershom Scholem blasted Hannah Arendt, she wondered: could they still be friends?",
-      "link": "https://theamericanscholar.org/the-knifes-edge",
-      "date": "2026-11-17T13:06:36.000Z",
-      "excerpt": "“A human being is far more valuable than his opinions.” When Gershom Scholem blasted Hannah Arendt, she wondered: could they still be friends?"
-    },
-    {
-      "id": "ku5fdb",
-      "blogId": "aldaily",
-      "title": "Editors were once heroic literary figures, spotting and nurturing hidden talent. Conglomeration in publishing has changed all that",
-      "link": "https://rosselliotbarkan.com/p/the-end-of-the-editor",
-      "date": "2026-11-17T13:05:36.000Z",
-      "excerpt": "Editors were once heroic literary figures, spotting and nurturing hidden talent. Conglomeration in publishing has changed all that"
-    },
-    {
-      "id": "sbn02d",
-      "blogId": "aldaily",
-      "title": "The history of the telephone: It was a curiosity, then a luxury item, and then an ordinary necessity",
-      "link": "https://lithub.com/how-the-telephone-changed-the-world",
-      "date": "2026-11-17T13:04:36.000Z",
-      "excerpt": "The history of the telephone: It was a curiosity, then a luxury item, and then an ordinary necessity"
-    },
-    {
-      "id": "1e5wgg",
-      "blogId": "aldaily",
-      "title": "Camus in love. He exchanged nearly 1,000 letters with Maria Casarès. They are intimate, poetic, unbridled",
-      "link": "https://literaryreview.co.uk/here-in-the-world",
-      "date": "2026-11-17T13:03:36.000Z",
-      "excerpt": "Camus in love. He exchanged nearly 1,000 letters with Maria Casarès. They are intimate, poetic, unbridled"
-    },
-    {
-      "id": "8moh79",
-      "blogId": "aldaily",
-      "title": "Janet Malcolm’s journalistic persona was terrifyingly sharp. But her personal letters? “Messy, confusing, repetitive, and frequently boring”",
-      "link": "https://www.nytimes.com/2026/11/11/books/review/the-absent-woman-eve-sneider.html?unlocked_article_code=1.P1E.I8Gj.EJ8iutx4uRAD&smid=url-share",
-      "date": "2026-11-17T13:02:36.000Z",
-      "excerpt": "Janet Malcolm’s journalistic persona was terrifyingly sharp. But her personal letters? “Messy, confusing, repetitive, and frequently boring”"
     },
     {
       "id": "jrhw9q",
@@ -344,6 +488,14 @@
       "link": "https://kottke.org/26/11/0050008-robert-pattinson-is-the-n",
       "date": "2026-11-17T00:57:00.000Z",
       "excerpt": "Robert Pattinson is the next James Bond. I know a lot of people don’t think this is a great fit, but I think Pattinson + Villeneuve will be quite good."
+    },
+    {
+      "id": "j0szv4",
+      "blogId": "marginalian",
+      "title": "Your Brain on Grief, Your Heart on Healing",
+      "link": "https://www.themarginalian.org/2026/11/16/the-grieving-brain-mary-frances-o-connor",
+      "date": "2026-11-17T00:53:18.000Z",
+      "excerpt": "\"Grief is a heart-wrenchingly painful problem for the brain to solve… to live in the world with the absence of someone… ingrained in your understanding of the world… For the brain, [they are] simultaneously gone and also everlasting, and you are walking through two worlds at the same time.\""
     },
     {
       "id": "7101ac",
@@ -17847,7 +17999,7 @@
       "title": "Quick post about “rāmābhiṣeke…”",
       "link": "https://shreevatsa.net/post/ramabhisheke",
       "date": "2026-10-05T00:00:00.000Z",
-      "excerpt": "There is a well-known verse in Sanskrit that goes (many minor variants exist): रामाभिषेके मदविह्वलाया It is usually presented as a “samasyā-pūraṇa”: someone proposed the meaningless (but metrical) set of syllables “ठठं ठठं ठं ठठठं ठठं ठः” as the last line (samasyā), and the poet completed it (pūraṇa..."
+      "excerpt": "There is a well-known verse in Sanskrit that goes (many minor variants exist): रामाभिषेके मदविह्वलाया I was reminded of it because my father asked me about it this morning. This verse is usually presented as a “samasyā-pūraṇa”: someone proposed the meaningless (but metrical) set of syllables “ठठं ठठ..."
     },
     {
       "id": "tpz0p6",
@@ -38580,7 +38732,7 @@
     {
       "id": "6to6ym",
       "blogId": "africanistperspective",
-      "title": "The end of “post-apartheid South Africa” and the birth of normal and better politics ",
+      "title": "The end of “post-apartheid South Africa” and the birth of normal and better politics, Part 1",
       "link": "https://www.africanistperspective.com/p/the-end-of-post-apartheid-south-africa",
       "date": "2026-08-14T05:56:21.000Z",
       "excerpt": "So far the rainbow nation has been a sterling example of reconciliation and peaceful decolonization. Now the hard work of doing normal bare-knuckle pro-growth politics must begin."
