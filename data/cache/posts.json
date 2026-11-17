@@ -1,6 +1,174 @@
 {
-  "lastUpdated": "2026-11-16T19:18:40.887Z",
+  "lastUpdated": "2026-11-17T00:42:21.569Z",
   "posts": [
+    {
+      "id": "7101ac",
+      "blogId": "larryswedroe",
+      "title": "Retire the Shorts, Keep the Longs: A Faster Exit From Tax-Aware Long-Short Strategies",
+      "link": "https://larryswedroe.substack.com/p/retire-the-shorts-keep-the-longs",
+      "date": "2026-11-17T00:21:48.000Z",
+      "excerpt": "Tax-aware long-short (TALS) strategies have attracted more than $150 billion. These strategies hold long and short positions (e.g., 200% long and 100% short, leaving net market exposure at 100%) to beat a benchmark before taxes, while harvesting capital losses investors can use against gains elsewhe..."
+    },
+    {
+      "id": "b7aksw",
+      "blogId": "simonwillison",
+      "title": "llm 0.37.3",
+      "link": "https://simonwillison.net/2026/Nov/16/llm",
+      "date": "2026-11-16T23:57:26.000Z",
+      "excerpt": "Release: llm 0.37.3 A bug fix release for LLM, mainly to cover a problem with the most recent Homebrew package of the software. Homebrew now ships the latest SQLite, 3.54.1, which includes a fix that broke LLM's logging code. Short version: in SQLite 3.54.0 the following SQL: select json_object('a',..."
+    },
+    {
+      "id": "lyu1xw",
+      "blogId": "oliverhartwich",
+      "title": "The fourfold rise in ACC suspension letters (Newstalk ZB)",
+      "link": "https://oliverhartwich.com/in-the-media/radio",
+      "date": "2026-11-16T23:00:00.000Z",
+      "excerpt": "Dr Oliver Hartwich on Newstalk ZB 'Mike Hosking Breakfast', 17 November 2026: The fourfold rise in ACC suspension letters."
+    },
+    {
+      "id": "dxxeg",
+      "blogId": "kottke",
+      "title": "Waves have been in the news lately: El Niño battering the...",
+      "link": "https://kottke.org/26/11/0050007-waves",
+      "date": "2026-11-16T22:38:00.000Z",
+      "excerpt": "Waves have been in the news lately: El Niño battering the west coast of the US, surf spots popping off. Waves, waves, waves, waves, waves, waves, waves, waves, waves, waves, waves, waves, waves, waves, waves, waves. Beautiful. Terrifying."
+    },
+    {
+      "id": "rqfsi0",
+      "blogId": "curtjaimungal",
+      "title": "It Shouldn’t Work, and It Does",
+      "link": "https://curtjaimungal.substack.com/p/it-shouldnt-work-and-it-does",
+      "date": "2026-11-16T22:22:02.000Z",
+      "excerpt": "Mikhail Gromov on mathematics and life"
+    },
+    {
+      "id": "s5x4ag",
+      "blogId": "kottke",
+      "title": "Sloppy Forgeries is a competitive painting game in which...",
+      "link": "https://kottke.org/26/11/0050003-sloppy-forgeries",
+      "date": "2026-11-16T21:33:00.000Z",
+      "excerpt": "Sloppy Forgeries is a competitive painting game in which you have a short time to draw the best version of one of 50 different masterpieces (Mona Lisa, Hokusai, Starry Night, etc). There are local and online multiplayer modes."
+    },
+    {
+      "id": "j4p981",
+      "blogId": "honestbroker",
+      "title": "The Golden Age of Jazz Cartoon Soundtracks (Part 1)",
+      "link": "https://www.honest-broker.com/p/the-golden-age-of-jazz-cartoon-soundtracks",
+      "date": "2026-11-16T20:37:43.000Z",
+      "excerpt": "For almost a decade, stylish jazz sounds accompanied the Flintstones, the Pink Panther, Charlie Brown, and other cartoon heroes"
+    },
+    {
+      "id": "3awrvd",
+      "blogId": "thezvi",
+      "title": "Fable 5.2 is the New Bazooka",
+      "link": "https://thezvi.substack.com/p/fable-52-is-the-new-bazooka",
+      "date": "2026-11-16T20:27:14.000Z",
+      "excerpt": "You do not always want a bazooka."
+    },
+    {
+      "id": "ouyfi",
+      "blogId": "kottke",
+      "title": "Crime and Punishment in America",
+      "link": "https://kottke.org/26/11/crime-and-punishment-in-america",
+      "date": "2026-11-16T20:26:00.000Z",
+      "excerpt": "Documentary filmmaker Lynn Novick, who co-directed The Vietnam War and The US and the Holocaust with Ken Burns, has directed an 8-hour PBS series called Crime and Punishment in America. A sweeping look at the American criminal justice system, from the origins of prisons and policing to our continued..."
+    },
+    {
+      "id": "ypamth",
+      "blogId": "aldaily",
+      "title": "Patricia Highsmith was rude, bigoted, and indifferent to her readers. Yet few novelists read human character so precisely",
+      "link": "https://www.theguardian.com/books/2026/nov/15/she-was-a-monster-the-real-patricia-highsmith-by-the-people-who-knew-her",
+      "date": "2026-11-16T19:36:04.000Z",
+      "excerpt": "Patricia Highsmith was rude, bigoted, and indifferent to her readers. Yet few novelists read human character so precisely"
+    },
+    {
+      "id": "xioz2e",
+      "blogId": "aldaily",
+      "title": "Aquaterra. A continent’s worth of land, once inhabited, now lies underwater. Archaeologists are finally realizing the possibilities",
+      "link": "https://www.theatlantic.com/magazine/2026/12/aquaterra-ancient-human-migration/689029?gift=2DPnH7-w5PunRuGFjgT5W-m3JXZDsV5PdxKRtZkm57k",
+      "date": "2026-11-16T19:35:04.000Z",
+      "excerpt": "Aquaterra. A continent’s worth of land, once inhabited, now lies underwater. Archaeologists are finally realizing the possibilities"
+    },
+    {
+      "id": "n3lod2",
+      "blogId": "aldaily",
+      "title": "“A human being is far more valuable than his opinions.” When Gershom Scholem blasted Hannah Arendt, she wondered: could they still be friends?",
+      "link": "https://theamericanscholar.org/the-knifes-edge",
+      "date": "2026-11-16T19:34:04.000Z",
+      "excerpt": "“A human being is far more valuable than his opinions.” When Gershom Scholem blasted Hannah Arendt, she wondered: could they still be friends?"
+    },
+    {
+      "id": "ku5fdb",
+      "blogId": "aldaily",
+      "title": "Editors were once heroic literary figures, spotting and nurturing hidden talent. Conglomeration in publishing has changed all that",
+      "link": "https://rosselliotbarkan.com/p/the-end-of-the-editor",
+      "date": "2026-11-16T19:33:04.000Z",
+      "excerpt": "Editors were once heroic literary figures, spotting and nurturing hidden talent. Conglomeration in publishing has changed all that"
+    },
+    {
+      "id": "sbn02d",
+      "blogId": "aldaily",
+      "title": "The history of the telephone: It was a curiosity, then a luxury item, and then an ordinary necessity",
+      "link": "https://lithub.com/how-the-telephone-changed-the-world",
+      "date": "2026-11-16T19:32:04.000Z",
+      "excerpt": "The history of the telephone: It was a curiosity, then a luxury item, and then an ordinary necessity"
+    },
+    {
+      "id": "wvyflo",
+      "blogId": "kottke",
+      "title": "Quick one: a previously unknown sample from Stardust’s...",
+      "link": "https://kottke.org/26/11/0050001-has-been-located",
+      "date": "2026-11-16T19:32:00.000Z",
+      "excerpt": "Quick one: a previously unknown sample from Stardust’s Music Sounds Better With You has been located."
+    },
+    {
+      "id": "1e5wgg",
+      "blogId": "aldaily",
+      "title": "Camus in love. He exchanged nearly 1,000 letters with Maria Casarès. They are intimate, poetic, unbridled",
+      "link": "https://literaryreview.co.uk/here-in-the-world",
+      "date": "2026-11-16T19:31:04.000Z",
+      "excerpt": "Camus in love. He exchanged nearly 1,000 letters with Maria Casarès. They are intimate, poetic, unbridled"
+    },
+    {
+      "id": "8moh79",
+      "blogId": "aldaily",
+      "title": "Janet Malcolm’s journalistic persona was terrifyingly sharp. But her personal letters? “Messy, confusing, repetitive, and frequently boring”",
+      "link": "https://www.nytimes.com/2026/11/11/books/review/the-absent-woman-eve-sneider.html?unlocked_article_code=1.P1E.I8Gj.EJ8iutx4uRAD&smid=url-share",
+      "date": "2026-11-16T19:30:04.000Z",
+      "excerpt": "Janet Malcolm’s journalistic persona was terrifyingly sharp. But her personal letters? “Messy, confusing, repetitive, and frequently boring”"
+    },
+    {
+      "id": "tttofd",
+      "blogId": "aldaily",
+      "title": "Major literary organizations rarely recognize works of science fiction. With M. John Harrison winning the Booker Prize, will that finally change?",
+      "link": "https://www.theguardian.com/books/2026/nov/11/m-john-harrison-booker-science-fiction",
+      "date": "2026-11-16T19:29:04.000Z",
+      "excerpt": "Major literary organizations rarely recognize works of science fiction. With M. John Harrison winning the Booker Prize, will that finally change?"
+    },
+    {
+      "id": "uljesd",
+      "blogId": "aldaily",
+      "title": "Richard Posner described himself as cold, callous, snobbish, selfish, and cruel. It's a good line, but it wasn't true",
+      "link": "https://casssunstein.substack.com/p/on-richard-posner",
+      "date": "2026-11-16T19:28:04.000Z",
+      "excerpt": "Richard Posner described himself as cold, callous, snobbish, selfish, and cruel. It's a good line, but it wasn't true"
+    },
+    {
+      "id": "jb7tfr",
+      "blogId": "aldaily",
+      "title": "In the silken, seductive, perilous literary world of Saki, wolves howl, cats speak, and epigrams are matters of life and death",
+      "link": "https://engelsbergideas.com/reviews/sakis-two-selves",
+      "date": "2026-11-16T19:27:04.000Z",
+      "excerpt": "In the silken, seductive, perilous literary world of Saki, wolves howl, cats speak, and epigrams are matters of life and death"
+    },
+    {
+      "id": "s5r0p6",
+      "blogId": "marginalrevolution",
+      "title": "Monday assorted links",
+      "link": "https://marginalrevolution.com/marginalrevolution/2026/11/monday-assorted-links-586.html",
+      "date": "2026-11-16T19:17:13.000Z",
+      "excerpt": "1. Some Henry Oliver book reviews. 2. Washington Monthly’s The Reader, book reviews. And High Line, a new publishing house for disfavored books. 3. Inflation-indexed bonds around the world. 4. Garett Jones on Richard Posner. 5. “A survey released Monday found that new international student enrollmen..."
+    },
     {
       "id": "ka4tl0",
       "blogId": "freddiedeboer",
@@ -146,68 +314,12 @@
       "excerpt": "The provocative paper, \"Beyond the numbers: Professional forecasters' narratives about inflation and stock market performance,\" conducts an analysis of the different narratives attached to professional forecasters after an inflation number is released. This has always been frustrating yet rarely dis..."
     },
     {
-      "id": "ku5fdb",
-      "blogId": "aldaily",
-      "title": "Editors were once heroic literary figures, spotting and nurturing hidden talent. Conglomeration in publishing has changed all that",
-      "link": "https://rosselliotbarkan.com/p/the-end-of-the-editor",
-      "date": "2026-11-16T14:05:14.000Z",
-      "excerpt": "Editors were once heroic literary figures, spotting and nurturing hidden talent. Conglomeration in publishing has changed all that"
-    },
-    {
-      "id": "sbn02d",
-      "blogId": "aldaily",
-      "title": "The history of the telephone: It was a curiosity, then a luxury item, and then an ordinary necessity",
-      "link": "https://lithub.com/how-the-telephone-changed-the-world",
-      "date": "2026-11-16T14:04:14.000Z",
-      "excerpt": "The history of the telephone: It was a curiosity, then a luxury item, and then an ordinary necessity"
-    },
-    {
-      "id": "1e5wgg",
-      "blogId": "aldaily",
-      "title": "Camus in love. He exchanged nearly 1,000 letters with Maria Casarès. They are intimate, poetic, unbridled",
-      "link": "https://literaryreview.co.uk/here-in-the-world",
-      "date": "2026-11-16T14:03:14.000Z",
-      "excerpt": "Camus in love. He exchanged nearly 1,000 letters with Maria Casarès. They are intimate, poetic, unbridled"
-    },
-    {
-      "id": "8moh79",
-      "blogId": "aldaily",
-      "title": "Janet Malcolm’s journalistic persona was terrifyingly sharp. But her personal letters? “Messy, confusing, repetitive, and frequently boring”",
-      "link": "https://www.nytimes.com/2026/11/11/books/review/the-absent-woman-eve-sneider.html?unlocked_article_code=1.P1E.I8Gj.EJ8iutx4uRAD&smid=url-share",
-      "date": "2026-11-16T14:02:14.000Z",
-      "excerpt": "Janet Malcolm’s journalistic persona was terrifyingly sharp. But her personal letters? “Messy, confusing, repetitive, and frequently boring”"
-    },
-    {
       "id": "3yiuh6",
       "blogId": "importai",
       "title": "Import AI 481: AI sub-contractors; a wet lab for AI; and subterfuge during development",
       "link": "https://importai.substack.com/p/import-ai-481-ai-sub-contractors",
       "date": "2026-11-16T14:01:15.000Z",
       "excerpt": "Plus: CucumberVision!"
-    },
-    {
-      "id": "tttofd",
-      "blogId": "aldaily",
-      "title": "Major literary organizations rarely recognize works of science fiction. With M. John Harrison winning the Booker Prize, will that finally change?",
-      "link": "https://www.theguardian.com/books/2026/nov/11/m-john-harrison-booker-science-fiction",
-      "date": "2026-11-16T14:01:14.000Z",
-      "excerpt": "Major literary organizations rarely recognize works of science fiction. With M. John Harrison winning the Booker Prize, will that finally change?"
-    },
-    {
-      "id": "uljesd",
-      "blogId": "aldaily",
-      "title": "Richard Posner described himself as cold, callous, snobbish, selfish, and cruel. It's a good line, but it wasn't true",
-      "link": "https://casssunstein.substack.com/p/on-richard-posner",
-      "date": "2026-11-16T14:00:14.000Z",
-      "excerpt": "Richard Posner described himself as cold, callous, snobbish, selfish, and cruel. It's a good line, but it wasn't true"
-    },
-    {
-      "id": "jb7tfr",
-      "blogId": "aldaily",
-      "title": "In the silken, seductive, perilous literary world of Saki, wolves howl, cats speak, and epigrams are matters of life and death",
-      "link": "https://engelsbergideas.com/reviews/sakis-two-selves",
-      "date": "2026-11-16T13:59:14.000Z",
-      "excerpt": "In the silken, seductive, perilous literary world of Saki, wolves howl, cats speak, and epigrams are matters of life and death"
     },
     {
       "id": "kpqvy0",
@@ -472,14 +584,6 @@
       "link": "https://simonwillison.net/2026/Nov/15/datasette-2",
       "date": "2026-11-15T23:18:17.000Z",
       "excerpt": "Release: datasette 0.65.6 I backported a minor security fix from 1.0a43: Fixed a security issue where a database registered using add_database(db, name=..., route=...) with a route that differs from its name could be downloaded from /<route>.db by actors who were denied access to it. [...] Tags: sec..."
-    },
-    {
-      "id": "lyu1xw",
-      "blogId": "oliverhartwich",
-      "title": "The push to reform MMP (Radio NZ)",
-      "link": "https://oliverhartwich.com/in-the-media/radio",
-      "date": "2026-11-15T23:00:00.000Z",
-      "excerpt": "Dr Oliver Hartwich on Radio NZ 'Midday Report', 16 November 2026: The push to reform MMP."
     },
     {
       "id": "7jn9nr",
