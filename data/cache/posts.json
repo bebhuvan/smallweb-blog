@@ -1,6 +1,166 @@
 {
-  "lastUpdated": "2026-11-24T19:58:05.812Z",
+  "lastUpdated": "2026-11-25T01:19:59.105Z",
   "posts": [
+    {
+      "id": "yzrm4p",
+      "blogId": "lukeburgis",
+      "title": "The Philosophy of Technology",
+      "link": "https://read.lukeburgis.com/p/the-philosophy-of-technology",
+      "date": "2026-11-25T00:52:56.000Z",
+      "excerpt": "Human, intellectual, spiritual, and pastoral approaches to using and building tech."
+    },
+    {
+      "id": "ieepb8",
+      "blogId": "kneelingbus",
+      "title": "Midnight in a Perfect World",
+      "link": "https://kneelingbus.substack.com/p/midnight-in-a-perfect-world",
+      "date": "2026-11-25T00:44:22.000Z",
+      "excerpt": "Why there are no prediction markets in Grand Theft Auto VI"
+    },
+    {
+      "id": "4i7k2x",
+      "blogId": "lucumr",
+      "title": "Abolish Lock Poisoning",
+      "link": "https://lucumr.pocoo.org/2026/11/25/poisoning",
+      "date": "2026-11-25T00:00:00.000Z",
+      "excerpt": "Rust has a curious feature that I don’t think the language would land today, if it was not there for a long time: mutex poisoning. When some Rust code panics while holding a std::sync::Mutex, the mutex is poisoned. That means that any further call to lock() returns a PoisonError. The motivation for..."
+    },
+    {
+      "id": "86wr8d",
+      "blogId": "venkateshrao",
+      "title": "The Future Needs Furniture",
+      "link": "https://contraptions.venkateshrao.com/p/the-future-needs-furniture",
+      "date": "2026-11-24T23:45:45.000Z",
+      "excerpt": "Inhabiting emerging constitutive realities in the style we are accustomed to"
+    },
+    {
+      "id": "kdbe8d",
+      "blogId": "simonwillison",
+      "title": "Three LLM inflection points in twelve months",
+      "link": "https://simonwillison.net/2026/Nov/24/llm-inflection-points",
+      "date": "2026-11-24T23:02:07.000Z",
+      "excerpt": "I gave a keynote at the AI Engineer Code Summit a couple of weeks ago, constructed around the idea that there have been three significant inflection points in the abilities of LLMs and coding agents in the past twelve months. Here's the video of the talk. In this post I'm going to pull out the major..."
+    },
+    {
+      "id": "ofpy3t",
+      "blogId": "casssunstein",
+      "title": "Norms As Weapons, Norms As Taboos",
+      "link": "https://casssunstein.substack.com/p/norms-as-weapons-norms-as-taboos",
+      "date": "2026-11-24T22:51:19.000Z",
+      "excerpt": "Inspired by Recent and Current Events"
+    },
+    {
+      "id": "f3pfqh",
+      "blogId": "thezvi",
+      "title": "Jensen Huang Reinstated As Nvidia CEO at Behest of President Trump",
+      "link": "https://thezvi.substack.com/p/jensen-huang-reinstated-as-nvidia",
+      "date": "2026-11-24T22:42:01.000Z",
+      "excerpt": "In the evening of November 22, Donald Trump said he ‘hoped’ the Nvidia board would rehire Jensen Huang, as the ‘best thing for the Company.’"
+    },
+    {
+      "id": "fpow58",
+      "blogId": "understandingai",
+      "title": "An Anthropic mathematician just solved math’s most famous problem",
+      "link": "https://www.understandingai.org/p/an-anthropic-mathematician-just-solved",
+      "date": "2026-11-24T21:43:33.000Z",
+      "excerpt": "Is solving the Riemann Hypothesis a “coal mine canary for dangerously advanced AI?”"
+    },
+    {
+      "id": "j40xp1",
+      "blogId": "aldaily",
+      "title": "Terence Tao: AI will radically alter the future of math, but “right now, a lot of what people are doing with AI is unimaginative”",
+      "link": "https://lareviewofbooks.org/article/terence-tao-six-math-essentials-ai-machine-learning",
+      "date": "2026-11-24T20:14:01.000Z",
+      "excerpt": "Terence Tao: AI will radically alter the future of math, but “right now, a lot of what people are doing with AI is unimaginative”"
+    },
+    {
+      "id": "t919uv",
+      "blogId": "aldaily",
+      "title": "\"When we habitually act on advice from a man-made thing whose wisdom we rate above our own, we have ceased to govern ourselves\"",
+      "link": "https://www.compactmag.com/article/do-you-want-a-human-world",
+      "date": "2026-11-24T20:13:01.000Z",
+      "excerpt": "\"When we habitually act on advice from a man-made thing whose wisdom we rate above our own, we have ceased to govern ourselves\""
+    },
+    {
+      "id": "cx35qh",
+      "blogId": "aldaily",
+      "title": "A man in a gray tartan suit typed away on the Washington DC metro — and so a plan to reinvent the Smithsonian was revealed to the world",
+      "link": "https://www.propublica.org/article/dc-metro-smithsonian-american-history-plan",
+      "date": "2026-11-24T20:12:01.000Z",
+      "excerpt": "A man in a gray tartan suit typed away on the Washington DC metro — and so a plan to reinvent the Smithsonian was revealed to the world"
+    },
+    {
+      "id": "5blxhe",
+      "blogId": "aldaily",
+      "title": "Who were the Cultural Marxists? They were the losers of the 20th century: defeated, jailed, murdered, or exiled",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n21/richard-seymour/imputations-of-malice",
+      "date": "2026-11-24T20:11:01.000Z",
+      "excerpt": "Who were the Cultural Marxists? They were the losers of the 20th century: defeated, jailed, murdered, or exiled"
+    },
+    {
+      "id": "qja3mg",
+      "blogId": "wealthofcommonsense",
+      "title": "The Most Powerful Force on Earth",
+      "link": "https://awealthofcommonsense.com/2026/11/the-most-powerful-force-on-earth",
+      "date": "2026-11-24T20:10:40.000Z",
+      "excerpt": "Is the stock market too big to fail? The post The Most Powerful Force on Earth appeared first on A Wealth of Common Sense. ..."
+    },
+    {
+      "id": "44y49a",
+      "blogId": "aldaily",
+      "title": "Longing for roots as an antidote to alienation is understandable, even laudable. Yet tyrants know how to exploit it",
+      "link": "https://hedgehogreview.com/web-features/thr/posts/digging-for-roots",
+      "date": "2026-11-24T20:10:01.000Z",
+      "excerpt": "Longing for roots as an antidote to alienation is understandable, even laudable. Yet tyrants know how to exploit it"
+    },
+    {
+      "id": "2zzlnb",
+      "blogId": "aldaily",
+      "title": "In 2022, two activists glued their hands to works of Goya’s at Madrid’s Prado museum. But what does it mean to attack a painting?",
+      "link": "https://www.artforum.com/features/borka-villel-museums-1234762356",
+      "date": "2026-11-24T20:09:01.000Z",
+      "excerpt": "In 2022, two activists glued their hands to works of Goya’s at Madrid’s Prado museum. But what does it mean to attack a painting?"
+    },
+    {
+      "id": "2zqe16",
+      "blogId": "aldaily",
+      "title": "In 1819, a future king saw Pompeii’s erotic art and blushed. It stayed hidden for the next two centuries",
+      "link": "https://lithub.com/a-technological-history-of-ancient-porn",
+      "date": "2026-11-24T20:08:01.000Z",
+      "excerpt": "In 1819, a future king saw Pompeii’s erotic art and blushed. It stayed hidden for the next two centuries"
+    },
+    {
+      "id": "yiqeda",
+      "blogId": "aldaily",
+      "title": "Kurt Gödel left behind thousands of pages of unpublished jottings about math and logic. Turns out he discovered much more than anyone realized",
+      "link": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "date": "2026-11-24T20:07:01.000Z",
+      "excerpt": "Kurt Gödel left behind thousands of pages of unpublished jottings about math and logic. Turns out he discovered much more than anyone realized"
+    },
+    {
+      "id": "8ipvl0",
+      "blogId": "aldaily",
+      "title": "Truisms, abstractions, and flatness. The key to admiring John Berger’s poetry is admitting that he had a tin ear",
+      "link": "https://www.poetryfoundation.org/articles/1838058/a-mere-140-pages",
+      "date": "2026-11-24T20:06:01.000Z",
+      "excerpt": "Truisms, abstractions, and flatness. The key to admiring John Berger’s poetry is admitting that he had a tin ear"
+    },
+    {
+      "id": "mydlfg",
+      "blogId": "aldaily",
+      "title": "David Graeber was a brilliant, influential thinker. He was also largely wrong and had a surprisingly dark view of humanity",
+      "link": "https://www.theideasletter.org/essay/dark-imagination",
+      "date": "2026-11-24T20:05:01.000Z",
+      "excerpt": "David Graeber was a brilliant, influential thinker. He was also largely wrong and had a surprisingly dark view of humanity"
+    },
+    {
+      "id": "m5rfaz",
+      "blogId": "kottke",
+      "title": "A new DNA study all but proves that Thomas Jefferson...",
+      "link": "https://kottke.org/26/11/0050004-a-new-dna-study",
+      "date": "2026-11-24T20:05:00.000Z",
+      "excerpt": "A new DNA study all but proves that Thomas Jefferson fathered children with Sally Hemings, a woman he enslaved. “You actually had Hemings descendants that had more Thomas Jefferson DNA than the known Jefferson descendants.”"
+    },
     {
       "id": "8f7x62",
       "blogId": "marginalrevolution",
@@ -95,7 +255,7 @@
       "title": "US macroeconomics in perspective ",
       "link": "https://mrzepczynski.blogspot.com/2026/11/us-macroeconomics-in-perspective.html",
       "date": "2026-11-24T15:26:44.000Z",
-      "excerpt": "There is constant talk about whether there will be a recession. Nothing wrong with this discussion and it is a useful exercise, yet it is important to place it in perspective. The likelihood of recession has fallen since the inception of macroeconomic policy controls like the Fed. For all the compla..."
+      "excerpt": "There is constant talk about whether there will be a recession. There is nothing wrong with this discussion, and it is a useful exercise, yet it is important to place it in perspective. The likelihood of recession has fallen since the inception of macroeconomic policy controls like the Fed. Despite..."
     },
     {
       "id": "u3qc4u",
@@ -120,62 +280,6 @@
       "link": "https://kottke.org/26/11/0050023-the-100-year-plan-to-rest",
       "date": "2026-11-24T14:43:00.000Z",
       "excerpt": "Planet Wild on the 100-year plan to restore the Scottish Highlands by bringing back wetlands, peatlands, forests, and rivers."
-    },
-    {
-      "id": "5blxhe",
-      "blogId": "aldaily",
-      "title": "Who were the Cultural Marxists? They were the losers of the 20th century: defeated, jailed, murdered, or exiled",
-      "link": "https://www.lrb.co.uk/the-paper/v48/n21/richard-seymour/imputations-of-malice",
-      "date": "2026-11-24T14:42:59.000Z",
-      "excerpt": "Who were the Cultural Marxists? They were the losers of the 20th century: defeated, jailed, murdered, or exiled"
-    },
-    {
-      "id": "44y49a",
-      "blogId": "aldaily",
-      "title": "Longing for roots as an antidote to alienation is understandable, even laudable. Yet tyrants know how to exploit it",
-      "link": "https://hedgehogreview.com/web-features/thr/posts/digging-for-roots",
-      "date": "2026-11-24T14:41:59.000Z",
-      "excerpt": "Longing for roots as an antidote to alienation is understandable, even laudable. Yet tyrants know how to exploit it"
-    },
-    {
-      "id": "2zzlnb",
-      "blogId": "aldaily",
-      "title": "In 2022, two activists glued their hands to works of Goya’s at Madrid’s Prado museum. But what does it mean to attack a painting?",
-      "link": "https://www.artforum.com/features/borka-villel-museums-1234762356",
-      "date": "2026-11-24T14:40:59.000Z",
-      "excerpt": "In 2022, two activists glued their hands to works of Goya’s at Madrid’s Prado museum. But what does it mean to attack a painting?"
-    },
-    {
-      "id": "2zqe16",
-      "blogId": "aldaily",
-      "title": "In 1819, a future king saw Pompeii’s erotic art and blushed. It stayed hidden for the next two centuries",
-      "link": "https://lithub.com/a-technological-history-of-ancient-porn",
-      "date": "2026-11-24T14:39:59.000Z",
-      "excerpt": "In 1819, a future king saw Pompeii’s erotic art and blushed. It stayed hidden for the next two centuries"
-    },
-    {
-      "id": "yiqeda",
-      "blogId": "aldaily",
-      "title": "Kurt Gödel left behind thousands of pages of unpublished jottings about math and logic. Turns out he discovered much more than anyone realized",
-      "link": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
-      "date": "2026-11-24T14:38:59.000Z",
-      "excerpt": "Kurt Gödel left behind thousands of pages of unpublished jottings about math and logic. Turns out he discovered much more than anyone realized"
-    },
-    {
-      "id": "8ipvl0",
-      "blogId": "aldaily",
-      "title": "Truisms, abstractions, and flatness. The key to admiring John Berger’s poetry is admitting that he had a tin ear",
-      "link": "https://www.poetryfoundation.org/articles/1838058/a-mere-140-pages",
-      "date": "2026-11-24T14:37:59.000Z",
-      "excerpt": "Truisms, abstractions, and flatness. The key to admiring John Berger’s poetry is admitting that he had a tin ear"
-    },
-    {
-      "id": "mydlfg",
-      "blogId": "aldaily",
-      "title": "David Graeber was a brilliant, influential thinker. He was also largely wrong and had a surprisingly dark view of humanity",
-      "link": "https://www.theideasletter.org/essay/dark-imagination",
-      "date": "2026-11-24T14:36:59.000Z",
-      "excerpt": "David Graeber was a brilliant, influential thinker. He was also largely wrong and had a surprisingly dark view of humanity"
     },
     {
       "id": "iqh866",
@@ -71604,7 +71708,7 @@
     {
       "id": "uihg24",
       "blogId": "innerwilds",
-      "title": "What Changed My Life",
+      "title": "My Ayurveda Doc",
       "link": "https://www.innerwilds.blog/p/what-changed-my-life",
       "date": "2026-03-27T21:34:04.000Z",
       "excerpt": "Pure Hype Sesh this time"
