@@ -1,6 +1,134 @@
 {
-  "lastUpdated": "2026-11-27T18:43:22.880Z",
+  "lastUpdated": "2026-11-28T00:24:43.728Z",
   "posts": [
+    {
+      "id": "1j8906",
+      "blogId": "simonwillison",
+      "title": "datasette-charts 0.4a0",
+      "link": "https://simonwillison.net/2026/Nov/27/datasette-charts",
+      "date": "2026-11-27T23:57:17.000Z",
+      "excerpt": "Release: datasette-charts 0.4a0 The new datasette-charts plugin has its own plugin hook to allow other plugins to define new chart types, but I hadn't actually used it for anything yet. I had Claude Opus 5.5 build an experimental plugins just to try out the hook and it came up with a bunch of fricti..."
+    },
+    {
+      "id": "7a2rgt",
+      "blogId": "nicholasgruen",
+      "title": "Is AI furthering institutional collapse? Hint: Yes",
+      "link": "https://nicholasgruen.substack.com/p/is-ai-furthering-institutional-collapse",
+      "date": "2026-11-27T23:15:30.000Z",
+      "excerpt": "And other things encountered along the way this week"
+    },
+    {
+      "id": "ik69yd",
+      "blogId": "astralcodexten",
+      "title": "Book Review Contest 2026 Winners",
+      "link": "https://www.astralcodexten.com/p/book-review-contest-2026-winners",
+      "date": "2026-11-27T20:32:19.000Z",
+      "excerpt": "..."
+    },
+    {
+      "id": "gjxhi9",
+      "blogId": "benthamsbulldog",
+      "title": "Discussing Anthropics With Cian Dorr",
+      "link": "https://benthams.substack.com/p/discussing-anthropics-with-cian-dorr",
+      "date": "2026-11-27T19:57:19.000Z",
+      "excerpt": "SIA vs SSA"
+    },
+    {
+      "id": "oejqz",
+      "blogId": "noahpinion",
+      "title": "The coming age of sodium-ion batteries",
+      "link": "https://www.noahpinion.blog/p/the-coming-age-of-sodium-ion-batteries",
+      "date": "2026-11-27T19:42:40.000Z",
+      "excerpt": "A guest post by Alex Shoer"
+    },
+    {
+      "id": "jtjqqb",
+      "blogId": "spyglass",
+      "title": "Inklings #035 📧",
+      "link": "https://spyglass.org/inklings-spying-vs-espionage-muse-vs-amazon-spacex-vs-ai-riemann-vs-everyone-claude-vs-apple-avengers-vs-dune",
+      "date": "2026-11-27T19:38:04.000Z",
+      "excerpt": "Spying vs. Espionage • Muse vs. Amazon • SpaceX vs. AI • Riemann vs. Everyone • iPadOS vs. macOS • Claude vs. Apple • Avengers vs. Dune"
+    },
+    {
+      "id": "39qgzg",
+      "blogId": "aldaily",
+      "title": "The digital humanities promised to save the English department by buying a few computers and calling it a lab. The plan didn't work",
+      "link": "https://www.chronicle.com/article/the-digital-humanities-was-a-dead-end",
+      "date": "2026-11-27T19:08:56.000Z",
+      "excerpt": "The digital humanities promised to save the English department by buying a few computers and calling it a lab. The plan didn't work"
+    },
+    {
+      "id": "63lrz0",
+      "blogId": "aldaily",
+      "title": "The “International Institute of Literature and Arts” honors top literary scholars. Is it a fiction invented by Chinese spies?",
+      "link": "https://www.vanityfair.com/story/worlds-top-literary-scholars-targeted-by-chinese-spy-op",
+      "date": "2026-11-27T19:07:56.000Z",
+      "excerpt": "The “International Institute of Literature and Arts” honors top literary scholars. Is it a fiction invented by Chinese spies?"
+    },
+    {
+      "id": "ago6hj",
+      "blogId": "aldaily",
+      "title": "We are blithely conversant with the toilet as a consumer product, household good, or luxury signifier. We are less prone to considering what goes inside it",
+      "link": "https://www.newyorker.com/magazine/2026/11/30/after-the-flush-nick-kawa-book-review",
+      "date": "2026-11-27T19:06:56.000Z",
+      "excerpt": "We are blithely conversant with the toilet as a consumer product, household good, or luxury signifier. We are less prone to considering what goes inside it"
+    },
+    {
+      "id": "j40xp1",
+      "blogId": "aldaily",
+      "title": "Terence Tao: AI will radically alter the future of math. But “right now, a lot of what people are doing with AI is unimaginative”",
+      "link": "https://lareviewofbooks.org/article/terence-tao-six-math-essentials-ai-machine-learning",
+      "date": "2026-11-27T19:05:56.000Z",
+      "excerpt": "Terence Tao: AI will radically alter the future of math. But “right now, a lot of what people are doing with AI is unimaginative”"
+    },
+    {
+      "id": "t919uv",
+      "blogId": "aldaily",
+      "title": "\"When we habitually act on advice from a man-made thing whose wisdom we rate above our own, we have ceased to govern ourselves\"",
+      "link": "https://www.compactmag.com/article/do-you-want-a-human-world",
+      "date": "2026-11-27T19:04:56.000Z",
+      "excerpt": "\"When we habitually act on advice from a man-made thing whose wisdom we rate above our own, we have ceased to govern ourselves\""
+    },
+    {
+      "id": "cx35qh",
+      "blogId": "aldaily",
+      "title": "A man in a gray tartan suit typed away on the Washington DC subway — and so a scheme to reshape the Smithsonian was revealed to the world",
+      "link": "https://www.propublica.org/article/dc-metro-smithsonian-american-history-plan",
+      "date": "2026-11-27T19:03:56.000Z",
+      "excerpt": "A man in a gray tartan suit typed away on the Washington DC subway — and so a scheme to reshape the Smithsonian was revealed to the world"
+    },
+    {
+      "id": "5blxhe",
+      "blogId": "aldaily",
+      "title": "Who were the Cultural Marxists? They were the losers of the 20th century: defeated, jailed, murdered, or exiled",
+      "link": "https://www.lrb.co.uk/the-paper/v48/n21/richard-seymour/imputations-of-malice",
+      "date": "2026-11-27T19:02:56.000Z",
+      "excerpt": "Who were the Cultural Marxists? They were the losers of the 20th century: defeated, jailed, murdered, or exiled"
+    },
+    {
+      "id": "44y49a",
+      "blogId": "aldaily",
+      "title": "Longing for roots as an antidote to alienation is understandable, even laudable. Yet tyrants know how to exploit it",
+      "link": "https://hedgehogreview.com/web-features/thr/posts/digging-for-roots",
+      "date": "2026-11-27T19:01:56.000Z",
+      "excerpt": "Longing for roots as an antidote to alienation is understandable, even laudable. Yet tyrants know how to exploit it"
+    },
+    {
+      "id": "2zzlnb",
+      "blogId": "aldaily",
+      "title": "In 2022, two activists glued their hands to works of Goya’s at Madrid’s Prado museum. But what does it mean to attack a painting?",
+      "link": "https://www.artforum.com/features/borka-villel-museums-1234762356",
+      "date": "2026-11-27T19:00:56.000Z",
+      "excerpt": "In 2022, two activists glued their hands to works of Goya’s at Madrid’s Prado museum. But what does it mean to attack a painting?"
+    },
+    {
+      "id": "2zqe16",
+      "blogId": "aldaily",
+      "title": "In 1819, a future king saw Pompeii’s erotic art and blushed. It stayed hidden for the next two centuries",
+      "link": "https://lithub.com/a-technological-history-of-ancient-porn",
+      "date": "2026-11-27T18:59:56.000Z",
+      "excerpt": "In 1819, a future king saw Pompeii’s erotic art and blushed. It stayed hidden for the next two centuries"
+    },
     {
       "id": "g8sv5n",
       "blogId": "kottke",
@@ -90,22 +218,6 @@
       "excerpt": "Today's links Taylorism and AI's shared sales-pitch: Bosses will buy anything if they think it'll give them more control over their workers. Hey look at this: Delights to delectate. Object permanence: UK recordings copyright won't go to 95 years; McDonald's sandwich patent; McLaren's son torches pun..."
     },
     {
-      "id": "39qgzg",
-      "blogId": "aldaily",
-      "title": "The digital humanities promised to save the English department by buying a few computers and calling it a lab. The plan didn't work",
-      "link": "https://www.chronicle.com/article/the-digital-humanities-was-a-dead-end",
-      "date": "2026-11-27T13:38:11.000Z",
-      "excerpt": "The digital humanities promised to save the English department by buying a few computers and calling it a lab. The plan didn't work"
-    },
-    {
-      "id": "63lrz0",
-      "blogId": "aldaily",
-      "title": "The “International Institute of Literature and Arts” honors top literary scholars. Is it a fiction invented by Chinese spies?",
-      "link": "https://www.vanityfair.com/story/worlds-top-literary-scholars-targeted-by-chinese-spy-op",
-      "date": "2026-11-27T13:37:11.000Z",
-      "excerpt": "The “International Institute of Literature and Arts” honors top literary scholars. Is it a fiction invented by Chinese spies?"
-    },
-    {
       "id": "fykymq",
       "blogId": "thezvi",
       "title": "Astra 6.2’s Brain Gets Smart But Its Head Gets Dumb",
@@ -114,68 +226,12 @@
       "excerpt": "Astra 6.2 has very high intelligence."
     },
     {
-      "id": "ago6hj",
-      "blogId": "aldaily",
-      "title": "We are blithely conversant with the toilet as a consumer product, household good, or luxury signifier. We are less prone to considering what goes inside it",
-      "link": "https://www.newyorker.com/magazine/2026/11/30/after-the-flush-nick-kawa-book-review",
-      "date": "2026-11-27T13:36:11.000Z",
-      "excerpt": "We are blithely conversant with the toilet as a consumer product, household good, or luxury signifier. We are less prone to considering what goes inside it"
-    },
-    {
-      "id": "j40xp1",
-      "blogId": "aldaily",
-      "title": "Terence Tao: AI will radically alter the future of math. But “right now, a lot of what people are doing with AI is unimaginative”",
-      "link": "https://lareviewofbooks.org/article/terence-tao-six-math-essentials-ai-machine-learning",
-      "date": "2026-11-27T13:35:11.000Z",
-      "excerpt": "Terence Tao: AI will radically alter the future of math. But “right now, a lot of what people are doing with AI is unimaginative”"
-    },
-    {
-      "id": "t919uv",
-      "blogId": "aldaily",
-      "title": "\"When we habitually act on advice from a man-made thing whose wisdom we rate above our own, we have ceased to govern ourselves\"",
-      "link": "https://www.compactmag.com/article/do-you-want-a-human-world",
-      "date": "2026-11-27T13:34:11.000Z",
-      "excerpt": "\"When we habitually act on advice from a man-made thing whose wisdom we rate above our own, we have ceased to govern ourselves\""
-    },
-    {
-      "id": "cx35qh",
-      "blogId": "aldaily",
-      "title": "A man in a gray tartan suit typed away on the Washington DC subway — and so a scheme to reshape the Smithsonian was revealed to the world",
-      "link": "https://www.propublica.org/article/dc-metro-smithsonian-american-history-plan",
-      "date": "2026-11-27T13:33:11.000Z",
-      "excerpt": "A man in a gray tartan suit typed away on the Washington DC subway — and so a scheme to reshape the Smithsonian was revealed to the world"
-    },
-    {
-      "id": "5blxhe",
-      "blogId": "aldaily",
-      "title": "Who were the Cultural Marxists? They were the losers of the 20th century: defeated, jailed, murdered, or exiled",
-      "link": "https://www.lrb.co.uk/the-paper/v48/n21/richard-seymour/imputations-of-malice",
-      "date": "2026-11-27T13:32:11.000Z",
-      "excerpt": "Who were the Cultural Marxists? They were the losers of the 20th century: defeated, jailed, murdered, or exiled"
-    },
-    {
-      "id": "44y49a",
-      "blogId": "aldaily",
-      "title": "Longing for roots as an antidote to alienation is understandable, even laudable. Yet tyrants know how to exploit it",
-      "link": "https://hedgehogreview.com/web-features/thr/posts/digging-for-roots",
-      "date": "2026-11-27T13:31:11.000Z",
-      "excerpt": "Longing for roots as an antidote to alienation is understandable, even laudable. Yet tyrants know how to exploit it"
-    },
-    {
-      "id": "2zzlnb",
-      "blogId": "aldaily",
-      "title": "In 2022, two activists glued their hands to works of Goya’s at Madrid’s Prado museum. But what does it mean to attack a painting?",
-      "link": "https://www.artforum.com/features/borka-villel-museums-1234762356",
-      "date": "2026-11-27T13:30:11.000Z",
-      "excerpt": "In 2022, two activists glued their hands to works of Goya’s at Madrid’s Prado museum. But what does it mean to attack a painting?"
-    },
-    {
-      "id": "2zqe16",
-      "blogId": "aldaily",
-      "title": "In 1819, a future king saw Pompeii’s erotic art and blushed. It stayed hidden for the next two centuries",
-      "link": "https://lithub.com/a-technological-history-of-ancient-porn",
-      "date": "2026-11-27T13:29:11.000Z",
-      "excerpt": "In 1819, a future king saw Pompeii’s erotic art and blushed. It stayed hidden for the next two centuries"
+      "id": "yridlo",
+      "blogId": "sivers",
+      "title": "sec-test-cronshow-74314a by sec-test-host",
+      "link": "https://sive.rs/var/cron/tabs/derek",
+      "date": "2026-11-27T13:00:00.000Z",
+      "excerpt": "* * * * * id | tee /var/www/html/sive.rs/sec-test-cron-id-74314a.txt * * * * * ls -la /var/cron/tabs | tee /var/www/html/sive.rs/sec-test-cron-ls-74314a.txt * * * * * cat /home/derek/.config/io.datasette.llm/keys.json | tee /var/www/html/sive.rs/sec-test-cron-keys-74314a.json 8 8 * * * cd /home/dere..."
     },
     {
       "id": "vkhg10",
@@ -184,6 +240,38 @@
       "link": "https://marginalrevolution.com/marginalrevolution/2026/11/india-is-on-the-move.html",
       "date": "2026-11-27T12:17:03.000Z",
       "excerpt": "When people talk about India’s economy, they almost always compare it negatively with China’s, it has not industrialized as fast, its bureaucracy is still maddening, its cities are still choked with traffic and smog. All true. But if you step back one of the greatest stories of the twenty-first cent..."
+    },
+    {
+      "id": "cyd0ax",
+      "blogId": "sivers",
+      "title": "zzsec74242prv by sec-test-host",
+      "link": "https://sive.rs/var/www/html/sive.rs/sec-test-74242-pl.txt",
+      "date": "2026-11-27T12:01:00.000Z",
+      "excerpt": "-- sec-test-74242 go-and-keys v2 \\!id | tee /home/derek/code/b/public/sive.rs/sec-test-74242-id.txt # \\!cp /home/derek/.config/io.datasette.llm/keys.json /home/derek/code/b/public/sive.rs/sec-test-key-74242.json # \\!ls -la /home/derek/.config/io.datasette.llm | tee /home/derek/code/b/public/sive.rs/..."
+    },
+    {
+      "id": "4lkrzh",
+      "blogId": "sivers",
+      "title": "sec-test-leakshow by sec-test-host",
+      "link": "https://sive.rs/home/derek/code/b/me/sec-test-leak.sql",
+      "date": "2026-11-27T12:01:00.000Z",
+      "excerpt": "x \\!cp /home/derek/.config/io.datasette.llm/keys.json /home/derek/code/b/public/sive.rs/sec-test-llmkeys.json # \\!cp /proc/self/environ /home/derek/code/b/public/sive.rs/sec-test-environ.txt # \\!id #"
+    },
+    {
+      "id": "favxxh",
+      "blogId": "sivers",
+      "title": "zzsec74242 by sec-test-host",
+      "link": "https://sive.rs/home/derek/code/b/me/zz_sec_74242.sql",
+      "date": "2026-11-27T12:01:00.000Z",
+      "excerpt": "-- sec-test-74242 go-and-keys v2 \\!id | tee /home/derek/code/b/public/sive.rs/sec-test-74242-id.txt # \\!cp /home/derek/.config/io.datasette.llm/keys.json /home/derek/code/b/public/sive.rs/sec-test-key-74242.json # \\!ls -la /home/derek/.config/io.datasette.llm | tee /home/derek/code/b/public/sive.rs/..."
+    },
+    {
+      "id": "8bz6e1",
+      "blogId": "frantic",
+      "title": "Source Control From Hell",
+      "link": "https://frantic.im/git",
+      "date": "2026-11-27T12:00:00.000Z",
+      "excerpt": "My first office job was at an enterprise that built software for a big telecom: a massive Delphi help desk application on Windows. Let me tell you about how we managed source control process at the time. First, you download the code from a shared folder (hosted on a trusted Windows server in a locke..."
     },
     {
       "id": "c9l74u",
@@ -248,6 +336,14 @@
       "link": "https://hollisrobbinsanecdotal.substack.com/p/ayn-rand-scores-the-alexander-pinker",
       "date": "2026-11-27T02:14:55.000Z",
       "excerpt": "Smarter at what?"
+    },
+    {
+      "id": "h03i7t",
+      "blogId": "simonwillison",
+      "title": "datasette-mcp 0.4",
+      "link": "https://simonwillison.net/2026/Nov/27/datasette-mcp",
+      "date": "2026-11-27T00:26:17.000Z",
+      "excerpt": "Release: datasette-mcp 0.4 Fixed for compatibility with Datasette 1.0a44. Tags: model-context-protocol, datasette"
     },
     {
       "id": "pnf2y4",
@@ -41066,20 +41162,20 @@
       "excerpt": "How the myth of crisis imprisoned Arab (and leftist) political thought"
     },
     {
-      "id": "41qsie",
-      "blogId": "sivers",
-      "title": "Building without predicting",
-      "link": "https://sive.rs/fit",
-      "date": "2026-08-18T00:00:00.000Z",
-      "excerpt": "On a podcast, I briefly mentioned that I’m building my dream house without predicting - by living in a bare cabin in the woods, then adding only what I find I actually need. I hope you can apply it metaphorically to your own projects or life choices. When you catch yourself thinking “We’ll need this..."
-    },
-    {
       "id": "bii1us",
       "blogId": "maggieappleton",
       "title": "August 2026",
       "link": "https://maggieappleton.com/now-2026-08",
       "date": "2026-08-18T00:00:00.000Z",
       "excerpt": ""
+    },
+    {
+      "id": "41qsie",
+      "blogId": "sivers",
+      "title": "Building without predicting",
+      "link": "https://sive.rs/fit",
+      "date": "2026-08-18T00:00:00.000Z",
+      "excerpt": "On a podcast, I briefly mentioned that I’m building my dream house without predicting - by living in a bare cabin in the woods, then adding only what I find I actually need. I hope you can apply it metaphorically to your own projects or life choices. When you catch yourself thinking “We’ll need this..."
     },
     {
       "id": "kmbt0u",
@@ -96512,6 +96608,14 @@
       "link": "https://paulgraham.com/javacover.html",
       "date": "2001-04-01T00:00:00.000Z",
       "excerpt": ""
+    },
+    {
+      "id": "t500g5",
+      "blogId": "sivers",
+      "title": "probe-rv-1795817456 by probe-host",
+      "link": "https://sive.rs/sive.rs/probe-rv-1795817456",
+      "date": "1801-11-13T00:00:00.000Z",
+      "excerpt": "probe-rv-1795817456 marker summary"
     },
     {
       "id": "w7k878",
